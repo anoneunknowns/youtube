@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "kind": "independent-read-only-character-asset-registry-doublecheck",
+  "reviewed_at_utc": "2026-11-11T15:46:15.264834+00:00",
+  "reviewer": "/root/doublecheck_registry",
+  "scope": "Current management config and registry, real character files, selected generic and episode paths, provenance and preserved evidence. No source/control files modified by reviewer.",
+  "observed_inputs": {
+    "management_config_sha256": "8fe315a2b1edce538009b3c12a98adf237ff206700f693b1adfbac57e9c12664",
+    "management_registry_sha256": "cd8f77fce3a87c2c3a09af2354f318d8b368187ec372c887ea23d6e723d2965a",
+    "generic_catalog_sha256": "03f297857a4c742e58f5d2b0aec21a7a67f4a29ae451b50605d3754c1edd2e04",
+    "main_catalog_sha256": "9ff2edad33b5a235f0cf2e59d28e2bc14f5eccc676757c56a501b59b882b5503"
+  },
+  "status": "pass_with_low_priority_metadata_correction",
+  "findings": [
+    {
+      "id": "REGISTRY-METADATA-001",
+      "priority": "P3",
+      "status": "reported_to_manager",
+      "title": "Episode handoff left initial classification wording in current metadata",
+      "evidence": [
+        {
+          "path": "catalogs/character-asset-management-v1.json",
+          "line": 721,
+          "batch": "assets/library/characters/kangaroo/animations/prime-v001",
+          "field": "classification_basis",
+          "observed": "active-production-specific",
+          "current_fact": "prime v002 is superseded by active prime v003; source frames are still reused by current v003"
+        },
+        {
+          "path": "catalogs/character-asset-management-v1.json",
+          "line": 732,
+          "batch": "assets/library/characters/kangaroo/animations/prime-v001",
+          "field": "selection_evidence[1].role",
+          "observed": "active episode adoption record",
+          "current_fact": "Preserved v002 historical adoption record"
+        },
+        {
+          "path": "catalogs/character-asset-management-v1.json",
+          "line": 787,
+          "batch": "assets/library/characters/kangaroo/animations/prime-v002",
+          "field": "classification_basis",
+          "observed": "in-progress-unregistered-generation",
+          "current_fact": "episode_selected; all 29 logical poses registered; reservation released after completed production v003"
+        },
+        {
+          "path": "catalogs/character-asset-management-v1.json",
+          "batch": "assets/library/characters/siamese-cat/motions/fibonacci-v001",
+          "field": "classification_basis",
+          "observed": "episode-specific-registered-preproduction",
+          "current_fact": "episode_selected by completed Fibonacci v001"
+        }
+      ],
+      "impact": "Current state and linked production evidence are correct. These copied initial labels can mislead later readers about lifecycle and which production remains active; image selection and playback are unaffected.",
+      "recommendation": "Use current classification_basis values, retain original values in explicitly historical fields, and label the v002 evidence historical. Do not alter the preserved source evidence."
+    }
+  ],
+  "checks": {
+    "management_check": {
+      "status": "pass",
+      "command": ".venv/bin/python tools/manage_character_assets.py check",
+      "batches": 60,
+      "files": 1122,
+      "bytes": 443544447,
+      "unclassified_batches": 0,
+      "pending_batches": 0
+    },
+    "independent_actual_file_scan": {
+      "status": "pass",
+      "actual_files": 1122,
+      "registered_unique_paths": 1122,
+      "missing": 0,
+      "extra": 0,
+      "sha256_mismatches": 0,
+      "byte_size_mismatches": 0
+    },
+    "original_frozen_files": {
+      "status": "pass",
+      "checked": 1097,
+      "changed": 0,
+      "removed": 0,
+      "baseline": "assets/library/collections/character-management/v001/initial-reconciliation.json:source_snapshot excluding originally active prime-v002"
+    },
+    "duplicate_media": {
+      "status": "pass",
+      "actual_sha_groups": 11,
+      "declared_sha_groups": 11,
+      "undeclared": 0,
+      "incorrect": 0,
+      "policy": "Byte-identical aliases preserved; no implicit preference or deletion."
+    },
+    "canonical_selection": {
+      "status": "pass",
+      "characters": 11,
+      "all_config_canonical_metadata_matches_generic_neutral": true,
+      "neutral_hashes_match": true
+    },
+    "generic_selection": {
+      "status": "pass",
+      "key_poses": 42,
+      "expanded_key_poses": 270,
+      "eyecatch_key_poses": 144,
+      "sha256_mismatches": 0,
+      "all_selected_batches_shared_stock": true,
+      "original_neutral_and_key_pose_fields_semantically_equal_to_git_HEAD": 22
+    },
+    "native_episode_registration": {
+      "status": "pass",
+      "prime_v001_exact_source_crops": 18,
+      "prime_v002_exact_source_crops": 29,
+      "fibonacci_exact_source_crops": 4,
+      "source_sha256_or_crop_errors": 0,
+      "current_prime_and_fibonacci_completed_and_active": true
+    },
+    "generation_provenance": {
+      "status": "pass",
+      "declared_generation_metadata_records": 106,
+      "nested_project_path_sha256_pairs_checked": 157,
+      "missing_or_mismatched": 0,
+      "external_or_nonproject_pairs_skipped": 12,
+      "limitation": "Only explicit nested path+sha256 pairs were checked here; external historical tool paths are not required runtime inputs."
+    },
+    "preserved_style_audit": {
+      "status": "pass",
+      "manifest_records": 97,
+      "preserved_hash_mismatches": 0,
+      "original_hash_mismatches": 0,
+      "detailed_style_scope": "414 new generic drawings across46 sheets; native prime-v00212 drawings and Fibonacci4 remain separate episode_reviewed scope."
+    },
+    "preserved_episode_evidence": {
+      "status": "pass",
+      "manifest_records": 10,
+      "preserved_hash_mismatches": 0,
+      "subsequent_original_drift": 1
+    },
+    "reservation_release": {
+      "status": "pass",
+      "reservation": "observed-main-prime-v002-20261112",
+      "released_by_manager_after_completed_native_registration_and_explicit_current_production_adoption": true,
+      "release_does_not_claim_takeover_of_producer_lock": true,
+      "no_active_trees_scanned_as_final": true
+    },
+    "quality_scope": {
+      "status": "pass",
+      "fairy_pitta_needs_revision_limited_to_think": true,
+      "meerkat_and_hedgehog_eyecatch_statuses_not_inherited_from_expansion": true,
+      "native_episode_review_does_not_claim_separate_414_drawing_style_audit": true
+    }
+  },
+  "observations": [
+    {
+      "id": "EVIDENCE-HISTORY-001",
+      "priority": "informational",
+      "path": "assets/library/collections/character-management/v001/episode-evidence/prime-production-run-v003.json",
+      "preserved_sha256": "69ec4cc2d1e33bb8a806280c73512742e5a73c121805d6e26c156e368269e6a8",
+      "current_original_path": "design/prime-counting-v1/production-run-v003.json",
+      "current_original_sha256": "481c8a04975eb647bb911d3fdbf5c6bf9afdf963ffe17a36bfe00daaf3055a7f",
+      "difference": "Current original later adds portable-final-doctor.json (552bytes, SHA3c17148bb4bc446022682cc75698ee379d0a56d2a35c8196f5be5d03baeca420) to files and adds portable_doctor pass metadata; no existing recorded file changed or removed. Immutable snapshot correctly retains its original content.",
+      "action": "Preserve historical snapshot; append a new evidence snapshot only if management needs to record the later portable-doctor stage."
+    }
+  ],
+  "reviewer_mutations": [
+    "output/character-asset-management-doublecheck-v001/registry-review.json"
+  ]
+}

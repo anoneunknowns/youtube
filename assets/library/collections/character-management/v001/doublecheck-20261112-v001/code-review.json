@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "kind": "independent-read-only-character-asset-code-review",
+  "reviewer": "/root/doublecheck_code",
+  "created_at_utc": "2026-11-11T15:46:08.117658+00:00",
+  "scope": [
+    "tools/manage_character_assets.py",
+    "tools/character_library.py",
+    "tests/test_character_asset_management.py",
+    "tests/test_character_asset_inventory.py"
+  ],
+  "source_or_catalog_changes_by_reviewer": false,
+  "baseline_tests": {
+    "command": ".venv/bin/python -m unittest tests.test_character_asset_management tests.test_character_asset_inventory",
+    "tests": 18,
+    "status": "pass"
+  },
+  "method": "Read-only source review plus isolated TemporaryDirectory fixtures; no production metadata was refreshed or rewritten.",
+  "findings": [
+    {
+      "id": "CODE-001",
+      "priority": "P2",
+      "confidence": "high",
+      "status": "reproduced-before-root-fix",
+      "location": "tools/manage_character_assets.py:discover_batches",
+      "title": "Named generation batches create a phantom unclassified parent",
+      "trigger": "One explicitly classified batch at assets/library/characters/kangaroo/generation-batches/task-a-f83c containing frames/final.png.",
+      "observed": {
+        "batches": 2,
+        "unclassified_batches": 1,
+        "phantom_root": "assets/library/characters/kangaroo/generation-batches",
+        "phantom_files": 0
+      },
+      "expected": {
+        "batches": 1,
+        "unclassified_batches": 0
+      },
+      "cause": "Configured containment is tested after reducing the source file path to the unversioned structural parent.",
+      "reproduction": "Make the one named batch and PNG in a temporary project; write schema_version:1 config with that root/state=shared_stock; call inspect; see the extra empty unclassified parent.",
+      "production_data_mutated": false
+    },
+    {
+      "id": "CODE-002",
+      "priority": "P2",
+      "confidence": "high",
+      "status": "reproduced-before-root-fix",
+      "location": "tools/manage_character_assets.py:refresh publication lock interval",
+      "title": "A reservation can commit after the final config hash guard while refresh still reports pass",
+      "trigger": "Reserve a new batch after refresh checks config_sha256 and before its first os.replace.",
+      "observed": {
+        "reserve_status": "pass",
+        "refresh_status": "pass",
+        "config_active_reservations": 1,
+        "registry_active_reservations": 0,
+        "subsequent_check": "Asset management registry is stale; inspect changes before refresh"
+      },
+      "expected": "Reservation and publication share the config writer lock; either concurrent reservation is rejected or refresh aborts without reporting a current successful snapshot.",
+      "cause": "Refresh holds registry/index locks, but reserve/release acquire only the independent config lock.",
+      "reproduction": "In a TemporaryDirectory fixture, patch os.replace to call reserve when destination equals HUMAN_INDEX, then delegate to original os.replace. Refresh passes, but immediate check fails stale.",
+      "production_data_mutated": false
+    },
+    {
+      "id": "CODE-003",
+      "priority": "P2",
+      "confidence": "high",
+      "status": "reproduced-before-root-fix",
+      "location": "tools/manage_character_assets.py:refresh index_path resolution",
+      "title": "A symlink at the fixed human index redirects publication into source art",
+      "trigger": "assets/library/character-assets.html is a symlink to an existing PNG inside the project.",
+      "observed": {
+        "refresh_status": "pass",
+        "source_png_after_prefix": "<!doctype html>",
+        "source_art_overwritten": true
+      },
+      "expected": "Reject a symlink publication path before replacing any file; source art remains byte-identical.",
+      "cause": "project_path resolves the symlink and refresh then replaces the resolved target as its HTML output.",
+      "reproduction": "Create an original PNG fixture, point HUMAN_INDEX symlink at it, then call refresh. The PNG becomes the HTML payload.",
+      "production_data_mutated": false,
+      "current_project_symlink_trigger_not_observed": true
+    },
+    {
+      "id": "CODE-004",
+      "priority": "P2",
+      "confidence": "high",
+      "status": "reproduced-before-root-fix",
+      "location": "tools/character_library.py:inventory_paths",
+      "title": "A symlinked reference inside an active batch escapes the pending exclusion",
+      "trigger": "An active generation batch contains identity-reference.png linking to an existing canonical PNG outside the active root.",
+      "observed": {
+        "active_alias_path_in_inventory": true
+      },
+      "expected": "All lexical paths below the active writer root are omitted until handoff, regardless of symlink target.",
+      "cause": "Pending membership is checked using path.resolve(), which follows the link out of the reserved branch; rglob also continues traversing active trees.",
+      "reproduction": "Patch SCOPES to characters and EXTRAS to []; create active root and symlinked reference; inventory_paths includes the active reference path.",
+      "production_data_mutated": false,
+      "current_project_symlink_trigger_not_observed": true
+    }
+  ],
+  "fix_owner": "/root",
+  "post_fix_review": {
+    "status": "pending"
+  }
+}

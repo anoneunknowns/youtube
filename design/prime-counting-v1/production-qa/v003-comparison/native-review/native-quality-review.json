@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "kind": "independent-native-art-and-motion-quality-comparison",
+  "status": "improvements-recommended-for-parity",
+  "scope": "Selected native decoded transitions from actual adopted prime v002 and Bear decimal v002; source geometry is separately measured. This is a visual quality comparison, not a rerun of whole-film numeric/audio conformance, and not a claim of human continuous playback.",
+  "inputs": [
+    {
+      "path": "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+      "sha256": "9ab0b3c4dd6d551b63349f41c6922cc38951ea8576668e3cb2e52d26e8c70c0f"
+    },
+    {
+      "path": "output/counting-garden-001-bright-v002/paspla-studio-count-1-to-300-blue-sky-1080p.mp4",
+      "sha256": "5fbcb6cf2a03c23d6d4a3ff7081382153a313b189aee58092d0667ee52313ce0"
+    },
+    {
+      "path": "assets/library/characters/kangaroo/animations/prime-v001/registration.json",
+      "sha256": "f704da40e02e1a1e15d5caaaddee365f5ee6ff19a0465e35f0b490ac013c6689"
+    }
+  ],
+  "findings": [
+    {
+      "id": "NATIVE-01",
+      "priority": "medium",
+      "status": "needs-improvement",
+      "title": "Unintended whole-head/body step during hand gestures",
+      "observed": "Neutral ear-top y550 becomes y565 in wave_raise/high/left/right/settle; think_raise reaches y567 then think returns to y551. On the actual encoded contact, torso and tail contour also change when the paw alone should raise. Feet remain at the common ground root, so this is artwork proportion/pose mismatch rather than translation timing.",
+      "comparison": "The decoded Bear wave sweeps the arm with a steadier head/body silhouette; a 15–17px single-cut shift is more conspicuous in the small 430px kangaroo.",
+      "recommendation": "Generate/revise gesture and thought transition art against the exact adopted v002 neutral body/head, or generate isolated arm drawings for a fixed-body composite. Preserve common sheet physical scaling and foot roots; do not hide the mismatch with per-pose bbox fitting or whole-character dissolves.",
+      "evidence": [
+        "prime-opening-wave-contact.jpg",
+        "prime-factor-thinking-contact.jpg",
+        "source-head-transition.png",
+        "geometry-observations.json",
+        "bear-opening-wave-contact.jpg"
+      ]
+    },
+    {
+      "id": "NATIVE-02",
+      "priority": "medium",
+      "status": "repertoire-gap",
+      "title": "No sustained seated/rest/stretch state in the longer film",
+      "observed": "The v002 actor repertoire has 18 registered keys including two neutral drawings, blink halves/closed, arm-transition intermediates and jump phases. There is no seated rest, stretch or clap in the actual acting schedule. The Bear completed film visibly sits, stretches, rests, then stands at its 200-count break.",
+      "recommendation": "A quiet seated or stretch passage, with genuine sit/stand intermediates, would give the long count a distinct silhouette and help match the older performance variety. Use narrative-appropriate existing stock if visually coherent; generate missing neutral-compatible intermediates if it is not. No need to add unrelated props or constant bobbing.",
+      "evidence": [
+        "bear-seated-stretch-contact.jpg",
+        "prime-halfway-hop-contact.jpg"
+      ]
+    }
+  ],
+  "adequate_existing_material": [
+    {
+      "keys": [
+        "blink_half",
+        "blink_closed",
+        "smile_open"
+      ],
+      "assessment": "Actual open→half→closed→half→open frames show clean eyes, no residual open-eye ghost and stable face/body drawing. Keep this rig; no regeneration indicated.",
+      "evidence": "prime-blink-contact.png"
+    },
+    {
+      "keys": [
+        "posture_neutral",
+        "crouch_half",
+        "crouch_down",
+        "takeoff",
+        "hop_air",
+        "land"
+      ],
+      "assessment": "Crouch, extension, tucked airborne pose and bent landing are anatomically legible in actual decoded frames. Tail/ears remain complete and no duplicated limbs are visible. Keep these drawings unless new scene staging exposes a new issue.",
+      "evidence": "prime-halfway-hop-contact.jpg"
+    },
+    {
+      "keys": [
+        "wave_raise",
+        "wave_high",
+        "wave_left",
+        "wave_right"
+      ],
+      "assessment": "The existing wave does read as a greeting, and is not static. Its main defect is whole-body/head continuity on entry/exit, not lack of any arm displacement. Three strong arm positions are visible; wave_right is close to the low intermediate, so do not claim four equally distinct palm angles.",
+      "evidence": "prime-opening-wave-contact.jpg"
+    }
+  ],
+  "composition_note": "Prime character is smaller than the Bear (430px versus themed606px natural scale), but it has a different teaching-board layout. Matching absolute body height is not itself necessary; preserve legibility and clear teaching fields.",
+  "artifacts": [
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-opening-wave-01.png",
+      "sha256": "d6b47e8f7d67544d926ece021411bd29cea0879145ab29e9716505cc7bfb4517",
+      "bytes": 591626
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-opening-wave-02.png",
+      "sha256": "4053150ccd00d2959996108bc8b8a5b6f6a338ceeab4ef2893bd3b5064c12223",
+      "bytes": 601216
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-opening-wave-03.png",
+      "sha256": "00d31291d1882b83fe2ee71d8f4335fc797d4564000f7f3a76b1b37bb739ae62",
+      "bytes": 606619
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-opening-wave-04.png",
+      "sha256": "b3db229c52a8601af5891c36c9061e2c85ee4914d809820ac69fabab997c183a",
+      "bytes": 618640
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-opening-wave-05.png",
+      "sha256": "6367e72e26c6c3ed8e458789fe37323cd9b061c8b41e20d091e02f20b64125d9",
+      "bytes": 619294
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-opening-wave-06.png",
+      "sha256": "67b5f7a953182677bac3786ad3e0d9d093c6b0c76627a8b83216247893d1b31e",
+      "bytes": 619179
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-opening-wave-07.png",
+      "sha256": "9d2b2e099a33d726ebf0427982cf13c18e63c6ae58556f0c14dd158de817ad9c",
+      "bytes": 615940
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-opening-wave-08.png",
+      "sha256": "b7d4ee71b6ceb9ded52e51339269e127847404272d1b5d213b820c8469c54aea",
+      "bytes": 612678
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-opening-wave-contact.jpg",
+      "sha256": "9c9bc37c079fb7231467fbd63b2c9548e009298853445ba744db759ddeba3f31",
+      "bytes": 1271062
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-seated-stretch-01.png",
+      "sha256": "2bf83c57b0ec8704d05a74652bf63a349d03450ef1b4ff029a50a47d79b40ba2",
+      "bytes": 649099
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-seated-stretch-02.png",
+      "sha256": "a3c9efd95e6d5efe73db0559fa8747330dab6d9a92318ab325ff2767cd083ba5",
+      "bytes": 672747
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-seated-stretch-03.png",
+      "sha256": "37ec4210553da9523344ad3624ca4dd94c9335dfec5f1a480a561ff8c19ce17f",
+      "bytes": 680502
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-seated-stretch-04.png",
+      "sha256": "d6ba4e5a0d75e73d2c084bab214a20bebe42cb6e30863a02293f474180a3a7eb",
+      "bytes": 668874
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-seated-stretch-05.png",
+      "sha256": "bc5ff6a99a7abecfc14d70c039b5a33496e85b14a6b6a513b29022d856667aa3",
+      "bytes": 675136
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-seated-stretch-06.png",
+      "sha256": "d1100681c001c3d8e44a455203004da19a0bcf961e876fc3ab2217c991d31937",
+      "bytes": 670700
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-seated-stretch-07.png",
+      "sha256": "b6ae4f2e83b565f17ca8383d8d134451b8dc90f4a50194c0021ce9340f4ece94",
+      "bytes": 650499
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/bear-seated-stretch-contact.jpg",
+      "sha256": "3cc9f0e8a9d517ece1fded61bff02378520d2e7965b8bf3192189bc3455b8a2d",
+      "bytes": 1216645
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/extraction-record.json",
+      "sha256": "8d092afdfcc4453cd9250fd87af6b68c18140c9e2905bb317bec1045016cfd68",
+      "bytes": 6296
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/geometry-observations.json",
+      "sha256": "212a196bc65dab0d52e34c962183b3b1de39ebbf30680e9a6b87dbde5445faeb",
+      "bytes": 3327
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-blink-346.png",
+      "sha256": "83eee75722dbd53ce23015e000f9dcb537ccf1136f117c5fa37d6ff741235560",
+      "bytes": 57787
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-blink-347.png",
+      "sha256": "617973624bc8c53e26edb6c996da07136b5d4599660c5be1cd1487a02d6a8c10",
+      "bytes": 57165
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-blink-349.png",
+      "sha256": "1de01824fcdf489c082af84ecd7e7549b89fb8141c5fde65c2981cb626a59430",
+      "bytes": 55660
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-blink-352.png",
+      "sha256": "d9a6a238028efdb1f22d128181ac0e32f0383a3c6b9ce249211a20e59d696ecd",
+      "bytes": 57024
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-blink-354.png",
+      "sha256": "a75b93ff7fddaa0d48b841fa830fc67e9f49a85877b0527ff97e11c133c4b812",
+      "bytes": 57546
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-blink-contact.png",
+      "sha256": "0d0fc06bbcabebaf16646423449b0dbb8ebe0d72a4c16fb64f4d98888f8af525",
+      "bytes": 111672
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-factor-thinking-01.png",
+      "sha256": "bc3e8beb481c1d8a0e797ffd42f293261cc5248fb10ff71e54779f7898905049",
+      "bytes": 538796
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-factor-thinking-02.png",
+      "sha256": "486283cc26da17e4fc9c1cdd4d5e0d710ebaecb9cf063434ffb71c3265835a9f",
+      "bytes": 535477
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-factor-thinking-03.png",
+      "sha256": "11d13db24276f1a914878cfee88b336c65400edc55a9c00930c9dc25f4177fe0",
+      "bytes": 535147
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-factor-thinking-04.png",
+      "sha256": "1da7bcf161db79269bd199e9408838caf2373655e0da0309414341d88bc3c1bb",
+      "bytes": 539532
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-factor-thinking-05.png",
+      "sha256": "9d21fb0de0fbce23d4ce919ea45c4f0046563cf16c49ed999706767478247a3c",
+      "bytes": 535080
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-factor-thinking-06.png",
+      "sha256": "6d122f3f925a7cd58ed27b2266b7ce93e59d604303d9ca2aeac990a0c759f357",
+      "bytes": 534542
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-factor-thinking-07.png",
+      "sha256": "635590a8c25a682ba4df575ffc35b789d45c31ebf7855d7a2d153c7f28005fac",
+      "bytes": 539954
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-factor-thinking-08.png",
+      "sha256": "66a1b78322c0b30b1d76ad1abc57a030dc9e43aa8a14912e08abf11d13d1bed2",
+      "bytes": 540193
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-factor-thinking-contact.jpg",
+      "sha256": "e3d0952ca67363bb65c4882993b2a9d164abc5985098155cc905bc1e584267c1",
+      "bytes": 1063847
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-01.png",
+      "sha256": "b77116a7090e621a2e0dedd863ab41de99bbce24625864f46f2ea0c4b7494810",
+      "bytes": 539383
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-02.png",
+      "sha256": "c144c38ed692a8871b2999bd713e90d2f0b95a7a879a0483b93d3e5265f636b9",
+      "bytes": 536719
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-03.png",
+      "sha256": "bcb46af0e258e258ba4a06f466ca4a46cb3acefe87b8ab1163c58c15427a8eaa",
+      "bytes": 535602
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-04.png",
+      "sha256": "3623e3022dd12291144bc5094a3d4e8fe626c62a3d42f787a5b74e7f2ba52c01",
+      "bytes": 528911
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-05.png",
+      "sha256": "40fa7d34e87fb7f3f0d83d582191cbef0c54e9a92f19b58014115b92a0d1f877",
+      "bytes": 529809
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-06.png",
+      "sha256": "048d21e92b74807dbe8e18db761308f0946909ec55b40919fd39193e30c98395",
+      "bytes": 538369
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-07.png",
+      "sha256": "9a5dd886a79b580ab8329d7cdb4e4a6483f5179f60565d98e77b419d08b28c86",
+      "bytes": 532957
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-08.png",
+      "sha256": "4fc0333481646b3c8530fc8079dd40bc62bac96b49016362244ea5ffb4c006b5",
+      "bytes": 533065
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-09.png",
+      "sha256": "7df290e4efa8e88376de95eed69ce642d0c797e3f62c9fc2ff45e050817248ea",
+      "bytes": 535349
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-10.png",
+      "sha256": "e4cfe59420286af1a10be23c6df0d7f92540efe87c939af142272cf1e995d58e",
+      "bytes": 535318
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-11.png",
+      "sha256": "21e7982aa01793cb98a0ad5b775d71287a810e3d21b7e2a296e660a7e9a3ab4e",
+      "bytes": 535525
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-halfway-hop-contact.jpg",
+      "sha256": "e3746c7e2ce7de54b77dc43c2f4416f34575d04052188fe87d4c7d152ae5afc5",
+      "bytes": 1475720
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-01.png",
+      "sha256": "9112e68d96636260cbf79aff01a458a0217f14aedf3b1a232814dcd0170553a4",
+      "bytes": 520041
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-02.png",
+      "sha256": "b1bd8cf0bf58ea4d780bb47a2f70fc4e37d654c6ca086f3b4c93571a48d35ffa",
+      "bytes": 520085
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-03.png",
+      "sha256": "a3a1c1d46cbe827522d66f367db9ad885c2d9bcc7a10a5ad0d790a672dd6b7be",
+      "bytes": 518015
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-04.png",
+      "sha256": "331914b4f6ab12afddc9d0643967462c8b0294b3145b7d0d7d2b373347932203",
+      "bytes": 518856
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-05.png",
+      "sha256": "8d6f3f0920a60c575f3c397ecb9bca3ad9d2e5731d77ca44d05dec861df06896",
+      "bytes": 519110
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-06.png",
+      "sha256": "d8aadf81ae227f2c14709e75421e0bbcadad29e56e427b0129c97baef67031e9",
+      "bytes": 516431
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-07.png",
+      "sha256": "1fa3c50b577b4bfd26a989799b2fd31d0ad53120399a92cd8271eb01548b7aca",
+      "bytes": 517021
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-08.png",
+      "sha256": "437ae99d1c1994e118f4cb6c32d74df75a6d890e60daf0cc25f9b47b2e1b941c",
+      "bytes": 516694
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-09.png",
+      "sha256": "827cb30f2bb7a9966dc9eab28cc3210a5b3ec1f426a8c38487eefb4aa549e110",
+      "bytes": 517198
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-10.png",
+      "sha256": "165899f831aed8dc02c09d9280219d0e6f0965fc489e1daff81a1e1425142e99",
+      "bytes": 515880
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-11.png",
+      "sha256": "36e9c9a2cd3a678ef7649d41811759762ef02ee1d71cba2a60451c7980fb7591",
+      "bytes": 515642
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-12.png",
+      "sha256": "770788eae89f382afd23caed2136f1a08f4089b925ef3ce9fefa57663380af12",
+      "bytes": 521155
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-13.png",
+      "sha256": "71fa86c5a667aaff6b6bfb180941257edb0d8a1f2009f99c9187330c78b60df1",
+      "bytes": 521881
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/prime-opening-wave-contact.jpg",
+      "sha256": "3da77d907f7f2f4789dfb2f5977944327232ee3408eb7b6a4945453c2c5ecbab",
+      "bytes": 1733538
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v003-comparison/native-review/source-head-transition.png",
+      "sha256": "908022b65052ac236ae4ae8fb1cc298db0d2e116ec391f9affd7e1c5e0626cf2",
+      "bytes": 513844
+    }
+  ]
+}

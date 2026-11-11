@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "kind": "independent-post-fix-classification-review",
+  "reviewed_at_utc": "2026-11-11T15:48:45.184903+00:00",
+  "reviewer": "/root/doublecheck_registry",
+  "scope": "Only the three corrected current classification explanations versus actual episode adoption and preserved initial values; registry refresh intentionally left to manager.",
+  "status": "pass",
+  "resolved_finding": "REGISTRY-METADATA-001",
+  "config_sha256": "809e2aeb232b41132546686e4a6cdb08bede7926d07efa8567cc3773bab835aa",
+  "main_catalog_sha256": "9ff2edad33b5a235f0cf2e59d28e2bc14f5eccc676757c56a501b59b882b5503",
+  "original_selection_catalog_unchanged_since_initial_review": true,
+  "main_catalog_unchanged_since_initial_review": true,
+  "classification_checks": [
+    {
+      "root": "assets/library/characters/kangaroo/animations/prime-v001",
+      "state": "episode_selected",
+      "classification_basis": "historical-episode-selection-and-current-source-reuse",
+      "initial_classification_basis": "active-production-specific"
+    },
+    {
+      "root": "assets/library/characters/kangaroo/animations/prime-v002",
+      "state": "episode_selected",
+      "classification_basis": "completed-episode-explicit-registration",
+      "initial_classification_basis": "in-progress-unregistered-generation"
+    },
+    {
+      "root": "assets/library/characters/siamese-cat/motions/fibonacci-v001",
+      "state": "episode_selected",
+      "classification_basis": "completed-episode-explicit-registration",
+      "initial_classification_basis": "episode-specific-registered-preproduction"
+    }
+  ],
+  "evidence": {
+    "active_prime_production": "prime-counting-production-v003",
+    "historical_prime_v002_superseded_by": "prime-counting-production-v003",
+    "prime_v003_registration": "assets/library/characters/kangaroo/animations/prime-v002/registration.json",
+    "prime_v003_source_poses_reused_from_prime_v001": [
+      "neutral",
+      "blink_half",
+      "blink_closed",
+      "smile_open",
+      "posture_neutral",
+      "crouch_half",
+      "crouch_down",
+      "takeoff",
+      "hop_air",
+      "land"
+    ],
+    "fibonacci_active_completed": true,
+    "linked_preserved_evidence_sha256_match": true
+  },
+  "findings": [],
+  "reviewer_mutations": [
+    "output/character-asset-management-doublecheck-v001/registry-review-post-fix.json"
+  ]
+}

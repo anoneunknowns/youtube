@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "kind": "independent-fibonacci-audio-quality-closeout",
+  "status": "DIAGNOSTIC_MODEL_LABEL_DISCREPANCIES_REVIEWED_NO_MATERIAL_AUDIO_DEFECT",
+  "passed": true,
+  "checked_at_utc": "2026-11-11T17:16:18.700203+00:00",
+  "audited_movie": {
+    "path": "output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+    "sha256": "68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3"
+  },
+  "audited_timeline": {
+    "path": "output/fibonacci-counting-001-v002/timeline.json",
+    "sha256": "bb2883c6433430cbc884c95fa4d31cf8fd77a83ef3a631a748c5b340a3a282c0"
+  },
+  "source_and_existing_QA_preserved": true,
+  "prior_acceptance_decisions_used_as_approval": false,
+  "summary": {
+    "utterances_individually_audited": 104,
+    "word_occurrences_screened": 1221,
+    "vowel_nuclei_screened": 1714,
+    "new_alternate_base_en_ASR_runs": 104,
+    "new_silence_guarded_final_CTC_runs": 104,
+    "new_base_en_matches": 94,
+    "new_base_en_raw_warnings": 10,
+    "previous_final_tiny_left_raw_warnings_audited": 13,
+    "previous_final_tiny_right_raw_warnings_audited": 14,
+    "previous_source_tiny_raw_warnings_audited": 14,
+    "new_full_word_candidates_generated": 13,
+    "new_candidate_ASR_runs": 13,
+    "new_candidate_CTC_runs": 13,
+    "candidates_adopted": 0,
+    "material_audio_defects_identified": 0,
+    "unresolved_material_audio_findings": 0
+  },
+  "unresolved_definition": {
+    "material": "A specific reproducible wrong/absent/extra syllable or word, missing numeric unit/operator, cut, prohibited timing/level anomaly, or isolated pronunciation concern with no positive same-clip explanation would remain unresolved and block acceptance.",
+    "diagnostic": "An ASR printing convention or fallible CTC allophone label is closed as diagnostic only when direct same-clip phone/signal evidence explains it. It remains in raw logs and is never silently relabeled as an exact recognizer match.",
+    "absolute_guarantee": "Finite automated/acoustic/agent checks cannot certify every listener perception or perfect stress/naturalness. This methodological limit is stated, rather than misreported as human full listening."
+  },
+  "warning_ids_individually_closed": [
+    "N032",
+    "N033",
+    "N034",
+    "N038",
+    "N039",
+    "N040",
+    "T013a",
+    "T013b",
+    "T018b",
+    "E028",
+    "E031",
+    "E032",
+    "E035",
+    "E036",
+    "E039",
+    "E040"
+  ],
+  "two_decision": "Current two has a real unvoiced onset and voiced vowel from~.12s; onset does not have an extra early periodic vowel. Its F2 descends2400→1250Hz, late median1370Hz, versus same-voice three3010Hz. New independent base.en returns2. Short CTC tɕh/i5 labels are low-confidence model labels, not evidence of a missing t or an i-only vowel. A natural stronger-aspiration full-word control gives t/u, demonstrating allophone/model sensitivity rather than proving current speech defective.",
+  "eight_decision": "New actual-MP4 silence-guarded CTC has/eɪt/ with final t retained. Fresh current-eight F1 descends730→380Hz while F2 rises2630→2980Hz in its vowel nucleus, matching same-voice formula eight and differing from the aI nucleus in five. The nominal aI label is retained as diagnostic, without relying on numeric context or source-waveform identity alone.",
+  "long_words_and_stress_review": {
+    "method": "All1221word occurrences have US dictionary reference, matched CTC segments and new vowel energy/periodicity samples. Teen identities are additionally checked by full i/n endings and numeric-unit boundaries, not loudness alone. Fibonacci primary-AA timing is directly inspected. Declining phrase pitch and ordinary American flap/rhotic/reduced vowels are not treated as missing words.",
+    "perceived_stress_perfect_certification": false,
+    "human_full_listening_claim": false,
+    "CMU_primary_source": "https://github.com/cmusphinx/cmudict"
+  },
+  "candidate_decision": "All13new complete-word candidates remain unadopted. Stronger aspiration/backer vowel variants are natural controls, not proof current speech is defective. Do not change source solely to improve a diagnostic model label.",
+  "next_revision_audio_recommendation": "Copy the accepted AAC to visual-only v003; bind all packet payloads/pts/dts/durations, ADTS, decoded stereo PCM and exact voice/source/master cues using the prepared read-only script. A new signal would require new audio review.",
+  "unresolved": [],
+  "all_raw_warnings_retained": true,
+  "human_full_listening_claim": false,
+  "perfect_pronunciation_claim": false,
+  "inputs": [
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/baseline.json",
+      "sha256": "84ced4cfd0e778cf1be7ea29bdc525c92895eb06affe51d224667cd2441cc615"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/alternate-ASR.json",
+      "sha256": "318a160946f6782e9e72128c752a3a029e67bfa293437afb65bf7d85a5a405f5"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/new-guarded-phonemes.json",
+      "sha256": "d7910d8e9ab64ac375c65fa024828fc07f2818573d43f79aaa1d5ad263d3762e"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/all104-word-prosody-screen.json",
+      "sha256": "737745e2b9c198e0c46ed1fbda73084d256e098add9f08ce36cefa8745a01244"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/expected-word-pronunciations.json",
+      "sha256": "0383f4bd2fb3768464e199e0efcbdc2403c8a086631fba4bdf982657718edce7"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/cmudict-source.json",
+      "sha256": "4a18bb64fb0b6011dc2fdf0e6ed8eb64fa8e95d340a416d950f3f2fe473ce493"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/short-word-physical-controls.json",
+      "sha256": "b8c9c4a52d43f9fd62debc4ed322b304d7b2a0caaad4534648209656d57a9920"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/internal-target-physical-observations.json",
+      "sha256": "e1fd9c50cb2a4ada4067b984568fe1bcfc3fc8b676c5145c15d862614f43ca0c"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/warning-ledger.json",
+      "sha256": "eaeb8598dad5e5c9b7fab4bc441ab90a8d67b2fd6df789e50a4152c1f86b4720"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/candidate-comparison.json",
+      "sha256": "39db9b19971822759cc861bb96d7cf742b43f0e0290fad8696690be8b76f0fdc"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/carry-voice-landmarks.json",
+      "sha256": "33e8a5e42eddb1f1f430c95147d7e343214192106502b3a5012ae9269a90b3f8"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/candidate-asr.json",
+      "sha256": "130011c58d7db1423232511a6ab66cc4f9a3447a1c9c25308c73754d90567849"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/candidate-phonemes.json",
+      "sha256": "3762998ced860affaef75ca5b2b88f0ac776998e520d37330f486c638877194f"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/phoneme-controls-ASR.json",
+      "sha256": "6f62b09276b6b05ccafae86b974bc0e089969c8c5e14371925750d31b2876083"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/phoneme-controls-CTC.json",
+      "sha256": "c45a3e7a6ff4140a40ddf01d10f3c43d491fc3e7cdbc3192bd21b4f12ed8e9c8"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/allophone-controls-ASR.json",
+      "sha256": "0d79847457fd9dc11df426aec7ccd7a9234563abfb904b506c95e3edf605c529"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/allophone-controls-CTC.json",
+      "sha256": "71f76fbfcc9169aa8d9afdcaa5e5d5325f37dcc7ed8c56deb9bd293bf915093e"
+    },
+    {
+      "path": "output/fibonacci-quality-closeout-20261112-01/model-cache/models.json",
+      "sha256": "2296cd3a698a9c3fa4cd394c8f6b7ff8767a289cb26f2cefb0028b3db4e37a52"
+    },
+    {
+      "path": "output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/measurements.json",
+      "sha256": "bfa11fcb37c6d80bf664c482434325331132675046573de090e70db3ca30c929"
+    },
+    {
+      "path": "output/fibonacci-counting-001-v002/speech/fresh-asr.json",
+      "sha256": "05722368c999fe37d9277f851f4edef47af3c2758737d80597a30c08809efbea"
+    },
+    {
+      "path": "output/fibonacci-counting-001-v002/audio-final-qa/asr-left.json",
+      "sha256": "9ecde5d51902d081bbeabeb76bf8336e0de8db84eeea9727e611ebf5af0eea21"
+    },
+    {
+      "path": "output/fibonacci-counting-001-v002/audio-final-qa/asr-right.json",
+      "sha256": "7ac3979b11a21f680b7d1dbb7bdeb0d0933e9f6d7d605fe4bda9ce606803aea0"
+    }
+  ]
+}

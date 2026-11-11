@@ -1,0 +1,2233 @@
+{
+  "schema_version": 1,
+  "kind": "independent-prime-preproduction-review",
+  "reviewed_at_utc": "2026-11-11T12:55:34.150067+00:00",
+  "reviewer_role": "Independent second agent; no script or mockup renderer edits",
+  "status": "PASS_PREPRODUCTION_ONLY",
+  "scope": "Draft scenario, narration text and numeric data; adopted source hashes; final static PNGs and recorded raster layout arithmetic. No video or audio exists or was tested.",
+  "inputs": [
+    {
+      "path": "design/prime-counting-v1/concept-and-scenario.txt",
+      "sha256": "3593509ae8de059484433fc8f0ee32185ce7d2163028374cecb78742b5a1a1e4"
+    },
+    {
+      "path": "design/prime-counting-v1/script-and-sound-cues.txt",
+      "sha256": "b71208bed89827f95a95a30bb1fe7d24a08dbbc44099868561acca997e1eaf93"
+    },
+    {
+      "path": "design/prime-counting-v1/narration.json",
+      "sha256": "1bafaf65b6bb3d354a613d9f0511fec0b7ae86065a30abee2bdd1de3fe32190f"
+    },
+    {
+      "path": "design/prime-counting-v1/count-lines.json",
+      "sha256": "c6cb006d78d32c1a92f5732321d57505df0d4d7cab025898cf474e469b692e4b"
+    },
+    {
+      "path": "design/prime-counting-v1/timing-plan.json",
+      "sha256": "e15e0ffa409f04cc9a6cf971419b68319befba87b3b4da7d5a66989bc781fea1"
+    },
+    {
+      "path": "design/prime-counting-v1/background-concepts.txt",
+      "sha256": "881f2ce79f0745cb416a779f59dce24f63c8b70cbd3dca375dc87340034c3709"
+    },
+    {
+      "path": "design/prime-counting-v1/source-review.txt",
+      "sha256": "a2c9351607429da5ae8dde9d6172bbf06c8e565f93e3685a76f7a1cdacd59c87"
+    }
+  ],
+  "checks": [
+    {
+      "check": "Canonical adopted character and six stock poses match catalog hashes",
+      "passed": true,
+      "assets": [
+        {
+          "path": "assets/library/characters/kangaroo/sources/v002/neutral.png",
+          "sha256": "a08e5ab198bf986720fef9fb29d8f985411525647abe09ded5788bd0b8950b12",
+          "expected_sha256": "a08e5ab198bf986720fef9fb29d8f985411525647abe09ded5788bd0b8950b12",
+          "passed": true
+        },
+        {
+          "path": "assets/library/characters/kangaroo/sources/v002/source-manifest.json",
+          "sha256": "c4521dc6e7c7edaceb8be10bba53fc0879e05cf58638007316e3171c2ee076ab",
+          "expected_sha256": "c4521dc6e7c7edaceb8be10bba53fc0879e05cf58638007316e3171c2ee076ab",
+          "passed": true
+        },
+        {
+          "path": "assets/library/characters/kangaroo/motions/v001/registration.json",
+          "sha256": "7d8d1d2c8152c19c77506cdd55a3205dcfd713dca930818c14be42b13d72f60d",
+          "expected_sha256": "7d8d1d2c8152c19c77506cdd55a3205dcfd713dca930818c14be42b13d72f60d",
+          "passed": true
+        },
+        {
+          "path": "assets/library/characters/kangaroo/motions/v001/blink.png",
+          "sha256": "f3f3942e6c086a43e0a3086c9ada956c0c9682dcde4fce7f74e2535eb7eb65d3",
+          "expected_sha256": "f3f3942e6c086a43e0a3086c9ada956c0c9682dcde4fce7f74e2535eb7eb65d3",
+          "passed": true
+        },
+        {
+          "path": "assets/library/characters/kangaroo/motions/v001/greet.png",
+          "sha256": "c3fdb2080efeef6c3c4b0c5713f1ef418b1b474c0f71d46c11df365168a8c170",
+          "expected_sha256": "c3fdb2080efeef6c3c4b0c5713f1ef418b1b474c0f71d46c11df365168a8c170",
+          "passed": true
+        },
+        {
+          "path": "assets/library/characters/kangaroo/motions/v001/think.png",
+          "sha256": "f38217052f97a8578be0b4cf515fdd3e1fd45b2da9bd47ebbbdb919fc13f62be",
+          "expected_sha256": "f38217052f97a8578be0b4cf515fdd3e1fd45b2da9bd47ebbbdb919fc13f62be",
+          "passed": true
+        },
+        {
+          "path": "assets/library/characters/kangaroo/motions/v001/aha.png",
+          "sha256": "ea31176b8b28dfb628f16ca7712acd5c3a3e8b3f07d20aebe3c146c958ac5d06",
+          "expected_sha256": "ea31176b8b28dfb628f16ca7712acd5c3a3e8b3f07d20aebe3c146c958ac5d06",
+          "passed": true
+        },
+        {
+          "path": "assets/library/characters/kangaroo/motions/v001/cheer.png",
+          "sha256": "10b7d66e535865bda66c2ed181a2492c537958cc2c28c3080ed3fcfe64a190d7",
+          "expected_sha256": "10b7d66e535865bda66c2ed181a2492c537958cc2c28c3080ed3fcfe64a190d7",
+          "passed": true
+        },
+        {
+          "path": "assets/library/characters/kangaroo/motions/v001/species_action.png",
+          "sha256": "ad7ccc865e332f7c818d4605e94c71f875b54da3b4daec14686a5e833c74e389",
+          "expected_sha256": "ad7ccc865e332f7c818d4605e94c71f875b54da3b4daec14686a5e833c74e389",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "check": "Generated background and saved exact prompt match generation record",
+      "passed": true,
+      "image": {
+        "path": "assets/library/worlds/sunlit-mosaic-museum/backgrounds/v001/sunlit-mosaic-museum-background.png",
+        "sha256": "3e3238d653c9238e90b6ad4d0912fb8ee1f3b1cc0cadf5a3bc729349191f289f"
+      },
+      "prompt": {
+        "path": "assets/library/worlds/sunlit-mosaic-museum/backgrounds/v001/generation-prompt.txt",
+        "sha256": "5d80de35766d1ea8917db19fa732c6bb29ab13801263ac83a78c98ddbb014afa"
+      },
+      "generation_record": {
+        "path": "assets/library/worlds/sunlit-mosaic-museum/backgrounds/v001/generation-record.json",
+        "sha256": "62e986bb281351b87da21502c0d2a99d2b0d02a05121e8d3c6bcdc4ef033843e"
+      }
+    },
+    {
+      "check": "One-time uniform draw selected registered Kangaroo",
+      "passed": true,
+      "record": {
+        "path": "design/prime-counting-v1/character-selection.json",
+        "sha256": "f762cccfd8aa3e22e4be0fcbc1dc45ce3be40fa9113126577ecd6a2bd3a08578"
+      }
+    },
+    {
+      "check": "Independent Eratosthenes sieve matches complete count list below 1000",
+      "passed": true,
+      "method": "Independent marking of multiples from p squared through 999; no renderer/list prime function imported",
+      "prime_count": 168,
+      "first": 2,
+      "last": 997
+    },
+    {
+      "check": "Every US English cardinal reverses to the intended numeric value",
+      "passed": true,
+      "method": "Independent English token-to-integer parser; all 168 rows, no numeric-to-English function imported",
+      "count": 168,
+      "examples": {
+        "2": "two",
+        "101": "one hundred one",
+        "773": "seven hundred seventy-three",
+        "997": "nine hundred ninety-seven"
+      }
+    },
+    {
+      "check": "All positive factors independently enumerated and IDs/ordinals consistent",
+      "passed": true,
+      "method": "Enumerate all positive divisors from 1 through each value; confirm ascending ordinals and unique count IDs"
+    },
+    {
+      "check": "Narration has 188 unique IDs with the same ordered count list",
+      "passed": true,
+      "voice_events": 188,
+      "count_events": 168
+    },
+    {
+      "check": "Narration explicitly defines positive factors and explains key exceptions",
+      "passed": true,
+      "manual_review": "Reviewed all 20 non-count lines: 1 excluded, 2 only even prime, 9 odd but composite, 98/99/100 extra factors, next prime after97 is101. Positive-factor convention removes negative-divisor ambiguity."
+    },
+    {
+      "check": "Provisional duration arithmetic is correct and is not claimed measured",
+      "passed": true,
+      "formula": "S + 474.40 seconds; S is future measured count utterance sum",
+      "limitation": "No TTS fit or actual runtime was checked"
+    },
+    {
+      "check": "Final exported PNG tile quantities independently match teaching claims",
+      "passed": true,
+      "method": "4-connected components of exact solid foreground color in diagram-only crops; discard components smaller than500px; read exported PNGs, not diagram metadata",
+      "results": [
+        {
+          "id": "five",
+          "file": {
+            "path": "design/prime-counting-v1/mockups/03-five-and-six.png",
+            "sha256": "84b34ea503a6f7b6cc90438507ea57bf47b55cec6e1e66aaa3fdddc14b7ebed7"
+          },
+          "crop_xyxy": [
+            158,
+            475,
+            674,
+            735
+          ],
+          "foreground_rgb": [
+            36,
+            108,
+            101
+          ],
+          "expected": 5,
+          "actual": 5,
+          "passed": true,
+          "components": [
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                180,
+                564,
+                261,
+                645
+              ]
+            },
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                278,
+                564,
+                359,
+                645
+              ]
+            },
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                376,
+                564,
+                457,
+                645
+              ]
+            },
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                474,
+                564,
+                555,
+                645
+              ]
+            },
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                572,
+                564,
+                653,
+                645
+              ]
+            }
+          ]
+        },
+        {
+          "id": "six",
+          "file": {
+            "path": "design/prime-counting-v1/mockups/03-five-and-six.png",
+            "sha256": "84b34ea503a6f7b6cc90438507ea57bf47b55cec6e1e66aaa3fdddc14b7ebed7"
+          },
+          "crop_xyxy": [
+            757,
+            475,
+            1273,
+            735
+          ],
+          "foreground_rgb": [
+            169,
+            92,
+            67
+          ],
+          "expected": 6,
+          "actual": 6,
+          "passed": true,
+          "components": [
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                876,
+                516,
+                957,
+                597
+              ]
+            },
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                974,
+                516,
+                1055,
+                597
+              ]
+            },
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                1072,
+                516,
+                1153,
+                597
+              ]
+            },
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                876,
+                614,
+                957,
+                695
+              ]
+            },
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                974,
+                614,
+                1055,
+                695
+              ]
+            },
+            {
+              "area_pixels": 6471,
+              "bbox_xyxy": [
+                1072,
+                614,
+                1153,
+                695
+              ]
+            }
+          ]
+        },
+        {
+          "id": "horizontal-five",
+          "file": {
+            "path": "design/prime-counting-v1/mockups/03b-turning-a-row.png",
+            "sha256": "c48c5db794d23db9f681e2492eca19c54e8ac1e43d711de9c7f29c6bcc336a80"
+          },
+          "crop_xyxy": [
+            125,
+            429,
+            740,
+            759
+          ],
+          "foreground_rgb": [
+            36,
+            108,
+            101
+          ],
+          "expected": 5,
+          "actual": 5,
+          "passed": true,
+          "components": [
+            {
+              "area_pixels": 4821,
+              "bbox_xyxy": [
+                226,
+                559,
+                296,
+                629
+              ]
+            },
+            {
+              "area_pixels": 4821,
+              "bbox_xyxy": [
+                312,
+                559,
+                382,
+                629
+              ]
+            },
+            {
+              "area_pixels": 4821,
+              "bbox_xyxy": [
+                398,
+                559,
+                468,
+                629
+              ]
+            },
+            {
+              "area_pixels": 4821,
+              "bbox_xyxy": [
+                484,
+                559,
+                554,
+                629
+              ]
+            },
+            {
+              "area_pixels": 4821,
+              "bbox_xyxy": [
+                570,
+                559,
+                640,
+                629
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vertical-five",
+          "file": {
+            "path": "design/prime-counting-v1/mockups/03b-turning-a-row.png",
+            "sha256": "c48c5db794d23db9f681e2492eca19c54e8ac1e43d711de9c7f29c6bcc336a80"
+          },
+          "crop_xyxy": [
+            905,
+            366,
+            1240,
+            850
+          ],
+          "foreground_rgb": [
+            36,
+            108,
+            101
+          ],
+          "expected": 5,
+          "actual": 5,
+          "passed": true,
+          "components": [
+            {
+              "area_pixels": 4821,
+              "bbox_xyxy": [
+                1038,
+                401,
+                1108,
+                471
+              ]
+            },
+            {
+              "area_pixels": 4821,
+              "bbox_xyxy": [
+                1038,
+                487,
+                1108,
+                557
+              ]
+            },
+            {
+              "area_pixels": 4821,
+              "bbox_xyxy": [
+                1038,
+                573,
+                1108,
+                643
+              ]
+            },
+            {
+              "area_pixels": 4821,
+              "bbox_xyxy": [
+                1038,
+                659,
+                1108,
+                729
+              ]
+            },
+            {
+              "area_pixels": 4821,
+              "bbox_xyxy": [
+                1038,
+                745,
+                1108,
+                815
+              ]
+            }
+          ]
+        },
+        {
+          "id": "one",
+          "file": {
+            "path": "design/prime-counting-v1/mockups/04-one-is-not-prime.png",
+            "sha256": "98522ffd58e689c7176d7787bed881b8960f623b76fdabaa90d0124152881fc0"
+          },
+          "crop_xyxy": [
+            831,
+            444,
+            1136,
+            634
+          ],
+          "foreground_rgb": [
+            169,
+            92,
+            67
+          ],
+          "expected": 1,
+          "actual": 1,
+          "passed": true,
+          "components": [
+            {
+              "area_pixels": 10703,
+              "bbox_xyxy": [
+                932,
+                487,
+                1036,
+                591
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nine",
+          "file": {
+            "path": "design/prime-counting-v1/mockups/05-nine-is-not-prime.png",
+            "sha256": "8e8a7215aaa5245fa07c648fc1026fb299a5e29213eaa451b9ccb2943bc59e66"
+          },
+          "crop_xyxy": [
+            789,
+            399,
+            1215,
+            721
+          ],
+          "foreground_rgb": [
+            169,
+            92,
+            67
+          ],
+          "expected": 9,
+          "actual": 9,
+          "passed": true,
+          "components": [
+            {
+              "area_pixels": 4547,
+              "bbox_xyxy": [
+                887,
+                445,
+                955,
+                513
+              ]
+            },
+            {
+              "area_pixels": 4547,
+              "bbox_xyxy": [
+                968,
+                445,
+                1036,
+                513
+              ]
+            },
+            {
+              "area_pixels": 4547,
+              "bbox_xyxy": [
+                1049,
+                445,
+                1117,
+                513
+              ]
+            },
+            {
+              "area_pixels": 4547,
+              "bbox_xyxy": [
+                887,
+                526,
+                955,
+                594
+              ]
+            },
+            {
+              "area_pixels": 4547,
+              "bbox_xyxy": [
+                968,
+                526,
+                1036,
+                594
+              ]
+            },
+            {
+              "area_pixels": 4547,
+              "bbox_xyxy": [
+                1049,
+                526,
+                1117,
+                594
+              ]
+            },
+            {
+              "area_pixels": 4547,
+              "bbox_xyxy": [
+                887,
+                607,
+                955,
+                675
+              ]
+            },
+            {
+              "area_pixels": 4547,
+              "bbox_xyxy": [
+                968,
+                607,
+                1036,
+                675
+              ]
+            },
+            {
+              "area_pixels": 4547,
+              "bbox_xyxy": [
+                1049,
+                607,
+                1117,
+                675
+              ]
+            }
+          ]
+        },
+        {
+          "id": "finale-168",
+          "file": {
+            "path": "design/prime-counting-v1/mockups/10-finale.png",
+            "sha256": "a4c21e9f0425e5719c7118a4137703afb22f8c5ee18637486ddb6067497f7f37"
+          },
+          "crop_xyxy": [
+            135,
+            596,
+            1296,
+            857
+          ],
+          "foreground_rgb": [
+            36,
+            108,
+            101
+          ],
+          "expected": 168,
+          "actual": 168,
+          "passed": true,
+          "components": [
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                160,
+                610,
+                192,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                200,
+                610,
+                232,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                240,
+                610,
+                272,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                280,
+                610,
+                312,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                320,
+                610,
+                352,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                360,
+                610,
+                392,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                400,
+                610,
+                432,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                440,
+                610,
+                472,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                480,
+                610,
+                512,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                520,
+                610,
+                552,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                560,
+                610,
+                592,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                600,
+                610,
+                632,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                640,
+                610,
+                672,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                680,
+                610,
+                712,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                720,
+                610,
+                752,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                760,
+                610,
+                792,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                800,
+                610,
+                832,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                840,
+                610,
+                872,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                880,
+                610,
+                912,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                920,
+                610,
+                952,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                960,
+                610,
+                992,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1000,
+                610,
+                1032,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1040,
+                610,
+                1072,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1080,
+                610,
+                1112,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1120,
+                610,
+                1152,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1160,
+                610,
+                1192,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1200,
+                610,
+                1232,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1240,
+                610,
+                1272,
+                642
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                160,
+                650,
+                192,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                200,
+                650,
+                232,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                240,
+                650,
+                272,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                280,
+                650,
+                312,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                320,
+                650,
+                352,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                360,
+                650,
+                392,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                400,
+                650,
+                432,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                440,
+                650,
+                472,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                480,
+                650,
+                512,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                520,
+                650,
+                552,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                560,
+                650,
+                592,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                600,
+                650,
+                632,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                640,
+                650,
+                672,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                680,
+                650,
+                712,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                720,
+                650,
+                752,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                760,
+                650,
+                792,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                800,
+                650,
+                832,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                840,
+                650,
+                872,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                880,
+                650,
+                912,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                920,
+                650,
+                952,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                960,
+                650,
+                992,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1000,
+                650,
+                1032,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1040,
+                650,
+                1072,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1080,
+                650,
+                1112,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1120,
+                650,
+                1152,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1160,
+                650,
+                1192,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1200,
+                650,
+                1232,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1240,
+                650,
+                1272,
+                682
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                160,
+                690,
+                192,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                200,
+                690,
+                232,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                240,
+                690,
+                272,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                280,
+                690,
+                312,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                320,
+                690,
+                352,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                360,
+                690,
+                392,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                400,
+                690,
+                432,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                440,
+                690,
+                472,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                480,
+                690,
+                512,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                520,
+                690,
+                552,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                560,
+                690,
+                592,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                600,
+                690,
+                632,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                640,
+                690,
+                672,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                680,
+                690,
+                712,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                720,
+                690,
+                752,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                760,
+                690,
+                792,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                800,
+                690,
+                832,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                840,
+                690,
+                872,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                880,
+                690,
+                912,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                920,
+                690,
+                952,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                960,
+                690,
+                992,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1000,
+                690,
+                1032,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1040,
+                690,
+                1072,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1080,
+                690,
+                1112,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1120,
+                690,
+                1152,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1160,
+                690,
+                1192,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1200,
+                690,
+                1232,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1240,
+                690,
+                1272,
+                722
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                160,
+                730,
+                192,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                200,
+                730,
+                232,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                240,
+                730,
+                272,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                280,
+                730,
+                312,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                320,
+                730,
+                352,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                360,
+                730,
+                392,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                400,
+                730,
+                432,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                440,
+                730,
+                472,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                480,
+                730,
+                512,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                520,
+                730,
+                552,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                560,
+                730,
+                592,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                600,
+                730,
+                632,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                640,
+                730,
+                672,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                680,
+                730,
+                712,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                720,
+                730,
+                752,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                760,
+                730,
+                792,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                800,
+                730,
+                832,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                840,
+                730,
+                872,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                880,
+                730,
+                912,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                920,
+                730,
+                952,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                960,
+                730,
+                992,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1000,
+                730,
+                1032,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1040,
+                730,
+                1072,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1080,
+                730,
+                1112,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1120,
+                730,
+                1152,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1160,
+                730,
+                1192,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1200,
+                730,
+                1232,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1240,
+                730,
+                1272,
+                762
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                160,
+                770,
+                192,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                200,
+                770,
+                232,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                240,
+                770,
+                272,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                280,
+                770,
+                312,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                320,
+                770,
+                352,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                360,
+                770,
+                392,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                400,
+                770,
+                432,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                440,
+                770,
+                472,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                480,
+                770,
+                512,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                520,
+                770,
+                552,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                560,
+                770,
+                592,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                600,
+                770,
+                632,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                640,
+                770,
+                672,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                680,
+                770,
+                712,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                720,
+                770,
+                752,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                760,
+                770,
+                792,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                800,
+                770,
+                832,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                840,
+                770,
+                872,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                880,
+                770,
+                912,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                920,
+                770,
+                952,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                960,
+                770,
+                992,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1000,
+                770,
+                1032,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1040,
+                770,
+                1072,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1080,
+                770,
+                1112,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1120,
+                770,
+                1152,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1160,
+                770,
+                1192,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1200,
+                770,
+                1232,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1240,
+                770,
+                1272,
+                802
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                160,
+                810,
+                192,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                200,
+                810,
+                232,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                240,
+                810,
+                272,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                280,
+                810,
+                312,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                320,
+                810,
+                352,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                360,
+                810,
+                392,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                400,
+                810,
+                432,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                440,
+                810,
+                472,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                480,
+                810,
+                512,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                520,
+                810,
+                552,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                560,
+                810,
+                592,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                600,
+                810,
+                632,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                640,
+                810,
+                672,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                680,
+                810,
+                712,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                720,
+                810,
+                752,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                760,
+                810,
+                792,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                800,
+                810,
+                832,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                840,
+                810,
+                872,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                880,
+                810,
+                912,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                920,
+                810,
+                952,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                960,
+                810,
+                992,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1000,
+                810,
+                1032,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1040,
+                810,
+                1072,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1080,
+                810,
+                1112,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1120,
+                810,
+                1152,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1160,
+                810,
+                1192,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1200,
+                810,
+                1232,
+                842
+              ]
+            },
+            {
+              "area_pixels": 983,
+              "bbox_xyxy": [
+                1240,
+                810,
+                1272,
+                842
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "check": "Rotation preserves the same tile size and five-item quantity",
+      "passed": true,
+      "horizontal_tile_size_px": [
+        [
+          70,
+          70
+        ]
+      ],
+      "vertical_tile_size_px": [
+        [
+          70,
+          70
+        ]
+      ]
+    },
+    {
+      "check": "All final frame files match the raster QA hashes",
+      "passed": true,
+      "frame_count": 14
+    },
+    {
+      "check": "All 168 count-state layout records cover the independently computed primes",
+      "passed": true,
+      "record": {
+        "path": "design/prime-counting-v1/qa/mockup-verification.json",
+        "sha256": "469efe204a0b4f0a9e361be3b4e7a96c6cb33720a99a1025aaf8bce6b3394b38"
+      }
+    },
+    {
+      "check": "Horizontal and vertical centering arithmetic independently recomputed from recorded raster bounds",
+      "passed": true,
+      "components": 1635,
+      "tolerance_px": 0.5,
+      "limitation": "This independently recomputes center/containment arithmetic from the renderer raster measurements; it is not a separate text OCR or second pixel extraction of all text."
+    },
+    {
+      "check": "Visual review of static composition and teaching content",
+      "passed": true,
+      "reviewed": [
+        {
+          "path": "design/prime-counting-v1/mockups/01-opening.png",
+          "sha256": "f3cadb15a8be923489c995ee9573405c1dace4ab28d0286ca0258e9a8f5c9268"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/03-five-and-six.png",
+          "sha256": "84b34ea503a6f7b6cc90438507ea57bf47b55cec6e1e66aaa3fdddc14b7ebed7"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/03b-turning-a-row.png",
+          "sha256": "c48c5db794d23db9f681e2492eca19c54e8ac1e43d711de9c7f29c6bcc336a80"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/04-one-is-not-prime.png",
+          "sha256": "98522ffd58e689c7176d7787bed881b8960f623b76fdabaa90d0124152881fc0"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/02-only-even-prime.png",
+          "sha256": "8c5b3c009bd2b3c60e5305626c998194412675fdd89189954388ef7c4f73f5c8"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/05-nine-is-not-prime.png",
+          "sha256": "8e8a7215aaa5245fa07c648fc1026fb299a5e29213eaa451b9ccb2943bc59e66"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/06-97-to-101.png",
+          "sha256": "0a9cabecf0bef71cfe310e097f86a7f0fc517694d5a766740818f6735ebbee26"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/07-three-digit-101.png",
+          "sha256": "fc332d73af7f6937ed1c621efdcf4dc753e484005c063e9199746b72d9d4ac42"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/08-longest-reading.png",
+          "sha256": "829afb80250bc0bcfc700fcb4f1f11758339b306e4cb231cac03e44b333c4c8a"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/09-last-prime-997.png",
+          "sha256": "e4d72711917e33d07c191cba86909056b56fe3cfbb32cf7daa3ec65a58fac4eb"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/10-finale.png",
+          "sha256": "a4c21e9f0425e5719c7118a4137703afb22f8c5ee18637486ddb6067497f7f37"
+        },
+        {
+          "path": "design/prime-counting-v1/mockups/storyboard-preview.jpg",
+          "sha256": "dedc5519b36b0e7f1d824e8deb049875aa51145794cb7998da4b7f2b514ad3d5"
+        }
+      ],
+      "observations": [
+        "Reviewed final contact sheet plus full-resolution comparison, rotation, bridge and finale. Source neutral and background inspected separately.",
+        "Separate comparison trays and final mosaic change composition relative to regular counting; labels clearly distinguish prime/composite.",
+        "98=2×49,99=9×11,100=10×10 accurate;1 excluded and2 only even prime correctly shown.",
+        "No visible character/tail cutoff or collisions with number/reading panels.",
+        "Final mosaic label states one tile per counted prime, so168 is a count of primes rather than997 individual tiles.",
+        "The prior optional opening footer that overlapped the bowl has been removed."
+      ],
+      "limitation": "Static image review only; continuous animation and sound are outside scope."
+    }
+  ],
+  "unresolved_findings": [],
+  "not_performed": [
+    "No TTS generation, audition or ASR/CTC",
+    "No audio master/AAC/video encoding or decode",
+    "No frame timing or continuous-animation review",
+    "No direct review of publicly uploaded YouTube videos; source-review.txt records fetch limitation",
+    "No approval/adoption of a completed production"
+  ],
+  "passed": true
+}

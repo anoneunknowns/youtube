@@ -1,0 +1,76 @@
+Num-Num Numbers — フィボナッチ数列カウント 品質改訂v002
+状態：完成媒体の独立QA PASS（2026-11-12 JST）。内容・新動作・全量画素/波形・最終AACの新規検査が合格。診断警告は保全し、ユーザー承認とは区別する。
+
+対象
+  output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4
+  SHA-256: 68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3
+  1920×1080、30fps、16,104フレーム、536.8秒。実測音声タイムライン536.78秒。
+  H.264/yuv420p、BT.709、limited range。合格したAACを再encodeせずcopy mux。
+
+今回の改訂
+  N024「forty-six thousand three hundred sixty-eight」は、内部threeの/θ/が弱い旧候補に代え、全文の新takeを採用した。
+  新原音は62,526samples/24kHz、2.60525秒。旧より8,182samples/0.340916667秒長い。
+  他103発話の原音SHA、数学と英語本文は同じ。後続の実測時刻だけがこの差分だけ移る。
+  新N024は採用AACの左右×通常/80ms余白付き4切出しでも内部/θɹiː/と語末/eɪt/を事前確認した。
+  最終MP4全104発話・左右を別途新規に抽出し、ASR208件/CTC208件/音響208件と両ch各3件の余白付き対照を実施した。事前確認は転用しない。
+  N024の内部/θ/と語末/eɪt/を通常・余白付きの最終AACで確認し、T013bは発話内ゲインの段差なし。
+
+  冒頭と別れ際は、準備→前脚in/out→準備→通常姿の離散姿勢で各2往復の手振りを行う。
+  初めて100万を超えるF31=1,346,269の確定後に、小さく頭・目線を持ち上げる28フレームの反応を加えた。
+  終幕は原則開眼のneutral。達成時の閉眼笑顔を36フレーム/1.2秒だけ示し、開眼へ戻す。
+  v001の閉眼笑顔を終幕約28秒保持する形と、greet1枚保持は継承しない。
+  新5姿勢は直接生成された原画そのもの。身体基準高wave1070px/notice1120pxと個別足支点から投影し、身体400px/足(1655,990)を保つ。
+  原画の輪郭、RGBA、透明余白、最大alpha254を改変せず、bbox高による体格合わせをしない。
+  全身crossfadeや中間形状のモーフは使わない。原画間の小さな造形・画風差は残る。
+
+内容と教材
+  F0=0、F1=1、n>=2でFn=F(n-2)+F(n-1)。初期値2項と39加算、F0..F40の全41項。
+  F1とF2の1は同じ値で別の位置。F40=102,334,155は初めて1億を超える項。
+  OLDER / NEWER / NEWの二入力と出力で計算を見せ、添字と値を一緒に次の入力へ渡す。
+  式発話はa plus b equalsまで、結果はN発話で1度だけ。結果と英語読みはN開始の0.12秒前に同時表示。
+  E終端→N開始0.16秒。通常N終端→次E開始2秒、受渡しはN終端+0.35〜+1.55秒。
+  六つのREPLAYはF2/F8/F13/F18/F26/F39後。進捗を増やさず、3つの筆算では一の位から隣列へcarryする。
+  数値窓は値を表し物の個数図ではない。黄金比・自然界の普遍法則を数学的根拠には使わない。
+  全104発話は導入8、数詞41、式39、解説12、終幕4。字幕104件、章7件も新実測へ合わせた。
+
+独立確認済み
+  内容642項目、不合格0。独立fast doublingと2×2行列、米国英語数詞生成と逆変換で全41項・39式を再検算。
+  原音104件のSHA/PCM形式/長さ、全文台本、字幕両境界、7章、38受渡し、9carry列、N024差分を確認。
+  top/base/motionは循環しないSHA関係で固定し、baseの全数学・発話・表示時刻がtopと完全同一。
+  動作検査は最終MP4全16,104フレームをデコード。16登録姿勢の実可視範囲は教師領域を遮らず、フレーム外の欠けなし。
+  新4窓の全フレームと各入口/出口で登録原画の画素と照合。wave_in/outを基準に実際の往復を測り、冒頭/別れ各2往復を確認。
+  強い描線・塗りの欠け0、最長閉眼1.2秒、元画素との比較・動作量・並びは合格。
+  開始0.8秒/最終2秒の意図したfadeは厳密な静止原画比較から除外する。全フレームのデコード検査には含む。
+  動作/遮蔽/小さな手先欠け/基底改変を拒む14回帰テストが合格。
+  最終MP4から12キーポーズcontact sheetと4原寸全画面を新規抽出し、手振り、反応、笑顔から開眼への戻り、教師要素との非干渉を目視確認。
+  人による全編連続視聴・全件試聴の記録ではない。
+
+最終媒体ゲート
+  fresh全量QAはPASS。旧v001の画素QAは再利用せず、最終MP4の全16,104フレームをデコードして数値・式・英語・添字・進捗・繰上がり・履歴を検査した。
+  原寸733場面・8,222部品は水平/垂直それぞれ最大1.0pxで合格。空・切れ・衝突の未解決0。両軸の許容差1pxは維持した。
+  原音104発話×左右とmaster/最終AACを照合。最小相関はmaster0.9999999665956475、AAC0.9967959119124219、全lag0samples。
+  無音区間は各105件、内部ピークはPCM16でmaster0/AAC1。最終AACは-16.52LUFS/-1.98dBTP。
+  最終AACの新規ASR208件・CTC208件・音響208件に加え、左右のtwo/eight/N024を80msの無音余白付きでも新規解析した。
+  ASR左91一致/13警告、右90一致/14警告。短語CTCの揺れも消さず、exact clip SHAに結び付けた個別音素・音響根拠で判定した。
+  全104発話×左右を採用し、実質的な音声未解決0、clipping/語頭/語尾の未解決0。完璧な発音の認証や人の全件試聴は主張しない。
+  合格M4Aと最終MP4のAAC ADTS payload、および48kHz/stereoデコードPCMが完全一致した。
+  rootの媒体QA、最終AAC、当担当の動作/内容の全ゲートは同じMP4 SHAとtop timeline SHAに束縛されている。
+  全量QA: output/fibonacci-counting-001-v002/qa/v001/verification.json
+    SHA a469349efd4e70700fdb206280d68c7bf68687cf7943a661ab2a6db427862880
+  最終AAC: output/fibonacci-counting-001-v002/audio-final-qa/final-aac-review.json
+    SHA e538d6a00b8722d25386947fe73258e39d46217807883760933a0c0cabd634b9
+  要約: design/fibonacci-counting-v1/production-qa/v002/final-media-summary.json
+
+登録・可搬性の後続記録
+  rootが次にcatalog/current alias、共有文書参照、production-run、archive/doctor/previewを登録・実行する予定。
+  これらの未実施作業のPASSを本書に含めない。実行後の別production-run receiptで結果を確認する。
+
+記録と保存
+  仕様: design/fibonacci-counting-v1/production-spec-v002.json
+  内容: design/fibonacci-counting-v1/production-qa/recheck-20261112-01/v002-content/content-review-v002.json
+  動作: output/fibonacci-counting-001-v002/qa/motion-v002/verification.json
+  実画像: design/fibonacci-counting-v1/production-qa/recheck-20261112-01/v002-content/decoded-image-review-v002.json
+  意味・構図: design/fibonacci-counting-v1/production-qa/recheck-20261112-01/v002-visual-motion/visual-motion-review-v002.json
+  初回動作検査のrule終端8フレーム差は検査側half/watchの期待順を修正し、回帰追加後に全量再検査した。映像は不変。
+  v001完成品・旧音声の注意点・旧QA・原画・不採用候補・過去作はその時点の記録として保全した。
+  この担当による共有catalog/alias/過去の完成記録の変更はない。

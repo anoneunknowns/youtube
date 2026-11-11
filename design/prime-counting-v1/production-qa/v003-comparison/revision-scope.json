@@ -1,0 +1,39 @@
+{
+  "kind": "prime-v003-quality-revision-scope",
+  "baseline_production": "prime-counting-production-v002",
+  "baseline_movie_sha256": "9ab0b3c4dd6d551b63349f41c6922cc38951ea8576668e3cb2e52d26e8c70c0f",
+  "findings": [
+    {
+      "id": "MOTION-002",
+      "issue": "Standing hand gesture switches pop the head/body vertically15–17px; v002 intended-raster checks did not test whether the motion reads naturally.",
+      "action": "Use fixed neutral body/head/tail with measured generated arm changes; reject jaw ghosts and chest seams in native previews."
+    },
+    {
+      "id": "MOTION-003",
+      "issue": "Long count has138.7s and136.8s gaps between non-blink actions. Compared with decimal Bear, presentation/rest/stretch and sustained closing response are missing.",
+      "action": "Add context-linked presenting, same-face clap cycle, one calm seat/stretch/rest/stand sequence, and a longer closing wave. Avoid repetitive hopping on every number."
+    },
+    {
+      "id": "SCENE-001",
+      "issue": "Small430px actor and long unchanged number-card stage make the sparse acting less noticeable.",
+      "action": "Measure a modest470px actor at1625,1014; fill168 mosaic tiles in existing gold frame progressively after spoken primes. Preserve math reading fields."
+    }
+  ],
+  "generation": [
+    "Freshwave/think6 using exact prime neutral plus canonical identity",
+    "Freshpresentation3/clap3 with fixed facial expression"
+  ],
+  "reuse": [
+    "Cleanblinkandmouthrig",
+    "Crouch/takeoff/air/landing",
+    "Existingreviewedhalfseat/seated/stretch/stand5 atcommonphysicalscale"
+  ],
+  "constraints": [
+    "Keepall168primes2..997,188voices,20590frames,script,captiontimesunchanged",
+    "CopyacceptedAACpacketpayloadandtimestamps",
+    "Do not change old movies, old original assets, or unrelated concurrent productions",
+    "One isotropic scale per calibrated source sheet, no per-pose fit",
+    "Separate mathematical/media PASS from creative/natural-motion review"
+  ],
+  "comparison_policy": "No blanket activity-percentage or pose-count target. Decimal and binary Bear have very different intended activity; use meaningful scene fit and actual native film transitions."
+}

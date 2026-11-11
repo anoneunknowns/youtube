@@ -1,0 +1,483 @@
+{
+  "kind": "fibonacci-v003-final-critical-visual-closeout",
+  "status": "PASS",
+  "passed": true,
+  "scope": "Visual closeout of the detected type discontinuity and source-preservation proof; full encoded mathematical/technical verification is maintained by separate independent QA. No claim of full human real-time playback.",
+  "completed_video": {
+    "path": "output/fibonacci-counting-001-v003/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+    "sha256": "2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704"
+  },
+  "fresh_completed_v003_evidence": {
+    "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/visual/v003-encoded/encoded-evidence-and-preservation.json",
+    "sha256": "1f4fe8ac3d5191dda5cae6e3e2edc65c968a938a5f33284b2461996abc763fae"
+  },
+  "prior_fresh_v002_assessment": {
+    "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/visual/critical-review-v002-and-v003-native.json",
+    "sha256": "86b1c9b8c2e6d5f8c481de85639070835cd4950a82713ab99a2eeab63707d90b"
+  },
+  "carry_voice_specific_correspondence": {
+    "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/visual/carry-voice-correspondence.json",
+    "sha256": "f3606e90cfa342d5ed4da8373769878b86b4798d51eb5ddcc0a58c58d5679f4a"
+  },
+  "issues": [
+    {
+      "id": "VIS-001",
+      "status": "CLOSED_ON_COMPLETED_V003_MP4",
+      "original_problem": "At229.033→229.067s in v002, the arrived4,181/6,765pair shrank88→47px in one frame.",
+      "fix": "Only those two copied numbers shrink88→47px during the existing227.40525–228.60525s handoff, then retain47px through the next E21expression start229.05525s.",
+      "verification": "59fresh contiguous decoded frames6823–6881 cover the full transfer, settled hold and first10E21frames. Native four consecutive frames6870–6873 show no remaining one-frame shrink.",
+      "evidence": {
+        "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/visual/v003-encoded/actual-arrived-F20-to-E21-four-consecutive.png",
+        "sha256": "3f3aff8cd1d1fc8144d2475e532067428ced7c2d5d2c68aa74043d2b34c43def"
+      },
+      "full_handoff_evidence": {
+        "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/visual/v003-encoded/actual-F20-full-handoff-native.png",
+        "sha256": "eeef431457515d45895c131198739a49de805ff35af0f92d9d11411ce7b6e883"
+      },
+      "new_unresolved_defect": false
+    }
+  ],
+  "reviewed_nonissues_closed": [
+    {
+      "id": "ACT-001",
+      "concern": "Small face/body outline and watercolor differences",
+      "decision": "CLOSED_NO_MATERIAL_DEFECT",
+      "evidence_scope": "All52native pose boundary before/after pairs; all22new-window boundaries included.",
+      "rationale": "Single coherent outline/face and planted feet are retained. Wave blue-iris centroid changes are max|dx|0.313120/max|dy|0.140548px; the observed paper/edge changes do not read as unintended head/torso jumps or unrelated expression flicker. Old think deliberately turns from watching toward the viewer and back while raising/returning a paw. That purposeful orientation change is distinguished from a body-scale jump."
+    },
+    {
+      "id": "ACT-002",
+      "concern": "Discrete holds might be incomplete or broken motion",
+      "decision": "CLOSED_NO_MATERIAL_DEFECT",
+      "rationale": "Both wave directions connect shoulder→elbow→paw without detached joints, doubled paws or torso shifts. Preparation,2in/out excursions, lowering and normal return are readable at the actual6–7frame held cadence. The illustration uses held keyposes; no smooth/full-actor interpolation is claimed or needed to repair a detected defect."
+    },
+    {
+      "id": "ACT-003",
+      "concern": "Notice weak or feet floating",
+      "decision": "CLOSED_NO_MATERIAL_DEFECT",
+      "rationale": "Blue pupils move upward-left toward the new-value window, hold briefly and return. Both soles remain attached to the common soft ground shadow; no lifted foot or support discontinuity appears. Its limited eye action keeps the formula transfer dominant."
+    },
+    {
+      "id": "ACT-004",
+      "concern": "Long watching holds insufficient guidance",
+      "decision": "CLOSED_INTENTIONAL_TEACHING_ROLE",
+      "rationale": "The gaze points left toward the main result/operand area while input emphasis, output commit and newest-pair movement supply the changing activity. Milestone reaction and goodbye are present. Adding an unrelated repeated idle gesture would not address an observed error; no blanket loop is added."
+    },
+    {
+      "id": "MATH-001",
+      "concern": "Transfer, labels, large digits or scene cuts",
+      "decision": "CLOSED_EXCEPT_VIS-001_FIXED_IN_NEW_NATIVE_VERSION",
+      "rationale": "All38handoff values remain the newest pair, labels move with their values, shortest repeated1pair and largest8digit transferred-pair cases remain readable and clear. The sole visible type discontinuity is VIS-001. Scene cuts signal new explanation/result roles; no mixed/fake numerical intermediate or unmotivated collision is observed. F38=39,088,169 and F39=63,245,986 form the largest transferred pair; F40=102,334,155 is a9digit final result and has no handoff."
+    },
+    {
+      "id": "CARRY-001",
+      "concern": "Carry generation/voice response",
+      "decision": "CLOSED_NO_MATERIAL_DEFECT",
+      "rationale": "All33column phases follow correct place order and values. Worst apparent speech leads were checked explicitly: F8 two tens describes its already-visible2; F13 write-three-tens begins during same tens-write hold and carry-one-hundred overlaps same carry movement; F18 incoming carry arrives within0.266s of fifteen-hundreds introduction. For That hundred joins, carry arrives149.2667during hundred introduction149.159–149.544, and hundreds compute is visible when joins149.619–149.924begins. No wrong column or contradictory operation is narrated.",
+      "correspondence_evidence": {
+        "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/visual/carry-voice-correspondence.json",
+        "sha256": "f3606e90cfa342d5ed4da8373769878b86b4798d51eb5ddcc0a58c58d5679f4a"
+      }
+    },
+    {
+      "id": "END-001",
+      "concern": "Closing expression and fade",
+      "decision": "CLOSED_NO_MATERIAL_DEFECT",
+      "rationale": "The1.2s smile returns open eyes, goodbye wave returns normal before fade, all foreground/background fade together to cream through frame16103. No truncated limb, abrupt blackout, remaining strong title, or isolated visible element is left at the ending."
+    }
+  ],
+  "scope_counts": {
+    "fresh_v002_actor_boundaries": 52,
+    "new_motion_boundaries_included": 22,
+    "fresh_v002_actor_contiguous_frames": 364,
+    "handoffs": 38,
+    "largest_transferred_pair_digits": 8,
+    "largest_transferred_pair_values": [
+      39088169,
+      63245986
+    ],
+    "final_result_digits": 9,
+    "final_result": 102334155,
+    "final_result_has_handoff": false,
+    "carry_cases": 3,
+    "carry_phase_samples": 33,
+    "fresh_v003_type_contiguous_frames": 59,
+    "fresh_v003_native_fullscreens": 9
+  },
+  "producer_raster_preservation": {
+    "same_complete_state_and_actor_timing_runs": true,
+    "holds": 1644,
+    "unchanged_byte_identical_native_images": 1597,
+    "changed_native_images": 28,
+    "all_changed_states": [
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 1,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 2,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 3,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 4,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 5,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 6,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 7,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 8,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 9,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 10,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 11,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 12,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 14,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 15,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 16,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 17,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 19,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 20,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 21,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 22,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 23,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 24,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 25,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 26,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 27,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 28,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 29,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      },
+      {
+        "mode": "count",
+        "n": 20,
+        "stage": "transfer",
+        "transfer_tick": 30,
+        "carry_column": -1,
+        "carry_stage": "align",
+        "carry_tick": 0,
+        "pose": "watch_left",
+        "cream": 0,
+        "legend": "count"
+      }
+    ],
+    "unexpected_changed_states": [],
+    "changed_pixels_outside_two_copied_glyph_fields": [],
+    "comparison_is_not_encoded_H264_identity": true
+  },
+  "preservation_interpretation": "1597of1625producer PNGs are byte-identical to v002. The28changed PNGstates are all F20handoff copies; no changed pixel lies outside the two copied-number fields. All1644state/actor timing runs match v002. This proves preservation of native producer images and timing, not whole encoded H264bitidentity.",
+  "native_alignment": {
+    "passed": true,
+    "unique_states": 1625,
+    "foreground_elements": 18970,
+    "max_abs_dx_px": 0.5,
+    "max_abs_dy_px": 0.5,
+    "all_foreground_clear": true
+  },
+  "source_policy": {
+    "path": "output/fibonacci-counting-001-v003/source-policy.json",
+    "sha256": "0932cc67fc13586501a262dff8f5401be1257eb06fa1a12ef770806457e6d6db"
+  },
+  "renderer": {
+    "path": "tools/render_fibonacci_video_v003.py",
+    "sha256": "7eafca5114b9cc7ceec22d4c97580eb2080ac2f7f5aec137fc8ad6737f0e9cf1"
+  },
+  "new_images_generated": 0,
+  "source_art_modified": false,
+  "unit_and_regression_tests_passed": 50,
+  "negative_control": "Old one-frame font-step41px is rejected; new actual-time raster sweep is monotone88→47with maximum3px/frame. Arrived/end and next input text/font/bbox are equal.",
+  "final_audio_inheritance": {
+    "path": "output/fibonacci-counting-001-v003/audio-inheritance-qa/v001/final-audio-review.json",
+    "sha256": "ed4dd4382b30cba82b095eb1b446535b84834943ff97d03f14db38b3d4ad886c"
+  },
+  "audio_interpretation": "Audio is inherited from the passed v002AAC. No v003fresh ASR/in-person full listening is claimed.",
+  "unresolved_visual_findings": [],
+  "required_visual_changes_remaining": [],
+  "independent_full_video_QA": "Separate root/flow reports are authoritative for full encoded-frame math/technical acceptance."
+}

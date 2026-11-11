@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "isolated-phoneme-asr",
+  "source_manifest_sha256": "bf0f8d3505b3b32b95e9657d054141f765d50ba3cd420d6346c71d356bcb4a95",
+  "model": {
+    "id": "onnx-community/wav2vec2-lv-60-espeak-cv-ft-ONNX",
+    "revision": "c69750f5043e5e1f8a71ab95dd3b98338c280c92",
+    "dtype": "q8",
+    "sha256": "3d1479b5c70836645a4310902479f7f7e8bbc8c16c58745d918804f4f6f9d120",
+    "license": "Apache-2.0"
+  },
+  "method": "Independent 16 kHz CTC phoneme recognition, no expected text or neighbor-number prompt; eSpeak expected labels are computed only after inference. Approximate 20ms timestamps. Automated evidence, not proof of perfect pronunciation.",
+  "results": [
+    {
+      "role": "number",
+      "number": 3,
+      "id": "N024_three_only",
+      "expected_text": "three",
+      "expected_espeak": "θɹˈiː",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-counting-001-v001/audio-recheck-20261112-01/N024-three-only.wav",
+      "source_sha256": "9199aae023d60b93338ce8e8869900f53f9170fb41191c5114e1cd27e5fce7e9",
+      "duration_s": 0.3,
+      "recognized_phonemes": "ɹ iː",
+      "tokens": [
+        {
+          "token": "ɹ",
+          "start_s": 0.18,
+          "end_s": 0.205,
+          "probability": 0.5334880994290965
+        },
+        {
+          "token": "iː",
+          "start_s": 0.2,
+          "end_s": 0.225,
+          "probability": 0.5563789146732483
+        }
+      ]
+    }
+  ]
+}

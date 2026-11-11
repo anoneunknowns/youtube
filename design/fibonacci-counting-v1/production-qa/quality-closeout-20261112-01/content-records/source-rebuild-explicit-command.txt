@@ -1,0 +1,9 @@
+.venv/bin/python tools/build_fibonacci_episode.py \
+  --revision-id fibonacci-counting-v003 \
+  --speech-manifest output/fibonacci-counting-001-v002/speech/measurements.json \
+  --speech-gate output/fibonacci-counting-001-v002/speech/speech-acceptance.json \
+  --phonemes output/fibonacci-counting-001-v002/speech/fresh-phonemes.json \
+  --codec-corrections output/fibonacci-counting-001-v002/speech/aac-scalar-corrections.json \
+  --ffmpeg .venv/bin/ffmpeg \
+  --out-dir output/fibonacci-source-rebuild-new \
+  --plan-only

@@ -1,0 +1,130 @@
+{
+  "kind": "new-final-MP4-to-accepted-M4A-signal-copy-proof",
+  "passed": true,
+  "checked_at_utc": "2026-11-11T16:36:58.436035+00:00",
+  "video": {
+    "path": "output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+    "sha256": "68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3"
+  },
+  "timeline": {
+    "path": "output/fibonacci-counting-001-v002/timeline.json",
+    "sha256": "bb2883c6433430cbc884c95fa4d31cf8fd77a83ef3a631a748c5b340a3a282c0"
+  },
+  "accepted_aac_receipt": {
+    "path": "output/fibonacci-counting-001-v002/audio-build/aac-acceptance.json",
+    "sha256": "32fe41911b163b5838961f1a2699fada953669a701d372294bea200497417327"
+  },
+  "AAC_payload_identical": true,
+  "decoded_PCM_identical": true,
+  "method": "Fresh ffmpeg extraction of both actual containers: compare ADTS bytes/hash and decoded48k24bitstereo PCM bytes/hash. No source inference reused to stand in for final-MP4 recognition.",
+  "results": [
+    {
+      "kind": "ADTS",
+      "input": {
+        "path": "output/fibonacci-counting-001-v002/audio-build/aac-preflight.m4a",
+        "sha256": "596ef946b41ff1c332e8a9faead5e4d4783bc15ffda20e7073b7feb05510f65b"
+      },
+      "sha256": "c34fb1b264f4e80b449612dc99eb419e70ee6c51d493617011d97b36577c538f",
+      "bytes": 10797028,
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg",
+        "-v",
+        "error",
+        "-nostdin",
+        "-i",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-build/aac-preflight.m4a",
+        "-map",
+        "0:a:0",
+        "-c:a",
+        "copy",
+        "-f",
+        "adts",
+        "pipe:1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "kind": "ADTS",
+      "input": {
+        "path": "output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+        "sha256": "68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3"
+      },
+      "sha256": "c34fb1b264f4e80b449612dc99eb419e70ee6c51d493617011d97b36577c538f",
+      "bytes": 10797028,
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg",
+        "-v",
+        "error",
+        "-nostdin",
+        "-i",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+        "-map",
+        "0:a:0",
+        "-c:a",
+        "copy",
+        "-f",
+        "adts",
+        "pipe:1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "kind": "PCM48k24bitStereo",
+      "input": {
+        "path": "output/fibonacci-counting-001-v002/audio-build/aac-preflight.m4a",
+        "sha256": "596ef946b41ff1c332e8a9faead5e4d4783bc15ffda20e7073b7feb05510f65b"
+      },
+      "sha256": "cc04b7867818995c3a8add3276611cdd3bace9a845fdbaf83e3228e77c1ac2de",
+      "bytes": 154592640,
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg",
+        "-v",
+        "error",
+        "-nostdin",
+        "-i",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-build/aac-preflight.m4a",
+        "-map",
+        "0:a:0",
+        "-ar",
+        "48000",
+        "-ac",
+        "2",
+        "-c:a",
+        "pcm_s24le",
+        "-f",
+        "s24le",
+        "pipe:1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "kind": "PCM48k24bitStereo",
+      "input": {
+        "path": "output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+        "sha256": "68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3"
+      },
+      "sha256": "cc04b7867818995c3a8add3276611cdd3bace9a845fdbaf83e3228e77c1ac2de",
+      "bytes": 154592640,
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg",
+        "-v",
+        "error",
+        "-nostdin",
+        "-i",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+        "-map",
+        "0:a:0",
+        "-ar",
+        "48000",
+        "-ac",
+        "2",
+        "-c:a",
+        "pcm_s24le",
+        "-f",
+        "s24le",
+        "pipe:1"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

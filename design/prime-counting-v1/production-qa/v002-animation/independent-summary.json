@@ -1,0 +1,137 @@
+{
+  "kind": "independent-prime-v002-animation-final-summary",
+  "passed": true,
+  "movie": {
+    "path": "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+    "sha256": "9ab0b3c4dd6d551b63349f41c6922cc38951ea8576668e3cb2e52d26e8c70c0f"
+  },
+  "original_movie": {
+    "path": "output/prime-counting-001-v001/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+    "sha256": "ed506ca4305e4bf367fa8c69c826b18907a9264482b46db18fe06b6653b01b5f"
+  },
+  "final_evidence": {
+    "path": "design/prime-counting-v1/production-qa/v002-animation/independent-final-002/verification.json",
+    "sha256": "638a00c0d56f5680283c441d6bcee2a66323e4cd3590fb7bde742cc85bccac6a"
+  },
+  "frozen_verifier": {
+    "path": "design/prime-counting-v1/production-qa/v002-animation/independent-final-002/verifier-source.py",
+    "sha256": "7afdb097ea898ad065e8fcce2d6a920cead694afe8f2ad0d136b51a4f9480faa"
+  },
+  "negative_controls": {
+    "path": "design/prime-counting-v1/production-qa/v002-animation/independent-negative-controls-001.json",
+    "sha256": "a1520c564583c4f18d1197cf4fdcbe619c836b729e7cdfcacdafb4021964c9c1",
+    "actual_neutral_frame": 346,
+    "non_neutral_states_checked": 21,
+    "all_rejected": true,
+    "minimum_strongest_error": 15.91814278046162,
+    "same_threshold": 4
+  },
+  "coverage": {
+    "decoded_actor_frames": 20590,
+    "original_source_cells": 18,
+    "distinct_pose_and_lift_states": 22,
+    "major_gestures": 14,
+    "complete_blinks": 96,
+    "pose_frame_counts": {
+      "neutral": 19444,
+      "wave_raise": 16,
+      "wave_high": 16,
+      "wave_left": 20,
+      "wave_right": 20,
+      "settle": 63,
+      "blink_half": 384,
+      "blink_closed": 288,
+      "think_raise": 50,
+      "think": 107,
+      "aha": 80,
+      "posture_neutral": 10,
+      "crouch_half": 12,
+      "crouch_down": 8,
+      "takeoff": 6,
+      "hop_air": 18,
+      "land": 8,
+      "smile_open": 40
+    },
+    "all_teaching_region_frames_compared": 20590,
+    "aac_packets_exact": 32173
+  },
+  "actual_metrics": {
+    "actor_complete_corridor_worst_rgb_mae": [
+      2.287535936195864,
+      1.936882708893629,
+      2.7660205879625335
+    ],
+    "local_feature_worst_luma_mae": 3.6980599647266312,
+    "local_blue_channel_mae_also_retained": 5.216402116402117,
+    "learning_region_worst_rgb_mae": [
+      1.11891921160927,
+      0.7346003898635478,
+      1.3671648256443578
+    ],
+    "thresholds": {
+      "complete_corridor_rgb_each": 4,
+      "local_feature_luma": 4,
+      "quarter_scale_teaching_region_rgb_each": 4
+    },
+    "support_anchor_max_abs_error_xy_px": [
+      0.4591265397536972,
+      0.3366799243154901
+    ]
+  },
+  "asset_sources": {
+    "expressions": {
+      "path": "assets/library/characters/kangaroo/animations/prime-v001/expressions-sheet-v002.png",
+      "sha256": "b3ed4b705e4757d4f092219b2c5ef774e92a55465d369594fc58e25e02a59919",
+      "head_width_px": 177,
+      "common_reference_height_px": 551.0,
+      "scale_at_430px": 0.7803992740471869
+    },
+    "gestures": {
+      "path": "assets/library/characters/kangaroo/animations/prime-v001/gestures-sheet-v002.png",
+      "sha256": "a62a3900ab684280991cd47baaf46d8ca69b50e7237f4e6657248e8f2e5cd9d1",
+      "head_width_px": 164,
+      "common_reference_height_px": 510.5310734463277,
+      "scale_at_430px": 0.842260192111903
+    },
+    "postures": {
+      "path": "assets/library/characters/kangaroo/animations/prime-v001/postures-sheet.png",
+      "sha256": "5056363159ca4646b04269e5ef9179defd94155d4c16ac1a2c332083b7a63528",
+      "head_width_px": 141,
+      "common_reference_height_px": 438.93220338983053,
+      "scale_at_430px": 0.9796501525273197
+    }
+  },
+  "visual_review": {
+    "canonical_identity_comparison": "design/prime-counting-v1/production-qa/v002-animation/canonical-vs-HQ-neutral.png",
+    "actual_decoded_blink": "design/prime-counting-v1/production-qa/v002-animation/decoded-final-blink-001.png",
+    "native_preview_movie_sha256": "719d12c3b8bb602f51b784043d15d5c2a14f399212de2cb4213c109aeb160a2b",
+    "observations": [
+      "Crisp cartoon outlines and canonical kangaroo face/eyes/ears/pouch/tail identity maintained.",
+      "Wave has actual outward/backward arm motion and neutral/paw-up/cheek/outward states. wave_right closely resembles wave_raise; do not claim four clearly distinct palm angles.",
+      "Think uses a genuine intermediate paw raise, chin touch and aha finger gesture.",
+      "Dedicated posture strip clearly bends knees, extends at takeoff, lifts tucked feet on a bounded trajectory, and lands with bent knees.",
+      "Neutral body and tail RGBA pixels are exactly retained below source y252 during frequent facial patches; original source cells are unchanged.",
+      "Actual decoded first blink shows open, half, closed, half, open with no residual open-eye strokes or head silhouette protrusion.",
+      "All tail tips, ears, hands and feet remain visible in their recorded clear corridor."
+    ]
+  },
+  "known_art_variation": "With one head-calibrated scale per source group, standing gesture artwork is about 15 px shorter than expression neutral at the 430px reference. Accepted as a brief hand-drawn posture change after native-size preview; no per-pose scaling or whole-character crossfade.",
+  "checker_development_evidence": {
+    "preserved_failed_previews": [
+      "independent-preview-001/verification.json",
+      "independent-preview-002/verification.json"
+    ],
+    "accepted_preview": "independent-preview-003/verification.json",
+    "preserved_failed_final_comparison": "independent-final-001/verification.json",
+    "explanation": [
+      "Initial local RGB comparison treated YUV420P chroma ringing around high-contrast eye/mouth outlines as a shape error. Final rule retains global RGB<=4 and measures local shape in luma<=4, with local RGB maxima still reported. No threshold increased.",
+      "Final-001 actor and AAC checks passed, but teaching difference graph blended YUV planes before RGB conversion: zero chroma differences rendered green76. Final-002 explicitly blends planar RGB, retaining the same region and per-channel threshold.",
+      "All 21 static-neutral negative controls use exactly the final global-RGB/local-luma decision rule and are rejected with large margin.",
+      "No source pixels, MP4, timeline, prior movie or historical QA PASS records were changed to obtain the result."
+    ]
+  },
+  "scope_limits": [
+    "Teaching-region continuous comparison is at 342x270 after cropping native x0..1370; root separately ran the native mathematical/glyph verifier.",
+    "This supplemental report proves stream identity and visible acting; speech-content/listening acceptance is separately bound to the unchanged adopted AAC and the production audio QA."
+  ]
+}

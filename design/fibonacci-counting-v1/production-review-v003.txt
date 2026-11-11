@@ -1,0 +1,81 @@
+Num-Num Numbers — フィボナッチ数列カウント v003 制作レビュー
+状態：完成媒体の独立QA PASS（2026-11-12 JST）。内容・全受渡し・導入/フェード・動作・音声継承を確認済み。ユーザー承認とは区別する。
+
+完成媒体
+  output/fibonacci-counting-001-v003/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4
+  SHA-256: 2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704
+  49,285,200 bytes、1920×1080、30fps、16,104フレーム、536.8秒。
+  実測音声タイムライン536.78秒。H.264/yuv420p、BT.709/limited range。AAC-LC48kHz/stereo。
+
+今回の修正
+  F20の受渡し後、4,181/6,765が88pxから47pxへ瞬間縮小する粗さを修正した。
+  既存1.2秒の移動と同じ量子化smoothstepで、二つの移動コピーだけ88→47pxへ縮める。二重easeは使わない。
+  47pxで到着・保持し、次E021の入力へ同じ字形寸法でつなぐ。添字23px、移動パネル、主結果126px、読み32pxは維持。
+  旧v002実MP4を新しい期待曲線で検査した負対照は、37handoffを合格、F20だけ49フレーム中44で字体寸法不一致として拒否した。
+  新v003実MP4はF20の全期待サイズ・到着保持・次式への連続性が合格。新画像生成や原画修正、音声変更は行っていない。
+
+内容と現行脚本
+  F0=0、F1=1、n>=2でFn=F(n-2)+F(n-1)。F0..F40の全41項と39加算、F1/F2の二つの1を別項として保持。
+  F40=102,334,155は初めて1億を超える項。転送はF2..F39後の38回で、最大pairはF38/F39の8桁。
+  9桁のF40は最終結果表示で、その後の受渡しはない。
+  発話104、字幕104、章7。全値・数詞・式・添字・表示120ms前・通常2秒・38受渡し・9carry列を独立再検算して642項目失敗0。
+  原文Englishは不変。元narration/scriptの仮尺・画面cueは歴史資料として保全し、現行全104cueをscenario-v003.txtとeffective-visual-cues-v003.jsonで通読できるようにした。
+  T018aは縦式の位取りREPLAY、O02は最終値と一般式で直前ペアを併記しない。T026aは固定の縦桁グループ、O03は履歴への固定画面切替、O04は開眼手振りとneutral復帰。
+  全104発話の実測中点から新規原寸画像を採取し、1,329部品観測の独立内容・両軸検査が合格。24説明場面contactと上記5場面の原寸表示も確認した。
+  N020/E021には移動中の88→47pxと到着後47px保持を明記。数値窓を物の個数図と説明せず、黄金比や自然界の普遍法則を数学的根拠にしない。
+
+完成画素の検査範囲
+  fresh全編decodeは16,104フレーム。適用可能な静止場面の半解像度字形チェックは100,231部品観測。
+  原寸採取733時点のうち字形対象あり731時点、8,222部品観測。水平/垂直それぞれ最大1.0pxで合格。
+  従来ラベルが空だった導入seedと末尾fadeは専用検査で補完した。全フレームの原寸検査と原寸の抽出時点検査を混同しない。
+  全38handoffは移動開始から到着保持の終端まで全1,946原寸フレーム、二数値/二添字の7,784部品を検査。
+  内容、両軸、空・切れ・観測端接触・交差が合格。dx最大1.0px、dy最大0.6754485605517857px、許容差は両軸各1pxを維持。
+  導入seedは完成前に固定された設計content_boxのみを意図した有効領域として使い、旧visible_box/合否やrenderer返値を期待値へ使わない。
+  全124フレームで7つの数値/添字・ordinal群/見出し等を実画素から再測定し、両軸最大0.5px。
+  広い観測範囲に全字形と余白を残し、wrong0/1・wrongF/ordinal・片軸ずれ・空・切れたROIを負対照で拒否した。
+  数値とF群は平坦パネルに対するBT.709半コントラスト、背景上の見出しは独立RGB逆合成で観測。対象領域・中心・許容差は合格後に動かしていない。
+  開始fade25採取フレーム（非fade基準を含む）と末尾fade60フレームの実画素曲線が一致。終端は目標クリーム色[255,250,240]へ収束（codec由来の色差を別記）、最後だけflashする負対照は拒否した。
+  上記の部品数は検査ごとの観測回数で、重複を含むため固有部品数として足し合わせない。
+
+キャラクターと素材
+  シャム猫の登録16姿勢、身体400px、足支点(1655,990)を保持。元キャンバスと身体基準・個別足支点から投影し、bbox高で体格を合わせない。
+  前脚in/outで冒頭/終幕各2往復、F31初100万到達後の小さな気付き、達成時だけ1.2秒の閉眼笑顔から開眼へ戻る。
+  実v003全16,104フレームの独立動作検査が合格。教材遮蔽・切れの所見0、最長閉眼1.2秒。意図したfadeは専用曲線検査へ分けた。
+  全身crossfadeや原画の輪郭/RGBA修正は行わず、原画間の小さな造形差と離散holdを保った。
+
+音声と診断の継承
+  現行原音はv002の全文新N024（62,526samples/24kHz、2.60525秒）と他103原音。新N024のsource SHAはf8c1d0c47d6075579dcf300f287cf5621161654c11abcef67e69fffabe067226。
+  実測原音合計429.74秒＋固定遷移107.04秒で536.78秒。英語本文・全104voicecue・PCMマスターはv002から不変。
+  全25,163AACpacketのpayload/PTS/DTS/duration/size、形式/timebase/開始終端、ADTSと48kHz24bit/stereoデコードPCMが完全一致。
+  v002最終AACの左右208ASR/208CTC/208音響と、別の独立base.en104/余白付きCTC104・1,221語/1,714母音核監査を、この同一信号証明で適用した。
+  v003で新たに行ったASR/CTCは0件。新規208再認識と書かず、373根拠ファイルのハッシュを再確認して継承した。
+  モデル転写/phone差の生診断は消さず、個別原因と独立対照で閉じた。追加13候補は不採用で、実質的な音声不備・未解決0。
+  最終AACは-16.52LUFS/-1.98dBTP/LRA5.2。原音104×左右とmaster/AACの最小相関は0.9999999665956475/0.9967959119124219、全lag0。
+  無音各105区間の内部ピークはPCM16でmaster0/AAC1。T013bの発話全体一定-2.5dBは一度だけ適用し、発話内段差なし。
+  線形の発話全体scalarと共通gainのみ。圧縮・limiter・時間伸縮・ピッチ変更は行わない。完璧な発音や人による全件試聴は主張しない。
+
+再出力と原音からの再build
+  採用済みmaster/AACのportable再出力は、追加gainやAAC再encodeを行わない。
+  登録・採用alias・archive・doctor・preview・全編再出力の現在の判定はproduction-run-v003.jsonを参照する。
+  builder既定はv001互換。--revision-idだけでは新N024を選ばないため、原音から組む場合は4入力を全て明示する。
+  次のplan-onlyコマンドはrootが実行し、104原音・N024 SHA/62,526samples・429.74秒/536.78秒を確認した。
+.venv/bin/python tools/build_fibonacci_episode.py \
+  --revision-id fibonacci-counting-v003 \
+  --speech-manifest output/fibonacci-counting-001-v002/speech/measurements.json \
+  --speech-gate output/fibonacci-counting-001-v002/speech/speech-acceptance.json \
+  --phonemes output/fibonacci-counting-001-v002/speech/fresh-phonemes.json \
+  --codec-corrections output/fibonacci-counting-001-v002/speech/aac-scalar-corrections.json \
+  --ffmpeg .venv/bin/ffmpeg \
+  --out-dir output/fibonacci-source-rebuild-new \
+  --plan-only
+
+  実際にmasterを組む場合は--plan-onlyを外し、未使用出力先を指定する。T013b追加補正や共通gainを二重適用しない。
+
+根拠と保存
+  production-spec-v003.json / scenario-v003.txt / effective-visual-cues-v003.json
+  全媒体QA: output/fibonacci-counting-001-v003/qa/v001/verification.json
+  動作QA: output/fibonacci-counting-001-v003/qa/motion-v001/verification.json
+  音声継承: output/fibonacci-counting-001-v003/audio-inheritance-qa/v001/final-audio-review.json
+  内容/全cue観測/記録整合: design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/content-records/
+  147回帰が合格。新10負対照はその内数で、旧verifierのソースとv1/v2媒体・台本・完成QA・制作記録は保全した。
+  自動解析と選択画像/contact・動作抜粋の確認を行った記録であり、人による全編連続視聴/試聴の記録ではない。

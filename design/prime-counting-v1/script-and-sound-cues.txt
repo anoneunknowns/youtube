@@ -1,0 +1,226 @@
+Num-Num Numbers — Prime Numbers
+英語台本・日本語訳・編集キュー v001（前工程案）
+
+範囲: 2〜997。1000未満の素数168個を昇順に読む。全188発話の予定。
+音声方針: 自然な米国英語。af_heart / fp32 / 速度0.98を予定。音声未生成・未実測。
+数詞は一語ずつ切らず自然につなぎ、hundredの後にandを入れない。
+以下の秒数は編集上の仮枠。採用音声の実測後に枠・図の滞在時間を調整する。
+
+導入 70秒（すべて導入開始からの仮の相対秒）
+ID | 編集枠 秒 | 英語台詞 | 日本語の意味 | シーン
+I01 | 0.80–4.50 | Hi! Let's count prime numbers. | こんにちは。素数を数えよう。 | title
+I02 | 5.20–14.20 | A prime number is a whole number greater than one with exactly two positive factors: one and itself. | 素数は1より大きい整数で、約数が1とその数自身のちょうど二つだけある数だよ。 | definition
+I03 | 15.00–21.20 | A factor divides a number evenly, with nothing left over. | 約数は、その数を余りなく割り切れる数だよ。 | definition
+I04 | 22.00–25.20 | Let's try five tiles. | タイル5枚で試してみよう。 | arrays-5-vs-6
+I05 | 26.00–34.20 | Five makes one row of five. Its only factors are one and five. | 5枚は1行に5枚。約数は1と5だけだよ。 | arrays-5-vs-6
+I06 | 35.00–44.80 | Six also makes two rows of three. Six has more than two factors, so it is not prime. | 6枚は2行に3枚ずつも並べられるよ。約数が二つより多いから、素数ではないね。 | arrays-5-vs-6
+I07 | 45.60–51.80 | Turning a rectangle around does not give us new factors. | 長方形を回しても、新しい約数が増えるわけではないよ。 | arrays-5-vs-6
+I08 | 52.60–60.00 | One has only one factor: one. So one is not prime. | 1の約数は1の一つだけ。だから1は素数ではないよ。 | one-excluded
+I09 | 60.80–68.80 | Now let's count every prime number below one thousand. | では、1000未満のすべての素数を数えよう。 | count
+
+本カウント 全168件
+通常は発話終了から次の発話開始まで2.00秒。表示は発話の0.12秒前に更新。
+2→3、7→11、97→101の3境界は説明を含めて18.00秒の仮枠とする。
+各素数の主表示、読み、字幕、進捗は同じvalue/ordinalを使う。カウント列の正本はcount-lines.json。
+ID | 通算 | 表示値 | 英語読み
+N002 | 001/168 | 2 | two
+N003 | 002/168 | 3 | three
+N005 | 003/168 | 5 | five
+N007 | 004/168 | 7 | seven
+N011 | 005/168 | 11 | eleven
+N013 | 006/168 | 13 | thirteen
+N017 | 007/168 | 17 | seventeen
+N019 | 008/168 | 19 | nineteen
+N023 | 009/168 | 23 | twenty-three
+N029 | 010/168 | 29 | twenty-nine
+N031 | 011/168 | 31 | thirty-one
+N037 | 012/168 | 37 | thirty-seven
+N041 | 013/168 | 41 | forty-one
+N043 | 014/168 | 43 | forty-three
+N047 | 015/168 | 47 | forty-seven
+N053 | 016/168 | 53 | fifty-three
+N059 | 017/168 | 59 | fifty-nine
+N061 | 018/168 | 61 | sixty-one
+N067 | 019/168 | 67 | sixty-seven
+N071 | 020/168 | 71 | seventy-one
+N073 | 021/168 | 73 | seventy-three
+N079 | 022/168 | 79 | seventy-nine
+N083 | 023/168 | 83 | eighty-three
+N089 | 024/168 | 89 | eighty-nine
+N097 | 025/168 | 97 | ninety-seven
+N101 | 026/168 | 101 | one hundred one
+N103 | 027/168 | 103 | one hundred three
+N107 | 028/168 | 107 | one hundred seven
+N109 | 029/168 | 109 | one hundred nine
+N113 | 030/168 | 113 | one hundred thirteen
+N127 | 031/168 | 127 | one hundred twenty-seven
+N131 | 032/168 | 131 | one hundred thirty-one
+N137 | 033/168 | 137 | one hundred thirty-seven
+N139 | 034/168 | 139 | one hundred thirty-nine
+N149 | 035/168 | 149 | one hundred forty-nine
+N151 | 036/168 | 151 | one hundred fifty-one
+N157 | 037/168 | 157 | one hundred fifty-seven
+N163 | 038/168 | 163 | one hundred sixty-three
+N167 | 039/168 | 167 | one hundred sixty-seven
+N173 | 040/168 | 173 | one hundred seventy-three
+N179 | 041/168 | 179 | one hundred seventy-nine
+N181 | 042/168 | 181 | one hundred eighty-one
+N191 | 043/168 | 191 | one hundred ninety-one
+N193 | 044/168 | 193 | one hundred ninety-three
+N197 | 045/168 | 197 | one hundred ninety-seven
+N199 | 046/168 | 199 | one hundred ninety-nine
+N211 | 047/168 | 211 | two hundred eleven
+N223 | 048/168 | 223 | two hundred twenty-three
+N227 | 049/168 | 227 | two hundred twenty-seven
+N229 | 050/168 | 229 | two hundred twenty-nine
+N233 | 051/168 | 233 | two hundred thirty-three
+N239 | 052/168 | 239 | two hundred thirty-nine
+N241 | 053/168 | 241 | two hundred forty-one
+N251 | 054/168 | 251 | two hundred fifty-one
+N257 | 055/168 | 257 | two hundred fifty-seven
+N263 | 056/168 | 263 | two hundred sixty-three
+N269 | 057/168 | 269 | two hundred sixty-nine
+N271 | 058/168 | 271 | two hundred seventy-one
+N277 | 059/168 | 277 | two hundred seventy-seven
+N281 | 060/168 | 281 | two hundred eighty-one
+N283 | 061/168 | 283 | two hundred eighty-three
+N293 | 062/168 | 293 | two hundred ninety-three
+N307 | 063/168 | 307 | three hundred seven
+N311 | 064/168 | 311 | three hundred eleven
+N313 | 065/168 | 313 | three hundred thirteen
+N317 | 066/168 | 317 | three hundred seventeen
+N331 | 067/168 | 331 | three hundred thirty-one
+N337 | 068/168 | 337 | three hundred thirty-seven
+N347 | 069/168 | 347 | three hundred forty-seven
+N349 | 070/168 | 349 | three hundred forty-nine
+N353 | 071/168 | 353 | three hundred fifty-three
+N359 | 072/168 | 359 | three hundred fifty-nine
+N367 | 073/168 | 367 | three hundred sixty-seven
+N373 | 074/168 | 373 | three hundred seventy-three
+N379 | 075/168 | 379 | three hundred seventy-nine
+N383 | 076/168 | 383 | three hundred eighty-three
+N389 | 077/168 | 389 | three hundred eighty-nine
+N397 | 078/168 | 397 | three hundred ninety-seven
+N401 | 079/168 | 401 | four hundred one
+N409 | 080/168 | 409 | four hundred nine
+N419 | 081/168 | 419 | four hundred nineteen
+N421 | 082/168 | 421 | four hundred twenty-one
+N431 | 083/168 | 431 | four hundred thirty-one
+N433 | 084/168 | 433 | four hundred thirty-three
+N439 | 085/168 | 439 | four hundred thirty-nine
+N443 | 086/168 | 443 | four hundred forty-three
+N449 | 087/168 | 449 | four hundred forty-nine
+N457 | 088/168 | 457 | four hundred fifty-seven
+N461 | 089/168 | 461 | four hundred sixty-one
+N463 | 090/168 | 463 | four hundred sixty-three
+N467 | 091/168 | 467 | four hundred sixty-seven
+N479 | 092/168 | 479 | four hundred seventy-nine
+N487 | 093/168 | 487 | four hundred eighty-seven
+N491 | 094/168 | 491 | four hundred ninety-one
+N499 | 095/168 | 499 | four hundred ninety-nine
+N503 | 096/168 | 503 | five hundred three
+N509 | 097/168 | 509 | five hundred nine
+N521 | 098/168 | 521 | five hundred twenty-one
+N523 | 099/168 | 523 | five hundred twenty-three
+N541 | 100/168 | 541 | five hundred forty-one
+N547 | 101/168 | 547 | five hundred forty-seven
+N557 | 102/168 | 557 | five hundred fifty-seven
+N563 | 103/168 | 563 | five hundred sixty-three
+N569 | 104/168 | 569 | five hundred sixty-nine
+N571 | 105/168 | 571 | five hundred seventy-one
+N577 | 106/168 | 577 | five hundred seventy-seven
+N587 | 107/168 | 587 | five hundred eighty-seven
+N593 | 108/168 | 593 | five hundred ninety-three
+N599 | 109/168 | 599 | five hundred ninety-nine
+N601 | 110/168 | 601 | six hundred one
+N607 | 111/168 | 607 | six hundred seven
+N613 | 112/168 | 613 | six hundred thirteen
+N617 | 113/168 | 617 | six hundred seventeen
+N619 | 114/168 | 619 | six hundred nineteen
+N631 | 115/168 | 631 | six hundred thirty-one
+N641 | 116/168 | 641 | six hundred forty-one
+N643 | 117/168 | 643 | six hundred forty-three
+N647 | 118/168 | 647 | six hundred forty-seven
+N653 | 119/168 | 653 | six hundred fifty-three
+N659 | 120/168 | 659 | six hundred fifty-nine
+N661 | 121/168 | 661 | six hundred sixty-one
+N673 | 122/168 | 673 | six hundred seventy-three
+N677 | 123/168 | 677 | six hundred seventy-seven
+N683 | 124/168 | 683 | six hundred eighty-three
+N691 | 125/168 | 691 | six hundred ninety-one
+N701 | 126/168 | 701 | seven hundred one
+N709 | 127/168 | 709 | seven hundred nine
+N719 | 128/168 | 719 | seven hundred nineteen
+N727 | 129/168 | 727 | seven hundred twenty-seven
+N733 | 130/168 | 733 | seven hundred thirty-three
+N739 | 131/168 | 739 | seven hundred thirty-nine
+N743 | 132/168 | 743 | seven hundred forty-three
+N751 | 133/168 | 751 | seven hundred fifty-one
+N757 | 134/168 | 757 | seven hundred fifty-seven
+N761 | 135/168 | 761 | seven hundred sixty-one
+N769 | 136/168 | 769 | seven hundred sixty-nine
+N773 | 137/168 | 773 | seven hundred seventy-three
+N787 | 138/168 | 787 | seven hundred eighty-seven
+N797 | 139/168 | 797 | seven hundred ninety-seven
+N809 | 140/168 | 809 | eight hundred nine
+N811 | 141/168 | 811 | eight hundred eleven
+N821 | 142/168 | 821 | eight hundred twenty-one
+N823 | 143/168 | 823 | eight hundred twenty-three
+N827 | 144/168 | 827 | eight hundred twenty-seven
+N829 | 145/168 | 829 | eight hundred twenty-nine
+N839 | 146/168 | 839 | eight hundred thirty-nine
+N853 | 147/168 | 853 | eight hundred fifty-three
+N857 | 148/168 | 857 | eight hundred fifty-seven
+N859 | 149/168 | 859 | eight hundred fifty-nine
+N863 | 150/168 | 863 | eight hundred sixty-three
+N877 | 151/168 | 877 | eight hundred seventy-seven
+N881 | 152/168 | 881 | eight hundred eighty-one
+N883 | 153/168 | 883 | eight hundred eighty-three
+N887 | 154/168 | 887 | eight hundred eighty-seven
+N907 | 155/168 | 907 | nine hundred seven
+N911 | 156/168 | 911 | nine hundred eleven
+N919 | 157/168 | 919 | nine hundred nineteen
+N929 | 158/168 | 929 | nine hundred twenty-nine
+N937 | 159/168 | 937 | nine hundred thirty-seven
+N941 | 160/168 | 941 | nine hundred forty-one
+N947 | 161/168 | 947 | nine hundred forty-seven
+N953 | 162/168 | 953 | nine hundred fifty-three
+N967 | 163/168 | 967 | nine hundred sixty-seven
+N971 | 164/168 | 971 | nine hundred seventy-one
+N977 | 165/168 | 977 | nine hundred seventy-seven
+N983 | 166/168 | 983 | nine hundred eighty-three
+N991 | 167/168 | 991 | nine hundred ninety-one
+N997 | 168/168 | 997 | nine hundred ninety-seven
+
+説明：2の発話終了から次の3の発話開始まで18.00秒の仮枠
+以下は直前のカウント発話終了からの仮の相対秒。前後0.40秒の図のフェード枠を確保。
+ID | 編集枠 秒 | 英語台詞 | 日本語の意味 | シーン
+T002a | 0.80–5.20 | Two has exactly two factors: one and two. | 2の約数は1と2のちょうど二つ。 | two-only-even
+T002b | 5.80–10.40 | Any larger even number has two as another factor. | 2より大きい偶数には、2という別の約数もあるね。 | two-only-even
+T002c | 11.00–14.50 | Two is the only even prime. | 2は、ただ一つの偶数の素数だよ。 | two-only-even
+
+説明：7の発話終了から次の11の発話開始まで18.00秒の仮枠
+以下は直前のカウント発話終了からの仮の相対秒。前後0.40秒の図のフェード枠を確保。
+ID | 編集枠 秒 | 英語台詞 | 日本語の意味 | シーン
+T009a | 0.80–6.80 | Nine is odd, but three rows of three make nine. | 9は奇数だけれど、3行に3枚ずつで9枚になるね。 | nine-composite
+T009b | 7.40–14.60 | Nine has factors other than one and itself. It is not prime. | 9には1と9以外の約数があるよ。だから素数ではないね。 | nine-composite
+
+説明：97の発話終了から次の101の発話開始まで18.00秒の仮枠
+以下は直前のカウント発話終了からの仮の相対秒。前後0.40秒の図のフェード枠を確保。
+ID | 編集枠 秒 | 英語台詞 | 日本語の意味 | シーン
+T101a | 0.80–7.40 | Ninety-eight, ninety-nine, and one hundred have extra factors. | 98、99、100には、1とその数自身以外にも約数があるね。 | bridge-97-to-101
+T101b | 8.00–14.60 | The next prime after ninety-seven is one hundred one. | 97の次の素数は101だよ。 | bridge-97-to-101
+
+終幕22秒（N997の発話終了から0.28秒保持した後を起点）
+ID | 編集枠 秒 | 英語台詞 | 日本語の意味 | シーン
+F01 | 1.00–2.50 | We did it! | できたね。 | finale
+F02 | 3.20–9.70 | We counted all one hundred sixty-eight prime numbers below one thousand. | 1000未満の素数168個をすべて数えたね。 | finale
+F03 | 10.50–15.00 | The last one was nine hundred ninety-seven. | 最後の数は997だったね。 | finale
+F04 | 16.00–20.00 | Thanks for counting with me. Bye for now! | 一緒に数えてくれてありがとう。またね。 | finale
+
+音と図の編集方針
+BGM・環境音・効果音は入れない案。毎数の更新音・タイルが当たる音・跳躍音は付けない。
+図の0.40秒フェードは対象図のみ。説明文と別の説明文を重ねない。
+キャラクターの主な演技は導入の挨拶、9の図を考える仕草、終幕の喜びを各一度ずつ候補にする。常時跳ねさせない。
+ポーズ切替は既存の身体基準高・足支点を守る。使用前に原寸で線・顔・体格・余白を確認する。
+実際の録音・字幕・音声QAは未実施。本ファイルは完成動画の検査済み記録ではない。

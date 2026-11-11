@@ -1,0 +1,440 @@
+Num-Num Numbers — フィボナッチ v003 現行脚本・画面対応
+状態：完成v003 MP4に対応する現行脚本。全104発話の原寸観測と独立画素・動作・内容QAで確認済み。
+この文書は全104の英語台詞と実測発話時刻、現在の画面構成を一つずつ対応付ける。
+英語本文・音声原音は採用済みv002と同一。元narration.json/script-and-sound-cues.txtの仮尺と画面指示は当時の資料として残す。
+F0=0、F1=1、n>=2でFn=F(n-2)+F(n-1)。F0..F40の41項、39加算。二つの1を保持し、F40で初めて1億を超える。
+全時刻は24kHz原音の実測タイムライン秒。字幕は各境界を最も近い1msへ丸める。結果と英語読みの画面確定はN開始の0.12秒前。
+
+I01 | 0.800000000–5.013541667s | intro
+EN: Hi! Let's count Fibonacci numbers, and watch each new number take shape.
+画面: 雲海と郵便局の全画面。タイトル、初期値0/F0と1/F1の小カード。シャム猫は準備姿勢と前脚in/outで2往復し通常姿へ戻る。画面の拡大移動は行わない。
+
+I02 | 5.613541667–9.144708333s | intro
+EN: We start with zero and one. These are our two starting values.
+画面: START WITH TWO SEEDS。左右の独立カードに0／F0 · FIRST TERMと1／F1 · SECOND TERMを表示。導入であり本カウントの進捗は増やさない。
+
+I03 | 9.744708333–14.660208333s | intro
+EN: To make the next number, add the previous two. Then use the newest pair, and do it again.
+画面: 一般式Fn=F(n−2)+F(n−1)、n≥2、初期条件F0=0/F1=1。直前二項の加算規則を説明。
+
+I04 | 15.260208333–21.345500000s | intro
+EN: The small labels tell us each number's place. We start at F zero, so F two is the third entry.
+画面: F0/F1/F2と値0/1/1、1番目/2番目/3番目を別の領域で対応付ける。添字と値を混同しない。
+
+I05 | 21.945500000–27.359041667s | intro
+EN: The older value sits on the left. The newer value sits beside it. Their labels move with them.
+画面: 三列OLDER/NEWER/NEWの入力例。入力値とF添字を表示し、直前の二値を強調する。
+
+I06 | 27.959041667–33.888958333s | intro
+EN: Listen for plus and equals. The answer appears when we say its name, and becomes our newest value.
+画面: 同じ入力例で演算子＋/＝と出力の順を説明。未確定の答えを表示せず、英語の読みと結果はN発話の0.12秒前に同時表示する。
+
+I07 | 34.488958333–42.462375000s | intro
+EN: Number windows show values, not piles of things. A window marked one thousand stands for that value, not one thousand objects.
+画面: 1,000という数値窓を例示し、物体1000個の絵ではなく値の記号であると説明。
+
+I08 | 43.062375000–49.763041667s | intro
+EN: We'll keep adding until the sequence first passes one hundred million. The numbers grow, but the rule stays the same.
+画面: 目標100,000,000だけを表示し、終点102,334,155を導入で先出ししない。
+
+N000 | 50.363041667–50.942333333s | count
+EN: zero
+画面: F0=0を英語読みと同時に確定し、TERM 1 OF 41 / INDEX n=0を表示。初期値のため二項加算は作らない。
+
+N001 | 52.942333333–53.430250000s | count
+EN: one
+画面: F1=1を英語読みと同時に確定し、TERM 2 OF 41 / INDEX n=1を表示。初期値のため二項加算は作らない。
+
+E002 | 55.430250000–56.906375000s | formula_prefix
+EN: zero plus one equals
+画面: F0=0とF1=1を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N002 | 57.066375000–57.554291667s | count
+EN: one
+画面: F2=1を英語読みと同時に確定し、TERM 3 OF 41 / INDEX n=2を表示。次の受渡しではF1=1とF2=1を添字と共に次の入力へ移す。
+
+T002a | 58.154291667–63.650500000s | explanation
+EN: There are two ones in a row. One is a starting value; the next was made by adding zero and one.
+画面: REPLAY。F1=1とF2=1を別の項として、0+1=1と二つの1の説明を表示。本カウント進捗は増やさない。
+
+T002b | 64.250500000–70.365916667s | explanation
+EN: They have the same value, but different places. Keep both entries, because each belongs to the sequence.
+画面: 同じ値と異なる位置を比較。二つの1とF添字は別々に保持する。
+
+E003 | 72.965916667–74.301041667s | formula_prefix
+EN: one plus one equals
+画面: F1=1とF2=1を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N003 | 74.461041667–74.976625000s | count
+EN: two
+画面: F3=2を英語読みと同時に確定し、TERM 4 OF 41 / INDEX n=3を表示。次の受渡しではF2=1とF3=2を添字と共に次の入力へ移す。
+
+E004 | 76.976625000–78.249333333s | formula_prefix
+EN: one plus two equals
+画面: F2=1とF3=2を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N004 | 78.409333333–78.966625000s | count
+EN: three
+画面: F4=3を英語読みと同時に確定し、TERM 5 OF 41 / INDEX n=4を表示。次の受渡しではF3=2とF4=3を添字と共に次の入力へ移す。
+
+E005 | 80.966625000–82.335125000s | formula_prefix
+EN: two plus three equals
+画面: F3=2とF4=3を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N005 | 82.495125000–83.095666667s | count
+EN: five
+画面: F5=5を英語読みと同時に確定し、TERM 6 OF 41 / INDEX n=5を表示。次の受渡しではF4=3とF5=5を添字と共に次の入力へ移す。
+
+E006 | 85.095666667–86.507125000s | formula_prefix
+EN: three plus five equals
+画面: F4=3とF5=5を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N006 | 86.667125000–87.178833333s | count
+EN: eight
+画面: F6=8を英語読みと同時に確定し、TERM 7 OF 41 / INDEX n=6を表示。次の受渡しではF5=5とF6=8を添字と共に次の入力へ移す。
+
+E007 | 89.178833333–90.629708333s | formula_prefix
+EN: five plus eight equals
+画面: F5=5とF6=8を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N007 | 90.789708333–91.480625000s | count
+EN: thirteen
+画面: F7=13を英語読みと同時に確定し、TERM 8 OF 41 / INDEX n=7を表示。次の受渡しではF6=8とF7=13を添字と共に次の入力へ移す。
+
+E008 | 93.480625000–94.962166667s | formula_prefix
+EN: eight plus thirteen equals
+画面: F6=8とF7=13を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N008 | 95.122166667–95.837958333s | count
+EN: twenty-one
+画面: F8=21を英語読みと同時に確定し、TERM 9 OF 41 / INDEX n=8を表示。次の受渡しではF7=13とF8=21を添字と共に次の入力へ移す。
+
+T008a | 96.437958333–103.998083333s | explanation
+EN: Let's look inside that addition. In the ones column, eight plus three makes eleven: one stays here, and one ten moves left.
+画面: 縦の位取りREPLAYで8+13=21を一の位から再生。8+3=11、一に1を記入し、繰上がり1を十の位へ渡す。
+
+T008b | 104.598083333–112.037000000s | explanation
+EN: That carried ten joins the ten already there. The columns now show two tens and one one. Then the newest pair moves on.
+画面: 十の位0+1+1=2。計算→数字記入→列完了を示し、完了後に確定21を表示する。
+
+E009 | 114.637000000–116.462541667s | formula_prefix
+EN: thirteen plus twenty-one equals
+画面: F7=13とF8=21を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N009 | 116.622541667–117.340958333s | count
+EN: thirty-four
+画面: F9=34を英語読みと同時に確定し、TERM 10 OF 41 / INDEX n=9を表示。次の受渡しではF8=21とF9=34を添字と共に次の入力へ移す。
+
+E010 | 119.340958333–121.436500000s | formula_prefix
+EN: twenty-one plus thirty-four equals
+画面: F8=21とF9=34を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N010 | 121.596500000–122.451666667s | count
+EN: fifty-five
+画面: F10=55を英語読みと同時に確定し、TERM 11 OF 41 / INDEX n=10を表示。次の受渡しではF9=34とF10=55を添字と共に次の入力へ移す。
+
+E011 | 124.451666667–126.445708333s | formula_prefix
+EN: thirty-four plus fifty-five equals
+画面: F9=34とF10=55を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N011 | 126.605708333–127.374000000s | count
+EN: eighty-nine
+画面: F11=89を英語読みと同時に確定し、TERM 12 OF 41 / INDEX n=11を表示。次の受渡しではF10=55とF11=89を添字と共に次の入力へ移す。
+
+E012 | 129.374000000–131.374333333s | formula_prefix
+EN: fifty-five plus eighty-nine equals
+画面: F10=55とF11=89を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N012 | 131.534333333–132.871208333s | count
+EN: one hundred forty-four
+画面: F12=144を英語読みと同時に確定し、TERM 13 OF 41 / INDEX n=12を表示。次の受渡しではF11=89とF12=144を添字と共に次の入力へ移す。
+
+E013 | 134.871208333–137.587833333s | formula_prefix
+EN: eighty-nine plus one hundred forty-four equals
+画面: F11=89とF12=144を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N013 | 137.747833333–139.025291667s | count
+EN: two hundred thirty-three
+画面: F13=233を英語読みと同時に確定し、TERM 14 OF 41 / INDEX n=13を表示。次の受渡しではF12=144とF13=233を添字と共に次の入力へ移す。
+
+T013a | 139.625291667–145.619041667s | explanation
+EN: Here the ones make thirteen. Write three and carry one ten. The tens, including that carry, also make thirteen.
+画面: 縦式89+144。9+4=13で一に3を書いて十へ1、8+4+1=13で十に3を書いて百へ1を渡す。
+
+T013b | 146.219041667–153.273041667s | explanation
+EN: Write three tens, and carry one hundred. That hundred joins the hundred already there. Every column keeps its own place.
+画面: 百の位0+1+1=2。繰上がりは隣列へだけ移し、最後の列はCOLUMN COMPLETE、完了後233。
+
+E014 | 155.873041667–159.140875000s | formula_prefix
+EN: one hundred forty-four plus two hundred thirty-three equals
+画面: F12=144とF13=233を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N014 | 159.300875000–160.794958333s | count
+EN: three hundred seventy-seven
+画面: F14=377を英語読みと同時に確定し、TERM 15 OF 41 / INDEX n=14を表示。次の受渡しではF13=233とF14=377を添字と共に次の入力へ移す。
+
+E015 | 162.794958333–166.367333333s | formula_prefix
+EN: two hundred thirty-three plus three hundred seventy-seven equals
+画面: F13=233とF14=377を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N015 | 166.527333333–167.591375000s | count
+EN: six hundred ten
+画面: F15=610を英語読みと同時に確定し、TERM 16 OF 41 / INDEX n=15を表示。次の受渡しではF14=377とF15=610を添字と共に次の入力へ移す。
+
+E016 | 169.591375000–172.920666667s | formula_prefix
+EN: three hundred seventy-seven plus six hundred ten equals
+画面: F14=377とF15=610を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N016 | 173.080666667–174.575875000s | count
+EN: nine hundred eighty-seven
+画面: F16=987を英語読みと同時に確定し、TERM 17 OF 41 / INDEX n=16を表示。次の受渡しではF15=610とF16=987を添字と共に次の入力へ移す。
+
+E017 | 176.575875000–179.908958333s | formula_prefix
+EN: six hundred ten plus nine hundred eighty-seven equals
+画面: F15=610とF16=987を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N017 | 180.068958333–182.369125000s | count
+EN: one thousand five hundred ninety-seven
+画面: F17=1,597を英語読みと同時に確定し、TERM 18 OF 41 / INDEX n=17を表示。次の受渡しではF16=987とF17=1,597を添字と共に次の入力へ移す。
+
+E018 | 184.369125000–188.922625000s | formula_prefix
+EN: nine hundred eighty-seven plus one thousand five hundred ninety-seven equals
+画面: F16=987とF17=1,597を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N018 | 189.082625000–191.074833333s | count
+EN: two thousand five hundred eighty-four
+画面: F18=2,584を英語読みと同時に確定し、TERM 19 OF 41 / INDEX n=18を表示。次の受渡しではF17=1,597とF18=2,584を添字と共に次の入力へ移す。
+
+T018a | 191.674833333–198.706916667s | explanation
+EN: Now the values reach into the thousands. Start at the ones and follow each carry to the next column, one place at a time.
+画面: 987+1,597=2,584の縦式REPLAYへ切り替える。入力を右揃えして一/十/百/千を整列し、各列の未確定結果は?で保持する。横三列の数式を同時には保持しない。
+
+T018b | 199.306916667–208.150416667s | explanation
+EN: Seven plus seven makes fourteen. Next come eighteen tens, then fifteen hundreds. Each carry moves one column left; it never skips a place.
+画面: 縦式を一の位から連続再生。7+7=14、8+9+1=18、9+5+1=15、0+1+1=2。数字と繰上がりを分け、完了後2,584。
+
+E019 | 210.750416667–215.785875000s | formula_prefix
+EN: one thousand five hundred ninety-seven plus two thousand five hundred eighty-four equals
+画面: F17=1,597とF18=2,584を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N019 | 215.945875000–217.806250000s | count
+EN: four thousand one hundred eighty-one
+画面: F19=4,181を英語読みと同時に確定し、TERM 20 OF 41 / INDEX n=19を表示。次の受渡しではF18=2,584とF19=4,181を添字と共に次の入力へ移す。
+
+E020 | 219.806250000–224.629833333s | formula_prefix
+EN: two thousand five hundred eighty-four plus four thousand one hundred eighty-one equals
+画面: F18=2,584とF19=4,181を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N020 | 224.789833333–227.055250000s | count
+EN: six thousand seven hundred sixty-five
+画面: F20=6,765を英語読みと同時に確定し、TERM 21 OF 41 / INDEX n=20を表示。次の受渡しではF19=4,181とF20=6,765を添字と共に次の入力へ移す。v003では移動中の二つのコピー数値を88pxから47pxへなめらかに縮め、到着後も47pxを保つ。主結果と読みの大きさは保つ。
+
+E021 | 229.055250000–234.151458333s | formula_prefix
+EN: four thousand one hundred eighty-one plus six thousand seven hundred sixty-five equals
+画面: F19=4,181とF20=6,765を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。先行F20の移動コピーは移動中に88→47pxへ縮んで到着済みなので、この次式のF19/F20入力も47pxで連続させる。到着後の1フレーム縮小は行わない。
+
+N021 | 234.311458333–236.367708333s | count
+EN: ten thousand nine hundred forty-six
+画面: F21=10,946を英語読みと同時に確定し、TERM 22 OF 41 / INDEX n=21を表示。次の受渡しではF20=6,765とF21=10,946を添字と共に次の入力へ移す。
+
+E022 | 238.367708333–243.773458333s | formula_prefix
+EN: six thousand seven hundred sixty-five plus ten thousand nine hundred forty-six equals
+画面: F20=6,765とF21=10,946を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N022 | 243.933458333–246.229125000s | count
+EN: seventeen thousand seven hundred eleven
+画面: F22=17,711を英語読みと同時に確定し、TERM 23 OF 41 / INDEX n=22を表示。次の受渡しではF21=10,946とF22=17,711を添字と共に次の入力へ移す。
+
+E023 | 248.229125000–253.532166667s | formula_prefix
+EN: ten thousand nine hundred forty-six plus seventeen thousand seven hundred eleven equals
+画面: F21=10,946とF22=17,711を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N023 | 253.692166667–256.047041667s | count
+EN: twenty-eight thousand six hundred fifty-seven
+画面: F23=28,657を英語読みと同時に確定し、TERM 24 OF 41 / INDEX n=23を表示。次の受渡しではF22=17,711とF23=28,657を添字と共に次の入力へ移す。
+
+E024 | 258.047041667–263.827791667s | formula_prefix
+EN: seventeen thousand seven hundred eleven plus twenty-eight thousand six hundred fifty-seven equals
+画面: F22=17,711とF23=28,657を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N024 | 263.987791667–266.593041667s | count
+EN: forty-six thousand three hundred sixty-eight
+画面: F24=46,368を英語読みと同時に確定し、TERM 25 OF 41 / INDEX n=24を表示。次の受渡しではF23=28,657とF24=46,368を添字と共に次の入力へ移す。
+
+E025 | 268.593041667–274.470416667s | formula_prefix
+EN: twenty-eight thousand six hundred fifty-seven plus forty-six thousand three hundred sixty-eight equals
+画面: F23=28,657とF24=46,368を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N025 | 274.630416667–276.453375000s | count
+EN: seventy-five thousand twenty-five
+画面: F25=75,025を英語読みと同時に確定し、TERM 26 OF 41 / INDEX n=25を表示。次の受渡しではF24=46,368とF25=75,025を添字と共に次の入力へ移す。
+
+E026 | 278.453375000–283.734500000s | formula_prefix
+EN: forty-six thousand three hundred sixty-eight plus seventy-five thousand twenty-five equals
+画面: F24=46,368とF25=75,025を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N026 | 283.894500000–286.733000000s | count
+EN: one hundred twenty-one thousand three hundred ninety-three
+画面: F26=121,393を英語読みと同時に確定し、TERM 27 OF 41 / INDEX n=26を表示。次の受渡しではF25=75,025とF26=121,393を添字と共に次の入力へ移す。
+
+T026a | 287.333000000–294.673291667s | explanation
+EN: The commas help us read groups of three digits. They are separators, not extra digits, and they do not change the addition.
+画面: 縦に配置した46,368+75,025=121,393を表示し、THOUSANDS/ONESのグループとコンマを示す。説明中の全体式/寄りへの往復やカメラズームは行わない。
+
+T026b | 295.273291667–302.393416667s | explanation
+EN: Keep the ones columns lined up on the right. Even with larger numbers, each column still adds the same kind of units.
+画面: 同じ縦配置を保持し、一の位の列が右で一致すること、コンマが桁の数字ではないことを表示。
+
+E027 | 304.993416667–310.938541667s | formula_prefix
+EN: seventy-five thousand twenty-five plus one hundred twenty-one thousand three hundred ninety-three equals
+画面: F25=75,025とF26=121,393を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N027 | 311.098541667–313.750291667s | count
+EN: one hundred ninety-six thousand four hundred eighteen
+画面: F27=196,418を英語読みと同時に確定し、TERM 28 OF 41 / INDEX n=27を表示。次の受渡しではF26=121,393とF27=196,418を添字と共に次の入力へ移す。
+
+E028 | 315.750291667–322.549125000s | formula_prefix
+EN: one hundred twenty-one thousand three hundred ninety-three plus one hundred ninety-six thousand four hundred eighteen equals
+画面: F26=121,393とF27=196,418を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N028 | 322.709125000–325.421041667s | count
+EN: three hundred seventeen thousand eight hundred eleven
+画面: F28=317,811を英語読みと同時に確定し、TERM 29 OF 41 / INDEX n=28を表示。次の受渡しではF27=196,418とF28=317,811を添字と共に次の入力へ移す。
+
+E029 | 327.421041667–333.951166667s | formula_prefix
+EN: one hundred ninety-six thousand four hundred eighteen plus three hundred seventeen thousand eight hundred eleven equals
+画面: F27=196,418とF28=317,811を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N029 | 334.111166667–336.866875000s | count
+EN: five hundred fourteen thousand two hundred twenty-nine
+画面: F29=514,229を英語読みと同時に確定し、TERM 30 OF 41 / INDEX n=29を表示。次の受渡しではF28=317,811とF29=514,229を添字と共に次の入力へ移す。
+
+E030 | 338.866875000–345.738916667s | formula_prefix
+EN: three hundred seventeen thousand eight hundred eleven plus five hundred fourteen thousand two hundred twenty-nine equals
+画面: F28=317,811とF29=514,229を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N030 | 345.898916667–347.869125000s | count
+EN: eight hundred thirty-two thousand forty
+画面: F30=832,040を英語読みと同時に確定し、TERM 31 OF 41 / INDEX n=30を表示。次の受渡しではF29=514,229とF30=832,040を添字と共に次の入力へ移す。
+
+E031 | 349.869125000–355.772750000s | formula_prefix
+EN: five hundred fourteen thousand two hundred twenty-nine plus eight hundred thirty-two thousand forty equals
+画面: F29=514,229とF30=832,040を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N031 | 355.932750000–359.610125000s | count
+EN: one million three hundred forty-six thousand two hundred sixty-nine
+画面: F31=1,346,269を英語読みと同時に確定し、TERM 32 OF 41 / INDEX n=31を表示。次の受渡しではF30=832,040とF31=1,346,269を添字と共に次の入力へ移す。
+
+E032 | 361.610125000–368.451541667s | formula_prefix
+EN: eight hundred thirty-two thousand forty plus one million three hundred forty-six thousand two hundred sixty-nine equals
+画面: F30=832,040とF31=1,346,269を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N032 | 368.611541667–371.841791667s | count
+EN: two million one hundred seventy-eight thousand three hundred nine
+画面: F32=2,178,309を英語読みと同時に確定し、TERM 33 OF 41 / INDEX n=32を表示。次の受渡しではF31=1,346,269とF32=2,178,309を添字と共に次の入力へ移す。
+
+E033 | 373.841791667–382.171125000s | formula_prefix
+EN: one million three hundred forty-six thousand two hundred sixty-nine plus two million one hundred seventy-eight thousand three hundred nine equals
+画面: F31=1,346,269とF32=2,178,309を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N033 | 382.331125000–386.411083333s | count
+EN: three million five hundred twenty-four thousand five hundred seventy-eight
+画面: F33=3,524,578を英語読みと同時に確定し、TERM 34 OF 41 / INDEX n=33を表示。次の受渡しではF32=2,178,309とF33=3,524,578を添字と共に次の入力へ移す。
+
+E034 | 388.411083333–397.062583333s | formula_prefix
+EN: two million one hundred seventy-eight thousand three hundred nine plus three million five hundred twenty-four thousand five hundred seventy-eight equals
+画面: F32=2,178,309とF33=3,524,578を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N034 | 397.222583333–400.938000000s | count
+EN: five million seven hundred two thousand eight hundred eighty-seven
+画面: F34=5,702,887を英語読みと同時に確定し、TERM 35 OF 41 / INDEX n=34を表示。次の受渡しではF33=3,524,578とF34=5,702,887を添字と共に次の入力へ移す。
+
+E035 | 402.938000000–411.994916667s | formula_prefix
+EN: three million five hundred twenty-four thousand five hundred seventy-eight plus five million seven hundred two thousand eight hundred eighty-seven equals
+画面: F33=3,524,578とF34=5,702,887を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N035 | 412.154916667–416.138666667s | count
+EN: nine million two hundred twenty-seven thousand four hundred sixty-five
+画面: F35=9,227,465を英語読みと同時に確定し、TERM 36 OF 41 / INDEX n=35を表示。次の受渡しではF34=5,702,887とF35=9,227,465を添字と共に次の入力へ移す。
+
+E036 | 418.138666667–426.882375000s | formula_prefix
+EN: five million seven hundred two thousand eight hundred eighty-seven plus nine million two hundred twenty-seven thousand four hundred sixty-five equals
+画面: F34=5,702,887とF35=9,227,465を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N036 | 427.042375000–430.786541667s | count
+EN: fourteen million nine hundred thirty thousand three hundred fifty-two
+画面: F36=14,930,352を英語読みと同時に確定し、TERM 37 OF 41 / INDEX n=36を表示。次の受渡しではF35=9,227,465とF36=14,930,352を添字と共に次の入力へ移す。
+
+E037 | 432.786541667–441.584416667s | formula_prefix
+EN: nine million two hundred twenty-seven thousand four hundred sixty-five plus fourteen million nine hundred thirty thousand three hundred fifty-two equals
+画面: F35=9,227,465とF36=14,930,352を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N037 | 441.744416667–445.965125000s | count
+EN: twenty-four million one hundred fifty-seven thousand eight hundred seventeen
+画面: F37=24,157,817を英語読みと同時に確定し、TERM 38 OF 41 / INDEX n=37を表示。次の受渡しではF36=14,930,352とF37=24,157,817を添字と共に次の入力へ移す。
+
+E038 | 447.965125000–457.193333333s | formula_prefix
+EN: fourteen million nine hundred thirty thousand three hundred fifty-two plus twenty-four million one hundred fifty-seven thousand eight hundred seventeen equals
+画面: F36=14,930,352とF37=24,157,817を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N038 | 457.353333333–460.456541667s | count
+EN: thirty-nine million eighty-eight thousand one hundred sixty-nine
+画面: F38=39,088,169を英語読みと同時に確定し、TERM 39 OF 41 / INDEX n=38を表示。次の受渡しではF37=24,157,817とF38=39,088,169を添字と共に次の入力へ移す。
+
+E039 | 462.456541667–471.217125000s | formula_prefix
+EN: twenty-four million one hundred fifty-seven thousand eight hundred seventeen plus thirty-nine million eighty-eight thousand one hundred sixty-nine equals
+画面: F37=24,157,817とF38=39,088,169を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N039 | 471.377125000–475.456458333s | count
+EN: sixty-three million two hundred forty-five thousand nine hundred eighty-six
+画面: F39=63,245,986を英語読みと同時に確定し、TERM 40 OF 41 / INDEX n=39を表示。次の受渡しではF38=39,088,169とF39=63,245,986を添字と共に次の入力へ移す。
+
+T039a | 476.056458333–482.915000000s | explanation
+EN: We have reached the final pair for this journey. Both values are below one hundred million. Their sum will cross that mark.
+画面: 最後の入力ペアF38=39,088,169とF39=63,245,986を示す。出力は未確定で?、最終値はまだ表示しない。
+
+T039b | 483.515000000–491.499208333s | explanation
+EN: Watch the labels as the two values enter the formula. It is the same addition we used at the start, with more place-value columns.
+画面: REPLAY · THE FINAL PAIRを保持。F添字と入力値を確認し、F40を作る次の通常式へつなぐ。
+
+E040 | 494.099208333–502.861291667s | formula_prefix
+EN: thirty-nine million eighty-eight thousand one hundred sixty-nine plus sixty-three million two hundred forty-five thousand nine hundred eighty-six equals
+画面: F38=39,088,169とF39=63,245,986を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+
+N040 | 503.021291667–507.614500000s | count
+EN: one hundred two million three hundred thirty-four thousand one hundred fifty-five
+画面: F40=102,334,155を英語読みと同時に確定し、TERM 41 OF 41 / INDEX n=40を表示。
+
+O01 | 508.214500000–516.085125000s | outro
+EN: We've counted forty-one entries, from F zero through F forty. Two starting values, then thirty-nine additions brought us here.
+画面: 固定画面の全41項履歴、TWO SEEDS.39 ADDITIONS.41 TERMS.と二つの1の注記。終端後の独立motion windowで1.2秒だけ閉眼笑顔を示し開眼へ戻す。
+
+O02 | 516.685125000–523.368875000s | outro
+EN: The newest number is just past one hundred million. We stop here today, but the rule can keep making more numbers.
+画面: F40=102,334,155、初めて1億超という説明、一般式を表示する。F38/F39の具体値はこの画面へ併記せず、直前のT039/E040で示した。
+
+O03 | 523.968875000–531.816125000s | outro
+EN: Remember the motion: take the previous two, add them, keep the newest pair, and repeat. Every new entry has a place in the chain.
+画面: 全41項の履歴へ固定画面で切り替える。二つの1を保持し、均等なカード間隔は項の順であり値の比例距離ではない。式と履歴の同時表示やカメラの引きは行わない。
+
+O04 | 532.416125000–534.780000000s | outro
+EN: Thanks for counting with me. See you next time!
+画面: 最終値と一般式を示す終幕。猫は開眼の手振りを2往復しneutralへ戻り、末尾2秒で全画面をクリーム色へフェードする。閉眼笑顔の保持は行わない。
+
+構成と演技の編集原則
+数値とF添字は別の情報として同じ項を追跡する。受渡し中も値を別の数へモーフしない。
+通常N終端から次E開始まで2秒を保つ。途中1.2秒で二入力を渡し、残りは到着したペアを保持する。
+F20のhandoffではこの1.2秒内で二つのコピーの数字を88→47pxへ縮める。主結果・英語読み・添字のサイズは変えない。
+六つのREPLAYは既に数えた項の振り返りで、進捗を増やさない。
+繰上がりは隣の位へだけ渡し、最終列に繰上がり0を移す動きは作らない。
+猫は冒頭/終幕で各2往復の手振り、F31の確定後に小さな気付き、達成時に1.2秒の笑顔を示し、開眼へ戻す。
+数値窓は値を表す記号であり、その値の個数の物体を描いているとは説明しない。
+
+現行参照
+  effective-visual-cues-v003.json が機械可読の全104cue。production-spec-v003.json が仕様。
+  完成MP4・登録・再現性・採用先の判定は production-run-v003.json と各新規QAを参照する。
+  本文中の画面説明は、今回の完成MP4の全104発話の原寸観測と独立字形/動作検査へ結び付けて確認した。原寸画像の選択確認と自動解析を行い、人による全編連続視聴とは区別する。
+
+最大桁数の区別
+  全38受渡しはF2〜F39の後で、最大pairはF38=39,088,169とF39=63,245,986の8桁。
+  9桁のF40=102,334,155は最終結果として表示し、そこから先への受渡しはない。

@@ -1,0 +1,145 @@
+{
+  "kind": "new-fibonacci-v002-final-stereo-inference-execution",
+  "started_at_utc": "2026-11-11T16:32:16.678601+00:00",
+  "finished_at_utc": "2026-11-11T16:33:40.921392+00:00",
+  "baseline": {
+    "video": {
+      "path": "output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+      "sha256": "68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3"
+    },
+    "visual_timeline": {
+      "path": "output/fibonacci-counting-001-v002/timeline.json",
+      "sha256": "bb2883c6433430cbc884c95fa4d31cf8fd77a83ef3a631a748c5b340a3a282c0"
+    },
+    "audio_source_timeline": {
+      "path": "output/fibonacci-counting-001-v002/audio-build/timeline.json",
+      "sha256": "4cb6494b82bdcfccfe7311a622faec619e3a5ace9cf39cdcef8b2a947257557c"
+    },
+    "audio_master": {
+      "path": "output/fibonacci-counting-001-v002/audio-build/master.wav",
+      "sha256": "88804709b00945561cb3f8dd642554908b00a95f42f4d7dcdf04d08d77fa3283"
+    },
+    "accepted_AAC_receipt": {
+      "path": "output/fibonacci-counting-001-v002/audio-build/aac-acceptance.json",
+      "sha256": "32fe41911b163b5838961f1a2699fada953669a701d372294bea200497417327"
+    }
+  },
+  "runs": [
+    {
+      "name": "asr-left",
+      "command": [
+        "node",
+        "/Users/support/codex/youtube/tools/verify_fibonacci_speech.mjs",
+        "--manifest",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/left/measurements.json",
+        "--out",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/asr-left.json",
+        "--cache",
+        "/Users/support/codex/youtube/.model-cache",
+        "--ffmpeg",
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg"
+      ],
+      "log": {
+        "path": "output/fibonacci-counting-001-v002/audio-final-qa/asr-left.log",
+        "sha256": "e82009372d208c45836b622394f601041fa800572b875d81494b5753659e4274"
+      }
+    },
+    {
+      "name": "ctc-left",
+      "command": [
+        "node",
+        "/Users/support/codex/youtube/tools/portable_verify_phonemes.mjs",
+        "--manifest",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/left/measurements.json",
+        "--out",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/phonemes-left.json",
+        "--cache",
+        "/Users/support/codex/youtube/.model-cache",
+        "--ffmpeg",
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg"
+      ],
+      "log": {
+        "path": "output/fibonacci-counting-001-v002/audio-final-qa/ctc-left.log",
+        "sha256": "c1c1481f57f63cb7ec5a73bd9728abaec7c88dce5e9ae5890baa103022842924"
+      }
+    },
+    {
+      "name": "asr-right",
+      "command": [
+        "node",
+        "/Users/support/codex/youtube/tools/verify_fibonacci_speech.mjs",
+        "--manifest",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/right/measurements.json",
+        "--out",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/asr-right.json",
+        "--cache",
+        "/Users/support/codex/youtube/.model-cache",
+        "--ffmpeg",
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg"
+      ],
+      "log": {
+        "path": "output/fibonacci-counting-001-v002/audio-final-qa/asr-right.log",
+        "sha256": "5e05853c19ddcbc22bb8f6d6647aab84958ee936b2489e2e276ef75e422b5707"
+      }
+    },
+    {
+      "name": "ctc-right",
+      "command": [
+        "node",
+        "/Users/support/codex/youtube/tools/portable_verify_phonemes.mjs",
+        "--manifest",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/right/measurements.json",
+        "--out",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/phonemes-right.json",
+        "--cache",
+        "/Users/support/codex/youtube/.model-cache",
+        "--ffmpeg",
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg"
+      ],
+      "log": {
+        "path": "output/fibonacci-counting-001-v002/audio-final-qa/ctc-right.log",
+        "sha256": "c35657a509d81b9b63711eeab40134b68cdbddd41e7259a184ecb70d08e18cd0"
+      }
+    },
+    {
+      "name": "acoustics-left",
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/python",
+        "/Users/support/codex/youtube/tools/review_fibonacci_acoustics.py",
+        "--manifest",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/left/measurements.json",
+        "--phonemes",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/phonemes-left.json",
+        "--out",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/acoustics-left.json"
+      ],
+      "log": {
+        "path": "output/fibonacci-counting-001-v002/audio-final-qa/acoustics-left.log",
+        "sha256": "2c8e058787e9fd1ff7b7f75f56b0a3e93a5ff7d9d4efff8a63badc9248ee4811"
+      }
+    },
+    {
+      "name": "acoustics-right",
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/python",
+        "/Users/support/codex/youtube/tools/review_fibonacci_acoustics.py",
+        "--manifest",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/right/measurements.json",
+        "--phonemes",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/phonemes-right.json",
+        "--out",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/audio-final-qa/acoustics-right.json"
+      ],
+      "log": {
+        "path": "output/fibonacci-counting-001-v002/audio-final-qa/acoustics-right.log",
+        "sha256": "2c8e058787e9fd1ff7b7f75f56b0a3e93a5ff7d9d4efff8a63badc9248ee4811"
+      }
+    }
+  ],
+  "fresh_main_ASR_inputs": 208,
+  "fresh_main_CTC_inputs": 208,
+  "fresh_acoustic_inputs": 208,
+  "past_approvals_imported": false,
+  "approval_granted_by_this_runner": false,
+  "human_listening_claim": false
+}

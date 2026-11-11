@@ -1,8 +1,10 @@
 """Compatibility and no-overwrite checks for the portable adapter."""
 import argparse
+from contextlib import chdir
 import hashlib
 import importlib.util
 import json
+import os
 from pathlib import Path
 import tempfile
 from types import SimpleNamespace
@@ -55,6 +57,19 @@ class PortableCompatibility(unittest.TestCase):
             path = Path(folder) / 'work with spaces'
             self.assertEqual(portable.work_directory(path), path.resolve())
             self.assertTrue(path.is_dir())
+
+    @unittest.skipIf(os.name == 'nt', 'POSIX path interpretation')
+    def test_relative_d_drive_directory_does_not_override_posix_system_temp(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            decoy = root / 'D:/temp'
+            decoy.mkdir(parents=True)
+            system_temp = root / 'system-temp'
+            with chdir(root), patch.dict(os.environ, {'YOUTUBE_WORK_DIR': ''}), \
+                    patch.object(portable.tempfile, 'gettempdir', return_value=str(system_temp)):
+                actual = portable.work_directory()
+            self.assertEqual(actual.resolve(), (system_temp / 'youtube-production').resolve())
+            self.assertNotEqual(actual.resolve(), decoy.resolve())
 
     def test_lfs_pointer_is_rejected_before_rendering(self):
         with tempfile.TemporaryDirectory() as folder:

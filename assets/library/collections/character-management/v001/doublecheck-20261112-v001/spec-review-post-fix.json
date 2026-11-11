@@ -1,0 +1,74 @@
+{
+  "kind": "independent-read-only-post-fix-character-management-spec-review",
+  "checked_at_utc": "2026-11-11T15:49:19.227026+00:00",
+  "scope": "Narrow follow-up to manager fixes: two batch-scoped quality observations, initial/current classification separation, publication lock/symlink/pruning documentation.",
+  "source_files_modified": false,
+  "inspected_sha256": {
+    "docs/IMAGE-ASSET-MANAGEMENT.md": "9379d1db6ae89c8d00c018376828456756a6163dd774a02bfe8c424f5dfab2c2",
+    "tools/manage_character_assets.py": "64961e34392f5a1c0a9dc98f99ec0a5327c7b64e1b9e2da69f19f28c1c5b476c",
+    "tools/character_library.py": "07d7aba9bb02a7b1682b2d0c61b6dddd02519b5e6b82ff0960d8663e3efe2b10",
+    "catalogs/character-asset-management-v1.json": "809e2aeb232b41132546686e4a6cdb08bede7926d07efa8567cc3773bab835aa",
+    "catalogs/character-asset-registry-v1.json": "cd8f77fce3a87c2c3a09af2354f318d8b368187ec372c887ea23d6e723d2965a",
+    "assets/library/collections/character-management/v001/reconciliation-result-v003.json": "cf200b1fdb052d34d328af7f5e92ed32b028aa3def24c0bacaff4937ecf3d770"
+  },
+  "status": "pass-for-narrow-scope",
+  "checks": {
+    "kangaroo_expansion_observation": {
+      "status": "pass",
+      "batch": "assets/library/characters/kangaroo/motions/v002",
+      "evidence": [
+        "assets/library/collections/character-style-audit/v001/b/audit.json",
+        "assets/library/collections/character-style-audit/v001/audit-summary.json"
+      ],
+      "explanation": "Observation now describes the 27 expansion poses; broad identity preservation and minor sheet contour/colour variation are supported. The eye-catch-only observation is no longer attached to this batch."
+    },
+    "red_panda_eyecatch_observation": {
+      "status": "pass",
+      "batch": "assets/library/characters/red-panda/eyecatches/v001",
+      "evidence": "assets/library/collections/character-style-audit/v001/a/findings.json",
+      "explanation": "Observation is confined to eye-catch contours and near-canonical torso fill, consistent with the recorded eye-catch neutral samples."
+    },
+    "initial_classification_preservation": {
+      "status": "pass",
+      "count": 3,
+      "baseline": "assets/library/collections/character-management/v001/initial-reconciliation.json",
+      "explanation": "prime-v001, prime-v002, Fibonacci-v001 initial_classification_basis values match their original classifications; current basis describes historical/source reuse or completed episode adoption."
+    },
+    "publication_lock_documentation": {
+      "status": "pass",
+      "spec": "docs/IMAGE-ASSET-MANAGEMENT.md:91",
+      "implementation": "tools/manage_character_assets.py:490",
+      "explanation": "refresh holds the same config lock as reserve/release across final guards and both atomic replacements, along with registry/index locks. The spec does not claim a multi-file atomic transaction."
+    },
+    "human_index_symlink_documentation": {
+      "status": "pass",
+      "spec": "docs/IMAGE-ASSET-MANAGEMENT.md:91",
+      "implementation": "tools/manage_character_assets.py:66",
+      "explanation": "Fixed human index path and ancestors inside the resolved project root are checked for symlinks, including a recheck immediately before publication."
+    },
+    "active_writer_pruning_documentation": {
+      "status": "pass",
+      "spec": "docs/IMAGE-ASSET-MANAGEMENT.md:91",
+      "implementation": "tools/character_library.py:95",
+      "explanation": "inventory_paths prunes the lexical active-writer tree before visiting names or following input-reference file links; regression covers a link to a frozen original."
+    },
+    "related_tests": {
+      "status": "pass",
+      "count": 22,
+      "command": ".venv/bin/python -m unittest tests.test_character_asset_management tests.test_character_asset_inventory"
+    },
+    "preserved_style_archive": {
+      "status": "pass",
+      "records": 97,
+      "byte_identical_to_original_and_manifest_hash": 97
+    },
+    "additional_user_approval_flow_introduced": false
+  },
+  "findings": [],
+  "prior_findings": {
+    "SPEC-01": "resolved in inspected config",
+    "SPEC-03": "resolved in inspected config",
+    "SPEC-02": "Historical v003 JSON deliberately unchanged. Manager will add a new complete verification record; this narrow review does not claim that record already exists."
+  },
+  "publication_state_note": "At inspection the registry still has the previous publication SHA cd8f77fce3a87c2c3a09af2354f318d8b368187ec372c887ea23d6e723d2965a. The manager must complete refresh/check and bundle verification after its edits; no pass of that unpublished state is asserted here."
+}

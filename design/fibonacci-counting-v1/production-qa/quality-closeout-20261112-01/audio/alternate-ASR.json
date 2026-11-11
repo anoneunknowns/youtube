@@ -1,0 +1,7986 @@
+{
+  "schema_version": 1,
+  "kind": "new-alternate-whisper-base-en-isolated-closeout-ASR",
+  "source_manifest": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/measurements.json",
+  "source_manifest_sha256": "bfa11fcb37c6d80bf664c482434325331132675046573de090e70db3ca30c929",
+  "model": {
+    "model_id": "Xenova/whisper-base.en",
+    "revision": "95bf40a508535962c6483ead40270b2e32267508",
+    "files": [
+      {
+        "path": "config.json",
+        "bytes": 2202,
+        "sha256": "5c390f2c6ba84ddeb7e362cd8b2123832911407850174e64d7081ccc36df2d64"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 1500,
+        "sha256": "1e57ed56ad1bd7f08a49ece7fe7daada674573805a35f8bdbbe68380aab5b1ee"
+      },
+      {
+        "path": "preprocessor_config.json",
+        "bytes": 339,
+        "sha256": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 2128494,
+        "sha256": "c6ee8f089220a5b1188f6426456772572671c6141ae007eecb83c6a8349f5deb"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 835,
+        "sha256": "e082c1ad251541bf277967a703252cddd4bb37a71a43737e03d050c22ec08238"
+      },
+      {
+        "path": "onnx/encoder_model_quantized.onnx",
+        "bytes": 23200856,
+        "sha256": "d0d4e59e2842617b39787cece73d7e8f76f99b1697d3386c0e682eca2269f4a1"
+      },
+      {
+        "path": "onnx/decoder_model_merged_quantized.onnx",
+        "bytes": 53707027,
+        "sha256": "a25afc5858a20aabb7652cb2d555996ebe10691a69bbdb423d5073d52f060325"
+      }
+    ],
+    "dtype": "q8",
+    "runtime": "@huggingface/transformers@3.8.1"
+  },
+  "method": {
+    "sampling_rate": 16000,
+    "recognizer_only_edge_padding_s": 0.15,
+    "word_timestamps": true,
+    "expected_text_used_as_prompt": false,
+    "neighboring_number_context_used": false,
+    "dialogue_comparison": "Case/punctuation, explicitly listed contractions, F-index spelling and cardinal word/digit normalization. Missing operators or lexical words remain warnings."
+  },
+  "summary": {
+    "clips": 104,
+    "numbers": 41,
+    "dialogue": 63,
+    "asr_matches": 94,
+    "warnings": 10
+  },
+  "pronunciation_approved": false,
+  "limitations": "An isolated lexical match cannot prove articulation. Independent CTC and acoustic review are required; this is not a full-listening record.",
+  "warnings": [
+    {
+      "id": "N033",
+      "index": 33,
+      "role": "number",
+      "number": 3524578,
+      "expected_text": "three million five hundred twenty-four thousand five hundred seventy-eight",
+      "recognized_text": "3,500, 24,578.",
+      "word_timings": [
+        {
+          "text": " 3",
+          "timestamp": [
+            0,
+            0.42
+          ]
+        },
+        {
+          "text": ",500,",
+          "timestamp": [
+            0.42,
+            1.4
+          ]
+        },
+        {
+          "text": " 24",
+          "timestamp": [
+            1.78,
+            2.16
+          ]
+        },
+        {
+          "text": ",578.",
+          "timestamp": [
+            2.16,
+            3.8
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "3524578",
+      "recognized_normalized": "null",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N033.wav",
+      "source_sha256": "e866a53345960ca0aa10472d256a94e9ac7516b7d472bd5bfaf75a88ec745995",
+      "duration_s": 4.239958333333333
+    },
+    {
+      "id": "N034",
+      "index": 34,
+      "role": "number",
+      "number": 5702887,
+      "expected_text": "five million seven hundred two thousand eight hundred eighty-seven",
+      "recognized_text": "5,700, 2,887.",
+      "word_timings": [
+        {
+          "text": " 5",
+          "timestamp": [
+            1.54,
+            1.54
+          ]
+        },
+        {
+          "text": ",700,",
+          "timestamp": [
+            1.54,
+            1.64
+          ]
+        },
+        {
+          "text": " 2",
+          "timestamp": [
+            2.1,
+            2.22
+          ]
+        },
+        {
+          "text": ",887.",
+          "timestamp": [
+            2.22,
+            3.42
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "5702887",
+      "recognized_normalized": "null",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N034.wav",
+      "source_sha256": "1a4253a5a6e71631ef849a6d207afef9f0c8a693d988a3f74977d5e20d4395ad",
+      "duration_s": 3.8754166666666667
+    },
+    {
+      "id": "N038",
+      "index": 38,
+      "role": "number",
+      "number": 39088169,
+      "expected_text": "thirty-nine million eighty-eight thousand one hundred sixty-nine",
+      "recognized_text": "39,88,169.",
+      "word_timings": [
+        {
+          "text": " 39",
+          "timestamp": [
+            0,
+            0.58
+          ]
+        },
+        {
+          "text": ",88",
+          "timestamp": [
+            0.58,
+            1.72
+          ]
+        },
+        {
+          "text": ",169.",
+          "timestamp": [
+            1.72,
+            3.18
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "39088169",
+      "recognized_normalized": "null",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N038.wav",
+      "source_sha256": "15846c5270e59fa5b7d90e57547ea51ff22fd9d6c6d916e93de3566f0a7293c0",
+      "duration_s": 3.2632083333333335
+    },
+    {
+      "id": "T013a",
+      "index": 13,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Here the ones make thirteen. Write three and carry one ten. The tens, including that carry, also make thirteen.",
+      "recognized_text": "Hear the ones make 13 write 3, and carry 1 10 the 10s, including that carry also make 13.",
+      "word_timings": [
+        {
+          "text": " Hear",
+          "timestamp": [
+            0.12,
+            0.38
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            0.38,
+            0.5
+          ]
+        },
+        {
+          "text": " ones",
+          "timestamp": [
+            0.5,
+            0.66
+          ]
+        },
+        {
+          "text": " make",
+          "timestamp": [
+            0.66,
+            0.92
+          ]
+        },
+        {
+          "text": " 13",
+          "timestamp": [
+            0.92,
+            1.36
+          ]
+        },
+        {
+          "text": " write",
+          "timestamp": [
+            1.36,
+            1.64
+          ]
+        },
+        {
+          "text": " 3,",
+          "timestamp": [
+            1.64,
+            2.04
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            2.5,
+            2.66
+          ]
+        },
+        {
+          "text": " carry",
+          "timestamp": [
+            2.66,
+            2.82
+          ]
+        },
+        {
+          "text": " 1",
+          "timestamp": [
+            2.82,
+            3.16
+          ]
+        },
+        {
+          "text": " 10",
+          "timestamp": [
+            3.16,
+            3.4
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            3.4,
+            3.54
+          ]
+        },
+        {
+          "text": " 10s,",
+          "timestamp": [
+            3.54,
+            4.02
+          ]
+        },
+        {
+          "text": " including",
+          "timestamp": [
+            4.1,
+            4.4
+          ]
+        },
+        {
+          "text": " that",
+          "timestamp": [
+            4.4,
+            4.72
+          ]
+        },
+        {
+          "text": " carry",
+          "timestamp": [
+            4.72,
+            4.96
+          ]
+        },
+        {
+          "text": " also",
+          "timestamp": [
+            4.96,
+            5.28
+          ]
+        },
+        {
+          "text": " make",
+          "timestamp": [
+            5.28,
+            5.58
+          ]
+        },
+        {
+          "text": " 13.",
+          "timestamp": [
+            5.58,
+            5.96
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "here the ones make 13 write 3 and carry 1 10 the tens including that carry also make 13",
+      "recognized_normalized": "hear the ones make 13 write 3 and carry 1 10 the 10s including that carry also make 13",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T013a.wav",
+      "source_sha256": "1ae810c091b565154ac261fdb9f80ec08095cace36d0dcb8dd213968e45404e0",
+      "duration_s": 6.15375
+    },
+    {
+      "id": "T018b",
+      "index": 18,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Seven plus seven makes fourteen. Next come eighteen tens, then fifteen hundreds. Each carry moves one column left; it never skips a place.",
+      "recognized_text": "7 plus 7 makes 14. Next come 18 10s, then 1500s. Each carry moves one column left. It never skips a place.",
+      "word_timings": [
+        {
+          "text": " 7",
+          "timestamp": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.5,
+            0.74
+          ]
+        },
+        {
+          "text": " 7",
+          "timestamp": [
+            0.74,
+            1.14
+          ]
+        },
+        {
+          "text": " makes",
+          "timestamp": [
+            1.14,
+            1.36
+          ]
+        },
+        {
+          "text": " 14.",
+          "timestamp": [
+            1.36,
+            1.76
+          ]
+        },
+        {
+          "text": " Next",
+          "timestamp": [
+            2.66,
+            2.68
+          ]
+        },
+        {
+          "text": " come",
+          "timestamp": [
+            2.68,
+            2.94
+          ]
+        },
+        {
+          "text": " 18",
+          "timestamp": [
+            2.94,
+            3.22
+          ]
+        },
+        {
+          "text": " 10s,",
+          "timestamp": [
+            3.22,
+            3.94
+          ]
+        },
+        {
+          "text": " then",
+          "timestamp": [
+            4.08,
+            4.16
+          ]
+        },
+        {
+          "text": " 1500s.",
+          "timestamp": [
+            4.16,
+            5.14
+          ]
+        },
+        {
+          "text": " Each",
+          "timestamp": [
+            5.88,
+            5.88
+          ]
+        },
+        {
+          "text": " carry",
+          "timestamp": [
+            5.88,
+            6.1
+          ]
+        },
+        {
+          "text": " moves",
+          "timestamp": [
+            6.1,
+            6.42
+          ]
+        },
+        {
+          "text": " one",
+          "timestamp": [
+            6.42,
+            6.78
+          ]
+        },
+        {
+          "text": " column",
+          "timestamp": [
+            6.78,
+            7.06
+          ]
+        },
+        {
+          "text": " left.",
+          "timestamp": [
+            7.06,
+            7.46
+          ]
+        },
+        {
+          "text": " It",
+          "timestamp": [
+            7.92,
+            7.96
+          ]
+        },
+        {
+          "text": " never",
+          "timestamp": [
+            7.96,
+            8.12
+          ]
+        },
+        {
+          "text": " skips",
+          "timestamp": [
+            8.12,
+            8.54
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            8.54,
+            8.62
+          ]
+        },
+        {
+          "text": " place.",
+          "timestamp": [
+            8.62,
+            8.84
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "7 plus 7 makes 14 next come 18 tens then 15 hundreds each carry moves 1 column left it never skips a place",
+      "recognized_normalized": "7 plus 7 makes 14 next come 18 10s then 1500s each carry moves 1 column left it never skips a place",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T018b.wav",
+      "source_sha256": "23dfa3712de133e074ee2020f8e0b9c8260a193b74184aeacc7c057fec358ad4",
+      "duration_s": 9.0035
+    },
+    {
+      "id": "E028",
+      "index": 28,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "one hundred twenty-one thousand three hundred ninety-three plus one hundred ninety-six thousand four hundred eighteen equals",
+      "recognized_text": "120,393 plus 196,418 equals.",
+      "word_timings": [
+        {
+          "text": " 120",
+          "timestamp": [
+            0.68,
+            0.68
+          ]
+        },
+        {
+          "text": ",393",
+          "timestamp": [
+            0.68,
+            2.84
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            2.84,
+            3.56
+          ]
+        },
+        {
+          "text": " 196",
+          "timestamp": [
+            3.56,
+            4.64
+          ]
+        },
+        {
+          "text": ",418",
+          "timestamp": [
+            4.64,
+            5.9
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            5.9,
+            6.78
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "121393 plus 196418 equals",
+      "recognized_normalized": "120393 plus 196418 equals",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E028.wav",
+      "source_sha256": "33964c78f960df28b94f60ac83d1c04250ca6d1e7295f750f1b2608f07ad0347",
+      "duration_s": 6.958833333333334
+    },
+    {
+      "id": "E035",
+      "index": 35,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "three million five hundred twenty-four thousand five hundred seventy-eight plus five million seven hundred two thousand eight hundred eighty-seven equals",
+      "recognized_text": "3,500, 24,500, 78, plus 5,700, 2,887 equals.",
+      "word_timings": [
+        {
+          "text": " 3",
+          "timestamp": [
+            0,
+            0.42
+          ]
+        },
+        {
+          "text": ",500,",
+          "timestamp": [
+            0.42,
+            1.42
+          ]
+        },
+        {
+          "text": " 24",
+          "timestamp": [
+            1.74,
+            2.1
+          ]
+        },
+        {
+          "text": ",500,",
+          "timestamp": [
+            2.1,
+            2.98
+          ]
+        },
+        {
+          "text": " 78,",
+          "timestamp": [
+            3.66,
+            4.04
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            4.78,
+            4.86
+          ]
+        },
+        {
+          "text": " 5",
+          "timestamp": [
+            4.86,
+            5.36
+          ]
+        },
+        {
+          "text": ",700,",
+          "timestamp": [
+            5.36,
+            6.08
+          ]
+        },
+        {
+          "text": " 2",
+          "timestamp": [
+            6.92,
+            7
+          ]
+        },
+        {
+          "text": ",887",
+          "timestamp": [
+            7,
+            7.6
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            7.6,
+            9.04
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "3524578 plus 5702887 equals",
+      "recognized_normalized": "3500 24500 78 plus 5700 2887 equals",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E035.wav",
+      "source_sha256": "4690fea76eea52f1ac449d72698aeb7e3eeebe982735a00fd6ad5edab352db47",
+      "duration_s": 9.216916666666666
+    },
+    {
+      "id": "E036",
+      "index": 36,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "five million seven hundred two thousand eight hundred eighty-seven plus nine million two hundred twenty-seven thousand four hundred sixty-five equals",
+      "recognized_text": "5,700, 2,887 plus 9,227,465 equals.",
+      "word_timings": [
+        {
+          "text": " 5",
+          "timestamp": [
+            0.06,
+            0.56
+          ]
+        },
+        {
+          "text": ",700,",
+          "timestamp": [
+            0.56,
+            1.52
+          ]
+        },
+        {
+          "text": " 2",
+          "timestamp": [
+            1.94,
+            2.08
+          ]
+        },
+        {
+          "text": ",887",
+          "timestamp": [
+            2.08,
+            3.28
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            3.28,
+            4.34
+          ]
+        },
+        {
+          "text": " 9",
+          "timestamp": [
+            4.34,
+            4.8
+          ]
+        },
+        {
+          "text": ",227",
+          "timestamp": [
+            4.8,
+            5.9
+          ]
+        },
+        {
+          "text": ",465",
+          "timestamp": [
+            5.9,
+            7.84
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            7.84,
+            8.7
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "5702887 plus 9227465 equals",
+      "recognized_normalized": "5700 2887 plus 9227465 equals",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E036.wav",
+      "source_sha256": "a2a8bef19bd24c2662eb09b1d8c6309736281ab6dcb5df3a4f989b723ede4816",
+      "duration_s": 8.903708333333332
+    },
+    {
+      "id": "E039",
+      "index": 39,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-four million one hundred fifty-seven thousand eight hundred seventeen plus thirty-nine million eighty-eight thousand one hundred sixty-nine equals",
+      "recognized_text": "24,157,817 plus 39,88,169 equals.",
+      "word_timings": [
+        {
+          "text": " 24",
+          "timestamp": [
+            2.44,
+            2.44
+          ]
+        },
+        {
+          "text": ",157",
+          "timestamp": [
+            2.44,
+            2.46
+          ]
+        },
+        {
+          "text": ",817",
+          "timestamp": [
+            2.46,
+            4
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            4,
+            4.94
+          ]
+        },
+        {
+          "text": " 39",
+          "timestamp": [
+            4.94,
+            5.46
+          ]
+        },
+        {
+          "text": ",88",
+          "timestamp": [
+            5.46,
+            6.62
+          ]
+        },
+        {
+          "text": ",169",
+          "timestamp": [
+            6.62,
+            8.16
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            8.16,
+            8.68
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "24157817 plus 39088169 equals",
+      "recognized_normalized": "24157817 plus 3988169 equals",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E039.wav",
+      "source_sha256": "c76207737f194d724d4d319e840cc6840d7d6be4ff2c67249ff77ef390ba404b",
+      "duration_s": 8.920583333333333
+    },
+    {
+      "id": "E040",
+      "index": 40,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-nine million eighty-eight thousand one hundred sixty-nine plus sixty-three million two hundred forty-five thousand nine hundred eighty-six equals",
+      "recognized_text": "39,88,169 plus 63,245,986 equals.",
+      "word_timings": [
+        {
+          "text": " 39",
+          "timestamp": [
+            0,
+            0.52
+          ]
+        },
+        {
+          "text": ",88",
+          "timestamp": [
+            0.52,
+            1.82
+          ]
+        },
+        {
+          "text": ",169",
+          "timestamp": [
+            1.82,
+            3.3
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            3.3,
+            4
+          ]
+        },
+        {
+          "text": " 63",
+          "timestamp": [
+            4,
+            4.72
+          ]
+        },
+        {
+          "text": ",245",
+          "timestamp": [
+            4.72,
+            6.36
+          ]
+        },
+        {
+          "text": ",986",
+          "timestamp": [
+            6.36,
+            8.24
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            8.24,
+            8.76
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "39088169 plus 63245986 equals",
+      "recognized_normalized": "3988169 plus 63245986 equals",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E040.wav",
+      "source_sha256": "a9e77003464d80859e96b1c15b3d6651ad3117759585acc7f59f52a13e3c688e",
+      "duration_s": 8.922083333333333
+    }
+  ],
+  "results": [
+    {
+      "id": "N000",
+      "index": 0,
+      "role": "number",
+      "number": 0,
+      "expected_text": "zero",
+      "recognized_text": "0.",
+      "word_timings": [
+        {
+          "text": " 0.",
+          "timestamp": [
+            0,
+            0.56
+          ]
+        }
+      ],
+      "interpreted_number": 0,
+      "expected_normalized": "0",
+      "recognized_normalized": "0",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N000.wav",
+      "source_sha256": "b7c54ea21d70167c69a559f9d7e742e18d6b09afaa3da82282eda9b96562fc03",
+      "duration_s": 0.7392916666666667
+    },
+    {
+      "id": "N001",
+      "index": 1,
+      "role": "number",
+      "number": 1,
+      "expected_text": "one",
+      "recognized_text": "1",
+      "word_timings": [
+        {
+          "text": " 1",
+          "timestamp": [
+            0,
+            0.52
+          ]
+        }
+      ],
+      "interpreted_number": 1,
+      "expected_normalized": "1",
+      "recognized_normalized": "1",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N001.wav",
+      "source_sha256": "9ae41f1641125d0d45c8b7b427a7d969e83a94981743095855d63719cfccb63f",
+      "duration_s": 0.6479166666666667
+    },
+    {
+      "id": "N002",
+      "index": 2,
+      "role": "number",
+      "number": 1,
+      "expected_text": "one",
+      "recognized_text": "1",
+      "word_timings": [
+        {
+          "text": " 1",
+          "timestamp": [
+            0,
+            0.52
+          ]
+        }
+      ],
+      "interpreted_number": 1,
+      "expected_normalized": "1",
+      "recognized_normalized": "1",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N002.wav",
+      "source_sha256": "c57aa7874feaacf9099bb394d5497aa98ca2652d62ac0264b6df50d66f9bec69",
+      "duration_s": 0.6479166666666667
+    },
+    {
+      "id": "N003",
+      "index": 3,
+      "role": "number",
+      "number": 2,
+      "expected_text": "two",
+      "recognized_text": "2",
+      "word_timings": [
+        {
+          "text": " 2",
+          "timestamp": [
+            0.04,
+            0.5
+          ]
+        }
+      ],
+      "interpreted_number": 2,
+      "expected_normalized": "2",
+      "recognized_normalized": "2",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N003.wav",
+      "source_sha256": "efe26f6c1ebacec744e774dcb60314f66a43d394b7cc6d6491ad3570d2ca485d",
+      "duration_s": 0.6755833333333333
+    },
+    {
+      "id": "N004",
+      "index": 4,
+      "role": "number",
+      "number": 3,
+      "expected_text": "three",
+      "recognized_text": "3",
+      "word_timings": [
+        {
+          "text": " 3",
+          "timestamp": [
+            0,
+            0.5
+          ]
+        }
+      ],
+      "interpreted_number": 3,
+      "expected_normalized": "3",
+      "recognized_normalized": "3",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N004.wav",
+      "source_sha256": "20fabc4625385901c4c4cc4ad7e83c1948d7a5236257af00bd00460878236704",
+      "duration_s": 0.7172916666666667
+    },
+    {
+      "id": "N005",
+      "index": 5,
+      "role": "number",
+      "number": 5,
+      "expected_text": "five",
+      "recognized_text": "5",
+      "word_timings": [
+        {
+          "text": " 5",
+          "timestamp": [
+            0,
+            0.58
+          ]
+        }
+      ],
+      "interpreted_number": 5,
+      "expected_normalized": "5",
+      "recognized_normalized": "5",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N005.wav",
+      "source_sha256": "7cad9237fd8102c09826f6ee873843c172fd4a6fd38534528cb9862f0be09c88",
+      "duration_s": 0.7605416666666667
+    },
+    {
+      "id": "N006",
+      "index": 6,
+      "role": "number",
+      "number": 8,
+      "expected_text": "eight",
+      "recognized_text": "8.",
+      "word_timings": [
+        {
+          "text": " 8.",
+          "timestamp": [
+            0.04,
+            0.52
+          ]
+        }
+      ],
+      "interpreted_number": 8,
+      "expected_normalized": "8",
+      "recognized_normalized": "8",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N006.wav",
+      "source_sha256": "c50e7f102baf6f31f42b0f68a51a624a5b8a4a676ad26bdd93f20c8e392dba7b",
+      "duration_s": 0.6717083333333334
+    },
+    {
+      "id": "N007",
+      "index": 7,
+      "role": "number",
+      "number": 13,
+      "expected_text": "thirteen",
+      "recognized_text": "13",
+      "word_timings": [
+        {
+          "text": " 13",
+          "timestamp": [
+            0,
+            0.64
+          ]
+        }
+      ],
+      "interpreted_number": 13,
+      "expected_normalized": "13",
+      "recognized_normalized": "13",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N007.wav",
+      "source_sha256": "581732c5c1dd6f79eb7fadb0a4c4cbd675be1e2339874bd1c8be85236991587f",
+      "duration_s": 0.8509166666666667
+    },
+    {
+      "id": "N008",
+      "index": 8,
+      "role": "number",
+      "number": 21,
+      "expected_text": "twenty-one",
+      "recognized_text": "21",
+      "word_timings": [
+        {
+          "text": " 21",
+          "timestamp": [
+            0,
+            0.7
+          ]
+        }
+      ],
+      "interpreted_number": 21,
+      "expected_normalized": "21",
+      "recognized_normalized": "21",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N008.wav",
+      "source_sha256": "722f412635fa65a089bc9bd52335b9485dfb29f8a06c743ed548feb2b75f93d7",
+      "duration_s": 0.8757916666666666
+    },
+    {
+      "id": "N009",
+      "index": 9,
+      "role": "number",
+      "number": 34,
+      "expected_text": "thirty-four",
+      "recognized_text": "34",
+      "word_timings": [
+        {
+          "text": " 34",
+          "timestamp": [
+            0,
+            0.66
+          ]
+        }
+      ],
+      "interpreted_number": 34,
+      "expected_normalized": "34",
+      "recognized_normalized": "34",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N009.wav",
+      "source_sha256": "c4e8266da480b9ac14f694988ed2e03354263e3da96e5bcc7ab977f6c2f24fe6",
+      "duration_s": 0.8784166666666666
+    },
+    {
+      "id": "N010",
+      "index": 10,
+      "role": "number",
+      "number": 55,
+      "expected_text": "fifty-five",
+      "recognized_text": "55",
+      "word_timings": [
+        {
+          "text": " 55",
+          "timestamp": [
+            0,
+            0.68
+          ]
+        }
+      ],
+      "interpreted_number": 55,
+      "expected_normalized": "55",
+      "recognized_normalized": "55",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N010.wav",
+      "source_sha256": "bdd7fb15f8ce506dc8a81ad6452dd9e23023342126a564856d02ca8c19612d66",
+      "duration_s": 1.0151666666666668
+    },
+    {
+      "id": "N011",
+      "index": 11,
+      "role": "number",
+      "number": 89,
+      "expected_text": "eighty-nine",
+      "recognized_text": "89",
+      "word_timings": [
+        {
+          "text": " 89",
+          "timestamp": [
+            0,
+            0.6
+          ]
+        }
+      ],
+      "interpreted_number": 89,
+      "expected_normalized": "89",
+      "recognized_normalized": "89",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N011.wav",
+      "source_sha256": "1ec8d4a093a541e9a008ed947d16529b811d44aad7854b41891bf31f11b9ebe6",
+      "duration_s": 0.9282916666666666
+    },
+    {
+      "id": "N012",
+      "index": 12,
+      "role": "number",
+      "number": 144,
+      "expected_text": "one hundred forty-four",
+      "recognized_text": "144",
+      "word_timings": [
+        {
+          "text": " 144",
+          "timestamp": [
+            0.04,
+            1.28
+          ]
+        }
+      ],
+      "interpreted_number": 144,
+      "expected_normalized": "144",
+      "recognized_normalized": "144",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N012.wav",
+      "source_sha256": "1870354b2f73cba89b508d00e70490b7c3b0e6c0885fba43298d978191924dee",
+      "duration_s": 1.496875
+    },
+    {
+      "id": "N013",
+      "index": 13,
+      "role": "number",
+      "number": 233,
+      "expected_text": "two hundred thirty-three",
+      "recognized_text": "233",
+      "word_timings": [
+        {
+          "text": " 233",
+          "timestamp": [
+            1.1,
+            1.12
+          ]
+        }
+      ],
+      "interpreted_number": 233,
+      "expected_normalized": "233",
+      "recognized_normalized": "233",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N013.wav",
+      "source_sha256": "a0a3c5ab520593d76fd8ea66c54eed29943560f18c82dfbdf0d3f68da3563760",
+      "duration_s": 1.4374583333333333
+    },
+    {
+      "id": "N014",
+      "index": 14,
+      "role": "number",
+      "number": 377,
+      "expected_text": "three hundred seventy-seven",
+      "recognized_text": "377",
+      "word_timings": [
+        {
+          "text": " 377",
+          "timestamp": [
+            0.06,
+            1.14
+          ]
+        }
+      ],
+      "interpreted_number": 377,
+      "expected_normalized": "377",
+      "recognized_normalized": "377",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N014.wav",
+      "source_sha256": "04445bd4488316d690d9d8da7b3544e894028ea25de0114068640e628904b473",
+      "duration_s": 1.6540833333333333
+    },
+    {
+      "id": "N015",
+      "index": 15,
+      "role": "number",
+      "number": 610,
+      "expected_text": "six hundred ten",
+      "recognized_text": "610",
+      "word_timings": [
+        {
+          "text": " 610",
+          "timestamp": [
+            0.04,
+            1
+          ]
+        }
+      ],
+      "interpreted_number": 610,
+      "expected_normalized": "610",
+      "recognized_normalized": "610",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N015.wav",
+      "source_sha256": "6e198db5923b18dcd0478b2f21346aac7fd892f14b4d6dc0ed5c104fd73f7c64",
+      "duration_s": 1.2240416666666667
+    },
+    {
+      "id": "N016",
+      "index": 16,
+      "role": "number",
+      "number": 987,
+      "expected_text": "nine hundred eighty-seven",
+      "recognized_text": "987",
+      "word_timings": [
+        {
+          "text": " 987",
+          "timestamp": [
+            0.06,
+            1.26
+          ]
+        }
+      ],
+      "interpreted_number": 987,
+      "expected_normalized": "987",
+      "recognized_normalized": "987",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N016.wav",
+      "source_sha256": "9d7ffec80c48f159e838adce5877b90687ba903cef586243687414ee54f1f864",
+      "duration_s": 1.6552083333333334
+    },
+    {
+      "id": "N017",
+      "index": 17,
+      "role": "number",
+      "number": 1597,
+      "expected_text": "one thousand five hundred ninety-seven",
+      "recognized_text": "1,597.",
+      "word_timings": [
+        {
+          "text": " 1",
+          "timestamp": [
+            0.06,
+            0.42
+          ]
+        },
+        {
+          "text": ",597.",
+          "timestamp": [
+            0.42,
+            1.98
+          ]
+        }
+      ],
+      "interpreted_number": 1597,
+      "expected_normalized": "1597",
+      "recognized_normalized": "1597",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N017.wav",
+      "source_sha256": "bcb08598673bd5b1d08777a6192ff23fc7aee4cb472685ad402eaef81aada103",
+      "duration_s": 2.460166666666667
+    },
+    {
+      "id": "N018",
+      "index": 18,
+      "role": "number",
+      "number": 2584,
+      "expected_text": "two thousand five hundred eighty-four",
+      "recognized_text": "2,584.",
+      "word_timings": [
+        {
+          "text": " 2",
+          "timestamp": [
+            0.04,
+            0.38
+          ]
+        },
+        {
+          "text": ",584.",
+          "timestamp": [
+            0.38,
+            1.7
+          ]
+        }
+      ],
+      "interpreted_number": 2584,
+      "expected_normalized": "2584",
+      "recognized_normalized": "2584",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N018.wav",
+      "source_sha256": "3eeefd72672ad22d440728ea2c7f023dde10c9398aae437cb17e1e790d5b6f7e",
+      "duration_s": 2.1522083333333333
+    },
+    {
+      "id": "N019",
+      "index": 19,
+      "role": "number",
+      "number": 4181,
+      "expected_text": "four thousand one hundred eighty-one",
+      "recognized_text": "4181.",
+      "word_timings": [
+        {
+          "text": " 4181.",
+          "timestamp": [
+            1.88,
+            1.9
+          ]
+        }
+      ],
+      "interpreted_number": 4181,
+      "expected_normalized": "4181",
+      "recognized_normalized": "4181",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N019.wav",
+      "source_sha256": "f9d1f8aec559168e2d8fd6dbb486c6cacd1dc51c441fa824a139550b464cab45",
+      "duration_s": 2.020375
+    },
+    {
+      "id": "N020",
+      "index": 20,
+      "role": "number",
+      "number": 6765,
+      "expected_text": "six thousand seven hundred sixty-five",
+      "recognized_text": "6,765.",
+      "word_timings": [
+        {
+          "text": " 6",
+          "timestamp": [
+            0.06,
+            0.48
+          ]
+        },
+        {
+          "text": ",765.",
+          "timestamp": [
+            0.48,
+            1.42
+          ]
+        }
+      ],
+      "interpreted_number": 6765,
+      "expected_normalized": "6765",
+      "recognized_normalized": "6765",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N020.wav",
+      "source_sha256": "1e131d5a4ab886621b3793c31f56d02ea0f8cc1e5b562ea44de95845225017d8",
+      "duration_s": 2.4254166666666666
+    },
+    {
+      "id": "N021",
+      "index": 21,
+      "role": "number",
+      "number": 10946,
+      "expected_text": "ten thousand nine hundred forty-six",
+      "recognized_text": "10,946.",
+      "word_timings": [
+        {
+          "text": " 10",
+          "timestamp": [
+            0.06,
+            0.4
+          ]
+        },
+        {
+          "text": ",946.",
+          "timestamp": [
+            0.4,
+            1.98
+          ]
+        }
+      ],
+      "interpreted_number": 10946,
+      "expected_normalized": "10946",
+      "recognized_normalized": "10946",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N021.wav",
+      "source_sha256": "ca11be925d9ff585adb800f6492cb41b5bfb217a0f8c8172c1f72a05a137ea19",
+      "duration_s": 2.21625
+    },
+    {
+      "id": "N022",
+      "index": 22,
+      "role": "number",
+      "number": 17711,
+      "expected_text": "seventeen thousand seven hundred eleven",
+      "recognized_text": "17,711.",
+      "word_timings": [
+        {
+          "text": " 17",
+          "timestamp": [
+            0,
+            0.64
+          ]
+        },
+        {
+          "text": ",711.",
+          "timestamp": [
+            0.64,
+            2.32
+          ]
+        }
+      ],
+      "interpreted_number": 17711,
+      "expected_normalized": "17711",
+      "recognized_normalized": "17711",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N022.wav",
+      "source_sha256": "fae8940aaabc4ee7414f64581fa6151d22e404cd13da3d627ed486c969d5690c",
+      "duration_s": 2.4556666666666667
+    },
+    {
+      "id": "N023",
+      "index": 23,
+      "role": "number",
+      "number": 28657,
+      "expected_text": "twenty-eight thousand six hundred fifty-seven",
+      "recognized_text": "28,657.",
+      "word_timings": [
+        {
+          "text": " 28",
+          "timestamp": [
+            0,
+            0.74
+          ]
+        },
+        {
+          "text": ",657.",
+          "timestamp": [
+            0.74,
+            2.32
+          ]
+        }
+      ],
+      "interpreted_number": 28657,
+      "expected_normalized": "28657",
+      "recognized_normalized": "28657",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N023.wav",
+      "source_sha256": "1264cf27875e8e98532e0419201bf57382a5b5288499e301656fe01db4c8cd03",
+      "duration_s": 2.514875
+    },
+    {
+      "id": "N024",
+      "index": 24,
+      "role": "number",
+      "number": 46368,
+      "expected_text": "forty-six thousand three hundred sixty-eight",
+      "recognized_text": "46,368.",
+      "word_timings": [
+        {
+          "text": " 46",
+          "timestamp": [
+            2.34,
+            2.34
+          ]
+        },
+        {
+          "text": ",368.",
+          "timestamp": [
+            2.34,
+            2.62
+          ]
+        }
+      ],
+      "interpreted_number": 46368,
+      "expected_normalized": "46368",
+      "recognized_normalized": "46368",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N024.wav",
+      "source_sha256": "1dda320a700c9a61ca00ad2771b6dc4bd3e869a3483918c11613491c7f8ee876",
+      "duration_s": 2.76525
+    },
+    {
+      "id": "N025",
+      "index": 25,
+      "role": "number",
+      "number": 75025,
+      "expected_text": "seventy-five thousand twenty-five",
+      "recognized_text": "75,025.",
+      "word_timings": [
+        {
+          "text": " 75",
+          "timestamp": [
+            0,
+            0.62
+          ]
+        },
+        {
+          "text": ",025.",
+          "timestamp": [
+            0.62,
+            1.9
+          ]
+        }
+      ],
+      "interpreted_number": 75025,
+      "expected_normalized": "75025",
+      "recognized_normalized": "75025",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N025.wav",
+      "source_sha256": "802ff0dd8cea6a1ff14d030412a2e721f8096cb463e7e5791de9d57fda3c993e",
+      "duration_s": 1.9829583333333334
+    },
+    {
+      "id": "N026",
+      "index": 26,
+      "role": "number",
+      "number": 121393,
+      "expected_text": "one hundred twenty-one thousand three hundred ninety-three",
+      "recognized_text": "121,393.",
+      "word_timings": [
+        {
+          "text": " 121",
+          "timestamp": [
+            0.04,
+            1
+          ]
+        },
+        {
+          "text": ",393.",
+          "timestamp": [
+            1,
+            2.7
+          ]
+        }
+      ],
+      "interpreted_number": 121393,
+      "expected_normalized": "121393",
+      "recognized_normalized": "121393",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N026.wav",
+      "source_sha256": "03d8c42bbb4d31adbaa7717e0c758fbe14fd993845f08b5f8449691158d48d86",
+      "duration_s": 2.9985
+    },
+    {
+      "id": "N027",
+      "index": 27,
+      "role": "number",
+      "number": 196418,
+      "expected_text": "one hundred ninety-six thousand four hundred eighteen",
+      "recognized_text": "196,418.",
+      "word_timings": [
+        {
+          "text": " 196",
+          "timestamp": [
+            1.36,
+            1.36
+          ]
+        },
+        {
+          "text": ",418.",
+          "timestamp": [
+            1.36,
+            2.56
+          ]
+        }
+      ],
+      "interpreted_number": 196418,
+      "expected_normalized": "196418",
+      "recognized_normalized": "196418",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N027.wav",
+      "source_sha256": "b15b499ed431eebba1a0b007d07bf9f3dc9bd3fc688f9d5753edfc64940f6c44",
+      "duration_s": 2.81175
+    },
+    {
+      "id": "N028",
+      "index": 28,
+      "role": "number",
+      "number": 317811,
+      "expected_text": "three hundred seventeen thousand eight hundred eleven",
+      "recognized_text": "317,811.",
+      "word_timings": [
+        {
+          "text": " 317",
+          "timestamp": [
+            1.36,
+            1.36
+          ]
+        },
+        {
+          "text": ",811.",
+          "timestamp": [
+            1.36,
+            2.76
+          ]
+        }
+      ],
+      "interpreted_number": 317811,
+      "expected_normalized": "317811",
+      "recognized_normalized": "317811",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N028.wav",
+      "source_sha256": "2e2f964573ae8a795b6141c444975ef79c7c08c762f05509dd7b414f0c0597f3",
+      "duration_s": 2.8719166666666665
+    },
+    {
+      "id": "N029",
+      "index": 29,
+      "role": "number",
+      "number": 514229,
+      "expected_text": "five hundred fourteen thousand two hundred twenty-nine",
+      "recognized_text": "514,229.",
+      "word_timings": [
+        {
+          "text": " 514",
+          "timestamp": [
+            0,
+            1.36
+          ]
+        },
+        {
+          "text": ",229.",
+          "timestamp": [
+            1.36,
+            2.8
+          ]
+        }
+      ],
+      "interpreted_number": 514229,
+      "expected_normalized": "514229",
+      "recognized_normalized": "514229",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N029.wav",
+      "source_sha256": "1312c7070fafb974b243c71173f375a1d7e2e263022da0e57358613c4d34d6ef",
+      "duration_s": 2.9157083333333333
+    },
+    {
+      "id": "N030",
+      "index": 30,
+      "role": "number",
+      "number": 832040,
+      "expected_text": "eight hundred thirty-two thousand forty",
+      "recognized_text": "832,040.",
+      "word_timings": [
+        {
+          "text": " 832",
+          "timestamp": [
+            0.1,
+            1.22
+          ]
+        },
+        {
+          "text": ",040.",
+          "timestamp": [
+            1.22,
+            2.04
+          ]
+        }
+      ],
+      "interpreted_number": 832040,
+      "expected_normalized": "832040",
+      "recognized_normalized": "832040",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N030.wav",
+      "source_sha256": "b32735bd41e4b5f6c3e4fb65f5ed9e4d538fb96b9dcad475d50acaf8ce01486e",
+      "duration_s": 2.1302083333333335
+    },
+    {
+      "id": "N031",
+      "index": 31,
+      "role": "number",
+      "number": 1346269,
+      "expected_text": "one million three hundred forty-six thousand two hundred sixty-nine",
+      "recognized_text": "1,346,269.",
+      "word_timings": [
+        {
+          "text": " 1",
+          "timestamp": [
+            1.82,
+            1.82
+          ]
+        },
+        {
+          "text": ",346",
+          "timestamp": [
+            1.82,
+            1.82
+          ]
+        },
+        {
+          "text": ",269.",
+          "timestamp": [
+            1.82,
+            3.76
+          ]
+        }
+      ],
+      "interpreted_number": 1346269,
+      "expected_normalized": "1346269",
+      "recognized_normalized": "1346269",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N031.wav",
+      "source_sha256": "e1b05f58e037425fd69900f811d8ac645dcd63185c452c9e11dbc6a4115e93a1",
+      "duration_s": 3.837375
+    },
+    {
+      "id": "N032",
+      "index": 32,
+      "role": "number",
+      "number": 2178309,
+      "expected_text": "two million one hundred seventy-eight thousand three hundred nine",
+      "recognized_text": "2,178,309.",
+      "word_timings": [
+        {
+          "text": " 2",
+          "timestamp": [
+            1.92,
+            1.92
+          ]
+        },
+        {
+          "text": ",178",
+          "timestamp": [
+            1.92,
+            1.94
+          ]
+        },
+        {
+          "text": ",309.",
+          "timestamp": [
+            1.94,
+            3.28
+          ]
+        }
+      ],
+      "interpreted_number": 2178309,
+      "expected_normalized": "2178309",
+      "recognized_normalized": "2178309",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N032.wav",
+      "source_sha256": "eb3d4e8700d782ec853444c317970d655e93fa3f9372597775ee466c6a87c985",
+      "duration_s": 3.39025
+    },
+    {
+      "id": "N033",
+      "index": 33,
+      "role": "number",
+      "number": 3524578,
+      "expected_text": "three million five hundred twenty-four thousand five hundred seventy-eight",
+      "recognized_text": "3,500, 24,578.",
+      "word_timings": [
+        {
+          "text": " 3",
+          "timestamp": [
+            0,
+            0.42
+          ]
+        },
+        {
+          "text": ",500,",
+          "timestamp": [
+            0.42,
+            1.4
+          ]
+        },
+        {
+          "text": " 24",
+          "timestamp": [
+            1.78,
+            2.16
+          ]
+        },
+        {
+          "text": ",578.",
+          "timestamp": [
+            2.16,
+            3.8
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "3524578",
+      "recognized_normalized": "null",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N033.wav",
+      "source_sha256": "e866a53345960ca0aa10472d256a94e9ac7516b7d472bd5bfaf75a88ec745995",
+      "duration_s": 4.239958333333333
+    },
+    {
+      "id": "N034",
+      "index": 34,
+      "role": "number",
+      "number": 5702887,
+      "expected_text": "five million seven hundred two thousand eight hundred eighty-seven",
+      "recognized_text": "5,700, 2,887.",
+      "word_timings": [
+        {
+          "text": " 5",
+          "timestamp": [
+            1.54,
+            1.54
+          ]
+        },
+        {
+          "text": ",700,",
+          "timestamp": [
+            1.54,
+            1.64
+          ]
+        },
+        {
+          "text": " 2",
+          "timestamp": [
+            2.1,
+            2.22
+          ]
+        },
+        {
+          "text": ",887.",
+          "timestamp": [
+            2.22,
+            3.42
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "5702887",
+      "recognized_normalized": "null",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N034.wav",
+      "source_sha256": "1a4253a5a6e71631ef849a6d207afef9f0c8a693d988a3f74977d5e20d4395ad",
+      "duration_s": 3.8754166666666667
+    },
+    {
+      "id": "N035",
+      "index": 35,
+      "role": "number",
+      "number": 9227465,
+      "expected_text": "nine million two hundred twenty-seven thousand four hundred sixty-five",
+      "recognized_text": "9,227,465.",
+      "word_timings": [
+        {
+          "text": " 9",
+          "timestamp": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "text": ",227",
+          "timestamp": [
+            0.5,
+            1.92
+          ]
+        },
+        {
+          "text": ",465.",
+          "timestamp": [
+            1.92,
+            4.02
+          ]
+        }
+      ],
+      "interpreted_number": 9227465,
+      "expected_normalized": "9227465",
+      "recognized_normalized": "9227465",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N035.wav",
+      "source_sha256": "40532fabd6174b898560302452da3e7a05868dbc7c18ec273c3ba572788b8285",
+      "duration_s": 4.14375
+    },
+    {
+      "id": "N036",
+      "index": 36,
+      "role": "number",
+      "number": 14930352,
+      "expected_text": "fourteen million nine hundred thirty thousand three hundred fifty-two",
+      "recognized_text": "14,930,352.",
+      "word_timings": [
+        {
+          "text": " 14",
+          "timestamp": [
+            0,
+            0.6
+          ]
+        },
+        {
+          "text": ",930",
+          "timestamp": [
+            0.6,
+            1.74
+          ]
+        },
+        {
+          "text": ",352.",
+          "timestamp": [
+            1.74,
+            3.82
+          ]
+        }
+      ],
+      "interpreted_number": 14930352,
+      "expected_normalized": "14930352",
+      "recognized_normalized": "14930352",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N036.wav",
+      "source_sha256": "d7455304dae3e7df5f0dc0f192a205bc4bebd7dff3f01a3f81d79d7b5572199e",
+      "duration_s": 3.904166666666667
+    },
+    {
+      "id": "N037",
+      "index": 37,
+      "role": "number",
+      "number": 24157817,
+      "expected_text": "twenty-four million one hundred fifty-seven thousand eight hundred seventeen",
+      "recognized_text": "24,157,817.",
+      "word_timings": [
+        {
+          "text": " 24",
+          "timestamp": [
+            2.62,
+            2.62
+          ]
+        },
+        {
+          "text": ",157",
+          "timestamp": [
+            2.62,
+            2.66
+          ]
+        },
+        {
+          "text": ",817.",
+          "timestamp": [
+            2.66,
+            4.1
+          ]
+        }
+      ],
+      "interpreted_number": 24157817,
+      "expected_normalized": "24157817",
+      "recognized_normalized": "24157817",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N037.wav",
+      "source_sha256": "315efae4845378fc1cc0c82b7dc51d9a025faa2b4f64611389532095951616ba",
+      "duration_s": 4.380708333333334
+    },
+    {
+      "id": "N038",
+      "index": 38,
+      "role": "number",
+      "number": 39088169,
+      "expected_text": "thirty-nine million eighty-eight thousand one hundred sixty-nine",
+      "recognized_text": "39,88,169.",
+      "word_timings": [
+        {
+          "text": " 39",
+          "timestamp": [
+            0,
+            0.58
+          ]
+        },
+        {
+          "text": ",88",
+          "timestamp": [
+            0.58,
+            1.72
+          ]
+        },
+        {
+          "text": ",169.",
+          "timestamp": [
+            1.72,
+            3.18
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "39088169",
+      "recognized_normalized": "null",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N038.wav",
+      "source_sha256": "15846c5270e59fa5b7d90e57547ea51ff22fd9d6c6d916e93de3566f0a7293c0",
+      "duration_s": 3.2632083333333335
+    },
+    {
+      "id": "N039",
+      "index": 39,
+      "role": "number",
+      "number": 63245986,
+      "expected_text": "sixty-three million two hundred forty-five thousand nine hundred eighty-six",
+      "recognized_text": "63,245,986.",
+      "word_timings": [
+        {
+          "text": " 63",
+          "timestamp": [
+            0,
+            0.66
+          ]
+        },
+        {
+          "text": ",245",
+          "timestamp": [
+            0.66,
+            2.22
+          ]
+        },
+        {
+          "text": ",986.",
+          "timestamp": [
+            2.22,
+            4.06
+          ]
+        }
+      ],
+      "interpreted_number": 63245986,
+      "expected_normalized": "63245986",
+      "recognized_normalized": "63245986",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N039.wav",
+      "source_sha256": "5b0b8dcfff1bf14eb2f35531704c65c0e04b471ed46552e027a07896bcda9fef",
+      "duration_s": 4.239333333333334
+    },
+    {
+      "id": "N040",
+      "index": 40,
+      "role": "number",
+      "number": 102334155,
+      "expected_text": "one hundred two million three hundred thirty-four thousand one hundred fifty-five",
+      "recognized_text": "102,334,155.",
+      "word_timings": [
+        {
+          "text": " 102",
+          "timestamp": [
+            0.06,
+            0.78
+          ]
+        },
+        {
+          "text": ",334",
+          "timestamp": [
+            0.78,
+            2.44
+          ]
+        },
+        {
+          "text": ",155.",
+          "timestamp": [
+            2.44,
+            4.66
+          ]
+        }
+      ],
+      "interpreted_number": 102334155,
+      "expected_normalized": "102334155",
+      "recognized_normalized": "102334155",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/N040.wav",
+      "source_sha256": "d9f4498dfe10cdcbd866e94472386f0d8e1585032c9bd1fa773275e3f7015f94",
+      "duration_s": 4.753208333333333
+    },
+    {
+      "id": "I01",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Hi! Let's count Fibonacci numbers, and watch each new number take shape.",
+      "recognized_text": "Hi, let's count Fibonacci numbers, and watch each new number take shape.",
+      "word_timings": [
+        {
+          "text": " Hi,",
+          "timestamp": [
+            0.06,
+            0.48
+          ]
+        },
+        {
+          "text": " let's",
+          "timestamp": [
+            0.7,
+            0.96
+          ]
+        },
+        {
+          "text": " count",
+          "timestamp": [
+            0.96,
+            1.18
+          ]
+        },
+        {
+          "text": " Fibonacci",
+          "timestamp": [
+            1.18,
+            1.72
+          ]
+        },
+        {
+          "text": " numbers,",
+          "timestamp": [
+            1.72,
+            2.04
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            2.64,
+            2.74
+          ]
+        },
+        {
+          "text": " watch",
+          "timestamp": [
+            2.74,
+            2.9
+          ]
+        },
+        {
+          "text": " each",
+          "timestamp": [
+            2.9,
+            3.26
+          ]
+        },
+        {
+          "text": " new",
+          "timestamp": [
+            3.26,
+            3.4
+          ]
+        },
+        {
+          "text": " number",
+          "timestamp": [
+            3.4,
+            3.66
+          ]
+        },
+        {
+          "text": " take",
+          "timestamp": [
+            3.66,
+            3.9
+          ]
+        },
+        {
+          "text": " shape.",
+          "timestamp": [
+            3.9,
+            4.26
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "hi let us count fibonacci numbers and watch each new number take shape",
+      "recognized_normalized": "hi let us count fibonacci numbers and watch each new number take shape",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/I01.wav",
+      "source_sha256": "aaf53c108319791649319db12dcda0b4e691ffeeb4c849fc8cd010063244ea16",
+      "duration_s": 4.373541666666667
+    },
+    {
+      "id": "I02",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "We start with zero and one. These are our two starting values.",
+      "recognized_text": "We start with 0 and 1. These are our two starting values.",
+      "word_timings": [
+        {
+          "text": " We",
+          "timestamp": [
+            0,
+            0.3
+          ]
+        },
+        {
+          "text": " start",
+          "timestamp": [
+            0.3,
+            0.5
+          ]
+        },
+        {
+          "text": " with",
+          "timestamp": [
+            0.5,
+            0.7
+          ]
+        },
+        {
+          "text": " 0",
+          "timestamp": [
+            0.7,
+            0.96
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            0.96,
+            1.32
+          ]
+        },
+        {
+          "text": " 1.",
+          "timestamp": [
+            1.32,
+            1.58
+          ]
+        },
+        {
+          "text": " These",
+          "timestamp": [
+            1.98,
+            2.2
+          ]
+        },
+        {
+          "text": " are",
+          "timestamp": [
+            2.2,
+            2.38
+          ]
+        },
+        {
+          "text": " our",
+          "timestamp": [
+            2.38,
+            2.48
+          ]
+        },
+        {
+          "text": " two",
+          "timestamp": [
+            2.48,
+            2.68
+          ]
+        },
+        {
+          "text": " starting",
+          "timestamp": [
+            2.68,
+            3.02
+          ]
+        },
+        {
+          "text": " values.",
+          "timestamp": [
+            3.02,
+            3.52
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "we start with 0 and 1 these are our 2 starting values",
+      "recognized_normalized": "we start with 0 and 1 these are our 2 starting values",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/I02.wav",
+      "source_sha256": "72317697584fd0e7da6aa227f55d9f7f626206aafc3699a6f02b8537be630e17",
+      "duration_s": 3.6911666666666667
+    },
+    {
+      "id": "I03",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "To make the next number, add the previous two. Then use the newest pair, and do it again.",
+      "recognized_text": "To make the next number, add the previous two. Then use the newest pair and do it again.",
+      "word_timings": [
+        {
+          "text": " To",
+          "timestamp": [
+            0,
+            0.3
+          ]
+        },
+        {
+          "text": " make",
+          "timestamp": [
+            0.3,
+            0.42
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            0.42,
+            0.58
+          ]
+        },
+        {
+          "text": " next",
+          "timestamp": [
+            0.58,
+            0.7
+          ]
+        },
+        {
+          "text": " number,",
+          "timestamp": [
+            0.7,
+            1.06
+          ]
+        },
+        {
+          "text": " add",
+          "timestamp": [
+            1.44,
+            1.54
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            1.54,
+            1.68
+          ]
+        },
+        {
+          "text": " previous",
+          "timestamp": [
+            1.68,
+            1.98
+          ]
+        },
+        {
+          "text": " two.",
+          "timestamp": [
+            1.98,
+            2.3
+          ]
+        },
+        {
+          "text": " Then",
+          "timestamp": [
+            3.08,
+            3.08
+          ]
+        },
+        {
+          "text": " use",
+          "timestamp": [
+            3.08,
+            3.28
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            3.28,
+            3.48
+          ]
+        },
+        {
+          "text": " newest",
+          "timestamp": [
+            3.48,
+            3.86
+          ]
+        },
+        {
+          "text": " pair",
+          "timestamp": [
+            3.86,
+            4.08
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            4.08,
+            4.42
+          ]
+        },
+        {
+          "text": " do",
+          "timestamp": [
+            4.42,
+            4.58
+          ]
+        },
+        {
+          "text": " it",
+          "timestamp": [
+            4.58,
+            4.7
+          ]
+        },
+        {
+          "text": " again.",
+          "timestamp": [
+            4.7,
+            4.96
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "to make the next number add the previous 2 then use the newest pair and do it again",
+      "recognized_normalized": "to make the next number add the previous 2 then use the newest pair and do it again",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/I03.wav",
+      "source_sha256": "e7ceb5972730ee701ac2435c254b5b26ab32225daecd8afe63c6a1f2869fa6bd",
+      "duration_s": 5.0755
+    },
+    {
+      "id": "I04",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "The small labels tell us each number's place. We start at F zero, so F two is the third entry.",
+      "recognized_text": "The small labels tell us each number's place. We start at f0, so f2 is the third entry.",
+      "word_timings": [
+        {
+          "text": " The",
+          "timestamp": [
+            0,
+            0.3
+          ]
+        },
+        {
+          "text": " small",
+          "timestamp": [
+            0.3,
+            0.54
+          ]
+        },
+        {
+          "text": " labels",
+          "timestamp": [
+            0.54,
+            0.82
+          ]
+        },
+        {
+          "text": " tell",
+          "timestamp": [
+            0.82,
+            1.24
+          ]
+        },
+        {
+          "text": " us",
+          "timestamp": [
+            1.24,
+            1.4
+          ]
+        },
+        {
+          "text": " each",
+          "timestamp": [
+            1.4,
+            1.6
+          ]
+        },
+        {
+          "text": " number's",
+          "timestamp": [
+            1.6,
+            2.08
+          ]
+        },
+        {
+          "text": " place.",
+          "timestamp": [
+            2.08,
+            2.3
+          ]
+        },
+        {
+          "text": " We",
+          "timestamp": [
+            3.02,
+            3.1
+          ]
+        },
+        {
+          "text": " start",
+          "timestamp": [
+            3.1,
+            3.34
+          ]
+        },
+        {
+          "text": " at",
+          "timestamp": [
+            3.34,
+            3.58
+          ]
+        },
+        {
+          "text": " f0,",
+          "timestamp": [
+            3.58,
+            4.08
+          ]
+        },
+        {
+          "text": " so",
+          "timestamp": [
+            4.46,
+            4.64
+          ]
+        },
+        {
+          "text": " f2",
+          "timestamp": [
+            4.64,
+            5.08
+          ]
+        },
+        {
+          "text": " is",
+          "timestamp": [
+            5.08,
+            5.34
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            5.34,
+            5.5
+          ]
+        },
+        {
+          "text": " third",
+          "timestamp": [
+            5.5,
+            5.76
+          ]
+        },
+        {
+          "text": " entry.",
+          "timestamp": [
+            5.76,
+            6.1
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "the small labels tell us each number s place we start at f 0 so f 2 is the third entry",
+      "recognized_normalized": "the small labels tell us each number s place we start at f 0 so f 2 is the third entry",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/I04.wav",
+      "source_sha256": "27af1d07a584121593da629eae5d4a7334dbcfc291fbbec99b701811e7b2f801",
+      "duration_s": 6.245291666666667
+    },
+    {
+      "id": "I05",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "The older value sits on the left. The newer value sits beside it. Their labels move with them.",
+      "recognized_text": "The older value sits on the left. The newer value sits beside it. Their labels move with them.",
+      "word_timings": [
+        {
+          "text": " The",
+          "timestamp": [
+            0,
+            0.3
+          ]
+        },
+        {
+          "text": " older",
+          "timestamp": [
+            0.3,
+            0.5
+          ]
+        },
+        {
+          "text": " value",
+          "timestamp": [
+            0.5,
+            0.9
+          ]
+        },
+        {
+          "text": " sits",
+          "timestamp": [
+            0.9,
+            1.24
+          ]
+        },
+        {
+          "text": " on",
+          "timestamp": [
+            1.24,
+            1.5
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            1.5,
+            1.6
+          ]
+        },
+        {
+          "text": " left.",
+          "timestamp": [
+            1.6,
+            1.84
+          ]
+        },
+        {
+          "text": " The",
+          "timestamp": [
+            2.44,
+            2.44
+          ]
+        },
+        {
+          "text": " newer",
+          "timestamp": [
+            2.44,
+            2.64
+          ]
+        },
+        {
+          "text": " value",
+          "timestamp": [
+            2.64,
+            2.98
+          ]
+        },
+        {
+          "text": " sits",
+          "timestamp": [
+            2.98,
+            3.4
+          ]
+        },
+        {
+          "text": " beside",
+          "timestamp": [
+            3.4,
+            3.7
+          ]
+        },
+        {
+          "text": " it.",
+          "timestamp": [
+            3.7,
+            3.96
+          ]
+        },
+        {
+          "text": " Their",
+          "timestamp": [
+            4.28,
+            4.4
+          ]
+        },
+        {
+          "text": " labels",
+          "timestamp": [
+            4.4,
+            4.72
+          ]
+        },
+        {
+          "text": " move",
+          "timestamp": [
+            4.72,
+            5.04
+          ]
+        },
+        {
+          "text": " with",
+          "timestamp": [
+            5.04,
+            5.3
+          ]
+        },
+        {
+          "text": " them.",
+          "timestamp": [
+            5.3,
+            5.5
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "the older value sits on the left the newer value sits beside it their labels move with them",
+      "recognized_normalized": "the older value sits on the left the newer value sits beside it their labels move with them",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/I05.wav",
+      "source_sha256": "8b2aabe6471376681bb93fcd9b85efca31ea6ae633237c2a5c1c3fcd595c9667",
+      "duration_s": 5.573541666666666
+    },
+    {
+      "id": "I06",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Listen for plus and equals. The answer appears when we say its name, and becomes our newest value.",
+      "recognized_text": "Listen for plus and equals. The answer appears when we say its name and becomes our newest value.",
+      "word_timings": [
+        {
+          "text": " Listen",
+          "timestamp": [
+            0,
+            0.48
+          ]
+        },
+        {
+          "text": " for",
+          "timestamp": [
+            0.48,
+            0.72
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.72,
+            1.02
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            1.02,
+            1.28
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            1.28,
+            1.58
+          ]
+        },
+        {
+          "text": " The",
+          "timestamp": [
+            2.42,
+            2.44
+          ]
+        },
+        {
+          "text": " answer",
+          "timestamp": [
+            2.44,
+            2.76
+          ]
+        },
+        {
+          "text": " appears",
+          "timestamp": [
+            2.76,
+            3.1
+          ]
+        },
+        {
+          "text": " when",
+          "timestamp": [
+            3.1,
+            3.42
+          ]
+        },
+        {
+          "text": " we",
+          "timestamp": [
+            3.42,
+            3.5
+          ]
+        },
+        {
+          "text": " say",
+          "timestamp": [
+            3.5,
+            3.68
+          ]
+        },
+        {
+          "text": " its",
+          "timestamp": [
+            3.68,
+            3.88
+          ]
+        },
+        {
+          "text": " name",
+          "timestamp": [
+            3.88,
+            4.2
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            4.2,
+            4.7
+          ]
+        },
+        {
+          "text": " becomes",
+          "timestamp": [
+            4.7,
+            4.94
+          ]
+        },
+        {
+          "text": " our",
+          "timestamp": [
+            4.94,
+            5.22
+          ]
+        },
+        {
+          "text": " newest",
+          "timestamp": [
+            5.22,
+            5.46
+          ]
+        },
+        {
+          "text": " value.",
+          "timestamp": [
+            5.46,
+            6
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "listen for plus and equals the answer appears when we say its name and becomes our newest value",
+      "recognized_normalized": "listen for plus and equals the answer appears when we say its name and becomes our newest value",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/I06.wav",
+      "source_sha256": "1149e89773b2a6adad48e63fb507248d1a8fa9b7635236bc61b3f95fe3dfe808",
+      "duration_s": 6.089916666666666
+    },
+    {
+      "id": "I07",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Number windows show values, not piles of things. A window marked one thousand stands for that value, not one thousand objects.",
+      "recognized_text": "Number windows show values, not piles of things. A window marked 1,000 stands for that value, not 1,000 objects.",
+      "word_timings": [
+        {
+          "text": " Number",
+          "timestamp": [
+            0,
+            0.46
+          ]
+        },
+        {
+          "text": " windows",
+          "timestamp": [
+            0.46,
+            0.7
+          ]
+        },
+        {
+          "text": " show",
+          "timestamp": [
+            0.7,
+            1.1
+          ]
+        },
+        {
+          "text": " values,",
+          "timestamp": [
+            1.1,
+            1.52
+          ]
+        },
+        {
+          "text": " not",
+          "timestamp": [
+            2.06,
+            2.14
+          ]
+        },
+        {
+          "text": " piles",
+          "timestamp": [
+            2.14,
+            2.4
+          ]
+        },
+        {
+          "text": " of",
+          "timestamp": [
+            2.4,
+            2.72
+          ]
+        },
+        {
+          "text": " things.",
+          "timestamp": [
+            2.72,
+            2.94
+          ]
+        },
+        {
+          "text": " A",
+          "timestamp": [
+            3.76,
+            3.78
+          ]
+        },
+        {
+          "text": " window",
+          "timestamp": [
+            3.78,
+            4.06
+          ]
+        },
+        {
+          "text": " marked",
+          "timestamp": [
+            4.06,
+            4.4
+          ]
+        },
+        {
+          "text": " 1",
+          "timestamp": [
+            4.4,
+            4.76
+          ]
+        },
+        {
+          "text": ",000",
+          "timestamp": [
+            4.76,
+            5.16
+          ]
+        },
+        {
+          "text": " stands",
+          "timestamp": [
+            5.16,
+            5.44
+          ]
+        },
+        {
+          "text": " for",
+          "timestamp": [
+            5.44,
+            5.7
+          ]
+        },
+        {
+          "text": " that",
+          "timestamp": [
+            5.7,
+            5.84
+          ]
+        },
+        {
+          "text": " value,",
+          "timestamp": [
+            5.84,
+            6.2
+          ]
+        },
+        {
+          "text": " not",
+          "timestamp": [
+            6.56,
+            6.76
+          ]
+        },
+        {
+          "text": " 1",
+          "timestamp": [
+            6.76,
+            7.04
+          ]
+        },
+        {
+          "text": ",000",
+          "timestamp": [
+            7.04,
+            7.48
+          ]
+        },
+        {
+          "text": " objects.",
+          "timestamp": [
+            7.48,
+            7.9
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "number windows show values not piles of things a window marked 1000 stands for that value not 1000 objects",
+      "recognized_normalized": "number windows show values not piles of things a window marked 1000 stands for that value not 1000 objects",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/I07.wav",
+      "source_sha256": "f90f4c075efcefd3be6f646f038a7b30eb123bfad5683c2a7908fa17ceb1d250",
+      "duration_s": 8.133416666666667
+    },
+    {
+      "id": "I08",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "We'll keep adding until the sequence first passes one hundred million. The numbers grow, but the rule stays the same.",
+      "recognized_text": "We'll keep adding until the sequence first passes 100 million. The numbers grow, but the rule stays the same.",
+      "word_timings": [
+        {
+          "text": " We'll",
+          "timestamp": [
+            0,
+            0.34
+          ]
+        },
+        {
+          "text": " keep",
+          "timestamp": [
+            0.34,
+            0.48
+          ]
+        },
+        {
+          "text": " adding",
+          "timestamp": [
+            0.48,
+            0.78
+          ]
+        },
+        {
+          "text": " until",
+          "timestamp": [
+            0.78,
+            1.18
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            1.18,
+            1.34
+          ]
+        },
+        {
+          "text": " sequence",
+          "timestamp": [
+            1.34,
+            1.62
+          ]
+        },
+        {
+          "text": " first",
+          "timestamp": [
+            1.62,
+            1.96
+          ]
+        },
+        {
+          "text": " passes",
+          "timestamp": [
+            1.96,
+            2.5
+          ]
+        },
+        {
+          "text": " 100",
+          "timestamp": [
+            2.5,
+            2.82
+          ]
+        },
+        {
+          "text": " million.",
+          "timestamp": [
+            2.82,
+            3.26
+          ]
+        },
+        {
+          "text": " The",
+          "timestamp": [
+            4.16,
+            4.24
+          ]
+        },
+        {
+          "text": " numbers",
+          "timestamp": [
+            4.24,
+            4.46
+          ]
+        },
+        {
+          "text": " grow,",
+          "timestamp": [
+            4.46,
+            4.9
+          ]
+        },
+        {
+          "text": " but",
+          "timestamp": [
+            5.34,
+            5.48
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            5.48,
+            5.58
+          ]
+        },
+        {
+          "text": " rule",
+          "timestamp": [
+            5.58,
+            5.82
+          ]
+        },
+        {
+          "text": " stays",
+          "timestamp": [
+            5.82,
+            6.14
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            6.14,
+            6.44
+          ]
+        },
+        {
+          "text": " same.",
+          "timestamp": [
+            6.44,
+            6.74
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "we will keep adding until the sequence first passes 100000000 the numbers grow but the rule stays the same",
+      "recognized_normalized": "we will keep adding until the sequence first passes 100000000 the numbers grow but the rule stays the same",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/I08.wav",
+      "source_sha256": "468d2fdd0d97abd63f0e8e968c92484390475c8e3261136e61f8ad32e44d9e32",
+      "duration_s": 6.860666666666667
+    },
+    {
+      "id": "E002",
+      "index": 2,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "zero plus one equals",
+      "recognized_text": "0 plus 1 equals.",
+      "word_timings": [
+        {
+          "text": " 0",
+          "timestamp": [
+            0,
+            0.54
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.54,
+            0.8
+          ]
+        },
+        {
+          "text": " 1",
+          "timestamp": [
+            0.8,
+            1.08
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            1.08,
+            1.46
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "0 plus 1 equals",
+      "recognized_normalized": "0 plus 1 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E002.wav",
+      "source_sha256": "abb8aaba63175f6e8dbb215a718ce7ce7490d8d7816d3ac2303c7ba6020885ef",
+      "duration_s": 1.636125
+    },
+    {
+      "id": "T002a",
+      "index": 2,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "There are two ones in a row. One is a starting value; the next was made by adding zero and one.",
+      "recognized_text": "There are two ones in a row. One is a starting value, the next was made by adding 0 and 1.",
+      "word_timings": [
+        {
+          "text": " There",
+          "timestamp": [
+            0,
+            0.32
+          ]
+        },
+        {
+          "text": " are",
+          "timestamp": [
+            0.32,
+            0.4
+          ]
+        },
+        {
+          "text": " two",
+          "timestamp": [
+            0.4,
+            0.6
+          ]
+        },
+        {
+          "text": " ones",
+          "timestamp": [
+            0.6,
+            0.78
+          ]
+        },
+        {
+          "text": " in",
+          "timestamp": [
+            0.78,
+            0.94
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            0.94,
+            1.02
+          ]
+        },
+        {
+          "text": " row.",
+          "timestamp": [
+            1.02,
+            1.18
+          ]
+        },
+        {
+          "text": " One",
+          "timestamp": [
+            1.96,
+            2
+          ]
+        },
+        {
+          "text": " is",
+          "timestamp": [
+            2,
+            2.18
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            2.18,
+            2.26
+          ]
+        },
+        {
+          "text": " starting",
+          "timestamp": [
+            2.26,
+            2.52
+          ]
+        },
+        {
+          "text": " value,",
+          "timestamp": [
+            2.52,
+            3.02
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            3.38,
+            3.48
+          ]
+        },
+        {
+          "text": " next",
+          "timestamp": [
+            3.48,
+            3.64
+          ]
+        },
+        {
+          "text": " was",
+          "timestamp": [
+            3.64,
+            3.9
+          ]
+        },
+        {
+          "text": " made",
+          "timestamp": [
+            3.9,
+            4.14
+          ]
+        },
+        {
+          "text": " by",
+          "timestamp": [
+            4.14,
+            4.38
+          ]
+        },
+        {
+          "text": " adding",
+          "timestamp": [
+            4.38,
+            4.68
+          ]
+        },
+        {
+          "text": " 0",
+          "timestamp": [
+            4.68,
+            5.04
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            5.04,
+            5.32
+          ]
+        },
+        {
+          "text": " 1.",
+          "timestamp": [
+            5.32,
+            5.56
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "there are 2 ones in a row 1 is a starting value the next was made by adding 0 and 1",
+      "recognized_normalized": "there are 2 ones in a row 1 is a starting value the next was made by adding 0 and 1",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T002a.wav",
+      "source_sha256": "b6c4a20a9a758dc136040a5d95fc243055300dbba2302c713a92d843d6c8d232",
+      "duration_s": 5.656208333333334
+    },
+    {
+      "id": "T002b",
+      "index": 2,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "They have the same value, but different places. Keep both entries, because each belongs to the sequence.",
+      "recognized_text": "They have the same value but different places. Keep both entries because each belongs to the sequence.",
+      "word_timings": [
+        {
+          "text": " They",
+          "timestamp": [
+            0,
+            0.3
+          ]
+        },
+        {
+          "text": " have",
+          "timestamp": [
+            0.3,
+            0.46
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            0.46,
+            0.62
+          ]
+        },
+        {
+          "text": " same",
+          "timestamp": [
+            0.62,
+            0.86
+          ]
+        },
+        {
+          "text": " value",
+          "timestamp": [
+            0.86,
+            1.3
+          ]
+        },
+        {
+          "text": " but",
+          "timestamp": [
+            1.3,
+            1.62
+          ]
+        },
+        {
+          "text": " different",
+          "timestamp": [
+            1.62,
+            1.82
+          ]
+        },
+        {
+          "text": " places.",
+          "timestamp": [
+            1.82,
+            2.4
+          ]
+        },
+        {
+          "text": " Keep",
+          "timestamp": [
+            3.24,
+            3.26
+          ]
+        },
+        {
+          "text": " both",
+          "timestamp": [
+            3.26,
+            3.5
+          ]
+        },
+        {
+          "text": " entries",
+          "timestamp": [
+            3.5,
+            3.94
+          ]
+        },
+        {
+          "text": " because",
+          "timestamp": [
+            3.94,
+            4.58
+          ]
+        },
+        {
+          "text": " each",
+          "timestamp": [
+            4.58,
+            4.9
+          ]
+        },
+        {
+          "text": " belongs",
+          "timestamp": [
+            4.9,
+            5.28
+          ]
+        },
+        {
+          "text": " to",
+          "timestamp": [
+            5.28,
+            5.66
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            5.66,
+            5.74
+          ]
+        },
+        {
+          "text": " sequence.",
+          "timestamp": [
+            5.74,
+            6.06
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "they have the same value but different places keep both entries because each belongs to the sequence",
+      "recognized_normalized": "they have the same value but different places keep both entries because each belongs to the sequence",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T002b.wav",
+      "source_sha256": "9b4eb92e9c2a7774a7278287e5e9e6832fc48f8d6a6630dd71364b0cabb63b65",
+      "duration_s": 6.275416666666667
+    },
+    {
+      "id": "E003",
+      "index": 3,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "one plus one equals",
+      "recognized_text": "1 plus 1 equals.",
+      "word_timings": [
+        {
+          "text": " 1",
+          "timestamp": [
+            0,
+            0.44
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.44,
+            0.68
+          ]
+        },
+        {
+          "text": " 1",
+          "timestamp": [
+            0.68,
+            0.92
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            0.92,
+            1.3
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "1 plus 1 equals",
+      "recognized_normalized": "1 plus 1 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E003.wav",
+      "source_sha256": "6e75d737c176caa69f2704ac959aac56652bd4a3e6bba51871d1f7c94eafee61",
+      "duration_s": 1.495125
+    },
+    {
+      "id": "E004",
+      "index": 4,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "one plus two equals",
+      "recognized_text": "1 plus 2 equals.",
+      "word_timings": [
+        {
+          "text": " 1",
+          "timestamp": [
+            0,
+            0.44
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.44,
+            0.68
+          ]
+        },
+        {
+          "text": " 2",
+          "timestamp": [
+            0.68,
+            0.88
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            0.88,
+            1.26
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "1 plus 2 equals",
+      "recognized_normalized": "1 plus 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E004.wav",
+      "source_sha256": "2a683e76eed0734353bc2c54bb58322b2febd3d5465b618f79865d84e296c161",
+      "duration_s": 1.4327083333333333
+    },
+    {
+      "id": "E005",
+      "index": 5,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "two plus three equals",
+      "recognized_text": "2 plus 3 equals.",
+      "word_timings": [
+        {
+          "text": " 2",
+          "timestamp": [
+            0,
+            0.38
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.38,
+            0.68
+          ]
+        },
+        {
+          "text": " 3",
+          "timestamp": [
+            0.68,
+            0.96
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            0.96,
+            1.36
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "2 plus 3 equals",
+      "recognized_normalized": "2 plus 3 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E005.wav",
+      "source_sha256": "851ae27fa31f22478a89a4a63e4b6b9a899430439f58d0b3a0426dc2a8083232",
+      "duration_s": 1.5285
+    },
+    {
+      "id": "E006",
+      "index": 6,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "three plus five equals",
+      "recognized_text": "3 plus 5 equals.",
+      "word_timings": [
+        {
+          "text": " 3",
+          "timestamp": [
+            0,
+            0.46
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.46,
+            0.68
+          ]
+        },
+        {
+          "text": " 5",
+          "timestamp": [
+            0.68,
+            1
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            1,
+            1.38
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "3 plus 5 equals",
+      "recognized_normalized": "3 plus 5 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E006.wav",
+      "source_sha256": "a23d23f115a47780ccd558038f6d3dcc77150768f5f364d11f940396912c3bc7",
+      "duration_s": 1.5714583333333334
+    },
+    {
+      "id": "E007",
+      "index": 7,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "five plus eight equals",
+      "recognized_text": "5 plus 8 equals.",
+      "word_timings": [
+        {
+          "text": " 5",
+          "timestamp": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.5,
+            0.76
+          ]
+        },
+        {
+          "text": " 8",
+          "timestamp": [
+            0.76,
+            1.02
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            1.02,
+            1.4
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "5 plus 8 equals",
+      "recognized_normalized": "5 plus 8 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E007.wav",
+      "source_sha256": "d828a1bb65384a2ebf81c6768fa513cb33a36510e6e527a8e0bdc29bff9f1ac9",
+      "duration_s": 1.610875
+    },
+    {
+      "id": "E008",
+      "index": 8,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "eight plus thirteen equals",
+      "recognized_text": "8 plus 13 equals.",
+      "word_timings": [
+        {
+          "text": " 8",
+          "timestamp": [
+            0.06,
+            0.4
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.4,
+            0.62
+          ]
+        },
+        {
+          "text": " 13",
+          "timestamp": [
+            0.62,
+            1
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            1,
+            1.46
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "8 plus 13 equals",
+      "recognized_normalized": "8 plus 13 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E008.wav",
+      "source_sha256": "9f03d21f40db1a7a7b15c1df16e5ee0d885cda7c5c0852da02708a9c4751427f",
+      "duration_s": 1.6415416666666667
+    },
+    {
+      "id": "T008a",
+      "index": 8,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Let's look inside that addition. In the ones column, eight plus three makes eleven: one stays here, and one ten moves left.",
+      "recognized_text": "Let's look inside that addition. In the ones column, 8 plus 3 makes 11, one stays here, and one 10 moves left.",
+      "word_timings": [
+        {
+          "text": " Let's",
+          "timestamp": [
+            0,
+            0.46
+          ]
+        },
+        {
+          "text": " look",
+          "timestamp": [
+            0.46,
+            0.66
+          ]
+        },
+        {
+          "text": " inside",
+          "timestamp": [
+            0.66,
+            0.86
+          ]
+        },
+        {
+          "text": " that",
+          "timestamp": [
+            0.86,
+            1.22
+          ]
+        },
+        {
+          "text": " addition.",
+          "timestamp": [
+            1.22,
+            1.48
+          ]
+        },
+        {
+          "text": " In",
+          "timestamp": [
+            2.4,
+            2.4
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            2.4,
+            2.48
+          ]
+        },
+        {
+          "text": " ones",
+          "timestamp": [
+            2.48,
+            2.6
+          ]
+        },
+        {
+          "text": " column,",
+          "timestamp": [
+            2.6,
+            2.94
+          ]
+        },
+        {
+          "text": " 8",
+          "timestamp": [
+            3.48,
+            3.6
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            3.6,
+            3.84
+          ]
+        },
+        {
+          "text": " 3",
+          "timestamp": [
+            3.84,
+            4.18
+          ]
+        },
+        {
+          "text": " makes",
+          "timestamp": [
+            4.18,
+            4.38
+          ]
+        },
+        {
+          "text": " 11,",
+          "timestamp": [
+            4.38,
+            4.78
+          ]
+        },
+        {
+          "text": " one",
+          "timestamp": [
+            5.36,
+            5.48
+          ]
+        },
+        {
+          "text": " stays",
+          "timestamp": [
+            5.48,
+            5.74
+          ]
+        },
+        {
+          "text": " here,",
+          "timestamp": [
+            5.74,
+            6.14
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            6.38,
+            6.42
+          ]
+        },
+        {
+          "text": " one",
+          "timestamp": [
+            6.42,
+            6.62
+          ]
+        },
+        {
+          "text": " 10",
+          "timestamp": [
+            6.62,
+            6.9
+          ]
+        },
+        {
+          "text": " moves",
+          "timestamp": [
+            6.9,
+            7.2
+          ]
+        },
+        {
+          "text": " left.",
+          "timestamp": [
+            7.2,
+            7.54
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "let us look inside that addition in the ones column 8 plus 3 makes 11 1 stays here and 1 10 moves left",
+      "recognized_normalized": "let us look inside that addition in the ones column 8 plus 3 makes 11 1 stays here and 1 10 moves left",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T008a.wav",
+      "source_sha256": "2a4e9b6c5d2fcce56c439672e554f40f191b350b2a024b28a12776d33aa2f7b7",
+      "duration_s": 7.720125
+    },
+    {
+      "id": "T008b",
+      "index": 8,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "That carried ten joins the ten already there. The columns now show two tens and one one. Then the newest pair moves on.",
+      "recognized_text": "That carried ten joins, the ten already there. The columns now show two tens and one one, then the newest pair moves on.",
+      "word_timings": [
+        {
+          "text": " That",
+          "timestamp": [
+            0,
+            0.34
+          ]
+        },
+        {
+          "text": " carried",
+          "timestamp": [
+            0.34,
+            0.64
+          ]
+        },
+        {
+          "text": " ten",
+          "timestamp": [
+            0.64,
+            0.96
+          ]
+        },
+        {
+          "text": " joins,",
+          "timestamp": [
+            0.96,
+            1.24
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            1.36,
+            1.62
+          ]
+        },
+        {
+          "text": " ten",
+          "timestamp": [
+            1.62,
+            1.84
+          ]
+        },
+        {
+          "text": " already",
+          "timestamp": [
+            1.84,
+            2.16
+          ]
+        },
+        {
+          "text": " there.",
+          "timestamp": [
+            2.16,
+            2.46
+          ]
+        },
+        {
+          "text": " The",
+          "timestamp": [
+            3.16,
+            3.2
+          ]
+        },
+        {
+          "text": " columns",
+          "timestamp": [
+            3.2,
+            3.48
+          ]
+        },
+        {
+          "text": " now",
+          "timestamp": [
+            3.48,
+            3.88
+          ]
+        },
+        {
+          "text": " show",
+          "timestamp": [
+            3.88,
+            4.12
+          ]
+        },
+        {
+          "text": " two",
+          "timestamp": [
+            4.12,
+            4.4
+          ]
+        },
+        {
+          "text": " tens",
+          "timestamp": [
+            4.4,
+            4.66
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            4.66,
+            5.14
+          ]
+        },
+        {
+          "text": " one",
+          "timestamp": [
+            5.14,
+            5.3
+          ]
+        },
+        {
+          "text": " one,",
+          "timestamp": [
+            5.3,
+            5.52
+          ]
+        },
+        {
+          "text": " then",
+          "timestamp": [
+            5.86,
+            6.1
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            6.1,
+            6.26
+          ]
+        },
+        {
+          "text": " newest",
+          "timestamp": [
+            6.26,
+            6.58
+          ]
+        },
+        {
+          "text": " pair",
+          "timestamp": [
+            6.58,
+            6.84
+          ]
+        },
+        {
+          "text": " moves",
+          "timestamp": [
+            6.84,
+            7.26
+          ]
+        },
+        {
+          "text": " on.",
+          "timestamp": [
+            7.26,
+            7.46
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "that carried 10 joins the 10 already there the columns now show 2 tens and 1 1 then the newest pair moves on",
+      "recognized_normalized": "that carried 10 joins the 10 already there the columns now show 2 tens and 1 1 then the newest pair moves on",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T008b.wav",
+      "source_sha256": "25ed06c80ac1a6d384a9a41f89fc90a04cae11b5542435233ba2902e14457864",
+      "duration_s": 7.598916666666667
+    },
+    {
+      "id": "E009",
+      "index": 9,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirteen plus twenty-one equals",
+      "recognized_text": "13 plus 21 equals.",
+      "word_timings": [
+        {
+          "text": " 13",
+          "timestamp": [
+            0,
+            0.52
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.52,
+            0.84
+          ]
+        },
+        {
+          "text": " 21",
+          "timestamp": [
+            0.84,
+            1.28
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            1.28,
+            1.8
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "13 plus 21 equals",
+      "recognized_normalized": "13 plus 21 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E009.wav",
+      "source_sha256": "b1f7ce22c44146b5c4ef51d6924634265b06a35e361b1bc43abe35520d8ffc0d",
+      "duration_s": 1.9855416666666668
+    },
+    {
+      "id": "E010",
+      "index": 10,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-one plus thirty-four equals",
+      "recognized_text": "21 plus 34 equals.",
+      "word_timings": [
+        {
+          "text": " 21",
+          "timestamp": [
+            0,
+            0.6
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.6,
+            1.08
+          ]
+        },
+        {
+          "text": " 34",
+          "timestamp": [
+            1.08,
+            1.5
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            1.5,
+            2.06
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "21 plus 34 equals",
+      "recognized_normalized": "21 plus 34 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E010.wav",
+      "source_sha256": "3e49661d33e2269a7eaeb496ba00957f044e6729fe5032ed2ee424a9707d5e94",
+      "duration_s": 2.255541666666667
+    },
+    {
+      "id": "E011",
+      "index": 11,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-four plus fifty-five equals",
+      "recognized_text": "34 plus 55 equals.",
+      "word_timings": [
+        {
+          "text": " 34",
+          "timestamp": [
+            0,
+            0.48
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.48,
+            1
+          ]
+        },
+        {
+          "text": " 55",
+          "timestamp": [
+            1,
+            1.56
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            1.56,
+            1.98
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "34 plus 55 equals",
+      "recognized_normalized": "34 plus 55 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E011.wav",
+      "source_sha256": "66cd27c7aed6221ce5789f640646f3c2c77fa24f9ada5eab987b655b9f8cc933",
+      "duration_s": 2.1540416666666666
+    },
+    {
+      "id": "E012",
+      "index": 12,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty-five plus eighty-nine equals",
+      "recognized_text": "55 plus 89 equals.",
+      "word_timings": [
+        {
+          "text": " 55",
+          "timestamp": [
+            0,
+            0.48
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.48,
+            1.04
+          ]
+        },
+        {
+          "text": " 89",
+          "timestamp": [
+            1.04,
+            1.4
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            1.4,
+            1.98
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "55 plus 89 equals",
+      "recognized_normalized": "55 plus 89 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E012.wav",
+      "source_sha256": "71bf7141a09797afc63371f3739e0f4c2a0b918f8f5d7d756116522804e4a9aa",
+      "duration_s": 2.1603333333333334
+    },
+    {
+      "id": "E013",
+      "index": 13,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "eighty-nine plus one hundred forty-four equals",
+      "recognized_text": "89 + 144 =",
+      "word_timings": [
+        {
+          "text": " 89",
+          "timestamp": [
+            0.08,
+            0.54
+          ]
+        },
+        {
+          "text": " +",
+          "timestamp": [
+            0.54,
+            1.12
+          ]
+        },
+        {
+          "text": " 144",
+          "timestamp": [
+            1.12,
+            2.04
+          ]
+        },
+        {
+          "text": " =",
+          "timestamp": [
+            2.04,
+            2.64
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "89 plus 144 equals",
+      "recognized_normalized": "89 plus 144 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E013.wav",
+      "source_sha256": "68d794d4248d345525029fa63a081b4ccf661f794ef399c952d65b7eca8b835b",
+      "duration_s": 2.876625
+    },
+    {
+      "id": "T013a",
+      "index": 13,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Here the ones make thirteen. Write three and carry one ten. The tens, including that carry, also make thirteen.",
+      "recognized_text": "Hear the ones make 13 write 3, and carry 1 10 the 10s, including that carry also make 13.",
+      "word_timings": [
+        {
+          "text": " Hear",
+          "timestamp": [
+            0.12,
+            0.38
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            0.38,
+            0.5
+          ]
+        },
+        {
+          "text": " ones",
+          "timestamp": [
+            0.5,
+            0.66
+          ]
+        },
+        {
+          "text": " make",
+          "timestamp": [
+            0.66,
+            0.92
+          ]
+        },
+        {
+          "text": " 13",
+          "timestamp": [
+            0.92,
+            1.36
+          ]
+        },
+        {
+          "text": " write",
+          "timestamp": [
+            1.36,
+            1.64
+          ]
+        },
+        {
+          "text": " 3,",
+          "timestamp": [
+            1.64,
+            2.04
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            2.5,
+            2.66
+          ]
+        },
+        {
+          "text": " carry",
+          "timestamp": [
+            2.66,
+            2.82
+          ]
+        },
+        {
+          "text": " 1",
+          "timestamp": [
+            2.82,
+            3.16
+          ]
+        },
+        {
+          "text": " 10",
+          "timestamp": [
+            3.16,
+            3.4
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            3.4,
+            3.54
+          ]
+        },
+        {
+          "text": " 10s,",
+          "timestamp": [
+            3.54,
+            4.02
+          ]
+        },
+        {
+          "text": " including",
+          "timestamp": [
+            4.1,
+            4.4
+          ]
+        },
+        {
+          "text": " that",
+          "timestamp": [
+            4.4,
+            4.72
+          ]
+        },
+        {
+          "text": " carry",
+          "timestamp": [
+            4.72,
+            4.96
+          ]
+        },
+        {
+          "text": " also",
+          "timestamp": [
+            4.96,
+            5.28
+          ]
+        },
+        {
+          "text": " make",
+          "timestamp": [
+            5.28,
+            5.58
+          ]
+        },
+        {
+          "text": " 13.",
+          "timestamp": [
+            5.58,
+            5.96
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "here the ones make 13 write 3 and carry 1 10 the tens including that carry also make 13",
+      "recognized_normalized": "hear the ones make 13 write 3 and carry 1 10 the 10s including that carry also make 13",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T013a.wav",
+      "source_sha256": "1ae810c091b565154ac261fdb9f80ec08095cace36d0dcb8dd213968e45404e0",
+      "duration_s": 6.15375
+    },
+    {
+      "id": "T013b",
+      "index": 13,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Write three tens, and carry one hundred. That hundred joins the hundred already there. Every column keeps its own place.",
+      "recognized_text": "Write three tens and carry 100. That hundred joins the hundred already there. Every column keeps its own place.",
+      "word_timings": [
+        {
+          "text": " Write",
+          "timestamp": [
+            0.08,
+            0.4
+          ]
+        },
+        {
+          "text": " three",
+          "timestamp": [
+            0.4,
+            0.68
+          ]
+        },
+        {
+          "text": " tens",
+          "timestamp": [
+            0.68,
+            0.94
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            0.94,
+            1.44
+          ]
+        },
+        {
+          "text": " carry",
+          "timestamp": [
+            1.44,
+            1.64
+          ]
+        },
+        {
+          "text": " 100.",
+          "timestamp": [
+            1.64,
+            2.08
+          ]
+        },
+        {
+          "text": " That",
+          "timestamp": [
+            3,
+            3.08
+          ]
+        },
+        {
+          "text": " hundred",
+          "timestamp": [
+            3.08,
+            3.42
+          ]
+        },
+        {
+          "text": " joins",
+          "timestamp": [
+            3.42,
+            3.76
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            3.76,
+            4.02
+          ]
+        },
+        {
+          "text": " hundred",
+          "timestamp": [
+            4.02,
+            4.32
+          ]
+        },
+        {
+          "text": " already",
+          "timestamp": [
+            4.32,
+            4.68
+          ]
+        },
+        {
+          "text": " there.",
+          "timestamp": [
+            4.68,
+            4.98
+          ]
+        },
+        {
+          "text": " Every",
+          "timestamp": [
+            5.46,
+            5.64
+          ]
+        },
+        {
+          "text": " column",
+          "timestamp": [
+            5.64,
+            6.04
+          ]
+        },
+        {
+          "text": " keeps",
+          "timestamp": [
+            6.04,
+            6.38
+          ]
+        },
+        {
+          "text": " its",
+          "timestamp": [
+            6.38,
+            6.58
+          ]
+        },
+        {
+          "text": " own",
+          "timestamp": [
+            6.58,
+            6.72
+          ]
+        },
+        {
+          "text": " place.",
+          "timestamp": [
+            6.72,
+            7.02
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "write 3 tens and carry 100 that hundred joins the hundred already there every column keeps its own place",
+      "recognized_normalized": "write 3 tens and carry 100 that hundred joins the hundred already there every column keeps its own place",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T013b.wav",
+      "source_sha256": "7ceee5bab77a30b81ea455a1dccffc060769e494aebc52339a5049a07d2eabc2",
+      "duration_s": 7.214
+    },
+    {
+      "id": "E014",
+      "index": 14,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "one hundred forty-four plus two hundred thirty-three equals",
+      "recognized_text": "144 + 233 =",
+      "word_timings": [
+        {
+          "text": " 144",
+          "timestamp": [
+            1.14,
+            1.14
+          ]
+        },
+        {
+          "text": " +",
+          "timestamp": [
+            1.14,
+            1.84
+          ]
+        },
+        {
+          "text": " 233",
+          "timestamp": [
+            1.84,
+            2.68
+          ]
+        },
+        {
+          "text": " =",
+          "timestamp": [
+            2.68,
+            3.26
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "144 plus 233 equals",
+      "recognized_normalized": "144 plus 233 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E014.wav",
+      "source_sha256": "179ec38d31144d0da5ca8c8176a309d45fb1eef6fe338c842d5e0a9cebe20fa6",
+      "duration_s": 3.4278333333333335
+    },
+    {
+      "id": "E015",
+      "index": 15,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "two hundred thirty-three plus three hundred seventy-seven equals",
+      "recognized_text": "233 + 377 =",
+      "word_timings": [
+        {
+          "text": " 233",
+          "timestamp": [
+            1.04,
+            1.04
+          ]
+        },
+        {
+          "text": " +",
+          "timestamp": [
+            1.04,
+            1.76
+          ]
+        },
+        {
+          "text": " 377",
+          "timestamp": [
+            1.76,
+            2.8
+          ]
+        },
+        {
+          "text": " =",
+          "timestamp": [
+            2.8,
+            3.5
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "233 plus 377 equals",
+      "recognized_normalized": "233 plus 377 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E015.wav",
+      "source_sha256": "467d2bf86856a18ecb58876b914d0159eca5683fa79ed82c0353693f71e2a3d1",
+      "duration_s": 3.732375
+    },
+    {
+      "id": "E016",
+      "index": 16,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "three hundred seventy-seven plus six hundred ten equals",
+      "recognized_text": "377 + 610 =",
+      "word_timings": [
+        {
+          "text": " 377",
+          "timestamp": [
+            1.1,
+            1.1
+          ]
+        },
+        {
+          "text": " +",
+          "timestamp": [
+            1.1,
+            2.04
+          ]
+        },
+        {
+          "text": " 610",
+          "timestamp": [
+            2.04,
+            2.66
+          ]
+        },
+        {
+          "text": " =",
+          "timestamp": [
+            2.66,
+            3.26
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "377 plus 610 equals",
+      "recognized_normalized": "377 plus 610 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E016.wav",
+      "source_sha256": "d95bb7a6f4f0e7460f50a37128b172609b357c80b15818e20bc6a54be07c6eda",
+      "duration_s": 3.4892916666666665
+    },
+    {
+      "id": "E017",
+      "index": 17,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "six hundred ten plus nine hundred eighty-seven equals",
+      "recognized_text": "610 + 987 =",
+      "word_timings": [
+        {
+          "text": " 610",
+          "timestamp": [
+            0.06,
+            0.72
+          ]
+        },
+        {
+          "text": " +",
+          "timestamp": [
+            0.72,
+            1.6
+          ]
+        },
+        {
+          "text": " 987",
+          "timestamp": [
+            1.6,
+            2.8
+          ]
+        },
+        {
+          "text": " =",
+          "timestamp": [
+            2.8,
+            3.28
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "610 plus 987 equals",
+      "recognized_normalized": "610 plus 987 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E017.wav",
+      "source_sha256": "9af5e1a47b371374c71ccd5597bd7f1bcace0d5f93887b3a85f10bf021ffcb30",
+      "duration_s": 3.4930833333333333
+    },
+    {
+      "id": "E018",
+      "index": 18,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "nine hundred eighty-seven plus one thousand five hundred ninety-seven equals",
+      "recognized_text": "987 + 1597 =",
+      "word_timings": [
+        {
+          "text": " 987",
+          "timestamp": [
+            0.1,
+            1.16
+          ]
+        },
+        {
+          "text": " +",
+          "timestamp": [
+            1.16,
+            2.1
+          ]
+        },
+        {
+          "text": " 1597",
+          "timestamp": [
+            2.1,
+            4.1
+          ]
+        },
+        {
+          "text": " =",
+          "timestamp": [
+            4.1,
+            4.5
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "987 plus 1597 equals",
+      "recognized_normalized": "987 plus 1597 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E018.wav",
+      "source_sha256": "f5924b42999ce43718a612726489ef66275cc82df2ac164faf3cd50496be87e6",
+      "duration_s": 4.7135
+    },
+    {
+      "id": "T018a",
+      "index": 18,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Now the values reach into the thousands. Start at the ones and follow each carry to the next column, one place at a time.",
+      "recognized_text": "Now the values reach into the thousands. Start at the ones and follow each carry to the next column, one place at a time.",
+      "word_timings": [
+        {
+          "text": " Now",
+          "timestamp": [
+            0,
+            0.4
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            0.4,
+            0.6
+          ]
+        },
+        {
+          "text": " values",
+          "timestamp": [
+            0.6,
+            0.94
+          ]
+        },
+        {
+          "text": " reach",
+          "timestamp": [
+            0.94,
+            1.26
+          ]
+        },
+        {
+          "text": " into",
+          "timestamp": [
+            1.26,
+            1.56
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            1.56,
+            1.68
+          ]
+        },
+        {
+          "text": " thousands.",
+          "timestamp": [
+            1.68,
+            2.04
+          ]
+        },
+        {
+          "text": " Start",
+          "timestamp": [
+            3.04,
+            3.08
+          ]
+        },
+        {
+          "text": " at",
+          "timestamp": [
+            3.08,
+            3.22
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            3.22,
+            3.3
+          ]
+        },
+        {
+          "text": " ones",
+          "timestamp": [
+            3.3,
+            3.48
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            3.48,
+            3.74
+          ]
+        },
+        {
+          "text": " follow",
+          "timestamp": [
+            3.74,
+            4.1
+          ]
+        },
+        {
+          "text": " each",
+          "timestamp": [
+            4.1,
+            4.44
+          ]
+        },
+        {
+          "text": " carry",
+          "timestamp": [
+            4.44,
+            4.7
+          ]
+        },
+        {
+          "text": " to",
+          "timestamp": [
+            4.7,
+            4.96
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            4.96,
+            5.04
+          ]
+        },
+        {
+          "text": " next",
+          "timestamp": [
+            5.04,
+            5.22
+          ]
+        },
+        {
+          "text": " column,",
+          "timestamp": [
+            5.22,
+            5.6
+          ]
+        },
+        {
+          "text": " one",
+          "timestamp": [
+            6.02,
+            6.24
+          ]
+        },
+        {
+          "text": " place",
+          "timestamp": [
+            6.24,
+            6.54
+          ]
+        },
+        {
+          "text": " at",
+          "timestamp": [
+            6.54,
+            6.72
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            6.72,
+            6.78
+          ]
+        },
+        {
+          "text": " time.",
+          "timestamp": [
+            6.78,
+            7.12
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "now the values reach into the thousands start at the ones and follow each carry to the next column 1 place at a time",
+      "recognized_normalized": "now the values reach into the thousands start at the ones and follow each carry to the next column 1 place at a time",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T018a.wav",
+      "source_sha256": "03ca029117edb70b3f335e8ec44d9c7031d29fd9083c877b748609cc3b413b49",
+      "duration_s": 7.192083333333334
+    },
+    {
+      "id": "T018b",
+      "index": 18,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Seven plus seven makes fourteen. Next come eighteen tens, then fifteen hundreds. Each carry moves one column left; it never skips a place.",
+      "recognized_text": "7 plus 7 makes 14. Next come 18 10s, then 1500s. Each carry moves one column left. It never skips a place.",
+      "word_timings": [
+        {
+          "text": " 7",
+          "timestamp": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            0.5,
+            0.74
+          ]
+        },
+        {
+          "text": " 7",
+          "timestamp": [
+            0.74,
+            1.14
+          ]
+        },
+        {
+          "text": " makes",
+          "timestamp": [
+            1.14,
+            1.36
+          ]
+        },
+        {
+          "text": " 14.",
+          "timestamp": [
+            1.36,
+            1.76
+          ]
+        },
+        {
+          "text": " Next",
+          "timestamp": [
+            2.66,
+            2.68
+          ]
+        },
+        {
+          "text": " come",
+          "timestamp": [
+            2.68,
+            2.94
+          ]
+        },
+        {
+          "text": " 18",
+          "timestamp": [
+            2.94,
+            3.22
+          ]
+        },
+        {
+          "text": " 10s,",
+          "timestamp": [
+            3.22,
+            3.94
+          ]
+        },
+        {
+          "text": " then",
+          "timestamp": [
+            4.08,
+            4.16
+          ]
+        },
+        {
+          "text": " 1500s.",
+          "timestamp": [
+            4.16,
+            5.14
+          ]
+        },
+        {
+          "text": " Each",
+          "timestamp": [
+            5.88,
+            5.88
+          ]
+        },
+        {
+          "text": " carry",
+          "timestamp": [
+            5.88,
+            6.1
+          ]
+        },
+        {
+          "text": " moves",
+          "timestamp": [
+            6.1,
+            6.42
+          ]
+        },
+        {
+          "text": " one",
+          "timestamp": [
+            6.42,
+            6.78
+          ]
+        },
+        {
+          "text": " column",
+          "timestamp": [
+            6.78,
+            7.06
+          ]
+        },
+        {
+          "text": " left.",
+          "timestamp": [
+            7.06,
+            7.46
+          ]
+        },
+        {
+          "text": " It",
+          "timestamp": [
+            7.92,
+            7.96
+          ]
+        },
+        {
+          "text": " never",
+          "timestamp": [
+            7.96,
+            8.12
+          ]
+        },
+        {
+          "text": " skips",
+          "timestamp": [
+            8.12,
+            8.54
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            8.54,
+            8.62
+          ]
+        },
+        {
+          "text": " place.",
+          "timestamp": [
+            8.62,
+            8.84
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "7 plus 7 makes 14 next come 18 tens then 15 hundreds each carry moves 1 column left it never skips a place",
+      "recognized_normalized": "7 plus 7 makes 14 next come 18 10s then 1500s each carry moves 1 column left it never skips a place",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T018b.wav",
+      "source_sha256": "23dfa3712de133e074ee2020f8e0b9c8260a193b74184aeacc7c057fec358ad4",
+      "duration_s": 9.0035
+    },
+    {
+      "id": "E019",
+      "index": 19,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "one thousand five hundred ninety-seven plus two thousand five hundred eighty-four equals",
+      "recognized_text": "1,597 plus 2,584 equals.",
+      "word_timings": [
+        {
+          "text": " 1",
+          "timestamp": [
+            0.06,
+            0.42
+          ]
+        },
+        {
+          "text": ",597",
+          "timestamp": [
+            0.42,
+            1.72
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            1.72,
+            2.72
+          ]
+        },
+        {
+          "text": " 2",
+          "timestamp": [
+            2.72,
+            3.06
+          ]
+        },
+        {
+          "text": ",584",
+          "timestamp": [
+            3.06,
+            4.26
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            4.26,
+            5.04
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "1597 plus 2584 equals",
+      "recognized_normalized": "1597 plus 2584 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E019.wav",
+      "source_sha256": "5032478df3ba237ec3a38dafbf16e68f0297037a748521395429245ec6925706",
+      "duration_s": 5.195458333333334
+    },
+    {
+      "id": "E020",
+      "index": 20,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "two thousand five hundred eighty-four plus four thousand one hundred eighty-one equals",
+      "recognized_text": "2,584 plus 4,181 equals.",
+      "word_timings": [
+        {
+          "text": " 2",
+          "timestamp": [
+            0.08,
+            0.4
+          ]
+        },
+        {
+          "text": ",584",
+          "timestamp": [
+            0.4,
+            1.64
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            1.64,
+            2.6
+          ]
+        },
+        {
+          "text": " 4",
+          "timestamp": [
+            2.6,
+            2.98
+          ]
+        },
+        {
+          "text": ",181",
+          "timestamp": [
+            2.98,
+            4.16
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            4.16,
+            4.8
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "2584 plus 4181 equals",
+      "recognized_normalized": "2584 plus 4181 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E020.wav",
+      "source_sha256": "393ab0c8c9f1b4944a9dab8c7b0be94bef45dac0f2144f769e1d5a210af812b9",
+      "duration_s": 4.983583333333334
+    },
+    {
+      "id": "E021",
+      "index": 21,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "four thousand one hundred eighty-one plus six thousand seven hundred sixty-five equals",
+      "recognized_text": "4,181 plus 6,765 equals.",
+      "word_timings": [
+        {
+          "text": " 4",
+          "timestamp": [
+            0.08,
+            0.46
+          ]
+        },
+        {
+          "text": ",181",
+          "timestamp": [
+            0.46,
+            1.66
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            1.66,
+            2.54
+          ]
+        },
+        {
+          "text": " 6",
+          "timestamp": [
+            2.54,
+            2.94
+          ]
+        },
+        {
+          "text": ",765",
+          "timestamp": [
+            2.94,
+            4.42
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            4.42,
+            5.08
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "4181 plus 6765 equals",
+      "recognized_normalized": "4181 plus 6765 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E021.wav",
+      "source_sha256": "6a777dda11732502a4111dd9b1841f5ce09f43039c08c299b73cf89e998a9166",
+      "duration_s": 5.256208333333333
+    },
+    {
+      "id": "E022",
+      "index": 22,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "six thousand seven hundred sixty-five plus ten thousand nine hundred forty-six equals",
+      "recognized_text": "6,765 plus 10,946 equals.",
+      "word_timings": [
+        {
+          "text": " 6",
+          "timestamp": [
+            0.1,
+            0.48
+          ]
+        },
+        {
+          "text": ",765",
+          "timestamp": [
+            0.48,
+            2
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            2,
+            3.04
+          ]
+        },
+        {
+          "text": " 10",
+          "timestamp": [
+            3.04,
+            3.44
+          ]
+        },
+        {
+          "text": ",946",
+          "timestamp": [
+            3.44,
+            4.72
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            4.72,
+            5.44
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "6765 plus 10946 equals",
+      "recognized_normalized": "6765 plus 10946 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E022.wav",
+      "source_sha256": "dadaba26a1e1d3ff52f0ecfddd28ff23648358ba29d2d6d085eea35ae6d974de",
+      "duration_s": 5.56575
+    },
+    {
+      "id": "E023",
+      "index": 23,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "ten thousand nine hundred forty-six plus seventeen thousand seven hundred eleven equals",
+      "recognized_text": "10,946 plus 17,711 equals.",
+      "word_timings": [
+        {
+          "text": " 10",
+          "timestamp": [
+            0.08,
+            0.4
+          ]
+        },
+        {
+          "text": ",946",
+          "timestamp": [
+            0.4,
+            1.88
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            1.88,
+            2.82
+          ]
+        },
+        {
+          "text": " 17",
+          "timestamp": [
+            2.82,
+            3.4
+          ]
+        },
+        {
+          "text": ",711",
+          "timestamp": [
+            3.4,
+            4.76
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            4.76,
+            5.3
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "10946 plus 17711 equals",
+      "recognized_normalized": "10946 plus 17711 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E023.wav",
+      "source_sha256": "f2f18dea69f2644f4167ed38cebde9ff8ea1866516456857073b9f4c154490a8",
+      "duration_s": 5.463041666666666
+    },
+    {
+      "id": "E024",
+      "index": 24,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "seventeen thousand seven hundred eleven plus twenty-eight thousand six hundred fifty-seven equals",
+      "recognized_text": "17,711 plus 28,657 equals.",
+      "word_timings": [
+        {
+          "text": " 17",
+          "timestamp": [
+            0,
+            0.62
+          ]
+        },
+        {
+          "text": ",711",
+          "timestamp": [
+            0.62,
+            2.2
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            2.2,
+            2.98
+          ]
+        },
+        {
+          "text": " 28",
+          "timestamp": [
+            2.98,
+            3.64
+          ]
+        },
+        {
+          "text": ",657",
+          "timestamp": [
+            3.64,
+            5.02
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            5.02,
+            5.76
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "17711 plus 28657 equals",
+      "recognized_normalized": "17711 plus 28657 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E024.wav",
+      "source_sha256": "4b616a6aef7d4204b99ee5bef6683ae06c80377c3005f9c94f90a41c9a37de99",
+      "duration_s": 5.94075
+    },
+    {
+      "id": "E025",
+      "index": 25,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-eight thousand six hundred fifty-seven plus forty-six thousand three hundred sixty-eight equals",
+      "recognized_text": "28,657 plus 46,368 equals.",
+      "word_timings": [
+        {
+          "text": " 28",
+          "timestamp": [
+            0,
+            0.74
+          ]
+        },
+        {
+          "text": ",657",
+          "timestamp": [
+            0.74,
+            1.96
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            1.96,
+            3.06
+          ]
+        },
+        {
+          "text": " 46",
+          "timestamp": [
+            3.06,
+            3.8
+          ]
+        },
+        {
+          "text": ",368",
+          "timestamp": [
+            3.8,
+            5.4
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            5.4,
+            5.86
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "28657 plus 46368 equals",
+      "recognized_normalized": "28657 plus 46368 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E025.wav",
+      "source_sha256": "18c220b6a9736478f686bf6d593598ca431e225c2340c89036ca3ed45c1b5477",
+      "duration_s": 6.037375
+    },
+    {
+      "id": "E026",
+      "index": 26,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty-six thousand three hundred sixty-eight plus seventy-five thousand twenty-five equals",
+      "recognized_text": "46,368 plus 75,025 equals.",
+      "word_timings": [
+        {
+          "text": " 46",
+          "timestamp": [
+            0,
+            0.56
+          ]
+        },
+        {
+          "text": ",368",
+          "timestamp": [
+            0.56,
+            2.14
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            2.14,
+            2.94
+          ]
+        },
+        {
+          "text": " 75",
+          "timestamp": [
+            2.94,
+            3.8
+          ]
+        },
+        {
+          "text": ",025",
+          "timestamp": [
+            3.8,
+            4.7
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            4.7,
+            5.3
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "46368 plus 75025 equals",
+      "recognized_normalized": "46368 plus 75025 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E026.wav",
+      "source_sha256": "ccd73731e90f95f402e854a08072288d8dfdf7ab4e67e76d25ac8142f46b09fc",
+      "duration_s": 5.441125
+    },
+    {
+      "id": "T026a",
+      "index": 26,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "The commas help us read groups of three digits. They are separators, not extra digits, and they do not change the addition.",
+      "recognized_text": "The commas help us read groups of three digits. They are separators, not extra digits, and they do not change the addition.",
+      "word_timings": [
+        {
+          "text": " The",
+          "timestamp": [
+            0,
+            0.3
+          ]
+        },
+        {
+          "text": " commas",
+          "timestamp": [
+            0.3,
+            0.7
+          ]
+        },
+        {
+          "text": " help",
+          "timestamp": [
+            0.7,
+            0.92
+          ]
+        },
+        {
+          "text": " us",
+          "timestamp": [
+            0.92,
+            1.14
+          ]
+        },
+        {
+          "text": " read",
+          "timestamp": [
+            1.14,
+            1.38
+          ]
+        },
+        {
+          "text": " groups",
+          "timestamp": [
+            1.38,
+            1.66
+          ]
+        },
+        {
+          "text": " of",
+          "timestamp": [
+            1.66,
+            1.94
+          ]
+        },
+        {
+          "text": " three",
+          "timestamp": [
+            1.94,
+            2.16
+          ]
+        },
+        {
+          "text": " digits.",
+          "timestamp": [
+            2.16,
+            2.44
+          ]
+        },
+        {
+          "text": " They",
+          "timestamp": [
+            3.3,
+            3.36
+          ]
+        },
+        {
+          "text": " are",
+          "timestamp": [
+            3.36,
+            3.48
+          ]
+        },
+        {
+          "text": " separators,",
+          "timestamp": [
+            3.48,
+            4.04
+          ]
+        },
+        {
+          "text": " not",
+          "timestamp": [
+            4.54,
+            4.66
+          ]
+        },
+        {
+          "text": " extra",
+          "timestamp": [
+            4.66,
+            4.88
+          ]
+        },
+        {
+          "text": " digits,",
+          "timestamp": [
+            4.88,
+            5.34
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            5.82,
+            5.98
+          ]
+        },
+        {
+          "text": " they",
+          "timestamp": [
+            5.98,
+            6.08
+          ]
+        },
+        {
+          "text": " do",
+          "timestamp": [
+            6.08,
+            6.22
+          ]
+        },
+        {
+          "text": " not",
+          "timestamp": [
+            6.22,
+            6.42
+          ]
+        },
+        {
+          "text": " change",
+          "timestamp": [
+            6.42,
+            6.72
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            6.72,
+            6.96
+          ]
+        },
+        {
+          "text": " addition.",
+          "timestamp": [
+            6.96,
+            7.26
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "the commas help us read groups of 3 digits they are separators not extra digits and they do not change the addition",
+      "recognized_normalized": "the commas help us read groups of 3 digits they are separators not extra digits and they do not change the addition",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T026a.wav",
+      "source_sha256": "fa58634a67f003c4b07fa5ed4d92150a0db9e792082a79d3a3fa9a7e51e63101",
+      "duration_s": 7.500291666666667
+    },
+    {
+      "id": "T026b",
+      "index": 26,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Keep the ones columns lined up on the right. Even with larger numbers, each column still adds the same kind of units.",
+      "recognized_text": "Keep the ones columns lined up on the right. Even with larger numbers, each column still adds the same kind of units.",
+      "word_timings": [
+        {
+          "text": " Keep",
+          "timestamp": [
+            0,
+            0.36
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            0.36,
+            0.52
+          ]
+        },
+        {
+          "text": " ones",
+          "timestamp": [
+            0.52,
+            0.66
+          ]
+        },
+        {
+          "text": " columns",
+          "timestamp": [
+            0.66,
+            1.06
+          ]
+        },
+        {
+          "text": " lined",
+          "timestamp": [
+            1.06,
+            1.56
+          ]
+        },
+        {
+          "text": " up",
+          "timestamp": [
+            1.56,
+            1.84
+          ]
+        },
+        {
+          "text": " on",
+          "timestamp": [
+            1.84,
+            2
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            2,
+            2.1
+          ]
+        },
+        {
+          "text": " right.",
+          "timestamp": [
+            2.1,
+            2.34
+          ]
+        },
+        {
+          "text": " Even",
+          "timestamp": [
+            3.12,
+            3.28
+          ]
+        },
+        {
+          "text": " with",
+          "timestamp": [
+            3.28,
+            3.46
+          ]
+        },
+        {
+          "text": " larger",
+          "timestamp": [
+            3.46,
+            3.7
+          ]
+        },
+        {
+          "text": " numbers,",
+          "timestamp": [
+            3.7,
+            4.26
+          ]
+        },
+        {
+          "text": " each",
+          "timestamp": [
+            4.64,
+            4.84
+          ]
+        },
+        {
+          "text": " column",
+          "timestamp": [
+            4.84,
+            5.24
+          ]
+        },
+        {
+          "text": " still",
+          "timestamp": [
+            5.24,
+            5.58
+          ]
+        },
+        {
+          "text": " adds",
+          "timestamp": [
+            5.58,
+            5.94
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            5.94,
+            6.16
+          ]
+        },
+        {
+          "text": " same",
+          "timestamp": [
+            6.16,
+            6.42
+          ]
+        },
+        {
+          "text": " kind",
+          "timestamp": [
+            6.42,
+            6.68
+          ]
+        },
+        {
+          "text": " of",
+          "timestamp": [
+            6.68,
+            6.82
+          ]
+        },
+        {
+          "text": " units.",
+          "timestamp": [
+            6.82,
+            7.02
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "keep the ones columns lined up on the right even with larger numbers each column still adds the same kind of units",
+      "recognized_normalized": "keep the ones columns lined up on the right even with larger numbers each column still adds the same kind of units",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T026b.wav",
+      "source_sha256": "b091866c8c6760335275f8d2c071d3e96ac74c3ed4b19d21586c2cec13e6ddbf",
+      "duration_s": 7.280125
+    },
+    {
+      "id": "E027",
+      "index": 27,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "seventy-five thousand twenty-five plus one hundred twenty-one thousand three hundred ninety-three equals",
+      "recognized_text": "75,025 plus 121,393 equals.",
+      "word_timings": [
+        {
+          "text": " 75",
+          "timestamp": [
+            0,
+            0.7
+          ]
+        },
+        {
+          "text": ",025",
+          "timestamp": [
+            0.7,
+            1.82
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            1.82,
+            2.58
+          ]
+        },
+        {
+          "text": " 121",
+          "timestamp": [
+            2.58,
+            3.62
+          ]
+        },
+        {
+          "text": ",393",
+          "timestamp": [
+            3.62,
+            5.32
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            5.32,
+            5.98
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "75025 plus 121393 equals",
+      "recognized_normalized": "75025 plus 121393 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E027.wav",
+      "source_sha256": "9875e02f2c98593d2e55f16d1508b48f1bafafe7c2142c3bfb2f5efaca9f738f",
+      "duration_s": 6.105125
+    },
+    {
+      "id": "E028",
+      "index": 28,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "one hundred twenty-one thousand three hundred ninety-three plus one hundred ninety-six thousand four hundred eighteen equals",
+      "recognized_text": "120,393 plus 196,418 equals.",
+      "word_timings": [
+        {
+          "text": " 120",
+          "timestamp": [
+            0.68,
+            0.68
+          ]
+        },
+        {
+          "text": ",393",
+          "timestamp": [
+            0.68,
+            2.84
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            2.84,
+            3.56
+          ]
+        },
+        {
+          "text": " 196",
+          "timestamp": [
+            3.56,
+            4.64
+          ]
+        },
+        {
+          "text": ",418",
+          "timestamp": [
+            4.64,
+            5.9
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            5.9,
+            6.78
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "121393 plus 196418 equals",
+      "recognized_normalized": "120393 plus 196418 equals",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E028.wav",
+      "source_sha256": "33964c78f960df28b94f60ac83d1c04250ca6d1e7295f750f1b2608f07ad0347",
+      "duration_s": 6.958833333333334
+    },
+    {
+      "id": "E029",
+      "index": 29,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "one hundred ninety-six thousand four hundred eighteen plus three hundred seventeen thousand eight hundred eleven equals",
+      "recognized_text": "196,418 plus 317,811 equals.",
+      "word_timings": [
+        {
+          "text": " 196",
+          "timestamp": [
+            1.2,
+            1.2
+          ]
+        },
+        {
+          "text": ",418",
+          "timestamp": [
+            1.2,
+            2.24
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            2.24,
+            3.3
+          ]
+        },
+        {
+          "text": " 317",
+          "timestamp": [
+            3.3,
+            4.34
+          ]
+        },
+        {
+          "text": ",811",
+          "timestamp": [
+            4.34,
+            5.72
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            5.72,
+            6.52
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "196418 plus 317811 equals",
+      "recognized_normalized": "196418 plus 317811 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E029.wav",
+      "source_sha256": "e9ee73f40e2bd1b9d660dd42897e35c41598c311e4628daa48e7f2d6afdce495",
+      "duration_s": 6.690125
+    },
+    {
+      "id": "E030",
+      "index": 30,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "three hundred seventeen thousand eight hundred eleven plus five hundred fourteen thousand two hundred twenty-nine equals",
+      "recognized_text": "317,811 plus 514,229 equals.",
+      "word_timings": [
+        {
+          "text": " 317",
+          "timestamp": [
+            1.22,
+            1.22
+          ]
+        },
+        {
+          "text": ",811",
+          "timestamp": [
+            1.22,
+            2.64
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            2.64,
+            3.44
+          ]
+        },
+        {
+          "text": " 514",
+          "timestamp": [
+            3.44,
+            4.56
+          ]
+        },
+        {
+          "text": ",229",
+          "timestamp": [
+            4.56,
+            6.3
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            6.3,
+            6.82
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "317811 plus 514229 equals",
+      "recognized_normalized": "317811 plus 514229 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E030.wav",
+      "source_sha256": "77b1735fed480bab79486211f9eeb90b66e241be0de341cc1f1b11670d345ecd",
+      "duration_s": 7.032041666666666
+    },
+    {
+      "id": "E031",
+      "index": 31,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "five hundred fourteen thousand two hundred twenty-nine plus eight hundred thirty-two thousand forty equals",
+      "recognized_text": "514,229 + 832,040 =",
+      "word_timings": [
+        {
+          "text": " 514",
+          "timestamp": [
+            0,
+            1.18
+          ]
+        },
+        {
+          "text": ",229",
+          "timestamp": [
+            1.18,
+            2.84
+          ]
+        },
+        {
+          "text": " +",
+          "timestamp": [
+            2.84,
+            3.5
+          ]
+        },
+        {
+          "text": " 832",
+          "timestamp": [
+            3.5,
+            4.72
+          ]
+        },
+        {
+          "text": ",040",
+          "timestamp": [
+            4.72,
+            5.48
+          ]
+        },
+        {
+          "text": " =",
+          "timestamp": [
+            5.48,
+            5.84
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "514229 plus 832040 equals",
+      "recognized_normalized": "514229 plus 832040 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E031.wav",
+      "source_sha256": "f106e4c6065923c102f9a7e364f703d99a9eada125d259ea32f3cae2674b5fd8",
+      "duration_s": 6.063625
+    },
+    {
+      "id": "E032",
+      "index": 32,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "eight hundred thirty-two thousand forty plus one million three hundred forty-six thousand two hundred sixty-nine equals",
+      "recognized_text": "832,040 plus 1,346,269 equals.",
+      "word_timings": [
+        {
+          "text": " 832",
+          "timestamp": [
+            0.14,
+            1.22
+          ]
+        },
+        {
+          "text": ",040",
+          "timestamp": [
+            1.22,
+            1.98
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            1.98,
+            2.6
+          ]
+        },
+        {
+          "text": " 1",
+          "timestamp": [
+            2.6,
+            3.06
+          ]
+        },
+        {
+          "text": ",346",
+          "timestamp": [
+            3.06,
+            4.24
+          ]
+        },
+        {
+          "text": ",269",
+          "timestamp": [
+            4.24,
+            6.28
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            6.28,
+            6.8
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "832040 plus 1346269 equals",
+      "recognized_normalized": "832040 plus 1346269 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E032.wav",
+      "source_sha256": "330a258490a359323fd3e03f410695bb3aa9ace1158216f6366d91ea4040491b",
+      "duration_s": 7.001416666666667
+    },
+    {
+      "id": "E033",
+      "index": 33,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "one million three hundred forty-six thousand two hundred sixty-nine plus two million one hundred seventy-eight thousand three hundred nine equals",
+      "recognized_text": "1,346,269 plus 2,178,309 equals.",
+      "word_timings": [
+        {
+          "text": " 1",
+          "timestamp": [
+            1.88,
+            1.88
+          ]
+        },
+        {
+          "text": ",346",
+          "timestamp": [
+            1.88,
+            1.88
+          ]
+        },
+        {
+          "text": ",269",
+          "timestamp": [
+            1.88,
+            3.7
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            3.7,
+            4.42
+          ]
+        },
+        {
+          "text": " 2",
+          "timestamp": [
+            4.42,
+            4.72
+          ]
+        },
+        {
+          "text": ",178",
+          "timestamp": [
+            4.72,
+            5.88
+          ]
+        },
+        {
+          "text": ",309",
+          "timestamp": [
+            5.88,
+            7.56
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            7.56,
+            8.28
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "1346269 plus 2178309 equals",
+      "recognized_normalized": "1346269 plus 2178309 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E033.wav",
+      "source_sha256": "cdb5e633dc3a80652d18db1624723357e874a763648e65ca14e00411ad7ae967",
+      "duration_s": 8.489333333333333
+    },
+    {
+      "id": "E034",
+      "index": 34,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "two million one hundred seventy-eight thousand three hundred nine plus three million five hundred twenty-four thousand five hundred seventy-eight equals",
+      "recognized_text": "2,178,309 plus 3,524,578 equals.",
+      "word_timings": [
+        {
+          "text": " 2",
+          "timestamp": [
+            0.06,
+            0.38
+          ]
+        },
+        {
+          "text": ",178",
+          "timestamp": [
+            0.38,
+            1.76
+          ]
+        },
+        {
+          "text": ",309",
+          "timestamp": [
+            1.76,
+            3.32
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            3.32,
+            4.02
+          ]
+        },
+        {
+          "text": " 3",
+          "timestamp": [
+            4.02,
+            4.36
+          ]
+        },
+        {
+          "text": ",524",
+          "timestamp": [
+            4.36,
+            5.4
+          ]
+        },
+        {
+          "text": ",578",
+          "timestamp": [
+            5.4,
+            8.14
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            8.14,
+            8.6
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "2178309 plus 3524578 equals",
+      "recognized_normalized": "2178309 plus 3524578 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E034.wav",
+      "source_sha256": "1131023cb48a6a12d6a03937a52f9e088e33d3ad707922dc4c056587714cc3de",
+      "duration_s": 8.8115
+    },
+    {
+      "id": "E035",
+      "index": 35,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "three million five hundred twenty-four thousand five hundred seventy-eight plus five million seven hundred two thousand eight hundred eighty-seven equals",
+      "recognized_text": "3,500, 24,500, 78, plus 5,700, 2,887 equals.",
+      "word_timings": [
+        {
+          "text": " 3",
+          "timestamp": [
+            0,
+            0.42
+          ]
+        },
+        {
+          "text": ",500,",
+          "timestamp": [
+            0.42,
+            1.42
+          ]
+        },
+        {
+          "text": " 24",
+          "timestamp": [
+            1.74,
+            2.1
+          ]
+        },
+        {
+          "text": ",500,",
+          "timestamp": [
+            2.1,
+            2.98
+          ]
+        },
+        {
+          "text": " 78,",
+          "timestamp": [
+            3.66,
+            4.04
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            4.78,
+            4.86
+          ]
+        },
+        {
+          "text": " 5",
+          "timestamp": [
+            4.86,
+            5.36
+          ]
+        },
+        {
+          "text": ",700,",
+          "timestamp": [
+            5.36,
+            6.08
+          ]
+        },
+        {
+          "text": " 2",
+          "timestamp": [
+            6.92,
+            7
+          ]
+        },
+        {
+          "text": ",887",
+          "timestamp": [
+            7,
+            7.6
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            7.6,
+            9.04
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "3524578 plus 5702887 equals",
+      "recognized_normalized": "3500 24500 78 plus 5700 2887 equals",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E035.wav",
+      "source_sha256": "4690fea76eea52f1ac449d72698aeb7e3eeebe982735a00fd6ad5edab352db47",
+      "duration_s": 9.216916666666666
+    },
+    {
+      "id": "E036",
+      "index": 36,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "five million seven hundred two thousand eight hundred eighty-seven plus nine million two hundred twenty-seven thousand four hundred sixty-five equals",
+      "recognized_text": "5,700, 2,887 plus 9,227,465 equals.",
+      "word_timings": [
+        {
+          "text": " 5",
+          "timestamp": [
+            0.06,
+            0.56
+          ]
+        },
+        {
+          "text": ",700,",
+          "timestamp": [
+            0.56,
+            1.52
+          ]
+        },
+        {
+          "text": " 2",
+          "timestamp": [
+            1.94,
+            2.08
+          ]
+        },
+        {
+          "text": ",887",
+          "timestamp": [
+            2.08,
+            3.28
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            3.28,
+            4.34
+          ]
+        },
+        {
+          "text": " 9",
+          "timestamp": [
+            4.34,
+            4.8
+          ]
+        },
+        {
+          "text": ",227",
+          "timestamp": [
+            4.8,
+            5.9
+          ]
+        },
+        {
+          "text": ",465",
+          "timestamp": [
+            5.9,
+            7.84
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            7.84,
+            8.7
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "5702887 plus 9227465 equals",
+      "recognized_normalized": "5700 2887 plus 9227465 equals",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E036.wav",
+      "source_sha256": "a2a8bef19bd24c2662eb09b1d8c6309736281ab6dcb5df3a4f989b723ede4816",
+      "duration_s": 8.903708333333332
+    },
+    {
+      "id": "E037",
+      "index": 37,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "nine million two hundred twenty-seven thousand four hundred sixty-five plus fourteen million nine hundred thirty thousand three hundred fifty-two equals",
+      "recognized_text": "9,227,465 plus 14,930,352 equals.",
+      "word_timings": [
+        {
+          "text": " 9",
+          "timestamp": [
+            0.04,
+            0.5
+          ]
+        },
+        {
+          "text": ",227",
+          "timestamp": [
+            0.5,
+            1.88
+          ]
+        },
+        {
+          "text": ",465",
+          "timestamp": [
+            1.88,
+            3.82
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            3.82,
+            4.58
+          ]
+        },
+        {
+          "text": " 14",
+          "timestamp": [
+            4.58,
+            5.12
+          ]
+        },
+        {
+          "text": ",930",
+          "timestamp": [
+            5.12,
+            6.3
+          ]
+        },
+        {
+          "text": ",352",
+          "timestamp": [
+            6.3,
+            8.22
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            8.22,
+            8.76
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "9227465 plus 14930352 equals",
+      "recognized_normalized": "9227465 plus 14930352 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E037.wav",
+      "source_sha256": "1c15ae403d5e8411c9cc6c742da86f60ff47d195d302fb3365978e0458be0198",
+      "duration_s": 8.957875
+    },
+    {
+      "id": "E038",
+      "index": 38,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fourteen million nine hundred thirty thousand three hundred fifty-two plus twenty-four million one hundred fifty-seven thousand eight hundred seventeen equals",
+      "recognized_text": "14,930,352 plus 24,157,817 equals.",
+      "word_timings": [
+        {
+          "text": " 14",
+          "timestamp": [
+            0.04,
+            0.58
+          ]
+        },
+        {
+          "text": ",930",
+          "timestamp": [
+            0.58,
+            1.44
+          ]
+        },
+        {
+          "text": ",352",
+          "timestamp": [
+            1.44,
+            3.92
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            3.92,
+            4.7
+          ]
+        },
+        {
+          "text": " 24",
+          "timestamp": [
+            4.7,
+            5.44
+          ]
+        },
+        {
+          "text": ",157",
+          "timestamp": [
+            5.44,
+            7.02
+          ]
+        },
+        {
+          "text": ",817",
+          "timestamp": [
+            7.02,
+            8.44
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            8.44,
+            9.18
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "14930352 plus 24157817 equals",
+      "recognized_normalized": "14930352 plus 24157817 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E038.wav",
+      "source_sha256": "0f7c7ebefc0733ef69851ea1affc8ec7c57bc6fe71d0a6dddd37f7e0c2c7e13f",
+      "duration_s": 9.388208333333333
+    },
+    {
+      "id": "E039",
+      "index": 39,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-four million one hundred fifty-seven thousand eight hundred seventeen plus thirty-nine million eighty-eight thousand one hundred sixty-nine equals",
+      "recognized_text": "24,157,817 plus 39,88,169 equals.",
+      "word_timings": [
+        {
+          "text": " 24",
+          "timestamp": [
+            2.44,
+            2.44
+          ]
+        },
+        {
+          "text": ",157",
+          "timestamp": [
+            2.44,
+            2.46
+          ]
+        },
+        {
+          "text": ",817",
+          "timestamp": [
+            2.46,
+            4
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            4,
+            4.94
+          ]
+        },
+        {
+          "text": " 39",
+          "timestamp": [
+            4.94,
+            5.46
+          ]
+        },
+        {
+          "text": ",88",
+          "timestamp": [
+            5.46,
+            6.62
+          ]
+        },
+        {
+          "text": ",169",
+          "timestamp": [
+            6.62,
+            8.16
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            8.16,
+            8.68
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "24157817 plus 39088169 equals",
+      "recognized_normalized": "24157817 plus 3988169 equals",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E039.wav",
+      "source_sha256": "c76207737f194d724d4d319e840cc6840d7d6be4ff2c67249ff77ef390ba404b",
+      "duration_s": 8.920583333333333
+    },
+    {
+      "id": "T039a",
+      "index": 39,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "We have reached the final pair for this journey. Both values are below one hundred million. Their sum will cross that mark.",
+      "recognized_text": "We have reached the final pair for this journey. Both values are below 100 million. Their sum will cross that mark.",
+      "word_timings": [
+        {
+          "text": " We",
+          "timestamp": [
+            0,
+            0.3
+          ]
+        },
+        {
+          "text": " have",
+          "timestamp": [
+            0.3,
+            0.4
+          ]
+        },
+        {
+          "text": " reached",
+          "timestamp": [
+            0.4,
+            0.56
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            0.56,
+            0.82
+          ]
+        },
+        {
+          "text": " final",
+          "timestamp": [
+            0.82,
+            1.16
+          ]
+        },
+        {
+          "text": " pair",
+          "timestamp": [
+            1.16,
+            1.46
+          ]
+        },
+        {
+          "text": " for",
+          "timestamp": [
+            1.46,
+            1.68
+          ]
+        },
+        {
+          "text": " this",
+          "timestamp": [
+            1.68,
+            1.84
+          ]
+        },
+        {
+          "text": " journey.",
+          "timestamp": [
+            1.84,
+            2.08
+          ]
+        },
+        {
+          "text": " Both",
+          "timestamp": [
+            2.8,
+            2.94
+          ]
+        },
+        {
+          "text": " values",
+          "timestamp": [
+            2.94,
+            3.42
+          ]
+        },
+        {
+          "text": " are",
+          "timestamp": [
+            3.42,
+            3.68
+          ]
+        },
+        {
+          "text": " below",
+          "timestamp": [
+            3.68,
+            3.88
+          ]
+        },
+        {
+          "text": " 100",
+          "timestamp": [
+            3.88,
+            4.34
+          ]
+        },
+        {
+          "text": " million.",
+          "timestamp": [
+            4.34,
+            4.76
+          ]
+        },
+        {
+          "text": " Their",
+          "timestamp": [
+            5.5,
+            5.58
+          ]
+        },
+        {
+          "text": " sum",
+          "timestamp": [
+            5.58,
+            5.82
+          ]
+        },
+        {
+          "text": " will",
+          "timestamp": [
+            5.82,
+            6.08
+          ]
+        },
+        {
+          "text": " cross",
+          "timestamp": [
+            6.08,
+            6.32
+          ]
+        },
+        {
+          "text": " that",
+          "timestamp": [
+            6.32,
+            6.62
+          ]
+        },
+        {
+          "text": " mark.",
+          "timestamp": [
+            6.62,
+            6.84
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "we have reached the final pair for this journey both values are below 100000000 their sum will cross that mark",
+      "recognized_normalized": "we have reached the final pair for this journey both values are below 100000000 their sum will cross that mark",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T039a.wav",
+      "source_sha256": "6584e23de306027fbfa3f6697f806c0edfe2c1441c8fe7691f51ada0a1194e69",
+      "duration_s": 7.018541666666667
+    },
+    {
+      "id": "T039b",
+      "index": 39,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Watch the labels as the two values enter the formula. It is the same addition we used at the start, with more place-value columns.",
+      "recognized_text": "Watch the labels as the two values enter the formula. It is the same addition we used at the start with more place value columns.",
+      "word_timings": [
+        {
+          "text": " Watch",
+          "timestamp": [
+            0,
+            0.46
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            0.46,
+            0.66
+          ]
+        },
+        {
+          "text": " labels",
+          "timestamp": [
+            0.66,
+            0.86
+          ]
+        },
+        {
+          "text": " as",
+          "timestamp": [
+            0.86,
+            1.34
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            1.34,
+            1.54
+          ]
+        },
+        {
+          "text": " two",
+          "timestamp": [
+            1.54,
+            1.7
+          ]
+        },
+        {
+          "text": " values",
+          "timestamp": [
+            1.7,
+            2.12
+          ]
+        },
+        {
+          "text": " enter",
+          "timestamp": [
+            2.12,
+            2.46
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            2.46,
+            2.62
+          ]
+        },
+        {
+          "text": " formula.",
+          "timestamp": [
+            2.62,
+            2.98
+          ]
+        },
+        {
+          "text": " It",
+          "timestamp": [
+            3.76,
+            3.88
+          ]
+        },
+        {
+          "text": " is",
+          "timestamp": [
+            3.88,
+            3.98
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            3.98,
+            4.14
+          ]
+        },
+        {
+          "text": " same",
+          "timestamp": [
+            4.14,
+            4.4
+          ]
+        },
+        {
+          "text": " addition",
+          "timestamp": [
+            4.4,
+            4.76
+          ]
+        },
+        {
+          "text": " we",
+          "timestamp": [
+            4.76,
+            5.16
+          ]
+        },
+        {
+          "text": " used",
+          "timestamp": [
+            5.16,
+            5.4
+          ]
+        },
+        {
+          "text": " at",
+          "timestamp": [
+            5.4,
+            5.62
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            5.62,
+            5.7
+          ]
+        },
+        {
+          "text": " start",
+          "timestamp": [
+            5.7,
+            6
+          ]
+        },
+        {
+          "text": " with",
+          "timestamp": [
+            6,
+            6.56
+          ]
+        },
+        {
+          "text": " more",
+          "timestamp": [
+            6.56,
+            6.76
+          ]
+        },
+        {
+          "text": " place",
+          "timestamp": [
+            6.76,
+            7.08
+          ]
+        },
+        {
+          "text": " value",
+          "timestamp": [
+            7.08,
+            7.34
+          ]
+        },
+        {
+          "text": " columns.",
+          "timestamp": [
+            7.34,
+            7.88
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "watch the labels as the 2 values enter the formula it is the same addition we used at the start with more place value columns",
+      "recognized_normalized": "watch the labels as the 2 values enter the formula it is the same addition we used at the start with more place value columns",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/T039b.wav",
+      "source_sha256": "929bb19b7d863d6e84a3ace722dc90452c4d7ec58d514c96c01318d8396c6dac",
+      "duration_s": 8.144208333333333
+    },
+    {
+      "id": "E040",
+      "index": 40,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-nine million eighty-eight thousand one hundred sixty-nine plus sixty-three million two hundred forty-five thousand nine hundred eighty-six equals",
+      "recognized_text": "39,88,169 plus 63,245,986 equals.",
+      "word_timings": [
+        {
+          "text": " 39",
+          "timestamp": [
+            0,
+            0.52
+          ]
+        },
+        {
+          "text": ",88",
+          "timestamp": [
+            0.52,
+            1.82
+          ]
+        },
+        {
+          "text": ",169",
+          "timestamp": [
+            1.82,
+            3.3
+          ]
+        },
+        {
+          "text": " plus",
+          "timestamp": [
+            3.3,
+            4
+          ]
+        },
+        {
+          "text": " 63",
+          "timestamp": [
+            4,
+            4.72
+          ]
+        },
+        {
+          "text": ",245",
+          "timestamp": [
+            4.72,
+            6.36
+          ]
+        },
+        {
+          "text": ",986",
+          "timestamp": [
+            6.36,
+            8.24
+          ]
+        },
+        {
+          "text": " equals.",
+          "timestamp": [
+            8.24,
+            8.76
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "39088169 plus 63245986 equals",
+      "recognized_normalized": "3988169 plus 63245986 equals",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/E040.wav",
+      "source_sha256": "a9e77003464d80859e96b1c15b3d6651ad3117759585acc7f59f52a13e3c688e",
+      "duration_s": 8.922083333333333
+    },
+    {
+      "id": "O01",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "We've counted forty-one entries, from F zero through F forty. Two starting values, then thirty-nine additions brought us here.",
+      "recognized_text": "We've counted 41 entries from F0 through F40. Two starting values, then 39 additions brought us here.",
+      "word_timings": [
+        {
+          "text": " We've",
+          "timestamp": [
+            0,
+            0.4
+          ]
+        },
+        {
+          "text": " counted",
+          "timestamp": [
+            0.4,
+            0.62
+          ]
+        },
+        {
+          "text": " 41",
+          "timestamp": [
+            0.62,
+            1.14
+          ]
+        },
+        {
+          "text": " entries",
+          "timestamp": [
+            1.14,
+            1.72
+          ]
+        },
+        {
+          "text": " from",
+          "timestamp": [
+            1.72,
+            2.34
+          ]
+        },
+        {
+          "text": " F0",
+          "timestamp": [
+            2.34,
+            2.92
+          ]
+        },
+        {
+          "text": " through",
+          "timestamp": [
+            2.92,
+            3.3
+          ]
+        },
+        {
+          "text": " F40.",
+          "timestamp": [
+            3.3,
+            3.88
+          ]
+        },
+        {
+          "text": " Two",
+          "timestamp": [
+            4.72,
+            4.82
+          ]
+        },
+        {
+          "text": " starting",
+          "timestamp": [
+            4.82,
+            5.06
+          ]
+        },
+        {
+          "text": " values,",
+          "timestamp": [
+            5.06,
+            5.6
+          ]
+        },
+        {
+          "text": " then",
+          "timestamp": [
+            6.08,
+            6.14
+          ]
+        },
+        {
+          "text": " 39",
+          "timestamp": [
+            6.14,
+            6.56
+          ]
+        },
+        {
+          "text": " additions",
+          "timestamp": [
+            6.56,
+            7.12
+          ]
+        },
+        {
+          "text": " brought",
+          "timestamp": [
+            7.12,
+            7.52
+          ]
+        },
+        {
+          "text": " us",
+          "timestamp": [
+            7.52,
+            7.76
+          ]
+        },
+        {
+          "text": " here.",
+          "timestamp": [
+            7.76,
+            7.96
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "we have counted 41 entries from f 0 through f 40 2 starting values then 39 additions brought us here",
+      "recognized_normalized": "we have counted 41 entries from f 0 through f 40 2 starting values then 39 additions brought us here",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/O01.wav",
+      "source_sha256": "d1f162e33fe3998b9b7ea4b3c331f8da1b3e4f134c833588d5f498c06e274c6a",
+      "duration_s": 8.030625
+    },
+    {
+      "id": "O02",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "The newest number is just past one hundred million. We stop here today, but the rule can keep making more numbers.",
+      "recognized_text": "The newest number is just past 100 million. We stop here today, but the rule can keep making more numbers.",
+      "word_timings": [
+        {
+          "text": " The",
+          "timestamp": [
+            0,
+            0.3
+          ]
+        },
+        {
+          "text": " newest",
+          "timestamp": [
+            0.3,
+            0.5
+          ]
+        },
+        {
+          "text": " number",
+          "timestamp": [
+            0.5,
+            0.82
+          ]
+        },
+        {
+          "text": " is",
+          "timestamp": [
+            0.82,
+            1.06
+          ]
+        },
+        {
+          "text": " just",
+          "timestamp": [
+            1.06,
+            1.28
+          ]
+        },
+        {
+          "text": " past",
+          "timestamp": [
+            1.28,
+            1.54
+          ]
+        },
+        {
+          "text": " 100",
+          "timestamp": [
+            1.54,
+            2.12
+          ]
+        },
+        {
+          "text": " million.",
+          "timestamp": [
+            2.12,
+            2.54
+          ]
+        },
+        {
+          "text": " We",
+          "timestamp": [
+            3.36,
+            3.48
+          ]
+        },
+        {
+          "text": " stop",
+          "timestamp": [
+            3.48,
+            3.68
+          ]
+        },
+        {
+          "text": " here",
+          "timestamp": [
+            3.68,
+            3.96
+          ]
+        },
+        {
+          "text": " today,",
+          "timestamp": [
+            3.96,
+            4.28
+          ]
+        },
+        {
+          "text": " but",
+          "timestamp": [
+            4.66,
+            4.84
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            4.84,
+            4.94
+          ]
+        },
+        {
+          "text": " rule",
+          "timestamp": [
+            4.94,
+            5.18
+          ]
+        },
+        {
+          "text": " can",
+          "timestamp": [
+            5.18,
+            5.44
+          ]
+        },
+        {
+          "text": " keep",
+          "timestamp": [
+            5.44,
+            5.68
+          ]
+        },
+        {
+          "text": " making",
+          "timestamp": [
+            5.68,
+            6.04
+          ]
+        },
+        {
+          "text": " more",
+          "timestamp": [
+            6.04,
+            6.22
+          ]
+        },
+        {
+          "text": " numbers.",
+          "timestamp": [
+            6.22,
+            6.6
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "the newest number is just past 100000000 we stop here today but the rule can keep making more numbers",
+      "recognized_normalized": "the newest number is just past 100000000 we stop here today but the rule can keep making more numbers",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/O02.wav",
+      "source_sha256": "4dcac4af25c396e9da141b63df041520b8d605f9d8e08350c0605f1d5a55d866",
+      "duration_s": 6.84375
+    },
+    {
+      "id": "O03",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Remember the motion: take the previous two, add them, keep the newest pair, and repeat. Every new entry has a place in the chain.",
+      "recognized_text": "Remember the motion. Take the previous two, add them, keep the newest pair and repeat. Every new entry has a place in the chain.",
+      "word_timings": [
+        {
+          "text": " Remember",
+          "timestamp": [
+            0,
+            0.38
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            0.38,
+            0.62
+          ]
+        },
+        {
+          "text": " motion.",
+          "timestamp": [
+            0.62,
+            0.8
+          ]
+        },
+        {
+          "text": " Take",
+          "timestamp": [
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            1.7,
+            1.86
+          ]
+        },
+        {
+          "text": " previous",
+          "timestamp": [
+            1.86,
+            2.18
+          ]
+        },
+        {
+          "text": " two,",
+          "timestamp": [
+            2.18,
+            2.5
+          ]
+        },
+        {
+          "text": " add",
+          "timestamp": [
+            2.86,
+            3
+          ]
+        },
+        {
+          "text": " them,",
+          "timestamp": [
+            3,
+            3.26
+          ]
+        },
+        {
+          "text": " keep",
+          "timestamp": [
+            3.6,
+            3.7
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            3.7,
+            3.84
+          ]
+        },
+        {
+          "text": " newest",
+          "timestamp": [
+            3.84,
+            4.14
+          ]
+        },
+        {
+          "text": " pair",
+          "timestamp": [
+            4.14,
+            4.5
+          ]
+        },
+        {
+          "text": " and",
+          "timestamp": [
+            4.5,
+            4.84
+          ]
+        },
+        {
+          "text": " repeat.",
+          "timestamp": [
+            4.84,
+            5.1
+          ]
+        },
+        {
+          "text": " Every",
+          "timestamp": [
+            5.92,
+            6.08
+          ]
+        },
+        {
+          "text": " new",
+          "timestamp": [
+            6.08,
+            6.26
+          ]
+        },
+        {
+          "text": " entry",
+          "timestamp": [
+            6.26,
+            6.54
+          ]
+        },
+        {
+          "text": " has",
+          "timestamp": [
+            6.54,
+            6.86
+          ]
+        },
+        {
+          "text": " a",
+          "timestamp": [
+            6.86,
+            6.94
+          ]
+        },
+        {
+          "text": " place",
+          "timestamp": [
+            6.94,
+            7.18
+          ]
+        },
+        {
+          "text": " in",
+          "timestamp": [
+            7.18,
+            7.42
+          ]
+        },
+        {
+          "text": " the",
+          "timestamp": [
+            7.42,
+            7.52
+          ]
+        },
+        {
+          "text": " chain.",
+          "timestamp": [
+            7.52,
+            7.82
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "remember the motion take the previous 2 add them keep the newest pair and repeat every new entry has a place in the chain",
+      "recognized_normalized": "remember the motion take the previous 2 add them keep the newest pair and repeat every new entry has a place in the chain",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/O03.wav",
+      "source_sha256": "da57a92102dd8cf32916ff86721efd12752b0cb0d9362ee11d9e972f34e467f4",
+      "duration_s": 8.00725
+    },
+    {
+      "id": "O04",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Thanks for counting with me. See you next time!",
+      "recognized_text": "Thanks for counting with me. See you next time.",
+      "word_timings": [
+        {
+          "text": " Thanks",
+          "timestamp": [
+            0,
+            0.44
+          ]
+        },
+        {
+          "text": " for",
+          "timestamp": [
+            0.44,
+            0.6
+          ]
+        },
+        {
+          "text": " counting",
+          "timestamp": [
+            0.6,
+            0.88
+          ]
+        },
+        {
+          "text": " with",
+          "timestamp": [
+            0.88,
+            1.12
+          ]
+        },
+        {
+          "text": " me.",
+          "timestamp": [
+            1.12,
+            1.32
+          ]
+        },
+        {
+          "text": " See",
+          "timestamp": [
+            1.58,
+            1.78
+          ]
+        },
+        {
+          "text": " you",
+          "timestamp": [
+            1.78,
+            1.9
+          ]
+        },
+        {
+          "text": " next",
+          "timestamp": [
+            1.9,
+            2
+          ]
+        },
+        {
+          "text": " time.",
+          "timestamp": [
+            2,
+            2.44
+          ]
+        }
+      ],
+      "interpreted_number": null,
+      "expected_normalized": "thanks for counting with me see you next time",
+      "recognized_normalized": "thanks for counting with me see you next time",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/new-final-left-guarded/O04.wav",
+      "source_sha256": "8f9c5e97fdb42fe483fa41ed920ce73255133258f3357552dee8a2becd7a8e96",
+      "duration_s": 2.523875
+    }
+  ]
+}

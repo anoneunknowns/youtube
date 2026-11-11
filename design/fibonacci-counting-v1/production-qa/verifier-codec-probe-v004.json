@@ -1,0 +1,104 @@
+{
+  "scope": "Verifier development codec fixtures at measured timeline positions, not completed production MP4 QA",
+  "codec": "libx264 veryfast CRF18 yuv420p BT709 limited, matching production flags",
+  "frames": 8,
+  "fields": 215,
+  "minimum_iou_per_divisor": {
+    "1": 0.6650544135429263,
+    "2": 0.8831908831908832
+  },
+  "failures": [
+    {
+      "frame_fixture": 1,
+      "scene": "count",
+      "n": 5,
+      "divisor": 1,
+      "name": "frame2484/result-reading",
+      "text": "five",
+      "dx": 0.5,
+      "dy": 0.0,
+      "iou": 0.6651,
+      "margin": 0.25011665420682666
+    },
+    {
+      "frame_fixture": 2,
+      "scene": "count",
+      "n": 6,
+      "divisor": 1,
+      "name": "frame2608/operand-2",
+      "text": "8",
+      "dx": 0.5,
+      "dy": 0.0,
+      "iou": 0.8906,
+      "margin": 0.1474803937549808
+    },
+    {
+      "frame_fixture": 2,
+      "scene": "count",
+      "n": 6,
+      "divisor": 1,
+      "name": "frame2608/result-reading",
+      "text": "eight",
+      "dx": 0.0,
+      "dy": 0.5,
+      "iou": 0.6753,
+      "margin": 0.26038909703365076
+    },
+    {
+      "frame_fixture": 3,
+      "scene": "count",
+      "n": 7,
+      "divisor": 1,
+      "name": "frame2735/result-reading",
+      "text": "thirteen",
+      "dx": 0.0,
+      "dy": 0.0,
+      "iou": 0.6747,
+      "margin": 0.21825704229587628
+    },
+    {
+      "frame_fixture": 4,
+      "scene": "count",
+      "n": 10,
+      "divisor": 1,
+      "name": "frame3661/result-reading",
+      "text": "fifty-five",
+      "dx": 0.0,
+      "dy": 0.5,
+      "iou": 0.6788,
+      "margin": 0.039846920077759584
+    },
+    {
+      "frame_fixture": 5,
+      "scene": "count",
+      "n": 31,
+      "divisor": 1,
+      "name": "frame10723/result-reading",
+      "text": "one million three hundred forty-six thousand two hundred sixty-nine",
+      "dx": -1.0,
+      "dy": 0.5,
+      "iou": 0.6708,
+      "margin": 0.08571674938910978
+    }
+  ],
+  "passed": false,
+  "total_failures": 6,
+  "minimum_numeric_identification_margin_observed": 0.02462805249624711,
+  "wrong_text_negative_checks": [
+    {
+      "wrong": "F8",
+      "rejected": true,
+      "nearest_competitor": "F0"
+    },
+    {
+      "wrong": "1,346,268",
+      "rejected": true,
+      "nearest_competitor": "1,346,269"
+    }
+  ],
+  "native_centering_tolerance_px": 1,
+  "verifier_sha256_at_start": "0749075a53f0f92b2cd8903d3326f3349d4b99b7ff3c0d70ba6d8f06837af890",
+  "renderer_sha256_at_start": "92ab38464ad197dacfea3d70abfd7a3a02f15a55d25cd5e66a2cd5f80647de45",
+  "all_frame_policy": "Half960x540 primary numerals/readings/operators/decimal carry glyphs; captions below30px verified at native samples.",
+  "native_numeric_identity": "All one-digit substitutions must lose to the approved string by >=.005 IoU; absolute>=.90. Tiny F15px: F0..F40 dictionary margin>=.03. Other text>=.94."
+}

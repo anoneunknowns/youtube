@@ -1,0 +1,577 @@
+Num-Num Numbers — Fibonacci Numbers
+英語台本・日本語訳・編集キュー v001（前工程案）
+
+F₀=0、F₁=1。n≥2でFₙ=Fₙ₋₂+Fₙ₋₁。F₀〜F₄₀の41項、39回の加算。
+キャラクターはユーザー指定のシャム猫。背景第一案は「雲の上の風の郵便局」。
+音声未生成・未実測。以下の編集枠は150語/分による仮の動画開始からの相対秒。
+自然な米国英語。数詞にandを入れない。式前半Eは結果を含まず、結果Nで数詞を一度だけ読む。
+前半末尾equalsから結果発話まで0.16秒を仮置きし、結果はNの0.12秒前に表示する。
+通常境界は結果Nの終わり→次の式Eの開始2.00秒。数詞単体N→Nが2秒という仕様ではない。
+チェックポイントではREPLAYとして説明し、読み終えた項の進捗を二重に増やさない。
+式はOLDER / NEWER / NEWの横三列の数値窓。F₂₁から同一47pxの9桁対応モードへ一度切替。
+下に大きい結果と同一32px・最大2行の英語読みを置く。導入では最終値を先出ししない。
+
+I01 | 0.800–5.600s（仮） | title
+EN: Hi! Let's count Fibonacci numbers, and watch each new number take shape.
+JA: こんにちは。フィボナッチ数を数えて、新しい数が生まれる様子を見よう。
+画面: 雲海とベランダ、右端の青い屋根の郵便局を見せる引き。タイトルとシャム猫。数式や数字は独立レイヤー。
+
+I02 | 6.200–11.000s（仮） | rule
+EN: We start with zero and one. These are our two starting values.
+JA: 0と1から始めるよ。この二つが出発点。
+画面: 初期値の数値窓 F₀=0 / F₁=1。まだ本カウントの進捗は増やさない。
+
+I03 | 11.600–18.800s（仮） | rule
+EN: To make the next number, add the previous two. Then use the newest pair, and do it again.
+JA: 次の数は直前の二つを足して作る。できたら新しい二つで繰り返すよ。
+画面: Fₙ=Fₙ₋₂+Fₙ₋₁、n≥2 を入力→加算→出力の3領域へ対応付ける。
+
+I04 | 19.400–27.400s（仮） | rule
+EN: The small labels tell us each number's place. We start at F zero, so F two is the third entry.
+JA: 小さなラベルは数の位置だよ。Fゼロから始まるから、Fツーは3番目。
+画面: F₀/F₁/F₂ と1/2/3番目を対応させる。添字と値を別欄にする。
+
+I05 | 28.000–35.200s（仮） | input-legend
+EN: The older value sits on the left. The newer value sits beside it. Their labels move with them.
+JA: 古い方の値は左、新しい方はその隣。ラベルも一緒に動くよ。
+画面: 式の三列はOLDER / NEWER / NEW。色に加えて文字ラベルとF添字を表示し、項と値を一緒に渡す。
+
+I06 | 35.800–43.000s（仮） | output-legend
+EN: Listen for plus and equals. The answer appears when we say its name, and becomes our newest value.
+JA: plusとequalsを聞いてね。答えは数の名前を読む時に現れ、新しい値になるよ。
+画面: 演算子と出力枠を順に強調。答えの確定表示は対応する結果発話の0.12秒前。
+
+I07 | 43.600–52.000s（仮） | postal-metaphor
+EN: Number windows show values, not piles of things. A window marked one thousand stands for that value, not one thousand objects.
+JA: 数値窓が示すのは値で、物の山ではないよ。1000と書いた窓は値1000を表し、物が1000個あるという意味ではないよ。
+画面: 数式の三つの数値窓は値を表示する。個数モデルと混同しない。
+
+I08 | 52.600–60.600s（仮） | range
+EN: We'll keep adding until the sequence first passes one hundred million. The numbers grow, but the rule stays the same.
+JA: 数列が初めて1億を超えるところまで足していくよ。数が大きくなっても規則は同じ。
+画面: 終点102,334,155は導入で先出しせず、FIRST PAST 100,000,000 の目標のみ。
+
+N000 | 61.200–61.600s（仮） | seed
+EN: zero
+JA: 0
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+N001 | 63.600–64.000s（仮） | seed
+EN: one
+JA: 1
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E002 | 66.000–67.600s（仮） | generate
+EN: zero plus one equals
+JA: 0 足す 1 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N002 | 67.760–68.160s（仮） | result
+EN: one
+JA: 1
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+T002a | 68.760–77.160s（仮） | repeat-one
+EN: There are two ones in a row. One is a starting value; the next was made by adding zero and one.
+JA: 1が二つ続いたね。一つは初期値で、次は0と1を足してできた数。
+画面: F₁=1とF₂=1を別ID・別位置で保持。0を削除せず履歴へ。
+
+T002b | 77.760–84.560s（仮） | repeat-one
+EN: They have the same value, but different places. Keep both entries, because each belongs to the sequence.
+JA: 値は同じでも場所が違う。どちらも数列の一部だから残しておこう。
+画面: 二つの1を別ラベルで比較。説明中は本カウント進捗を増やさない。
+
+E003 | 87.160–88.760s（仮） | generate
+EN: one plus one equals
+JA: 1 足す 1 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N003 | 88.920–89.320s（仮） | result
+EN: two
+JA: 2
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E004 | 91.320–92.920s（仮） | generate
+EN: one plus two equals
+JA: 1 足す 2 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N004 | 93.080–93.480s（仮） | result
+EN: three
+JA: 3
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E005 | 95.480–97.080s（仮） | generate
+EN: two plus three equals
+JA: 2 足す 3 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N005 | 97.240–97.640s（仮） | result
+EN: five
+JA: 5
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E006 | 99.640–101.240s（仮） | generate
+EN: three plus five equals
+JA: 3 足す 5 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N006 | 101.400–101.800s（仮） | result
+EN: eight
+JA: 8
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E007 | 103.800–105.400s（仮） | generate
+EN: five plus eight equals
+JA: 5 足す 8 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N007 | 105.560–105.960s（仮） | result
+EN: thirteen
+JA: 13
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E008 | 107.960–109.560s（仮） | generate
+EN: eight plus thirteen equals
+JA: 8 足す 13 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N008 | 109.720–110.520s（仮） | result
+EN: twenty-one
+JA: 21
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+T008a | 111.120–119.920s（仮） | carry-8-plus-13
+EN: Let's look inside that addition. In the ones column, eight plus three makes eleven: one stays here, and one ten moves left.
+JA: 今の足し算の中を見よう。一の位は8+3=11。1をここに残し、十を一つ左へ送るよ。
+画面: 直前8+13=21のREPLAY。入力→一の位11・繰上がり1→結果21の3段階。
+
+T008b | 120.520–129.720s（仮） | carry-8-plus-13
+EN: That carried ten joins the ten already there. The columns now show two tens and one one. Then the newest pair moves on.
+JA: 繰り上がった十が、もともとの十と合わさる。十が二つと一が一つ。新しい二つで次へ進もう。
+画面: 十の位0+1+1=2。2と1を同時に足し直す誤演出を避ける。
+
+E009 | 132.320–134.320s（仮） | generate
+EN: thirteen plus twenty-one equals
+JA: 13 足す 21 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N009 | 134.480–135.280s（仮） | result
+EN: thirty-four
+JA: 34
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E010 | 137.280–139.680s（仮） | generate
+EN: twenty-one plus thirty-four equals
+JA: 21 足す 34 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N010 | 139.840–140.640s（仮） | result
+EN: fifty-five
+JA: 55
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E011 | 142.640–145.040s（仮） | generate
+EN: thirty-four plus fifty-five equals
+JA: 34 足す 55 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N011 | 145.200–146.000s（仮） | result
+EN: eighty-nine
+JA: 89
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E012 | 148.000–150.400s（仮） | generate
+EN: fifty-five plus eighty-nine equals
+JA: 55 足す 89 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N012 | 150.560–152.160s（仮） | result
+EN: one hundred forty-four
+JA: 144
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E013 | 154.160–157.360s（仮） | generate
+EN: eighty-nine plus one hundred forty-four equals
+JA: 89 足す 144 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N013 | 157.520–159.120s（仮） | result
+EN: two hundred thirty-three
+JA: 233
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+T013a | 159.720–167.320s（仮） | carry-89-plus-144
+EN: Here the ones make thirteen. Write three and carry one ten. The tens, including that carry, also make thirteen.
+JA: 一の位は13。3を書いて十を一つ繰り上げる。その繰り上がりを含む十の位も13になるよ。
+画面: 89+144=233のREPLAY。9+4=13→一3、8+4+1=13→十3。
+
+T013b | 167.920–175.920s（仮） | carry-89-plus-144
+EN: Write three tens, and carry one hundred. That hundred joins the hundred already there. Every column keeps its own place.
+JA: 十を三つ書いて、百を一つ繰り上げる。もともとの百と合わさるよ。各桁の場所はそのまま。
+画面: 百の位0+1+1=2。桁線は一・十・百を明記、繰上がり数字は小さく別レイヤー。
+
+E014 | 178.520–182.520s（仮） | generate
+EN: one hundred forty-four plus two hundred thirty-three equals
+JA: 144 足す 233 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N014 | 182.680–184.280s（仮） | result
+EN: three hundred seventy-seven
+JA: 377
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E015 | 186.280–190.280s（仮） | generate
+EN: two hundred thirty-three plus three hundred seventy-seven equals
+JA: 233 足す 377 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N015 | 190.440–191.640s（仮） | result
+EN: six hundred ten
+JA: 610
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E016 | 193.640–197.240s（仮） | generate
+EN: three hundred seventy-seven plus six hundred ten equals
+JA: 377 足す 610 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N016 | 197.400–199.000s（仮） | result
+EN: nine hundred eighty-seven
+JA: 987
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E017 | 201.000–204.600s（仮） | generate
+EN: six hundred ten plus nine hundred eighty-seven equals
+JA: 610 足す 987 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N017 | 204.760–207.160s（仮） | result
+EN: one thousand five hundred ninety-seven
+JA: 1,597
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E018 | 209.160–213.960s（仮） | generate
+EN: nine hundred eighty-seven plus one thousand five hundred ninety-seven equals
+JA: 987 足す 1,597 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N018 | 214.120–216.520s（仮） | result
+EN: two thousand five hundred eighty-four
+JA: 2,584
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+T018a | 217.120–226.720s（仮） | carry-987-plus-1597
+EN: Now the values reach into the thousands. Start at the ones and follow each carry to the next column, one place at a time.
+JA: 千の位まで来たね。一の位から始めて、繰り上がりを一桁ずつ追ってみよう。
+画面: 987+1,597=2,584のREPLAY。横三列の数式を保持し、位取りの説明だけ拡大する。入力→連鎖繰上がり→確定結果の三段階。
+
+T018b | 227.320–236.520s（仮） | carry-987-plus-1597
+EN: Seven plus seven makes fourteen. Next come eighteen tens, then fifteen hundreds. Each carry moves one column left; it never skips a place.
+JA: 7+7=14。次は十が18個、百が15個。繰り上がりは一桁左へ進み、飛び越さないよ。
+画面: 一7+7=14、十8+9+1=18、百9+5+1=15、千0+1+1=2。結果2,584。
+
+E019 | 239.120–244.720s（仮） | generate
+EN: one thousand five hundred ninety-seven plus two thousand five hundred eighty-four equals
+JA: 1,597 足す 2,584 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N019 | 244.880–247.280s（仮） | result
+EN: four thousand one hundred eighty-one
+JA: 4,181
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E020 | 249.280–254.880s（仮） | generate
+EN: two thousand five hundred eighty-four plus four thousand one hundred eighty-one equals
+JA: 2,584 足す 4,181 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N020 | 255.040–257.440s（仮） | result
+EN: six thousand seven hundred sixty-five
+JA: 6,765
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E021 | 259.440–265.040s（仮） | generate
+EN: four thousand one hundred eighty-one plus six thousand seven hundred sixty-five equals
+JA: 4,181 足す 6,765 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N021 | 265.200–267.600s（仮） | result
+EN: ten thousand nine hundred forty-six
+JA: 10,946
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E022 | 269.600–275.200s（仮） | generate
+EN: six thousand seven hundred sixty-five plus ten thousand nine hundred forty-six equals
+JA: 6,765 足す 10,946 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N022 | 275.360–277.360s（仮） | result
+EN: seventeen thousand seven hundred eleven
+JA: 17,711
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E023 | 279.360–284.560s（仮） | generate
+EN: ten thousand nine hundred forty-six plus seventeen thousand seven hundred eleven equals
+JA: 10,946 足す 17,711 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N023 | 284.720–287.520s（仮） | result
+EN: twenty-eight thousand six hundred fifty-seven
+JA: 28,657
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E024 | 289.520–295.120s（仮） | generate
+EN: seventeen thousand seven hundred eleven plus twenty-eight thousand six hundred fifty-seven equals
+JA: 17,711 足す 28,657 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N024 | 295.280–298.080s（仮） | result
+EN: forty-six thousand three hundred sixty-eight
+JA: 46,368
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E025 | 300.080–306.480s（仮） | generate
+EN: twenty-eight thousand six hundred fifty-seven plus forty-six thousand three hundred sixty-eight equals
+JA: 28,657 足す 46,368 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N025 | 306.640–308.640s（仮） | result
+EN: seventy-five thousand twenty-five
+JA: 75,025
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E026 | 310.640–316.240s（仮） | generate
+EN: forty-six thousand three hundred sixty-eight plus seventy-five thousand twenty-five equals
+JA: 46,368 足す 75,025 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N026 | 316.400–320.000s（仮） | result
+EN: one hundred twenty-one thousand three hundred ninety-three
+JA: 121,393
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+T026a | 320.600–329.400s（仮） | large-place-values
+EN: The commas help us read groups of three digits. They are separators, not extra digits, and they do not change the addition.
+JA: カンマは3桁ずつの区切りを読む助けだよ。桁が増えるわけではなく、足し算は変わらない。
+画面: 46,368+75,025=121,393の直後。数式全体と位取り拡大を切り替える。
+
+T026b | 330.000–338.800s（仮） | large-place-values
+EN: Keep the ones columns lined up on the right. Even with larger numbers, each column still adds the same kind of units.
+JA: 右端の一の位をそろえよう。大きな数でも、それぞれの列では同じ位の単位を足すよ。
+画面: 縦式へ切替時は一の位で右揃え。各値を独立して中央揃えした縦式にしない。
+
+E027 | 341.400–347.800s（仮） | generate
+EN: seventy-five thousand twenty-five plus one hundred twenty-one thousand three hundred ninety-three equals
+JA: 75,025 足す 121,393 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N027 | 347.960–351.160s（仮） | result
+EN: one hundred ninety-six thousand four hundred eighteen
+JA: 196,418
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E028 | 353.160–360.760s（仮） | generate
+EN: one hundred twenty-one thousand three hundred ninety-three plus one hundred ninety-six thousand four hundred eighteen equals
+JA: 121,393 足す 196,418 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N028 | 360.920–363.720s（仮） | result
+EN: three hundred seventeen thousand eight hundred eleven
+JA: 317,811
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E029 | 365.720–372.520s（仮） | generate
+EN: one hundred ninety-six thousand four hundred eighteen plus three hundred seventeen thousand eight hundred eleven equals
+JA: 196,418 足す 317,811 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N029 | 372.680–375.880s（仮） | result
+EN: five hundred fourteen thousand two hundred twenty-nine
+JA: 514,229
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E030 | 377.880–384.680s（仮） | generate
+EN: three hundred seventeen thousand eight hundred eleven plus five hundred fourteen thousand two hundred twenty-nine equals
+JA: 317,811 足す 514,229 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N030 | 384.840–387.240s（仮） | result
+EN: eight hundred thirty-two thousand forty
+JA: 832,040
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E031 | 389.240–395.640s（仮） | generate
+EN: five hundred fourteen thousand two hundred twenty-nine plus eight hundred thirty-two thousand forty equals
+JA: 514,229 足す 832,040 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N031 | 395.800–400.200s（仮） | result
+EN: one million three hundred forty-six thousand two hundred sixty-nine
+JA: 1,346,269
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E032 | 402.200–409.800s（仮） | generate
+EN: eight hundred thirty-two thousand forty plus one million three hundred forty-six thousand two hundred sixty-nine equals
+JA: 832,040 足す 1,346,269 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N032 | 409.960–413.960s（仮） | result
+EN: two million one hundred seventy-eight thousand three hundred nine
+JA: 2,178,309
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E033 | 415.960–425.160s（仮） | generate
+EN: one million three hundred forty-six thousand two hundred sixty-nine plus two million one hundred seventy-eight thousand three hundred nine equals
+JA: 1,346,269 足す 2,178,309 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N033 | 425.320–429.720s（仮） | result
+EN: three million five hundred twenty-four thousand five hundred seventy-eight
+JA: 3,524,578
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E034 | 431.720–440.920s（仮） | generate
+EN: two million one hundred seventy-eight thousand three hundred nine plus three million five hundred twenty-four thousand five hundred seventy-eight equals
+JA: 2,178,309 足す 3,524,578 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N034 | 441.080–445.080s（仮） | result
+EN: five million seven hundred two thousand eight hundred eighty-seven
+JA: 5,702,887
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E035 | 447.080–456.280s（仮） | generate
+EN: three million five hundred twenty-four thousand five hundred seventy-eight plus five million seven hundred two thousand eight hundred eighty-seven equals
+JA: 3,524,578 足す 5,702,887 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N035 | 456.440–460.840s（仮） | result
+EN: nine million two hundred twenty-seven thousand four hundred sixty-five
+JA: 9,227,465
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E036 | 462.840–472.040s（仮） | generate
+EN: five million seven hundred two thousand eight hundred eighty-seven plus nine million two hundred twenty-seven thousand four hundred sixty-five equals
+JA: 5,702,887 足す 9,227,465 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N036 | 472.200–476.200s（仮） | result
+EN: fourteen million nine hundred thirty thousand three hundred fifty-two
+JA: 14,930,352
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E037 | 478.200–487.400s（仮） | generate
+EN: nine million two hundred twenty-seven thousand four hundred sixty-five plus fourteen million nine hundred thirty thousand three hundred fifty-two equals
+JA: 9,227,465 足す 14,930,352 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N037 | 487.560–491.960s（仮） | result
+EN: twenty-four million one hundred fifty-seven thousand eight hundred seventeen
+JA: 24,157,817
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E038 | 493.960–503.160s（仮） | generate
+EN: fourteen million nine hundred thirty thousand three hundred fifty-two plus twenty-four million one hundred fifty-seven thousand eight hundred seventeen equals
+JA: 14,930,352 足す 24,157,817 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N038 | 503.320–507.320s（仮） | result
+EN: thirty-nine million eighty-eight thousand one hundred sixty-nine
+JA: 39,088,169
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+E039 | 509.320–518.520s（仮） | generate
+EN: twenty-four million one hundred fifty-seven thousand eight hundred seventeen plus thirty-nine million eighty-eight thousand one hundred sixty-nine equals
+JA: 24,157,817 足す 39,088,169 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N039 | 518.680–523.480s（仮） | result
+EN: sixty-three million two hundred forty-five thousand nine hundred eighty-six
+JA: 63,245,986
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+T039a | 524.080–532.880s（仮） | last-pair
+EN: We have reached the final pair for this journey. Both values are below one hundred million. Their sum will cross that mark.
+JA: 今回の旅の最後の二つに来たね。どちらも1億未満だけれど、合計はそこを超えるよ。
+画面: F₃₈=39,088,169 / F₃₉=63,245,986を入力へ。出力欄は未確定。
+
+T039b | 533.480–543.480s（仮） | last-pair
+EN: Watch the labels as the two values enter the formula. It is the same addition we used at the start, with more place-value columns.
+JA: 二つの値が式に入る時、ラベルを見てね。位の列が増えても、最初と同じ足し算だよ。
+画面: F₄₀生成前の説明。数値は切替前後に同一真値を参照。
+
+E040 | 546.080–555.680s（仮） | generate
+EN: thirty-nine million eighty-eight thousand one hundred sixty-nine plus sixty-three million two hundred forty-five thousand nine hundred eighty-six equals
+JA: 39,088,169 足す 63,245,986 は……
+画面: a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。
+
+N040 | 555.840–561.040s（仮） | result
+EN: one hundred two million three hundred thirty-four thousand one hundred fifty-five
+JA: 102,334,155
+画面: 対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。
+
+O01 | 561.640–570.040s（仮） | finale
+EN: We've counted forty-one entries, from F zero through F forty. Two starting values, then thirty-nine additions brought us here.
+JA: FゼロからFフォーティーまで41項を数えたね。二つの初期値から39回の足し算でここまで来たよ。
+画面: 41項・39加算・初期値2項を別に表示。
+
+O02 | 570.640–579.040s（仮） | finale
+EN: The newest number is just past one hundred million. We stop here today, but the rule can keep making more numbers.
+JA: 新しい数は1億を少し超えたね。今日はここまでだけれど、規則を使えばその先も続けられるよ。
+画面: F₄₀=102,334,155と直前二項を確定表示。
+
+O03 | 579.640–589.240s（仮） | recap
+EN: Remember the motion: take the previous two, add them, keep the newest pair, and repeat. Every new entry has a place in the chain.
+JA: 動きを思い出そう。直前の二つを足し、新しい二つを残して繰り返す。どの新しい項にも列の中の場所があるよ。
+画面: 式とF₀〜F₄₀の履歴へ引く。41枚は項の数であって最終値の個数でない。
+
+O04 | 589.840–593.440s（仮） | goodbye
+EN: Thanks for counting with me. See you next time!
+JA: 一緒に数えてくれてありがとう。またね。
+画面: 追加済みdelighted（閉眼笑顔）を終幕で一度使用。共通身体基準560pxを400pxで表示、足支点(1655,990)。
+
+全項対応表（式の表示結果はここで確認できる。音声Eは結果を含まない）
+F_0 | 通算1/41 | 0 | zero | INITIAL VALUE
+F_1 | 通算2/41 | 1 | one | INITIAL VALUE
+F_2 | 通算3/41 | 1 | one | 0 + 1 = 1
+F_3 | 通算4/41 | 2 | two | 1 + 1 = 2
+F_4 | 通算5/41 | 3 | three | 1 + 2 = 3
+F_5 | 通算6/41 | 5 | five | 2 + 3 = 5
+F_6 | 通算7/41 | 8 | eight | 3 + 5 = 8
+F_7 | 通算8/41 | 13 | thirteen | 5 + 8 = 13
+F_8 | 通算9/41 | 21 | twenty-one | 8 + 13 = 21
+F_9 | 通算10/41 | 34 | thirty-four | 13 + 21 = 34
+F_10 | 通算11/41 | 55 | fifty-five | 21 + 34 = 55
+F_11 | 通算12/41 | 89 | eighty-nine | 34 + 55 = 89
+F_12 | 通算13/41 | 144 | one hundred forty-four | 55 + 89 = 144
+F_13 | 通算14/41 | 233 | two hundred thirty-three | 89 + 144 = 233
+F_14 | 通算15/41 | 377 | three hundred seventy-seven | 144 + 233 = 377
+F_15 | 通算16/41 | 610 | six hundred ten | 233 + 377 = 610
+F_16 | 通算17/41 | 987 | nine hundred eighty-seven | 377 + 610 = 987
+F_17 | 通算18/41 | 1,597 | one thousand five hundred ninety-seven | 610 + 987 = 1,597
+F_18 | 通算19/41 | 2,584 | two thousand five hundred eighty-four | 987 + 1,597 = 2,584
+F_19 | 通算20/41 | 4,181 | four thousand one hundred eighty-one | 1,597 + 2,584 = 4,181
+F_20 | 通算21/41 | 6,765 | six thousand seven hundred sixty-five | 2,584 + 4,181 = 6,765
+F_21 | 通算22/41 | 10,946 | ten thousand nine hundred forty-six | 4,181 + 6,765 = 10,946
+F_22 | 通算23/41 | 17,711 | seventeen thousand seven hundred eleven | 6,765 + 10,946 = 17,711
+F_23 | 通算24/41 | 28,657 | twenty-eight thousand six hundred fifty-seven | 10,946 + 17,711 = 28,657
+F_24 | 通算25/41 | 46,368 | forty-six thousand three hundred sixty-eight | 17,711 + 28,657 = 46,368
+F_25 | 通算26/41 | 75,025 | seventy-five thousand twenty-five | 28,657 + 46,368 = 75,025
+F_26 | 通算27/41 | 121,393 | one hundred twenty-one thousand three hundred ninety-three | 46,368 + 75,025 = 121,393
+F_27 | 通算28/41 | 196,418 | one hundred ninety-six thousand four hundred eighteen | 75,025 + 121,393 = 196,418
+F_28 | 通算29/41 | 317,811 | three hundred seventeen thousand eight hundred eleven | 121,393 + 196,418 = 317,811
+F_29 | 通算30/41 | 514,229 | five hundred fourteen thousand two hundred twenty-nine | 196,418 + 317,811 = 514,229
+F_30 | 通算31/41 | 832,040 | eight hundred thirty-two thousand forty | 317,811 + 514,229 = 832,040
+F_31 | 通算32/41 | 1,346,269 | one million three hundred forty-six thousand two hundred sixty-nine | 514,229 + 832,040 = 1,346,269
+F_32 | 通算33/41 | 2,178,309 | two million one hundred seventy-eight thousand three hundred nine | 832,040 + 1,346,269 = 2,178,309
+F_33 | 通算34/41 | 3,524,578 | three million five hundred twenty-four thousand five hundred seventy-eight | 1,346,269 + 2,178,309 = 3,524,578
+F_34 | 通算35/41 | 5,702,887 | five million seven hundred two thousand eight hundred eighty-seven | 2,178,309 + 3,524,578 = 5,702,887
+F_35 | 通算36/41 | 9,227,465 | nine million two hundred twenty-seven thousand four hundred sixty-five | 3,524,578 + 5,702,887 = 9,227,465
+F_36 | 通算37/41 | 14,930,352 | fourteen million nine hundred thirty thousand three hundred fifty-two | 5,702,887 + 9,227,465 = 14,930,352
+F_37 | 通算38/41 | 24,157,817 | twenty-four million one hundred fifty-seven thousand eight hundred seventeen | 9,227,465 + 14,930,352 = 24,157,817
+F_38 | 通算39/41 | 39,088,169 | thirty-nine million eighty-eight thousand one hundred sixty-nine | 14,930,352 + 24,157,817 = 39,088,169
+F_39 | 通算40/41 | 63,245,986 | sixty-three million two hundred forty-five thousand nine hundred eighty-six | 24,157,817 + 39,088,169 = 63,245,986
+F_40 | 通算41/41 | 102,334,155 | one hundred two million three hundred thirty-four thousand one hundred fifty-five | 39,088,169 + 63,245,986 = 102,334,155
+
+概算総語数1221、固定遷移107.04秒、130〜150語/分で約9.92〜11.18分。詳細と未実施項目はtiming-plan.json。

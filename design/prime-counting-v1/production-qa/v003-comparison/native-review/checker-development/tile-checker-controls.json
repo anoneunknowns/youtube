@@ -1,0 +1,60 @@
+{
+  "kind": "controlled-encoded-progress-checker-validation",
+  "verifier_sha256": "ccb12e3cabf5f422fdedbb0a635fc6747504c15cab584cca2ee9912d706b08c8",
+  "positive_and_negative_decisions_correct": true,
+  "controls": [
+    {
+      "name": "correct-earned-tiles",
+      "passed": true,
+      "ordinal_states": 169,
+      "evidence": "design/prime-counting-v1/production-qa/v003-comparison/native-review/checker-development/correct-earned-tiles-qa-v002/verification.json"
+    },
+    {
+      "name": "premature-and-missing-tile",
+      "passed": false,
+      "expected_to_pass": false,
+      "failures": [
+        {
+          "frame": 194,
+          "ordinal": 83,
+          "active_cells": 84,
+          "wrong_cells": [
+            83
+          ],
+          "ambiguous_cells": []
+        },
+        {
+          "frame": 194,
+          "ordinal": 83,
+          "connected_components": 84
+        },
+        {
+          "frame": 196,
+          "ordinal": 84,
+          "active_cells": 83,
+          "wrong_cells": [
+            83
+          ],
+          "ambiguous_cells": []
+        },
+        {
+          "frame": 196,
+          "ordinal": 84,
+          "connected_components": 83
+        },
+        {
+          "frame": 197,
+          "ordinal": 84,
+          "active_cells": 83,
+          "wrong_cells": [
+            83
+          ],
+          "ambiguous_cells": []
+        }
+      ],
+      "evidence": "design/prime-counting-v1/production-qa/v003-comparison/native-review/checker-development/premature-and-missing-tile-qa/verification.json"
+    }
+  ],
+  "preserved_failed_development": "Initial independent RGB teal mask failed late warm fades; the declared source-color luma midpoint correctly models that fade, without changing film pixels or acceptance on wrong tile counts.",
+  "scope": "Controlled checker development fixtures, not production reference pixels or artistic source material."
+}

@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "kind": "independent_fibonacci_preproduction_review",
+  "reviewed_at": "2026-11-11T23:21:20.196851+09:00",
+  "status": "PASS_WITHIN_RECORDED_PREPRODUCTION_SCOPE",
+  "unresolved_findings": [],
+  "scope": "Independent local math/English/timing verification, code/prose consistency review, selected final PNG inspection, selected decoded GIF frame inspection, independent composited-pixel checks. No audio or production MP4 exists or was reviewed.",
+  "inputs": [
+    {
+      "path": "design/fibonacci-counting-v1/concept-and-scenario.txt",
+      "sha256": "2a55ea50422ab04efb1a5d320ca8860bd99560012b0ffe99a4fe97766e0008b0",
+      "bytes": 9693
+    },
+    {
+      "path": "design/fibonacci-counting-v1/script-and-sound-cues.txt",
+      "sha256": "d566dcb785e6f2cf014319099f869f205bc46a4e602f0c8cd1e1a75356081aaa",
+      "bytes": 33442
+    },
+    {
+      "path": "design/fibonacci-counting-v1/count-lines.json",
+      "sha256": "526ac7450e475a6573ecd3beadd161721318701768399ddfdf59667de02071dd",
+      "bytes": 30215
+    },
+    {
+      "path": "design/fibonacci-counting-v1/narration.json",
+      "sha256": "a2a46d489ad3a694a304b9f01bee1d88816de070d0e588ec0bef5e396399d8ca",
+      "bytes": 64304
+    },
+    {
+      "path": "design/fibonacci-counting-v1/timing-plan.json",
+      "sha256": "4ac02d99bab64a636927cdf5c2ba94d7be9f2685c2a31e81dc4428a5c980edd8",
+      "bytes": 5004
+    },
+    {
+      "path": "design/fibonacci-counting-v1/background-concepts.txt",
+      "sha256": "91893e850ace40190253cc7b3c783d9243546489aeaaa6509b4e91d242a630dd",
+      "bytes": 4786
+    },
+    {
+      "path": "design/fibonacci-counting-v1/README.txt",
+      "sha256": "6bf953bfa2bbf80e4c92af6beff040de36206fc821a941a697c30ef5d74c3c16",
+      "bytes": 4226
+    },
+    {
+      "path": "tools/render_fibonacci_mockups.py",
+      "sha256": "7b418a19afb87649f0a06193046386725cc533b0a4d1bdd980d60c477c63d2fe",
+      "bytes": 31398
+    },
+    {
+      "path": "docs/LAYOUT-ALIGNMENT.md",
+      "sha256": "467ee6e32188a5c3486d72141e9d1fa5c1380301d4e7322c951898f485061001",
+      "bytes": 5351
+    },
+    {
+      "path": "design/fibonacci-counting-v1/qa/mockup-verification.json",
+      "sha256": "98c2c5e14e3c9933e21f17ad60c60346087617c77a3c4d6b289d11a57f918ecb",
+      "bytes": 6161249
+    },
+    {
+      "path": "design/fibonacci-counting-v1/qa/content-verification.json",
+      "sha256": "686ff7221b3749aa68d7897aebbc0cfc353728dc724af6d71fcda879a1f84bec",
+      "bytes": 16696
+    },
+    {
+      "path": "design/fibonacci-counting-v1/character-selection.json",
+      "sha256": "99e2bfe3fc403210ad42927bbdad882cf67f45fe3851d065fd37a96768f46b48",
+      "bytes": 7218
+    }
+  ],
+  "content": {
+    "passed": true,
+    "terms": 41,
+    "formula_prefixes": 39,
+    "narration_events": 104,
+    "math_method": "F0=0; for n>=1 use sum(comb(n-k-1,k),k=0..floor((n-1)/2)); compare every row, then independently parse all cardinal words and compare operands and narration IDs. No producer module imported.",
+    "two_distinct_ones_retained": true,
+    "first_term_above_100_million": {
+      "index": 40,
+      "value": 102334155,
+      "previous_value": 63245986
+    },
+    "word_count": 1221,
+    "fixed_transition_seconds": 107.04,
+    "estimated_duration_seconds": [
+      595.44,
+      670.578
+    ],
+    "timing_is_provisional_not_measured_audio": true
+  },
+  "composited_main_number_pixel_alignment": {
+    "method": "For each pixel in the design ROI, estimate alpha from decoded PNG C=B+alpha*(ink-B), inkRGB=(40,68,85), backdrop B independently loaded from the clean background. Keep alpha>=0.500 and max-channel residual<=1. Determine bbox and both axes independently of renderer-returned origins.",
+    "measurements": [
+      {
+        "scene": "05-add-and-generate.png",
+        "component": "main-result",
+        "value": 21,
+        "resolution_px": [
+          1920,
+          1080
+        ],
+        "content_box_xyxy": [
+          118,
+          640,
+          1310,
+          794
+        ],
+        "visible_box_xyxy": [
+          646,
+          671,
+          782,
+          764
+        ],
+        "target_center_px": [
+          714.0,
+          717.0
+        ],
+        "visible_center_px": [
+          714.0,
+          717.5
+        ],
+        "delta_x_px": 0.0,
+        "delta_y_px": 0.5,
+        "tolerance_px": 0.5,
+        "horizontal_centered": true,
+        "vertical_centered": true,
+        "contained": true,
+        "nonempty": true,
+        "touches_measurement_edge": false,
+        "passed": true
+      },
+      {
+        "scene": "07-four-digits.png",
+        "component": "main-result",
+        "value": 1597,
+        "resolution_px": [
+          1920,
+          1080
+        ],
+        "content_box_xyxy": [
+          118,
+          640,
+          1310,
+          794
+        ],
+        "visible_box_xyxy": [
+          535,
+          663,
+          894,
+          770
+        ],
+        "target_center_px": [
+          714.0,
+          717.0
+        ],
+        "visible_center_px": [
+          714.5,
+          716.5
+        ],
+        "delta_x_px": 0.5,
+        "delta_y_px": -0.5,
+        "tolerance_px": 0.5,
+        "horizontal_centered": true,
+        "vertical_centered": true,
+        "contained": true,
+        "nonempty": true,
+        "touches_measurement_edge": false,
+        "passed": true
+      },
+      {
+        "scene": "08-first-million.png",
+        "component": "main-result",
+        "value": 1346269,
+        "resolution_px": [
+          1920,
+          1080
+        ],
+        "content_box_xyxy": [
+          118,
+          640,
+          1310,
+          794
+        ],
+        "visible_box_xyxy": [
+          422,
+          670,
+          1005,
+          765
+        ],
+        "target_center_px": [
+          714.0,
+          717.0
+        ],
+        "visible_center_px": [
+          713.5,
+          717.5
+        ],
+        "delta_x_px": -0.5,
+        "delta_y_px": 0.5,
+        "tolerance_px": 0.5,
+        "horizontal_centered": true,
+        "vertical_centered": true,
+        "contained": true,
+        "nonempty": true,
+        "touches_measurement_edge": false,
+        "passed": true
+      },
+      {
+        "scene": "10-final-addition.png",
+        "component": "main-result",
+        "value": 102334155,
+        "resolution_px": [
+          1920,
+          1080
+        ],
+        "content_box_xyxy": [
+          118,
+          640,
+          1310,
+          794
+        ],
+        "visible_box_xyxy": [
+          350,
+          670,
+          1079,
+          765
+        ],
+        "target_center_px": [
+          714.0,
+          717.0
+        ],
+        "visible_center_px": [
+          714.5,
+          717.5
+        ],
+        "delta_x_px": 0.5,
+        "delta_y_px": 0.5,
+        "tolerance_px": 0.5,
+        "horizontal_centered": true,
+        "vertical_centered": true,
+        "contained": true,
+        "nonempty": true,
+        "touches_measurement_edge": false,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "rendered_dot_counts": {
+    "method": "Read final RGB PNG, within isolated ROIs retain pixels within max-channel12 of blueRGB(71,122,162) or tealRGB(40,125,130); use four-connected components with area>=100.",
+    "measurements": [
+      {
+        "scene": "03b-three-plus-five.png",
+        "id": "source-three",
+        "roi_xyxy": [
+          180,
+          541,
+          620,
+          613
+        ],
+        "expected": 3,
+        "connected_components_over_100_pixels": 3,
+        "component_pixel_areas": [
+          904,
+          904,
+          904
+        ],
+        "passed": true
+      },
+      {
+        "scene": "03b-three-plus-five.png",
+        "id": "source-five",
+        "roi_xyxy": [
+          810,
+          541,
+          1250,
+          613
+        ],
+        "expected": 5,
+        "connected_components_over_100_pixels": 5,
+        "component_pixel_areas": [
+          904,
+          904,
+          904,
+          904,
+          904
+        ],
+        "passed": true
+      },
+      {
+        "scene": "03b-three-plus-five.png",
+        "id": "combined-eight",
+        "roi_xyxy": [
+          400,
+          849,
+          1030,
+          947
+        ],
+        "expected": 8,
+        "connected_components_over_100_pixels": 8,
+        "component_pixel_areas": [
+          904,
+          904,
+          904,
+          904,
+          904,
+          904,
+          904,
+          904
+        ],
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "producer_alignment_report_crosscheck": {
+    "source": {
+      "path": "design/fibonacci-counting-v1/qa/mockup-verification.json",
+      "sha256": "98c2c5e14e3c9933e21f17ad60c60346087617c77a3c4d6b289d11a57f918ecb",
+      "bytes": 6161249
+    },
+    "reported_alignment": {
+      "measurement": "actual alpha>=128 glyph/component raster, excluding parent frames, shadows and backdrop; threshold proportional for fades",
+      "tolerance_px": 0.5,
+      "measured_components": 4600,
+      "distinct_foreground_group_overlap_checks": "passed for every rendered canvas, including all120 motion samples",
+      "max_abs_dx_px": 0.5,
+      "max_abs_dy_px": 0.5,
+      "passed": true
+    },
+    "all_terms_state_count": 156,
+    "transition_sample_count": 72,
+    "sampled_motion_frame_count": 120,
+    "note": "4600 full component measurements are producer QA; this independent review remeasured four composited main number fields and visually inspected selected still/GIF samples, not all 4600 masks."
+  },
+  "visually_reviewed_stills": [
+    {
+      "path": "design/fibonacci-counting-v1/mockups/01-opening.png",
+      "sha256": "17c12d309dec253bd064d9996eec717e6ed529e7726cc88d9d6c0459a5616ea0",
+      "bytes": 2461311
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/03-two-ones.png",
+      "sha256": "9e9154d8a1cad3989f54faa4eb3bfdafb22258853f6508ab35ac8b55dc1ccb44",
+      "bytes": 2304030
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/03b-three-plus-five.png",
+      "sha256": "42cfc58cb1dc4a284f0795e248f5cb1c2bb9ab889d8d10177daa9b64118e3bd7",
+      "bytes": 2599643
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/05-add-and-generate.png",
+      "sha256": "b4e781995e9518019876bc848508f00715f5dc9b0014a5fb2ccc64f989f8ad8a",
+      "bytes": 2458244
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/06-place-value-carry.png",
+      "sha256": "5227f8304f8a2578e0ab340fbed9e78baa5faee25495888368de76ef51133e59",
+      "bytes": 2261515
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/carry-ones.png",
+      "sha256": "9fcde7945b1d88efa82fe6b30ea54a23a9b6a8697bd8778432c25ccd8cabd5a2",
+      "bytes": 2261624
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/carry-tens.png",
+      "sha256": "4f4a92d417062662d231fce2d9414a38f9fa4666cd84db64a367d85feb889f28",
+      "bytes": 2262491
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/carry-complete.png",
+      "sha256": "5227f8304f8a2578e0ab340fbed9e78baa5faee25495888368de76ef51133e59",
+      "bytes": 2261515
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/09-final-inputs.png",
+      "sha256": "b82292cb7a4cdb045528f7da10deb120bbdb0dcfb6fc5b2492fe4362cd7704e5",
+      "bytes": 2465227
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/10-final-addition.png",
+      "sha256": "882763065948055e6b2e1ba6a65fbf2e91e49c096f9389609754099f7fc711db",
+      "bytes": 2463579
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/11-finale.png",
+      "sha256": "b1d4d9581cda9486097fce0a12b29602c4801f954ff08afb0c000ecf03dafb09",
+      "bytes": 2597689
+    },
+    {
+      "path": "design/fibonacci-counting-v1/mockups/12-all-41-terms.png",
+      "sha256": "b798b6fece3015a854a0b24c06445b5d664a7e5d1214a1d151bf11d0323abc16",
+      "bytes": 2127512
+    }
+  ],
+  "motion_gif": {
+    "path": "design/fibonacci-counting-v1/mockups/formula-relay-preview.gif",
+    "sha256": "de38b8cb6bab3517e56b17397c86d611faf7fdd53033a7c729a3c2668a87f615",
+    "bytes": 13505877,
+    "resolution_px": [
+      960,
+      540
+    ],
+    "encoded_frame_count": 43,
+    "total_duration_ms": 12000,
+    "sampled_frames": [
+      {
+        "path": "design/fibonacci-counting-v1/qa/independent-samples/gif-00000ms.png",
+        "sha256": "f9e86926e6c7d55d764d56c22b4ef83346aadc2373b1bfc598ab1a0e9bae7519",
+        "bytes": 555727,
+        "requested_time_ms": 0,
+        "encoded_frame_index": 0,
+        "encoded_frame_start_ms": 0,
+        "encoded_frame_end_ms": 500,
+        "visually_reviewed": true
+      },
+      {
+        "path": "design/fibonacci-counting-v1/qa/independent-samples/gif-01500ms.png",
+        "sha256": "792c80fb803c95db596919854c235d561be94e36a05568ea7dca7c017efc61ed",
+        "bytes": 558122,
+        "requested_time_ms": 1500,
+        "encoded_frame_index": 3,
+        "encoded_frame_start_ms": 1500,
+        "encoded_frame_end_ms": 2600,
+        "visually_reviewed": true
+      },
+      {
+        "path": "design/fibonacci-counting-v1/qa/independent-samples/gif-02600ms.png",
+        "sha256": "75fd52c529b18347e35666fc8c01d9338865d9f3b1a2b20185076f7905bbb18d",
+        "bytes": 556069,
+        "requested_time_ms": 2600,
+        "encoded_frame_index": 4,
+        "encoded_frame_start_ms": 2600,
+        "encoded_frame_end_ms": 2700,
+        "visually_reviewed": true
+      },
+      {
+        "path": "design/fibonacci-counting-v1/qa/independent-samples/gif-03100ms.png",
+        "sha256": "42e5eedeff629c8c1c4d0710a8437ca69990a9ecb61080fefbcf5c49c7d5da31",
+        "bytes": 534121,
+        "requested_time_ms": 3100,
+        "encoded_frame_index": 9,
+        "encoded_frame_start_ms": 3100,
+        "encoded_frame_end_ms": 3200,
+        "visually_reviewed": true
+      },
+      {
+        "path": "design/fibonacci-counting-v1/qa/independent-samples/gif-03500ms.png",
+        "sha256": "7daee6f0d290be8096cdc679c93c7a1ca681c75d4be0f2a3278c80803a1430aa",
+        "bytes": 543157,
+        "requested_time_ms": 3500,
+        "encoded_frame_index": 13,
+        "encoded_frame_start_ms": 3500,
+        "encoded_frame_end_ms": 3600,
+        "visually_reviewed": true
+      },
+      {
+        "path": "design/fibonacci-counting-v1/qa/independent-samples/gif-03600ms.png",
+        "sha256": "821fdc58ac192e6bcdddb019bd15e17154905a1c5875494d329e8fc189789392",
+        "bytes": 555763,
+        "requested_time_ms": 3600,
+        "encoded_frame_index": 14,
+        "encoded_frame_start_ms": 3600,
+        "encoded_frame_end_ms": 4500,
+        "visually_reviewed": true
+      },
+      {
+        "path": "design/fibonacci-counting-v1/qa/independent-samples/gif-04000ms.png",
+        "sha256": "821fdc58ac192e6bcdddb019bd15e17154905a1c5875494d329e8fc189789392",
+        "bytes": 555763,
+        "requested_time_ms": 4000,
+        "encoded_frame_index": 14,
+        "encoded_frame_start_ms": 3600,
+        "encoded_frame_end_ms": 4500,
+        "visually_reviewed": true
+      },
+      {
+        "path": "design/fibonacci-counting-v1/qa/independent-samples/gif-07100ms.png",
+        "sha256": "337ae34f72d91f23607f803c0356b528bace2e03df420741d3312ecc0c5206d2",
+        "bytes": 538385,
+        "requested_time_ms": 7100,
+        "encoded_frame_index": 23,
+        "encoded_frame_start_ms": 7100,
+        "encoded_frame_end_ms": 7200,
+        "visually_reviewed": true
+      },
+      {
+        "path": "design/fibonacci-counting-v1/qa/independent-samples/gif-11100ms.png",
+        "sha256": "19ce668a4594aed0d62b5d29e36052439a7652b6f3ad9a7d53c49d3dc24bc4e0",
+        "bytes": 538602,
+        "requested_time_ms": 11100,
+        "encoded_frame_index": 37,
+        "encoded_frame_start_ms": 11100,
+        "encoded_frame_end_ms": 11200,
+        "visually_reviewed": true
+      }
+    ],
+    "observations": [
+      "3+5=8,5+8=13,8+13=21 arithmetic agrees with F4..F8.",
+      "Moving F-index labels remain attached to the correct unchanged values.",
+      "Handoff caption and labels no longer intersect; operators disappear during memory handoff.",
+      "At3.6/4.0 seconds next input pair is5 and8, with unknown result; no premature13.",
+      "Selected decoded frames show no text clipping or collisions with the cat."
+    ]
+  },
+  "resolved_findings": [
+    "Carry scene corrected from F10+F11=F12 to F11+F12=F13, metadata index13.",
+    "Carry ones/tens/complete separated and REPLAY identified.",
+    "OLDER/NEWER/NEW and moving F labels align with the script.",
+    "Result English reading now fades together with the numerical result.",
+    "Opening omits final answer; final unknown-input scene remains unrevealed.",
+    "All41 indexed history entries retain both ones.",
+    "Transfer labels/caption/operator overlap fixed and checked in decoded GIF frames.",
+    "Hidden repeated-one reading is omitted rather than included as a covered QA target."
+  ],
+  "limitations": [
+    "No TTS generation, PCM timing measurement, narration pronunciation, final AAC or production video/synchronization review.",
+    "GIF is a12-second silent concept study, with120 source samples coalesced into43 encoded frames; its timing is not the proposed narrated pacing.",
+    "All fixed-state producer QA and selected independent checks do not establish full continuous production animation quality.",
+    "Background distinction reviewed from this proposal and its recorded comparison with eight existing concepts; published YouTube channel was not independently fetched in this review.",
+    "Old production catalogs, adopted assets and past verification reports were not changed by this reviewer."
+  ],
+  "adopted_character_snapshot_check": {
+    "passed": true,
+    "id": "siamese-cat",
+    "neutral_path": "assets/library/characters/siamese-cat/sources/v005/neutral.png",
+    "existing_pose_paths": {
+      "blink": "assets/library/characters/siamese-cat/motions/v001/blink.png",
+      "greet": "assets/library/characters/siamese-cat/motions/v001/greet.png",
+      "think": "assets/library/characters/siamese-cat/motions/v001/think.png",
+      "aha": "assets/library/characters/siamese-cat/motions/v001/aha.png",
+      "cheer": "assets/library/characters/siamese-cat/motions/v001/cheer.png",
+      "species_action": "assets/library/characters/siamese-cat/motions/v001/species_action.png"
+    },
+    "renderer_uses_episode_selection_snapshot": true,
+    "snapshot_fixed_against_later_global_catalog_changes": true
+  }
+}

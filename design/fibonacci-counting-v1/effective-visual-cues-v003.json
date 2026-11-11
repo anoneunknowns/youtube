@@ -1,0 +1,1026 @@
+{
+  "schema_version": 1,
+  "kind": "current-fibonacci-production-visual-cue-addendum",
+  "status": "confirmed_finished_v003_media",
+  "media_revision": "v003",
+  "document_revision": "v003",
+  "review_mapping_only_not_builder_speech_input": true,
+  "historical_source": {
+    "path": "design/fibonacci-counting-v1/narration.json",
+    "sha256": "a2a46d489ad3a694a304b9f01bee1d88816de070d0e588ec0bef5e396399d8ca",
+    "role": "Authored spoken text remains the frozen audio source; provisional visual_cue/planning_window fields are historical and not authoritative for current output."
+  },
+  "unchanged_measured_audio_source": {
+    "path": "output/fibonacci-counting-001-v002/audio-build/timeline.json",
+    "sha256": "4cb6494b82bdcfccfe7311a622faec619e3a5ace9cf39cdcef8b2a947257557c"
+  },
+  "current_authority": "Finished-MP4 pixels, hash-bound measured timeline, exact motion plan and this production cue map supersede provisional visual directions. No historical source or QA file is edited.",
+  "corrections": [
+    {
+      "id": "T018a",
+      "historical_visual_cue_ja": "987+1,597=2,584のREPLAY。横三列の数式を保持し、位取りの説明だけ拡大する。入力→連鎖繰上がり→確定結果の三段階。",
+      "current_visual_cue_ja": "987+1,597=2,584の縦式REPLAYへ切り替える。入力を右揃えして一/十/百/千を整列し、各列の未確定結果は?で保持する。横三列の数式を同時には保持しない。",
+      "reason": "Rendered production interpretation replaces historical provisional visual direction; spoken text and measured voice times are unchanged."
+    },
+    {
+      "id": "T026a",
+      "historical_visual_cue_ja": "46,368+75,025=121,393の直後。数式全体と位取り拡大を切り替える。",
+      "current_visual_cue_ja": "縦に配置した46,368+75,025=121,393を表示し、THOUSANDS/ONESのグループとコンマを示す。説明中の全体式/寄りへの往復やカメラズームは行わない。",
+      "reason": "Rendered production interpretation replaces historical provisional visual direction; spoken text and measured voice times are unchanged."
+    },
+    {
+      "id": "O02",
+      "historical_visual_cue_ja": "F₄₀=102,334,155と直前二項を確定表示。",
+      "current_visual_cue_ja": "F40=102,334,155、初めて1億超という説明、一般式を表示する。F38/F39の具体値はこの画面へ併記せず、直前のT039/E040で示した。",
+      "reason": "Rendered production interpretation replaces historical provisional visual direction; spoken text and measured voice times are unchanged."
+    },
+    {
+      "id": "O03",
+      "historical_visual_cue_ja": "式とF₀〜F₄₀の履歴へ引く。41枚は項の数であって最終値の個数でない。",
+      "current_visual_cue_ja": "全41項の履歴へ固定画面で切り替える。二つの1を保持し、均等なカード間隔は項の順であり値の比例距離ではない。式と履歴の同時表示やカメラの引きは行わない。",
+      "reason": "Rendered production interpretation replaces historical provisional visual direction; spoken text and measured voice times are unchanged."
+    },
+    {
+      "id": "O04",
+      "historical_visual_cue_ja": "追加済みdelighted（閉眼笑顔）を終幕で一度使用。共通身体基準560pxを400pxで表示、足支点(1655,990)。",
+      "current_visual_cue_ja": "最終値と一般式を示す終幕。猫は開眼の手振りを2往復しneutralへ戻り、末尾2秒で全画面をクリーム色へフェードする。閉眼笑顔の保持は行わない。",
+      "reason": "Rendered production interpretation replaces historical provisional visual direction; spoken text and measured voice times are unchanged."
+    }
+  ],
+  "entries": [
+    {
+      "id": "I01",
+      "kind": "intro",
+      "spoken_text": "Hi! Let's count Fibonacci numbers, and watch each new number take shape.",
+      "voice_start_s": 0.8,
+      "voice_end_s": 5.013541666666667,
+      "current_visual_cue_ja": "雲海と郵便局の全画面。タイトル、初期値0/F0と1/F1の小カード。シャム猫は準備姿勢と前脚in/outで2往復し通常姿へ戻る。画面の拡大移動は行わない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#I01"
+    },
+    {
+      "id": "I02",
+      "kind": "intro",
+      "spoken_text": "We start with zero and one. These are our two starting values.",
+      "voice_start_s": 5.613541666666666,
+      "voice_end_s": 9.144708333333334,
+      "current_visual_cue_ja": "START WITH TWO SEEDS。左右の独立カードに0／F0 · FIRST TERMと1／F1 · SECOND TERMを表示。導入であり本カウントの進捗は増やさない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#I02"
+    },
+    {
+      "id": "I03",
+      "kind": "intro",
+      "spoken_text": "To make the next number, add the previous two. Then use the newest pair, and do it again.",
+      "voice_start_s": 9.744708333333334,
+      "voice_end_s": 14.660208333333333,
+      "current_visual_cue_ja": "一般式Fn=F(n−2)+F(n−1)、n≥2、初期条件F0=0/F1=1。直前二項の加算規則を説明。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#I03"
+    },
+    {
+      "id": "I04",
+      "kind": "intro",
+      "spoken_text": "The small labels tell us each number's place. We start at F zero, so F two is the third entry.",
+      "voice_start_s": 15.260208333333333,
+      "voice_end_s": 21.3455,
+      "current_visual_cue_ja": "F0/F1/F2と値0/1/1、1番目/2番目/3番目を別の領域で対応付ける。添字と値を混同しない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#I04"
+    },
+    {
+      "id": "I05",
+      "kind": "intro",
+      "spoken_text": "The older value sits on the left. The newer value sits beside it. Their labels move with them.",
+      "voice_start_s": 21.9455,
+      "voice_end_s": 27.359041666666666,
+      "current_visual_cue_ja": "三列OLDER/NEWER/NEWの入力例。入力値とF添字を表示し、直前の二値を強調する。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#I05"
+    },
+    {
+      "id": "I06",
+      "kind": "intro",
+      "spoken_text": "Listen for plus and equals. The answer appears when we say its name, and becomes our newest value.",
+      "voice_start_s": 27.959041666666668,
+      "voice_end_s": 33.888958333333335,
+      "current_visual_cue_ja": "同じ入力例で演算子＋/＝と出力の順を説明。未確定の答えを表示せず、英語の読みと結果はN発話の0.12秒前に同時表示する。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#I06"
+    },
+    {
+      "id": "I07",
+      "kind": "intro",
+      "spoken_text": "Number windows show values, not piles of things. A window marked one thousand stands for that value, not one thousand objects.",
+      "voice_start_s": 34.488958333333336,
+      "voice_end_s": 42.462375,
+      "current_visual_cue_ja": "1,000という数値窓を例示し、物体1000個の絵ではなく値の記号であると説明。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#I07"
+    },
+    {
+      "id": "I08",
+      "kind": "intro",
+      "spoken_text": "We'll keep adding until the sequence first passes one hundred million. The numbers grow, but the rule stays the same.",
+      "voice_start_s": 43.062375,
+      "voice_end_s": 49.763041666666666,
+      "current_visual_cue_ja": "目標100,000,000だけを表示し、終点102,334,155を導入で先出ししない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#I08"
+    },
+    {
+      "id": "N000",
+      "kind": "count",
+      "spoken_text": "zero",
+      "voice_start_s": 50.36304166666667,
+      "voice_end_s": 50.94233333333333,
+      "current_visual_cue_ja": "F0=0を英語読みと同時に確定し、TERM 1 OF 41 / INDEX n=0を表示。初期値のため二項加算は作らない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N000"
+    },
+    {
+      "id": "N001",
+      "kind": "count",
+      "spoken_text": "one",
+      "voice_start_s": 52.94233333333333,
+      "voice_end_s": 53.43025,
+      "current_visual_cue_ja": "F1=1を英語読みと同時に確定し、TERM 2 OF 41 / INDEX n=1を表示。初期値のため二項加算は作らない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N001"
+    },
+    {
+      "id": "E002",
+      "kind": "formula_prefix",
+      "spoken_text": "zero plus one equals",
+      "voice_start_s": 55.43025,
+      "voice_end_s": 56.906375,
+      "current_visual_cue_ja": "F0=0とF1=1を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E002"
+    },
+    {
+      "id": "N002",
+      "kind": "count",
+      "spoken_text": "one",
+      "voice_start_s": 57.066375,
+      "voice_end_s": 57.554291666666664,
+      "current_visual_cue_ja": "F2=1を英語読みと同時に確定し、TERM 3 OF 41 / INDEX n=2を表示。次の受渡しではF1=1とF2=1を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N002"
+    },
+    {
+      "id": "T002a",
+      "kind": "explanation",
+      "spoken_text": "There are two ones in a row. One is a starting value; the next was made by adding zero and one.",
+      "voice_start_s": 58.154291666666666,
+      "voice_end_s": 63.6505,
+      "current_visual_cue_ja": "REPLAY。F1=1とF2=1を別の項として、0+1=1と二つの1の説明を表示。本カウント進捗は増やさない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T002a"
+    },
+    {
+      "id": "T002b",
+      "kind": "explanation",
+      "spoken_text": "They have the same value, but different places. Keep both entries, because each belongs to the sequence.",
+      "voice_start_s": 64.2505,
+      "voice_end_s": 70.36591666666666,
+      "current_visual_cue_ja": "同じ値と異なる位置を比較。二つの1とF添字は別々に保持する。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T002b"
+    },
+    {
+      "id": "E003",
+      "kind": "formula_prefix",
+      "spoken_text": "one plus one equals",
+      "voice_start_s": 72.96591666666667,
+      "voice_end_s": 74.30104166666666,
+      "current_visual_cue_ja": "F1=1とF2=1を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E003"
+    },
+    {
+      "id": "N003",
+      "kind": "count",
+      "spoken_text": "two",
+      "voice_start_s": 74.46104166666667,
+      "voice_end_s": 74.976625,
+      "current_visual_cue_ja": "F3=2を英語読みと同時に確定し、TERM 4 OF 41 / INDEX n=3を表示。次の受渡しではF2=1とF3=2を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N003"
+    },
+    {
+      "id": "E004",
+      "kind": "formula_prefix",
+      "spoken_text": "one plus two equals",
+      "voice_start_s": 76.976625,
+      "voice_end_s": 78.24933333333334,
+      "current_visual_cue_ja": "F2=1とF3=2を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E004"
+    },
+    {
+      "id": "N004",
+      "kind": "count",
+      "spoken_text": "three",
+      "voice_start_s": 78.40933333333334,
+      "voice_end_s": 78.966625,
+      "current_visual_cue_ja": "F4=3を英語読みと同時に確定し、TERM 5 OF 41 / INDEX n=4を表示。次の受渡しではF3=2とF4=3を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N004"
+    },
+    {
+      "id": "E005",
+      "kind": "formula_prefix",
+      "spoken_text": "two plus three equals",
+      "voice_start_s": 80.966625,
+      "voice_end_s": 82.335125,
+      "current_visual_cue_ja": "F3=2とF4=3を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E005"
+    },
+    {
+      "id": "N005",
+      "kind": "count",
+      "spoken_text": "five",
+      "voice_start_s": 82.495125,
+      "voice_end_s": 83.09566666666667,
+      "current_visual_cue_ja": "F5=5を英語読みと同時に確定し、TERM 6 OF 41 / INDEX n=5を表示。次の受渡しではF4=3とF5=5を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N005"
+    },
+    {
+      "id": "E006",
+      "kind": "formula_prefix",
+      "spoken_text": "three plus five equals",
+      "voice_start_s": 85.09566666666667,
+      "voice_end_s": 86.507125,
+      "current_visual_cue_ja": "F4=3とF5=5を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E006"
+    },
+    {
+      "id": "N006",
+      "kind": "count",
+      "spoken_text": "eight",
+      "voice_start_s": 86.667125,
+      "voice_end_s": 87.17883333333333,
+      "current_visual_cue_ja": "F6=8を英語読みと同時に確定し、TERM 7 OF 41 / INDEX n=6を表示。次の受渡しではF5=5とF6=8を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N006"
+    },
+    {
+      "id": "E007",
+      "kind": "formula_prefix",
+      "spoken_text": "five plus eight equals",
+      "voice_start_s": 89.17883333333333,
+      "voice_end_s": 90.62970833333334,
+      "current_visual_cue_ja": "F5=5とF6=8を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E007"
+    },
+    {
+      "id": "N007",
+      "kind": "count",
+      "spoken_text": "thirteen",
+      "voice_start_s": 90.78970833333334,
+      "voice_end_s": 91.480625,
+      "current_visual_cue_ja": "F7=13を英語読みと同時に確定し、TERM 8 OF 41 / INDEX n=7を表示。次の受渡しではF6=8とF7=13を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N007"
+    },
+    {
+      "id": "E008",
+      "kind": "formula_prefix",
+      "spoken_text": "eight plus thirteen equals",
+      "voice_start_s": 93.480625,
+      "voice_end_s": 94.96216666666666,
+      "current_visual_cue_ja": "F6=8とF7=13を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E008"
+    },
+    {
+      "id": "N008",
+      "kind": "count",
+      "spoken_text": "twenty-one",
+      "voice_start_s": 95.12216666666667,
+      "voice_end_s": 95.83795833333333,
+      "current_visual_cue_ja": "F8=21を英語読みと同時に確定し、TERM 9 OF 41 / INDEX n=8を表示。次の受渡しではF7=13とF8=21を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N008"
+    },
+    {
+      "id": "T008a",
+      "kind": "explanation",
+      "spoken_text": "Let's look inside that addition. In the ones column, eight plus three makes eleven: one stays here, and one ten moves left.",
+      "voice_start_s": 96.43795833333333,
+      "voice_end_s": 103.99808333333333,
+      "current_visual_cue_ja": "縦の位取りREPLAYで8+13=21を一の位から再生。8+3=11、一に1を記入し、繰上がり1を十の位へ渡す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T008a"
+    },
+    {
+      "id": "T008b",
+      "kind": "explanation",
+      "spoken_text": "That carried ten joins the ten already there. The columns now show two tens and one one. Then the newest pair moves on.",
+      "voice_start_s": 104.59808333333334,
+      "voice_end_s": 112.037,
+      "current_visual_cue_ja": "十の位0+1+1=2。計算→数字記入→列完了を示し、完了後に確定21を表示する。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T008b"
+    },
+    {
+      "id": "E009",
+      "kind": "formula_prefix",
+      "spoken_text": "thirteen plus twenty-one equals",
+      "voice_start_s": 114.637,
+      "voice_end_s": 116.46254166666667,
+      "current_visual_cue_ja": "F7=13とF8=21を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E009"
+    },
+    {
+      "id": "N009",
+      "kind": "count",
+      "spoken_text": "thirty-four",
+      "voice_start_s": 116.62254166666666,
+      "voice_end_s": 117.34095833333333,
+      "current_visual_cue_ja": "F9=34を英語読みと同時に確定し、TERM 10 OF 41 / INDEX n=9を表示。次の受渡しではF8=21とF9=34を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N009"
+    },
+    {
+      "id": "E010",
+      "kind": "formula_prefix",
+      "spoken_text": "twenty-one plus thirty-four equals",
+      "voice_start_s": 119.34095833333333,
+      "voice_end_s": 121.4365,
+      "current_visual_cue_ja": "F8=21とF9=34を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E010"
+    },
+    {
+      "id": "N010",
+      "kind": "count",
+      "spoken_text": "fifty-five",
+      "voice_start_s": 121.5965,
+      "voice_end_s": 122.45166666666667,
+      "current_visual_cue_ja": "F10=55を英語読みと同時に確定し、TERM 11 OF 41 / INDEX n=10を表示。次の受渡しではF9=34とF10=55を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N010"
+    },
+    {
+      "id": "E011",
+      "kind": "formula_prefix",
+      "spoken_text": "thirty-four plus fifty-five equals",
+      "voice_start_s": 124.45166666666667,
+      "voice_end_s": 126.44570833333333,
+      "current_visual_cue_ja": "F9=34とF10=55を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E011"
+    },
+    {
+      "id": "N011",
+      "kind": "count",
+      "spoken_text": "eighty-nine",
+      "voice_start_s": 126.60570833333334,
+      "voice_end_s": 127.374,
+      "current_visual_cue_ja": "F11=89を英語読みと同時に確定し、TERM 12 OF 41 / INDEX n=11を表示。次の受渡しではF10=55とF11=89を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N011"
+    },
+    {
+      "id": "E012",
+      "kind": "formula_prefix",
+      "spoken_text": "fifty-five plus eighty-nine equals",
+      "voice_start_s": 129.374,
+      "voice_end_s": 131.37433333333334,
+      "current_visual_cue_ja": "F10=55とF11=89を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E012"
+    },
+    {
+      "id": "N012",
+      "kind": "count",
+      "spoken_text": "one hundred forty-four",
+      "voice_start_s": 131.53433333333334,
+      "voice_end_s": 132.87120833333333,
+      "current_visual_cue_ja": "F12=144を英語読みと同時に確定し、TERM 13 OF 41 / INDEX n=12を表示。次の受渡しではF11=89とF12=144を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N012"
+    },
+    {
+      "id": "E013",
+      "kind": "formula_prefix",
+      "spoken_text": "eighty-nine plus one hundred forty-four equals",
+      "voice_start_s": 134.87120833333333,
+      "voice_end_s": 137.58783333333332,
+      "current_visual_cue_ja": "F11=89とF12=144を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E013"
+    },
+    {
+      "id": "N013",
+      "kind": "count",
+      "spoken_text": "two hundred thirty-three",
+      "voice_start_s": 137.74783333333335,
+      "voice_end_s": 139.02529166666667,
+      "current_visual_cue_ja": "F13=233を英語読みと同時に確定し、TERM 14 OF 41 / INDEX n=13を表示。次の受渡しではF12=144とF13=233を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N013"
+    },
+    {
+      "id": "T013a",
+      "kind": "explanation",
+      "spoken_text": "Here the ones make thirteen. Write three and carry one ten. The tens, including that carry, also make thirteen.",
+      "voice_start_s": 139.62529166666667,
+      "voice_end_s": 145.61904166666667,
+      "current_visual_cue_ja": "縦式89+144。9+4=13で一に3を書いて十へ1、8+4+1=13で十に3を書いて百へ1を渡す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T013a"
+    },
+    {
+      "id": "T013b",
+      "kind": "explanation",
+      "spoken_text": "Write three tens, and carry one hundred. That hundred joins the hundred already there. Every column keeps its own place.",
+      "voice_start_s": 146.21904166666667,
+      "voice_end_s": 153.27304166666667,
+      "current_visual_cue_ja": "百の位0+1+1=2。繰上がりは隣列へだけ移し、最後の列はCOLUMN COMPLETE、完了後233。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T013b"
+    },
+    {
+      "id": "E014",
+      "kind": "formula_prefix",
+      "spoken_text": "one hundred forty-four plus two hundred thirty-three equals",
+      "voice_start_s": 155.87304166666667,
+      "voice_end_s": 159.140875,
+      "current_visual_cue_ja": "F12=144とF13=233を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E014"
+    },
+    {
+      "id": "N014",
+      "kind": "count",
+      "spoken_text": "three hundred seventy-seven",
+      "voice_start_s": 159.300875,
+      "voice_end_s": 160.79495833333334,
+      "current_visual_cue_ja": "F14=377を英語読みと同時に確定し、TERM 15 OF 41 / INDEX n=14を表示。次の受渡しではF13=233とF14=377を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N014"
+    },
+    {
+      "id": "E015",
+      "kind": "formula_prefix",
+      "spoken_text": "two hundred thirty-three plus three hundred seventy-seven equals",
+      "voice_start_s": 162.79495833333334,
+      "voice_end_s": 166.36733333333333,
+      "current_visual_cue_ja": "F13=233とF14=377を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E015"
+    },
+    {
+      "id": "N015",
+      "kind": "count",
+      "spoken_text": "six hundred ten",
+      "voice_start_s": 166.52733333333333,
+      "voice_end_s": 167.591375,
+      "current_visual_cue_ja": "F15=610を英語読みと同時に確定し、TERM 16 OF 41 / INDEX n=15を表示。次の受渡しではF14=377とF15=610を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N015"
+    },
+    {
+      "id": "E016",
+      "kind": "formula_prefix",
+      "spoken_text": "three hundred seventy-seven plus six hundred ten equals",
+      "voice_start_s": 169.591375,
+      "voice_end_s": 172.92066666666668,
+      "current_visual_cue_ja": "F14=377とF15=610を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E016"
+    },
+    {
+      "id": "N016",
+      "kind": "count",
+      "spoken_text": "nine hundred eighty-seven",
+      "voice_start_s": 173.08066666666667,
+      "voice_end_s": 174.575875,
+      "current_visual_cue_ja": "F16=987を英語読みと同時に確定し、TERM 17 OF 41 / INDEX n=16を表示。次の受渡しではF15=610とF16=987を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N016"
+    },
+    {
+      "id": "E017",
+      "kind": "formula_prefix",
+      "spoken_text": "six hundred ten plus nine hundred eighty-seven equals",
+      "voice_start_s": 176.575875,
+      "voice_end_s": 179.90895833333335,
+      "current_visual_cue_ja": "F15=610とF16=987を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E017"
+    },
+    {
+      "id": "N017",
+      "kind": "count",
+      "spoken_text": "one thousand five hundred ninety-seven",
+      "voice_start_s": 180.06895833333334,
+      "voice_end_s": 182.369125,
+      "current_visual_cue_ja": "F17=1,597を英語読みと同時に確定し、TERM 18 OF 41 / INDEX n=17を表示。次の受渡しではF16=987とF17=1,597を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N017"
+    },
+    {
+      "id": "E018",
+      "kind": "formula_prefix",
+      "spoken_text": "nine hundred eighty-seven plus one thousand five hundred ninety-seven equals",
+      "voice_start_s": 184.369125,
+      "voice_end_s": 188.922625,
+      "current_visual_cue_ja": "F16=987とF17=1,597を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E018"
+    },
+    {
+      "id": "N018",
+      "kind": "count",
+      "spoken_text": "two thousand five hundred eighty-four",
+      "voice_start_s": 189.082625,
+      "voice_end_s": 191.07483333333334,
+      "current_visual_cue_ja": "F18=2,584を英語読みと同時に確定し、TERM 19 OF 41 / INDEX n=18を表示。次の受渡しではF17=1,597とF18=2,584を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N018"
+    },
+    {
+      "id": "T018a",
+      "kind": "explanation",
+      "spoken_text": "Now the values reach into the thousands. Start at the ones and follow each carry to the next column, one place at a time.",
+      "voice_start_s": 191.67483333333334,
+      "voice_end_s": 198.70691666666667,
+      "current_visual_cue_ja": "987+1,597=2,584の縦式REPLAYへ切り替える。入力を右揃えして一/十/百/千を整列し、各列の未確定結果は?で保持する。横三列の数式を同時には保持しない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T018a"
+    },
+    {
+      "id": "T018b",
+      "kind": "explanation",
+      "spoken_text": "Seven plus seven makes fourteen. Next come eighteen tens, then fifteen hundreds. Each carry moves one column left; it never skips a place.",
+      "voice_start_s": 199.30691666666667,
+      "voice_end_s": 208.15041666666667,
+      "current_visual_cue_ja": "縦式を一の位から連続再生。7+7=14、8+9+1=18、9+5+1=15、0+1+1=2。数字と繰上がりを分け、完了後2,584。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T018b"
+    },
+    {
+      "id": "E019",
+      "kind": "formula_prefix",
+      "spoken_text": "one thousand five hundred ninety-seven plus two thousand five hundred eighty-four equals",
+      "voice_start_s": 210.75041666666667,
+      "voice_end_s": 215.785875,
+      "current_visual_cue_ja": "F17=1,597とF18=2,584を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E019"
+    },
+    {
+      "id": "N019",
+      "kind": "count",
+      "spoken_text": "four thousand one hundred eighty-one",
+      "voice_start_s": 215.945875,
+      "voice_end_s": 217.80625,
+      "current_visual_cue_ja": "F19=4,181を英語読みと同時に確定し、TERM 20 OF 41 / INDEX n=19を表示。次の受渡しではF18=2,584とF19=4,181を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N019"
+    },
+    {
+      "id": "E020",
+      "kind": "formula_prefix",
+      "spoken_text": "two thousand five hundred eighty-four plus four thousand one hundred eighty-one equals",
+      "voice_start_s": 219.80625,
+      "voice_end_s": 224.62983333333332,
+      "current_visual_cue_ja": "F18=2,584とF19=4,181を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E020"
+    },
+    {
+      "id": "N020",
+      "kind": "count",
+      "spoken_text": "six thousand seven hundred sixty-five",
+      "voice_start_s": 224.78983333333332,
+      "voice_end_s": 227.05525,
+      "current_visual_cue_ja": "F20=6,765を英語読みと同時に確定し、TERM 21 OF 41 / INDEX n=20を表示。次の受渡しではF19=4,181とF20=6,765を添字と共に次の入力へ移す。v003では移動中の二つのコピー数値を88pxから47pxへなめらかに縮め、到着後も47pxを保つ。主結果と読みの大きさは保つ。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N020"
+    },
+    {
+      "id": "E021",
+      "kind": "formula_prefix",
+      "spoken_text": "four thousand one hundred eighty-one plus six thousand seven hundred sixty-five equals",
+      "voice_start_s": 229.05525,
+      "voice_end_s": 234.15145833333332,
+      "current_visual_cue_ja": "F19=4,181とF20=6,765を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。先行F20の移動コピーは移動中に88→47pxへ縮んで到着済みなので、この次式のF19/F20入力も47pxで連続させる。到着後の1フレーム縮小は行わない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E021"
+    },
+    {
+      "id": "N021",
+      "kind": "count",
+      "spoken_text": "ten thousand nine hundred forty-six",
+      "voice_start_s": 234.31145833333332,
+      "voice_end_s": 236.36770833333333,
+      "current_visual_cue_ja": "F21=10,946を英語読みと同時に確定し、TERM 22 OF 41 / INDEX n=21を表示。次の受渡しではF20=6,765とF21=10,946を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N021"
+    },
+    {
+      "id": "E022",
+      "kind": "formula_prefix",
+      "spoken_text": "six thousand seven hundred sixty-five plus ten thousand nine hundred forty-six equals",
+      "voice_start_s": 238.36770833333333,
+      "voice_end_s": 243.77345833333334,
+      "current_visual_cue_ja": "F20=6,765とF21=10,946を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E022"
+    },
+    {
+      "id": "N022",
+      "kind": "count",
+      "spoken_text": "seventeen thousand seven hundred eleven",
+      "voice_start_s": 243.93345833333333,
+      "voice_end_s": 246.229125,
+      "current_visual_cue_ja": "F22=17,711を英語読みと同時に確定し、TERM 23 OF 41 / INDEX n=22を表示。次の受渡しではF21=10,946とF22=17,711を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N022"
+    },
+    {
+      "id": "E023",
+      "kind": "formula_prefix",
+      "spoken_text": "ten thousand nine hundred forty-six plus seventeen thousand seven hundred eleven equals",
+      "voice_start_s": 248.229125,
+      "voice_end_s": 253.53216666666665,
+      "current_visual_cue_ja": "F21=10,946とF22=17,711を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E023"
+    },
+    {
+      "id": "N023",
+      "kind": "count",
+      "spoken_text": "twenty-eight thousand six hundred fifty-seven",
+      "voice_start_s": 253.69216666666668,
+      "voice_end_s": 256.04704166666664,
+      "current_visual_cue_ja": "F23=28,657を英語読みと同時に確定し、TERM 24 OF 41 / INDEX n=23を表示。次の受渡しではF22=17,711とF23=28,657を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N023"
+    },
+    {
+      "id": "E024",
+      "kind": "formula_prefix",
+      "spoken_text": "seventeen thousand seven hundred eleven plus twenty-eight thousand six hundred fifty-seven equals",
+      "voice_start_s": 258.04704166666664,
+      "voice_end_s": 263.82779166666666,
+      "current_visual_cue_ja": "F22=17,711とF23=28,657を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E024"
+    },
+    {
+      "id": "N024",
+      "kind": "count",
+      "spoken_text": "forty-six thousand three hundred sixty-eight",
+      "voice_start_s": 263.9877916666667,
+      "voice_end_s": 266.5930416666667,
+      "current_visual_cue_ja": "F24=46,368を英語読みと同時に確定し、TERM 25 OF 41 / INDEX n=24を表示。次の受渡しではF23=28,657とF24=46,368を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N024"
+    },
+    {
+      "id": "E025",
+      "kind": "formula_prefix",
+      "spoken_text": "twenty-eight thousand six hundred fifty-seven plus forty-six thousand three hundred sixty-eight equals",
+      "voice_start_s": 268.5930416666667,
+      "voice_end_s": 274.47041666666667,
+      "current_visual_cue_ja": "F23=28,657とF24=46,368を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E025"
+    },
+    {
+      "id": "N025",
+      "kind": "count",
+      "spoken_text": "seventy-five thousand twenty-five",
+      "voice_start_s": 274.6304166666667,
+      "voice_end_s": 276.453375,
+      "current_visual_cue_ja": "F25=75,025を英語読みと同時に確定し、TERM 26 OF 41 / INDEX n=25を表示。次の受渡しではF24=46,368とF25=75,025を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N025"
+    },
+    {
+      "id": "E026",
+      "kind": "formula_prefix",
+      "spoken_text": "forty-six thousand three hundred sixty-eight plus seventy-five thousand twenty-five equals",
+      "voice_start_s": 278.453375,
+      "voice_end_s": 283.7345,
+      "current_visual_cue_ja": "F24=46,368とF25=75,025を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E026"
+    },
+    {
+      "id": "N026",
+      "kind": "count",
+      "spoken_text": "one hundred twenty-one thousand three hundred ninety-three",
+      "voice_start_s": 283.8945,
+      "voice_end_s": 286.733,
+      "current_visual_cue_ja": "F26=121,393を英語読みと同時に確定し、TERM 27 OF 41 / INDEX n=26を表示。次の受渡しではF25=75,025とF26=121,393を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N026"
+    },
+    {
+      "id": "T026a",
+      "kind": "explanation",
+      "spoken_text": "The commas help us read groups of three digits. They are separators, not extra digits, and they do not change the addition.",
+      "voice_start_s": 287.333,
+      "voice_end_s": 294.67329166666667,
+      "current_visual_cue_ja": "縦に配置した46,368+75,025=121,393を表示し、THOUSANDS/ONESのグループとコンマを示す。説明中の全体式/寄りへの往復やカメラズームは行わない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T026a"
+    },
+    {
+      "id": "T026b",
+      "kind": "explanation",
+      "spoken_text": "Keep the ones columns lined up on the right. Even with larger numbers, each column still adds the same kind of units.",
+      "voice_start_s": 295.2732916666667,
+      "voice_end_s": 302.39341666666667,
+      "current_visual_cue_ja": "同じ縦配置を保持し、一の位の列が右で一致すること、コンマが桁の数字ではないことを表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T026b"
+    },
+    {
+      "id": "E027",
+      "kind": "formula_prefix",
+      "spoken_text": "seventy-five thousand twenty-five plus one hundred twenty-one thousand three hundred ninety-three equals",
+      "voice_start_s": 304.9934166666667,
+      "voice_end_s": 310.93854166666665,
+      "current_visual_cue_ja": "F25=75,025とF26=121,393を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E027"
+    },
+    {
+      "id": "N027",
+      "kind": "count",
+      "spoken_text": "one hundred ninety-six thousand four hundred eighteen",
+      "voice_start_s": 311.0985416666667,
+      "voice_end_s": 313.75029166666667,
+      "current_visual_cue_ja": "F27=196,418を英語読みと同時に確定し、TERM 28 OF 41 / INDEX n=27を表示。次の受渡しではF26=121,393とF27=196,418を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N027"
+    },
+    {
+      "id": "E028",
+      "kind": "formula_prefix",
+      "spoken_text": "one hundred twenty-one thousand three hundred ninety-three plus one hundred ninety-six thousand four hundred eighteen equals",
+      "voice_start_s": 315.75029166666667,
+      "voice_end_s": 322.549125,
+      "current_visual_cue_ja": "F26=121,393とF27=196,418を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E028"
+    },
+    {
+      "id": "N028",
+      "kind": "count",
+      "spoken_text": "three hundred seventeen thousand eight hundred eleven",
+      "voice_start_s": 322.709125,
+      "voice_end_s": 325.42104166666667,
+      "current_visual_cue_ja": "F28=317,811を英語読みと同時に確定し、TERM 29 OF 41 / INDEX n=28を表示。次の受渡しではF27=196,418とF28=317,811を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N028"
+    },
+    {
+      "id": "E029",
+      "kind": "formula_prefix",
+      "spoken_text": "one hundred ninety-six thousand four hundred eighteen plus three hundred seventeen thousand eight hundred eleven equals",
+      "voice_start_s": 327.42104166666667,
+      "voice_end_s": 333.95116666666667,
+      "current_visual_cue_ja": "F27=196,418とF28=317,811を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E029"
+    },
+    {
+      "id": "N029",
+      "kind": "count",
+      "spoken_text": "five hundred fourteen thousand two hundred twenty-nine",
+      "voice_start_s": 334.1111666666667,
+      "voice_end_s": 336.866875,
+      "current_visual_cue_ja": "F29=514,229を英語読みと同時に確定し、TERM 30 OF 41 / INDEX n=29を表示。次の受渡しではF28=317,811とF29=514,229を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N029"
+    },
+    {
+      "id": "E030",
+      "kind": "formula_prefix",
+      "spoken_text": "three hundred seventeen thousand eight hundred eleven plus five hundred fourteen thousand two hundred twenty-nine equals",
+      "voice_start_s": 338.866875,
+      "voice_end_s": 345.7389166666667,
+      "current_visual_cue_ja": "F28=317,811とF29=514,229を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E030"
+    },
+    {
+      "id": "N030",
+      "kind": "count",
+      "spoken_text": "eight hundred thirty-two thousand forty",
+      "voice_start_s": 345.89891666666665,
+      "voice_end_s": 347.869125,
+      "current_visual_cue_ja": "F30=832,040を英語読みと同時に確定し、TERM 31 OF 41 / INDEX n=30を表示。次の受渡しではF29=514,229とF30=832,040を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N030"
+    },
+    {
+      "id": "E031",
+      "kind": "formula_prefix",
+      "spoken_text": "five hundred fourteen thousand two hundred twenty-nine plus eight hundred thirty-two thousand forty equals",
+      "voice_start_s": 349.869125,
+      "voice_end_s": 355.77275,
+      "current_visual_cue_ja": "F29=514,229とF30=832,040を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E031"
+    },
+    {
+      "id": "N031",
+      "kind": "count",
+      "spoken_text": "one million three hundred forty-six thousand two hundred sixty-nine",
+      "voice_start_s": 355.93275,
+      "voice_end_s": 359.610125,
+      "current_visual_cue_ja": "F31=1,346,269を英語読みと同時に確定し、TERM 32 OF 41 / INDEX n=31を表示。次の受渡しではF30=832,040とF31=1,346,269を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N031"
+    },
+    {
+      "id": "E032",
+      "kind": "formula_prefix",
+      "spoken_text": "eight hundred thirty-two thousand forty plus one million three hundred forty-six thousand two hundred sixty-nine equals",
+      "voice_start_s": 361.610125,
+      "voice_end_s": 368.4515416666667,
+      "current_visual_cue_ja": "F30=832,040とF31=1,346,269を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E032"
+    },
+    {
+      "id": "N032",
+      "kind": "count",
+      "spoken_text": "two million one hundred seventy-eight thousand three hundred nine",
+      "voice_start_s": 368.61154166666665,
+      "voice_end_s": 371.84179166666667,
+      "current_visual_cue_ja": "F32=2,178,309を英語読みと同時に確定し、TERM 33 OF 41 / INDEX n=32を表示。次の受渡しではF31=1,346,269とF32=2,178,309を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N032"
+    },
+    {
+      "id": "E033",
+      "kind": "formula_prefix",
+      "spoken_text": "one million three hundred forty-six thousand two hundred sixty-nine plus two million one hundred seventy-eight thousand three hundred nine equals",
+      "voice_start_s": 373.84179166666667,
+      "voice_end_s": 382.171125,
+      "current_visual_cue_ja": "F31=1,346,269とF32=2,178,309を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E033"
+    },
+    {
+      "id": "N033",
+      "kind": "count",
+      "spoken_text": "three million five hundred twenty-four thousand five hundred seventy-eight",
+      "voice_start_s": 382.331125,
+      "voice_end_s": 386.41108333333335,
+      "current_visual_cue_ja": "F33=3,524,578を英語読みと同時に確定し、TERM 34 OF 41 / INDEX n=33を表示。次の受渡しではF32=2,178,309とF33=3,524,578を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N033"
+    },
+    {
+      "id": "E034",
+      "kind": "formula_prefix",
+      "spoken_text": "two million one hundred seventy-eight thousand three hundred nine plus three million five hundred twenty-four thousand five hundred seventy-eight equals",
+      "voice_start_s": 388.41108333333335,
+      "voice_end_s": 397.06258333333335,
+      "current_visual_cue_ja": "F32=2,178,309とF33=3,524,578を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E034"
+    },
+    {
+      "id": "N034",
+      "kind": "count",
+      "spoken_text": "five million seven hundred two thousand eight hundred eighty-seven",
+      "voice_start_s": 397.2225833333333,
+      "voice_end_s": 400.938,
+      "current_visual_cue_ja": "F34=5,702,887を英語読みと同時に確定し、TERM 35 OF 41 / INDEX n=34を表示。次の受渡しではF33=3,524,578とF34=5,702,887を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N034"
+    },
+    {
+      "id": "E035",
+      "kind": "formula_prefix",
+      "spoken_text": "three million five hundred twenty-four thousand five hundred seventy-eight plus five million seven hundred two thousand eight hundred eighty-seven equals",
+      "voice_start_s": 402.938,
+      "voice_end_s": 411.99491666666665,
+      "current_visual_cue_ja": "F33=3,524,578とF34=5,702,887を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E035"
+    },
+    {
+      "id": "N035",
+      "kind": "count",
+      "spoken_text": "nine million two hundred twenty-seven thousand four hundred sixty-five",
+      "voice_start_s": 412.1549166666667,
+      "voice_end_s": 416.13866666666667,
+      "current_visual_cue_ja": "F35=9,227,465を英語読みと同時に確定し、TERM 36 OF 41 / INDEX n=35を表示。次の受渡しではF34=5,702,887とF35=9,227,465を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N035"
+    },
+    {
+      "id": "E036",
+      "kind": "formula_prefix",
+      "spoken_text": "five million seven hundred two thousand eight hundred eighty-seven plus nine million two hundred twenty-seven thousand four hundred sixty-five equals",
+      "voice_start_s": 418.13866666666667,
+      "voice_end_s": 426.882375,
+      "current_visual_cue_ja": "F34=5,702,887とF35=9,227,465を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E036"
+    },
+    {
+      "id": "N036",
+      "kind": "count",
+      "spoken_text": "fourteen million nine hundred thirty thousand three hundred fifty-two",
+      "voice_start_s": 427.042375,
+      "voice_end_s": 430.78654166666666,
+      "current_visual_cue_ja": "F36=14,930,352を英語読みと同時に確定し、TERM 37 OF 41 / INDEX n=36を表示。次の受渡しではF35=9,227,465とF36=14,930,352を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N036"
+    },
+    {
+      "id": "E037",
+      "kind": "formula_prefix",
+      "spoken_text": "nine million two hundred twenty-seven thousand four hundred sixty-five plus fourteen million nine hundred thirty thousand three hundred fifty-two equals",
+      "voice_start_s": 432.78654166666666,
+      "voice_end_s": 441.58441666666664,
+      "current_visual_cue_ja": "F35=9,227,465とF36=14,930,352を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E037"
+    },
+    {
+      "id": "N037",
+      "kind": "count",
+      "spoken_text": "twenty-four million one hundred fifty-seven thousand eight hundred seventeen",
+      "voice_start_s": 441.74441666666667,
+      "voice_end_s": 445.965125,
+      "current_visual_cue_ja": "F37=24,157,817を英語読みと同時に確定し、TERM 38 OF 41 / INDEX n=37を表示。次の受渡しではF36=14,930,352とF37=24,157,817を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N037"
+    },
+    {
+      "id": "E038",
+      "kind": "formula_prefix",
+      "spoken_text": "fourteen million nine hundred thirty thousand three hundred fifty-two plus twenty-four million one hundred fifty-seven thousand eight hundred seventeen equals",
+      "voice_start_s": 447.965125,
+      "voice_end_s": 457.1933333333333,
+      "current_visual_cue_ja": "F36=14,930,352とF37=24,157,817を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E038"
+    },
+    {
+      "id": "N038",
+      "kind": "count",
+      "spoken_text": "thirty-nine million eighty-eight thousand one hundred sixty-nine",
+      "voice_start_s": 457.35333333333335,
+      "voice_end_s": 460.4565416666667,
+      "current_visual_cue_ja": "F38=39,088,169を英語読みと同時に確定し、TERM 39 OF 41 / INDEX n=38を表示。次の受渡しではF37=24,157,817とF38=39,088,169を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N038"
+    },
+    {
+      "id": "E039",
+      "kind": "formula_prefix",
+      "spoken_text": "twenty-four million one hundred fifty-seven thousand eight hundred seventeen plus thirty-nine million eighty-eight thousand one hundred sixty-nine equals",
+      "voice_start_s": 462.4565416666667,
+      "voice_end_s": 471.217125,
+      "current_visual_cue_ja": "F37=24,157,817とF38=39,088,169を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E039"
+    },
+    {
+      "id": "N039",
+      "kind": "count",
+      "spoken_text": "sixty-three million two hundred forty-five thousand nine hundred eighty-six",
+      "voice_start_s": 471.377125,
+      "voice_end_s": 475.45645833333333,
+      "current_visual_cue_ja": "F39=63,245,986を英語読みと同時に確定し、TERM 40 OF 41 / INDEX n=39を表示。次の受渡しではF38=39,088,169とF39=63,245,986を添字と共に次の入力へ移す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N039"
+    },
+    {
+      "id": "T039a",
+      "kind": "explanation",
+      "spoken_text": "We have reached the final pair for this journey. Both values are below one hundred million. Their sum will cross that mark.",
+      "voice_start_s": 476.05645833333335,
+      "voice_end_s": 482.915,
+      "current_visual_cue_ja": "最後の入力ペアF38=39,088,169とF39=63,245,986を示す。出力は未確定で?、最終値はまだ表示しない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T039a"
+    },
+    {
+      "id": "T039b",
+      "kind": "explanation",
+      "spoken_text": "Watch the labels as the two values enter the formula. It is the same addition we used at the start, with more place-value columns.",
+      "voice_start_s": 483.515,
+      "voice_end_s": 491.49920833333334,
+      "current_visual_cue_ja": "REPLAY · THE FINAL PAIRを保持。F添字と入力値を確認し、F40を作る次の通常式へつなぐ。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#T039b"
+    },
+    {
+      "id": "E040",
+      "kind": "formula_prefix",
+      "spoken_text": "thirty-nine million eighty-eight thousand one hundred sixty-nine plus sixty-three million two hundred forty-five thousand nine hundred eighty-six equals",
+      "voice_start_s": 494.0992083333333,
+      "voice_end_s": 502.86129166666666,
+      "current_visual_cue_ja": "F38=39,088,169とF39=63,245,986を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#E040"
+    },
+    {
+      "id": "N040",
+      "kind": "count",
+      "spoken_text": "one hundred two million three hundred thirty-four thousand one hundred fifty-five",
+      "voice_start_s": 503.0212916666667,
+      "voice_end_s": 507.6145,
+      "current_visual_cue_ja": "F40=102,334,155を英語読みと同時に確定し、TERM 41 OF 41 / INDEX n=40を表示。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#N040"
+    },
+    {
+      "id": "O01",
+      "kind": "outro",
+      "spoken_text": "We've counted forty-one entries, from F zero through F forty. Two starting values, then thirty-nine additions brought us here.",
+      "voice_start_s": 508.2145,
+      "voice_end_s": 516.085125,
+      "current_visual_cue_ja": "固定画面の全41項履歴、TWO SEEDS.39 ADDITIONS.41 TERMS.と二つの1の注記。終端後の独立motion windowで1.2秒だけ閉眼笑顔を示し開眼へ戻す。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#O01"
+    },
+    {
+      "id": "O02",
+      "kind": "outro",
+      "spoken_text": "The newest number is just past one hundred million. We stop here today, but the rule can keep making more numbers.",
+      "voice_start_s": 516.685125,
+      "voice_end_s": 523.368875,
+      "current_visual_cue_ja": "F40=102,334,155、初めて1億超という説明、一般式を表示する。F38/F39の具体値はこの画面へ併記せず、直前のT039/E040で示した。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#O02"
+    },
+    {
+      "id": "O03",
+      "kind": "outro",
+      "spoken_text": "Remember the motion: take the previous two, add them, keep the newest pair, and repeat. Every new entry has a place in the chain.",
+      "voice_start_s": 523.968875,
+      "voice_end_s": 531.816125,
+      "current_visual_cue_ja": "全41項の履歴へ固定画面で切り替える。二つの1を保持し、均等なカード間隔は項の順であり値の比例距離ではない。式と履歴の同時表示やカメラの引きは行わない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#O03"
+    },
+    {
+      "id": "O04",
+      "kind": "outro",
+      "spoken_text": "Thanks for counting with me. See you next time!",
+      "voice_start_s": 532.416125,
+      "voice_end_s": 534.78,
+      "current_visual_cue_ja": "最終値と一般式を示す終幕。猫は開眼の手振りを2往復しneutralへ戻り、末尾2秒で全画面をクリーム色へフェードする。閉眼笑顔の保持は行わない。",
+      "historical_planning_source": "design/fibonacci-counting-v1/narration.json#O04"
+    }
+  ],
+  "cue_count": 104,
+  "finished_video": {
+    "path": "output/fibonacci-counting-001-v003/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+    "sha256": "2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704"
+  },
+  "finished_timeline": {
+    "path": "output/fibonacci-counting-001-v003/timeline.json",
+    "sha256": "f7452402531da5b41e285e2a801479cea29fa4e55864de7791c0ecd366b6f37e"
+  },
+  "final_pixel_gate": {
+    "path": "output/fibonacci-counting-001-v003/qa/v001/verification.json",
+    "sha256": "ed87f35dfc7dfd6cf3a717b33ce63238d5def47089121b823997c1253ceab7e3"
+  },
+  "all104_native_cue_observation": {
+    "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/content-records/v003-cue-observations/verification.json",
+    "sha256": "caa285ec320b95a5a0324de6f95fd05040dd33d6244f0b59aa744a0155968f8f"
+  },
+  "selected_semantic_image_review": {
+    "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/content-records/current-cue-image-review-v003.json",
+    "sha256": "251b2d85f9f0c7233205f0b59b66684e261a8fe26a71dd18ce60fc19119e5701"
+  },
+  "maximum_transferred_pair": {
+    "indices": [
+      38,
+      39
+    ],
+    "values": [
+      39088169,
+      63245986
+    ],
+    "decimal_digits": 8
+  },
+  "maximum_result": {
+    "index": 40,
+    "value": 102334155,
+    "decimal_digits": 9,
+    "further_transfer": false
+  }
+}

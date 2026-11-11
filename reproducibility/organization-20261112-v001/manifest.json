@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "kind": "project-data-organization-record",
+  "created_at_utc": "2026-11-11T18:39:03.289401+00:00",
+  "path_base": "project-root",
+  "summary_ja": "原本と採用参照を維持し、データの保存区分・持込目録・Unicode別名・再生成キャッシュを整理する記録。",
+  "specification": "docs/PROJECT-MAP.md",
+  "procedure": "docs/PRODUCTION.md",
+  "incoming_original_inventory": "materials/manifest-v1.json",
+  "cleanup_record": "reproducibility/organization-20261112-v001/cleanup.json",
+  "save_review": "reproducibility/organization-20261112-v001/save-review.json",
+  "authoritative_inventories": {
+    "production_and_adoption": "catalogs/library-v1.json",
+    "adopted_output_dependencies": "reproducibility/production-inputs.json",
+    "reusable_character_inventory": "catalogs/character-library-files-v1.json",
+    "generation_batch_management": "catalogs/character-asset-registry-v1.json"
+  },
+  "preserved_control_sha256": {
+    "catalogs/library-v1.json": "9d2ae9f5c349d34c9e07962b8d912e58ca1d009825b1b5902ee99407126853d4",
+    "catalogs/character-library-v1.json": "03f297857a4c742e58f5d2b0aec21a7a67f4a29ae451b50605d3754c1edd2e04",
+    "catalogs/character-library-files-v1.json": "d954f0241341045b426afd33e02eaf7a222e9699f8d5e9ae1ff18b472d89f536",
+    "catalogs/character-asset-management-v1.json": "f86ddf1f7af90e6cc73a7db8840aa59936b0806fecceb0f7f21bf44e9fd6b856",
+    "catalogs/character-asset-registry-v1.json": "e2165e4207473a6a84810d4498ca4bc8b29ee874e2f3889a4d5d0fc0c847642e",
+    "reproducibility/production-inputs.json": "ba9f24e78c1aeb27a15acf1044b902a315440310aaa9be00aac3ddfc317d4240"
+  },
+  "preservation": {
+    "source_images_audio_video_bytes_modified": false,
+    "adoption_changed": false,
+    "historical_production_and_qa_records_rewritten": false,
+    "generation_candidates_and_negative_controls_retained": true,
+    "quality_findings_resolved_by_inventory": false
+  },
+  "organization": {
+    "incoming_originals": 10,
+    "bytecode_files_removed": 50,
+    "bytecode_bytes_removed": 1616692,
+    "empty_directories_removed": 10,
+    "unicode_same_original_alias_pairs": 3,
+    "scratch_exclusions": ".gitignore excludes only local root scratch and known metadata lock/staging paths; adopted output allowlist is retained."
+  },
+  "local_checkpoint": {
+    "ref": "refs/heads/codex/data-organization-20261112-v001",
+    "base_commit": "2240115828a4a90ab0088ab58274e01ed41ef6ba",
+    "method": "Separate temporary index seeded from the base commit; reviewed exact paths, canonical NFC path identities, local commit and new ref only.",
+    "state_source": "Resolve this ref and inspect its tree. The hash of a commit cannot be embedded in its own content. Final local execution receipt is output/data-organization-v001/checkpoint.json.",
+    "current_head_and_branch_preserved": true,
+    "real_index_preserved": true,
+    "external_push_performed": false,
+    "new_clone_or_other_os_validation_performed": false,
+    "working_branch_note": "The current main/index are kept intact for parallel work; git status there can still show untracked/modified paths. The checkpoint ref records the saved tree separately."
+  },
+  "retained_open_items": {
+    "material_quality_review_source": "catalogs/character-asset-management-v1.json",
+    "note": "Existing four needs_revision and four needs_review batches remain. Organizing and saving them is not visual acceptance."
+  },
+  "validation_policy": "Validate incoming source SHA/dimensions, current workspace/library/archive, local doc links, unique NFC+casefold paths, required inventory coverage, canonical LFS pointers/local objects, and preservation of real HEAD/index before declaring the checkpoint complete."
+}

@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-11-11T16:44:00.313074+00:00",
+  "kind": "character-inventory-producer-handoff-followup-review",
+  "new_files_in_own_batch": 62,
+  "removed_existing_files": 0,
+  "existing_artwork_changed_before_refresh": false,
+  "observed_existing_changes": [
+    "assets/library/character-assets.html",
+    "catalogs/character-asset-management-v1.json",
+    "catalogs/character-asset-registry-v1.json",
+    "tools/character_library.py"
+  ],
+  "concurrent_tool_source_change": {
+    "path": "tools/character_library.py",
+    "sha256": "59bd218c763a047dbf1588d1c45efce59d7f9b9168724d58af984badcfa03e2a",
+    "mtime_utc": "2026-11-11T16:39:18.749588+00:00",
+    "edited_by_this_production": false,
+    "review": "Reviewed current git diff: explicit expanded/eyecatch namespaces, canonical matching, reservation/lock/CAS protection, staged atomic inventory publication and source-scan consistency. Existing generic neutral/key-pose selection remains explicit."
+  },
+  "process_note": "Inventory refresh was issued before completing the concurrent tool-source delta review. Followup reviewed the source and all observed deltas; no changed artwork checksum was concealed. Prior inventory checksum for the tool was not retained before refresh.",
+  "followup_tests": {
+    "command": ".venv/bin/python -m unittest tests.test_character_asset_inventory tests.test_character_asset_management -v",
+    "tests": 29,
+    "passed": true
+  },
+  "final_library_verify": {
+    "status": "pass",
+    "characters": 11,
+    "neutral_png_sources": 11,
+    "generic_key_pose_pngs": 456,
+    "files": 1408,
+    "bytes": 588447079,
+    "absolute_provenance_paths_required_for_runtime": false
+  },
+  "generic_character_catalog_sha256": "03f297857a4c742e58f5d2b0aec21a7a67f4a29ae451b50605d3754c1edd2e04",
+  "file_inventory_sha256": "e1edd0ea1f5a1d0cd78630a686843a79bb22f68342972ab73ffd0ae495a1772d",
+  "episode_runtime_uses_frozen_character_snapshot": true
+}

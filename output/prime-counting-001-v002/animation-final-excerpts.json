@@ -1,0 +1,96 @@
+{
+  "kind": "actual-encoded-v002-motion-excerpts",
+  "source": "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+  "source_sha256": "9ab0b3c4dd6d551b63349f41c6922cc38951ea8576668e3cb2e52d26e8c70c0f",
+  "output": "output/prime-counting-001-v002/animation-final-excerpts.mp4",
+  "sha256": "fdc8ba8b881f123900ef7f649d37f108120813c52030b6965bcaacc0bf554b52",
+  "crop_xywh": [
+    1370,
+    400,
+    550,
+    680
+  ],
+  "native_body_height_px": 430,
+  "clips": [
+    {
+      "name": "Opening wave",
+      "source_start_s": 1.0,
+      "duration_s": 3.0
+    },
+    {
+      "name": "Thinking",
+      "source_start_s": 15.2,
+      "duration_s": 2.3
+    },
+    {
+      "name": "Milestone hop",
+      "source_start_s": 381.3,
+      "duration_s": 1.7
+    },
+    {
+      "name": "Finale joy",
+      "source_start_s": 665.5235833333334,
+      "duration_s": 2.0
+    },
+    {
+      "name": "Goodbye wave",
+      "source_start_s": 680.2235833333333,
+      "duration_s": 2.3
+    }
+  ],
+  "silent": true,
+  "scope": "Short montage cropped from the completed encoded MP4, in source-time order. Full video retains original speech and scene timing.",
+  "ffmpeg_command": [
+    "ffmpeg",
+    "-nostdin",
+    "-v",
+    "error",
+    "-n",
+    "-ss",
+    "1.0",
+    "-t",
+    "3.0",
+    "-i",
+    "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+    "-ss",
+    "15.2",
+    "-t",
+    "2.3",
+    "-i",
+    "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+    "-ss",
+    "381.3",
+    "-t",
+    "1.7",
+    "-i",
+    "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+    "-ss",
+    "665.5235833333334",
+    "-t",
+    "2.0",
+    "-i",
+    "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+    "-ss",
+    "680.2235833333333",
+    "-t",
+    "2.3",
+    "-i",
+    "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+    "-filter_complex",
+    "[0:v]crop=550:680:1370:400,setpts=PTS-STARTPTS[v0];[1:v]crop=550:680:1370:400,setpts=PTS-STARTPTS[v1];[2:v]crop=550:680:1370:400,setpts=PTS-STARTPTS[v2];[3:v]crop=550:680:1370:400,setpts=PTS-STARTPTS[v3];[4:v]crop=550:680:1370:400,setpts=PTS-STARTPTS[v4];[v0][v1][v2][v3][v4]concat=n=5:v=1:a=0[out]",
+    "-map",
+    "[out]",
+    "-an",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "veryfast",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "-movflags",
+    "+faststart",
+    "output/prime-counting-001-v002/animation-final-excerpts.mp4"
+  ]
+}

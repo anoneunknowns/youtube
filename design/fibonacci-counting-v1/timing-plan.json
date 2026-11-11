@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "status": "preproduction_only_no_audio_generated_no_video_rendered",
+  "count_index_start": 0,
+  "count_index_end": 40,
+  "count_start": 0,
+  "count_end": 102334155,
+  "counted_entries": 41,
+  "generated_entries": 39,
+  "initial_conditions": {
+    "F_0": 0,
+    "F_1": 1
+  },
+  "recurrence": "F_n = F_(n-2) + F_(n-1), for every integer n >= 2",
+  "endpoint_reason": "F_40 is the first Fibonacci term strictly greater than 100,000,000; F_39=63,245,986",
+  "character_id": "siamese-cat",
+  "character_selection_reason": "user_override_after_random_draw; parent records the selection history",
+  "character_pose_status": "four episode-specific generated key poses added: watch_left, present_half, present_full, delighted; not a production animation acceptance",
+  "voice_reference": {
+    "model": "Kokoro-82M-v1.0-ONNX",
+    "voice": "af_heart",
+    "dtype": "fp32",
+    "speed": 0.98,
+    "status": "intended_only_not_generated_or_adopted_for_this_episode"
+  },
+  "planned_voice_events": 104,
+  "count_voice_events": 41,
+  "formula_prefix_voice_events": 39,
+  "normal_result_end_to_next_formula_start_seconds": 2,
+  "seed_0_end_to_seed_1_start_seconds": 2,
+  "seed_1_end_to_first_formula_start_seconds": 2,
+  "formula_prefix_end_to_result_start_seconds": 0.16,
+  "result_display_lead_seconds": 0.12,
+  "boundary_definition": "Normal generated-term boundary is result-count speech end to the next formula-prefix speech start, not result-count to result-count. At six pedagogical checkpoints this boundary includes explanation audio, deliberate sentence gaps, and a final 2-second settling interval.",
+  "checkpoint_after_indices": [
+    2,
+    8,
+    13,
+    18,
+    26,
+    39
+  ],
+  "checkpoint_editing_status": "speech-driven provisional; no fixed silent hold to force runtime",
+  "timing_method": "Every planned speech window is word_count * 60 / 150 at the baseline. All start/end seconds are estimates, not PCM-derived timings. Slower end uses 130 wpm with the same fixed transitions. Contractions count as one word; hyphenated cardinal components count individually.",
+  "word_count": {
+    "formula_prefixes_and_results": 747,
+    "intro_explanations_outro": 474,
+    "total": 1221
+  },
+  "estimate_speech_wpm_range": [
+    130,
+    150
+  ],
+  "estimated_fixed_transition_seconds": 107.04,
+  "duration_formula_seconds": "S_all_adopted_utterances + 107.040; replace provisional speech windows using measured PCM, then revise editorial fit",
+  "rough_duration_estimate_seconds": [
+    595.44,
+    670.578
+  ],
+  "rough_duration_estimate_minutes": [
+    9.92,
+    11.18
+  ],
+  "minimum_non_shorts_duration_seconds": 480,
+  "minimum_at_fast_estimate_met": true,
+  "measured_audio_sum_seconds": null,
+  "measured_final_duration_seconds": null,
+  "runtime_contingency": "If adopted natural speech plus these meaningful cues is shorter than 480 seconds, extend the range to a documented endpoint or add a specific, useful place-value lesson and new narration; do not slow the established voice or repeat empty waits. Confirm before production, not after rendering.",
+  "math_source": {
+    "url": "https://oeis.org/A000045",
+    "verification_date": "2026-11-11",
+    "retrieval": "Official OEIS search result exposed terms F_0 through F_40; direct page and b-file access returned HTTP403. Values cross-checked by recurrence and an independent binomial-sum identity.",
+    "source_scope": "initial terms and recurrence; storyboard, pacing, wording and visual concepts are original planning decisions"
+  },
+  "not_performed": [
+    "TTS generation or PCM duration measurement",
+    "master or final AAC checking",
+    "production animation or MP4 render",
+    "whole-video viewing/listening",
+    "continuous transition QA beyond still mockup samples"
+  ],
+  "still_mockups_are_not_completed_video_qa": true,
+  "supplementary_voice_events": 24,
+  "intro_voice_events": 8,
+  "checkpoint_explanation_voice_events": 12,
+  "outro_voice_events": 4,
+  "character_placement": {
+    "registration": "assets/library/characters/siamese-cat/motions/fibonacci-v001/registration.json",
+    "additional_pose_common_reference_height_px": 560,
+    "display_body_height_px": 400,
+    "foot_anchor_px": [
+      1655,
+      990
+    ],
+    "neutral_reference_height_px": 1070
+  },
+  "equation_layout": {
+    "type": "three horizontal numeric windows OLDER / NEWER / NEW; large result and up to two reading lines below",
+    "short_mode": {
+      "indices": [
+        2,
+        20
+      ],
+      "equation_font_size_px": 88,
+      "main_result_font_size_px": 126
+    },
+    "wide_mode": {
+      "indices": [
+        21,
+        40
+      ],
+      "equation_font_size_px": 47,
+      "main_result_font_size_px": 112,
+      "max_digits": 9
+    },
+    "per_value_font_fitting": false,
+    "reading_font_size_px": 32,
+    "mode_switch_count": 1
+  },
+  "silent_motion_preview": {
+    "duration_seconds": 12,
+    "has_audio": false,
+    "status": "concept_preview_not_production_timing_or_voice_sync"
+  }
+}

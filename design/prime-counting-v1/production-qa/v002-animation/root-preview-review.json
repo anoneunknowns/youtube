@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "asset-and-native-preview-reviewed-final-movie-pending",
+  "reviewer": "root assistant",
+  "requirement": "Replace insufficient kangaroo motion and expressions by comparison with existing Bear wave, blink and success posture materials.",
+  "registration_sha256": "f704da40e02e1a1e15d5caaaddee365f5ee6ff19a0465e35f0b490ac013c6689",
+  "hash_bound_inputs": [
+    {
+      "path": "assets/library/characters/kangaroo/animations/prime-v001/registration.json",
+      "sha256": "f704da40e02e1a1e15d5caaaddee365f5ee6ff19a0465e35f0b490ac013c6689"
+    },
+    {
+      "path": "tools/kangaroo_animation.py",
+      "sha256": "edb0054a38e68d2548b262b41e9b91e2ab744c19c1f6b7cf690d8f2d05d46c25"
+    },
+    {
+      "path": "tools/render_prime_video_v002.py",
+      "sha256": "32ae4549239eb83802c05c6a0817d3f4f4cb4b20fa5a014026b25cf3d5b38f52"
+    }
+  ],
+  "preview_artifacts": [
+    {
+      "path": "design/prime-counting-v1/production-qa/v002-animation/preview-001/animation-wave-keyposes-native.png",
+      "sha256": "d878968c57a9eb60ba76e037fd3742f9151dae681c35088fffef097da3718bc0"
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v002-animation/preview-001/animation-hop-keyposes-native.png",
+      "sha256": "7b92e7f96b1ff075a4b5d2c09b67e2aefd5072a2cf610564b0431d6571adfc82"
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v002-animation/preview-001/animation-face-keyposes-native.png",
+      "sha256": "788d9a42332e80f413246afeef5bdf88badd846a0b245c12d7e8d007e740327c"
+    },
+    {
+      "path": "design/prime-counting-v1/production-qa/v002-animation/preview-001/animation-actor-preview.mp4",
+      "sha256": "719d12c3b8bb602f51b784043d15d5c2a14f399212de2cb4213c109aeb160a2b"
+    }
+  ],
+  "findings": {
+    "new_registered_cells": 18,
+    "source_groups": 3,
+    "true_half_and_closed_blink": true,
+    "generated_mouth_expression": true,
+    "arm_gesture_drawings": 4,
+    "wave_cycle_reads_as_hand_raise_high_outward_return": true,
+    "think_and_realization": true,
+    "bent_crouch_takeoff_tucked_air_bent_landing": true,
+    "full_tail_and_ears_retained": true,
+    "sharp_at_target_430px": true,
+    "pose_specific_bbox_fit": false,
+    "alpha_background_haze_candidate_rejected_and_generated_edit_used": true,
+    "extra_arm_candidate_rejected_and_generated_edit_used": true
+  },
+  "accepted_handdrawn_variation": "Head-calibrated gesture group standing body is about 15 px shorter than expression neutral at target scale. Actual native adjacent pose review accepts this brief posture variation; physical scale is common within each group and anatomical foot roots remain fixed. Four registered wave drawings do not imply four equally distinct palm angles.",
+  "scope": "Preview/asset review only. Final MP4 must independently pass actual encoded motion, learning-content, audio and layout checks before adoption."
+}

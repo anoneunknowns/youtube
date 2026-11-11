@@ -1,0 +1,26 @@
+{
+  "checked_at_utc": "2026-11-11T15:49:44.872379+00:00",
+  "purpose": "Confirm audit rejects incorrect operands, results, index, missing duplicate one, premature reveal, one-axis shifts, clipping and lost punctuation",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_fibonacci_verification",
+    "tests.test_component_alignment",
+    "-v"
+  ],
+  "exit_code": 0,
+  "passed": true,
+  "log": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/verifier-negative-controls.txt",
+  "log_sha256": "78b3864d44cde0c9aea71a5db740c111e8d35fda1dabe5302df3ae2d95ad12cf",
+  "test_sources": [
+    {
+      "path": "tests/test_fibonacci_verification.py",
+      "sha256": "b449603674059855b3b9ea0e5a13ed6cf8c5fed86b7f0bd6bcb72c6f2d89afa0"
+    },
+    {
+      "path": "tests/test_component_alignment.py",
+      "sha256": "73aeec11e413418813ebb72d4cb7da6660775fe20bf8c43f90978de4177ee91c"
+    }
+  ]
+}

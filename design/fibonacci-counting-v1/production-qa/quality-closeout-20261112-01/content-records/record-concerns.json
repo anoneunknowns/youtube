@@ -1,0 +1,92 @@
+{
+  "kind": "fibonacci-quality-closeout-content-records-concerns",
+  "status": "closed",
+  "items": [
+    {
+      "id": "records-01",
+      "issue": "Historical current specification says registration/portability pending although production-run-v002 and doctor/preview/adoption already completed.",
+      "severity": "documentation",
+      "disposition": "New v003 documents use neutral production-run-v003 authority reference instead of duplicating changing execution status; old v002 files remain historical.",
+      "state": "closed",
+      "evidence": "production-spec-v003.json/registration_and_reproduction_authority; neutral production-run reference, no duplicated temporal status"
+    },
+    {
+      "id": "records-02",
+      "issue": "Historical provisional visual cues T018a/O02 differ from the final screen; O04 also describes superseded v001 acting. T026a/O03 use camera/switch language absent from the final implementation.",
+      "severity": "documentation",
+      "disposition": "New104-cue current visual addendum replaces these cues for current production and keeps original narration/script untouched.",
+      "state": "closed",
+      "evidence": [
+        {
+          "path": "design/fibonacci-counting-v1/effective-visual-cues-v003.json",
+          "sha256": "fdddd4babcdf754072d9c652a28218238ef963a671b4d77083cd5b62f4d5dcb1"
+        },
+        {
+          "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/content-records/current-cue-image-review-v003.json",
+          "sha256": "251b2d85f9f0c7233205f0b59b66684e261a8fe26a71dd18ce60fc19119e5701"
+        }
+      ]
+    },
+    {
+      "id": "records-03",
+      "issue": "Whole-decode and native-sample coverage were compressed into an ambiguous description; intro-seeds sample227 had no independent glyph labels.",
+      "severity": "verification_coverage",
+      "disposition": "New seed/fade supplement closes the124-frame seven-component seed scene and actual fade curve; document separate exact scopes. v002 control PASS.",
+      "state": "closed",
+      "evidence": [
+        {
+          "path": "output/fibonacci-counting-001-v003/qa/v001/intro-and-fades/verification.json",
+          "sha256": "c729c03624497a939c087c403f93daf402ea91c688d25221fc09e3abfe6b9ed9"
+        },
+        {
+          "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/content-records/intro-design-bindings.json",
+          "sha256": "ba3eb0fe010305a70a06833f96209150fffc532056033b4dd4f7248e7c51b7b1"
+        }
+      ]
+    },
+    {
+      "id": "records-04",
+      "issue": "Prior native transfer sampling did not inspect every transfer frame; F20 static88-to47px shrink after arrival is a real visible rough edge.",
+      "severity": "media_and_verification",
+      "disposition": "New v003 renderer interpolates the moving numerals; new verifier checks every native transfer frame. Static-font negative control and all-transfer v002 negative run retained.",
+      "state": "closed",
+      "evidence": [
+        {
+          "path": "output/fibonacci-counting-001-v003/qa/v001/all-transfers/verification.json",
+          "sha256": "05ae88a5d8886db19403d26742d76727b54593ae4e998eb18aaed43fb7147578"
+        },
+        {
+          "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/content-records/v002-negative-all-transfers/verification.json",
+          "sha256": "a311cc8ecdd948497b81629ccf55bc262589b3dc99558f84e91b4a315ccd4938"
+        }
+      ]
+    },
+    {
+      "id": "C10-source-selection",
+      "issue": "Builder revision-id alone leaves v001 default source/gate/phoneme/scalar selection.",
+      "severity": "reproduction_instructions",
+      "disposition": "New current docs explicitly pass all four v002 adopted paths; root verifies plan-only N024 hash62526samples, speech429.74s and timeline536.78s. Builder old defaults preserved.",
+      "state": "closed",
+      "evidence": {
+        "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/explicit-rebuild-plan-review.json",
+        "sha256": "30658b7900695e1ce7c59baccf7c6e09e755c27f46a571417f367cd8f10b8d48"
+      }
+    }
+  ],
+  "all_SHA_audit": {
+    "production_run_references": 2740,
+    "unique_paths": 2720,
+    "mismatches": 0,
+    "archive_files": 4227,
+    "archive_mismatches": 0,
+    "fresh_content_checks": 642,
+    "fresh_content_failures": 0
+  },
+  "preservation": "No historical media, narration/script, completed QA, original production-run orv002 specification/review is edited.",
+  "unresolved_material_concerns": [],
+  "closed_against_video": {
+    "path": "output/fibonacci-counting-001-v003/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+    "sha256": "2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704"
+  },
+  "closed_at_utc": "2026-11-11T17:35:10.065150+00:00"
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "kind": "fresh-independent-prime-content-recheck",
+  "checked_at_utc": "2026-11-11T13:52:15.740839+00:00",
+  "status": "PASS",
+  "video_sha256": "ed506ca4305e4bf367fa8c69c826b18907a9264482b46db18fe06b6653b01b5f",
+  "inputs": [
+    {
+      "path": "output/prime-counting-001-v001/timeline.json",
+      "sha256": "57bfdd12507205b95d74a1a1e9ddae73ad3aad557942232d2eeb1dc444fae552"
+    },
+    {
+      "path": "output/prime-counting-001-v001/english-captions.srt",
+      "sha256": "00d75b0caf83c3cded378eae9f3462ec5c721605d55c9912eb32f698d02d2ee0"
+    },
+    {
+      "path": "output/prime-counting-001-v001/youtube-title.txt",
+      "sha256": "ebde5e7b056c7294eecbae6dfdbef8ff8f2c47d66b1a5f641366f9206c6e1322"
+    },
+    {
+      "path": "output/prime-counting-001-v001/youtube-description.txt",
+      "sha256": "b07109ac81558630a19e98fdd0ada4fb2b1d04eb773559ad610a25df8dd665f2"
+    },
+    {
+      "path": "output/prime-counting-001-v001/chapters.txt",
+      "sha256": "9be085fe89f05488137964dfa25ed17249aacdbb8abd0ee1814d94bbacaed5e1"
+    },
+    {
+      "path": "design/prime-counting-v1/narration.json",
+      "sha256": "1bafaf65b6bb3d354a613d9f0511fec0b7ae86065a30abee2bdd1de3fe32190f"
+    },
+    {
+      "path": "design/prime-counting-v1/count-lines.json",
+      "sha256": "c6cb006d78d32c1a92f5732321d57505df0d4d7cab025898cf474e469b692e4b"
+    },
+    {
+      "path": "tools/render_prime_video.py",
+      "sha256": "088d81ad40ebf0aaed3567a09fb6e83a1dfbb6822563cd03607da185838e204b"
+    },
+    {
+      "path": "tools/render_prime_mockups.py",
+      "sha256": "2b52f354c6bf0f509ed9668e19c92382aa5d9257728bd871c152f10c7ee6bb20"
+    }
+  ],
+  "method": "Recomputed every positive divisor for each integer1..999; independently inverse-parsed every spoken UScardinal; freshly parsed every SRTcue and chapters. No producer/verifier prime or word function imported.",
+  "content_counts": {
+    "prime_values": 168,
+    "sum": 76127,
+    "minimum": 2,
+    "maximum": 997,
+    "count_voice_events": 168,
+    "total_voice_events": 188,
+    "captions": 188,
+    "ordinary_two_second_intervals": 164,
+    "extended_eighteen_second_intervals": 3,
+    "chapters": 6
+  },
+  "claims": [
+    {
+      "claim": "A prime is a whole number >1 with exactly two positive factors",
+      "evidence": "All168 count values re-derived from complete positive-divisor enumeration; every such value below1000 is included."
+    },
+    {
+      "claim": "1 is not prime",
+      "factors": [
+        1
+      ],
+      "verified": true
+    },
+    {
+      "claim": "2 is the only even prime",
+      "factors": [
+        1,
+        2
+      ],
+      "even_primes": [
+        2
+      ],
+      "verified": true
+    },
+    {
+      "claim": "5 is prime;6 is not",
+      "factors5": [
+        1,
+        5
+      ],
+      "factors6": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "array5": [
+        1,
+        5
+      ],
+      "array6": [
+        2,
+        3
+      ],
+      "verified": true
+    },
+    {
+      "claim": "Rotating1x5 into5x1 adds no factor values",
+      "factor_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "distinct_positive_factors": [
+        1,
+        5
+      ],
+      "verified": true
+    },
+    {
+      "claim": "9 is odd but not prime",
+      "factors": [
+        1,
+        3,
+        9
+      ],
+      "array": [
+        3,
+        3
+      ],
+      "verified": true
+    },
+    {
+      "claim": "The next prime after97 is101",
+      "between_factors": {
+        "98": [
+          1,
+          2,
+          7,
+          14,
+          49,
+          98
+        ],
+        "99": [
+          1,
+          3,
+          9,
+          11,
+          33,
+          99
+        ],
+        "100": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          20,
+          25,
+          50,
+          100
+        ]
+      },
+      "witnesses": {
+        "98": "2x49",
+        "99": "9x11",
+        "100": "10x10"
+      },
+      "verified": true
+    },
+    {
+      "claim": "Prime gaps are not constant",
+      "initial_gaps": [
+        1,
+        2,
+        2,
+        4,
+        2,
+        4,
+        2,
+        4,
+        6,
+        2
+      ],
+      "verified": true
+    },
+    {
+      "claim": "168tiles show168discovered primes, not997unit tiles",
+      "grid": [
+        6,
+        28
+      ],
+      "verified": true
+    }
+  ],
+  "chapters": [
+    {
+      "time_s": 0,
+      "label": "Welcome to the Mosaic Museum"
+    },
+    {
+      "time_s": 70,
+      "label": "Start counting primes"
+    },
+    {
+      "time_s": 94,
+      "label": "Why nine is not prime"
+    },
+    {
+      "time_s": 169,
+      "label": "From 97 to 101"
+    },
+    {
+      "time_s": 187,
+      "label": "Three-digit primes"
+    },
+    {
+      "time_s": 664,
+      "label": "All 168 primes below 1000"
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "Actual sound/pronunciation recognition and full decoded-frame tracking are owned by separate fresh recheck workstreams. This report checks lexical/mathematical data and selected actual frames, not full human viewing/listening."
+  ],
+  "actual_visual_review": {
+    "frames": 13,
+    "extraction_manifest": "extracted-scenes.json",
+    "contact_sheet": "actual-frame-content-sheet.jpg",
+    "pixel_diagram_counts": "actual-tile-counts.json",
+    "observations": [
+      "Actual definition matches positive-factor definition and includes greater-than1 condition. Audio/captions also explicitly say whole number.",
+      "Actual5/6comparison shows distinct cases:5prime1x5 with factors1,5;6notprime2x3 with factors1,2,3,6.",
+      "Actual rotation screen labels1x5 and5x1 as orientations of the same factor pair; does not call10prime.",
+      "Actual1and9screens explicitly say notprime; neither is included in count events.",
+      "Actual97/98/99/100/101screen labels only97/101prime and gives correct composite witnesses.",
+      "Actual count2/97/101/773/997 labels, positivefactor chips and ordinal counters agree with independently computed values.",
+      "Actual final168tiles are explicitly labeled one tile per prime counted, separate from last value997."
+    ],
+    "visual_semantic_errors": []
+  },
+  "file_changes": "No production media, script, subtitle or original evidence files changed; only new recheck artifacts created."
+}

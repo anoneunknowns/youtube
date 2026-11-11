@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "kind": "independent-read-only-post-fix-code-review",
+  "source_or_catalog_changes_by_reviewer": false,
+  "baseline_test_suite": {
+    "tests": 22,
+    "status": "pass",
+    "command": ".venv/bin/python -m unittest tests.test_character_asset_management tests.test_character_asset_inventory"
+  },
+  "independent_reproductions": {
+    "CODE-001": {
+      "status": "pass",
+      "actual_batches": 1,
+      "unclassified_batches": 0
+    },
+    "CODE-002": {
+      "status": "pass",
+      "refresh": "pass",
+      "check": "pass",
+      "concurrent_reservation": "blocked-by-config-lock",
+      "reservation_after_publication": "pass"
+    },
+    "CODE-003": {
+      "status": "pass",
+      "symlink_publication": "rejected",
+      "source_art_unchanged": true,
+      "registry_not_created": true
+    },
+    "CODE-004": {
+      "status": "pass",
+      "active_reference_alias_excluded": true,
+      "active_directory_not_visited": true,
+      "frozen_original_included": true
+    }
+  },
+  "remaining_actionable_findings": []
+}

@@ -30,6 +30,8 @@ ALIASES = {
     'four-base': 'four-base-counting-production-v002',
     'even': 'even-counting-production-v002',
     'odd': 'odd-counting-production-v002',
+    'prime': 'prime-counting-production-v003',
+    'fibonacci': 'fibonacci-counting-production-v003',
 }
 
 
@@ -63,7 +65,7 @@ def work_directory(value=None):
     candidate = value or os.environ.get('YOUTUBE_WORK_DIR')
     if candidate:
         path = Path(candidate).expanduser().resolve()
-    elif Path('D:/temp').is_dir():
+    elif os.name == 'nt' and Path('D:/temp').is_dir():
         path = Path('D:/temp').resolve()
     else:
         path = Path(tempfile.gettempdir()) / 'youtube-production'
@@ -121,6 +123,73 @@ def require_file(path, expected=None):
         raise ValueError(f'Input checksum differs from its adopted record: {path}')
 
 
+def prime_renderer_name(row, plan):
+    name = Path(plan.get('renderer_implementation',
+                         row.get('render_implementation', 'render_prime_video'))).stem
+    if name not in ('render_prime_video', 'render_prime_video_v002', 'render_prime_video_v003'):
+        raise ValueError('Unknown adopted prime-number renderer')
+    return name
+
+
+def fibonacci_renderer_name(row, plan):
+    name = Path(plan.get('renderer_implementation',
+                         row.get('render_implementation', 'render_fibonacci_video'))).stem
+    if name not in ('render_fibonacci_video', 'render_fibonacci_video_v002', 'render_fibonacci_video_v003'):
+        raise ValueError('Unknown adopted Fibonacci-number renderer')
+    return name
+
+
+def fibonacci_motion_source(plan):
+    """Bind new actor actions to the immutable measured audio timeline."""
+    source = plan['source_timeline']
+    base_path = project_path(source['path'])
+    require_file(base_path, source['sha256'])
+    base = read(base_path)
+    for field in ('events', 'voice_events', 'counted_states', 'visual_segments', 'scenes',
+                  'duration_s', 'duration_frames', 'master_audio', 'timing'):
+        if plan[field] != base[field]:
+            raise ValueError(f'Fibonacci motion revision changes measured audio/content: {field}')
+    receipt = plan['character_motion']
+    motion = project_path(receipt['path'])
+    require_file(motion, receipt['sha256'])
+    if read(motion).get('source_timeline') != source:
+        raise ValueError('Fibonacci motion is bound to a different measured base')
+    return motion
+
+
+def fibonacci_aac_source(plan, audio):
+    require_file(audio, plan['master_audio']['sha256'])
+    receipt = plan['encoded_audio_acceptance']
+    gate_path = project_path(receipt['path'])
+    require_file(gate_path, receipt['sha256'])
+    gate = read(gate_path)
+    if gate.get('passed') is not True:
+        raise ValueError('Fibonacci encoded audio has no passed acceptance record')
+    if gate['master']['sha256'] != sha256(audio) or gate['source_timeline'] != plan['source_timeline']:
+        raise ValueError('Fibonacci encoded audio is bound to a different master or measured base')
+    source = gate['encoded_aac']
+    encoded = project_path(source['path'])
+    require_file(encoded, source['sha256'])
+    return encoded
+
+
+def prime_aac_source(plan, audio):
+    """The visual revision can only reuse its hash-bound, accepted soundtrack."""
+    master = plan['master_audio']
+    require_file(audio, master['sha256'])
+    source_receipt = plan['source_timeline']
+    source_timeline = project_path(source_receipt['path'])
+    require_file(source_timeline, source_receipt['sha256'])
+    original = read(source_timeline)
+    for field in ('events', 'voice_events', 'duration_s', 'master_audio', 'timing'):
+        if plan[field] != original[field]:
+            raise ValueError(f'Copied AAC requires unchanged accepted speech: {field}')
+    receipt = plan['reused_final_aac']
+    source = project_path(receipt['path'])
+    require_file(source, receipt['sha256'])
+    return source
+
+
 def make_scene(kind, row, plan, motion):
     if kind == 'decimal':
         renderer = module('render_counting_video')
@@ -139,6 +208,12 @@ def make_scene(kind, row, plan, motion):
         scene = renderer.Scene(plan, 'common-baseline')
     elif kind == 'hexadecimal':
         renderer = module('render_hexadecimal_video')
+        scene = renderer.Scene(plan)
+    elif kind == 'fibonacci':
+        renderer = module(fibonacci_renderer_name(row, plan))
+        scene = renderer.Scene(plan)
+    elif kind == 'prime':
+        renderer = module(prime_renderer_name(row, plan))
         scene = renderer.Scene(plan)
     elif kind in ('even', 'odd'):
         default = f'render_{kind}_video'
@@ -159,7 +234,8 @@ def scene_image(kind, scene, at):
         raise ValueError(f'Preview time must be in 0 <= t < {scene.duration}: {at}')
     if kind in ('decimal', 'binary'):
         return scene.frame(at)
-    return scene.image(scene.state(min(scene.frame_count - 1, math.ceil(at * 30 - 1e-7))))
+    result = scene.image(scene.state(min(scene.frame_count - 1, math.ceil(at * 30 - 1e-7))))
+    return result[0] if kind in ('prime', 'fibonacci') else result
 
 
 def check_inputs(kind, row, timeline_path, audio, motion, custom=False):
@@ -188,7 +264,13 @@ def check_inputs(kind, row, timeline_path, audio, motion, custom=False):
         if key not in seen:
             require_file(project_path(key[0]), key[1])
             seen.add(key)
-    if motion:
+    fibonacci_acting_revision = kind == 'fibonacci' and fibonacci_renderer_name(row, plan) != 'render_fibonacci_video'
+    if fibonacci_acting_revision:
+        declared = fibonacci_motion_source(plan)
+        fibonacci_aac_source(plan, audio)
+        if motion is not None and motion.resolve() != declared.resolve():
+            raise ValueError('Fibonacci motion override differs from the accepted schedule')
+    if motion and not fibonacci_acting_revision:
         motions = read(motion)
         if motions.get('timeline_sha256') != sha256(timeline_path):
             raise ValueError('The motion manifest is bound to a different timeline')
@@ -198,6 +280,10 @@ def check_inputs(kind, row, timeline_path, audio, motion, custom=False):
         expected_frames = round(plan['duration_s'] * track.getframerate())
         if abs(track.getnframes() - expected_frames) > 1:
             raise ValueError('Master length does not match the measured timeline')
+    if kind == 'prime' and prime_renderer_name(row, plan) != 'render_prime_video':
+        prime_aac_source(plan, audio)
+        schedule = plan['kangaroo_animation']['schedule']
+        require_file(project_path(schedule['path']), schedule['sha256'])
     renderer, scene = make_scene(kind, row, plan, motion)
     return plan, renderer, scene, len(seen)
 
@@ -219,6 +305,10 @@ def copy_delivery(source, destination):
         require_file(source / name)
         with (destination / name).open('xb') as output:
             output.write((source / name).read_bytes())
+    for name in ['subtitles.srt', 'youtube-title.txt', 'youtube-description.txt']:
+        if (source / name).is_file():
+            with (destination / name).open('xb') as output:
+                output.write((source / name).read_bytes())
 
 
 def render_or_preview(args):
@@ -226,6 +316,9 @@ def render_or_preview(args):
     timeline_path, audio, motion = inputs(row, args)
     plan, renderer, scene, checked = check_inputs(kind, row, timeline_path, audio, motion,
                                                 bool(args.timeline or args.audio or args.motion_manifest))
+    renderer_path = (f'tools/{prime_renderer_name(row, plan)}.py' if kind == 'prime'
+                     else f'tools/{fibonacci_renderer_name(row, plan)}.py' if kind == 'fibonacci'
+                     else row['render_implementation'])
     destination = new_directory(args.out_dir)
     if args.command == 'preview':
         positions = args.at or [2, min(30.5, scene.duration / 2), scene.duration - 12.5, scene.duration - 3]
@@ -233,12 +326,46 @@ def render_or_preview(args):
             scene_image(kind, scene, at).save(destination / f'{ordinal:02d}-{at:.3f}s.png')
         receipt = {'kind': 'portable-production-preview', 'production_id': key, 'source_voices_checked': checked,
                    'times_s': positions, 'timeline_sha256': sha256(timeline_path), 'master_sha256': sha256(audio),
-                   'renderer': row['render_implementation'], 'original_sources_modified': False}
+                   'renderer': renderer_path, 'original_sources_modified': False,
+                   'custom_timeline': bool(args.timeline)}
         save_new(destination / 'preview-receipt.json', receipt)
         return receipt
     ffmpeg = executable('ffmpeg', args.ffmpeg)
     video = destination / Path(row['output']).name
-    if kind in ('decimal', 'binary'):
+    if kind == 'prime':
+        # The prime master already includes its measured delivery gain.
+        copied_aac = prime_renderer_name(row, plan) != 'render_prime_video'
+        encoded_audio = prime_aac_source(plan, audio) if copied_aac else audio
+        with tempfile.TemporaryDirectory(prefix='youtube-prime-render-', dir=work_directory(args.work_dir)) as temporary:
+            index, runs, images = renderer.stage(scene, Path(temporary) / 'frames')
+            renderer.encode(index, encoded_audio, video, scene.frame_count, ffmpeg, args.preset, args.crf)
+        result = {'audio_mux_gain_db': 0, 'frames': scene.frame_count,
+                  'distinct_images': len(images), 'holds': len(runs)}
+        if copied_aac:
+            source_hash = renderer.aac_hash(encoded_audio, ffmpeg)
+            output_hash = renderer.aac_hash(video, ffmpeg)
+            if source_hash != output_hash:
+                raise ValueError('Copied prime AAC stream differs from its accepted source')
+            result.update(audio_codec_copy=True, encoded_audio_bitstream_identical=True,
+                          copied_aac_source=str(encoded_audio), copied_aac_source_sha256=sha256(encoded_audio),
+                          original_audio_adts_sha256=source_hash, output_audio_adts_sha256=output_hash)
+    elif kind == 'fibonacci':
+        copied_aac = fibonacci_renderer_name(row, plan) != 'render_fibonacci_video'
+        encoded_audio = fibonacci_aac_source(plan, audio) if copied_aac else audio
+        with tempfile.TemporaryDirectory(prefix='youtube-fibonacci-render-', dir=work_directory(args.work_dir)) as temporary:
+            index, runs, images = renderer.stage(scene, Path(temporary) / 'frames')
+            renderer.encode(index, encoded_audio, video, scene.frame_count, ffmpeg, args.preset, args.crf)
+        result = {'audio_mux_gain_db': 0, 'frames': scene.frame_count,
+                  'distinct_images': len(images), 'holds': len(runs)}
+        if copied_aac:
+            source_hash = renderer.aac_hash(encoded_audio, ffmpeg)
+            output_hash = renderer.aac_hash(video, ffmpeg)
+            if source_hash != output_hash:
+                raise ValueError('Copied Fibonacci AAC stream differs from its accepted source')
+            result.update(audio_codec_copy=True, encoded_audio_bitstream_identical=True,
+                          copied_aac_source=str(encoded_audio), copied_aac_source_sha256=sha256(encoded_audio),
+                          original_audio_adts_sha256=source_hash, output_audio_adts_sha256=output_hash)
+    elif kind in ('decimal', 'binary'):
         shared = module('render_counting_video')
         result = shared.encode(scene, [shared.Segment(0, scene.duration, 'portable adopted reproduction')],
                                video, ffmpeg, audio, args.crf, args.preset)
@@ -259,12 +386,13 @@ def render_or_preview(args):
     with (destination / 'timeline.json').open('xb') as output:
         output.write(timeline_path.read_bytes())
     if motion:
-        with (destination / 'bird-motions.json').open('xb') as output:
+        motion_name = 'character-motion.json' if kind == 'fibonacci' else 'bird-motions.json'
+        with (destination / motion_name).open('xb') as output:
             output.write(motion.read_bytes())
     receipt = {**result, 'kind': 'portable-adopted-production-render', 'production_id': key,
                'output': str(video), 'video_sha256': sha256(video), 'timeline': str(timeline_path),
                'timeline_sha256': sha256(timeline_path), 'audio_sha256': sha256(audio),
-               'renderer': row['render_implementation'], 'renderer_sha256': sha256(project_path(row['render_implementation'])),
+               'renderer': renderer_path, 'renderer_sha256': sha256(project_path(renderer_path)),
                'portable_launcher_sha256': sha256(Path(__file__)), 'ffmpeg': ffmpeg,
                'original_sources_modified': False, 'custom_timeline': bool(args.timeline)}
     if kind == 'binary':
@@ -284,6 +412,66 @@ def verify(args):
     require_file(video)
     ffmpeg, ffprobe = executable('ffmpeg', args.ffmpeg), executable('ffprobe', args.ffprobe)
     destination = new_directory(args.out_dir)
+    if kind == 'prime':
+        require_file(audio)
+        evidence_dir = destination / 'prime-media'
+        command = [sys.executable, '-B', str(TOOLS / 'verify_prime_video.py'),
+                   '--timeline', str(timeline_path), '--video', str(video), '--master', str(audio),
+                   '--out-dir', str(evidence_dir), '--ffmpeg', ffmpeg, '--ffprobe', ffprobe]
+        if args.delivery_dir:
+            command += ['--delivery-dir', str(args.delivery_dir)]
+        subprocess.run(command, cwd=ROOT, check=True)
+        evidence = read(evidence_dir / 'verification.json')
+        if evidence.get('passed') is not True:
+            raise ValueError('Prime final media checks did not pass')
+        result = {'status': 'pass', 'production_id': key, 'video_sha256': sha256(video),
+                  'timeline_sha256': sha256(timeline_path), 'master_sha256': sha256(audio),
+                  'evidence': 'prime-media/verification.json',
+                  'checks_performed': ['full decode, all 168 prime states and teaching diagrams, '
+                                       '188 source voices versus both master/AAC channels, silence and captions'],
+                  'not_performed': ['Fresh ASR/CTC inference and full human listening are separate checks.'],
+                  'checked_at_utc': datetime.now(timezone.utc).isoformat()}
+        save_new(destination / 'portable-verification.json', result)
+        return result
+    if kind == 'fibonacci':
+        require_file(audio)
+        evidence_dir = destination / 'fibonacci-media'
+        revision = fibonacci_renderer_name(row, plan)
+        verifier_name = 'verify_fibonacci_video_v003.py' if revision == 'render_fibonacci_video_v003' else 'verify_fibonacci_video.py'
+        command = [sys.executable, '-B', str(TOOLS / verifier_name),
+                   '--timeline', str(timeline_path), '--video', str(video), '--master', str(audio),
+                   '--out-dir', str(evidence_dir), '--ffmpeg', ffmpeg, '--ffprobe', ffprobe]
+        if args.delivery_dir:
+            command += ['--delivery-dir', str(args.delivery_dir)]
+        subprocess.run(command, cwd=ROOT, check=True)
+        evidence = read(evidence_dir / 'verification.json')
+        if evidence.get('passed') is not True:
+            raise ValueError('Fibonacci final media checks did not pass')
+        motion_evidence = None
+        if revision != 'render_fibonacci_video':
+            motion_dir = destination / 'fibonacci-motion'
+            motion_name = 'verify_fibonacci_motion_v003.py' if revision == 'render_fibonacci_video_v003' else 'verify_fibonacci_motion_v002.py'
+            command = [sys.executable, '-B', str(TOOLS / motion_name),
+                       '--timeline', str(timeline_path), '--video', str(video),
+                       '--out-dir', str(motion_dir), '--ffmpeg', ffmpeg, '--ffprobe', ffprobe]
+            if motion:
+                command += ['--motion-plan', str(motion)]
+            subprocess.run(command, cwd=ROOT, check=True)
+            motion_evidence = read(motion_dir / 'verification.json')
+            if motion_evidence.get('passed') is not True:
+                raise ValueError('Fibonacci character motion checks did not pass')
+        result = {'status': 'pass', 'production_id': key, 'video_sha256': sha256(video),
+                  'timeline_sha256': sha256(timeline_path), 'master_sha256': sha256(audio),
+                  'evidence': 'fibonacci-media/verification.json',
+                  'checks_performed': ['full decode;41terms,39additions, input handoffs and teaching diagrams; '
+                                       '104source voices versus both master/AAC channels, silence and captions'],
+                  'not_performed': ['Fresh ASR/CTC inference and full human listening are separate checks.'],
+                  'checked_at_utc': datetime.now(timezone.utc).isoformat()}
+        if motion_evidence is not None:
+            result['motion_evidence'] = 'fibonacci-motion/verification.json'
+            result['checks_performed'].append('measured audio-base binding, new character-art geometry and decoded motion windows')
+        save_new(destination / 'portable-verification.json', result)
+        return result
     if kind in ('even', 'odd'):
         require_file(audio)
         default = f'verify_{kind}_video'

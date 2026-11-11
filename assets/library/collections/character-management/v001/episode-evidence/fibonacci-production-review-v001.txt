@@ -1,0 +1,111 @@
+Num-Num Numbers — フィボナッチ数列カウント 制作v001
+状態：完成・独立最終QA／最終AACレビューPASS（2026-11-12 JST）
+
+完成映像
+  output/fibonacci-counting-001-v001/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4
+  SHA-256: 0c5d059a45be5ece439e2bd2628de13b5e2fcfb7fc6b218ede0a62c04ef283c3
+  49,135,105 bytes、1920×1080、30fps、16,094フレーム、8分56.466667秒。
+  H.264/yuv420p、BT.709、limited range。動画の末尾はクリーム色へフェードする。
+  音声マスターは536.4390833333333秒。映像は30fpsのフレーム境界へ切り上げた尺。
+
+内容と構成
+  シャム猫と、雲海を望む郵便局のベランダで、F0=0からF40=102,334,155までを生成しながら数える。
+  F0=0、F1=1、n>=2でFn=F(n-2)+F(n-1)。初期値2項と39回の加算で全41項。
+  二つの1はF1とF2という別項のまま保持する。F40は初めて1億を超える項。
+  全104発話は、導入8、数詞41、式前半39、六つの確認場面の説明12、終幕4。
+  導入・数の生成・位取りのREPLAY・大きな数・全41項の履歴へ構成を変える。
+  黄金比や自然界の普遍法則を本作の数学的根拠には使わない。数値窓は値で、物の個数図ではない。
+
+数式を動かす演出
+  OLDER / NEWER / NEWの三列で、直前二項を強調し、＋、＝、計算結果の順に進む。
+  式前半Eは「a plus b equals」まで。cは結果発話Nで一度だけ読む。
+  数値cと英語読みはN開始の0.12秒前に同時に確定表示し、次の結果を先出ししない。
+  E終端からN開始までは0.16秒。通常はN終端から次E開始まで2.00秒。
+  その2秒内で、N終端+0.35～+1.55秒の1.20秒にbとcを次の二入力へ渡し、残りで静止する。
+  数字の字形を別の数字へモーフせず、添字付きの同じ値を移す。下段の確定結果も保持する。
+  説明後の受渡しは最終説明終端+0.60～+1.80秒、次Eは同終端+2.60秒。
+  説明はF2/F8/F13/F18/F26/F39の後。REPLAY中にはカウントの進捗を増やさない。
+  8+13=21、89+144=233、987+1,597=2,584は、列の整列→一の位から計算→数字を記入→隣列へ繰上がり、を見せる。
+  繰上がり0の最終列はCOLUMN COMPLETEとし、移していないcarryがあるようには表示しない。
+  ＋と＝の強調は字形領域の外に置く下線。字形の中央判定へ親枠や装飾線を混ぜない。
+  39式中27式は独立CTCのplus/equals近似境界（約20ms分解能）を使う。
+  残る12式は数詞の語数比による強調時刻の推定で、実測の単語境界とは区別してtimelineに記録した。
+  位取りREPLAYの文章内の進行は実測した発話枠を基準にした編集キューで、全単語の厳密な強制整列とは扱わない。
+
+表示・キャラクター・素材
+  式はF2～F20が88px、F21～F40が47px。主結果は126px/112px、英語読みは同じ32pxで最大2行。
+  数値ごとの個別fitはせず、同じ表示モードでは字の大きさを保持する。
+  シャム猫は身体高400px、足支点(1655,990)。通常姿v005、既存動作v001、本作追加4ポーズを固定snapshotから使う。
+  本番で使う姿勢はneutral/greet/think/watch_left/present_half/present_full/delighted。
+  既存通常姿・既存6ポーズを保全。追加は式へ視線を向ける、前脚を半分/十分に差し出す、閉眼笑顔の4枚。
+  通常姿1070px、既存ポーズ共通413px、追加4枚共通560pxの登録基準と個別足支点を維持する。
+  体格をポーズのbbox高へ合わせず、原画・輪郭・RGBAを変更しない。演技は導入・説明・終幕へ限定する。
+  新4枚の微小な胴体差と閉眼姿の約2.14pxの耳高差は前工程の記録どおり保持し、中間姿勢で接続する。
+  背景・数字・式・猫を独立レイヤーとし、共有カタログの後続更新から本作を切り離した。
+
+音声とコーデック校正
+  自然な米国英語、af_heart、fp32、生成速度0.98。BGM・環境音・効果音なし。
+  採用原音104発話の新規ASR/CTC・語頭語尾等の採用ゲートはaccepted104、未解決0。
+  使用原音の合計429.39908333333335秒と固定遷移107.04秒から実測タイムラインを構成した。
+  マスターは48kHz/24bit/stereo。発話全体に一定の線形scalarと共通ゲインだけを使い、原音は変更していない。
+  圧縮・リミッター・時間伸縮・ピッチ変更は行っていない。
+  初回AACでT013bだけ+0.20dBTPのovershootが見つかったため、その発話全体へ追加-2.5dBの一定scalarを適用した。
+  他103発話と待機部分のPCMサンプルはbyte同一。全発話時刻・表示時刻は変更なし。
+  校正後マスターは-16.53LUFS/-2.04dBTP、合格AACは-16.53LUFS/-1.97dBTP。
+  AAC-LCは48kHz/stereo、公称のエンコーダー指定192kbps、最終ファイルの実平均158,238bps。
+  公称値と無音を含む実平均を区別する。合格したAAC候補を再encodeせず、そのままcopy muxした。
+  全16,094 H.264パケットのpayload/PTS/DTS/durationと全16,094フレームのframemd5が旧映像と完全一致。
+  合格M4Aと最終MP4の48kHz/24bit/stereoデコードPCMもbyte同一。
+
+確認済みの範囲
+  原寸の配置：1,395状態・14,919部品、水平/垂直の差はそれぞれ最大0.5pxで合格。
+  全本番1,617固有描画状態の配置、前景の重なり・切れを検査して合格。
+  最短/最長・全桁数・全通常状態・受渡しの入口/途中/出口・繰上がり・全41項の履歴を含む。
+  完成MP4のstream仕様と完全デコード同一性はrender-technical-check/verification.jsonでPASS。
+  数式描画と共通配置の回帰31件が合格。採用素材11姿勢の原寸比較も別途記録した。
+  独立の最終QAはPASS。全16,094フレームをデコードし、全41項・39式・英語読み・添字・説明図・履歴を検査。
+  原寸733場面・8,222前景要素は水平/垂直それぞれ最大1.0pxで合格、未解決0。
+  原音とmaster/最終AACを104発話の左右両チャンネルで照合し、最小相関0.9961558299215337。
+  master/AACの無音区間は各105件、内部ピークはPCM16で0/1。字幕104件・チャプター7件も合格。
+  最新MP4の全104発話・両チャンネルについて新規ASR208件・独立CTC208件・語頭語尾/波形を検査し、採用104・未解決0。
+  ASRは左89一致/15転写警告、右90一致/14警告。警告は個別の音素・音響根拠で確認し、clipping/語頭/語尾の未解決警告0。
+  N006のeightは、別の80ms文脈付き切出しCTCと7窓LPCで母音と語末/t/の保持を追加確認した。
+  旧AACの認識結果や前工程の静止画検査を、この最終AACの検査済み記録へ転用しない。
+  この記録は、自動解析・抽出画像の確認・キーポーズ確認を含む。人による全編連続視聴・全件試聴の記録ではない。
+
+検査の履歴
+  演算子強調の囲みが字形観測領域へ入った初回描画は保全し、＋/＝を領域外の下線へ改めた。
+  独立画素検査の初期27件は、別captionのROI混入、移動添字下の固定窓の背景、カンマの色ゲートによる可視画素欠落を分離して再検査した。
+  配置先のcontent_boxや両軸1pxの許容差は変えていない。この測定修正では映像自体を変更していない。
+  旧H264の画素検査を、全frame/PTSのframemd5一致と全視覚cue同一の証明で最終MP4へ束縛し直した。
+  音声の最終QAは修正後のmaster/MP4で新たに実施した。旧報告と再検査報告はそれぞれの範囲のまま保持する。
+
+再出力と原音からの組み直し
+  source .venv/bin/activate
+  python tools/portable_production.py doctor --production fibonacci
+  python tools/portable_production.py preview --production fibonacci --out-dir output/fibonacci-preview-new
+  python tools/portable_production.py render --production fibonacci --out-dir output/fibonacci-render-new
+  python tools/portable_production.py verify --production fibonacci --video output/fibonacci-render-new/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4 --out-dir output/fibonacci-render-new-qa
+
+  再出力では採用済みmaster.wavと実測timelineを使う。マスターには音量校正を含むので追加ゲインを二重にかけない。
+  原音から組み直す場合はbuild_fibonacci_episode.pyへ採用speech/measurements.json、speech-acceptance.json、
+  isolated-phonemes-selected.json、speech/aac-scalar-corrections.jsonを渡し、未使用出力フォルダへ保存する。
+  原音のSHA・個別採用ゲート・補正のsource_sha256を検証し、resampled true peakの線形校正とT013b補正を一回ずつ適用する。
+  コーデックの校正試行はcalibrate_fibonacci_aac.pyで未校正マスターへ明示的に束縛した試行timelineを使い、新しい出力へ保存する。
+  現行の校正済みマスターへ同じ追加-2.5dBをもう一度適用しない。
+  校正AACが合格した後はremux_fibonacci_audio.pyで旧映像とcopy muxし、H.264/framemd5/PCM同一性を確認する。
+  別環境で再encodeしたファイルのSHA一致だけを完成条件にせず、生成した最終AACと映像を検査する。
+
+正本・履歴
+  機械可読仕様：design/fibonacci-counting-v1/production-spec-v001.json
+  台本：design/fibonacci-counting-v1/narration.json、count-lines.json
+  入力・描画：output/fibonacci-counting-001-v001/timeline.json、build-record.json、render-record.json、frame-plan.json
+  原寸配置：output/fibonacci-counting-001-v001/native-layout-qa/layout-verification.json
+  原音採用：output/fibonacci-counting-001-v001/speech/speech-acceptance.json
+  AAC校正：output/fibonacci-counting-001-v001/audio-codec-calibration/v002/correction-report.json
+  映像/AAC copy証明：output/fibonacci-counting-001-v001/audio-remux-proof/v002/verification.json
+  独立画素QA：output/fibonacci-counting-001-v001/qa/v001/visual-recheck-v003/visual-only-verification.json
+  最終QA：output/fibonacci-counting-001-v001/qa/v002/verification.json
+  最終AAC：output/fibonacci-counting-001-v001/audio-final-qa/final-aac-review.json
+  旧試行はrender-attempts/、audio-codec-calibration/pre-aac-correction-v001/、qa/v001/等へ保全。
+  前工程資料・元画像・通常姿・既存ポーズ・過去8作品の完成記録はその時点の内容として保持する。

@@ -1,0 +1,58 @@
+フィボナッチv003 内容再確認（数学・英語読み）: 合格
+
+対象MP4 SHA-256: 2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704
+現行timelineと台本の実入力を読み、新たに計算しました。過去PASSを結論として流用していません。
+F0=0、F1=1、整数n>=2でF[n]=F[n-2]+F[n-1]。全41項・39加算、添字0〜40と通算1〜41が一致。
+二つの1はF1/F2として保持。全41の結果英語読み、全39式・78入力英語読みが独立parseと正しい値へ一致。
+最初の1億超えはF40=102,334,155。F39=63,245,986以下は全て1億未満。
+最後の対はF38=39,088,169/F39=63,245,986で、その和が102,334,155。T039の画面実装もこの対を使います。
+3説明の列和は8+13:11→2、89+144:13→13→2、987+1597:14→18→15→2（右から左）。
+one one=1個の一、one ten=1個の十、18tens=180、15hundreds=1500。数字の連結として解釈していません。
+million/thousandの係数、暗黙の0の位、米語andなし、forty等の綴りも確認。24の説明文も数学的な意味を点検しました。
+螺旋や自然界の普遍法則を断定する発話はありません。問題・未解決0。
+新ASR・試聴・完成画素検査は本報告の範囲外です。既存媒体・資料・QAは変更していません。
+
+全41項（添字 / 通算 / 値 / 読み / 加算）:
+F00 / 01 / 0 / zero / 初期値
+F01 / 02 / 1 / one / 初期値
+F02 / 03 / 1 / one / 0 + 1 = 1
+F03 / 04 / 2 / two / 1 + 1 = 2
+F04 / 05 / 3 / three / 1 + 2 = 3
+F05 / 06 / 5 / five / 2 + 3 = 5
+F06 / 07 / 8 / eight / 3 + 5 = 8
+F07 / 08 / 13 / thirteen / 5 + 8 = 13
+F08 / 09 / 21 / twenty-one / 8 + 13 = 21
+F09 / 10 / 34 / thirty-four / 13 + 21 = 34
+F10 / 11 / 55 / fifty-five / 21 + 34 = 55
+F11 / 12 / 89 / eighty-nine / 34 + 55 = 89
+F12 / 13 / 144 / one hundred forty-four / 55 + 89 = 144
+F13 / 14 / 233 / two hundred thirty-three / 89 + 144 = 233
+F14 / 15 / 377 / three hundred seventy-seven / 144 + 233 = 377
+F15 / 16 / 610 / six hundred ten / 233 + 377 = 610
+F16 / 17 / 987 / nine hundred eighty-seven / 377 + 610 = 987
+F17 / 18 / 1,597 / one thousand five hundred ninety-seven / 610 + 987 = 1,597
+F18 / 19 / 2,584 / two thousand five hundred eighty-four / 987 + 1,597 = 2,584
+F19 / 20 / 4,181 / four thousand one hundred eighty-one / 1,597 + 2,584 = 4,181
+F20 / 21 / 6,765 / six thousand seven hundred sixty-five / 2,584 + 4,181 = 6,765
+F21 / 22 / 10,946 / ten thousand nine hundred forty-six / 4,181 + 6,765 = 10,946
+F22 / 23 / 17,711 / seventeen thousand seven hundred eleven / 6,765 + 10,946 = 17,711
+F23 / 24 / 28,657 / twenty-eight thousand six hundred fifty-seven / 10,946 + 17,711 = 28,657
+F24 / 25 / 46,368 / forty-six thousand three hundred sixty-eight / 17,711 + 28,657 = 46,368
+F25 / 26 / 75,025 / seventy-five thousand twenty-five / 28,657 + 46,368 = 75,025
+F26 / 27 / 121,393 / one hundred twenty-one thousand three hundred ninety-three / 46,368 + 75,025 = 121,393
+F27 / 28 / 196,418 / one hundred ninety-six thousand four hundred eighteen / 75,025 + 121,393 = 196,418
+F28 / 29 / 317,811 / three hundred seventeen thousand eight hundred eleven / 121,393 + 196,418 = 317,811
+F29 / 30 / 514,229 / five hundred fourteen thousand two hundred twenty-nine / 196,418 + 317,811 = 514,229
+F30 / 31 / 832,040 / eight hundred thirty-two thousand forty / 317,811 + 514,229 = 832,040
+F31 / 32 / 1,346,269 / one million three hundred forty-six thousand two hundred sixty-nine / 514,229 + 832,040 = 1,346,269
+F32 / 33 / 2,178,309 / two million one hundred seventy-eight thousand three hundred nine / 832,040 + 1,346,269 = 2,178,309
+F33 / 34 / 3,524,578 / three million five hundred twenty-four thousand five hundred seventy-eight / 1,346,269 + 2,178,309 = 3,524,578
+F34 / 35 / 5,702,887 / five million seven hundred two thousand eight hundred eighty-seven / 2,178,309 + 3,524,578 = 5,702,887
+F35 / 36 / 9,227,465 / nine million two hundred twenty-seven thousand four hundred sixty-five / 3,524,578 + 5,702,887 = 9,227,465
+F36 / 37 / 14,930,352 / fourteen million nine hundred thirty thousand three hundred fifty-two / 5,702,887 + 9,227,465 = 14,930,352
+F37 / 38 / 24,157,817 / twenty-four million one hundred fifty-seven thousand eight hundred seventeen / 9,227,465 + 14,930,352 = 24,157,817
+F38 / 39 / 39,088,169 / thirty-nine million eighty-eight thousand one hundred sixty-nine / 14,930,352 + 24,157,817 = 39,088,169
+F39 / 40 / 63,245,986 / sixty-three million two hundred forty-five thousand nine hundred eighty-six / 24,157,817 + 39,088,169 = 63,245,986
+F40 / 41 / 102,334,155 / one hundred two million three hundred thirty-four thousand one hundred fifty-five / 39,088,169 + 63,245,986 = 102,334,155
+
+全39prefix、列ごとの繰り上がり、24説明の判断と入力SHAはmath-and-readings.jsonに保存。

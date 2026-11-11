@@ -1,0 +1,117 @@
+{
+  "kind": "independent-read-only-character-asset-management-spec-review",
+  "checked_at_utc": "2026-11-11T15:45:28.130877+00:00",
+  "scope": [
+    "docs/IMAGE-ASSET-MANAGEMENT.md",
+    "AGENTS.md",
+    "assets/library/AGENTS.md",
+    "assets/library/README.md",
+    "README.md",
+    "assets/library/character-assets.html",
+    "tools/manage_character_assets.py",
+    "catalogs/character-asset-management-v1.json",
+    "catalogs/character-asset-registry-v1.json",
+    "assets/library/collections/character-style-audit/v001",
+    "assets/library/collections/character-management/v001"
+  ],
+  "source_files_modified": false,
+  "inspected_management_config_sha256": "8fe315a2b1edce538009b3c12a98adf237ff206700f693b1adfbac57e9c12664",
+  "inspected_management_registry_sha256": "cd8f77fce3a87c2c3a09af2354f318d8b368187ec372c887ea23d6e723d2965a",
+  "checks": {
+    "management_check": {
+      "status": "pass",
+      "batches": 60,
+      "files": 1122,
+      "bytes": 443544447,
+      "unclassified_batches": 0,
+      "pending_batches": 0
+    },
+    "tests": {
+      "status": "pass",
+      "count": 46,
+      "command": ".venv/bin/python -m unittest tests.test_character_asset_management tests.test_character_asset_inventory tests.test_character_expansion tests.test_character_eyecatches tests.test_component_alignment"
+    },
+    "original_frozen_character_files": {
+      "initial_snapshot_files": 1107,
+      "excluded_original_active_writer_files": 10,
+      "compared": 1097,
+      "changed_or_missing": [],
+      "baseline": "assets/library/collections/character-management/v001/initial-reconciliation.json#source_snapshot"
+    },
+    "preserved_style_archive": {
+      "manifest_records": 97,
+      "byte_identical_to_original": 97,
+      "size_and_sha256_match": 97,
+      "failures": [],
+      "historical_json_output_paths_resolved_by_manifest": 106,
+      "unresolved_style_output_paths": []
+    },
+    "html_links": {
+      "assets/library/character-assets.html": {
+        "checked": 247,
+        "missing": []
+      },
+      "assets/library/collections/character-style-audit/v001/index.html": {
+        "checked": 29,
+        "missing": []
+      }
+    },
+    "markdown_links": {
+      "AGENTS.md": 3,
+      "assets/library/AGENTS.md": 3,
+      "docs/IMAGE-ASSET-MANAGEMENT.md": 7,
+      "assets/library/README.md": 12,
+      "README.md": 60,
+      "missing": []
+    },
+    "episode_qa_distinct_from_fine_style_audit": true,
+    "additional_user_approval_flow_introduced": false,
+    "runtime_version_documentation": {
+      "actual_python": "3.15.2",
+      "actual_pillow": "13.0.0",
+      "matches_assets_readme": true
+    }
+  },
+  "findings": [
+    {
+      "id": "SPEC-01",
+      "severity": "minor",
+      "path": "catalogs/character-asset-management-v1.json",
+      "line": 957,
+      "batch_root": "assets/library/characters/kangaroo/motions/v002",
+      "field": "quality_reviews[0].observation",
+      "title": "Expansion review repeats an eye-catch-only observation",
+      "evidence": "The review declares scope=\"this batch only\" but observation starts アイキャッチは輪郭がやや細く柔らかく. Archived b/audit.json B-KANGAROO-01 explicitly scopes that observation to eyecatch tea_bow and jump_dance. The batch status acceptable_with_notes is not contradicted.",
+      "recommendation": "Keep the preserved historical audit unchanged; replace this management overlay observation with an expansion-specific statement supported by archived group/source-sheet evidence.",
+      "reported_to_manager": true
+    },
+    {
+      "id": "SPEC-02",
+      "severity": "minor",
+      "path": "assets/library/collections/character-management/v001/reconciliation-result-v003.json",
+      "line": 33,
+      "field": "portable_roundtrip_check",
+      "title": "Final path-closure evidence is not present in the portable latest-result record",
+      "evidence": "The string says final metadata path closure checked below, but the JSON ends at this field. Additional closure=true and final hashes are only in output/character-asset-management-v001/verification.json. A portable consumer following manifest.latest_result cannot inspect that claimed evidence from this record.",
+      "recommendation": "Preserve this historical result and add a new result with concrete current round-trip verification details and self-contained evidence references; point the management manifest at that new result.",
+      "reported_to_manager": true
+    },
+    {
+      "id": "SPEC-03",
+      "severity": "informational",
+      "path": "catalogs/character-asset-management-v1.json",
+      "line": 1929,
+      "batch_root": "assets/library/characters/red-panda/eyecatches/v001",
+      "field": "quality_reviews[0].observation",
+      "title": "Eye-catch batch observation also includes an explicitly named expansion comparison",
+      "evidence": "scope=\"this batch only\", yet the body-fill clause explicitly describes 拡充版の胴. This is not a false label because the other set is named, but the own-batch fill conclusion is omitted. Archived a/findings.json says eye-catch neutral torso close to canonical (117/57/35 versus120/57/33).",
+      "recommendation": "For clarity, use this batch's contour observation plus the supported eye-catch body-fill comparison. Leave the expansion observation attached to motions/v002.",
+      "reported_to_manager": true
+    }
+  ],
+  "limitations": [
+    "No new visual style acceptance was inferred. This review verifies management records, documentary scope and preservation, not complete MP4 playback or a fresh 414-pose visual audit.",
+    "Generic-index unchanged history was asserted by the management record; this review independently recomputed the 1097-character-file preservation baseline, not a missing historical pre-management generic-index hash.",
+    "Parent manager is applying overlay corrections and will publish final verification separately; this report records the initial inspected state."
+  ]
+}

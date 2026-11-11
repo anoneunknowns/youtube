@@ -1,0 +1,142 @@
+{
+  "kind": "fibonacci-quality-closeout-critical-visual-review",
+  "status": "ONE_DEFECT_FIXED_IN_V003_NATIVE_PREVIEW_FINAL_MP4_PENDING",
+  "source_completed_video": {
+    "path": "output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+    "sha256": "68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3"
+  },
+  "new_actual_mp4_evidence": {
+    "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/visual/fresh-evidence.json",
+    "sha256": "c6e2572fee55a57abc6182916d9dc0c1b255da49d4bf1831be1811209a003966"
+  },
+  "scope": {
+    "new_actual_MP4_actor_boundaries": 52,
+    "new_four_window_boundaries_included": 22,
+    "native_contiguous_actor_frames": 364,
+    "native_actor_before_after_review_pages": 18,
+    "all_handoffs_observed": 38,
+    "carry_cases": 3,
+    "carry_unique_column_phase_samples": 33,
+    "finale_and_fade_frames": 13,
+    "all_frame_human_playback_claimed": false,
+    "method": "Fresh actual-MP4 decoding. All52before/after native pairs were viewed in18unscaled pages, with7contiguous frames retained per boundary. All38transfer entry/mid/exit/settled source crops retained, overview scanned and shortest/largest transferred8digit-pair/font-mode cases viewed native. All3carry phase overviews plus direct native source crops and independent AAC CTC phrase landmarks compared. Final fade sampled through the last decoded frame."
+  },
+  "findings": [
+    {
+      "id": "VIS-001",
+      "kind": "visible-type-discontinuity",
+      "source_frames": [
+        6871,
+        6872
+      ],
+      "source_times_s": [
+        229.03333333333333,
+        229.06666666666666
+      ],
+      "evidence": {
+        "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/visual/F20-to-F21-native-font-switch.png",
+        "sha256": "d87c94f954dc38cdc885813fae8b0db3b1f35f908d0f3be4f11e2be64e40b0fa"
+      },
+      "description": "Settled F20copied pair4,181/6,765 abruptly shrinks88→47px on the first E21frame, after the handoff has already ended. Values and centers are correct, but the single-frame shrink is visibly rough.",
+      "required_action": "Shrink only the two F20copy glyphs88→47px on the existing transfer progress; arrive47and retain47until/through E21. Main result, reading, labels, character and all audio/cue times unchanged.",
+      "implementation": {
+        "path": "tools/render_fibonacci_video_v003.py",
+        "sha256": "7eafca5114b9cc7ceec22d4c97580eb2080ac2f7f5aec137fc8ad6737f0e9cf1"
+      },
+      "native_verification": {
+        "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/visual/v003-font-transition/native-font-transition-verification.json",
+        "sha256": "b51e6a317217b80e31aedad762a5e35483c3ec71c37d743f2b4ed94f0a34adbc"
+      },
+      "native_status": "FIXED_AND_VERIFIED",
+      "final_encoded_status": "PENDING_V003_RENDER"
+    }
+  ],
+  "reviewed_nonissues": [
+    {
+      "id": "ACT-001",
+      "concern": "Small face/body outline and watercolor differences",
+      "decision": "CLOSED_NO_MATERIAL_DEFECT",
+      "evidence_scope": "All52native pose boundary before/after pairs; all22new-window boundaries included.",
+      "rationale": "Single coherent outline/face and planted feet are retained. Wave blue-iris centroid changes are max|dx|0.313120/max|dy|0.140548px; the observed paper/edge changes do not read as unintended head/torso jumps or unrelated expression flicker. Old think deliberately turns from watching toward the viewer and back while raising/returning a paw. That purposeful orientation change is distinguished from a body-scale jump."
+    },
+    {
+      "id": "ACT-002",
+      "concern": "Discrete holds might be incomplete or broken motion",
+      "decision": "CLOSED_NO_MATERIAL_DEFECT",
+      "rationale": "Both wave directions connect shoulder→elbow→paw without detached joints, doubled paws or torso shifts. Preparation,2in/out excursions, lowering and normal return are readable at the actual6–7frame held cadence. The illustration uses held keyposes; no smooth/full-actor interpolation is claimed or needed to repair a detected defect."
+    },
+    {
+      "id": "ACT-003",
+      "concern": "Notice weak or feet floating",
+      "decision": "CLOSED_NO_MATERIAL_DEFECT",
+      "rationale": "Blue pupils move upward-left toward the new-value window, hold briefly and return. Both soles remain attached to the common soft ground shadow; no lifted foot or support discontinuity appears. Its limited eye action keeps the formula transfer dominant."
+    },
+    {
+      "id": "ACT-004",
+      "concern": "Long watching holds insufficient guidance",
+      "decision": "CLOSED_INTENTIONAL_TEACHING_ROLE",
+      "rationale": "The gaze points left toward the main result/operand area while input emphasis, output commit and newest-pair movement supply the changing activity. Milestone reaction and goodbye are present. Adding an unrelated repeated idle gesture would not address an observed error; no blanket loop is added."
+    },
+    {
+      "id": "MATH-001",
+      "concern": "Transfer, labels, large digits or scene cuts",
+      "decision": "CLOSED_EXCEPT_VIS-001_FIXED_IN_NEW_NATIVE_VERSION",
+      "rationale": "All38handoff values remain the newest pair, labels move with their values, shortest repeated1pair and largest8digit transferred-pair cases remain readable and clear. The sole visible type discontinuity is VIS-001. Scene cuts signal new explanation/result roles; no mixed/fake numerical intermediate or unmotivated collision is observed. F38=39,088,169 and F39=63,245,986 form the largest transferred pair; F40=102,334,155 is a9digit final result and has no handoff."
+    },
+    {
+      "id": "CARRY-001",
+      "concern": "Carry generation/voice response",
+      "decision": "CLOSED_NO_MATERIAL_DEFECT",
+      "rationale": "All33column phases follow correct place order and values. Worst apparent speech leads were checked explicitly: F8 two tens describes its already-visible2; F13 write-three-tens begins during same tens-write hold and carry-one-hundred overlaps same carry movement; F18 incoming carry arrives within0.266s of fifteen-hundreds introduction. For That hundred joins, carry arrives149.2667during hundred introduction149.159–149.544, and hundreds compute is visible when joins149.619–149.924begins. No wrong column or contradictory operation is narrated.",
+      "correspondence_evidence": {
+        "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/visual/carry-voice-correspondence.json",
+        "sha256": "f3606e90cfa342d5ed4da8373769878b86b4798d51eb5ddcc0a58c58d5679f4a"
+      }
+    },
+    {
+      "id": "END-001",
+      "concern": "Closing expression and fade",
+      "decision": "CLOSED_NO_MATERIAL_DEFECT",
+      "rationale": "The1.2s smile returns open eyes, goodbye wave returns normal before fade, all foreground/background fade together to cream through frame16103. No truncated limb, abrupt blackout, remaining strong title, or isolated visible element is left at the ending."
+    }
+  ],
+  "wave_blue_iris_max_abs_delta_px": [
+    0.3131198661014878,
+    0.1405481469790857
+  ],
+  "v003_source_policy": {
+    "timeline": {
+      "path": "output/fibonacci-counting-001-v003/timeline.json",
+      "sha256": "f7452402531da5b41e285e2a801479cea29fa4e55864de7791c0ecd366b6f37e"
+    },
+    "source_timeline": {
+      "path": "output/fibonacci-counting-001-v002/audio-build/timeline.json",
+      "sha256": "4cb6494b82bdcfccfe7311a622faec619e3a5ace9cf39cdcef8b2a947257557c"
+    },
+    "character_motion": {
+      "path": "output/fibonacci-counting-001-v003/character-motion.json",
+      "sha256": "8ca9f4383435ddb941cf3be139f785d5afe5a72029fa1e47baae77ff849c0cfa"
+    },
+    "encoded_audio_acceptance": {
+      "path": "output/fibonacci-counting-001-v002/audio-build/aac-acceptance.json",
+      "sha256": "32fe41911b163b5838961f1a2699fada953669a701d372294bea200497417327"
+    },
+    "renderer": {
+      "path": "tools/render_fibonacci_video_v003.py",
+      "sha256": "7eafca5114b9cc7ceec22d4c97580eb2080ac2f7f5aec137fc8ad6737f0e9cf1"
+    },
+    "values_voices_times_unchanged": true,
+    "new_images_generated": 0,
+    "metadata_copied_byte_identically": true
+  },
+  "tests": {
+    "total_passed": 50,
+    "negative_control": "Original88→47one-frame jump produces41pxfontstep and is rejected. New actual-frame sweep max3px, monotone88→47, settled and next-input glyph boxes identical. All31effective positions have native dx/dy<=0.5px, nonempty/contained/clear."
+  },
+  "remaining_required_work": [
+    "Render v003once",
+    "Fresh encoded full-video and transition QA",
+    "Close VIS-001against new actual-MP4 evidence"
+  ],
+  "unresolved_material_findings_other_than_v003_final_verification": []
+}

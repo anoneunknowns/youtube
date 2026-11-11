@@ -1,0 +1,9 @@
+Fibonacci v002 専用追加原画の受入
+
+採用: built-in image_gen の単体編集003〜007。wave_prepare / wave_in / wave_out / notice_prepare / notice_full の5枚。直接出力をbyte同一でframesへcopyし、原本の色・輪郭・alphaを変更していない。採用経路は通常RGBA描画と共通等方拡縮のみ。
+
+共通身体尺度: wave1070px、notice1120px（元627px watchの2倍生成）。描画400px、解剖学的足支点を個別登録、足元1655,990。pose別bbox fittingなし。頭胴は画素固定とはせず、微小な輪郭/質感差を保持して原寸比較した。通常姿→途中姿勢→内外往復2回→途中姿勢→通常姿で手先の往復/戻りを示す。noticeは視線の短い反応。
+
+原寸contactと明暗GIFを制作担当とrootが再確認し、本編組込みへ受入。最終MP4の連続動作検査は別に実施する。
+
+不採用: sheet001/002と、そこで試したmask/featherの局所合成。胴の接合段差等があり採用しない。原画・prompt・参照SHA・試行・派生候補は履歴として保持する。新規原画枚数に局所切出し/派生候補を加算しない。

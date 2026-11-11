@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "kind": "fibonacci-production-spec",
+  "production_set_id": "fibonacci-counting-production-v001",
+  "episode_id": "fibonacci-counting-001",
+  "revision": "v001",
+  "status": "completed_and_assistant_reviewed",
+  "status_ja": "完成・独立最終QA／最終AACレビューPASS",
+  "user_approved": false,
+  "created_at_utc": "2026-11-11T15:18:20.795803+00:00",
+  "delivery": {
+    "video": {
+      "path": "output/fibonacci-counting-001-v001/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+      "sha256": "0c5d059a45be5ece439e2bd2628de13b5e2fcfb7fc6b218ede0a62c04ef283c3",
+      "status": "PASS"
+    },
+    "bytes": 49135105,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 16094,
+    "video_duration_s": 536.4666666666667,
+    "audio_timeline_duration_s": 536.4390833333333,
+    "duration_text": "8分56.466667秒",
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "color_space": "bt709",
+    "color_transfer": "bt709",
+    "color_primaries": "bt709",
+    "color_range": "tv",
+    "subtitle_events": 104,
+    "chapters": 7,
+    "sidecar_paths": [
+      "output/fibonacci-counting-001-v001/english-captions.srt",
+      "output/fibonacci-counting-001-v001/subtitles.srt",
+      "output/fibonacci-counting-001-v001/chapters.txt",
+      "output/fibonacci-counting-001-v001/upload-details.txt"
+    ]
+  },
+  "mathematics": {
+    "initial_conditions": {
+      "F0": 0,
+      "F1": 1
+    },
+    "recurrence": "Fn=F(n-2)+F(n-1), integer n>=2",
+    "indices": [
+      0,
+      40
+    ],
+    "values": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      5,
+      8,
+      13,
+      21,
+      34,
+      55,
+      89,
+      144,
+      233,
+      377,
+      610,
+      987,
+      1597,
+      2584,
+      4181,
+      6765,
+      10946,
+      17711,
+      28657,
+      46368,
+      75025,
+      121393,
+      196418,
+      317811,
+      514229,
+      832040,
+      1346269,
+      2178309,
+      3524578,
+      5702887,
+      9227465,
+      14930352,
+      24157817,
+      39088169,
+      63245986,
+      102334155
+    ],
+    "terms": 41,
+    "generated_terms": 39,
+    "initial_terms": 2,
+    "final_value": 102334155,
+    "first_term_above": 100000000,
+    "duplicate_ones_preserved": true,
+    "equal_spacing_in_history_means": "sequence order, not proportional value",
+    "quantity_model": false
+  },
+  "narration": {
+    "voice_events": 104,
+    "categories": {
+      "intro": 8,
+      "count": 41,
+      "formula_prefix": 39,
+      "explanation": 12,
+      "outro": 4
+    },
+    "source_speech_sum_s": 429.39908333333335,
+    "voice_id": "af_heart",
+    "dtype": "fp32",
+    "generation_speed": 0.98,
+    "language": "natural American English",
+    "count_cardinal_and_policy": "No inserted and; whole cardinal, not per-digit syllable spacing",
+    "formula_prefix": "a plus b equals",
+    "result_utterances_per_generated_term": 1,
+    "bgm": false,
+    "ambience": false,
+    "sound_effects": [],
+    "source_audio_sample_rate_hz": 24000,
+    "source_gate": {
+      "path": "output/fibonacci-counting-001-v001/speech/speech-acceptance.json",
+      "sha256": "a40f04da2dfbfde577d343c19b051ac137123d3eae60cf24ca27f3ed3f4a8cce",
+      "status": "PASS"
+    },
+    "source_gate_summary": {
+      "clips": 104,
+      "numbers": 41,
+      "dialogue": 63,
+      "accepted": 104,
+      "unresolved": 0,
+      "isolated_asr_warnings_reviewed": 14
+    },
+    "original_sources_modified": false
+  },
+  "visual_process": {
+    "background": {
+      "path": "assets/library/worlds/cloud-post-office/backgrounds/v001/cloud-post-office-background.png",
+      "sha256": "85e31eac3c1a3f31d5982fc0ee208d5fa55139dc3a413da06464bc49d43c78a6",
+      "status": "PASS"
+    },
+    "stages": [
+      "older-input emphasis",
+      "plus/newer-input emphasis",
+      "equals/computation-path emphasis",
+      "result and English reading commit",
+      "copy newer pair into next inputs"
+    ],
+    "operators_emphasized_outside_glyph_roi": true,
+    "integer_glyph_morphing": false,
+    "future_result_reveal": false,
+    "carry_replays": [
+      {
+        "index": 8,
+        "a": 8,
+        "b": 13,
+        "c": 21
+      },
+      {
+        "index": 13,
+        "a": 89,
+        "b": 144,
+        "c": 233
+      },
+      {
+        "index": 18,
+        "a": 987,
+        "b": 1597,
+        "c": 2584
+      }
+    ],
+    "carry_steps": [
+      "align matching decimal columns",
+      "compute from ones leftward",
+      "write one result digit",
+      "move nonzero carry to adjacent column"
+    ],
+    "zero_carry_action_label": "COLUMN COMPLETE",
+    "replay_after_indices": [
+      2,
+      8,
+      13,
+      18,
+      26,
+      39
+    ],
+    "replay_increments_sequence_progress": false,
+    "final_history_terms": 41,
+    "equation_font_px": {
+      "F2_to_F20": 88,
+      "F21_to_F40": 47
+    },
+    "main_result_font_px": {
+      "F2_to_F20": 126,
+      "F21_to_F40": 112
+    },
+    "reading_font_px": 32,
+    "reading_max_lines": 2,
+    "per_value_font_fitting": false,
+    "opening_fade_s": 0.8,
+    "ending_cream_fade_s": 2
+  },
+  "character": {
+    "id": "siamese-cat",
+    "selection": "User override of the recorded original bird lottery",
+    "frozen_snapshot": {
+      "path": "design/fibonacci-counting-v1/character-selection.json",
+      "sha256": "99e2bfe3fc403210ad42927bbdad882cf67f45fe3851d065fd37a96768f46b48",
+      "status": "PASS"
+    },
+    "neutral": {
+      "path": "assets/library/characters/siamese-cat/sources/v005/neutral.png",
+      "sha256": "94e494e89adfa12b6175437b1697be1ef691409e69f8c3fb00b46496d2bfdb36",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        244,
+        119,
+        998,
+        1189
+      ],
+      "anchor_px": [
+        611,
+        1189
+      ],
+      "reference_height_px": 1070,
+      "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral",
+      "source_manifest": "assets/library/characters/siamese-cat/sources/v005/source-manifest.json",
+      "source_manifest_sha256": "2f2cb303a8314bfe1d7b69624ccfdcd491048dca15119c8983416354a9e26549"
+    },
+    "existing_six_pose_registration": "assets/library/characters/siamese-cat/motions/v001/registration.json",
+    "additional_four_pose_registration": {
+      "path": "assets/library/characters/siamese-cat/motions/fibonacci-v001/registration.json",
+      "sha256": "e1dd03dd9c1d6550845f4346c272a281e74e5aa6ac977fb727bdfc0a21bba88a",
+      "status": "PASS"
+    },
+    "body_height_px": 400,
+    "foot_anchor_px": [
+      1655,
+      990
+    ],
+    "neutral_reference_height_px": 1070,
+    "existing_pose_reference_height_px": 413,
+    "additional_pose_reference_height_px": 560,
+    "new_pose_ids": [
+      "watch_left",
+      "present_half",
+      "present_full",
+      "delighted"
+    ],
+    "poses_used": [
+      "neutral",
+      "greet",
+      "watch_left",
+      "present_half",
+      "present_full",
+      "think",
+      "delighted"
+    ],
+    "material_review_pose_count": 11,
+    "motion_policy": "Registered anatomical support and one isotropic scale per source family; short half-pose entries/exits at a few explanations, no continuous pose loop",
+    "existing_neutral_and_six_pose_pixels_preserved": true,
+    "alpha_or_contour_processing": false,
+    "review": {
+      "path": "design/fibonacci-counting-v1/production-qa/production-material-audit-v001.json",
+      "sha256": "dfa23ce64d2b7596d94b0aff6f1e31786fcf2b08adc7221a43d604dd5f53a2bf",
+      "status": "PASS"
+    }
+  },
+  "pacing": {
+    "result_display_lead_s": 0.12,
+    "result_and_reading_reveal_together": true,
+    "formula_end_to_result_voice_start_s": 0.16,
+    "ordinary_result_end_to_next_formula_start_s": 2,
+    "ordinary_handoff_offset_s": [
+      0.35,
+      1.55
+    ],
+    "handoff_duration_s": 1.2,
+    "checkpoint_handoff_after_last_explanation_s": [
+      0.6,
+      1.8
+    ],
+    "next_formula_after_last_explanation_s": 2.6,
+    "fixed_transition_sum_s": 107.04,
+    "time_stretching": false,
+    "operator_highlighting": {
+      "CTC_approximate_operator_timing_count": 27,
+      "CTC_approximate_resolution_s": 0.02,
+      "CTC_event_ids": [
+        "E002",
+        "E006",
+        "E008",
+        "E009",
+        "E011",
+        "E013",
+        "E015",
+        "E016",
+        "E018",
+        "E021",
+        "E022",
+        "E023",
+        "E024",
+        "E025",
+        "E026",
+        "E027",
+        "E029",
+        "E030",
+        "E032",
+        "E033",
+        "E034",
+        "E035",
+        "E036",
+        "E037",
+        "E038",
+        "E039",
+        "E040"
+      ],
+      "word_count_proportional_estimate_count": 12,
+      "estimated_event_ids": [
+        "E003",
+        "E004",
+        "E005",
+        "E007",
+        "E010",
+        "E012",
+        "E014",
+        "E017",
+        "E019",
+        "E020",
+        "E028",
+        "E031"
+      ],
+      "estimate_is_measured_word_alignment": false
+    },
+    "carry_sentence_progression": "Editorial stages constrained by the measured explanation event windows; within-sentence fractions are not measured word alignment"
+  },
+  "audio": {
+    "master": {
+      "path": "output/fibonacci-counting-001-v001/master.wav",
+      "sha256": "555fa9fbd30d92a3c5d4c40505d50f29c90b66416f1c12c1acf1afb1de0c3834",
+      "status": "PASS"
+    },
+    "master_sample_rate_hz": 48000,
+    "master_channels": 2,
+    "master_sample_width_bits": 24,
+    "master_integrated_lufs": -16.53,
+    "master_true_peak_dbtp": -2.04,
+    "source_linear_gain_policy": "Established -4.5dBFS raw-source cap and RMS reference, followed by an additional nonpositive constant scalar chosen from each48k resampled true peak.",
+    "common_gain_db": 7.86,
+    "compression": false,
+    "limiting": false,
+    "dynamic_gain": false,
+    "time_stretching": false,
+    "codec": "aac",
+    "codec_profile": "LC",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "encoder_nominal_target_bps": 192000,
+    "measured_average_bps": 158238,
+    "target_and_measured_average_are_distinct": true,
+    "accepted_aac": {
+      "path": "output/fibonacci-counting-001-v001/audio-codec-calibration/v002/accepted-aac-candidate.m4a",
+      "sha256": "754d3dff676e86237397735b7f6334f0350084753192a3f957f484ae509e39d6"
+    },
+    "accepted_aac_integrated_lufs": -16.53,
+    "accepted_aac_true_peak_dbtp": -1.97,
+    "codec_calibration": {
+      "reason": "Original AAC overshoot isolated toT013b at+0.20dBTP",
+      "corrected_events": [
+        {
+          "id": "T013b",
+          "gain_db": -2.5,
+          "source_sha256": "95c9a31db6635e50152c7b61ffc1ddbed8bd520bf7c159c51f924811c7b2e14e"
+        }
+      ],
+      "other_utterance_samples_byte_identical": 103,
+      "timing_and_visual_cues_changed": false,
+      "report": {
+        "path": "output/fibonacci-counting-001-v001/audio-codec-calibration/v002/correction-report.json",
+        "sha256": "3c47b47a28e6f50aa9ba869297de4179c69482db90c7e57b9011ad0644340ac7",
+        "status": "PASS"
+      },
+      "adopted_source_bound_corrections": {
+        "path": "output/fibonacci-counting-001-v001/speech/aac-scalar-corrections.json",
+        "sha256": "de9cf1a6ffd4a6f9907ea28399bbfa8e2408afbc631421bea4089d486c88108e",
+        "status": "PASS"
+      }
+    },
+    "copy_mux": {
+      "accepted_AAC_reencoded": false,
+      "h264_packets_identical": 16094,
+      "packet_payload_pts_dts_duration_identical": true,
+      "decoded_framemd5_identical": 16094,
+      "accepted_aac_and_final_mp4_PCM_byte_identical": true,
+      "PCM_evidence": {
+        "sha256": "8096e613df1f5e0889d06264a73cdda5db777cfa213acc0269cf7b6ef0081c48",
+        "bytes": 154494456,
+        "sample_frames_48k_stereo24": 25749076
+      },
+      "proof": {
+        "path": "output/fibonacci-counting-001-v001/audio-remux-proof/v002/verification.json",
+        "sha256": "aa3a8253cc7ce8ad615efba0ca8c06387f04737f7bbe8b1ec67da9a6e11ea658",
+        "status": "PASS"
+      }
+    },
+    "final_fresh_104_utterance_review": {
+      "path": "output/fibonacci-counting-001-v001/audio-final-qa/final-aac-review.json",
+      "sha256": "af3f41a5c63843e7f2cd203b94ce676c332ca80be864d5f959d81316084bc544",
+      "status": "PASS",
+      "summary": {
+        "clips": 104,
+        "utterances": 104,
+        "channels": 2,
+        "numbers": 41,
+        "expression_prefixes": 39,
+        "other_dialogue": 24,
+        "fresh_isolated_ASR_runs": 208,
+        "fresh_independent_CTC_runs": 208,
+        "left_ASR_matches": 89,
+        "left_ASR_warnings_individually_reviewed": 15,
+        "right_ASR_matches": 90,
+        "right_ASR_warnings_individually_reviewed": 14,
+        "accepted": 104,
+        "unresolved": 0,
+        "clipped_samples": 0,
+        "onset_or_terminal_signal_warnings": 0
+      },
+      "measurements": {
+        "integrated_lufs": -16.53,
+        "true_peak_dbtp": -1.97,
+        "lra_lu": 5.4,
+        "format_duration_s": 536.466667,
+        "video_frames": 16094
+      },
+      "individual_hash_bound_decisions": true
+    }
+  },
+  "validation": {
+    "completion_pending": [],
+    "native_layout": {
+      "status": "PASS",
+      "states": 1395,
+      "components": 14919,
+      "tolerance_px": 0.5,
+      "max_abs_dx_px": 0.5,
+      "max_abs_dy_px": 0.5,
+      "contained_nonempty_and_both_axes_passed": true,
+      "foreground_collision_free": true,
+      "evidence": {
+        "path": "output/fibonacci-counting-001-v001/native-layout-qa/layout-verification.json",
+        "sha256": "c8e0ff03ce166fd6c42e6fcca222b5c2a821d0212897e12fb9c39cd8826747a3",
+        "status": "PASS"
+      }
+    },
+    "all_production_render_states": {
+      "states": 1617,
+      "both_axes_and_clearance_passed": true,
+      "evidence": {
+        "path": "output/fibonacci-counting-001-v001/frame-plan.json",
+        "sha256": "6671549751153d9f172e96816d71d4b19b1ceb2200d1517156f2f3f5a186fc32",
+        "status": "PASS"
+      }
+    },
+    "stream_and_decode_identity": {
+      "path": "output/fibonacci-counting-001-v001/render-technical-check/verification.json",
+      "sha256": "1cb71a372ac001869b0a100d1e2a6e6bf6fcd3fda6d9c3d8845acfde4fc85219",
+      "status": "PASS"
+    },
+    "independent_final_full_media": {
+      "path": "output/fibonacci-counting-001-v001/qa/v002/verification.json",
+      "sha256": "653659831f4105da82aedde2484e0b8c4f6b758e9712e23b169c989a8bff1e5c",
+      "status": "PASS",
+      "passed": true
+    },
+    "renderer_and_common_alignment_regression_tests": {
+      "tests": 31,
+      "passed": true,
+      "files": [
+        "tests/test_fibonacci_renderer.py",
+        "tests/test_component_alignment.py"
+      ]
+    },
+    "human_full_continuous_viewing_claimed": false,
+    "human_every_utterance_listening_claimed": false,
+    "scope_note": "Automated independent full-frame/733native raster audit, stereo original/master/final waveform and guarded silence, fresh208ASR/208CTC and individual final-clip decisions, selected frame/key-pose review. No human continuous viewing or every-utterance listening claim.",
+    "decoded_visual": {
+      "passed": true,
+      "decoded_frames": 16094,
+      "native_samples": 733,
+      "native_foreground_components": 8222,
+      "native_centering_tolerance_px": 1,
+      "max_abs_dx_px": 1.0,
+      "max_abs_dy_px": 1.0,
+      "unresolved": 0,
+      "producer_renderer_imported": false,
+      "independent_sequence_method": "binomial coefficient sum",
+      "caption_cues": 104,
+      "chapters": 7,
+      "pixel_reference": {
+        "path": "output/fibonacci-counting-001-v001/qa/v001/visual-recheck-v003/visual-only-verification.json",
+        "sha256": "955c40b21167b297e889137a4c47e36fa00ffee2a4036e1db21890d6c3552278",
+        "status": "PASS"
+      },
+      "identical_decoded_video_reuse": {
+        "passed": true,
+        "reference_report": "output/fibonacci-counting-001-v001/qa/v001/visual-recheck-v003/visual-only-verification.json",
+        "reference_report_sha256": "955c40b21167b297e889137a4c47e36fa00ffee2a4036e1db21890d6c3552278",
+        "reference_video_sha256": "d0a390eb49c99cd121310b9d1bca5a7bd92ab8a9851b46598669e228914a3406",
+        "final_video_sha256": "0c5d059a45be5ece439e2bd2628de13b5e2fcfb7fc6b218ede0a62c04ef283c3",
+        "final_framemd5_sha256": "a663995b7fae3056d33ee97e3f57cf53657d6a520ad0dcc2a89f1dc2e7006fa9",
+        "identical_visual_schedule": true,
+        "identical_voice_focus_timing": true,
+        "scope": "Every decoded H264 frame and timestamp is byte-identical; prior pixel measurements remain applicable. Audio was not reused."
+      }
+    },
+    "stereo_waveform": {
+      "passed": true,
+      "utterances": 104,
+      "channels": 2,
+      "minimum_source_to_final_channel_correlation": 0.9961558299215337,
+      "silence_intervals_checked": 105,
+      "maximum_silent_interior_peak_pcm16": 1,
+      "channels_assumed_byte_identical": false
+    },
+    "fresh_final_AAC_unresolved": 0
+  },
+  "reproduction": {
+    "portable_production": "fibonacci",
+    "uses_adopted_master_and_measured_timeline": true,
+    "apply_additional_master_gain": false,
+    "source_regeneration_required_for_render": false,
+    "commands": [
+      "source .venv/bin/activate",
+      "python tools/portable_production.py doctor --production fibonacci",
+      "python tools/portable_production.py preview --production fibonacci --out-dir output/fibonacci-preview-new",
+      "python tools/portable_production.py render --production fibonacci --out-dir output/fibonacci-render-new",
+      "python tools/portable_production.py verify --production fibonacci --video output/fibonacci-render-new/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4 --out-dir output/fibonacci-render-new-qa"
+    ],
+    "source_rebuild_tool": "tools/build_fibonacci_episode.py",
+    "source_rebuild_inputs": [
+      {
+        "path": "output/fibonacci-counting-001-v001/speech/measurements.json",
+        "sha256": "7d716f26bad288cba629611e0aeab51c3ee9e2f819e31b77649159868e1572fd",
+        "status": "PASS"
+      },
+      {
+        "path": "output/fibonacci-counting-001-v001/speech/speech-acceptance.json",
+        "sha256": "a40f04da2dfbfde577d343c19b051ac137123d3eae60cf24ca27f3ed3f4a8cce",
+        "status": "PASS"
+      },
+      {
+        "path": "output/fibonacci-counting-001-v001/speech/isolated-phonemes-selected.json",
+        "sha256": "2ef9032a2bf725d11f7a83bf8f01705ecfc162fc5d75fd327bf018decfe97ef4",
+        "status": "PASS"
+      },
+      {
+        "path": "output/fibonacci-counting-001-v001/speech/aac-scalar-corrections.json",
+        "sha256": "de9cf1a6ffd4a6f9907ea28399bbfa8e2408afbc631421bea4089d486c88108e",
+        "status": "PASS"
+      }
+    ],
+    "source_rebuild_policy": "Hash-bound originalWAVs and individual source gate; resampled true-peak constant scalars and adopted source-boundAAC corrections once each; new unused output directory. No new TTS is needed.",
+    "codec_trial_tool": "tools/calibrate_fibonacci_aac.py",
+    "codec_trial_policy": "Use an explicitly rebound uncorrected trial master/timeline in a new directory; do not apply the same correction again to the already corrected canonical master. Measure encodedAAC before adopting.",
+    "copy_remux_tool": "tools/remux_fibonacci_audio.py",
+    "copy_remux_policy": "Preserve priorMP4/metadata, copy acceptedAAC/H264, verify visual cue contract, all packet timing/payloads, all framemd5 and decodedPCM before updating final alias.",
+    "cross_environment_video_byte_identity_guaranteed": false,
+    "final_encoded_media_qa_required_after_reencoding": true
+  },
+  "preservation": {
+    "preproduction_files_unchanged": true,
+    "original_background_and_character_pixels_preserved": true,
+    "previous_eight_production_records_unchanged": true,
+    "render_attempt_directories": [
+      "output/fibonacci-counting-001-v001/render-attempts/v001-operator-border",
+      "output/fibonacci-counting-001-v001/render-attempts/v002-aac-overshoot"
+    ],
+    "original_audio_metadata": "output/fibonacci-counting-001-v001/audio-codec-calibration/pre-aac-correction-v001",
+    "prior_QA_retained": "output/fibonacci-counting-001-v001/qa/v001",
+    "final_QA_will_not_relabel_old_ASR_as_new": true,
+    "independent_measurement_history": {
+      "initial_flags": 27,
+      "source_video_unchanged_by_measurement_corrections": true,
+      "content_boxes_and_center_tolerance_unchanged": true,
+      "corrections": [
+        "Exclude spatially separate replay/example captions from recurrence observation ROI",
+        "Model fixed-card fill and outline beneath moving F labels",
+        "Use BT709 luma for punctuation bounds without discarding luma-visible pixels by an unrelated RGB hue gate"
+      ],
+      "final_pixel_reference": {
+        "path": "output/fibonacci-counting-001-v001/qa/v001/visual-recheck-v003/visual-only-verification.json",
+        "sha256": "955c40b21167b297e889137a4c47e36fa00ffee2a4036e1db21890d6c3552278",
+        "status": "PASS"
+      }
+    }
+  },
+  "authoritative_inputs": {
+    "timeline": {
+      "path": "output/fibonacci-counting-001-v001/timeline.json",
+      "sha256": "763986c71908fc3c38cacd485683696bc9095a81a0ad4736a6415ff382c21c9f",
+      "status": "PASS"
+    },
+    "build_record": {
+      "path": "output/fibonacci-counting-001-v001/build-record.json",
+      "sha256": "6e10da4a55d7c0a0d59b261ece3d13faefa7bb004768945b60b0adab2c902768",
+      "status": "PASS"
+    },
+    "render_record": {
+      "path": "output/fibonacci-counting-001-v001/render-record.json",
+      "sha256": "7cf7f58276441b16919d555bb4460d0de5fdf102b477d8a659ddb2952e2a4e1a",
+      "status": "PASS"
+    },
+    "frame_plan": {
+      "path": "output/fibonacci-counting-001-v001/frame-plan.json",
+      "sha256": "6671549751153d9f172e96816d71d4b19b1ceb2200d1517156f2f3f5a186fc32",
+      "status": "PASS"
+    },
+    "narration": {
+      "path": "design/fibonacci-counting-v1/narration.json",
+      "sha256": "a2a46d489ad3a694a304b9f01bee1d88816de070d0e588ec0bef5e396399d8ca",
+      "status": "PASS"
+    },
+    "count_lines": {
+      "path": "design/fibonacci-counting-v1/count-lines.json",
+      "sha256": "526ac7450e475a6573ecd3beadd161721318701768399ddfdf59667de02071dd",
+      "status": "PASS"
+    },
+    "final_QA": {
+      "path": "output/fibonacci-counting-001-v001/qa/v002/verification.json",
+      "sha256": "653659831f4105da82aedde2484e0b8c4f6b758e9712e23b169c989a8bff1e5c",
+      "status": "PASS"
+    },
+    "final_AAC_review": {
+      "path": "output/fibonacci-counting-001-v001/audio-final-qa/final-aac-review.json",
+      "sha256": "af3f41a5c63843e7f2cd203b94ce676c332ca80be864d5f959d81316084bc544",
+      "status": "PASS"
+    }
+  },
+  "completed_at_utc": "2026-11-11T15:29:01.106297+00:00",
+  "completed_date_jst": "2026-11-12"
+}

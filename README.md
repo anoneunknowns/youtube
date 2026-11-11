@@ -18,31 +18,19 @@ Paspla Studio の数を学ぶ YouTube シリーズについて、企画、英語
 | キャラクターの原画・動作PNG | [`assets/library/characters/`](assets/library/characters/) |
 | 新7種類の通常姿一覧・採用版記録 | [`assets/library/collections/animal-stock/v001/`](assets/library/collections/animal-stock/v001/) |
 | 新7種類・42ポーズの一覧・動作プレビュー | [`assets/library/collections/animal-motions/v001/`](assets/library/collections/animal-motions/v001/) |
+| クマ以外10種類・新規270姿勢と動作プレビュー | [`assets/library/collections/character-expansion/v001/`](assets/library/collections/character-expansion/v001/) |
+| 大きい表示枠の8種・紅茶／ジャンプ等のアイキャッチ144姿勢 | [`assets/library/collections/character-eyecatches/v001/`](assets/library/collections/character-eyecatches/v001/) |
+| 全キャラクター生成バッチの担当・用途・候補・品質指摘 | [`画像管理一覧`](assets/library/character-assets.html)、[`管理仕様`](docs/IMAGE-ASSET-MANAGEMENT.md) |
+| 素数v003用カンガルー・新規12原画、27原画・29状態の登録 | [`assets/library/characters/kangaroo/animations/prime-v002/registration.json`](assets/library/characters/kangaroo/animations/prime-v002/registration.json) |
 | 全保管ファイルのサイズ・ハッシュ | [`catalogs/character-library-files-v1.json`](catalogs/character-library-files-v1.json) |
 | 一覧・検証・プレビュー・素材専用ZIPの作成 | [`tools/character_library.py`](tools/character_library.py) |
 
-既存のクマ・ウサギ・とら・小鳥を含む11種類の通常姿を参照できます。新しいシャム猫、レッサーパンダ、ミーアキャット、カンガルー、ハリネズミ、ヤイロチョウ、オナガドリには、それぞれ通常姿と6種類の表情・動作PNGを保存しています。既存4種類の従来の動作は専用の登録・描画処理を使います。
+11種類の通常姿、従来42姿勢、拡充270姿勢、アイキャッチ144姿勢を利用できます。各キャラクターの採用パスと登録座標は台帳、一覧と使い分けは[素材の利用案内](assets/library/README.md)を参照してください。
 
-新7種類の通常姿は `assets/library/characters/<ID>/sources/<採用版>/neutral.png`、動作PNGと足支点は同じキャラクターの `motions/v001/` にあります。例えばレッサーパンダの通常姿は [`assets/library/characters/red-panda/sources/v001/neutral.png`](assets/library/characters/red-panda/sources/v001/neutral.png)、動作登録は [`assets/library/characters/red-panda/motions/v001/registration.json`](assets/library/characters/red-panda/motions/v001/registration.json) です。調整前の画像も保存しているため、最大のバージョン番号や更新日時から採用版を推測せず、台帳の指定を使ってください。
-
-
-
-| 新キャラクター | ID | 採用する通常姿PNG |
-|---|---|---|
-| シャム猫 | `siamese-cat` | [`sources/v005/neutral.png`](assets/library/characters/siamese-cat/sources/v005/neutral.png) |
-| レッサーパンダ | `red-panda` | [`sources/v001/neutral.png`](assets/library/characters/red-panda/sources/v001/neutral.png) |
-| ミーアキャット | `meerkat` | [`sources/v004/neutral.png`](assets/library/characters/meerkat/sources/v004/neutral.png) |
-| カンガルー | `kangaroo` | [`sources/v002/neutral.png`](assets/library/characters/kangaroo/sources/v002/neutral.png) |
-| ハリネズミ | `hedgehog` | [`sources/v003/neutral.png`](assets/library/characters/hedgehog/sources/v003/neutral.png) |
-| ヤイロチョウ | `fairy-pitta` | [`sources/v001/neutral.png`](assets/library/characters/fairy-pitta/sources/v001/neutral.png) |
-| オナガドリ | `onagadori` | [`sources/v002/neutral.png`](assets/library/characters/onagadori/sources/v002/neutral.png) |
-
-動作PNGは上の各IDの `assets/library/characters/<ID>/motions/v001/<pose>.png` にあります。例えば `red-panda/motions/v001/greet.png` が挨拶ポーズです。既存4種類のIDは `bear-beret`、`rabbit-beret`、`tora`、`little-bird` です。
-
-画像・GIFはGit LFSで管理しています。素材だけを取得する場合は、初回clone時のLFS自動取得を止めたうえで、`assets/library/characters/**` と `assets/library/collections/animal-stock/**` と `assets/library/collections/animal-motions/**` を対象に `git lfs pull` を実行します。画像本体を取得後、リポジトリのルートから次を実行してください。
+画像・GIFはGit LFSで管理しています。素材だけを取得する場合は、初回clone時のLFS自動取得を止めたうえで、`assets/library/characters/**` と素材collection・管理監査資料を対象に `git lfs pull` を実行します。画像本体を取得後、リポジトリのルートから次を実行してください。
 
 ```powershell
-git lfs pull --include="assets/library/characters/**,assets/library/collections/animal-stock/**,assets/library/collections/animal-motions/**" --exclude=""
+git lfs pull --include="assets/library/characters/**,assets/library/collections/**" --exclude=""
 python -m pip install -r requirements.txt
 python tools/character_library.py list --json
 python tools/character_library.py verify
@@ -50,13 +38,13 @@ python tools/character_library.py preview --character red-panda --pose cheer --h
 python tools/character_library.py export --output D:/temp/num-num-character-library.zip
 ```
 
-出力先は取り込み先の環境に合わせて変更してください。`export` のZIPは、11種類の通常姿、新7種類の動作、台帳、生成条件、検証記録、ツール、依存指定をまとめた素材専用パッケージです。取り込み時は画像だけを抜き出さず、台帳・登録情報と相対配置を一緒に維持してください。動画本体や音声モデルのキャッシュは不要です。
+出力先は取り込み先の環境に合わせて変更してください。`export` のZIPは、11種類の通常姿、従来・拡充動作、アイキャッチ、台帳、生成条件、検証記録、ツール、依存指定をまとめた素材専用パッケージです。取り込み時は画像だけを抜き出さず、台帳・登録情報と相対配置を一緒に維持してください。動画本体や音声モデルのキャッシュは不要です。
 
 台帳の `path_base` は `library-root` です。通常姿の `image_region_px`・`anchor_px`・`reference_height_px`、動作の `key_poses.poses`・`common_reference_height_px` を使って描画します。ウサギの通常姿はシート内の指定領域であり、単独PNGとしてシート全体を使わないでください。同じ動物の動作には共通の縮尺と足支点を使い、屈伸やついばみ姿勢を個別の画像高さで拡大しません。オナガドリは身体で縮尺を決め、長い尾の領域を別に確保します。
 
 `generation-prompt.txt`・`generation-input.json`・`source-manifest.json`・`registration.json` と各collectionの `qa-evidence/` は、派生素材を作る際の根拠です。過去の生成先 `C:/...` や `D:/temp/...` は履歴であり、現在のPCに存在する前提にしません。採用原画を上書きせず、修正版は新しい版として保存します。キーポーズの補間・音声同期・余白は実際の取り込み先の画面で確認してください。利用条件は各素材・依存物の既存記録を確認し、この説明から新たな利用許諾を推定しないでください。
 
-## 現行の7作品
+## 現行の9作品
 
 現行版の判定は [`catalogs/library-v1.json`](catalogs/library-v1.json) の `active_production_set_ids` を使います。素材の `v001` が旧素材を意味するとは限りません。
 
@@ -69,6 +57,8 @@ python tools/character_library.py export --output D:/temp/num-num-character-libr
 | 4基数同時カウント | 十進0〜200を2・10・8・16進数で表示、音声は十進数 | 小鳥・海辺の灯台 | 11分02.37秒 | [200までのv002](design/four-base-counting-v1/production-run-v002.json) |
 | 偶数カウント | 0〜200を2ずつ、全101値、自然な英語読み | 小鳥・木のおもちゃ工房 | 6分09.00秒 | [語頭・図切替修正版v002](design/even-counting-v1/production-run-v002.json) |
 | 奇数カウント | 1〜299を2ずつ、全150値、自然な英語読み | レッサーパンダ・山のケーブルカー駅 | 8分55.80秒 | [299までのv002](design/odd-counting-v1/production-run-v002.json) |
+| 素数カウント | 1000未満の全168素数、2〜997、自然な英語読み | カンガルー・日差しの入るモザイク博物館 | 11分26.33秒 | [案内動作・進捗追加v003](design/prime-counting-v1/production-run-v003.json) |
+| フィボナッチ数列 | F₀=0〜F₄₀=102,334,155の41項、式の前半と結果を自然な英語で読む | シャム猫・雲の上の風の郵便局 | 8分56.80秒 | [完成v003](design/fibonacci-counting-v1/production-run-v003.json) |
 
 4基数の小鳥動画は全201値・804表記、通常の数の読み終わりから次の読み始めまで197か所を2秒、説明を挟む3か所を5秒にしています。偶数動画は全101値、通常98境界を2秒、20と100の後の確認2境界を10秒にしています。桁読み動画の「桁間0.9秒」を、自然な十進数の語の間へ挿入しないでください。
 
@@ -76,15 +66,23 @@ python tools/character_library.py export --output D:/temp/num-num-character-libr
 
 奇数v002は範囲を299まで広げ、通常147境界を2秒、9と101の後の確認2境界を10秒にします。切符を組にして一つ余ることと、99に2を足すと101になることを示します。レッサーパンダは尾を含む通常姿を使い、BGMと効果音は入れません。
 
+素数動画は陶片の行・列で5と6を比較し、1の除外・2だけが偶数の素数・9と97→101を説明します。通常164境界は2秒、説明3境界は18秒で、BGM・効果音はありません。v003では新規12原画と既存15原画の計27原画を使い、2つの再利用名を含む29状態を登録しました。頭・下半身・尾を保つ腕の部分合成で手振りを修正し、教材を示す3姿・拍手3姿と、約12秒の座る→伸びる→休む→立つ流れを追加しています。キャラクターは470px高・足支点 `(1625, 1014)`。各素数の読み終わりに1枚ずつ増える168枚の進捗モザイクで、通算順位と終幕をつなぎます。シート共通の身体基準と足支点を使い、姿勢ごとの高さに合わせて拡大しません。
+
+現行MP4は [`output/prime-counting-001-v003/paspla-studio-prime-numbers-2-to-997-1080p.mp4`](output/prime-counting-001-v003/paspla-studio-prime-numbers-2-to-997-1080p.mp4) です。168素数・188発話・全20,590フレームを維持し、教材・演技・進捗を独立に再検査しました。v002の最終AAC（v001と同一）を再エンコードせずコピーし、全32,173パケットのビット列・時刻の一致を確認しています。検査範囲と結果は [制作レビュー](design/prime-counting-v1/production-review-v003.txt) に保存しています。自動解析と抽出画像の確認による結果であり、全編を人が連続視聴・試聴したという記録ではありません。`python tools/portable_production.py preview --production prime --out-dir output/new-prime-preview` でプレビューできます。静止版[v001の制作記録](design/prime-counting-v1/production-run-v001.json)と、動作追加版[v002の制作記録](design/prime-counting-v1/production-run-v002.json)、それぞれのMP4・採用音源・検査記録は履歴と再現依存先として保全しています。
+
+フィボナッチ動画は、二つの入力から足し算で次の値を生成し、新しい二項を次の計算へ渡します。0と二つの1を保持し、39回の加算で全41項を数えます。v002で追加した手振り・気づきの5姿勢と明瞭な46,368の全文音声を維持し、v003ではF20の受渡し中に二数値を88→47pxへ縮めて次式へつなぐ瞬間縮小を解消しました。[現行台本](design/fibonacci-counting-v1/scenario-v003.txt)・[制作レビュー](design/fibonacci-counting-v1/production-review-v003.txt)・[音声継承検査](output/fibonacci-counting-001-v003/audio-inheritance-qa/v001/final-audio-review.json)に実際の画面と検査範囲を保存しています。`python tools/portable_production.py render --production fibonacci --out-dir output/new-fibonacci-render` で全編を再出力できます。合格AACは測定済みマスター・実測タイムラインへSHAで束縛してコピーします。v001/v002の完成品と当時の検査記録も保全しています。
+
 ## 最初に行うこと
 
 1. [セットアップ](docs/SETUP.md) に従い、素材・再現用入力と必要なランタイムを取得する。
-2. `python tools/update_production_archive.py --check` で取得した再現用入力を検査し、`python tools/portable_production.py doctor` で環境を確認する。
+2. `python tools/verify_workspace.py` で素材・台帳・参照・LFS実体を点検し、`python tools/update_production_archive.py --check` と `python tools/portable_production.py doctor` で再現用入力と環境を確認する。
 3. `python tools/portable_production.py list` で現行の制作セットを確認する。
 4. 静止画プレビューを確認し、新しい出力先へ動画を書き出す。
 5. 完成MP4の数値・同期・音声・レイアウトを検査する。
 
-既存の完成品や採用音声へ上書きせず、新しい出力先を使います。旧 [`README.txt`](README.txt) と [`PIPELINE.txt`](PIPELINE.txt) は過去の制作環境と各版の履歴を含むため、別PCでは本READMEと `docs/` の手順を入口にしてください。
+新作を始めるときは [制作手順](docs/PRODUCTION.md#新作の設計) に従い、[制作ブリーフのひな形](templates/production-brief.md) へ作品ごとの設計・担当・検査記録をまとめます。
+
+既存の完成品や採用音声へ上書きせず、新しい出力先を使います。旧 `README.txt` と `PIPELINE.txt` は過去の参照パスを保つ互換案内へ整理しました。手順は本READMEと `docs/`、各版の根拠は作品別の制作記録を参照してください。
 
 ## 正本と検査記録
 
@@ -104,4 +102,6 @@ python tools/character_library.py export --output D:/temp/num-num-character-libr
 
 ## 利用条件
 
-モデル、フォント、外部ライブラリ等の条件は、各素材の出典・モデルカード・`licenses/` を確認してください。このREADMEは画像・音声・キャラクターへ新しい再配布ライセンスを付与しません。
+モデル、フォント、外部ライブラリ等の条件は、各素材の出典と個別の利用条件を確認してください。音声関連は [モデルカード](assets/library/audio/speech/kokoro-af-heart/v002/model-card.md)、[v002のライセンス](assets/library/audio/speech/kokoro-af-heart/v002/licenses/)、[二進数用ライブラリのライセンス](assets/library/audio/speech/kokoro-af-heart/binary-v001/licenses/)、フォントは [M PLUS Rounded 1cのOFL](assets/library/render-sources/counting-garden/v001/MPLUSRounded1c-OFL.txt) から辿れます。
+
+このREADMEは画像・音声・キャラクターへ新しい再配布ライセンスを付与しません。

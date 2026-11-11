@@ -9,7 +9,9 @@
     "hexadecimal-counting-reference-v001",
     "four-base-counting-reference-v004",
     "even-counting-reference-v002",
-    "odd-counting-reference-v002"
+    "odd-counting-reference-v002",
+    "prime-counting-reference-v003",
+    "fibonacci-counting-reference-v004"
   ],
   "storage_policy": {
     "project_local_paths": true,
@@ -21,10 +23,12 @@
     "reference_and_production_assets_are_separate": true,
     "new_reusable_materials_default_location": "assets/library/<category>/<asset-name>/<version>/",
     "production_asset_requires_separate_visual_and_motion_review": true,
-    "latest_production_only": true,
-    "retention_scope": "Keep current production inputs, current QA and reusable original assets; obsolete episode outputs/caches are removed under the user request.",
-    "latest_adopted_versions_only": true,
-    "retain_superseded_outputs": false
+    "latest_production_only": false,
+    "retention_scope": "Preserve adopted original assets, generation records, completed production evidence and every cross-version runtime dependency. Record unavailable historical outputs explicitly. Remove redundant copies or regenerable caches only after checking retained originals and references.",
+    "latest_adopted_versions_only": false,
+    "retain_superseded_outputs": true,
+    "retain_cross_version_runtime_dependencies": true,
+    "cleanup_requires_reference_and_preservation_check": true
   },
   "reference_sets": {
     "counting-garden-reference-v002": {
@@ -233,6 +237,73 @@
       "storyboard": "assets/library/references/odd-counting/v002/storyboard.png",
       "review_record": "assets/library/references/odd-counting/v002/character-and-layout-review.json",
       "purpose": "Static composition, registered neutral character and ticket-diagram reference; completed-video acceptance is recorded separately."
+    },
+    "prime-counting-reference-v001": {
+      "status": "assistant-reviewed",
+      "version": "v001",
+      "manifest": "assets/library/references/prime-counting/v001/reference-manifest.json",
+      "key_visual": "assets/library/references/prime-counting/v001/key-visual.png",
+      "storyboard": "assets/library/references/prime-counting/v001/storyboard.jpg",
+      "review_record": "assets/library/references/prime-counting/v001/character-and-layout-review.json"
+    },
+    "prime-counting-reference-v002": {
+      "status": "assistant-reviewed-from-completed-encoded-movie",
+      "user_approved": false,
+      "version": "v002",
+      "manifest": "assets/library/references/prime-counting/v002/reference-manifest.json",
+      "key_visual": "assets/library/references/prime-counting/v002/key-visual.png",
+      "storyboard": "assets/library/references/prime-counting/v002/storyboard.jpg",
+      "review_record": "design/prime-counting-v1/production-qa/v002-animation/root-preview-review.json",
+      "motion_review": "design/prime-counting-v1/production-qa/v002-animation/independent-final-002/verification.json"
+    },
+    "prime-counting-reference-v003": {
+      "status": "assistant-reviewed-from-final-encoded-movie",
+      "version": "v003",
+      "user_approved": false,
+      "manifest": "assets/library/references/prime-counting/v003/reference-manifest.json",
+      "key_visual": "assets/library/references/prime-counting/v003/key-visual.png",
+      "storyboard": "assets/library/references/prime-counting/v003/storyboard.jpg",
+      "review_record": "design/prime-counting-v1/production-qa/v003-comparison/root-native-preview-review.json",
+      "motion_review": "design/prime-counting-v1/production-qa/v003-comparison/final-003/verification.json"
+    },
+    "fibonacci-counting-reference-v002": {
+      "status": "assistant-reviewed-in-production",
+      "version": "v002",
+      "manifest": "assets/library/references/fibonacci-counting/v002/reference-manifest.json",
+      "key_visual": "assets/library/references/fibonacci-counting/v002/key-visual.png",
+      "storyboard": "assets/library/references/fibonacci-counting/v002/storyboard.jpg",
+      "review_record": "design/fibonacci-counting-v1/production-review-v001.txt"
+    },
+    "fibonacci-counting-reference-v001": {
+      "status": "historical-preproduction-reference",
+      "recorded_manifest_status": "preproduction-rendered-and-assistant-reviewed",
+      "version": "v001",
+      "user_approved": false,
+      "manifest": "assets/library/references/fibonacci-counting/v001/reference-manifest.json",
+      "manifest_sha256": "49579b389a71537db9eb99b0e1ff7ad59f88a8bac5d0bf8bc88a0239d29cee0c",
+      "key_visual": "assets/library/references/fibonacci-counting/v001/key-visual.png",
+      "key_visual_sha256": "b4e781995e9518019876bc848508f00715f5dc9b0014a5fb2ccc64f989f8ad8a",
+      "storyboard": "assets/library/references/fibonacci-counting/v001/storyboard.jpg",
+      "storyboard_sha256": "38774663c1fe0b37c090fda0e4a3b7a23078dd4620dbc5f71dd5c7dba07d12ef",
+      "review_record": "design/fibonacci-counting-v1/qa/independent-review-v001.json",
+      "scope": "Historical preproduction stills and motion GIF. The independent review explicitly excludes production audio and MP4.",
+      "superseded_by_reference_set_id": "fibonacci-counting-reference-v002"
+    },
+    "fibonacci-counting-reference-v003": {
+      "status": "assistant-reviewed-in-production",
+      "version": "v003",
+      "manifest": "assets/library/references/fibonacci-counting/v003/reference-manifest.json",
+      "key_visual": "assets/library/references/fibonacci-counting/v003/key-visual.png",
+      "storyboard": "assets/library/references/fibonacci-counting/v003/storyboard.jpg",
+      "review_record": "design/fibonacci-counting-v1/production-review-v002.txt"
+    },
+    "fibonacci-counting-reference-v004": {
+      "status": "assistant-reviewed-in-completed-media",
+      "version": "v004",
+      "manifest": "assets/library/references/fibonacci-counting/v004/reference-manifest.json",
+      "key_visual": "assets/library/references/fibonacci-counting/v004/key-visual.png",
+      "storyboard": "assets/library/references/fibonacci-counting/v004/storyboard.jpg",
+      "review_record": "design/fibonacci-counting-v1/production-review-v003.txt"
     }
   },
   "items": {
@@ -641,8 +712,51 @@
       "production_asset": true,
       "user_approved": false,
       "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
-      "alignment_review": "output/counting-garden-001-bright-v002/centering-audit-after.json",
-      "usage": "Current blue-sky layout with actual glyph-ink centering; channel branding remains separate."
+      "alignment_review": "output/counting-garden-001-bright-v002/layout-qa/layout-review.json",
+      "usage": "Current blue-sky layout with actual glyph-ink centering; channel branding remains separate.",
+      "alignment_review_evidence": {
+        "sha256": "b40981d61d0924f3ea7045bb1f1138abbe97a68267177299a7f3e403fb316b30",
+        "bytes": 3486,
+        "subject_media": {
+          "path": "output/counting-garden-001-bright-v002/paspla-studio-count-1-to-300-blue-sky-1080p.mp4",
+          "bytes": 50278429,
+          "sha256": "5fbcb6cf2a03c23d6d4a3ff7081382153a313b189aee58092d0667ee52313ce0"
+        },
+        "coverage": {
+          "kind": "decoded-video-text-centering-review",
+          "axes": [
+            "horizontal",
+            "vertical"
+          ],
+          "representative_elements": [
+            "header",
+            "number-1",
+            "number-6",
+            "number-10",
+            "number-100",
+            "number-128",
+            "number-300"
+          ],
+          "representative_elements_count": 7,
+          "maximum_abs_delta_x_px": 0.5,
+          "maximum_abs_delta_y_px": 0.5,
+          "recorded_tolerance_px": 1,
+          "scope": "Seven representative decoded visible-ink components only. Not a record of all 300 source glyphs or all scenes."
+        },
+        "original_record_unavailable": {
+          "original_path": "output/counting-garden-001-bright-v002/centering-audit-after.json",
+          "sha256": null,
+          "known_bytes": 4884,
+          "availability": "historical_record_unavailable",
+          "deletion_evidence": {
+            "path": "output/counting-garden-001-bright-v002/cleanup-record.json",
+            "bytes": 10903,
+            "sha256": "c2b25da4de069854433fa572bb054949710a0cf2aff55a8e12c6b87eb0e84308"
+          }
+        },
+        "metadata_update_only": true,
+        "historical_qa_modified": false
+      }
     },
     "binary-lantern-garden-background-v001": {
       "kind": "reusable-background-plate",
@@ -796,9 +910,37 @@
       "production_asset": true,
       "path": "tools/render_binary_video_v003.py",
       "sha256": "5cf7920971da170315e393b0a2bb0c1e1b0292dc09e65e3f3937d5937138e61e",
-      "maximum_decoded_center_delta_px": 0.5,
-      "alignment_report": "output/binary-counting-001-v003-gap600ms/alignment-qa.json",
-      "reusable_across_episodes": true
+      "alignment_report": "output/binary-counting-001-v005-number-gap2s/alignment-qa.json",
+      "reusable_across_episodes": true,
+      "alignment_report_evidence": {
+        "sha256": "01c68421b0792deaa07daa27fd90a7a66d5ce2cbd9a91e8dd81845d704ae9c3e",
+        "bytes": 497800,
+        "subject_media": {
+          "path": "output/binary-counting-001-v005-number-gap2s/paspla-studio-binary-count-gap900ms-numbergap2s-1080p.mp4",
+          "bytes": 78732488,
+          "sha256": "cb11dc680ddcedda82206e083568cba5837b2ee6e714883c18bdbd4b477be5b0"
+        },
+        "coverage": {
+          "kind": "binary-visible-ink-vertical-alignment-v003",
+          "axes": [
+            "vertical"
+          ],
+          "samples_checked": 779,
+          "measurements_checked": 927,
+          "spoken_lower_board_groups_checked": 770,
+          "recorded_tolerance_px": 1.5,
+          "maximum_absolute_vertical_delta_px": 0.5,
+          "scope": "Current v005 video reuses unchanged v003 layout implementation. Historical QA is vertical-only; do not claim fresh horizontal+vertical acceptance under current layout instructions."
+        },
+        "original_record_unavailable": {
+          "original_path": "output/binary-counting-001-v003-gap600ms/alignment-qa.json",
+          "sha256": null,
+          "availability": "historical_record_unavailable"
+        },
+        "metadata_update_only": true,
+        "historical_qa_modified": false
+      },
+      "maximum_decoded_vertical_center_delta_px": 0.5
     },
     "kokoro-af-heart-hexadecimal-v001": {
       "kind": "measured-and-reviewed-episode-speech",
@@ -1080,6 +1222,181 @@
       "number_clips": 150,
       "dialogue_clips": 13,
       "usage": "Exact hash-bound adopted sources with fresh isolated recognition, phoneme and boundary evidence; this does not claim full human listening."
+    },
+    "sunlit-mosaic-museum-background-v001": {
+      "kind": "generated_background",
+      "version": "v001",
+      "status": "assistant-reviewed-in-production",
+      "production_asset": true,
+      "path": "assets/library/worlds/sunlit-mosaic-museum/backgrounds/v001/sunlit-mosaic-museum-background.png",
+      "sha256": "3e3238d653c9238e90b6ad4d0912fb8ee1f3b1cc0cadf5a3bc729349191f289f",
+      "generation_record": "assets/library/worlds/sunlit-mosaic-museum/backgrounds/v001/generation-record.json"
+    },
+    "prime-counting-speech-v001": {
+      "kind": "approved_episode_speech_bundle",
+      "version": "v001",
+      "status": "hash_bound_pronunciation_reviewed",
+      "production_asset": true,
+      "reusable_across_episodes": false,
+      "user_approved": false,
+      "path": "output/prime-counting-001-v001/speech/measurements.json",
+      "sha256": "aaedc095d49085faa0a656126f949569a5f6dbf1bf7f2b9a8923e13726a0be10",
+      "bytes": 210365,
+      "measurements": "output/prime-counting-001-v001/speech/measurements.json",
+      "acceptance": "output/prime-counting-001-v001/speech/speech-acceptance.json",
+      "acceptance_sha256": "c066018959e72b9caf47f3dc96d256fd19c1fa7d598697b2e2df6fc1dfba9836",
+      "review_record": "output/prime-counting-001-v001/speech/pronunciation-review.json",
+      "voice_id": "af_heart",
+      "language": "en-US",
+      "dtype": "fp32",
+      "generation_speed": 0.98,
+      "number_clips": 168,
+      "dialogue_clips": 20,
+      "usage": "New source and finalAAC recognition, phoneme/boundary evidence and exact source hash gate; no full human-listening claim."
+    },
+    "kangaroo-prime-animation-v001": {
+      "kind": "generated-character-animation-bundle",
+      "version": "prime-v001",
+      "character_id": "kangaroo",
+      "status": "assistant-reviewed-in-final-encoded-production",
+      "production_asset": true,
+      "user_approved": false,
+      "path": "assets/library/characters/kangaroo/animations/prime-v001/registration.json",
+      "sha256": "f704da40e02e1a1e15d5caaaddee365f5ee6ff19a0465e35f0b490ac013c6689",
+      "guide": "assets/library/characters/kangaroo/animations/prime-v001/README.txt",
+      "registered_frames": 18,
+      "source_groups": 3,
+      "generation_method": "built-in image_gen.imagegen, transparent RGBA",
+      "generation_records": [
+        "assets/library/characters/kangaroo/animations/prime-v001/expressions-generation-record-v002.json",
+        "assets/library/characters/kangaroo/animations/prime-v001/expressions-transparency-edit-record.json",
+        "assets/library/characters/kangaroo/animations/prime-v001/gestures-generation-record-v002.json",
+        "assets/library/characters/kangaroo/animations/prime-v001/gestures-anatomy-edit-record.json",
+        "assets/library/characters/kangaroo/animations/prime-v001/postures-generation-record.json"
+      ],
+      "source_identity": "assets/library/characters/kangaroo/sources/v002/neutral.png",
+      "runtime": "tools/kangaroo_animation.py",
+      "asset_review": "design/prime-counting-v1/production-qa/v002-animation/asset-registration.json",
+      "native_preview_review": "design/prime-counting-v1/production-qa/v002-animation/root-preview-review.json",
+      "decoded_motion_review": "design/prime-counting-v1/production-qa/v002-animation/independent-final-002/verification.json",
+      "geometry_policy": "One head-calibrated isotropic scale per source group; anatomical foot anchor; no per-pose bbox fit. Generated eye/mouth overlays retain neutral body/tail pixels."
+    },
+    "kangaroo-prime-animation-v002": {
+      "kind": "generated-character-arm-rig-and-posture-bundle",
+      "version": "prime-v002",
+      "character_id": "kangaroo",
+      "status": "assistant-reviewed-in-final-encoded-production",
+      "production_asset": true,
+      "user_approved": false,
+      "path": "assets/library/characters/kangaroo/animations/prime-v002/registration.json",
+      "sha256": "396c60df764982e0f57456b32013bed9518de2c9c90919266e93ee7ff1fe873d",
+      "guide": "assets/library/characters/kangaroo/animations/prime-v002/README.txt",
+      "registered_states": 29,
+      "unique_original_drawings": 27,
+      "new_generated_drawings": 12,
+      "generation_method": "built-in image_gen.imagegen, original RGBA source cells retained",
+      "generation_records": [
+        "assets/library/characters/kangaroo/animations/prime-v002/wave-think-generation-record.json",
+        "assets/library/characters/kangaroo/animations/prime-v002/presentation-clap-generation-record.json",
+        "assets/library/characters/kangaroo/animations/prime-v002/presentation-clap-transparency-edit-record.json"
+      ],
+      "runtime": "tools/kangaroo_animation_v003.py",
+      "asset_review": "design/prime-counting-v1/production-qa/v003-comparison/stock-review/final-rig-source-review.json",
+      "native_preview_review": "design/prime-counting-v1/production-qa/v003-comparison/root-native-preview-review.json",
+      "decoded_motion_review": "design/prime-counting-v1/production-qa/v003-comparison/final-003/verification.json",
+      "geometry_policy": "Onephysicalscale percalibratedsheet. Source-derivedlocalarms overfixedneutralbody; nofullbodypop orpose-specificfit. Reviewedwholeposturesforsit/stretch/hop; originalsources unchanged."
+    },
+    "cloud-post-office-background-v001": {
+      "kind": "generated_background",
+      "version": "v001",
+      "status": "assistant-reviewed-in-production",
+      "production_asset": true,
+      "path": "assets/library/worlds/cloud-post-office/backgrounds/v001/cloud-post-office-background.png",
+      "sha256": "85e31eac3c1a3f31d5982fc0ee208d5fa55139dc3a413da06464bc49d43c78a6",
+      "generation_record": "assets/library/worlds/cloud-post-office/backgrounds/v001/generation-record.json"
+    },
+    "siamese-cat-fibonacci-poses-v001": {
+      "kind": "generated_episode_character_key_poses",
+      "version": "v001",
+      "status": "assistant-reviewed-in-production",
+      "production_asset": true,
+      "character_id": "siamese-cat",
+      "path": "assets/library/characters/siamese-cat/motions/fibonacci-v001/registration.json",
+      "sha256": "e1dd03dd9c1d6550845f4346c272a281e74e5aa6ac977fb727bdfc0a21bba88a",
+      "poses": [
+        "watch_left",
+        "present_half",
+        "present_full",
+        "delighted"
+      ],
+      "original_stock_unchanged": true
+    },
+    "fibonacci-counting-speech-v001": {
+      "kind": "approved_episode_speech_bundle",
+      "version": "v001",
+      "status": "hash_bound_pronunciation_reviewed",
+      "production_asset": true,
+      "reusable_across_episodes": false,
+      "user_approved": false,
+      "path": "output/fibonacci-counting-001-v001/speech/measurements.json",
+      "sha256": "7d716f26bad288cba629611e0aeab51c3ee9e2f819e31b77649159868e1572fd",
+      "bytes": 114410,
+      "measurements": "output/fibonacci-counting-001-v001/speech/measurements.json",
+      "acceptance": "output/fibonacci-counting-001-v001/speech/speech-acceptance.json",
+      "acceptance_sha256": "a40f04da2dfbfde577d343c19b051ac137123d3eae60cf24ca27f3ed3f4a8cce",
+      "review_record": "output/fibonacci-counting-001-v001/speech/pronunciation-review.json",
+      "voice_id": "af_heart",
+      "language": "en-US",
+      "dtype": "fp32",
+      "generation_speed": 0.98,
+      "number_clips": 41,
+      "expression_prefix_clips": 39,
+      "other_dialogue_clips": 24,
+      "dialogue_clips": 63
+    },
+    "siamese-cat-fibonacci-acting-v002": {
+      "kind": "generated_episode_character_acting_poses",
+      "version": "v002",
+      "status": "assistant-reviewed-in-production",
+      "production_asset": true,
+      "character_id": "siamese-cat",
+      "path": "assets/library/characters/siamese-cat/generation-batches/fibonacci-recheck-v002-01a1cae3/registration.json",
+      "sha256": "03a7b693cdbce5ad40818756371de430588dab13924b4eb17249d59caa4b3b62",
+      "poses": [
+        "wave_prepare",
+        "wave_in",
+        "wave_out",
+        "notice_prepare",
+        "notice_full"
+      ],
+      "independent_adopted_direct_tool_images": 5,
+      "source_pixels_modified": false,
+      "original_stock_unchanged": true
+    },
+    "fibonacci-counting-speech-v002": {
+      "kind": "approved_episode_speech_bundle",
+      "version": "v002",
+      "status": "hash_bound_pronunciation_reviewed",
+      "production_asset": true,
+      "reusable_across_episodes": false,
+      "user_approved": false,
+      "path": "output/fibonacci-counting-001-v002/speech/measurements.json",
+      "sha256": "104678ae2f7b27e7710e51640d7a5c2a5d6fa0f5122dbdde44fe4cac444ba419",
+      "bytes": 169087,
+      "measurements": "output/fibonacci-counting-001-v002/speech/measurements.json",
+      "acceptance": "output/fibonacci-counting-001-v002/speech/speech-acceptance.json",
+      "acceptance_sha256": "b969764cd6731a85497ac86a2acb5b98695bcf355fffb49aa5489071e5e6718b",
+      "review_record": "output/fibonacci-counting-001-v002/audio-final-qa/final-aac-review.json",
+      "voice_id": "af_heart",
+      "language": "en-US",
+      "dtype": "fp32",
+      "generation_speed": 0.98,
+      "number_clips": 41,
+      "expression_prefix_clips": 39,
+      "other_dialogue_clips": 24,
+      "dialogue_clips": 63,
+      "unchanged_source_takes": 103,
+      "new_full_utterance_takes": 1
     }
   },
   "motion_catalog": "catalogs/motions-v1.json",
@@ -1692,6 +2009,509 @@
       },
       "independent_recheck": "design/odd-counting-v1/production-qa/v002/verification.json",
       "fresh_final_aac_review": "output/odd-counting-001-v002/audio-final-qa/final-aac-review.json"
+    },
+    "prime-counting-production-v001": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "prime-counting-001",
+      "visual_reference_set_id": "prime-counting-reference-v001",
+      "count_start": 2,
+      "count_end": 997,
+      "upper_bound_exclusive": 1000,
+      "selection": "all primes below1000 in ascending order",
+      "counted_values": 168,
+      "voice_events": 188,
+      "bases": [
+        10
+      ],
+      "narration_base": 10,
+      "items": [
+        "kangaroo-stock-source-v002",
+        "sunlit-mosaic-museum-background-v001",
+        "prime-counting-speech-v001",
+        "kokoro-af-heart-en-us-v002"
+      ],
+      "build_implementation": "tools/build_prime_episode.py",
+      "render_implementation": "tools/render_prime_video.py",
+      "verifier_implementation": "tools/verify_prime_video.py",
+      "production_record": "design/prime-counting-v1/production-run-v001.json",
+      "review_record": "design/prime-counting-v1/production-review-v001.txt",
+      "character_review": "assets/library/references/prime-counting/v001/character-and-layout-review.json",
+      "character_pose": "neutral",
+      "output": "output/prime-counting-001-v001/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+      "timeline": "output/prime-counting-001-v001/timeline.json",
+      "master": "output/prime-counting-001-v001/master.wav",
+      "actor_height_px": 430,
+      "actor_foot_root_px": [
+        1625,
+        982
+      ],
+      "duration_s": 686.3333333333334,
+      "audio_duration_s": 686.3235833333333,
+      "frames": 20590,
+      "fps": 30,
+      "video_sha256": "ed506ca4305e4bf367fa8c69c826b18907a9264482b46db18fe06b6653b01b5f",
+      "video_bytes": 40652912,
+      "technical_qa": "output/prime-counting-001-v001/qa/v003/technical/technical-qa.json",
+      "visual_qa": "output/prime-counting-001-v001/qa/v003/verification.json",
+      "audio_qa": "output/prime-counting-001-v001/qa/v003/verification.json",
+      "between_number_voice_gap_s": 2,
+      "ordinary_two_second_transitions": 164,
+      "teaching_transition_durations_s": [
+        18,
+        18,
+        18
+      ],
+      "teaching_after_values": [
+        2,
+        7,
+        97
+      ],
+      "display_lead_s": 0.12,
+      "final_number_hold_s": 0.28,
+      "delivery_gain_db": 0,
+      "bgm": false,
+      "sound_effects": [],
+      "minimum_duration_s": 480,
+      "independent_recheck": "design/prime-counting-v1/production-qa/v001/root-review.json",
+      "fresh_final_aac_review": "output/prime-counting-001-v001/audio-final-qa/final-aac-review.json",
+      "speech_balancing": {
+        "per_source_scalar_policy_rms_dbfs": -19,
+        "per_source_peak_cap_dbfs": -4.5,
+        "common_gain_db": 3.7800000000000002,
+        "limiting_or_compression": false
+      },
+      "superseded_by": "prime-counting-production-v002",
+      "post_completion_issue": {
+        "id": "MOTION-001",
+        "finding": "Static kangaroo lacked the required character acting; numeric/audio checks did not satisfy the motion requirement.",
+        "review": "design/prime-counting-v1/production-qa/v001-recheck-20261111-01/summary.json",
+        "fixed_by": "prime-counting-production-v002"
+      }
+    },
+    "prime-counting-production-v002": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "prime-counting-001",
+      "visual_reference_set_id": "prime-counting-reference-v002",
+      "count_start": 2,
+      "count_end": 997,
+      "upper_bound_exclusive": 1000,
+      "selection": "all primes below1000 in ascending order",
+      "counted_values": 168,
+      "voice_events": 188,
+      "bases": [
+        10
+      ],
+      "narration_base": 10,
+      "items": [
+        "kangaroo-stock-source-v002",
+        "sunlit-mosaic-museum-background-v001",
+        "prime-counting-speech-v001",
+        "kokoro-af-heart-en-us-v002",
+        "kangaroo-prime-animation-v001"
+      ],
+      "build_implementation": "tools/build_prime_episode.py",
+      "render_implementation": "tools/render_prime_video_v002.py",
+      "verifier_implementation": "tools/verify_prime_video.py",
+      "production_record": "design/prime-counting-v1/production-run-v002.json",
+      "review_record": "design/prime-counting-v1/production-review-v002.txt",
+      "character_review": "design/prime-counting-v1/production-qa/v002-animation/root-preview-review.json",
+      "character_pose": "registered-wave-blink-think-discovery-crouch-takeoff-hop-land",
+      "output": "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+      "timeline": "output/prime-counting-001-v002/timeline.json",
+      "master": "output/prime-counting-001-v002/master.wav",
+      "actor_height_px": 430,
+      "actor_foot_root_px": [
+        1625,
+        982
+      ],
+      "duration_s": 686.3333333333334,
+      "audio_duration_s": 686.3235833333333,
+      "frames": 20590,
+      "fps": 30,
+      "video_sha256": "9ab0b3c4dd6d551b63349f41c6922cc38951ea8576668e3cb2e52d26e8c70c0f",
+      "video_bytes": 42113876,
+      "technical_qa": "output/prime-counting-001-v002/qa/v001/technical/technical-qa.json",
+      "visual_qa": "output/prime-counting-001-v002/qa/v001/verification.json",
+      "audio_qa": "output/prime-counting-001-v002/qa/v001/verification.json",
+      "between_number_voice_gap_s": 2,
+      "ordinary_two_second_transitions": 164,
+      "teaching_transition_durations_s": [
+        18,
+        18,
+        18
+      ],
+      "teaching_after_values": [
+        2,
+        7,
+        97
+      ],
+      "display_lead_s": 0.12,
+      "final_number_hold_s": 0.28,
+      "delivery_gain_db": 0,
+      "bgm": false,
+      "sound_effects": [],
+      "minimum_duration_s": 480,
+      "independent_recheck": "design/prime-counting-v1/production-qa/v002-animation/independent-final-002/verification.json",
+      "fresh_final_aac_review": "output/prime-counting-001-v001/audio-final-qa/final-aac-review.json",
+      "speech_balancing": {
+        "per_source_scalar_policy_rms_dbfs": -19,
+        "per_source_peak_cap_dbfs": -4.5,
+        "common_gain_db": 3.7800000000000002,
+        "limiting_or_compression": false
+      },
+      "character_registration": "assets/library/characters/kangaroo/animations/prime-v001/registration.json",
+      "character_registration_sha256": "f704da40e02e1a1e15d5caaaddee365f5ee6ff19a0465e35f0b490ac013c6689",
+      "motion_qa": "design/prime-counting-v1/production-qa/v002-animation/independent-final-002/verification.json",
+      "motion_qa_sha256": "638a00c0d56f5680283c441d6bcee2a66323e4cd3590fb7bde742cc85bccac6a",
+      "source_aac_movie": "output/prime-counting-001-v001/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+      "aac_packets_copied_identically": true,
+      "encoded_audio_adts_sha256": "fe4d3eb32484236ea6f46f97c52f14bb3d084fe49876190b5b60306e6cd81897",
+      "registered_pose_count": 18,
+      "acting_actions": 110,
+      "blink_actions": 96,
+      "audio_review_inherited_by_exact_packet_identity": {
+        "source_final_aac_review": "output/prime-counting-001-v001/audio-final-qa/final-aac-review.json",
+        "fresh_right_channel_recheck": "design/prime-counting-v1/production-qa/v001-recheck-20261111-01/audio/finalrecheck-audio.json",
+        "identity_evidence": "design/prime-counting-v1/production-qa/v002-animation/independent-final-002/verification.json",
+        "packet_count": 32173,
+        "payload_and_timestamps_identical": true
+      },
+      "character_motion_schedule": "output/prime-counting-001-v002/kangaroo-motion.json",
+      "character_motion_schedule_sha256": "ebab6f26ed37962aebe8f347ba39bda36c96f02b14d80c344e68ab8044ce96e0",
+      "superseded_by": "prime-counting-production-v003",
+      "later_creative_review": {
+        "review": "design/prime-counting-v1/production-qa/v003-comparison/creative-comparison-review.json",
+        "issues": [
+          "MOTION-002: standing hand action moved head/body15–17px",
+          "MOTION-003: sparse presentation/rest during long count; longestnonneutralgap138.77s"
+        ],
+        "fixed_by": "prime-counting-production-v003"
+      }
+    },
+    "prime-counting-production-v003": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "prime-counting-001",
+      "visual_reference_set_id": "prime-counting-reference-v003",
+      "count_start": 2,
+      "count_end": 997,
+      "upper_bound_exclusive": 1000,
+      "selection": "all primes below1000 in ascending order",
+      "counted_values": 168,
+      "voice_events": 188,
+      "bases": [
+        10
+      ],
+      "narration_base": 10,
+      "items": [
+        "kangaroo-stock-source-v002",
+        "sunlit-mosaic-museum-background-v001",
+        "prime-counting-speech-v001",
+        "kokoro-af-heart-en-us-v002",
+        "kangaroo-prime-animation-v002"
+      ],
+      "build_implementation": "tools/build_prime_episode.py",
+      "render_implementation": "tools/render_prime_video_v003.py",
+      "verifier_implementation": "tools/verify_prime_video.py",
+      "production_record": "design/prime-counting-v1/production-run-v003.json",
+      "review_record": "design/prime-counting-v1/production-review-v003.txt",
+      "character_review": "design/prime-counting-v1/production-qa/v003-comparison/root-native-preview-review.json",
+      "character_pose": "fixed-body-arms-presentation-clap-blink-think-rest-stretch-hop",
+      "output": "output/prime-counting-001-v003/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+      "timeline": "output/prime-counting-001-v003/timeline.json",
+      "master": "output/prime-counting-001-v003/master.wav",
+      "actor_height_px": 470,
+      "actor_foot_root_px": [
+        1625,
+        1014
+      ],
+      "duration_s": 686.3333333333334,
+      "audio_duration_s": 686.3235833333333,
+      "frames": 20590,
+      "fps": 30,
+      "video_sha256": "12fad0f620a8748a1bd379f9bed3cf05569ba8f367faf3d6f17e1fc71e5c576f",
+      "video_bytes": 40747720,
+      "technical_qa": "output/prime-counting-001-v003/qa/v001/technical/technical-qa.json",
+      "visual_qa": "output/prime-counting-001-v003/qa/v001/verification.json",
+      "audio_qa": "output/prime-counting-001-v003/qa/v001/verification.json",
+      "between_number_voice_gap_s": 2,
+      "ordinary_two_second_transitions": 164,
+      "teaching_transition_durations_s": [
+        18,
+        18,
+        18
+      ],
+      "teaching_after_values": [
+        2,
+        7,
+        97
+      ],
+      "display_lead_s": 0.12,
+      "final_number_hold_s": 0.28,
+      "delivery_gain_db": 0,
+      "bgm": false,
+      "sound_effects": [],
+      "minimum_duration_s": 480,
+      "independent_recheck": "design/prime-counting-v1/production-qa/v003-comparison/final-003/verification.json",
+      "fresh_final_aac_review": "output/prime-counting-001-v001/audio-final-qa/final-aac-review.json",
+      "speech_balancing": {
+        "per_source_scalar_policy_rms_dbfs": -19,
+        "per_source_peak_cap_dbfs": -4.5,
+        "common_gain_db": 3.7800000000000002,
+        "limiting_or_compression": false
+      },
+      "character_registration": "assets/library/characters/kangaroo/animations/prime-v002/registration.json",
+      "character_registration_sha256": "396c60df764982e0f57456b32013bed9518de2c9c90919266e93ee7ff1fe873d",
+      "motion_qa": "design/prime-counting-v1/production-qa/v003-comparison/final-003/verification.json",
+      "motion_qa_sha256": "d3edc087d38f5ee43bea729354d39f7c6995083ee927472f0ceb7fe75d07cfba",
+      "source_aac_movie": "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+      "aac_packets_copied_identically": true,
+      "encoded_audio_adts_sha256": "fe4d3eb32484236ea6f46f97c52f14bb3d084fe49876190b5b60306e6cd81897",
+      "registered_pose_count": 29,
+      "acting_actions": 113,
+      "blink_actions": 93,
+      "audio_review_inherited_by_exact_packet_identity": {
+        "source_final_aac_review": "output/prime-counting-001-v001/audio-final-qa/final-aac-review.json",
+        "fresh_right_channel_recheck": "design/prime-counting-v1/production-qa/v001-recheck-20261111-01/audio/finalrecheck-audio.json",
+        "identity_evidence": "design/prime-counting-v1/production-qa/v003-comparison/final-003/verification.json",
+        "packet_count": 32173,
+        "payload_and_timestamps_identical": true,
+        "immediate_source_movie": "output/prime-counting-001-v002/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+        "chain": "v003 copies v002 AAC; v002 was payload/timestamp-identical to accepted v001."
+      },
+      "character_motion_schedule": "output/prime-counting-001-v003/kangaroo-motion.json",
+      "character_motion_schedule_sha256": "d86efc228ce8a585ac37e49cef82a173384b68f726a258bb14824f817711537e",
+      "unique_original_drawings": 27,
+      "new_generated_drawings": 12,
+      "creative_review": "design/prime-counting-v1/production-qa/v003-comparison/creative-revision-v003-review.json",
+      "creative_comparison": "design/prime-counting-v1/production-qa/v003-comparison/creative-comparison-review.json",
+      "meaningful_actor_seconds": 34.2,
+      "longest_without_nonblink_action_s": 70.96666666666667,
+      "longest_without_nonneutral_pose_s": 71.13333333333334,
+      "wall_progress_mosaic": {
+        "tiles": 168,
+        "columns": 14,
+        "rows": 12,
+        "advance": "after each counted prime voice ends",
+        "declared_nearwhite_fade_frames_not_visually_measurable": 11
+      }
+    },
+    "fibonacci-counting-production-v001": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "fibonacci-counting-001",
+      "visual_reference_set_id": "fibonacci-counting-reference-v002",
+      "count_start": 0,
+      "count_end": 102334155,
+      "index_start": 0,
+      "index_end": 40,
+      "counted_values": 41,
+      "generated_values": 39,
+      "voice_events": 104,
+      "selection": "F0..F40 in index order, preserving both one entries",
+      "bases": [
+        10
+      ],
+      "narration_base": 10,
+      "items": [
+        "siamese-cat-stock-source-v005",
+        "siamese-cat-stock-motions-v001",
+        "siamese-cat-fibonacci-poses-v001",
+        "cloud-post-office-background-v001",
+        "fibonacci-counting-speech-v001",
+        "kokoro-af-heart-en-us-v002"
+      ],
+      "build_implementation": "tools/build_fibonacci_episode.py",
+      "render_implementation": "tools/render_fibonacci_video.py",
+      "verifier_implementation": "tools/verify_fibonacci_video.py",
+      "production_record": "design/fibonacci-counting-v1/production-run-v001.json",
+      "review_record": "design/fibonacci-counting-v1/production-review-v001.txt",
+      "output": "output/fibonacci-counting-001-v001/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+      "timeline": "output/fibonacci-counting-001-v001/timeline.json",
+      "master": "output/fibonacci-counting-001-v001/master.wav",
+      "actor_height_px": 400,
+      "actor_foot_root_px": [
+        1655,
+        990
+      ],
+      "duration_s": 536.4666666666667,
+      "audio_duration_s": 536.4390833333333,
+      "frames": 16094,
+      "fps": 30,
+      "video_sha256": "0c5d059a45be5ece439e2bd2628de13b5e2fcfb7fc6b218ede0a62c04ef283c3",
+      "video_bytes": 49135105,
+      "technical_qa": "output/fibonacci-counting-001-v001/qa/v002/technical/technical-qa.json",
+      "visual_qa": "output/fibonacci-counting-001-v001/qa/v002/verification.json",
+      "audio_qa": "output/fibonacci-counting-001-v001/qa/v002/verification.json",
+      "fresh_final_aac_review": "output/fibonacci-counting-001-v001/audio-final-qa/final-aac-review.json",
+      "ordinary_result_end_to_next_formula_start_s": 2,
+      "ordinary_two_second_transitions": 34,
+      "teaching_after_indices": [
+        2,
+        8,
+        13,
+        18,
+        26,
+        39
+      ],
+      "result_display_lead_s": 0.12,
+      "formula_end_to_result_start_s": 0.16,
+      "delivery_gain_db": 0,
+      "bgm": false,
+      "sound_effects": [],
+      "minimum_duration_s": 480
+    },
+    "fibonacci-counting-production-v002": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "fibonacci-counting-001",
+      "visual_reference_set_id": "fibonacci-counting-reference-v003",
+      "count_start": 0,
+      "count_end": 102334155,
+      "index_start": 0,
+      "index_end": 40,
+      "counted_values": 41,
+      "generated_values": 39,
+      "voice_events": 104,
+      "selection": "F0..F40 in index order, preserving both one entries",
+      "bases": [
+        10
+      ],
+      "narration_base": 10,
+      "items": [
+        "siamese-cat-stock-source-v005",
+        "siamese-cat-stock-motions-v001",
+        "siamese-cat-fibonacci-poses-v001",
+        "cloud-post-office-background-v001",
+        "kokoro-af-heart-en-us-v002",
+        "siamese-cat-fibonacci-acting-v002",
+        "fibonacci-counting-speech-v002"
+      ],
+      "build_implementation": "tools/build_fibonacci_episode.py",
+      "render_implementation": "tools/render_fibonacci_video_v002.py",
+      "verifier_implementation": "tools/verify_fibonacci_video.py",
+      "production_record": "design/fibonacci-counting-v1/production-run-v002.json",
+      "review_record": "design/fibonacci-counting-v1/production-review-v002.txt",
+      "output": "output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+      "timeline": "output/fibonacci-counting-001-v002/timeline.json",
+      "master": "output/fibonacci-counting-001-v002/audio-build/master.wav",
+      "actor_height_px": 400,
+      "actor_foot_root_px": [
+        1655,
+        990
+      ],
+      "duration_s": 536.8,
+      "audio_duration_s": 536.78,
+      "frames": 16104,
+      "fps": 30,
+      "video_sha256": "68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3",
+      "video_bytes": 49263230,
+      "technical_qa": "output/fibonacci-counting-001-v002/qa/v001/technical/technical-qa.json",
+      "visual_qa": "output/fibonacci-counting-001-v002/qa/v001/verification.json",
+      "audio_qa": "output/fibonacci-counting-001-v002/qa/v001/verification.json",
+      "fresh_final_aac_review": "output/fibonacci-counting-001-v002/audio-final-qa/final-aac-review.json",
+      "ordinary_result_end_to_next_formula_start_s": 2,
+      "ordinary_two_second_transitions": 34,
+      "teaching_after_indices": [
+        2,
+        8,
+        13,
+        18,
+        26,
+        39
+      ],
+      "result_display_lead_s": 0.12,
+      "formula_end_to_result_start_s": 0.16,
+      "delivery_gain_db": 0,
+      "bgm": false,
+      "sound_effects": [],
+      "minimum_duration_s": 480,
+      "motion_manifest": "output/fibonacci-counting-001-v002/character-motion.json",
+      "motion_qa": "output/fibonacci-counting-001-v002/qa/motion-v002/verification.json",
+      "content_qa": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/v002-content/content-review-v002.json",
+      "prior_revision_recheck": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/recheck-findings-v001.json",
+      "encoded_audio_acceptance": "output/fibonacci-counting-001-v002/audio-build/aac-acceptance.json",
+      "reproduction_audio_policy": "Copy accepted AAC bound to immutable measured base and PCM master; never encode accepted AAC twice"
+    },
+    "fibonacci-counting-production-v003": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "fibonacci-counting-001",
+      "visual_reference_set_id": "fibonacci-counting-reference-v004",
+      "count_start": 0,
+      "count_end": 102334155,
+      "index_start": 0,
+      "index_end": 40,
+      "counted_values": 41,
+      "generated_values": 39,
+      "voice_events": 104,
+      "selection": "F0..F40 in index order, preserving both one entries",
+      "bases": [
+        10
+      ],
+      "narration_base": 10,
+      "items": [
+        "siamese-cat-stock-source-v005",
+        "siamese-cat-stock-motions-v001",
+        "siamese-cat-fibonacci-poses-v001",
+        "cloud-post-office-background-v001",
+        "kokoro-af-heart-en-us-v002",
+        "siamese-cat-fibonacci-acting-v002",
+        "fibonacci-counting-speech-v002"
+      ],
+      "build_implementation": "tools/build_fibonacci_episode.py",
+      "render_implementation": "tools/render_fibonacci_video_v003.py",
+      "verifier_implementation": "tools/verify_fibonacci_video_v003.py",
+      "production_record": "design/fibonacci-counting-v1/production-run-v003.json",
+      "review_record": "design/fibonacci-counting-v1/production-review-v003.txt",
+      "output": "output/fibonacci-counting-001-v003/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+      "timeline": "output/fibonacci-counting-001-v003/timeline.json",
+      "master": "output/fibonacci-counting-001-v002/audio-build/master.wav",
+      "actor_height_px": 400,
+      "actor_foot_root_px": [
+        1655,
+        990
+      ],
+      "duration_s": 536.8,
+      "audio_duration_s": 536.78,
+      "frames": 16104,
+      "fps": 30,
+      "video_sha256": "2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704",
+      "video_bytes": 49285200,
+      "technical_qa": "output/fibonacci-counting-001-v003/qa/v001/technical/technical-qa.json",
+      "visual_qa": "output/fibonacci-counting-001-v003/qa/v001/verification.json",
+      "audio_qa": "output/fibonacci-counting-001-v003/qa/v001/verification.json",
+      "ordinary_result_end_to_next_formula_start_s": 2,
+      "ordinary_two_second_transitions": 34,
+      "teaching_after_indices": [
+        2,
+        8,
+        13,
+        18,
+        26,
+        39
+      ],
+      "result_display_lead_s": 0.12,
+      "formula_end_to_result_start_s": 0.16,
+      "delivery_gain_db": 0,
+      "bgm": false,
+      "sound_effects": [],
+      "minimum_duration_s": 480,
+      "motion_manifest": "output/fibonacci-counting-001-v003/character-motion.json",
+      "motion_qa": "output/fibonacci-counting-001-v003/qa/motion-v001/verification.json",
+      "content_qa": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/content-records/fresh-v003-content-review.json",
+      "prior_revision_recheck": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/recheck-findings-v001.json",
+      "encoded_audio_acceptance": "output/fibonacci-counting-001-v002/audio-build/aac-acceptance.json",
+      "reproduction_audio_policy": "Copy accepted AAC bound to immutable measured base and PCM master; never encode accepted AAC twice",
+      "specification": "design/fibonacci-counting-v1/production-spec-v003.json",
+      "scenario": "design/fibonacci-counting-v1/scenario-v003.txt",
+      "effective_visual_cues": "design/fibonacci-counting-v1/effective-visual-cues-v003.json",
+      "final_aac_review": "output/fibonacci-counting-001-v003/audio-inheritance-qa/v001/final-audio-review.json",
+      "quality_closeout_record": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/content-records/content-records-closeout.json",
+      "previous_production_set_id": "fibonacci-counting-production-v002",
+      "media_change": "F20 transferred operands ease88to47px during existing movement; audio,104voicecue and actor motions unchanged"
     }
   },
   "active_production_set_ids": [
@@ -1701,7 +2521,9 @@
     "hexadecimal-counting-production-v002",
     "four-base-counting-production-v002",
     "even-counting-production-v002",
-    "odd-counting-production-v002"
+    "odd-counting-production-v002",
+    "prime-counting-production-v003",
+    "fibonacci-counting-production-v003"
   ],
   "preproduction_sets": {
     "binary-counting-preproduction-v001": {
@@ -1850,6 +2672,12 @@
       "video_generated": true,
       "supersedes_preproduction_set_id": "four-base-counting-preproduction-v001",
       "implemented_by_production_set_id": "four-base-counting-production-v001"
+    },
+    "fibonacci-counting-preproduction-v001": {
+      "status": "completed-and-preserved-before-production",
+      "manifest": "design/fibonacci-counting-v1/preproduction-manifest.json",
+      "production_set_id": "fibonacci-counting-production-v001",
+      "source_reference_set_id": "fibonacci-counting-reference-v001"
     }
   },
   "active_preproduction_set_ids": [],
@@ -1887,6 +2715,251 @@
       "sha256": "9ed4eb98cd517c5b8f40353e771f484dc90e0639fa75e0afa33f2400dd6588f8",
       "index": "assets/library/collections/animal-motions/v001/index.html",
       "integration_policy": "Reusable key poses with common scale and anatomical support; future production must review motion and scene clearance."
+    },
+    "character-expansion-v001": {
+      "status": "stocked-and-assistant-reviewed",
+      "production_asset": false,
+      "characters": [
+        "rabbit-beret",
+        "tora",
+        "little-bird",
+        "siamese-cat",
+        "red-panda",
+        "meerkat",
+        "kangaroo",
+        "hedgehog",
+        "fairy-pitta",
+        "onagadori"
+      ],
+      "pose_count": 270,
+      "manifest": "assets/library/collections/character-expansion/v001/manifest.json",
+      "sha256": "4d645eb6ca51793e961c102a88e9703ab222ae29df69ee7c12f90dbb369e21cc",
+      "index": "assets/library/collections/character-expansion/v001/index.html",
+      "preview": "assets/library/collections/character-expansion/v001/overview.png",
+      "integration_policy": "Explicit expanded/<pose> namespace; original neutral, key_poses and active production selections remain unchanged. Discrete stock key poses need scene motion review."
+    },
+    "character-eyecatches-v001": {
+      "status": "stocked-and-assistant-reviewed",
+      "production_asset": false,
+      "characters": [
+        "bear-beret",
+        "rabbit-beret",
+        "tora",
+        "siamese-cat",
+        "red-panda",
+        "meerkat",
+        "kangaroo",
+        "hedgehog"
+      ],
+      "pose_count": 144,
+      "action_types": [
+        "tea",
+        "jump",
+        "bow",
+        "dance"
+      ],
+      "manifest": "assets/library/collections/character-eyecatches/v001/manifest.json",
+      "sha256": "293e70239da0c64e7efa4ac2e15b580046777597a287935e658d83f0f9f08dda",
+      "index": "assets/library/collections/character-eyecatches/v001/index.html",
+      "preview": "assets/library/collections/character-eyecatches/v001/overview.png",
+      "integration_policy": "Explicit eyecatch/<pose> namespace; original/expanded poses and production selections unchanged. Discrete key poses need episode choreography review."
+    }
+  },
+  "metadata_availability_overrides": [
+    {
+      "source_document": "catalogs/render-assets-v1.json",
+      "source_sha256": "287638a771b704ea9f2716da8e6bd4e0a8d73b849ffbb0ef6c95dff81bcede13",
+      "json_pointer": "/render_review/source_glyph_qa",
+      "original_path": "output/counting-garden-001-bright-v002/layout-qa/all-source-glyph-centering.json",
+      "status": "unavailable_historical_evidence",
+      "replacement_path": null,
+      "scope": "The original record for all 300 source glyphs is unavailable. Seven representative decoded elements are separate evidence and do not replace this scope.",
+      "preserve_frozen_source_document": true,
+      "full_scope_verified": false
+    }
+  ],
+  "historical_output_availability": {
+    "checked_at_utc": "2026-11-11T16:38:40.431566+00:00",
+    "scope": "Availability snapshot for superseded production metadata; not a claim of historical media revalidation.",
+    "productions": {
+      "binary-counting-production-v001": {
+        "status": "historical_record_with_unavailable_outputs",
+        "unavailable_references": [
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v001/output",
+            "original_path": "output/binary-counting-001-v001/paspla-studio-binary-count-0-to-127-1080p.mp4"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v001/technical_qa",
+            "original_path": "output/binary-counting-001-v001/technical-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v001/binary_qa",
+            "original_path": "output/binary-counting-001-v001/binary-final-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v001/visual_qa",
+            "original_path": "output/binary-counting-001-v001/binary-visual-qa.json"
+          }
+        ],
+        "runtime_selection": "Not an active production. Existing files required by active productions remain protected."
+      },
+      "binary-counting-production-v002": {
+        "status": "historical_record_with_unavailable_outputs",
+        "unavailable_references": [
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v002/technical_qa",
+            "original_path": "output/binary-counting-001-v002/technical-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v002/binary_qa",
+            "original_path": "output/binary-counting-001-v002/binary-final-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v002/visual_qa",
+            "original_path": "output/binary-counting-001-v002/binary-visual-qa.json"
+          }
+        ],
+        "runtime_selection": "Not an active production. Existing files required by active productions remain protected."
+      },
+      "binary-counting-production-v003": {
+        "status": "historical_record_with_unavailable_outputs",
+        "unavailable_references": [
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v003/output",
+            "original_path": "output/binary-counting-001-v003-gap600ms/paspla-studio-binary-count-clear-pauses-centered-1080p.mp4"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v003/timeline",
+            "original_path": "output/binary-counting-001-v003-gap600ms/timeline.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v003/technical_qa",
+            "original_path": "output/binary-counting-001-v003-gap600ms/technical-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v003/binary_qa",
+            "original_path": "output/binary-counting-001-v003-gap600ms/binary-final-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v003/visual_qa",
+            "original_path": "output/binary-counting-001-v003-gap600ms/binary-visual-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v003/alignment_qa",
+            "original_path": "output/binary-counting-001-v003-gap600ms/alignment-qa.json"
+          }
+        ],
+        "runtime_selection": "Not an active production. Existing files required by active productions remain protected."
+      },
+      "binary-counting-production-v004": {
+        "status": "historical_record_with_unavailable_outputs",
+        "unavailable_references": [
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v004/output",
+            "original_path": "output/binary-counting-001-v004-gap900ms/paspla-studio-binary-count-gap900ms-centered-1080p.mp4"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v004/technical_qa",
+            "original_path": "output/binary-counting-001-v004-gap900ms/technical-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v004/binary_qa",
+            "original_path": "output/binary-counting-001-v004-gap900ms/binary-final-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v004/visual_qa",
+            "original_path": "output/binary-counting-001-v004-gap900ms/binary-visual-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/binary-counting-production-v004/alignment_qa",
+            "original_path": "output/binary-counting-001-v004-gap900ms/alignment-qa.json"
+          }
+        ],
+        "runtime_selection": "Not an active production. Existing files required by active productions remain protected."
+      },
+      "octal-counting-production-v001": {
+        "status": "historical_record_with_unavailable_outputs",
+        "unavailable_references": [
+          {
+            "json_pointer": "/production_sets/octal-counting-production-v001/output",
+            "original_path": "output/octal-counting-001-v001/paspla-studio-octal-count-0-to-177-1080p.mp4"
+          },
+          {
+            "json_pointer": "/production_sets/octal-counting-production-v001/technical_qa",
+            "original_path": "output/octal-counting-001-v001/technical-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/octal-counting-production-v001/visual_qa",
+            "original_path": "output/octal-counting-001-v001/octal-final-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/octal-counting-production-v001/audio_qa",
+            "original_path": "output/octal-counting-001-v001/octal-audio-final-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/octal-counting-production-v001/alignment_qa",
+            "original_path": "output/octal-counting-001-v001/octal-layout-qa.json"
+          }
+        ],
+        "runtime_selection": "Not an active production. Existing files required by active productions remain protected."
+      },
+      "hexadecimal-counting-production-v001": {
+        "status": "historical_record_with_unavailable_outputs",
+        "unavailable_references": [
+          {
+            "json_pointer": "/production_sets/hexadecimal-counting-production-v001/output",
+            "original_path": "output/hexadecimal-counting-001-v001/paspla-studio-hexadecimal-count-0-to-7F-1080p.mp4"
+          },
+          {
+            "json_pointer": "/production_sets/hexadecimal-counting-production-v001/master",
+            "original_path": "output/hexadecimal-counting-001-v001/master.wav"
+          },
+          {
+            "json_pointer": "/production_sets/hexadecimal-counting-production-v001/technical_qa",
+            "original_path": "output/hexadecimal-counting-001-v001/technical-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/hexadecimal-counting-production-v001/visual_qa",
+            "original_path": "output/hexadecimal-counting-001-v001/hexadecimal-final-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/hexadecimal-counting-production-v001/audio_qa",
+            "original_path": "output/hexadecimal-counting-001-v001/hexadecimal-audio-final-qa.json"
+          }
+        ],
+        "runtime_selection": "Not an active production. Existing files required by active productions remain protected."
+      },
+      "even-counting-production-v001": {
+        "status": "historical_record_with_unavailable_outputs",
+        "unavailable_references": [
+          {
+            "json_pointer": "/production_sets/even-counting-production-v001/output",
+            "original_path": "output/even-counting-001-v001/paspla-studio-even-numbers-0-to-200-1080p.mp4"
+          },
+          {
+            "json_pointer": "/production_sets/even-counting-production-v001/timeline",
+            "original_path": "output/even-counting-001-v001/timeline.json"
+          },
+          {
+            "json_pointer": "/production_sets/even-counting-production-v001/master",
+            "original_path": "output/even-counting-001-v001/master.wav"
+          },
+          {
+            "json_pointer": "/production_sets/even-counting-production-v001/technical_qa",
+            "original_path": "output/even-counting-001-v001/qa/technical-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/even-counting-production-v001/visual_qa",
+            "original_path": "output/even-counting-001-v001/qa/even-final-qa.json"
+          },
+          {
+            "json_pointer": "/production_sets/even-counting-production-v001/audio_qa",
+            "original_path": "output/even-counting-001-v001/qa/even-final-qa.json"
+          }
+        ],
+        "runtime_selection": "Not an active production. Existing files required by active productions remain protected."
+      }
     }
   }
 }

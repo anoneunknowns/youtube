@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "relevant_suite": {
+    "command": "python -m unittest tests.test_kangaroo_animation tests.test_prime_portable tests.test_prime_production tests.test_prime_verification tests.test_component_alignment tests.test_portable_production",
+    "tests": 67,
+    "status": "pass"
+  },
+  "broader_discovery": {
+    "command": "python -m unittest discover -s tests",
+    "tests_run": 229,
+    "status": "failed-legacy-fixture-setup",
+    "setup_errors": 6,
+    "details": [
+      "binary alignment/decimal-sign tests require unhydrated historical binary-lantern-garden v001 image",
+      "even v002 revision tests require absent historical output/even-counting-001-v001/timeline.json",
+      "even transition tests require unhydrated historical wooden-toy-workshop v001 image",
+      "odd v001/v002 renderer tests require unhydrated historical mountain-cable-station v001 image"
+    ],
+    "scope": "The prime and motion changes pass their relevant suites. Broader discovery is not reported as a pass; these historical fixture paths are outside the current adopted prime assets. No tests were skipped or acceptance thresholds weakened to conceal the setup errors."
+  }
+}

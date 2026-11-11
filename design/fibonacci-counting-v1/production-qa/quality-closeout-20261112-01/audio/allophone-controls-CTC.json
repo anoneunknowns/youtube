@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "kind": "isolated-phoneme-asr",
+  "source_manifest_sha256": "7cae493e5a58beed93300086305e3e4cb19c55de8dd06b339ef869c6886f2aaa",
+  "model": {
+    "id": "onnx-community/wav2vec2-lv-60-espeak-cv-ft-ONNX",
+    "revision": "c69750f5043e5e1f8a71ab95dd3b98338c280c92",
+    "dtype": "q8",
+    "sha256": "3d1479b5c70836645a4310902479f7f7e8bbc8c16c58745d918804f4f6f9d120",
+    "license": "Apache-2.0"
+  },
+  "method": "Independent 16 kHz CTC phoneme recognition, no expected text or neighbor-number prompt; eSpeak expected labels are computed only after inference. Approximate 20ms timestamps. Automated evidence, not proof of perfect pronunciation.",
+  "results": [
+    {
+      "role": "number",
+      "number": 2,
+      "id": "two_aspirated",
+      "expected_text": "two",
+      "expected_espeak": "tˈuː",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/candidates-v003/two_aspirated.wav",
+      "source_sha256": "6a065296afcb7af861ca249079ed7705cdfef5140d89918552e0245446edc5ad",
+      "duration_s": 0.530375,
+      "recognized_phonemes": "t uɨ",
+      "tokens": [
+        {
+          "token": "t",
+          "start_s": 0.04,
+          "end_s": 0.065,
+          "probability": 0.3276564953229659
+        },
+        {
+          "token": "uɨ",
+          "start_s": 0.14,
+          "end_s": 0.165,
+          "probability": 0.06602435847630225
+        }
+      ]
+    },
+    {
+      "role": "number",
+      "number": 2,
+      "id": "two_aspirated_unmarked",
+      "expected_text": "two",
+      "expected_espeak": "tˈuː",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/candidates-v003/two_aspirated_unmarked.wav",
+      "source_sha256": "5708189d1f06a750b59408a03584641b4dfd9af866a15eb0c41383894578dd24",
+      "duration_s": 0.5135,
+      "recognized_phonemes": "t uː",
+      "tokens": [
+        {
+          "token": "t",
+          "start_s": 0.04,
+          "end_s": 0.065,
+          "probability": 0.5034777962603538
+        },
+        {
+          "token": "uː",
+          "start_s": 0.14,
+          "end_s": 0.165,
+          "probability": 0.35042134566240446
+        }
+      ]
+    },
+    {
+      "role": "number",
+      "number": 2,
+      "id": "two_syllable_stress",
+      "expected_text": "two",
+      "expected_espeak": "tˈuː",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-quality-closeout-20261112-01/candidates-v003/two_syllable_stress.wav",
+      "source_sha256": "b2b712bea1fb0cd16130ff8de550a1985011a3fe3f9fe5c2e9492d6cdc8dacd6",
+      "duration_s": 0.5455,
+      "recognized_phonemes": "ɛ t uː",
+      "tokens": [
+        {
+          "token": "ɛ",
+          "start_s": 0.04,
+          "end_s": 0.065,
+          "probability": 0.3728643223825679
+        },
+        {
+          "token": "t",
+          "start_s": 0.16,
+          "end_s": 0.185,
+          "probability": 0.9736652496607618
+        },
+        {
+          "token": "uː",
+          "start_s": 0.24,
+          "end_s": 0.265,
+          "probability": 0.18212966139077208
+        }
+      ]
+    }
+  ]
+}

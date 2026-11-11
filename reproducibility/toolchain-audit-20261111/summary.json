@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "kind": "video-toolchain-update-summary",
+  "status": "PASS_WITH_DOCUMENTED_COMPATIBILITY_PINS",
+  "checked_at_utc": "2026-11-11T13:06:08.993781+00:00",
+  "client_date": "2026-11-11",
+  "versions": {
+    "python": "Python 3.15.2",
+    "pip": "pip 26.3 from /Users/support/codex/youtube/.venv/lib/python3.15/site-packages/pip (python 3.15)",
+    "git": "git version 2.56.1",
+    "git_lfs": "git-lfs/3.8.1 (GitHub; darwin arm64; go 1.27.3; git a662a6db)",
+    "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "ffprobe": "ffprobe version 9.0.2 Copyright (c) 2007-2026 the FFmpeg developers",
+    "node": "v26.13.0",
+    "npm": "12.2.2"
+  },
+  "updated": {
+    "Git": "2.54.0 Apple -> 2.56.1 upstream private prefix",
+    "pip": "26.2.2 -> 26.3 in project venv",
+    "@huggingface/jinja": "0.5.11 -> 0.5.12"
+  },
+  "installed": {
+    "FFmpeg / ffprobe": "9.0.2, official source, private arm64 build with libx264/AAC"
+  },
+  "kept_latest_stable": [
+    "Python3.15.2",
+    "Pillow13.0.0",
+    "Node26.13.0 LTS",
+    "npm12.2.2",
+    "GitLFS3.8.1",
+    "kokoro-js1.2.1"
+  ],
+  "compatibility_exception": {
+    "name": "@huggingface/transformers",
+    "latest_stable": "4.3.2",
+    "selected": "3.8.1",
+    "reason": "Latest supported3.x under kokoro-js1.2.1 dependency contract; v4 input validator incompatibility reproduced. Related native/transitive dependencies kept in upstream ranges/pins.",
+    "evidence": "dependency-audit.json"
+  },
+  "checks": {
+    "existing_python_tests": 81,
+    "python_tests_passed": true,
+    "media_h264_aac_1080p30_full_decode": true,
+    "fresh_prime_preview_byte_identical": true,
+    "pinned_model_files_verified": 18,
+    "tts_functional_inference": true,
+    "asr_number_and_sentence_matches": 2,
+    "asr_functional_clips": 2,
+    "ctc_normalized_phone_sequence_match": true,
+    "pip_check_passed": true
+  },
+  "initial_asr_smoke_note": "Initial four-number sentence was transcribed as2357. Dialogue string comparator warns on numeric formatting. Original warning retained in asr-smoke.json. Follow-up typed number1 and natural dialogue matched without edits to recognition code. This is a runtime smoke check, not production pronunciation adoption.",
+  "scope": "Toolchain update and short functional checks only. No prime production video or production speech acceptance; no historical completed-video QA rerun. Existing adopted assets/manifests preserved.",
+  "activation": "source /Users/support/codex/youtube/.venv/bin/activate",
+  "records": [
+    "asr-self-test.log",
+    "asr-smoke-v2.json",
+    "asr-smoke-v2.log",
+    "asr-smoke.json",
+    "asr-smoke.log",
+    "build-ffmpeg.sh",
+    "ctc-smoke.json",
+    "ctc-smoke.log",
+    "dependency-audit.json",
+    "dependency-smoke.json",
+    "dependency-smoke.mjs",
+    "dependency-summary.txt",
+    "dependency-upstream-check.json",
+    "ffmpeg-build-record.json",
+    "git-install.json",
+    "model-setup.log",
+    "model-verified.log",
+    "preview-smoke.json",
+    "preview-smoke.log",
+    "python-tests.json",
+    "python-tests.log",
+    "runtime-inventory.json",
+    "smoke-jobs-v2.json",
+    "smoke-jobs.json",
+    "transformers-v4-incompatibility-probe.json",
+    "transformers-v4-incompatibility-probe.mjs",
+    "tts-smoke-v2.log",
+    "tts-smoke.log"
+  ]
+}

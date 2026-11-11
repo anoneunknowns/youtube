@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "kind": "runtime-inventory-before-updates",
+  "checked_at_utc": "2026-11-11T12:59:37.549079+00:00",
+  "client_date": "2026-11-11",
+  "platform": {
+    "os": "macOS27.2.1",
+    "architecture": "arm64"
+  },
+  "scope": "Read-only runtime inventory and official stable-release comparison; installation performed separately by root agent. Versions below describe initial state.",
+  "tools": [
+    {
+      "name": "Python",
+      "installed": "3.15.2",
+      "path": "/opt/homebrew/bin/python3",
+      "project_venv": "/Users/support/codex/youtube/.venv/bin/python",
+      "latest_stable": "3.15.2",
+      "action_needed": "none",
+      "sources": [
+        "https://www.python.org/downloads/",
+        "https://www.python.org/downloads/release/python-3152/"
+      ]
+    },
+    {
+      "name": "Node.js",
+      "installed": "26.13.0",
+      "path": "/opt/homebrew/bin/node",
+      "latest_stable": "26.13.0",
+      "stable_channel": "LTS",
+      "excluded_prerelease": "27.0.0-alpha.0.0.0",
+      "action_needed": "none",
+      "sources": [
+        "https://nodejs.org/en/download/current"
+      ]
+    },
+    {
+      "name": "npm",
+      "installed": "12.2.2",
+      "path": "/opt/homebrew/bin/npm",
+      "latest_stable": "12.2.2",
+      "action_needed": "none",
+      "sources": [
+        "https://github.com/npm/cli/releases/tag/v12.2.2"
+      ]
+    },
+    {
+      "name": "Git",
+      "installed": "2.54.0 (Apple Git-157)",
+      "path": "/usr/bin/git",
+      "latest_stable": "2.56.1",
+      "action_needed": "install newer upstream Git in user-owned prefix, keep Apple system Git intact",
+      "source_archive": "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.56.1.tar.xz",
+      "source_archive_sha256": "f0b0bf89264b9bd2e1c640363e7529643989da76281600473c50745cd34a607f",
+      "sources": [
+        "https://git-scm.com/install/",
+        "https://git-scm.com/install/source",
+        "https://formulae.brew.sh/api/formula/git.json"
+      ]
+    },
+    {
+      "name": "Git LFS",
+      "installed": "3.8.1",
+      "path": "/Users/support/codex/youtube/.venv/bin/git-lfs",
+      "latest_stable": "3.8.1",
+      "action_needed": "none for version; add appropriate user environment PATH if convenient",
+      "sources": [
+        "https://github.com/git-lfs/git-lfs/releases/tag/v3.8.1"
+      ]
+    },
+    {
+      "name": "FFmpeg / ffprobe",
+      "installed": null,
+      "latest_stable": "9.0.2",
+      "action_needed": "install native arm64 stable release with libx264, builtin AAC and ffprobe; test actual H264/AAC encoding and decoding",
+      "upstream_distributes": "source only; precompiled binaries are third-party builds",
+      "source_archive": "https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz",
+      "source_archive_sha256": "8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e",
+      "sources": [
+        "https://github.com/FFmpeg/FFmpeg/releases/tag/n9.0.2",
+        "https://ffmpeg.org/releases/?C=M&O=D",
+        "https://formulae.brew.sh/formula/ffmpeg",
+        "https://formulae.brew.sh/api/formula/ffmpeg.json"
+      ]
+    },
+    {
+      "name": "pip",
+      "installed": "26.2.2",
+      "path": "/Users/support/codex/youtube/.venv/bin/pip",
+      "latest_stable": "26.3",
+      "action_needed": "upgrade project venv pip",
+      "sources": [
+        "https://pypi.org/project/pip/26.3/",
+        "https://pypi.org/pypi/pip/json"
+      ]
+    },
+    {
+      "name": "Homebrew",
+      "installed": "7.0.13",
+      "path": "/opt/homebrew/bin/brew",
+      "latest_stable": "7.0.13",
+      "action_needed": "none",
+      "sources": [
+        "https://github.com/Homebrew/brew/releases/tag/7.0.13"
+      ]
+    },
+    {
+      "name": "PowerShell",
+      "installed": null,
+      "required_on_this_Mac": false,
+      "reason": "Windows setup/model preparation examples use .ps1; portable Python/Node scripts do not require PowerShell."
+    },
+    {
+      "name": "uv",
+      "installed": null,
+      "required_for_repository": false,
+      "reason": "Python dependencies use pip and requirements.txt; no uv lock/project dependency is required."
+    }
+  ],
+  "homebrew_permissions": {
+    "/opt/homebrew": {
+      "exists": true,
+      "writable": false
+    },
+    "/opt/homebrew/bin": {
+      "exists": true,
+      "writable": true
+    },
+    "/opt/homebrew/Cellar": {
+      "exists": true,
+      "writable": true
+    },
+    "/opt/homebrew/var/homebrew/locks": {
+      "exists": true,
+      "writable": false
+    }
+  },
+  "installation_options": {
+    "preferred": "Use user-owned prefix or project-local executable directory if system Homebrew locks are not writable. Do not change ownership or permissions of shared Homebrew.",
+    "ffmpeg_minimal_source_build": "Build a stable x264 static library into the same prefix, then configure FFmpeg9.0.2 with --enable-gpl --enable-libx264 --disable-ffplay --disable-doc --disable-debug --disable-shared --enable-static; keep ffprobe and builtin AAC, pcm, image codecs, swscale/swresample and audio/video filters enabled.",
+    "x264_stable_source": {
+      "version": "r3222",
+      "revision": "b35605ace3ddf7c1a5d67a2eb553f034aef41d55",
+      "url": "https://code.videolan.org/videolan/x264.git",
+      "source_of_stable_revision": "https://formulae.brew.sh/api/formula/x264.json"
+    },
+    "ffmpeg_prebuilt_alternative": {
+      "provider": "OSXExperts",
+      "url": "https://osxexperts.net/",
+      "native_arm64_release": "9.0.2",
+      "ffmpeg_binary_sha256": "6deb2860c3dc0c08e0f96bab119196c024103046fa3cc7ef72e3a77797d8553c",
+      "ffprobe_binary_sha256": "8d56278ec2ba80f35138e7dceccb1a72eff951156691d8c733066ebd7628d3f2",
+      "provider_notice": "Provider page says educational purposes only. Prefer source/Homebrew route for production unless reviewed."
+    }
+  },
+  "network_limitations": "ffmpeg.org direct page fetch timed out; release tag and official Homebrew formula API were accessible. FFmpeg release-index search result also reports9.0.2."
+}

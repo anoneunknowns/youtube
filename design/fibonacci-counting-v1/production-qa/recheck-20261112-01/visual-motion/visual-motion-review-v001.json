@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "kind": "fresh-fibonacci-v001-motion-and-composition-review",
+  "checked_at_utc": "2026-11-11T16:05:08.011469+00:00",
+  "source_video": {
+    "path": "output/fibonacci-counting-001-v001/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+    "sha256": "0c5d059a45be5ece439e2bd2628de13b5e2fcfb7fc6b218ede0a62c04ef283c3"
+  },
+  "status": "targeted_quality_revision_recommended",
+  "technical_decode_or_math_error_detected_in_this_sample": false,
+  "character_acting_sufficient_compared_with_past_bear": false,
+  "scope": {
+    "fresh_character_survey_fps": 1,
+    "survey_samples": 537,
+    "sampled_pose_transition_boundaries": 33,
+    "contiguous_native_actor_frames": 231,
+    "actor_roi_xyxy": [
+      1470,
+      570,
+      1850,
+      1020
+    ],
+    "fresh_full_native_math_ending_stills": 35,
+    "fullframe_silent_math_motion_windows": 10,
+    "native_comparison_motion_windows": 7,
+    "whole_video_human_continuous_viewing": false,
+    "all_audio_listening": false,
+    "numeric_all_frame_verification": "Handled independently by root fresh verifier, not duplicated or claimed by this review",
+    "method": "New30fps MP4 decoding,7contiguous native actor frames around each scheduled transition,537exact-second RGB observations and actual decoded-frame references, full-frame/native still inspection and silent real-time motion excerpts. Source schedules choose windows but do not determine pixel acceptance."
+  },
+  "guidance_read": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "d0db01da48b0d9bfc752657cb8bb874a4b9454e04d70062e3e1702e3b4f24443"
+    },
+    {
+      "path": "docs/PRODUCTION.md",
+      "sha256": "0b41e56bae5ddb5ce318b0a2254ae6e3bbc902cff72e730ecd545c779c12b091"
+    },
+    {
+      "path": "docs/LAYOUT-ALIGNMENT.md",
+      "sha256": "467ee6e32188a5c3486d72141e9d1fa5c1380301d4e7322c951898f485061001"
+    }
+  ],
+  "results": {
+    "arithmetic_handoff": {
+      "status": "sampled_pass",
+      "indices": [
+        7,
+        20,
+        21,
+        31
+      ],
+      "progress_samples": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "observed": "Same b,c values and F labels move on separated arcs, settle in next inputs, and the prior committed large result stays visible. No duplicate/overlap/cut seen in these newly decoded samples."
+    },
+    "carry": {
+      "status": "sampled_pass",
+      "examples": [
+        "8+13=21",
+        "89+144=233",
+        "987+1597=2584"
+      ],
+      "observed": "Ones-to-left progression and carry travel are legible, unknown result digits resolve by column, and final zero-carry column says COLUMN COMPLETE. No sampled glyph clipping or unrelated face flicker."
+    },
+    "wide_numbers_and_ending": {
+      "status": "sampled_pass",
+      "indices": [
+        20,
+        21,
+        31,
+        40
+      ],
+      "observed": "The one-time wide-mode change,9digit endpoint,2line English reading,41term history and final cream fade are legible in decoded native/fullscreen frames. Last frame is blank cream."
+    },
+    "present_family_continuity": {
+      "status": "acceptable_stepped_keyposes",
+      "observed": "Both entry and exit are discrete watch/half/full poses. Irises move by less than1px per sampled arm-only cut; no obvious head jump, second face/hand or clipped body detected. This is stepped cel motion, not smooth interpolated animation.",
+      "native_iris_delta_max_abs_px": 0.9422097827534799
+    },
+    "greet_think_and_smile_continuity": {
+      "status": "visible_redraw_cuts_without_ghosting",
+      "frames": [
+        27,
+        81,
+        1742,
+        2129,
+        15233,
+        15248
+      ],
+      "observed": "The existing greet/think family changes face-mask texture, contour and gaze more than the new presentation family. Greet iris center changes about4px horizontally, think changes about21px horizontally and6.6px vertically as gaze turns. Foot support stays planted and no dissolving double face or rapid expression oscillation was seen. Prefer head/body-fixed arm drawings for the new wave rather than repeatedly cycling full-body redraws."
+    },
+    "acting_gap": {
+      "status": "revision_recommended",
+      "opening_raised_paw_hold_s": [
+        0.9,
+        2.7
+      ],
+      "closing_closed_eye_hold_s": [
+        508.26666666666665,
+        536.4666666666667
+      ],
+      "long_still_same_pose_s": [
+        289.4,
+        476.0
+      ],
+      "new_pixel_survey_same_pose_samples": 186,
+      "new_pixel_survey_observation_seconds": [
+        290,
+        475
+      ],
+      "observed": "Cat greeting is one held raised-paw drawing, not an in/out wave; long numerical generation has no blink or milestone response; closed-eye smile is held through recap/goodbye. Real bear and primev003 samples contain readable multi-pose hand-wave return gestures. The formula continues moving during the long cat hold, so this is not a frozen-video defect. Static seconds or motion-rate alone are not used as universal failure thresholds."
+    },
+    "composition": {
+      "status": "educational_subject_clear_with_familiar_host_layout",
+      "observed": "Three input/output windows and column replays make arithmetic causal structure the subject; no actor obstructs the mathematics. Right-side fixed guide/left teaching region resembles recent prime/odd works; new arithmetic transfer, place-value view and41term history supply theme-specific changes. A wholesale scene re-layout is not necessary to correct the identified acting gap."
+    }
+  },
+  "recommended_minimum_revision": {
+    "opening": "A short actual forepaw in/out wave, then return, derived from I01/intro timing; keep head/body/feet fixed.",
+    "million_milestone": "One small notice/gaze response after current N031.voice_end inside its existing2s gap. Keep the arithmetic handoff visible and dominant; use event-relative timing, not old absolute seconds.",
+    "goodbye": "An actual short wave/return during O04 instead of keeping the same closed-eye smile through the goodbye.",
+    "not_required": "No permanent motion loop, arbitrary motion-rate target, longer count gaps, changed script or blanket enlargement."
+  },
+  "past_actual_MP4_comparison": [
+    {
+      "source": {
+        "path": "output/counting-garden-001-bright-v002/paspla-studio-count-1-to-300-blue-sky-1080p.mp4",
+        "sha256": "5fbcb6cf2a03c23d6d4a3ff7081382153a313b189aee58092d0667ee52313ce0"
+      },
+      "fullscreen_seconds": [
+        2,
+        125,
+        301,
+        310
+      ],
+      "wave_window_s": [
+        3,
+        4.8
+      ],
+      "native_complete_actor_crop_xyxy": [
+        100,
+        80,
+        780,
+        1040
+      ],
+      "evidence": {
+        "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/continuous-bear-wave-native-v002.png",
+        "sha256": "76b9e4ff4f548c0b193b9d2b926084a777ea3b55e84179d5ff93772323f33452"
+      },
+      "silent_native_excerpt": {
+        "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/continuous-bear-wave-native-v002.mp4",
+        "sha256": "fa7b9b53bd49f7dbfa7370eb2e2d420aecb093c43c5dcd24aa7027541a7e9bd4"
+      },
+      "observed": "Actual multi-pose raise/high/in-out/lower wave, plus a seated/stretch example in the full-screen301/310s samples. No conclusion about uninspected whole past video."
+    },
+    {
+      "source": {
+        "path": "output/prime-counting-001-v003/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+        "sha256": "12fad0f620a8748a1bd379f9bed3cf05569ba8f367faf3d6f17e1fc71e5c576f"
+      },
+      "fullscreen_seconds": [
+        1.6,
+        104,
+        200,
+        681
+      ],
+      "wave_window_s": [
+        0.9,
+        2.9
+      ],
+      "native_actor_crop_xyxy": [
+        1390,
+        500,
+        1910,
+        1050
+      ],
+      "evidence": {
+        "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/continuous-prime-wave-native.png",
+        "sha256": "249c2f42a91e562c4171dbbf580cb77ee8aaff6cfd6450a497b67268805dcb51"
+      },
+      "silent_native_excerpt": {
+        "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/continuous-prime-wave-native.mp4",
+        "sha256": "ab0b5168783e083fb3dcfef73967acbee588cfff08adb9f823eef5839406050c"
+      },
+      "observed": "Actual forepaw in/out motion over a largely fixed head/torso, while count/progress composition remains legible."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/motion-measurements.json",
+      "sha256": "b374c690fa30ae79bb1133ed132e6cc89dc248f14bd33b0327e6e4b789f223bc"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/initial-cat-native-comparison.png",
+      "sha256": "028b8d545b50144de327fa50dcd9e004f1d69f543985cfceff0083e3aa0798e0"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/past-fullscreen-comparison.png",
+      "sha256": "44dd8727e450e26ebd2924706951171bbeee001d02719f8f4e3419b0b69fc753"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/continuous-cat-greet-native.png",
+      "sha256": "965249f37e3ea1a2b6900ce1206a6168718be4e2fe79eaef7966fc796fd5f3e0"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/continuous-cat-think-native.png",
+      "sha256": "c09a5c22b82e5c81d1558fa755ba6bd62c7e147337cb7d5c97c02af15cb40df7"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/continuous-cat-think-return-native.png",
+      "sha256": "58d584142e482f29940c8debb4c780b2a8f650746022f062c12e876fbc5209c7"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/continuous-cat-presentation-native.png",
+      "sha256": "236924045da6219568da2e3ac521ff7ffec0769afd4cc354780f6c727633f332"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/continuous-cat-closing-native.png",
+      "sha256": "dc146e947d4324ea4bbc32970cd07d85d3797617757ac6321a8c09d1363760e1"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/math-and-ending/decoded-fullscreen-math-motion.png",
+      "sha256": "f52e50344175f7b71083475c55a3e320380347bd301fa6cea1f6cd81ccfe711b"
+    },
+    {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/visual-motion/math-and-ending/evidence.json",
+      "sha256": "adcd8a3970b010e70353bedd83d98faa94ca90516bf8c2898fd77953757e3f79"
+    }
+  ],
+  "negative_control": {
+    "frozen_decoded_actor_control_has_zero_changed_pixels": true,
+    "scope": "Confirms this pixel-difference measure detects a held actor image; it is not a standalone verdict about artistic sufficiency."
+  },
+  "source_video_or_prior_records_modified": false,
+  "current_audio_pronunciation_review": "Separate root/audio task; not judged or used to change this visual conclusion."
+}

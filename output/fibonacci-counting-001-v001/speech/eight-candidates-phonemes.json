@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "kind": "isolated-phoneme-asr",
+  "source_manifest_sha256": "9d5bb2990d984dafaaa138a1f338702a1825085d1d5f2c52286827b042c54571",
+  "model": {
+    "id": "onnx-community/wav2vec2-lv-60-espeak-cv-ft-ONNX",
+    "revision": "c69750f5043e5e1f8a71ab95dd3b98338c280c92",
+    "dtype": "q8",
+    "sha256": "3d1479b5c70836645a4310902479f7f7e8bbc8c16c58745d918804f4f6f9d120",
+    "license": "Apache-2.0"
+  },
+  "method": "Independent 16 kHz CTC phoneme recognition, no expected text or neighbor-number prompt; eSpeak expected labels are computed only after inference. Approximate 20ms timestamps. Automated evidence, not proof of perfect pronunciation.",
+  "results": [
+    {
+      "role": "number",
+      "number": 8,
+      "id": "N006_phoneme_stress",
+      "expected_text": "eight",
+      "expected_espeak": "ˈeɪt",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-counting-001-v001/speech/candidates-v002/N006_phoneme_stress.wav",
+      "source_sha256": "7c245c27e1dee4f0c850a8ddd1fd39c5ae7aba1911f4bee2c283eb324087bcb9",
+      "duration_s": 0.477875,
+      "recognized_phonemes": "aɪ d",
+      "tokens": [
+        {
+          "token": "aɪ",
+          "start_s": 0.06,
+          "end_s": 0.085,
+          "probability": 0.5078732960607846
+        },
+        {
+          "token": "d",
+          "start_s": 0.32,
+          "end_s": 0.345,
+          "probability": 0.8749782295876879
+        }
+      ]
+    },
+    {
+      "role": "number",
+      "number": 8,
+      "id": "N006_phoneme_plain",
+      "expected_text": "eight",
+      "expected_espeak": "ˈeɪt",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-counting-001-v001/speech/candidates-v002/N006_phoneme_plain.wav",
+      "source_sha256": "350cf00439674498c3085a30ef2dd4734d49bef34c981666b6b027c317cf7fac",
+      "duration_s": 0.44475,
+      "recognized_phonemes": "eɪ d",
+      "tokens": [
+        {
+          "token": "eɪ",
+          "start_s": 0.06,
+          "end_s": 0.085,
+          "probability": 0.32819712862437816
+        },
+        {
+          "token": "d",
+          "start_s": 0.28,
+          "end_s": 0.305,
+          "probability": 0.6844944652148268
+        }
+      ]
+    },
+    {
+      "role": "number",
+      "number": 8,
+      "id": "N006_library",
+      "expected_text": "eight",
+      "expected_espeak": "ˈeɪt",
+      "source_path": "/Users/support/codex/youtube/output/fibonacci-counting-001-v001/speech/reused/N006_library.wav",
+      "source_sha256": "3662c8de41c36c505ff877e4317d9694e8088fef931c63d93cd7077a2c35557e",
+      "duration_s": 0.51175,
+      "recognized_phonemes": "eɪ t",
+      "tokens": [
+        {
+          "token": "eɪ",
+          "start_s": 0.08,
+          "end_s": 0.105,
+          "probability": 0.26082840683512326
+        },
+        {
+          "token": "t",
+          "start_s": 0.32,
+          "end_s": 0.345,
+          "probability": 0.7734991761879775
+        }
+      ]
+    }
+  ]
+}

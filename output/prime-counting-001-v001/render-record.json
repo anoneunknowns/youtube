@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "kind": "prime-video-render-record",
+  "stage_only": false,
+  "timeline": "output/prime-counting-001-v001/timeline.json",
+  "timeline_sha256": "57bfdd12507205b95d74a1a1e9ddae73ad3aad557942232d2eeb1dc444fae552",
+  "renderer": "tools/render_prime_video.py",
+  "renderer_sha256": "088d81ad40ebf0aaed3567a09fb6e83a1dfbb6822563cd03607da185838e204b",
+  "mockup_adapter_sha256": "2b52f354c6bf0f509ed9668e19c92382aa5d9257728bd871c152f10c7ee6bb20",
+  "frame_plan": "output/prime-counting-001-v001/frame-plan.json",
+  "frame_plan_sha256": "e5b60b0d6de39644c87869c969819b479753395b3134fa1e191e1983d667d099",
+  "frames": 20590,
+  "duration_s": 686.3333333333334,
+  "distinct_images": 353,
+  "holds": 380,
+  "native_layout_checks_passed": true,
+  "source_character": {
+    "path": "assets/library/characters/kangaroo/sources/v002/neutral.png",
+    "sha256": "a08e5ab198bf986720fef9fb29d8f985411525647abe09ded5788bd0b8950b12",
+    "pose": "neutral",
+    "body_height_px": 430,
+    "foot_anchor_px": [
+      1625,
+      982
+    ],
+    "source_scale": 0.42281219272369713,
+    "visible_bbox_px": [
+      1502,
+      551,
+      1834,
+      982
+    ],
+    "source_pixels_modified": false,
+    "mirrored": false,
+    "policy": "Registered body scale and foot anchor; original full canvas and tail retained."
+  },
+  "sources": [
+    {
+      "path": "assets/library/worlds/sunlit-mosaic-museum/backgrounds/v001/sunlit-mosaic-museum-background.png",
+      "sha256": "3e3238d653c9238e90b6ad4d0912fb8ee1f3b1cc0cadf5a3bc729349191f289f"
+    },
+    {
+      "path": "assets/library/render-sources/counting-garden/v001/MPLUSRounded1c-Black.ttf",
+      "sha256": "d5981a59ccc5f00da1bd3ae46750fa95cd165b0e6b3a5fc7a1945f94c59449e3"
+    }
+  ],
+  "previews": [
+    {
+      "file": "output/prime-counting-001-v001/previews/01-opening-example.png",
+      "time_s": 2
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/02-definition-example.png",
+      "time_s": 6.8
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/03-comparison-example.png",
+      "time_s": 23.6
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/04-rotation-example.png",
+      "time_s": 47.2
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/05-one-example.png",
+      "time_s": 54.2
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/06-count-2.png",
+      "time_s": 72.0
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/07-count-3.png",
+      "time_s": 89.79422916666667
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/08-nine-example.png",
+      "time_s": 96.74433333333333
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/09-count-97.png",
+      "time_s": 169.05716666666666
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/10-bridge-example.png",
+      "time_s": 171.77391666666668
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/11-count-101.png",
+      "time_s": 188.78472916666666
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/12-count-773.png",
+      "time_s": 560.327
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/13-count-997.png",
+      "time_s": 663.3830416666667
+    },
+    {
+      "file": "output/prime-counting-001-v001/previews/14-finale-997.png",
+      "time_s": 666.3235833333333
+    }
+  ],
+  "encode_command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-loglevel",
+    "warning",
+    "-stats",
+    "-stats_period",
+    "10",
+    "-nostdin",
+    "-n",
+    "-f",
+    "concat",
+    "-safe",
+    "0",
+    "-i",
+    "/Users/support/codex/youtube/output/prime-counting-001-v001/.work/frames-v001/frames.ffconcat",
+    "-i",
+    "/Users/support/codex/youtube/output/prime-counting-001-v001/master.wav",
+    "-map",
+    "0:v:0",
+    "-map",
+    "1:a:0",
+    "-vf",
+    "scale=in_range=full:out_range=limited:out_color_matrix=bt709,setparams=range=limited:color_primaries=bt709:color_trc=bt709:colorspace=bt709,fps=30,trim=end_frame=20590",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "veryfast",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "-color_range",
+    "tv",
+    "-color_primaries",
+    "bt709",
+    "-color_trc",
+    "bt709",
+    "-colorspace",
+    "bt709",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "192k",
+    "-ar",
+    "48000",
+    "-ac",
+    "2",
+    "-movflags",
+    "+faststart",
+    "/Users/support/codex/youtube/output/prime-counting-001-v001/paspla-studio-prime-numbers-2-to-997-1080p.mp4"
+  ],
+  "elapsed_s": 49.836887166999986,
+  "output": "output/prime-counting-001-v001/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+  "output_sha256": "ed506ca4305e4bf367fa8c69c826b18907a9264482b46db18fe06b6653b01b5f",
+  "progress_policy": "Ordinal progress with final168tile mosaic, no persistent mini grid; no background/SFX/character loops.",
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 10542080,
+        "duration": "686.333333",
+        "bit_rate": "383028",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "20590",
+        "extradata_size": 49,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.1.102 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 1024,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 32943532,
+        "duration": "686.323583",
+        "bit_rate": "81994",
+        "nb_frames": "32173",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/Users/support/codex/youtube/output/prime-counting-001-v001/paspla-studio-prime-numbers-2-to-997-1080p.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "686.333333",
+      "size": "40652912",
+      "bit_rate": "473856",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.1.102"
+      }
+    }
+  }
+}

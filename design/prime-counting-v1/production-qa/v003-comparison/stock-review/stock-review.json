@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "kind": "kangaroo-stock-availability-and-native-art-review",
+  "status": "completed-read-only-review",
+  "scope": "Adopted canonical neutral, original6, expanded27, eyecatch18, prime18. Source art and physical target430 comparisons; episode scheduling and decoded film quality are reviewed by separate agents. No generation or source/catalog/tool mutation.",
+  "inputs": [
+    {
+      "path": "assets/library/characters/kangaroo/motions/v001/registration.json",
+      "sha256": "7d8d1d2c8152c19c77506cdd55a3205dcfd713dca930818c14be42b13d72f60d"
+    },
+    {
+      "path": "assets/library/characters/kangaroo/motions/v002/registration.json",
+      "sha256": "cf4193af693847e1155fb9a62f9295612f1730832562971b08e02e8ded7e0d7f"
+    },
+    {
+      "path": "assets/library/characters/kangaroo/eyecatches/v001/registration.json",
+      "sha256": "8c87c1ecaa856bd64594d15a56b864378b01239d62dfd16afa6b4277012e2433"
+    },
+    {
+      "path": "assets/library/characters/kangaroo/animations/prime-v001/registration.json",
+      "sha256": "f704da40e02e1a1e15d5caaaddee365f5ee6ff19a0465e35f0b490ac013c6689"
+    },
+    {
+      "path": "assets/library/characters/kangaroo/sources/v002/neutral.png",
+      "sha256": "a08e5ab198bf986720fef9fb29d8f985411525647abe09ded5788bd0b8950b12"
+    }
+  ],
+  "sets": {
+    "original": {
+      "registration": "assets/library/characters/kangaroo/motions/v001/registration.json",
+      "registration_sha256": "7d8d1d2c8152c19c77506cdd55a3205dcfd713dca930818c14be42b13d72f60d",
+      "frames": 6,
+      "source_hash_checks_passed": 6,
+      "native_target_scale_range": [
+        0.9750566893424036,
+        0.9750566893424036
+      ]
+    },
+    "expanded": {
+      "registration": "assets/library/characters/kangaroo/motions/v002/registration.json",
+      "registration_sha256": "cf4193af693847e1155fb9a62f9295612f1730832562971b08e02e8ded7e0d7f",
+      "frames": 27,
+      "source_hash_checks_passed": 27,
+      "native_target_scale_range": [
+        1.105029167630355,
+        1.2011173184357542
+      ]
+    },
+    "eyecatch": {
+      "registration": "assets/library/characters/kangaroo/eyecatches/v001/registration.json",
+      "registration_sha256": "8c87c1ecaa856bd64594d15a56b864378b01239d62dfd16afa6b4277012e2433",
+      "frames": 18,
+      "source_hash_checks_passed": 18,
+      "native_target_scale_range": [
+        1.2874251497005988,
+        1.3493205895900506
+      ]
+    },
+    "prime": {
+      "registration": "assets/library/characters/kangaroo/animations/prime-v001/registration.json",
+      "registration_sha256": "f704da40e02e1a1e15d5caaaddee365f5ee6ff19a0465e35f0b490ac013c6689",
+      "frames": 18,
+      "source_hash_checks_passed": 18,
+      "native_target_scale_range": [
+        0.7803992740471869,
+        0.9796501525273197
+      ]
+    }
+  },
+  "review_contact_geometry": "design/prime-counting-v1/production-qa/v003-comparison/stock-review/contact-geometry.json",
+  "canonical_comparison": "design/prime-counting-v1/production-qa/v003-comparison/stock-review/neutral-proportion-comparison.png",
+  "bear_baseline": {
+    "reaction_keys": [
+      "blink",
+      "tap_down",
+      "tap_pop",
+      "think",
+      "aha",
+      "success_ready",
+      "success_air",
+      "success_land",
+      "oops",
+      "retry",
+      "cheer",
+      "signature"
+    ],
+    "playful_keys": [
+      "idle_nap",
+      "idle_stretch",
+      "idle_rest"
+    ],
+    "posture_keys": [
+      "standing",
+      "half_seated",
+      "seated_neutral",
+      "seated_stretch"
+    ],
+    "wave_keys": [
+      "neutral",
+      "raise",
+      "near_ear_in",
+      "near_ear_out"
+    ],
+    "basis": "tools/render_counting_video.py and corresponding registrations, rather than unadopted new Bear stock."
+  },
+  "keep": {
+    "prime18": "Crisp at430; same watercolor/palette/species/cream pouch and muzzle. Existing generated face keys are enough for normal blink/mouth reaction. Do not regenerate all assets solely to increase repertoire count.",
+    "original6": "Consistent species/canonical style and target-scale linework; individual reactions remain usable, but these six alone are not continuous wave/clap/posture sequences."
+  },
+  "usable_existing": {
+    "rest_posture_interval": {
+      "paths": [
+        "assets/library/characters/kangaroo/motions/v002/half_seated.png",
+        "assets/library/characters/kangaroo/motions/v002/seated_neutral.png",
+        "assets/library/characters/kangaroo/motions/v002/seated_stretch_half.png",
+        "assets/library/characters/kangaroo/motions/v002/seated_stretch.png",
+        "assets/library/characters/kangaroo/motions/v002/stand_half.png"
+      ],
+      "assessment": "Clear actual bends, seated weight and raised-arm stretch. Slightly softer than prime group at1.105× target scale, still usable after native scene transition review. Keep the postures group common scale; do not enlarge seated bbox.",
+      "note": "A new HQ rest sheet is an optional quality consistency improvement, not required just because of scale>1."
+    },
+    "expressive_reactions": {
+      "paths": [
+        "assets/library/characters/kangaroo/motions/v002/oops.png",
+        "assets/library/characters/kangaroo/motions/v002/retry.png",
+        "assets/library/characters/kangaroo/motions/v002/signature.png",
+        "assets/library/characters/kangaroo/motions/v002/tap_down.png",
+        "assets/library/characters/kangaroo/motions/v002/tap_pop.png"
+      ],
+      "assessment": "Useful for sparse context-specific reactions. Whole-key changes include expression/proportion shifts, so avoid constant alternation that makes face/body pump."
+    },
+    "wave_alternative": {
+      "paths": [
+        "assets/library/characters/kangaroo/motions/v002/wave_low.png",
+        "assets/library/characters/kangaroo/motions/v002/wave_high_in.png",
+        "assets/library/characters/kangaroo/motions/v002/wave_high_out.png",
+        "assets/library/characters/kangaroo/motions/v002/wave_rest.png"
+      ],
+      "assessment": "Contains clearer palm-direction contrast than near-identical prime wave_raise/wave_right, but introduces a different drawing group. Prefer one coherent group per short cycle and review neutral entry/return."
+    },
+    "optional_bow": {
+      "paths": [
+        "assets/library/characters/kangaroo/eyecatches/v001/bow_ready.png",
+        "assets/library/characters/kangaroo/eyecatches/v001/bow_half.png",
+        "assets/library/characters/kangaroo/eyecatches/v001/bow_deep.png",
+        "assets/library/characters/kangaroo/eyecatches/v001/bow_return.png"
+      ],
+      "assessment": "Real torso bend; can support closing acknowledgement. Not essential for prime instruction. Retain head-calibrated group scale."
+    }
+  },
+  "do_not_use_unreviewed": {
+    "right_facing_board_gaze": {
+      "path": "assets/library/characters/kangaroo/motions/v002/seated_look_board.png",
+      "issue": "The face/muzzle turns viewer-right. Prime main board is viewer-left, so this is semantically the wrong attention direction. Do not mirror whole animal as a shortcut because tail and handedness swap."
+    },
+    "fast_clap_from_stock": {
+      "paths": [
+        "assets/library/characters/kangaroo/motions/v002/cheer.png",
+        "assets/library/characters/kangaroo/motions/v002/clap_open.png"
+      ],
+      "issue": "The contact/cheer key has closed eyes, while clap_open has open eyes and a different smile. Rapid repeated two-key loop would flash face as well as hands. Need a coherent same-face hand cycle if using repeated applause."
+    },
+    "tea": {
+      "paths": [
+        "assets/library/characters/kangaroo/eyecatches/v001/tea_hold.png",
+        "assets/library/characters/kangaroo/eyecatches/v001/tea_raise.png",
+        "assets/library/characters/kangaroo/eyecatches/v001/tea_sip.png",
+        "assets/library/characters/kangaroo/eyecatches/v001/tea_lower.png"
+      ],
+      "issue": "Drawings are usable with the cup already present; no neutral-to-cup pickup/put-down transition. Do not pop a cup in/out merely to increase animation count."
+    },
+    "dance": {
+      "paths": [
+        "assets/library/characters/kangaroo/eyecatches/v001/dance_left.png",
+        "assets/library/characters/kangaroo/eyecatches/v001/dance_right.png",
+        "assets/library/characters/kangaroo/eyecatches/v001/dance_step.png",
+        "assets/library/characters/kangaroo/eyecatches/v001/dance_finish.png"
+      ],
+      "issue": "Whole torso/head direction and foot stance change strongly. This can work as a deliberate closing gag but is less tied to the factor examples, and is distracting as continuous counting idle."
+    }
+  },
+  "minimal_new_generation_recommendation": {
+    "priority": "One HQ six-cell group for missing semantic hand acting while keeping current prime18.",
+    "cells": [
+      "present_raise_toward_viewer_left_board",
+      "present_open_toward_board",
+      "present_return_to_belly",
+      "clap_open_same_face",
+      "clap_near_same_face",
+      "clap_contact_same_face"
+    ],
+    "constraints": [
+      "Reference canonical neutral AND current prime neutral for target body/head/palette match.",
+      "Same head, torso, feet, tail, eyes and closed-mouth smile for all six; change arms/hands only.",
+      "Large 3x2 cells, genuine transparent margins, complete tail and ears, no duplicate limbs.",
+      "One standing reference per sheet and anatomical foot support; no per-pose fit.",
+      "If two gesture families differ in face/body geometry, regenerate targeted cells instead of hiding the mismatch with body-scale normalization."
+    ],
+    "optional": [
+      "HQ rest group if parent chooses to preserve prime-sized sharpness in all posture phases.",
+      "If a seated board gaze is desired, generate viewer-left gaze matching the seated base; current right-facing stock is unsuitable."
+    ]
+  },
+  "selection_judgment": "The stock is sufficient to add one quiet seated/stretch interval without blanket regeneration. The current prime-specific repertoire still lacks the semantic presentation sequence and a same-face clap cycle found by comparison to richer Bear acting; these are focused material gaps, distinct from numerical/media correctness."
+}

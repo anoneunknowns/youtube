@@ -1,0 +1,988 @@
+{
+  "id": "hedgehog",
+  "version": "v001",
+  "review": {
+    "identity": "Canonical neutral supplied directly to every generation; original species-specific face, eye form, palette, markings and watercolor contour retained. Tiger stripes, Siamese blue eyes/brown points, hedgehog spines all visually compared.",
+    "style": "Full-resolution light/dark composites inspected. Original watercolor texture stays inside silhouettes; no outside paper field or visible haze. No pixel repainting, alpha cleaning or contour repair.",
+    "alpha": "All18 original RGBA cells nonempty, alpha maximum255, full alpha8 silhouettes have >=2px clearance on every cell edge. Raw low-alpha RGB/edge noise preserved and inspected through correct compositing.",
+    "motion": "Four eye-catches have explicit tea lift/sip/lower, polite half/deep bow/return, jump preparation/takeoff/air/landing and opposing dance/step/finish keys. Cup rim meets mouth in sip key and tea is amber. Bow range is a deliberately gentle stylized inclination. Jump feet are visibly airborne and use inferred ground support. Discrete key poses require scene timing/interpolation review."
+  },
+  "sheets": [
+    {
+      "id": "tea_bow",
+      "source_sheet": "assets/library/characters/hedgehog/eyecatches/v001/source-sheets/tea_bow.png",
+      "source_sheet_sha256": "979e8d205c5993fe16b72adcf22a2eac2eb154d0b8a7f18bdc975bd2bb6b8f5c",
+      "prompt_path": "assets/library/characters/hedgehog/eyecatches/v001/source-sheets/tea_bow-prompt.txt",
+      "generation_input_path": "assets/library/characters/hedgehog/eyecatches/v001/source-sheets/tea_bow-input.json",
+      "reference_height_px": 354.0,
+      "calibration": {
+        "method": "Measured first-sheet neutral standing proxy and neutral-head-envelope width transfer across sheets; fixed per-sheet isotropic scale.",
+        "reference_pose": "neutral",
+        "notes": "All nine cells of each sheet share this one reference height. No per-pose bounding-box fitting or rescaling. Numeric spans are art-registration proxies, not measured skeleton pivots. Bowed/crouched/airborne silhouettes keep their drawn differences.",
+        "first_sheet_standing_reference_height_px": 354,
+        "first_sheet_neutral_head_span": {
+          "scanline_y_px": 130,
+          "x_span_px": [
+            106,
+            334
+          ],
+          "width_px": 228,
+          "alpha_threshold": 128,
+          "anatomical_scope": "Frontal neutral head envelope above paw/cup/tail; for hedgehog this includes the spiny skull outline."
+        },
+        "this_sheet_neutral_head_span": {
+          "scanline_y_px": 130,
+          "x_span_px": [
+            106,
+            334
+          ],
+          "width_px": 228,
+          "alpha_threshold": 128,
+          "anatomical_scope": "Frontal neutral head envelope above paw/cup/tail; for hedgehog this includes the spiny skull outline."
+        },
+        "head_width_transfer_ratio": 1.0
+      },
+      "frames": [
+        {
+          "id": "neutral",
+          "index": 0,
+          "body_bbox_px": [
+            75,
+            29,
+            363,
+            386
+          ],
+          "anchor_px": [
+            219.0,
+            384
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                374,
+                418,
+                385
+              ],
+              "foot_contact_bbox_px": [
+                151,
+                374,
+                287,
+                384
+              ],
+              "visible_bbox_alpha128_px": [
+                78,
+                30,
+                360,
+                384
+              ],
+              "complete_visible_alpha8_margins_px": [
+                75,
+                29,
+                55,
+                32
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "tea_hold",
+          "index": 1,
+          "body_bbox_px": [
+            65,
+            30,
+            352,
+            386
+          ],
+          "anchor_px": [
+            208.5,
+            384
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                374,
+                418,
+                385
+              ],
+              "foot_contact_bbox_px": [
+                140,
+                374,
+                277,
+                384
+              ],
+              "visible_bbox_alpha128_px": [
+                67,
+                31,
+                350,
+                384
+              ],
+              "complete_visible_alpha8_margins_px": [
+                65,
+                30,
+                66,
+                32
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "tea_raise",
+          "index": 2,
+          "body_bbox_px": [
+            54,
+            28,
+            343,
+            385
+          ],
+          "anchor_px": [
+            198.0,
+            383
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                373,
+                418,
+                384
+              ],
+              "foot_contact_bbox_px": [
+                129,
+                373,
+                267,
+                383
+              ],
+              "visible_bbox_alpha128_px": [
+                56,
+                28,
+                340,
+                383
+              ],
+              "complete_visible_alpha8_margins_px": [
+                54,
+                28,
+                75,
+                33
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "tea_sip",
+          "index": 3,
+          "body_bbox_px": [
+            78,
+            27,
+            366,
+            382
+          ],
+          "anchor_px": [
+            220.5,
+            380
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                370,
+                418,
+                381
+              ],
+              "foot_contact_bbox_px": [
+                152,
+                370,
+                289,
+                380
+              ],
+              "visible_bbox_alpha128_px": [
+                79,
+                27,
+                363,
+                380
+              ],
+              "complete_visible_alpha8_margins_px": [
+                78,
+                27,
+                52,
+                36
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "tea_lower",
+          "index": 4,
+          "body_bbox_px": [
+            66,
+            25,
+            352,
+            384
+          ],
+          "anchor_px": [
+            209.5,
+            381
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                371,
+                418,
+                382
+              ],
+              "foot_contact_bbox_px": [
+                141,
+                371,
+                278,
+                381
+              ],
+              "visible_bbox_alpha128_px": [
+                68,
+                28,
+                351,
+                381
+              ],
+              "complete_visible_alpha8_margins_px": [
+                66,
+                25,
+                66,
+                34
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "bow_ready",
+          "index": 5,
+          "body_bbox_px": [
+            56,
+            27,
+            345,
+            383
+          ],
+          "anchor_px": [
+            200.0,
+            381
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                371,
+                418,
+                382
+              ],
+              "foot_contact_bbox_px": [
+                131,
+                371,
+                269,
+                381
+              ],
+              "visible_bbox_alpha128_px": [
+                58,
+                28,
+                343,
+                381
+              ],
+              "complete_visible_alpha8_margins_px": [
+                56,
+                27,
+                73,
+                35
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "bow_half",
+          "index": 6,
+          "body_bbox_px": [
+            74,
+            41,
+            364,
+            379
+          ],
+          "anchor_px": [
+            221.0,
+            377
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                367,
+                418,
+                378
+              ],
+              "foot_contact_bbox_px": [
+                152,
+                367,
+                290,
+                377
+              ],
+              "visible_bbox_alpha128_px": [
+                77,
+                42,
+                362,
+                377
+              ],
+              "complete_visible_alpha8_margins_px": [
+                74,
+                41,
+                54,
+                39
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "bow_deep",
+          "index": 7,
+          "body_bbox_px": [
+            62,
+            61,
+            356,
+            380
+          ],
+          "anchor_px": [
+            209.5,
+            378
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                368,
+                418,
+                379
+              ],
+              "foot_contact_bbox_px": [
+                142,
+                368,
+                277,
+                378
+              ],
+              "visible_bbox_alpha128_px": [
+                63,
+                61,
+                355,
+                378
+              ],
+              "complete_visible_alpha8_margins_px": [
+                62,
+                61,
+                62,
+                38
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "bow_return",
+          "index": 8,
+          "body_bbox_px": [
+            58,
+            29,
+            345,
+            382
+          ],
+          "anchor_px": [
+            199.5,
+            380
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                370,
+                418,
+                381
+              ],
+              "foot_contact_bbox_px": [
+                130,
+                370,
+                269,
+                380
+              ],
+              "visible_bbox_alpha128_px": [
+                59,
+                30,
+                343,
+                380
+              ],
+              "complete_visible_alpha8_margins_px": [
+                58,
+                29,
+                73,
+                36
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        }
+      ]
+    },
+    {
+      "id": "jump_dance",
+      "source_sheet": "assets/library/characters/hedgehog/eyecatches/v001/source-sheets/jump_dance.png",
+      "source_sheet_sha256": "28ad8bc653842b261b8ca062ab9f908eb37990f9b7bf5725e980eb93ce94891b",
+      "prompt_path": "assets/library/characters/hedgehog/eyecatches/v001/source-sheets/jump_dance-prompt.txt",
+      "generation_input_path": "assets/library/characters/hedgehog/eyecatches/v001/source-sheets/jump_dance-input.json",
+      "reference_height_px": 367.9736842105263,
+      "calibration": {
+        "method": "Measured first-sheet neutral standing proxy and neutral-head-envelope width transfer across sheets; fixed per-sheet isotropic scale.",
+        "reference_pose": "jump_ready",
+        "notes": "All nine cells of each sheet share this one reference height. No per-pose bounding-box fitting or rescaling. Numeric spans are art-registration proxies, not measured skeleton pivots. Bowed/crouched/airborne silhouettes keep their drawn differences.",
+        "first_sheet_standing_reference_height_px": 354,
+        "first_sheet_neutral_head_span": {
+          "scanline_y_px": 130,
+          "x_span_px": [
+            106,
+            334
+          ],
+          "width_px": 228,
+          "alpha_threshold": 128,
+          "anatomical_scope": "Frontal neutral head envelope above paw/cup/tail; for hedgehog this includes the spiny skull outline."
+        },
+        "this_sheet_neutral_head_span": {
+          "scanline_y_px": 140,
+          "x_span_px": [
+            101,
+            338
+          ],
+          "width_px": 237,
+          "alpha_threshold": 128,
+          "anatomical_scope": "Frontal neutral head envelope above paw/cup/tail; for hedgehog this includes the spiny skull outline."
+        },
+        "head_width_transfer_ratio": 1.0394736842105263
+      },
+      "frames": [
+        {
+          "id": "jump_ready",
+          "index": 0,
+          "body_bbox_px": [
+            82,
+            40,
+            357,
+            388
+          ],
+          "anchor_px": [
+            216.0,
+            387
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                377,
+                418,
+                388
+              ],
+              "foot_contact_bbox_px": [
+                147,
+                377,
+                285,
+                387
+              ],
+              "visible_bbox_alpha128_px": [
+                84,
+                40,
+                356,
+                387
+              ],
+              "complete_visible_alpha8_margins_px": [
+                82,
+                40,
+                61,
+                30
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "jump_crouch",
+          "index": 1,
+          "body_bbox_px": [
+            66,
+            73,
+            353,
+            387
+          ],
+          "anchor_px": [
+            208.0,
+            386
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                376,
+                418,
+                387
+              ],
+              "foot_contact_bbox_px": [
+                133,
+                376,
+                283,
+                386
+              ],
+              "visible_bbox_alpha128_px": [
+                66,
+                74,
+                352,
+                386
+              ],
+              "complete_visible_alpha8_margins_px": [
+                66,
+                73,
+                65,
+                31
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "jump_takeoff",
+          "index": 2,
+          "body_bbox_px": [
+            63,
+            29,
+            343,
+            366
+          ],
+          "anchor_px": [
+            198.5,
+            386.5
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "inferred-ground-plane",
+          "support_notes": "Both feet are airborne. Ground Y=386.5 is inferred from grounded same-source-row poses ['jump_ready', 'jump_crouch'], while X uses the neutral head-to-foot-center offset transferred through this frame head span. Actual artwork feet end atY363, retaining a baked-in lift of23.5px. No claim of measured foot-ground contact; do not add a second root jump.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                353,
+                418,
+                364
+              ],
+              "foot_contact_bbox_px": [
+                139,
+                353,
+                266,
+                363
+              ],
+              "visible_bbox_alpha128_px": [
+                64,
+                30,
+                342,
+                363
+              ],
+              "complete_visible_alpha8_margins_px": [
+                63,
+                29,
+                75,
+                52
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            },
+            {
+              "inferred_ground_reference_pose_ids": [
+                "jump_ready",
+                "jump_crouch"
+              ],
+              "art_foot_bottom_px": 363,
+              "baked_in_lift_px": 23.5,
+              "head_span_for_inferred_root": {
+                "scanline_y_px": 130,
+                "x_span_px": [
+                  87,
+                  317
+                ],
+                "width_px": 230,
+                "alpha_threshold": 128,
+                "anatomical_scope": "Frontal neutral head envelope above paw/cup/tail; for hedgehog this includes the spiny skull outline."
+              },
+              "head_to_foot_center_offset_x_px": -3.5
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "jump_air",
+          "index": 3,
+          "body_bbox_px": [
+            80,
+            16,
+            363,
+            319
+          ],
+          "anchor_px": [
+            213.0,
+            377.0
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "inferred-ground-plane",
+          "support_notes": "Both feet are airborne. Ground Y=377.0 is inferred from grounded same-source-row poses ['jump_land', 'dance_left'], while X uses the neutral head-to-foot-center offset transferred through this frame head span. Actual artwork feet end atY316, retaining a baked-in lift of61.0px. No claim of measured foot-ground contact; do not add a second root jump.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                306,
+                418,
+                317
+              ],
+              "foot_contact_bbox_px": [
+                146,
+                306,
+                298,
+                316
+              ],
+              "visible_bbox_alpha128_px": [
+                80,
+                17,
+                360,
+                316
+              ],
+              "complete_visible_alpha8_margins_px": [
+                80,
+                16,
+                55,
+                99
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            },
+            {
+              "inferred_ground_reference_pose_ids": [
+                "jump_land",
+                "dance_left"
+              ],
+              "art_foot_bottom_px": 316,
+              "baked_in_lift_px": 61.0,
+              "head_span_for_inferred_root": {
+                "scanline_y_px": 117,
+                "x_span_px": [
+                  93,
+                  340
+                ],
+                "width_px": 247,
+                "alpha_threshold": 128,
+                "anatomical_scope": "Frontal neutral head envelope above paw/cup/tail; for hedgehog this includes the spiny skull outline."
+              },
+              "head_to_foot_center_offset_x_px": -3.5
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "jump_land",
+          "index": 4,
+          "body_bbox_px": [
+            62,
+            48,
+            353,
+            379
+          ],
+          "anchor_px": [
+            207.5,
+            377
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                367,
+                418,
+                378
+              ],
+              "foot_contact_bbox_px": [
+                131,
+                367,
+                284,
+                377
+              ],
+              "visible_bbox_alpha128_px": [
+                63,
+                49,
+                353,
+                377
+              ],
+              "complete_visible_alpha8_margins_px": [
+                62,
+                48,
+                65,
+                39
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "dance_left",
+          "index": 5,
+          "body_bbox_px": [
+            55,
+            38,
+            342,
+            379
+          ],
+          "anchor_px": [
+            205.5,
+            377
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                367,
+                418,
+                378
+              ],
+              "foot_contact_bbox_px": [
+                129,
+                367,
+                282,
+                377
+              ],
+              "visible_bbox_alpha128_px": [
+                55,
+                39,
+                341,
+                377
+              ],
+              "complete_visible_alpha8_margins_px": [
+                55,
+                38,
+                76,
+                39
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "dance_right",
+          "index": 6,
+          "body_bbox_px": [
+            78,
+            30,
+            366,
+            374
+          ],
+          "anchor_px": [
+            216.5,
+            373
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                363,
+                418,
+                374
+              ],
+              "foot_contact_bbox_px": [
+                140,
+                363,
+                293,
+                373
+              ],
+              "visible_bbox_alpha128_px": [
+                79,
+                30,
+                363,
+                373
+              ],
+              "complete_visible_alpha8_margins_px": [
+                78,
+                30,
+                52,
+                44
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "dance_step",
+          "index": 7,
+          "body_bbox_px": [
+            60,
+            27,
+            346,
+            374
+          ],
+          "anchor_px": [
+            165.0,
+            373
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                368,
+                418,
+                374
+              ],
+              "foot_contact_bbox_px": [
+                145,
+                368,
+                185,
+                373
+              ],
+              "visible_bbox_alpha128_px": [
+                61,
+                28,
+                345,
+                373
+              ],
+              "complete_visible_alpha8_margins_px": [
+                60,
+                27,
+                72,
+                44
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        },
+        {
+          "id": "dance_finish",
+          "index": 8,
+          "body_bbox_px": [
+            57,
+            28,
+            349,
+            374
+          ],
+          "anchor_px": [
+            202.5,
+            373
+          ],
+          "tail_bbox_px": null,
+          "support_kind": "anatomical-support",
+          "support_notes": "Substantive alpha128 lower-paw sole span measured inside visually reviewed bottom contact ROI; cat/tiger curled tail is excluded. Dance_step uses only the lower planted sole band.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                363,
+                418,
+                374
+              ],
+              "foot_contact_bbox_px": [
+                132,
+                363,
+                273,
+                373
+              ],
+              "visible_bbox_alpha128_px": [
+                58,
+                29,
+                348,
+                373
+              ],
+              "complete_visible_alpha8_margins_px": [
+                57,
+                28,
+                69,
+                44
+              ],
+              "body_bbox_scope": "Complete foreground envelope including cup where present; standing body scale is taken only from the prop-free neutral reference."
+            }
+          ],
+          "review": "Full silhouette, original species identity, face/markings and declared action phase visually checked on light and dark composites; source pixels retained unchanged."
+        }
+      ]
+    }
+  ]
+}

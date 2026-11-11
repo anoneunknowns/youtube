@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "video_sha256": "2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704",
+  "timeline_sha256": "f7452402531da5b41e285e2a801479cea29fa4e55864de7791c0ecd366b6f37e",
+  "full_report": {
+    "path": "output/fibonacci-counting-001-v003/qa/v001/verification.json",
+    "sha256": "ed87f35dfc7dfd6cf3a717b33ce63238d5def47089121b823997c1253ceab7e3"
+  },
+  "decoded_frames": 16104,
+  "half_resolution_component_observations": 100231,
+  "native_sample_times": 733,
+  "native_samples_with_glyphs": 731,
+  "native_components": 8222,
+  "native_max_abs_dx_px": 1.0,
+  "native_max_abs_dy_px": 1.0,
+  "all_transfer_native_frames": 1946,
+  "all_transfer_components": 7784,
+  "handoffs": 38,
+  "transfer_max_abs_dx_px": 1.0,
+  "transfer_max_abs_dy_px": 0.6754485605517857,
+  "font_transition": {
+    "start_px": 88,
+    "arrival_px": 47,
+    "monotonic_expected_sizes": true,
+    "actual_glyphs_match_every_expected_size": true,
+    "font_size_formula": "round(88 -41 * tick/30), tick=round(smoothstep(clamp((t-start)/1.2s))*30); no second easing"
+  },
+  "intro_supplement_passed": true,
+  "technical": {
+    "decode_exit_code": 0,
+    "loudness_exit_code": 0,
+    "duration_s": 536.8,
+    "decoded_video_frames": 16104,
+    "integrated_lufs": -16.52,
+    "true_peak_dbtp": -1.98,
+    "lra_lu": 5.2,
+    "analysis_input_fields": "input_i/input_tp measure final encoded AAC, not normalized filter output",
+    "declared_video_frames": 16104,
+    "video_stream_duration_s": 536.8,
+    "audio_stream_duration_s": 536.78
+  },
+  "audio_waveform_tracks": [
+    {
+      "kind": "master",
+      "sha256": "88804709b00945561cb3f8dd642554908b00a95f42f4d7dcdf04d08d77fa3283",
+      "passed": true,
+      "channels_per_event": 2,
+      "minimum_correlation": 0.9999999665956475,
+      "silence_intervals_checked": 105,
+      "maximum_silent_interior_peak_pcm16": 0,
+      "boundary_guard_s": 0.002,
+      "events": 104
+    },
+    {
+      "kind": "aac",
+      "sha256": "2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704",
+      "passed": true,
+      "channels_per_event": 2,
+      "minimum_correlation": 0.9967959119124219,
+      "silence_intervals_checked": 105,
+      "maximum_silent_interior_peak_pcm16": 1,
+      "boundary_guard_s": 0.03,
+      "events": 104
+    }
+  ],
+  "scope": "Full decode is distinct from half-size field tracking and sampled native fields. Dedicated native inspection covers all1946handoff frames, introductory seed groups, and all fade frames. No human continuous viewing/listening claim."
+}

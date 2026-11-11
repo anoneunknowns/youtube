@@ -1,0 +1,30 @@
+フィボナッチ動画 再検査・修正版v002 完了
+
+数列と数式の内容に誤りは見つかりませんでした。再検査で見つけた46,368内部threeの子音の弱さと、シャム猫の演技不足を改善しました。
+46,368は同じ声・速度の全文音声へ差し替え、threeのθと語末eightを最終AACでも確認。新規直接編集5姿勢を使い、導入と終幕の手振り各2往復と戻り、最初の100万到達時の視線反応、短い笑顔の後の開眼復帰を組み込みました。
+
+完成版
+output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4
+SHA-256: 68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3
+1920×1080、30fps、16,104フレーム、8分56.80秒。H.264/BT.709/limited、AAC48kHz stereo。
+
+確認結果
+・全41項・39加算、二つの1、添字、繰上がり9列、38受渡し、字幕104件、7章の独立内容監査642項目で失敗0。
+・全16,104フレームを新規デコード。原寸733場面/8,222字形・グループは水平/垂直とも最大1pxで合格。原寸PNG全1,625状態/18,970要素は両軸0.5px、重なり・切れなし。
+・左右104発話ずつ新規ASR/CTC/音響検査。ASR左91一致/13診断警告、右90一致/14診断警告。生警告は保持し、個別音素・音響根拠で検討、実質的未解決不備0。
+・原音とmaster/最終AACの左右を照合し全lag0、AAC最小相関0.9967959119。105無音区間のPCM16ピークはmaster0/AAC1。完成AACは-16.52LUFS/-1.98dBTP。
+・合格M4Aと完成MP4のAACビット列・デコード48kHz24bitStereo PCMが完全一致。二重符号化なし。
+・独立動作検査は全16,104フレームと4動作窓で合格、手振り各2往復、閉眼最長1.2秒、手先の欠け・教材遮蔽なし。実MP4の連続原寸コマと過去クマ/素数の抜粋でも確認。
+・関連回帰106件合格。再出力doctorは104音源と4,227保存ファイルのSHAを確認し合格、現行設定で5場面を再生成。モデル再取得は不要。
+
+検査範囲
+自動解析、抽出画像、選んだ連続動作コマを確認した結果です。人による全編連続視聴・全発話試聴や発音の完全保証とは区別します。新動作は離散した原画のholdで、滑らかな画像補間とは記録しません。
+
+制作前演出cue2箇所と完成画面の参考差分は内容監査に記録し、前工程資料を書き換えていません。旧v001の完成MP4・原音・当時の制作/QA、元画像、不採用候補、過去作品は保全しました。
+
+根拠と再出力
+production-run-v002.json：完成品・依存ファイル・全最終ゲートのSHAと登録/可搬性の後続結果。
+production-review-v002.txt / production-spec-v002.json：媒体内容・演技・発音の詳細。本文中の後続登録待ちは、その作成時点の担当範囲で、この完了記録とproduction-runが後続結果です。
+追加素材/全生成指示：assets/library/characters/siamese-cat/generation-batches/fibonacci-recheck-v002-01a1cae3/generation-manifest.json とprovenance/。built-in image_genを使用、採用5枚はtool出力とbyte同一、マスク/feather試行は不採用。
+python tools/portable_production.py preview --production fibonacci --out-dir output/new-fibonacci-preview
+python tools/portable_production.py render --production fibonacci --out-dir output/new-fibonacci-render

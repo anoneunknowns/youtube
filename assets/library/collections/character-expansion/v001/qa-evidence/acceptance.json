@@ -1,0 +1,106 @@
+{
+  "status": "pass",
+  "created_at_utc": "2026-11-11T14:21:44.020856+00:00",
+  "scope": "New reusable raster key poses and stock previews; completed production videos are outside this check.",
+  "baseline": {
+    "character": "bear-beret",
+    "actual_reaction_keys": 12,
+    "actual_wave_keys": 4,
+    "actual_standing_seated_keys": 4,
+    "playful_rest_keys": 3,
+    "evidence": [
+      "catalogs/motions-v1.json",
+      "assets/library/characters/bear-beret/motions/v001/motion-spec.txt"
+    ],
+    "unprepared_motion_plans_counted_as_finished": false
+  },
+  "new_characters": 10,
+  "new_pose_pngs": 270,
+  "source_sheets": 30,
+  "exact_source_cell_pixels_verified": 270,
+  "source_raster_repainted": false,
+  "legacy_files_verified_unchanged": 296,
+  "canonical_neutrals_modified": false,
+  "production_selection_modified_by_expansion": false,
+  "namespaced_loader": "expanded/<pose>; original key_poses and unprefixed names preserved",
+  "preview_alignment": {
+    "centered_sprite_components": 310,
+    "horizontal_and_vertical_pass": true,
+    "tolerance_px": 0.5,
+    "reports": [
+      "assets/library/characters/<id>/motions/v002/alignment-report.json",
+      "assets/library/collections/character-expansion/v001/qa-evidence/overview-alignment.json"
+    ]
+  },
+  "tests": {
+    "command": ".venv/bin/python -m unittest tests.test_character_expansion tests.test_component_alignment",
+    "passed": 22
+  },
+  "limitations": [
+    "GIFs show discrete key poses; episode interpolation and timing require scene review.",
+    "Per-sheet scale is calibrated with anatomical head-width/standing proxies; individual poses are never fitted.",
+    "Airborne ground anchors are inferred and labeled; nod and some seated gaze states have deliberately modest range."
+  ],
+  "characters": [
+    {
+      "id": "rabbit-beret",
+      "new_pose_count": 27,
+      "registration": "assets/library/characters/rabbit-beret/motions/v002/registration.json",
+      "registration_sha256": "f14858f9e43d7d96f8c6f7780adcc9b5aa7871d99e7a9227be22846e4a6900ee"
+    },
+    {
+      "id": "tora",
+      "new_pose_count": 27,
+      "registration": "assets/library/characters/tora/motions/v002/registration.json",
+      "registration_sha256": "5e0bb663e023bdb192b2a0aba298adc09358949b4ad22c7b503ea860bd7855d8"
+    },
+    {
+      "id": "little-bird",
+      "new_pose_count": 27,
+      "registration": "assets/library/characters/little-bird/motions/v002/registration.json",
+      "registration_sha256": "8196fe119baad3156358210917def1529f53d7a0cdf845c48973b82c5e1458b6"
+    },
+    {
+      "id": "siamese-cat",
+      "new_pose_count": 27,
+      "registration": "assets/library/characters/siamese-cat/motions/v002/registration.json",
+      "registration_sha256": "4a5be69b9c5d10ab3915555ed2dff947399043fa51d9c877049965e06a47f251"
+    },
+    {
+      "id": "red-panda",
+      "new_pose_count": 27,
+      "registration": "assets/library/characters/red-panda/motions/v002/registration.json",
+      "registration_sha256": "ea2815a797e1ed405c25c1806ce6fdeb414239dc0bb0c523bc61b9225910e58c"
+    },
+    {
+      "id": "meerkat",
+      "new_pose_count": 27,
+      "registration": "assets/library/characters/meerkat/motions/v002/registration.json",
+      "registration_sha256": "611e1c73069dd7629e6d7e4944639f8624b01114ed12ad28f6398ee90d93b25b"
+    },
+    {
+      "id": "kangaroo",
+      "new_pose_count": 27,
+      "registration": "assets/library/characters/kangaroo/motions/v002/registration.json",
+      "registration_sha256": "cf4193af693847e1155fb9a62f9295612f1730832562971b08e02e8ded7e0d7f"
+    },
+    {
+      "id": "hedgehog",
+      "new_pose_count": 27,
+      "registration": "assets/library/characters/hedgehog/motions/v002/registration.json",
+      "registration_sha256": "5fadaeb41e1e1284f63b7cc02695f816220d884a9441bec5086688c4eda470d7"
+    },
+    {
+      "id": "fairy-pitta",
+      "new_pose_count": 27,
+      "registration": "assets/library/characters/fairy-pitta/motions/v002/registration.json",
+      "registration_sha256": "60fafee5709aa5ef8e063de6b7012a698ea404e092f4359e53fce6dc04ee45ff"
+    },
+    {
+      "id": "onagadori",
+      "new_pose_count": 27,
+      "registration": "assets/library/characters/onagadori/motions/v002/registration.json",
+      "registration_sha256": "bf77abaf0d398f7516b3d4e62ebacaaec06b099f116ad26ceee4111bfc73ca7c"
+    }
+  ]
+}

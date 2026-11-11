@@ -1,5 +1,21 @@
 # 別PCでのセットアップ
 
+## このMacの制作環境（2026年11月11日確認）
+
+このチェックアウトでは `.venv` を有効にすると、Python/Pillowとユーザー領域へ導入したGit・Git LFS・FFmpeg・ffprobeを利用できます。
+
+```sh
+cd /Users/support/codex/youtube
+source .venv/bin/activate
+python --version
+git --version
+git lfs version
+ffmpeg -version
+ffprobe -version
+```
+
+最新安定版との比較、互換性のため維持した依存、動作確認の範囲は [制作ツールの確認記録](TOOLCHAIN.md) を参照してください。以下のWindows向け手順と過去の制作環境の版数は、再現のための記録として保持しています。
+
 この手順は Windows 11 バージョン25H2以降を対象とします。ランタイムはPC共通の場所へ導入し、プロジェクト内へ実行ファイルを複製しません。作業キャッシュと一時ファイルは、DドライブがあればDドライブを優先します。
 
 ## 1. リポジトリを取得する
@@ -16,7 +32,7 @@ git lfs fsck
 
 以後のコマンドはリポジトリ直下で実行します。clone先は元PCと同じ `D:\codex_projects\youtube` である必要はありません。
 
-Git LFSのポインタだけ取得した状態では、画像・WAV・MP4を開けません。`git lfs pull` が正常に終了し、実ファイルが揃っていることを確認します。現行7作品の再現に必要な `output/` 内の採用台詞、実測タイムライン、音声マスターと、それらの依存原本も管理対象です。任意の一時出力まで全てをGitへ追加する必要はありません。
+Git LFSのポインタだけ取得した状態では、画像・WAV・MP4を開けません。`git lfs pull` が正常に終了し、実ファイルが揃っていることを確認します。現行9作品の再現に必要な `output/` 内の採用台詞、実測タイムライン、音声マスターと、それらの依存原本も管理対象です。任意の一時出力まで全てをGitへ追加する必要はありません。
 
 奇数の採用先は1〜299の150値を数えるv002（8分55.80秒・16074フレーム）です。`output/odd-counting-001-v002/` のタイムラインとマスター、依存するv001の採用音声・検査根拠を取得してください。新作の尺は [制作手順](PRODUCTION.md) の「ショート動画以外は原則1本8分以上」に従い、通常2秒の間隔を保って範囲で調整します。
 
@@ -26,7 +42,11 @@ Pythonの準備後、再現用入力のマニフェストも確認します。
 python tools/update_production_archive.py --check
 ```
 
-収納対象とSHA-256は `reproducibility/production-inputs.json`、収納範囲の方針は `reproducibility/archive-policy.json` が管理します。初回整理では `output/` の必要な558ファイル、計約1.58GBを保存しています。これに共通素材や設計資料が加わります。
+収納対象とSHA-256、現在のファイル数・容量は `reproducibility/production-inputs.json`、収納範囲の方針は `reproducibility/archive-policy.json` が管理します。
+
+素数の採用先は `output/prime-counting-001-v003/`（2〜997の168素数、11分26.33秒）です。タイムラインと `kangaroo-motion.json` を取得し、通常の2秒間隔と3回の説明18秒を維持します。v001・v002の音声・タイムライン・比較資料も現行版の依存先として保持します。`prime` エイリアスで採用マスターから再出力できます。
+
+フィボナッチの採用先は `output/fibonacci-counting-001-v003/`（F₀=0〜F₄₀=102,334,155の41項、8分56.80秒）です。v003の `timeline.json`・`character-motion.json`、v002の `audio-build/` にある不変の実測base・PCMマスター・合格AACと `speech/` の原音・採用記録、追加5姿勢の登録を取得してください。`fibonacci` エイリアスはモデルなしで再出力し、マスターと実測baseにSHAで束縛した合格AACをそのままコピーします。新しいTTSやAACの符号化は別の採用・検査操作です。原音からの明示的な組み直し手順は [制作仕様](PRODUCTION.md) にあります。v001/v002媒体と記録も保全します。
 
 ## 2. ランタイムを用意する
 
@@ -74,7 +94,8 @@ $workRoot = if (Test-Path 'D:\') {
     Join-Path ([IO.Path]::GetTempPath()) 'num-num-numbers'
 }
 New-Item -ItemType Directory -Force -Path $workRoot | Out-Null
-python tools/portable_production.py doctor
+python tools/verify_workspace.py
+python tools/portable_production.py doctor --work-dir $workRoot
 python tools/portable_production.py list
 ```
 

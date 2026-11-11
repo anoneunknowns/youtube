@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "kind": "fibonacci-production-spec",
+  "production_set_id": "fibonacci-counting-production-v002",
+  "episode_id": "fibonacci-counting-001",
+  "revision": "v002",
+  "status": "completed_media_and_independently_reviewed",
+  "status_ja": "完成媒体・内容／新動作／全量画素・波形／最終AACの独立QA PASS（診断警告保全）",
+  "user_approved": false,
+  "updated_at_utc": "2026-11-11T16:44:37.329585+00:00",
+  "delivery": {
+    "video": {
+      "path": "output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+      "sha256": "68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3"
+    },
+    "bytes": 49263230,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 16104,
+    "video_duration_s": 536.8,
+    "audio_timeline_duration_s": 536.78,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "color_space": "bt709",
+    "color_transfer": "bt709",
+    "color_primaries": "bt709",
+    "color_range": "tv",
+    "subtitle_events": 104,
+    "chapters": 7,
+    "sidecars": [
+      {
+        "path": "output/fibonacci-counting-001-v002/english-captions.srt",
+        "sha256": "617a9fc07c25ea308aca483a67bc6ea13146e127fab1b0f92532c33d66c6a8a7"
+      },
+      {
+        "path": "output/fibonacci-counting-001-v002/subtitles.srt",
+        "sha256": "617a9fc07c25ea308aca483a67bc6ea13146e127fab1b0f92532c33d66c6a8a7"
+      },
+      {
+        "path": "output/fibonacci-counting-001-v002/chapters.txt",
+        "sha256": "061377a08be0ff69b9b69e6dcb29cc41e43a803dd1757be1d4f632bf5125190d"
+      },
+      {
+        "path": "output/fibonacci-counting-001-v002/youtube-title.txt",
+        "sha256": "37299b75f6de62a644c99fce8c74b871b19fbefb7f49c4148e9a5b7fbde9dd38"
+      },
+      {
+        "path": "output/fibonacci-counting-001-v002/youtube-description.txt",
+        "sha256": "751f99e38ac73b4232e1669ecce18059e4ab07296f2defc3016f0d545103253f"
+      },
+      {
+        "path": "output/fibonacci-counting-001-v002/upload-details.txt",
+        "sha256": "57be219c2cdb09005b7676b066ba220aa0c2a5a1956add959692d8180abb1782"
+      }
+    ]
+  },
+  "mathematics": {
+    "initial_conditions": {
+      "F0": 0,
+      "F1": 1
+    },
+    "recurrence": "Fn=F(n-2)+F(n-1), integer n>=2",
+    "indices": [
+      0,
+      40
+    ],
+    "values": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      5,
+      8,
+      13,
+      21,
+      34,
+      55,
+      89,
+      144,
+      233,
+      377,
+      610,
+      987,
+      1597,
+      2584,
+      4181,
+      6765,
+      10946,
+      17711,
+      28657,
+      46368,
+      75025,
+      121393,
+      196418,
+      317811,
+      514229,
+      832040,
+      1346269,
+      2178309,
+      3524578,
+      5702887,
+      9227465,
+      14930352,
+      24157817,
+      39088169,
+      63245986,
+      102334155
+    ],
+    "terms": 41,
+    "generated_terms": 39,
+    "initial_terms": 2,
+    "first_term_above_100_million": 40,
+    "first_term_at_least_one_million": 31,
+    "duplicate_ones_preserved": true,
+    "numerical_windows_are_quantity_diagrams": false
+  },
+  "narration": {
+    "voice_events": 104,
+    "categories": {
+      "intro": 8,
+      "count": 41,
+      "formula_prefix": 39,
+      "explanation": 12,
+      "outro": 4
+    },
+    "source_speech_sum_s": 429.74,
+    "voice_id": "af_heart",
+    "dtype": "fp32",
+    "generation_speed": 0.98,
+    "language": "American English",
+    "formula_prefix": "a plus b equals",
+    "result_utterances_per_generated_term": 1,
+    "BGM": false,
+    "sound_effects": false,
+    "replacement": {
+      "id": "N024",
+      "value": 46368,
+      "text": "forty-six thousand three hundred sixty-eight",
+      "source_sha256": "f8c1d0c47d6075579dcf300f287cf5621161654c11abcef67e69fffabe067226",
+      "change": "Whole fresh utterance; internal three /theta/ and ending eight reviewed. Other103 original WAV sources retained unchanged.",
+      "duration_delta_samples_24k": 8182,
+      "duration_delta_s": 0.34091666666666665,
+      "final_encoded_inference_status": "PASS; fresh final-MP4 stereo nominal and80ms-guarded internal theta and terminal eight controls"
+    }
+  },
+  "timing": {
+    "result_display_lead_s": 0.12,
+    "formula_prefix_to_result_gap_s": 0.16,
+    "ordinary_result_end_to_next_formula_start_s": 2,
+    "checkpoint_after_indices": [
+      2,
+      8,
+      13,
+      18,
+      26,
+      39
+    ],
+    "fixed_transition_sum_s": 107.04,
+    "highlight_word_boundary_policy": "independent CTC operator-token timings where available; clearly labeled word-count estimate otherwise"
+  },
+  "handoff": {
+    "ordinary_start_after_result_end_s": 0.35,
+    "ordinary_end_after_result_end_s": 1.55,
+    "replay_start_after_final_explanation_end_s": 0.6,
+    "replay_end_after_final_explanation_end_s": 1.8,
+    "next_expression_after_final_explanation_end_s": 2.6,
+    "executed_handoffs": 38,
+    "preserved_objects": "F(n-1),Fn values and their own F subscripts"
+  },
+  "character": {
+    "species": "Siamese cat",
+    "body_height_px": 400,
+    "ground_foot_anchor_px": [
+      1655,
+      990
+    ],
+    "source_pose_snapshots": 16,
+    "new_direct_source_images": 5,
+    "new_pose_ids": [
+      "wave_prepare",
+      "wave_in",
+      "wave_out",
+      "notice_prepare",
+      "notice_full"
+    ],
+    "registry": {
+      "path": "assets/library/characters/siamese-cat/generation-batches/fibonacci-recheck-v002-01a1cae3/registration.json",
+      "sha256": "03a7b693cdbce5ad40818756371de430588dab13924b4eb17249d59caa4b3b62"
+    },
+    "full_actor_crossfade": false,
+    "source_art_modified_at_render": false,
+    "source_art_policy": "Full direct tool output canvases are unchanged; registered body reference scale and individual foot anchors determine projection. Rejected sheets/composite candidates remain rejected history.",
+    "new_motion_windows": [
+      {
+        "id": "opening-wave",
+        "kind": "wave",
+        "start_s": 0.9,
+        "end_s": 2.7,
+        "frames": 54,
+        "wave_cycles": 2
+      },
+      {
+        "id": "million-notice",
+        "kind": "notice",
+        "start_s": 359.6666666666667,
+        "end_s": 360.6,
+        "frames": 28,
+        "wave_cycles": 0
+      },
+      {
+        "id": "completion-smile",
+        "kind": "smile",
+        "start_s": 516.2,
+        "end_s": 517.7333333333333,
+        "frames": 46,
+        "wave_cycles": 0
+      },
+      {
+        "id": "goodbye-wave",
+        "kind": "wave",
+        "start_s": 532.5333333333333,
+        "end_s": 534.3333333333334,
+        "frames": 54,
+        "wave_cycles": 2
+      }
+    ],
+    "interpolation": "hold",
+    "longest_observed_closed_eyes_s": 1.2,
+    "max_continuous_closed_eyes_s": 2,
+    "default_finale_pose": "neutral, open eyes"
+  },
+  "source_binding": {
+    "audio_base": {
+      "path": "output/fibonacci-counting-001-v002/audio-build/timeline.json",
+      "sha256": "4cb6494b82bdcfccfe7311a622faec619e3a5ace9cf39cdcef8b2a947257557c"
+    },
+    "master": {
+      "path": "output/fibonacci-counting-001-v002/audio-build/master.wav",
+      "sha256": "88804709b00945561cb3f8dd642554908b00a95f42f4d7dcdf04d08d77fa3283"
+    },
+    "top_timeline": {
+      "path": "output/fibonacci-counting-001-v002/timeline.json",
+      "sha256": "bb2883c6433430cbc884c95fa4d31cf8fd77a83ef3a631a748c5b340a3a282c0"
+    },
+    "motion": {
+      "path": "output/fibonacci-counting-001-v002/character-motion.json",
+      "sha256": "8ca9f4383435ddb941cf3be139f785d5afe5a72029fa1e47baae77ff849c0cfa"
+    },
+    "renderer": {
+      "path": "tools/render_fibonacci_video_v002.py",
+      "sha256": "c72a2e4c221f3c99243ffe04ea35a8a0804afd33a1f343a48036aeb6465923da"
+    },
+    "hash_graph": "motion binds immutable audio base; top binds same base and motion. No cyclic hashes.",
+    "base_to_top_voice_time_math_fields": "exactly identical"
+  },
+  "audio": {
+    "master_format": "48kHz24bit stereo",
+    "master_integrated_lufs": -16.52,
+    "master_true_peak_dbtp": -2.04,
+    "accepted_encoded_aac_integrated_lufs": -16.52,
+    "accepted_encoded_aac_true_peak_dbtp": -1.98,
+    "accepted_AAC_copied_without_reencoding": true,
+    "processing": "Constant scalar per whole source utterance and common linear delivery gain. No limiting, compression, time stretch or pitch change.",
+    "T013b_retained_codec_correction_db": -2.5,
+    "final_encoded_integrated_lufs": -16.52,
+    "final_encoded_true_peak_dbtp": -1.98,
+    "accepted_AAC_ADTS_payload_and_decoded_PCM_identical": true,
+    "source_master_and_AAC_all_stereo_lags_samples": 0
+  },
+  "verification": {
+    "independent_content": {
+      "status": "PASS",
+      "checks": 642,
+      "failed": 0
+    },
+    "independent_motion": {
+      "status": "PASS",
+      "decoded_frames": 16104,
+      "opening_wave_cycles": 2,
+      "goodbye_wave_cycles": 2,
+      "clipped_or_occluding_registered_poses": 0,
+      "missing_high_contrast_core_clusters": 0,
+      "continuous_closed_eyes_s": 1.2,
+      "regression_tests": 14
+    },
+    "final_generic_video": {
+      "status": "PASS",
+      "fresh_full_decode_and_pixel_analysis": true,
+      "reused_prior_visual_QA": false,
+      "decoded_frames": 16104,
+      "native_samples": 733,
+      "native_components": 8222,
+      "max_abs_delta_x_px": 1.0,
+      "max_abs_delta_y_px": 1.0,
+      "centering_tolerance_px": 1.0,
+      "empty_clipped_or_conflicting_components": 0,
+      "source_master_stereo_minimum_correlation": 0.9999999665956475,
+      "source_final_AAC_stereo_minimum_correlation": 0.9967959119124219,
+      "all_lag_samples": 0,
+      "silent_intervals_per_track": 105,
+      "maximum_master_silent_interior_peak_pcm16": 0,
+      "maximum_final_AAC_silent_interior_peak_pcm16": 1,
+      "subtitles": 104,
+      "chapters": 7
+    },
+    "final_aac_fresh_review": {
+      "status": "PASS_WITH_DIAGNOSTIC_WARNINGS_RETAINED",
+      "accepted": true,
+      "utterances": 104,
+      "channels": 2,
+      "numbers": 41,
+      "expression_prefixes": 39,
+      "other_dialogue": 24,
+      "fresh_main_ASR_runs": 208,
+      "fresh_main_CTC_runs": 208,
+      "fresh_acoustic_checks": 208,
+      "additional_silence_guarded_ASR_runs": 6,
+      "additional_silence_guarded_CTC_runs": 6,
+      "left_ASR_matches": 91,
+      "left_ASR_warnings_retained_and_reviewed": 13,
+      "right_ASR_matches": 90,
+      "right_ASR_warnings_retained_and_reviewed": 14,
+      "accepted_utterances_per_channel": 104,
+      "unresolved_material_audio_findings": 0,
+      "clipped_samples": 0,
+      "onset_or_terminal_signal_warnings": 0,
+      "diagnostic_phone_warnings_erased": false,
+      "perfect_pronunciation_certified": false,
+      "targeted_controls": [
+        "N024 internal theta and terminal eight, nominal and80ms silence guarded per channel",
+        "Isolated two and eight: raw CTC warnings retained with independent acoustic controls",
+        "T013b constant-scalar level proof and adjacent RMS review; no internal gain step"
+      ],
+      "AAC_ADTS_and_decoded_PCM_copy_equal": true
+    },
+    "evidence": {
+      "independent_content": {
+        "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/v002-content/content-review-v002.json",
+        "sha256": "d4bf881f8dbe9b3f96d20e111f7a08342f2ad504d41076403003f0da31f4d7ca"
+      },
+      "independent_motion": {
+        "path": "output/fibonacci-counting-001-v002/qa/motion-v002/verification.json",
+        "sha256": "d539fb02975b24cfd69516800a38b11ac17ddf2bf29074f9c427166a1c56a01b"
+      },
+      "semantic_visual": {
+        "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/v002-visual-motion/visual-motion-review-v002.json",
+        "sha256": "2258bf16f5609542333e78807056e74d6023d8019b9560468578e88a82fc81f0"
+      },
+      "accepted_source_audio": {
+        "path": "output/fibonacci-counting-001-v002/speech/speech-acceptance.json",
+        "sha256": "b969764cd6731a85497ac86a2acb5b98695bcf355fffb49aa5489071e5e6718b"
+      },
+      "accepted_encoded_aac": {
+        "path": "output/fibonacci-counting-001-v002/audio-build/aac-acceptance.json",
+        "sha256": "32fe41911b163b5838961f1a2699fada953669a701d372294bea200497417327"
+      },
+      "final_generic_video": {
+        "path": "output/fibonacci-counting-001-v002/qa/v001/verification.json",
+        "sha256": "a469349efd4e70700fdb206280d68c7bf68687cf7943a661ab2a6db427862880"
+      },
+      "final_aac_fresh_review": {
+        "path": "output/fibonacci-counting-001-v002/audio-final-qa/final-aac-review.json",
+        "sha256": "e538d6a00b8722d25386947fe73258e39d46217807883760933a0c0cabd634b9"
+      },
+      "final_media_summary": {
+        "path": "design/fibonacci-counting-v1/production-qa/v002/final-media-summary.json",
+        "sha256": "25d2478396a5d7193853f00e286803abfc1eaf8c7f34009c252b56619405caba"
+      }
+    },
+    "decoded_selected_image_review": {
+      "path": "design/fibonacci-counting-v1/production-qa/recheck-20261112-01/v002-content/decoded-image-review-v002.json",
+      "sha256": "1bdd83fe5bbf563a4bd992e6191e8883d81057047a23f7501d2294a3a2dccd4f"
+    },
+    "unresolved_material_findings": 0
+  },
+  "limitations": [
+    "Automated ASR/CTC diagnostic warnings remain: left13 and right14 ASR differences, plus short-word phone-label uncertainty. Individual evidence accepts all104 utterances per channel with no unresolved material findings; perfect pronunciation is not certified.",
+    "Motion proof decodes all16104 frames; detailed registered-pose matching excludes the opening0.8s and final2s intentional fades.",
+    "Selected image, source-art and semantic motion review is documented; a human whole-video continuous viewing/listening session is not claimed.",
+    "Discrete held drawings retain small shape/style differences. Existing v001 content audit, original audio caution and two historical preproduction cue differences are preserved.",
+    "Catalog/current-alias registration, shared-reference updates, archive/doctor/preview and production-run logging are later root-owned work, with no PASS claimed here."
+  ],
+  "preservation": {
+    "v001_outputs_unchanged": true,
+    "v001_reviews_unchanged": true,
+    "historical_art_kept": true,
+    "shared_catalogs_or_aliases_edited_by_this_agent": false
+  },
+  "registration_followup": {
+    "status": "pending_root_production_run",
+    "scope": [
+      "Catalog and current-alias registration",
+      "Shared document references",
+      "Production-run receipt",
+      "Archive, doctor and preview checks"
+    ],
+    "record_owner": "root",
+    "record_policy": "These subsequent registration and portability actions are not covered by the completed media QA above. Bind their separate production-run receipt once actually performed.",
+    "claimed_pass": false
+  }
+}

@@ -1,0 +1,1826 @@
+[
+  {
+    "id": "I01",
+    "kind": "intro",
+    "scene_id": "title",
+    "text": "Hi! Let's count Fibonacci numbers, and watch each new number take shape.",
+    "translation_ja": "こんにちは。フィボナッチ数を数えて、新しい数が生まれる様子を見よう。",
+    "visual_cue_ja": "雲海とベランダ、右端の青い屋根の郵便局を見せる引き。タイトルとシャム猫。数式や数字は独立レイヤー。",
+    "word_count_for_estimate": 12,
+    "planning_window_seconds": [
+      0.8,
+      5.6
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "I02",
+    "kind": "intro",
+    "scene_id": "rule",
+    "text": "We start with zero and one. These are our two starting values.",
+    "translation_ja": "0と1から始めるよ。この二つが出発点。",
+    "visual_cue_ja": "初期値の数値窓 F₀=0 / F₁=1。まだ本カウントの進捗は増やさない。",
+    "word_count_for_estimate": 12,
+    "planning_window_seconds": [
+      6.2,
+      11.0
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "I03",
+    "kind": "intro",
+    "scene_id": "rule",
+    "text": "To make the next number, add the previous two. Then use the newest pair, and do it again.",
+    "translation_ja": "次の数は直前の二つを足して作る。できたら新しい二つで繰り返すよ。",
+    "visual_cue_ja": "Fₙ=Fₙ₋₂+Fₙ₋₁、n≥2 を入力→加算→出力の3領域へ対応付ける。",
+    "word_count_for_estimate": 18,
+    "planning_window_seconds": [
+      11.6,
+      18.8
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "I04",
+    "kind": "intro",
+    "scene_id": "rule",
+    "text": "The small labels tell us each number's place. We start at F zero, so F two is the third entry.",
+    "translation_ja": "小さなラベルは数の位置だよ。Fゼロから始まるから、Fツーは3番目。",
+    "visual_cue_ja": "F₀/F₁/F₂ と1/2/3番目を対応させる。添字と値を別欄にする。",
+    "word_count_for_estimate": 20,
+    "planning_window_seconds": [
+      19.4,
+      27.4
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "I05",
+    "kind": "intro",
+    "scene_id": "input-legend",
+    "text": "The older value sits on the left. The newer value sits beside it. Their labels move with them.",
+    "translation_ja": "古い方の値は左、新しい方はその隣。ラベルも一緒に動くよ。",
+    "visual_cue_ja": "式の三列はOLDER / NEWER / NEW。色に加えて文字ラベルとF添字を表示し、項と値を一緒に渡す。",
+    "word_count_for_estimate": 18,
+    "planning_window_seconds": [
+      28.0,
+      35.2
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "I06",
+    "kind": "intro",
+    "scene_id": "output-legend",
+    "text": "Listen for plus and equals. The answer appears when we say its name, and becomes our newest value.",
+    "translation_ja": "plusとequalsを聞いてね。答えは数の名前を読む時に現れ、新しい値になるよ。",
+    "visual_cue_ja": "演算子と出力枠を順に強調。答えの確定表示は対応する結果発話の0.12秒前。",
+    "word_count_for_estimate": 18,
+    "planning_window_seconds": [
+      35.8,
+      43.0
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "I07",
+    "kind": "intro",
+    "scene_id": "postal-metaphor",
+    "text": "Number windows show values, not piles of things. A window marked one thousand stands for that value, not one thousand objects.",
+    "translation_ja": "数値窓が示すのは値で、物の山ではないよ。1000と書いた窓は値1000を表し、物が1000個あるという意味ではないよ。",
+    "visual_cue_ja": "数式の三つの数値窓は値を表示する。個数モデルと混同しない。",
+    "word_count_for_estimate": 21,
+    "planning_window_seconds": [
+      43.6,
+      52.0
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "I08",
+    "kind": "intro",
+    "scene_id": "range",
+    "text": "We'll keep adding until the sequence first passes one hundred million. The numbers grow, but the rule stays the same.",
+    "translation_ja": "数列が初めて1億を超えるところまで足していくよ。数が大きくなっても規則は同じ。",
+    "visual_cue_ja": "終点102,334,155は導入で先出しせず、FIRST PAST 100,000,000 の目標のみ。",
+    "word_count_for_estimate": 20,
+    "planning_window_seconds": [
+      52.6,
+      60.6
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "N000",
+    "kind": "count",
+    "scene_id": "seed",
+    "text": "zero",
+    "translation_ja": "0",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 1,
+    "planning_window_seconds": [
+      61.2,
+      61.6
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 0,
+    "value": 0,
+    "group_id": "F000"
+  },
+  {
+    "id": "N001",
+    "kind": "count",
+    "scene_id": "seed",
+    "text": "one",
+    "translation_ja": "1",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 1,
+    "planning_window_seconds": [
+      63.6,
+      64.0
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 1,
+    "value": 1,
+    "group_id": "F001"
+  },
+  {
+    "id": "E002",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "zero plus one equals",
+    "translation_ja": "0 足す 1 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      66.0,
+      67.6
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 2,
+    "value": 1,
+    "group_id": "F002"
+  },
+  {
+    "id": "N002",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "one",
+    "translation_ja": "1",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 1,
+    "planning_window_seconds": [
+      67.76,
+      68.16
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 2,
+    "value": 1,
+    "group_id": "F002"
+  },
+  {
+    "id": "T002a",
+    "kind": "explanation",
+    "scene_id": "repeat-one",
+    "text": "There are two ones in a row. One is a starting value; the next was made by adding zero and one.",
+    "translation_ja": "1が二つ続いたね。一つは初期値で、次は0と1を足してできた数。",
+    "visual_cue_ja": "F₁=1とF₂=1を別ID・別位置で保持。0を削除せず履歴へ。",
+    "word_count_for_estimate": 21,
+    "planning_window_seconds": [
+      68.76,
+      77.16
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 2,
+    "value": 1
+  },
+  {
+    "id": "T002b",
+    "kind": "explanation",
+    "scene_id": "repeat-one",
+    "text": "They have the same value, but different places. Keep both entries, because each belongs to the sequence.",
+    "translation_ja": "値は同じでも場所が違う。どちらも数列の一部だから残しておこう。",
+    "visual_cue_ja": "二つの1を別ラベルで比較。説明中は本カウント進捗を増やさない。",
+    "word_count_for_estimate": 17,
+    "planning_window_seconds": [
+      77.76,
+      84.56
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 2,
+    "value": 1
+  },
+  {
+    "id": "E003",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "one plus one equals",
+    "translation_ja": "1 足す 1 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      87.16,
+      88.76
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 3,
+    "value": 2,
+    "group_id": "F003"
+  },
+  {
+    "id": "N003",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "two",
+    "translation_ja": "2",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 1,
+    "planning_window_seconds": [
+      88.92,
+      89.32
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 3,
+    "value": 2,
+    "group_id": "F003"
+  },
+  {
+    "id": "E004",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "one plus two equals",
+    "translation_ja": "1 足す 2 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      91.32,
+      92.92
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 4,
+    "value": 3,
+    "group_id": "F004"
+  },
+  {
+    "id": "N004",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "three",
+    "translation_ja": "3",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 1,
+    "planning_window_seconds": [
+      93.08,
+      93.48
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 4,
+    "value": 3,
+    "group_id": "F004"
+  },
+  {
+    "id": "E005",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "two plus three equals",
+    "translation_ja": "2 足す 3 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      95.48,
+      97.08
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 5,
+    "value": 5,
+    "group_id": "F005"
+  },
+  {
+    "id": "N005",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "five",
+    "translation_ja": "5",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 1,
+    "planning_window_seconds": [
+      97.24,
+      97.64
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 5,
+    "value": 5,
+    "group_id": "F005"
+  },
+  {
+    "id": "E006",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "three plus five equals",
+    "translation_ja": "3 足す 5 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      99.64,
+      101.24
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 6,
+    "value": 8,
+    "group_id": "F006"
+  },
+  {
+    "id": "N006",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "eight",
+    "translation_ja": "8",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 1,
+    "planning_window_seconds": [
+      101.4,
+      101.8
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 6,
+    "value": 8,
+    "group_id": "F006"
+  },
+  {
+    "id": "E007",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "five plus eight equals",
+    "translation_ja": "5 足す 8 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      103.8,
+      105.4
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 7,
+    "value": 13,
+    "group_id": "F007"
+  },
+  {
+    "id": "N007",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "thirteen",
+    "translation_ja": "13",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 1,
+    "planning_window_seconds": [
+      105.56,
+      105.96
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 7,
+    "value": 13,
+    "group_id": "F007"
+  },
+  {
+    "id": "E008",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "eight plus thirteen equals",
+    "translation_ja": "8 足す 13 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      107.96,
+      109.56
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 8,
+    "value": 21,
+    "group_id": "F008"
+  },
+  {
+    "id": "N008",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "twenty-one",
+    "translation_ja": "21",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 2,
+    "planning_window_seconds": [
+      109.72,
+      110.52
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 8,
+    "value": 21,
+    "group_id": "F008"
+  },
+  {
+    "id": "T008a",
+    "kind": "explanation",
+    "scene_id": "carry-8-plus-13",
+    "text": "Let's look inside that addition. In the ones column, eight plus three makes eleven: one stays here, and one ten moves left.",
+    "translation_ja": "今の足し算の中を見よう。一の位は8+3=11。1をここに残し、十を一つ左へ送るよ。",
+    "visual_cue_ja": "直前8+13=21のREPLAY。入力→一の位11・繰上がり1→結果21の3段階。",
+    "word_count_for_estimate": 22,
+    "planning_window_seconds": [
+      111.12,
+      119.92
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 8,
+    "value": 21
+  },
+  {
+    "id": "T008b",
+    "kind": "explanation",
+    "scene_id": "carry-8-plus-13",
+    "text": "That carried ten joins the ten already there. The columns now show two tens and one one. Then the newest pair moves on.",
+    "translation_ja": "繰り上がった十が、もともとの十と合わさる。十が二つと一が一つ。新しい二つで次へ進もう。",
+    "visual_cue_ja": "十の位0+1+1=2。2と1を同時に足し直す誤演出を避ける。",
+    "word_count_for_estimate": 23,
+    "planning_window_seconds": [
+      120.52,
+      129.72
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 8,
+    "value": 21
+  },
+  {
+    "id": "E009",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "thirteen plus twenty-one equals",
+    "translation_ja": "13 足す 21 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 5,
+    "planning_window_seconds": [
+      132.32,
+      134.32
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 9,
+    "value": 34,
+    "group_id": "F009"
+  },
+  {
+    "id": "N009",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "thirty-four",
+    "translation_ja": "34",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 2,
+    "planning_window_seconds": [
+      134.48,
+      135.28
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 9,
+    "value": 34,
+    "group_id": "F009"
+  },
+  {
+    "id": "E010",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "twenty-one plus thirty-four equals",
+    "translation_ja": "21 足す 34 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 6,
+    "planning_window_seconds": [
+      137.28,
+      139.68
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 10,
+    "value": 55,
+    "group_id": "F010"
+  },
+  {
+    "id": "N010",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "fifty-five",
+    "translation_ja": "55",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 2,
+    "planning_window_seconds": [
+      139.84,
+      140.64
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 10,
+    "value": 55,
+    "group_id": "F010"
+  },
+  {
+    "id": "E011",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "thirty-four plus fifty-five equals",
+    "translation_ja": "34 足す 55 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 6,
+    "planning_window_seconds": [
+      142.64,
+      145.04
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 11,
+    "value": 89,
+    "group_id": "F011"
+  },
+  {
+    "id": "N011",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "eighty-nine",
+    "translation_ja": "89",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 2,
+    "planning_window_seconds": [
+      145.2,
+      146.0
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 11,
+    "value": 89,
+    "group_id": "F011"
+  },
+  {
+    "id": "E012",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "fifty-five plus eighty-nine equals",
+    "translation_ja": "55 足す 89 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 6,
+    "planning_window_seconds": [
+      148.0,
+      150.4
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 12,
+    "value": 144,
+    "group_id": "F012"
+  },
+  {
+    "id": "N012",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "one hundred forty-four",
+    "translation_ja": "144",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      150.56,
+      152.16
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 12,
+    "value": 144,
+    "group_id": "F012"
+  },
+  {
+    "id": "E013",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "eighty-nine plus one hundred forty-four equals",
+    "translation_ja": "89 足す 144 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 8,
+    "planning_window_seconds": [
+      154.16,
+      157.36
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 13,
+    "value": 233,
+    "group_id": "F013"
+  },
+  {
+    "id": "N013",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "two hundred thirty-three",
+    "translation_ja": "233",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      157.52,
+      159.12
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 13,
+    "value": 233,
+    "group_id": "F013"
+  },
+  {
+    "id": "T013a",
+    "kind": "explanation",
+    "scene_id": "carry-89-plus-144",
+    "text": "Here the ones make thirteen. Write three and carry one ten. The tens, including that carry, also make thirteen.",
+    "translation_ja": "一の位は13。3を書いて十を一つ繰り上げる。その繰り上がりを含む十の位も13になるよ。",
+    "visual_cue_ja": "89+144=233のREPLAY。9+4=13→一3、8+4+1=13→十3。",
+    "word_count_for_estimate": 19,
+    "planning_window_seconds": [
+      159.72,
+      167.32
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 13,
+    "value": 233
+  },
+  {
+    "id": "T013b",
+    "kind": "explanation",
+    "scene_id": "carry-89-plus-144",
+    "text": "Write three tens, and carry one hundred. That hundred joins the hundred already there. Every column keeps its own place.",
+    "translation_ja": "十を三つ書いて、百を一つ繰り上げる。もともとの百と合わさるよ。各桁の場所はそのまま。",
+    "visual_cue_ja": "百の位0+1+1=2。桁線は一・十・百を明記、繰上がり数字は小さく別レイヤー。",
+    "word_count_for_estimate": 20,
+    "planning_window_seconds": [
+      167.92,
+      175.92
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 13,
+    "value": 233
+  },
+  {
+    "id": "E014",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "one hundred forty-four plus two hundred thirty-three equals",
+    "translation_ja": "144 足す 233 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 10,
+    "planning_window_seconds": [
+      178.52,
+      182.52
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 14,
+    "value": 377,
+    "group_id": "F014"
+  },
+  {
+    "id": "N014",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "three hundred seventy-seven",
+    "translation_ja": "377",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      182.68,
+      184.28
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 14,
+    "value": 377,
+    "group_id": "F014"
+  },
+  {
+    "id": "E015",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "two hundred thirty-three plus three hundred seventy-seven equals",
+    "translation_ja": "233 足す 377 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 10,
+    "planning_window_seconds": [
+      186.28,
+      190.28
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 15,
+    "value": 610,
+    "group_id": "F015"
+  },
+  {
+    "id": "N015",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "six hundred ten",
+    "translation_ja": "610",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 3,
+    "planning_window_seconds": [
+      190.44,
+      191.64
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 15,
+    "value": 610,
+    "group_id": "F015"
+  },
+  {
+    "id": "E016",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "three hundred seventy-seven plus six hundred ten equals",
+    "translation_ja": "377 足す 610 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 9,
+    "planning_window_seconds": [
+      193.64,
+      197.24
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 16,
+    "value": 987,
+    "group_id": "F016"
+  },
+  {
+    "id": "N016",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "nine hundred eighty-seven",
+    "translation_ja": "987",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 4,
+    "planning_window_seconds": [
+      197.4,
+      199.0
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 16,
+    "value": 987,
+    "group_id": "F016"
+  },
+  {
+    "id": "E017",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "six hundred ten plus nine hundred eighty-seven equals",
+    "translation_ja": "610 足す 987 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 9,
+    "planning_window_seconds": [
+      201.0,
+      204.6
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 17,
+    "value": 1597,
+    "group_id": "F017"
+  },
+  {
+    "id": "N017",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "one thousand five hundred ninety-seven",
+    "translation_ja": "1,597",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 6,
+    "planning_window_seconds": [
+      204.76,
+      207.16
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 17,
+    "value": 1597,
+    "group_id": "F017"
+  },
+  {
+    "id": "E018",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "nine hundred eighty-seven plus one thousand five hundred ninety-seven equals",
+    "translation_ja": "987 足す 1,597 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 12,
+    "planning_window_seconds": [
+      209.16,
+      213.96
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 18,
+    "value": 2584,
+    "group_id": "F018"
+  },
+  {
+    "id": "N018",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "two thousand five hundred eighty-four",
+    "translation_ja": "2,584",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 6,
+    "planning_window_seconds": [
+      214.12,
+      216.52
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 18,
+    "value": 2584,
+    "group_id": "F018"
+  },
+  {
+    "id": "T018a",
+    "kind": "explanation",
+    "scene_id": "carry-987-plus-1597",
+    "text": "Now the values reach into the thousands. Start at the ones and follow each carry to the next column, one place at a time.",
+    "translation_ja": "千の位まで来たね。一の位から始めて、繰り上がりを一桁ずつ追ってみよう。",
+    "visual_cue_ja": "987+1,597=2,584のREPLAY。横三列の数式を保持し、位取りの説明だけ拡大する。入力→連鎖繰上がり→確定結果の三段階。",
+    "word_count_for_estimate": 24,
+    "planning_window_seconds": [
+      217.12,
+      226.72
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 18,
+    "value": 2584
+  },
+  {
+    "id": "T018b",
+    "kind": "explanation",
+    "scene_id": "carry-987-plus-1597",
+    "text": "Seven plus seven makes fourteen. Next come eighteen tens, then fifteen hundreds. Each carry moves one column left; it never skips a place.",
+    "translation_ja": "7+7=14。次は十が18個、百が15個。繰り上がりは一桁左へ進み、飛び越さないよ。",
+    "visual_cue_ja": "一7+7=14、十8+9+1=18、百9+5+1=15、千0+1+1=2。結果2,584。",
+    "word_count_for_estimate": 23,
+    "planning_window_seconds": [
+      227.32,
+      236.52
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 18,
+    "value": 2584
+  },
+  {
+    "id": "E019",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "one thousand five hundred ninety-seven plus two thousand five hundred eighty-four equals",
+    "translation_ja": "1,597 足す 2,584 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 14,
+    "planning_window_seconds": [
+      239.12,
+      244.72
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 19,
+    "value": 4181,
+    "group_id": "F019"
+  },
+  {
+    "id": "N019",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "four thousand one hundred eighty-one",
+    "translation_ja": "4,181",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 6,
+    "planning_window_seconds": [
+      244.88,
+      247.28
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 19,
+    "value": 4181,
+    "group_id": "F019"
+  },
+  {
+    "id": "E020",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "two thousand five hundred eighty-four plus four thousand one hundred eighty-one equals",
+    "translation_ja": "2,584 足す 4,181 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 14,
+    "planning_window_seconds": [
+      249.28,
+      254.88
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 20,
+    "value": 6765,
+    "group_id": "F020"
+  },
+  {
+    "id": "N020",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "six thousand seven hundred sixty-five",
+    "translation_ja": "6,765",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 6,
+    "planning_window_seconds": [
+      255.04,
+      257.44
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 20,
+    "value": 6765,
+    "group_id": "F020"
+  },
+  {
+    "id": "E021",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "four thousand one hundred eighty-one plus six thousand seven hundred sixty-five equals",
+    "translation_ja": "4,181 足す 6,765 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 14,
+    "planning_window_seconds": [
+      259.44,
+      265.04
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 21,
+    "value": 10946,
+    "group_id": "F021"
+  },
+  {
+    "id": "N021",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "ten thousand nine hundred forty-six",
+    "translation_ja": "10,946",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 6,
+    "planning_window_seconds": [
+      265.2,
+      267.6
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 21,
+    "value": 10946,
+    "group_id": "F021"
+  },
+  {
+    "id": "E022",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "six thousand seven hundred sixty-five plus ten thousand nine hundred forty-six equals",
+    "translation_ja": "6,765 足す 10,946 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 14,
+    "planning_window_seconds": [
+      269.6,
+      275.2
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 22,
+    "value": 17711,
+    "group_id": "F022"
+  },
+  {
+    "id": "N022",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "seventeen thousand seven hundred eleven",
+    "translation_ja": "17,711",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 5,
+    "planning_window_seconds": [
+      275.36,
+      277.36
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 22,
+    "value": 17711,
+    "group_id": "F022"
+  },
+  {
+    "id": "E023",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "ten thousand nine hundred forty-six plus seventeen thousand seven hundred eleven equals",
+    "translation_ja": "10,946 足す 17,711 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 13,
+    "planning_window_seconds": [
+      279.36,
+      284.56
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 23,
+    "value": 28657,
+    "group_id": "F023"
+  },
+  {
+    "id": "N023",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "twenty-eight thousand six hundred fifty-seven",
+    "translation_ja": "28,657",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 7,
+    "planning_window_seconds": [
+      284.72,
+      287.52
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 23,
+    "value": 28657,
+    "group_id": "F023"
+  },
+  {
+    "id": "E024",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "seventeen thousand seven hundred eleven plus twenty-eight thousand six hundred fifty-seven equals",
+    "translation_ja": "17,711 足す 28,657 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 14,
+    "planning_window_seconds": [
+      289.52,
+      295.12
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 24,
+    "value": 46368,
+    "group_id": "F024"
+  },
+  {
+    "id": "N024",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "forty-six thousand three hundred sixty-eight",
+    "translation_ja": "46,368",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 7,
+    "planning_window_seconds": [
+      295.28,
+      298.08
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 24,
+    "value": 46368,
+    "group_id": "F024"
+  },
+  {
+    "id": "E025",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "twenty-eight thousand six hundred fifty-seven plus forty-six thousand three hundred sixty-eight equals",
+    "translation_ja": "28,657 足す 46,368 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 16,
+    "planning_window_seconds": [
+      300.08,
+      306.48
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 25,
+    "value": 75025,
+    "group_id": "F025"
+  },
+  {
+    "id": "N025",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "seventy-five thousand twenty-five",
+    "translation_ja": "75,025",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 5,
+    "planning_window_seconds": [
+      306.64,
+      308.64
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 25,
+    "value": 75025,
+    "group_id": "F025"
+  },
+  {
+    "id": "E026",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "forty-six thousand three hundred sixty-eight plus seventy-five thousand twenty-five equals",
+    "translation_ja": "46,368 足す 75,025 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 14,
+    "planning_window_seconds": [
+      310.64,
+      316.24
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 26,
+    "value": 121393,
+    "group_id": "F026"
+  },
+  {
+    "id": "N026",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "one hundred twenty-one thousand three hundred ninety-three",
+    "translation_ja": "121,393",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 9,
+    "planning_window_seconds": [
+      316.4,
+      320.0
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 26,
+    "value": 121393,
+    "group_id": "F026"
+  },
+  {
+    "id": "T026a",
+    "kind": "explanation",
+    "scene_id": "large-place-values",
+    "text": "The commas help us read groups of three digits. They are separators, not extra digits, and they do not change the addition.",
+    "translation_ja": "カンマは3桁ずつの区切りを読む助けだよ。桁が増えるわけではなく、足し算は変わらない。",
+    "visual_cue_ja": "46,368+75,025=121,393の直後。数式全体と位取り拡大を切り替える。",
+    "word_count_for_estimate": 22,
+    "planning_window_seconds": [
+      320.6,
+      329.4
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 26,
+    "value": 121393
+  },
+  {
+    "id": "T026b",
+    "kind": "explanation",
+    "scene_id": "large-place-values",
+    "text": "Keep the ones columns lined up on the right. Even with larger numbers, each column still adds the same kind of units.",
+    "translation_ja": "右端の一の位をそろえよう。大きな数でも、それぞれの列では同じ位の単位を足すよ。",
+    "visual_cue_ja": "縦式へ切替時は一の位で右揃え。各値を独立して中央揃えした縦式にしない。",
+    "word_count_for_estimate": 22,
+    "planning_window_seconds": [
+      330.0,
+      338.8
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 26,
+    "value": 121393
+  },
+  {
+    "id": "E027",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "seventy-five thousand twenty-five plus one hundred twenty-one thousand three hundred ninety-three equals",
+    "translation_ja": "75,025 足す 121,393 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 16,
+    "planning_window_seconds": [
+      341.4,
+      347.8
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 27,
+    "value": 196418,
+    "group_id": "F027"
+  },
+  {
+    "id": "N027",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "one hundred ninety-six thousand four hundred eighteen",
+    "translation_ja": "196,418",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 8,
+    "planning_window_seconds": [
+      347.96,
+      351.16
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 27,
+    "value": 196418,
+    "group_id": "F027"
+  },
+  {
+    "id": "E028",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "one hundred twenty-one thousand three hundred ninety-three plus one hundred ninety-six thousand four hundred eighteen equals",
+    "translation_ja": "121,393 足す 196,418 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 19,
+    "planning_window_seconds": [
+      353.16,
+      360.76
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 28,
+    "value": 317811,
+    "group_id": "F028"
+  },
+  {
+    "id": "N028",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "three hundred seventeen thousand eight hundred eleven",
+    "translation_ja": "317,811",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 7,
+    "planning_window_seconds": [
+      360.92,
+      363.72
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 28,
+    "value": 317811,
+    "group_id": "F028"
+  },
+  {
+    "id": "E029",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "one hundred ninety-six thousand four hundred eighteen plus three hundred seventeen thousand eight hundred eleven equals",
+    "translation_ja": "196,418 足す 317,811 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 17,
+    "planning_window_seconds": [
+      365.72,
+      372.52
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 29,
+    "value": 514229,
+    "group_id": "F029"
+  },
+  {
+    "id": "N029",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "five hundred fourteen thousand two hundred twenty-nine",
+    "translation_ja": "514,229",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 8,
+    "planning_window_seconds": [
+      372.68,
+      375.88
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 29,
+    "value": 514229,
+    "group_id": "F029"
+  },
+  {
+    "id": "E030",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "three hundred seventeen thousand eight hundred eleven plus five hundred fourteen thousand two hundred twenty-nine equals",
+    "translation_ja": "317,811 足す 514,229 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 17,
+    "planning_window_seconds": [
+      377.88,
+      384.68
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 30,
+    "value": 832040,
+    "group_id": "F030"
+  },
+  {
+    "id": "N030",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "eight hundred thirty-two thousand forty",
+    "translation_ja": "832,040",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 6,
+    "planning_window_seconds": [
+      384.84,
+      387.24
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 30,
+    "value": 832040,
+    "group_id": "F030"
+  },
+  {
+    "id": "E031",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "five hundred fourteen thousand two hundred twenty-nine plus eight hundred thirty-two thousand forty equals",
+    "translation_ja": "514,229 足す 832,040 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 16,
+    "planning_window_seconds": [
+      389.24,
+      395.64
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 31,
+    "value": 1346269,
+    "group_id": "F031"
+  },
+  {
+    "id": "N031",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "one million three hundred forty-six thousand two hundred sixty-nine",
+    "translation_ja": "1,346,269",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 11,
+    "planning_window_seconds": [
+      395.8,
+      400.2
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 31,
+    "value": 1346269,
+    "group_id": "F031"
+  },
+  {
+    "id": "E032",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "eight hundred thirty-two thousand forty plus one million three hundred forty-six thousand two hundred sixty-nine equals",
+    "translation_ja": "832,040 足す 1,346,269 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 19,
+    "planning_window_seconds": [
+      402.2,
+      409.8
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 32,
+    "value": 2178309,
+    "group_id": "F032"
+  },
+  {
+    "id": "N032",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "two million one hundred seventy-eight thousand three hundred nine",
+    "translation_ja": "2,178,309",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 10,
+    "planning_window_seconds": [
+      409.96,
+      413.96
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 32,
+    "value": 2178309,
+    "group_id": "F032"
+  },
+  {
+    "id": "E033",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "one million three hundred forty-six thousand two hundred sixty-nine plus two million one hundred seventy-eight thousand three hundred nine equals",
+    "translation_ja": "1,346,269 足す 2,178,309 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 23,
+    "planning_window_seconds": [
+      415.96,
+      425.16
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 33,
+    "value": 3524578,
+    "group_id": "F033"
+  },
+  {
+    "id": "N033",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "three million five hundred twenty-four thousand five hundred seventy-eight",
+    "translation_ja": "3,524,578",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 11,
+    "planning_window_seconds": [
+      425.32,
+      429.72
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 33,
+    "value": 3524578,
+    "group_id": "F033"
+  },
+  {
+    "id": "E034",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "two million one hundred seventy-eight thousand three hundred nine plus three million five hundred twenty-four thousand five hundred seventy-eight equals",
+    "translation_ja": "2,178,309 足す 3,524,578 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 23,
+    "planning_window_seconds": [
+      431.72,
+      440.92
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 34,
+    "value": 5702887,
+    "group_id": "F034"
+  },
+  {
+    "id": "N034",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "five million seven hundred two thousand eight hundred eighty-seven",
+    "translation_ja": "5,702,887",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 10,
+    "planning_window_seconds": [
+      441.08,
+      445.08
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 34,
+    "value": 5702887,
+    "group_id": "F034"
+  },
+  {
+    "id": "E035",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "three million five hundred twenty-four thousand five hundred seventy-eight plus five million seven hundred two thousand eight hundred eighty-seven equals",
+    "translation_ja": "3,524,578 足す 5,702,887 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 23,
+    "planning_window_seconds": [
+      447.08,
+      456.28
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 35,
+    "value": 9227465,
+    "group_id": "F035"
+  },
+  {
+    "id": "N035",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "nine million two hundred twenty-seven thousand four hundred sixty-five",
+    "translation_ja": "9,227,465",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 11,
+    "planning_window_seconds": [
+      456.44,
+      460.84
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 35,
+    "value": 9227465,
+    "group_id": "F035"
+  },
+  {
+    "id": "E036",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "five million seven hundred two thousand eight hundred eighty-seven plus nine million two hundred twenty-seven thousand four hundred sixty-five equals",
+    "translation_ja": "5,702,887 足す 9,227,465 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 23,
+    "planning_window_seconds": [
+      462.84,
+      472.04
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 36,
+    "value": 14930352,
+    "group_id": "F036"
+  },
+  {
+    "id": "N036",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "fourteen million nine hundred thirty thousand three hundred fifty-two",
+    "translation_ja": "14,930,352",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 10,
+    "planning_window_seconds": [
+      472.2,
+      476.2
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 36,
+    "value": 14930352,
+    "group_id": "F036"
+  },
+  {
+    "id": "E037",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "nine million two hundred twenty-seven thousand four hundred sixty-five plus fourteen million nine hundred thirty thousand three hundred fifty-two equals",
+    "translation_ja": "9,227,465 足す 14,930,352 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 23,
+    "planning_window_seconds": [
+      478.2,
+      487.4
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 37,
+    "value": 24157817,
+    "group_id": "F037"
+  },
+  {
+    "id": "N037",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "twenty-four million one hundred fifty-seven thousand eight hundred seventeen",
+    "translation_ja": "24,157,817",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 11,
+    "planning_window_seconds": [
+      487.56,
+      491.96
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 37,
+    "value": 24157817,
+    "group_id": "F037"
+  },
+  {
+    "id": "E038",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "fourteen million nine hundred thirty thousand three hundred fifty-two plus twenty-four million one hundred fifty-seven thousand eight hundred seventeen equals",
+    "translation_ja": "14,930,352 足す 24,157,817 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 23,
+    "planning_window_seconds": [
+      493.96,
+      503.16
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 38,
+    "value": 39088169,
+    "group_id": "F038"
+  },
+  {
+    "id": "N038",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "thirty-nine million eighty-eight thousand one hundred sixty-nine",
+    "translation_ja": "39,088,169",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 10,
+    "planning_window_seconds": [
+      503.32,
+      507.32
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 38,
+    "value": 39088169,
+    "group_id": "F038"
+  },
+  {
+    "id": "E039",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "twenty-four million one hundred fifty-seven thousand eight hundred seventeen plus thirty-nine million eighty-eight thousand one hundred sixty-nine equals",
+    "translation_ja": "24,157,817 足す 39,088,169 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 23,
+    "planning_window_seconds": [
+      509.32,
+      518.52
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 39,
+    "value": 63245986,
+    "group_id": "F039"
+  },
+  {
+    "id": "N039",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "sixty-three million two hundred forty-five thousand nine hundred eighty-six",
+    "translation_ja": "63,245,986",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 12,
+    "planning_window_seconds": [
+      518.68,
+      523.48
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 39,
+    "value": 63245986,
+    "group_id": "F039"
+  },
+  {
+    "id": "T039a",
+    "kind": "explanation",
+    "scene_id": "last-pair",
+    "text": "We have reached the final pair for this journey. Both values are below one hundred million. Their sum will cross that mark.",
+    "translation_ja": "今回の旅の最後の二つに来たね。どちらも1億未満だけれど、合計はそこを超えるよ。",
+    "visual_cue_ja": "F₃₈=39,088,169 / F₃₉=63,245,986を入力へ。出力欄は未確定。",
+    "word_count_for_estimate": 22,
+    "planning_window_seconds": [
+      524.08,
+      532.88
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 39,
+    "value": 63245986
+  },
+  {
+    "id": "T039b",
+    "kind": "explanation",
+    "scene_id": "last-pair",
+    "text": "Watch the labels as the two values enter the formula. It is the same addition we used at the start, with more place-value columns.",
+    "translation_ja": "二つの値が式に入る時、ラベルを見てね。位の列が増えても、最初と同じ足し算だよ。",
+    "visual_cue_ja": "F₄₀生成前の説明。数値は切替前後に同一真値を参照。",
+    "word_count_for_estimate": 25,
+    "planning_window_seconds": [
+      533.48,
+      543.48
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 39,
+    "value": 63245986
+  },
+  {
+    "id": "E040",
+    "kind": "formula_prefix",
+    "scene_id": "generate",
+    "text": "thirty-nine million eighty-eight thousand one hundred sixty-nine plus sixty-three million two hundred forty-five thousand nine hundred eighty-six equals",
+    "translation_ja": "39,088,169 足す 63,245,986 は……",
+    "visual_cue_ja": "a→plus→b→equalsの語に対応して入力と演算子を強調。出力欄は未確定。",
+    "word_count_for_estimate": 24,
+    "planning_window_seconds": [
+      546.08,
+      555.68
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 40,
+    "value": 102334155,
+    "group_id": "F040"
+  },
+  {
+    "id": "N040",
+    "kind": "count",
+    "scene_id": "result",
+    "text": "one hundred two million three hundred thirty-four thousand one hundred fifty-five",
+    "translation_ja": "102,334,155",
+    "visual_cue_ja": "対応する値を発話の0.12秒前に確定表示。同じサイクルの結果数詞はこの一回。",
+    "word_count_for_estimate": 13,
+    "planning_window_seconds": [
+      555.84,
+      561.04
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured",
+    "index": 40,
+    "value": 102334155,
+    "group_id": "F040"
+  },
+  {
+    "id": "O01",
+    "kind": "outro",
+    "scene_id": "finale",
+    "text": "We've counted forty-one entries, from F zero through F forty. Two starting values, then thirty-nine additions brought us here.",
+    "translation_ja": "FゼロからFフォーティーまで41項を数えたね。二つの初期値から39回の足し算でここまで来たよ。",
+    "visual_cue_ja": "41項・39加算・初期値2項を別に表示。",
+    "word_count_for_estimate": 21,
+    "planning_window_seconds": [
+      561.64,
+      570.04
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "O02",
+    "kind": "outro",
+    "scene_id": "finale",
+    "text": "The newest number is just past one hundred million. We stop here today, but the rule can keep making more numbers.",
+    "translation_ja": "新しい数は1億を少し超えたね。今日はここまでだけれど、規則を使えばその先も続けられるよ。",
+    "visual_cue_ja": "F₄₀=102,334,155と直前二項を確定表示。",
+    "word_count_for_estimate": 21,
+    "planning_window_seconds": [
+      570.64,
+      579.04
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "O03",
+    "kind": "outro",
+    "scene_id": "recap",
+    "text": "Remember the motion: take the previous two, add them, keep the newest pair, and repeat. Every new entry has a place in the chain.",
+    "translation_ja": "動きを思い出そう。直前の二つを足し、新しい二つを残して繰り返す。どの新しい項にも列の中の場所があるよ。",
+    "visual_cue_ja": "式とF₀〜F₄₀の履歴へ引く。41枚は項の数であって最終値の個数でない。",
+    "word_count_for_estimate": 24,
+    "planning_window_seconds": [
+      579.64,
+      589.24
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  },
+  {
+    "id": "O04",
+    "kind": "outro",
+    "scene_id": "goodbye",
+    "text": "Thanks for counting with me. See you next time!",
+    "translation_ja": "一緒に数えてくれてありがとう。またね。",
+    "visual_cue_ja": "追加済みdelighted（閉眼笑顔）を終幕で一度使用。共通身体基準560pxを400pxで表示、足支点(1655,990)。",
+    "word_count_for_estimate": 9,
+    "planning_window_seconds": [
+      589.84,
+      593.44
+    ],
+    "time_reference": "episode_start_estimate_at_150_wpm",
+    "timing_status": "provisional_not_audio_measured"
+  }
+]

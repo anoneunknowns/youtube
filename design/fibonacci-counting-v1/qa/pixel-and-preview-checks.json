@@ -1,0 +1,121 @@
+{
+  "kind": "decoded-pixel-and-preview-checks",
+  "dot_detection": "Exact renderer blue/teal in diagram ROIs; independent4-neighbour connected-component extraction,minimum50pixels per dot",
+  "source_png_sha256": "42cfc58cb1dc4a284f0795e248f5cb1c2bb9ab889d8d10177daa9b64118e3bd7",
+  "dot_checks": [
+    {
+      "name": "input-three",
+      "box_xyxy": [
+        180,
+        535,
+        620,
+        620
+      ],
+      "expected": 3,
+      "measured_components": 3,
+      "component_pixel_areas": [
+        904,
+        904,
+        904
+      ],
+      "passed": true
+    },
+    {
+      "name": "input-five",
+      "box_xyxy": [
+        810,
+        535,
+        1250,
+        620
+      ],
+      "expected": 5,
+      "measured_components": 5,
+      "component_pixel_areas": [
+        904,
+        904,
+        904,
+        904,
+        904
+      ],
+      "passed": true
+    },
+    {
+      "name": "result-eight",
+      "box_xyxy": [
+        400,
+        840,
+        1030,
+        957
+      ],
+      "expected": 8,
+      "measured_components": 8,
+      "component_pixel_areas": [
+        904,
+        904,
+        904,
+        904,
+        904,
+        904,
+        904,
+        904
+      ],
+      "passed": true
+    },
+    {
+      "name": "result-blue-part",
+      "box_xyxy": [
+        400,
+        840,
+        1030,
+        957
+      ],
+      "expected": 3,
+      "measured_components": 3,
+      "component_pixel_areas": [
+        904,
+        904,
+        904
+      ],
+      "passed": true
+    },
+    {
+      "name": "result-teal-part",
+      "box_xyxy": [
+        400,
+        840,
+        1030,
+        957
+      ],
+      "expected": 5,
+      "measured_components": 5,
+      "component_pixel_areas": [
+        904,
+        904,
+        904,
+        904,
+        904
+      ],
+      "passed": true
+    }
+  ],
+  "gif": {
+    "sampled_frames": 120,
+    "encoded_frames": 43,
+    "encoding": "identical hold frames coalesced,durations preserved",
+    "size": [
+      960,
+      540
+    ],
+    "duration_ms": 12000,
+    "all_frames_decoded": true,
+    "sha256": "de38b8cb6bab3517e56b17397c86d611faf7fdd53033a7c729a3c2668a87f615"
+  },
+  "layout_component_count": 4600,
+  "layout_passed": true,
+  "existing_alignment_regression_tests": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_component_alignment.py",
+    "passed": 14
+  },
+  "production_video_or_audio_reviewed": false,
+  "passed": true
+}

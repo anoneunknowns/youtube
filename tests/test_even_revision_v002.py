@@ -15,8 +15,6 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 TOOLS = ROOT / 'tools'
-WORK = Path('D:/temp/even-v002-revision-tests')
-WORK.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(TOOLS))
 import build_even_episode as base
 import build_even_episode_v002 as revision
@@ -27,9 +25,23 @@ import verify_even_video_v002 as wrapper
 class EvenRevisionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.original = base.read(ROOT / 'output/even-counting-001-v001/timeline.json')
-        cls.numbers = {int(number): row for number, row in cls.original['numeric_sources'].items()}
-        measured = base.read(ROOT / 'output/even-counting-001-v001/speech/measurements.json')
+        # The archived v002 input is the comparison baseline. The old v001
+        # timeline is not part of the portable inputs; do not reconstruct it
+        # and present a newly generated plan as historical evidence.
+        production = base.read(ROOT / 'design/even-counting-v1/production-run-v002.json')
+        timeline = production['timeline']
+        timeline_path = ROOT / timeline['path']
+        if base.digest(timeline_path) != timeline['sha256']:
+            raise ValueError('Changed archived even-v002 timeline fixture')
+        cls.baseline = base.read(timeline_path)
+        if cls.baseline['revision_id'] != 'even-counting-v002':
+            raise ValueError('Expected the archived even-v002 comparison baseline')
+        cls.numbers = {int(number): row for number, row in cls.baseline['numeric_sources'].items()}
+        measurements = cls.baseline['speech_measurements']
+        measurements_path = ROOT / measurements['path']
+        if base.digest(measurements_path) != measurements['sha256']:
+            raise ValueError('Changed archived even dialogue fixture')
+        measured = base.read(measurements_path)
         cls.dialogue = {row['id']: row for row in measured['dialogue']}
 
     def revised_plan(self):
@@ -41,21 +53,22 @@ class EvenRevisionTests(unittest.TestCase):
 
     def test_changed_take_length_moves_later_states_without_changing_waits(self):
         plan = self.revised_plan()
-        self.assertAlmostEqual(plan['duration_s'], self.original['duration_s'] + .5)
-        old = {row['id']: row for row in self.original['voice_events']}
+        self.assertAlmostEqual(plan['duration_s'], self.baseline['duration_s'] + .5)
+        old = {row['id']: row for row in self.baseline['voice_events']}
         new = {row['id']: row for row in plan['voice_events']}
         self.assertEqual(new['N022']['start_s'], old['N022']['start_s'])
         self.assertAlmostEqual(new['N024']['start_s'], old['N024']['start_s'] + .5)
         self.assertAlmostEqual(new['T100']['start_s'], old['T100']['start_s'] + .5)
-        self.assertAlmostEqual(plan['finale']['start_s'], self.original['finale']['start_s'] + .5)
-        self.assertAlmostEqual(plan['original_preproduction_estimate_s'], self.original['duration_s'])
+        self.assertAlmostEqual(plan['finale']['start_s'], self.baseline['finale']['start_s'] + .5)
+        self.assertAlmostEqual(plan['original_preproduction_estimate_s'],
+                               self.baseline['original_preproduction_estimate_s'])
         validation = revision.validate_revised(plan)
         self.assertEqual(validation['ordinary_boundaries_2s'], 98)
         self.assertEqual(validation['teaching_boundaries_10s'], 2)
 
     def test_old_estimate_cannot_hide_a_changed_measured_duration(self):
         plan = self.revised_plan()
-        plan['duration_s'] = self.original['duration_s']
+        plan['duration_s'] = self.baseline['duration_s']
         with self.assertRaisesRegex(ValueError, 'measured speech'):
             revision.validate_revised(plan)
 
@@ -64,7 +77,7 @@ class EvenRevisionTests(unittest.TestCase):
         def fail_during_schedule(*_args):
             self.assertIs(base.validate, revision.validate_revised)
             raise RuntimeError('Injected scheduling failure')
-        with tempfile.TemporaryDirectory(dir=WORK) as directory, ExitStack() as stack:
+        with tempfile.TemporaryDirectory(prefix='even-v002-revision-') as directory, ExitStack() as stack:
             stack.enter_context(patch.object(sys, 'argv', ['build-even-v002', '--out', directory, '--ffmpeg', 'ffmpeg']))
             stack.enter_context(patch.object(base, 'accepted_numbers', return_value=(deepcopy(self.numbers), [])))
             stack.enter_context(patch.object(revision, 'replacement_numbers', return_value={}))
@@ -93,7 +106,7 @@ class EvenRevisionTests(unittest.TestCase):
 
     def test_v002_verifier_refuses_a_v001_timeline_before_dispatch(self):
         original_scene = base_renderer.Scene
-        with tempfile.TemporaryDirectory(dir=WORK) as directory:
+        with tempfile.TemporaryDirectory(prefix='even-v002-revision-') as directory:
             path = Path(directory) / 'timeline.json'
             path.write_text(json.dumps({'revision_id': 'even-counting-v001'}), encoding='utf-8')
             with patch.object(sys, 'argv', ['verify-even-v002', '--timeline', str(path)]), \
@@ -120,7 +133,7 @@ class EvenRevisionTests(unittest.TestCase):
         return manifest, gate
 
     def test_individually_accepted_replacement_measures_actual_pcm(self):
-        with tempfile.TemporaryDirectory(dir=WORK) as directory:
+        with tempfile.TemporaryDirectory(prefix='even-v002-revision-') as directory:
             manifest, gate = self.acceptance_fixture(directory)
             gate_path = Path(directory) / 'speech-acceptance.json'
             gate_path.write_text(json.dumps(gate), encoding='utf-8')
@@ -130,7 +143,7 @@ class EvenRevisionTests(unittest.TestCase):
 
     def test_global_acceptance_cannot_override_a_mismatched_individual_result(self):
         for fault in ('missing', 'duplicate', 'wrong-text', 'rejected', 'wrong-duration', 'different-path'):
-            with self.subTest(fault=fault), tempfile.TemporaryDirectory(dir=WORK) as directory:
+            with self.subTest(fault=fault), tempfile.TemporaryDirectory(prefix='even-v002-revision-') as directory:
                 manifest, gate = self.acceptance_fixture(directory)
                 approval = gate['results'][0]
                 if fault == 'missing':

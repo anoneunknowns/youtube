@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "prime-final-verifier-binding-and-review",
+  "checked_at_utc": "2026-11-11T13:43:48.630922+00:00",
+  "summary": {
+    "passed": true,
+    "video_sha256": "ed506ca4305e4bf367fa8c69c826b18907a9264482b46db18fe06b6653b01b5f",
+    "report": "output/prime-counting-001-v001/qa/v003/verification.json",
+    "report_sha256": "65937674f7c02360b141af89b664ee4f8fc1b0af535e3d96a853ec1ca492c4ff",
+    "duration_s": 686.3235833333333,
+    "decoded_frames": 20590,
+    "all_frame_field_checks": {
+      "main-number": 16846,
+      "reading": 16846,
+      "factor-one": 16846,
+      "factor-value": 16846
+    },
+    "native_samples": 229,
+    "native_components": 2004,
+    "max_abs_dx_px": 1.0,
+    "max_abs_dy_px": 1.0,
+    "minimum_all_frame_glyph_iou": {
+      "main-number": 0.9957301451750641,
+      "reading": 0.96,
+      "factor-one": 1.0,
+      "factor-value": 0.8769230769230769
+    },
+    "minimum_native_learning_glyph_iou": 0.9769736842105263,
+    "integrated_lufs": -16.74,
+    "true_peak_dbtp": -2.01,
+    "audio": [
+      {
+        "kind": "master",
+        "minimum_correlation": 0.9999999290184878,
+        "maximum_silent_interior_peak_pcm16": 0,
+        "silence_intervals_checked": 189
+      },
+      {
+        "kind": "aac",
+        "minimum_correlation": 0.9996225046771163,
+        "maximum_silent_interior_peak_pcm16": 1,
+        "silence_intervals_checked": 189
+      }
+    ]
+  },
+  "verification_tool_sha256": "2f019fe9638aa28c0eef3a625d91f43cfeb6072d8eda5e7c7a3483a61b9aa36a",
+  "regression_tests": {
+    "path": "tests/test_prime_verification.py",
+    "sha256": "fe84ed73f7ab4c84c6549ec7980691a8241eb5f8655ba9afdde4b957cbc6c65e",
+    "tests": 11,
+    "passed": true
+  },
+  "prior_records_preserved": {
+    "qa/v001": "Native selection expression exceededFFmpeg parse recursion limit; actualmedia notfaulty. Technical+audio sections passed.",
+    "qa/v002": "Ancillary colored-text comparison used inconsistent antialias masks. Actual bounds, coremain/reading/factors andallframe tracking passed. Corrected independent background/foreground appearance method validated rawPNG/H264 and wrongequation controls."
+  },
+  "recognition_manifest": "output/prime-counting-001-v001/audio-final-qa/final-aac-manifest.json",
+  "scope": "Final production technical/pixel/waveform verification; actual freshAAC recognition report authored separately byaudio reviewer. No humancontinuousplayback/listening claimed."
+}

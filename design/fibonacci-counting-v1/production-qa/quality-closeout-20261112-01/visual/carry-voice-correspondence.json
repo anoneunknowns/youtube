@@ -1,0 +1,84 @@
+{
+  "kind": "fresh-completed-AAC-to-decoded-carry-closeout-correspondence",
+  "video_sha256": "68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3",
+  "source_ctc": {
+    "path": "output/fibonacci-counting-001-v002/audio-final-qa/phonemes-left.json",
+    "sha256": "8b26215b130f289fd0cd973435d9dc57840ac9a4c3a683141492007aa2494111"
+  },
+  "timing_method": "Independent fresh CTC token approximate word/phrase landmarks, offset by measured utterance start. About20–40ms precision; not exact human word-boundary annotation. Actual visual switches are sampled decoded30fpsframes.",
+  "phrase_time_uncertainty_s": 0.04,
+  "cases": [
+    {
+      "case": "F8 tens",
+      "voice": "The columns now show two tens and one one.",
+      "ctc_phrase": "two tens",
+      "ctc_global_s": [
+        108.678,
+        109.303
+      ],
+      "visual_write_s": 107.3666666667,
+      "visual_current_phase_at_phrase_start": "same tens column write; then COLUMN COMPLETE108.9667",
+      "verdict": "Completed-column description reads the already visible2tens. Correct column/value; no contradictory operation."
+    },
+    {
+      "case": "F13 tens",
+      "voice": "Write three tens, and carry one hundred.",
+      "ctc_write_three_tens_s": [
+        146.259,
+        147.184
+      ],
+      "visual_write_s": 145.3666666667,
+      "visual_write_phase_s": [
+        145.3666666667,
+        146.7666666667
+      ],
+      "ctc_carry_one_hundred_s": [
+        147.519,
+        148.464
+      ],
+      "visual_carry_move_s": [
+        146.7666666667,
+        149.2666666667
+      ],
+      "verdict": "Write phrase begins during the same tens-write hold. Carry phrase occurs during the same tens-to-hundreds movement."
+    },
+    {
+      "case": "F18 hundreds introduction",
+      "ctc_fifteen_hundreds_s": [
+        203.367,
+        204.152
+      ],
+      "visual_incoming_carry_arrives_and_hundreds_compute_s": 203.6333333333,
+      "intro_overlap_s": 0.2663333333,
+      "verdict": "Incoming carry arrives during the introduction of fifteen hundreds, then hundreds computation remains visible. Natural phrase transition, not an operation on an unrelated column."
+    },
+    {
+      "case": "F13 hundreds join",
+      "voice": "That hundred joins the hundred already there.",
+      "ctc_that_s": [
+        148.979,
+        149.124
+      ],
+      "ctc_hundred_s": [
+        149.159,
+        149.544
+      ],
+      "ctc_joins_s": [
+        149.619,
+        149.924
+      ],
+      "ctc_the_hundred_s": [
+        149.979,
+        150.444
+      ],
+      "ctc_already_there_s": [
+        150.519,
+        150.904
+      ],
+      "visual_incoming_carry_arrives_and_hundreds_compute_s": 149.2666666667,
+      "visual_hundreds_write_s": 150.7333333333,
+      "verdict": "Carry arrives during hundred introduction. The hundreds column is computing when joins begins;2is written during already there. Correct narrated column and operation."
+    }
+  ],
+  "decision": "No carry/voice operation mismatch. Retain all speech and carry drawing/cues unchanged. This conclusion uses the actual column/operation during each phrase, not REPLAY status alone."
+}

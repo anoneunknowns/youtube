@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "kind": "character-asset-management-independent-doublecheck",
+  "checked_at_utc": "2026-11-11T15:50:09.540520+00:00",
+  "status": "pass-after-corrections",
+  "scope": "Management code, current classification, evidence preservation and documentation. Existing fine-style findings remain open; this check did not repaint or regenerate art.",
+  "fixed_code_findings": [
+    {
+      "id": "CODE-001",
+      "issue": "Explicit uniquely named batches created an empty unclassified parent.",
+      "fix": "Discover using the original file path before structural grouping."
+    },
+    {
+      "id": "CODE-002",
+      "issue": "A reservation could succeed after the final config check during registry publication.",
+      "fix": "Hold the shared config lock through final checks and both derived-file replacements."
+    },
+    {
+      "id": "CODE-003",
+      "issue": "A symlink at the derived HTML path could redirect publication onto original art.",
+      "fix": "Reject symlinks in every component of the fixed HTML publication path."
+    },
+    {
+      "id": "CODE-004",
+      "issue": "A live input-reference symlink could enter the frozen portable inventory.",
+      "fix": "Prune active writer trees by their lexical location before traversing files."
+    }
+  ],
+  "metadata_corrections": [
+    "Retained initial classification_basis as initial_classification_basis and aligned current wording with completed prime/Fibonacci production evidence.",
+    "Marked old prime v002 adoption as historical and explicitly recorded source reuse by v003.",
+    "Restricted kangaroo expansion and red-panda eye-catch quality observations to their own reviewed batches."
+  ],
+  "evidence_preservation": {
+    "original_frozen_character_files_unchanged": 1097,
+    "style_diagnostics_preserved_byte_identically": 97,
+    "same_content_alias_groups_preserved": 11,
+    "source_art_moved_deleted_or_repainted": false,
+    "generic_or_episode_adoptions_changed_by_this_doublecheck": false
+  },
+  "tests": {
+    "status": "pass",
+    "count": 50,
+    "command": ".venv/bin/python -m unittest tests.test_character_asset_management tests.test_character_asset_inventory tests.test_character_expansion tests.test_character_eyecatches tests.test_component_alignment"
+  },
+  "independent_reviews": [
+    {
+      "path": "code-review.json",
+      "original_path": "output/character-asset-management-doublecheck-v001/code-review.json",
+      "bytes": 5313,
+      "sha256": "ee2ed0020234f0361a0e76240e8cdc3ec9900557304f737a42bcfa445215d10f"
+    },
+    {
+      "path": "code-review-post-fix.json",
+      "original_path": "output/character-asset-management-doublecheck-v001/code-review-post-fix.json",
+      "bytes": 1049,
+      "sha256": "d4668429ff0de4a23de95e6ec4a85a75b5a36d19c49e34c3a9bc9d6b946169a2"
+    },
+    {
+      "path": "registry-review.json",
+      "original_path": "output/character-asset-management-doublecheck-v001/registry-review.json",
+      "bytes": 7532,
+      "sha256": "caf16df5cbc901be0d83ffe62419961105456f2d742a07c2095a03e15bc0a8ff"
+    },
+    {
+      "path": "registry-review-post-fix.json",
+      "original_path": "output/character-asset-management-doublecheck-v001/registry-review-post-fix.json",
+      "bytes": 2354,
+      "sha256": "ceca7e3cd23a82aee76b771ad9967797a10d119c7691c92ba5c78b9a3a0de72c"
+    },
+    {
+      "path": "spec-review.json",
+      "original_path": "output/character-asset-management-doublecheck-v001/spec-review.json",
+      "bytes": 5964,
+      "sha256": "7ba4c126bb879e335976bb024c0e92c0aeafe4f1b485dc052c905e9a0749995a"
+    },
+    {
+      "path": "spec-review-post-fix.json",
+      "original_path": "output/character-asset-management-doublecheck-v001/spec-review-post-fix.json",
+      "bytes": 4633,
+      "sha256": "4a26998b2753502e5a94bc609a8a47146e364846531ac6f415321e329f0e6898"
+    }
+  ],
+  "earlier_record_clarification": {
+    "path": "../reconciliation-result-v003.json",
+    "field": "portable_roundtrip_check",
+    "clarification": "The phrase final metadata path closure checked below referred to output/character-asset-management-v001/verification.json. The v003 reconciliation record itself contains no embedded closure section and retains its historical scope."
+  },
+  "final_publication_and_portable_verification": {
+    "original_path": "output/character-asset-management-doublecheck-v001/verification.json",
+    "role": "Current full-project verification receipt, written after final metadata publication and extracted-bundle verification; historical receipt path, not a runtime dependency."
+  }
+}

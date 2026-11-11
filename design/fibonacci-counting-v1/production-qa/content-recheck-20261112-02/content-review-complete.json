@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "kind": "fibonacci-v003-content-recheck-complete",
+  "checked_at_utc": "2026-11-11T18:07:16.186486+00:00",
+  "status": "PASS_NO_CONTENT_DEFECTS_FOUND",
+  "passed": true,
+  "content_defects_found": 0,
+  "unresolved_material_findings": 0,
+  "target_revision": "v003",
+  "video": {
+    "path": "output/fibonacci-counting-001-v003/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+    "sha256": "2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704",
+    "bytes": 49285200
+  },
+  "changes_to_video_or_adopted_inputs": false,
+  "summary": {
+    "sequence_terms": 41,
+    "additions": 39,
+    "independently_checked_cardinal_occurrences": 119,
+    "introductory_explanation_outro_utterances_semantically_reviewed": 24,
+    "voice_text_and_captions_checked": 104,
+    "manual_chapters_checked": 7,
+    "public_text_files_checked": 3,
+    "fresh_native_selected_frames": 220,
+    "fresh_native_component_observations": 2607,
+    "max_abs_dx_px": 1.0,
+    "max_abs_dy_px": 1.0,
+    "fresh_visual_semantic_source_frames": 67,
+    "specialist_images_actually_viewed": 40,
+    "immutable_current_inputs_rehashed": 16
+  },
+  "content_decisions": [
+    "F0=0,F1=1,Fn=F(n-2)+F(n-1) for integer n>=2. Both1 entries remain separate; F2 is the third indexed entry.",
+    "All41 values and39 expressions match independent integer recurrence/matrix calculations and independent English cardinal parsing/generation.",
+    "The three carry examples8+13=21,89+144=233,987+1597=2584 match every decimal column; carries move exactly one place left.",
+    "The1,000 window is an explicitly described numerical-value example, not a Fibonacci term or an object count.",
+    "F38=39,088,169 andF39=63,245,986 form the final pair; their sumF40=102,334,155 is the first term over100million.",
+    "All104caption texts/times/current cue descriptions,7chapters and public copy agree with adopted measured content.",
+    "Actual native frames match all104utterance midpoints, both sides of39result reveals and38arrival samples; no incorrect labels, digits, premature result reading or two-axis placement failures were found."
+  ],
+  "evidence": {
+    "mathematics_and_English": {
+      "path": "design/fibonacci-counting-v1/production-qa/content-recheck-20261112-02/math-and-readings.json",
+      "sha256": "e51d346987ff70dc041479c2411783987659320a229a960fba39e98cc3507fcb",
+      "bytes": 51624
+    },
+    "captions_and_editorial": {
+      "path": "design/fibonacci-counting-v1/production-qa/content-recheck-20261112-02/captions-and-editorial.json",
+      "sha256": "849519e9ebff169116e2aab3a6869a948420d2638195ffd48bd635b97fe4f8e6",
+      "bytes": 90049
+    },
+    "fresh_native_content_and_sync": {
+      "path": "design/fibonacci-counting-v1/production-qa/content-recheck-20261112-02/native-sync/verification.json",
+      "sha256": "c4bf39e145c700a7ab5aaa154b3347dc3fcea358b53cf915d674b4ae213afbdb",
+      "bytes": 4294161
+    },
+    "fresh_visual_semantics": {
+      "path": "design/fibonacci-counting-v1/production-qa/content-recheck-20261112-02/visual-content.json",
+      "sha256": "ca4eb4c80564af4fd4c65e6ff2f84488094ef356ee95417cd8865389609534dd",
+      "bytes": 22848
+    },
+    "current_audio_evidence_binding": {
+      "path": "design/fibonacci-counting-v1/production-qa/content-recheck-20261112-02/audio-reference-check.json",
+      "sha256": "00a26f898769b4ae2ba9b31ca686c15591c4daccc417ac62a4884762c5f9b734",
+      "bytes": 32556
+    },
+    "input_stability": {
+      "path": "design/fibonacci-counting-v1/production-qa/content-recheck-20261112-02/input-stability.json",
+      "sha256": "fc08f2f2bcb40166ffd036ca299c1f16fa5652469cccb1da35f6cbfdc6919a9a",
+      "bytes": 5048
+    }
+  },
+  "scope_limits": [
+    "This is a fresh content recheck using independent arithmetic/text review and selected actual native decoded frames. It is not described as a new full-frame video verification.",
+    "The current AAC stream is freshly matched byte-for-byte to its audited accepted source; all104source WAV hashes/headers/lengths are rechecked. New ASR/CTC runs in this recheck:0.",
+    "Fresh visual semantics use67source frames, with the actual native/overview view count itemized in the specialist report. No continuous human whole-video viewing/listening or perfect-pronunciation certification is claimed."
+  ]
+}

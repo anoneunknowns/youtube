@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "fresh-prime-visual-and-media-recheck-summary",
+  "status": "PASS",
+  "checked_at_utc": "2026-11-11T13:58:17.772448+00:00",
+  "video_sha256": "ed506ca4305e4bf367fa8c69c826b18907a9264482b46db18fe06b6653b01b5f",
+  "video_unchanged": true,
+  "existing_records_overwritten": false,
+  "inputs": {
+    "fresh_full_media_report": {
+      "path": "design/prime-counting-v1/production-qa/v001-recheck-20261111-01/media/verification.json",
+      "sha256": "8214564f29cc6fe290b017b8f0b3e983a612a0840a96c2436d3930143cd9afe3"
+    },
+    "all_visual_states": {
+      "path": "design/prime-counting-v1/production-qa/v001-recheck-20261111-01/visual-supplement/all-visual-states.json",
+      "sha256": "75fe678b1adb6b2dcbd244b03e9d0c95f8ed4b704cbe174ae4571633fa6c6e0e"
+    },
+    "canonical_character_registration": {
+      "path": "design/prime-counting-v1/production-qa/v001-recheck-20261111-01/visual-supplement/character-registration.json",
+      "sha256": "1eed9301408c0e70ce8d0cca3e5d7d4b45228b6f79e2bf353e03d731ce955713"
+    },
+    "actual_fade_contact_sheet": {
+      "path": "design/prime-counting-v1/production-qa/v001-recheck-20261111-01/visual-supplement/actual-fade-contact-sheet.jpg",
+      "sha256": "58088e6ddbba4c9fe609cd8df41d923bf304f498afd659756d6c5dc6ecce6f7b"
+    }
+  },
+  "fresh_full_media_coverage": {
+    "decoded_frames": 20590,
+    "count_frame_field_checks": {
+      "main-number": 16846,
+      "reading": 16846,
+      "factor-one": 16846,
+      "factor-value": 16846
+    },
+    "native_samples": 229,
+    "native_actual_foreground_components": 2004,
+    "max_abs_dx_px": 1.0,
+    "max_abs_dy_px": 1.0,
+    "prime_values": 168,
+    "subtitle_cues": 188,
+    "chapters": 6,
+    "integrated_lufs": -16.74,
+    "true_peak_dbtp": -2.01,
+    "tracks": [
+      {
+        "kind": "master",
+        "minimum_correlation": 0.9999999290184878,
+        "silence_intervals_checked": 189,
+        "maximum_silent_interior_peak_pcm16": 0
+      },
+      {
+        "kind": "aac",
+        "minimum_correlation": 0.9996225046771163,
+        "silence_intervals_checked": 189,
+        "maximum_silent_interior_peak_pcm16": 1
+      }
+    ]
+  },
+  "expanded_visual_coverage": {
+    "independently_derived_timeline_states_checked": 20590,
+    "actual_decoded_frames": 20590,
+    "hold_runs": 380,
+    "distinct_reference_rasters": 353,
+    "native_hold_onsets_checked": 380,
+    "actual_centered_label_measurements": 1904,
+    "actual_tile_group_samples": 146,
+    "actual_connected_tile_components": 580,
+    "diagram_alpha_coverage": {
+      "comparison": {
+        "samples": 48,
+        "minimum": 0.0,
+        "maximum": 0.9999999999999964,
+        "mid_fade_samples": 44
+      },
+      "rotation": {
+        "samples": 48,
+        "minimum": 0.0,
+        "maximum": 0.9999999999999964,
+        "mid_fade_samples": 44
+      },
+      "one": {
+        "samples": 24,
+        "minimum": 0.0,
+        "maximum": 0.9999999999999964,
+        "mid_fade_samples": 22
+      },
+      "nine": {
+        "samples": 25,
+        "minimum": 0.0274999999999892,
+        "maximum": 1.0,
+        "mid_fade_samples": 24
+      },
+      "finale": {
+        "samples": 1,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "mid_fade_samples": 0
+      }
+    },
+    "full_frame_max_rgb_mae": [
+      2.984452160493827,
+      2.357546296296296,
+      3.110979938271605
+    ],
+    "character_body_tail_region_max_rgb_mae": [
+      2.8537142857142856,
+      2.595285714285714,
+      3.119285714285714
+    ]
+  },
+  "implementation_review": {
+    "independent_semantic_expectations": "Own Eratosthenes sieve, sum76127, inverse cardinal parser and exhaustive positive factors; no producer prime/word render function imported.",
+    "reviewed_layout_specification": "Ancillary labels use the pre-reviewed preproduction layout/text as expected spec, combined with independent numeric/factor semantics and actual decoded foreground.",
+    "falsepass_controls_already_present": "Verifier regressions reject wrong103, wrong1x7 vs1x5 and erasedtile; fresh recheck did not loosen or alter checks.",
+    "supplementary_image_comparison_limit": "Retained353producer PNGs are supplementary continuity/hold references, not independent mathematical groundtruth. Fresh fullmedia checks provide independent semantic checks.",
+    "blindspots_addressed": "Every380hold onset/353state raster, all20,590fullframe associations, every diagram opacity step, canonical character identity/scale/foot/fulltail, every layout transition and intentional holds."
+  },
+  "findings": [],
+  "material_defects_found": 0,
+  "human_continuous_full_viewing_or_listening_performed": false,
+  "root_action_required": "No correction to movie required within tested scope. Parent to combine with independent content and fresh right-channel audio rechecks.",
+  "scope_note": "This is a recheck of the delivered v001 under its static-neutral character design. It does not establish that the character is animated or satisfy the subsequently requested actual character motion.",
+  "character_motion_observed": {
+    "pose": "neutral",
+    "fixed_body_and_foot": true,
+    "actual_character_animation_present": false,
+    "new_animation_requirement_satisfied": false,
+    "action": "Parent will produce a new visual-only v002 with actual character animation and separately verify it."
+  }
+}

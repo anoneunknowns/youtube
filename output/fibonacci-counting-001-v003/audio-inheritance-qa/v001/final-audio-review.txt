@@ -1,0 +1,17 @@
+フィボナッチv003 音声継承検査: 合格
+
+対象MP4 SHA-256: 2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704
+実際のv003と監査済みv002を新たに比較しました。
+AAC全25163パケットのpayload、PTS、DTS、duration、sizeが完全一致。
+音声形式・timebase・開始/終了時刻も一致。ADTS全bytesとdecoded48kHz24bitstereo PCMも完全一致です。
+ADTS SHA-256: c34fb1b264f4e80b449612dc99eb419e70ee6c51d493617011d97b36577c538f
+全104発話cue、採用原音、base timeline、マスターの束縛は同一。
+保持された原音104件と、元完成AAC再認識に使った左右208clip、元gateと今回独立closeoutの全参照SHAも再検証しました。
+
+v003でASR/CTCを新規実行した記録ではありません。
+監査済みv002の208件stereo新規解析と、後の別base.en104/guardedCTC104/1221語/1714母音核の独立監査を、同一bitstreamと時刻を根拠にv003へ継承しています。
+新単語候補13本は全て未採用。診断モデル差分の原因は確認済み、実質的な未解決音声不備0。
+同一信号の音量値は -16.52LUFS / -1.98dBTP。既存原音・媒体・QAは変更していません。
+
+人の全件試聴や完全な発音保証は主張しません。改訂映像の画素・動作検査は別の最終動画QAです。
+正本: final-audio-review.json（binary proof: verification.json）

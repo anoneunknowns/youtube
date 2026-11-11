@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "workspace-management-maintenance",
+  "checked_at_utc": "2026-11-11T17:06:31.711252+00:00",
+  "status": "implemented-and-verified-with-recorded-notes",
+  "changes": [
+    "Shared reservation lock, CAS and staged JSON publication for the character library.",
+    "Pose name/registration/frame/sheet consistency and measured neutral-source count.",
+    "Pre-read rejection of active paths and symlink aliases.",
+    "Main catalog retention policy, reference lineage and QA coverage/availability repair.",
+    "Current archived fixture for even regression tests and OS-specific scratch-directory selection.",
+    "Read-only whole-workspace verifier with concurrent-edit detection.",
+    "Completed concurrent producer evidence preserved inside the portable character library."
+  ],
+  "validation": {
+    "python_tests_passed": 421,
+    "workspace_structural_errors": 0,
+    "active_productions": 9,
+    "production_archive_files_verified": 4227,
+    "character_batches": 61,
+    "frozen_character_files": 1184,
+    "generic_pose_pngs": 456,
+    "previously_frozen_character_files_unchanged": 1184,
+    "generic_adoption_index_sha256": "03f297857a4c742e58f5d2b0aec21a7a67f4a29ae451b50605d3754c1edd2e04"
+  },
+  "retained_notes": {
+    "recorded_quality_finding": 8,
+    "historical_file_unavailable": 34,
+    "declared_unavailable_evidence": 1,
+    "historical_json_stream": 1
+  },
+  "concurrent_producer_handoff": {
+    "production_set": "fibonacci-counting-production-v002",
+    "new_batch_state": "episode_selected",
+    "generic_stock_replaced": false,
+    "evidence_scope": "Completed source handoff, native source review, decoded acting QA, actual renderer input, completed production record and review."
+  },
+  "source_art_or_existing_completed_media_modified_by_maintenance": false,
+  "evidence": {
+    "original_path": "output/workspace-improvements-v001/report.md",
+    "role": "Full-project maintenance report; historical evidence path, not a character-runtime dependency."
+  },
+  "checks_to_repeat": [
+    "python tools/verify_workspace.py",
+    "python tools/character_library.py verify",
+    "python tools/manage_character_assets.py check",
+    "python tools/update_production_archive.py --check"
+  ]
+}

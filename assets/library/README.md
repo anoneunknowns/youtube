@@ -2,7 +2,35 @@
 
 機械可読の入口は [`catalogs/character-library-v1.json`](../../catalogs/character-library-v1.json) です。採用版、通常姿、動作、登録座標、確認記録をこの台帳から辿ってください。フォルダの最大バージョン番号は採用版の意味ではありません。
 
-新しい動物7種類には通常姿7枚と基本表情・動作42枚があります。既存のクマ、ウサギ、とら、小鳥を含む11種類でタッチを確認しています。人が見る一覧は [通常姿](collections/animal-stock/v001/index.html) と [基本表情・動作](collections/animal-motions/v001/index.html) です。
+全生成バッチの用途・担当・候補・品質指摘は [画像管理一覧](character-assets.html) へまとめています。[管理設定](../../catalogs/character-asset-management-v1.json) と [管理在庫](../../catalogs/character-asset-registry-v1.json) は、通常姿や動画の採用先とは別です。作品専用のカンガルー・シャム猫も管理し、生成中の担当領域は予約付きの保留として追跡します。
+
+拡充270姿勢とアイキャッチ144姿勢の [詳細な画風監査](collections/character-style-audit/v001/index.html) では、輪郭・色・頭身・瞳等の修正候補が見つかっています。過去のファイル整合・透過検査の合格は維持し、現在の品質指摘を管理設定へ重ねています。生成・整理の規約とコマンドは [画像管理仕様](../../docs/IMAGE-ASSET-MANAGEMENT.md) を参照してください。
+
+素数動画v003のカンガルーは、[作品用の腕リグ・姿勢素材](characters/kangaroo/animations/prime-v002/README.txt)を明示指定します。入口は同フォルダの `registration.json` と、作品台帳 `catalogs/library-v1.json` の `kangaroo-prime-animation-v002` です。手振り・思考・展示案内・拍手の12原画を新規生成し、良好な既存15原画と合わせて27原画・29状態（別名2つを含む）を登録しました。立位の手の差分だけを通常姿へ合成して頭・胴体の跳ねを防ぎ、着座・伸び・復帰は共通縮尺の既存原画を使います。従来の通常姿・汎用キーポーズ・prime-v001は維持します。タイミングは作品の `kangaroo-motion.json`、実MP4の確認結果は `design/prime-counting-v1/production-review-v003.txt` を参照してください。
+
+11種類の採用通常姿と既存素材に加え、クマ以外の10種類へ各27姿勢、計270枚の表情・動作を新規生成しました。[拡充素材一覧](collections/character-expansion/v001/index.html) から明色・暗色の比較図、手振り・ジャンプ・着座の確認用GIF、登録情報へ進めます。従来の [通常姿](collections/animal-stock/v001/index.html) と [基本表情・動作42枚](collections/animal-motions/v001/index.html) も保全しています。
+
+大きい表示枠の哺乳類8種には、さらに [アイキャッチ素材](collections/character-eyecatches/v001/index.html) があります。対象はクマ、ウサギ、とら、シャム猫、レッサーパンダ、ミーアキャット、カンガルー、ハリネズミです。紅茶を飲む・ジャンプ・おじぎ・小さなダンスの4動作を、各18姿勢、合計144枚の新規透過PNGと32個の動作別確認GIFで用意しています。指定された昆虫・植物・鳥系・ハムスターは対象外です。
+
+アイキャッチは各キャラクターの `eyecatches/v001/registration.json` と台帳の `eyecatch_key_poses` を参照します。汎用ローダーでは `eyecatch/tea_sip`、`eyecatch/jump_air`、`eyecatch/bow_deep`、`eyecatch/dance_left` のように明示指定します。通常姿、従来動作、`expanded/` の選択は維持しています。元シート・正確なプロンプト・参照ハッシュ・校正・足支点も同じフォルダに保管しています。
+
+紅茶の確認ループはカップを持った姿勢から始めて戻る構成です。カップのない通常姿と直結する際の登場・退場は、使用するシーンで設計してください。ジャンプの離地・空中は登録した推定地面を使い、足を接地させたり、素材に含まれる浮きをもう一度加えたりしません。GIFは離散キーポーズの確認用で、補間・音声同期・動作頻度・完成画面の余白は各シーンで確認します。
+
+拡充分は各キャラクターの `motions/v002/registration.json`、採用先は機械可読台帳を参照してください。クマの実素材にある12反応、手振り、着座、伸び、休憩を基準に、中間姿勢・拍手の開き側・座った視線差分も追加しています。鳥は翼での挨拶と低い休憩姿勢です。原画の採用先と既存完成動画は変更していません。
+
+新規27姿勢の構成は次の通りです。
+
+- 反応9枚：生成した通常姿、瞬き、ため、軽い跳ね、考える、ひらめき、驚き、再挑戦、固有の仕草。
+- 動作9枚：成功の準備・空中・着地、喜び、拍手の開き側、手振りの低位置・内側・外側・休止。
+- 姿勢9枚：着座途中、座位休止、伸び途中・伸び、居眠り、座位の上向き・横向き視線、起立途中、控えめな下向きの頭の姿勢。
+
+汎用ローダーの `neutral` と既存のポーズ名は従来どおりです。追加分は台帳の `expanded_key_poses` と、ローダーの `expanded/blink`、`expanded/wave_low`、`expanded/seated_stretch` などから明示的に選びます。追加シートの校正用通常姿は `expanded/neutral` です。ウサギ・とら・小鳥の旧専用atlasも元の場所に残っています。
+
+```powershell
+python tools/character_library.py preview --character siamese-cat --pose expanded/wave_low --height 430 --output ./siamese-cat-expanded-wave.png
+```
+
+拡充素材は3つの元生成シートそれぞれで立ち姿相当の基準高を校正しています。`scale = desired_body_height / frame.reference_height_px` を使い、同じシート内では全姿勢へ同じ等方縮尺を適用してください。座位を外接矩形の高さで拡大しません。空中姿勢の支点は周囲の接地姿勢から推定した地面であり、浮いた足の位置へ接地させません。姿勢間の細かな造形差や補間、発話との同期は使用するシーンで調整・確認します。GIFは離散キーポーズの確認用です。
 
 ## 取得・検証
 
@@ -20,7 +48,7 @@ python tools/character_library.py preview --character onagadori --pose wing_up -
 python tools/character_library.py export --output D:/temp/num-num-character-library.zip
 ```
 
-`export` の出力先は作業環境に合わせて変更できます。ZIPには `character-library/` を起点に11キャラクター、通常姿・動作の2collection、AI向け台帳とファイル一覧、検証・描画ツール、Pillowの依存指定を含みます。動画全制作のcatalogを必要とせずに利用できます。
+`export` の出力先は作業環境に合わせて変更できます。ZIPには `character-library/` を起点に11キャラクター、通常姿・従来動作・拡充動作・アイキャッチの4collectionに加え、管理在庫・担当予約・保全した画風監査、検証・描画ツール、Pillowの依存指定を含みます。作品固有の採用根拠は管理資料内のスナップショットで保全し、動画全制作のcatalogを必要とせずに利用できます。生成中のバッチは確定原画としてZIPへ混ぜず、担当付きの保留を記録します。
 
 別PCではZIPを展開し、その中の `character-library/` へ移動して実行します。
 
@@ -32,7 +60,9 @@ python tools/character_library.py list --json
 
 PNGだけを抜き出さず、台帳、登録情報、生成条件、確認記録も一緒に保管し、相対配置を維持してください。各コマンドはツールがあるcheckoutを基準に動き、別の配置を指定する場合は `python tools/character_library.py --root <展開先> verify` のように指定できます。`refresh` は素材の採用先や保管ファイルを更新した際の台帳・ファイル一覧の再構築用で、通常の利用には不要です。
 
-## 採用する通常姿と動作
+## 採用する通常姿と従来の基本動作
+
+次の表は従来42枚の参照版です。追加270枚はクマ以外の10種類すべての `motions/v002` にあります。
 
 | ID | 名前 | 採用した通常姿 | 動作 |
 |---|---|---|---|
@@ -52,7 +82,7 @@ PNGだけを抜き出さず、台帳、登録情報、生成条件、確認記�
 
 ## 描画に使う登録情報
 
-各動物の `motions/v001/registration.json` を読みます。`frames` の `path` が透過PNG、`anchor_px` がそのセル内の足元支点、`common_reference_height_px` が全ポーズ共通の立ち姿基準高です。
+従来42枚では各動物の `motions/v001/registration.json` を読みます。`frames` の `path` が透過PNG、`anchor_px` がそのセル内の足元支点、`common_reference_height_px` が全ポーズ共通の立ち姿基準高です。拡充270枚では `motions/v002/registration.json` の各frameの `reference_height_px` とシート別の校正記録を使用します。
 
 ```text
 scale = desired_body_height / common_reference_height_px

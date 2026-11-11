@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "kind": "final-v003-identical-AAC-audio-audit-binding",
+  "passed": true,
+  "checked_at_utc": "2026-11-11T17:21:21.472966+00:00",
+  "audited_v002_movie": {
+    "path": "output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+    "sha256": "68a77903c17321e2982f56d9b45d1753847f8e15ceea59b8e965bd8b41a499d3"
+  },
+  "final_v003_movie": {
+    "path": "output/fibonacci-counting-001-v003/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+    "sha256": "2029500cc9e2e7e5e7b115fcaff5c00bef30120a6ac83e507258043f580cf704"
+  },
+  "v002_timeline": {
+    "path": "output/fibonacci-counting-001-v002/timeline.json",
+    "sha256": "bb2883c6433430cbc884c95fa4d31cf8fd77a83ef3a631a748c5b340a3a282c0"
+  },
+  "v003_timeline": {
+    "path": "output/fibonacci-counting-001-v003/timeline.json",
+    "sha256": "f7452402531da5b41e285e2a801479cea29fa4e55864de7791c0ecd366b6f37e"
+  },
+  "independent_audio_closeout": {
+    "path": "design/fibonacci-counting-v1/production-qa/quality-closeout-20261112-01/audio/audio-closeout.json",
+    "sha256": "cc74e0c64fe480c3b20c3d4e45fb9ae8f464bde7569e2f31a34c4b0f733b7f6f"
+  },
+  "original_finished_AAC_review": {
+    "path": "output/fibonacci-counting-001-v002/audio-final-qa/final-aac-review.json",
+    "sha256": "e538d6a00b8722d25386947fe73258e39d46217807883760933a0c0cabd634b9"
+  },
+  "source_speech_acceptance": {
+    "path": "output/fibonacci-counting-001-v002/speech/speech-acceptance.json",
+    "sha256": "b969764cd6731a85497ac86a2acb5b98695bcf355fffb49aa5489071e5e6718b"
+  },
+  "AAC_stream_format_time_base_start_duration_identical": true,
+  "AAC_stream_contract": {
+    "codec_name": "aac",
+    "profile": "LC",
+    "codec_tag_string": "mp4a",
+    "sample_fmt": "fltp",
+    "sample_rate": "48000",
+    "channels": 2,
+    "channel_layout": "stereo",
+    "time_base": "1/48000",
+    "start_pts": 0,
+    "start_time": "0.000000",
+    "duration_ts": 25765440,
+    "duration": "536.780000",
+    "extradata_hash": "SHA256:b3108813350006ef07740046fab14af9c374938867d16db02fe1a8baa5e72f10"
+  },
+  "AAC_all_payloads_pts_dts_durations_sizes_identical": true,
+  "AAC_packet_count": 25163,
+  "AAC_packet_contract_sha256": "df715db5af5f117ac31484f1a77c380271ebc7fb3a5ce75dd621e13f1952e5c0",
+  "ADTS": {
+    "v002": {
+      "sha256": "c34fb1b264f4e80b449612dc99eb419e70ee6c51d493617011d97b36577c538f",
+      "bytes": 10797028,
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg",
+        "-v",
+        "error",
+        "-nostdin",
+        "-i",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+        "-map",
+        "0:a:0",
+        "-c:a",
+        "copy",
+        "-f",
+        "adts",
+        "pipe:1"
+      ]
+    },
+    "v003": {
+      "sha256": "c34fb1b264f4e80b449612dc99eb419e70ee6c51d493617011d97b36577c538f",
+      "bytes": 10797028,
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg",
+        "-v",
+        "error",
+        "-nostdin",
+        "-i",
+        "/Users/support/codex/youtube/output/fibonacci-counting-001-v003/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4",
+        "-map",
+        "0:a:0",
+        "-c:a",
+        "copy",
+        "-f",
+        "adts",
+        "pipe:1"
+      ]
+    }
+  },
+  "decoded_PCM48k24bitStereo": {
+    "sha256": "cc04b7867818995c3a8add3276611cdd3bace9a845fdbaf83e3228e77c1ac2de",
+    "bytes": 154592640,
+    "sample_frames_48k_stereo24": 25765440
+  },
+  "complete_voice_cues_and_source_base_master_identical": true,
+  "new_ASR_CTC_inference_performed_for_v003": false,
+  "inference_inheritance_basis": "The actual final AAC signal, packet times and complete voice cue/source/master contracts are identical to the independently audited v002 signal.",
+  "human_full_listening_claim": false,
+  "helper": {
+    "path": "tools/remux_fibonacci_audio.py",
+    "sha256": "c1f5cc0d17e13daa18fc98e24c2689698927022a9c2705a6b0ae3ed52378a6cf"
+  }
+}

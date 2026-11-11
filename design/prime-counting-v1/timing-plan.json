@@ -1,0 +1,68 @@
+{
+  "status": "preproduction_only_no_audio_generated_no_video_rendered",
+  "count_start": 2,
+  "upper_bound_exclusive": 1000,
+  "count_end": 997,
+  "counted_values": 168,
+  "planned_voice_events": 188,
+  "voice_reference": {
+    "model": "Kokoro-82M-v1.0-ONNX",
+    "voice": "af_heart",
+    "dtype": "fp32",
+    "speed": 0.98,
+    "status": "intended_only_not_generated_or_adopted_for_this_episode"
+  },
+  "count_display_lead_seconds": 0.12,
+  "normal_speech_end_to_next_start_seconds": 2.0,
+  "extended_boundaries": [
+    {
+      "after_value": 2,
+      "next_value": 3,
+      "gap_seconds": 18.0
+    },
+    {
+      "after_value": 7,
+      "next_value": 11,
+      "gap_seconds": 18.0
+    },
+    {
+      "after_value": 97,
+      "next_value": 101,
+      "gap_seconds": 18.0
+    }
+  ],
+  "intro_planned_seconds": 70.0,
+  "final_count_hold_seconds": 0.28,
+  "finale_planned_seconds": 22.0,
+  "duration_formula_seconds": "S + 474.40, where S is the measured sum of the 168 adopted count utterances; planning windows must also pass actual audio fit",
+  "duration_formula_terms": {
+    "intro": 70.0,
+    "initial_display_lead": 0.12,
+    "167_base_gaps_at_2_seconds": 334.0,
+    "three_extended_gaps_extra_16_each": 48.0,
+    "final_count_hold": 0.28,
+    "finale": 22.0
+  },
+  "count_audio_sum_seconds": null,
+  "measured_final_duration_seconds": null,
+  "rough_duration_estimate_seconds": [
+    660,
+    780
+  ],
+  "estimate_basis": "11–13 minutes is an unmeasured editorial estimate for natural US cardinal speech at speed 0.98, plus planned learning diagrams and 2-second normal gaps. Not a measured runtime or a production acceptance result.",
+  "minimum_non_shorts_duration_seconds": 480,
+  "still_mockups_are_not_frame_or_audio_qa": true,
+  "checks_completed_here": [
+    "Complete primes below 1000: trial division and an independent Eratosthenes sieve agree (168 values)",
+    "Count IDs unique, values ascending and endpoints 2 and 997",
+    "188 planned narration IDs unique",
+    "Teaching examples factors: 1:[1], 2:[1,2], 5:[1,5], 6:[1,2,3,6], 9:[1,3,9]; composites98,99,100"
+  ],
+  "checks_not_performed": [
+    "No TTS or duration measurements",
+    "No master audio or final AAC",
+    "No production frame render",
+    "No human full-video viewing/listening",
+    "No completed-video QA"
+  ]
+}
