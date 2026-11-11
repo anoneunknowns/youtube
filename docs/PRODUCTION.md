@@ -1,0 +1,139 @@
+# 既存作品の再出力と新作の制作
+
+別PCのセットアップが済んだら、まず採用済みの原画・音声・実測タイムラインで再出力します。モデルから音声を再生成することは、既存完成品の再現とは別の工程です。
+
+## 既存作品を再出力する
+
+```powershell
+python tools/portable_production.py list
+python tools/update_production_archive.py --check
+python tools/portable_production.py doctor
+```
+
+`--production` には `decimal`、`binary`、`octal`、`hexadecimal`、`four-base`、またはカタログの現行制作セットIDを指定します。
+
+```powershell
+$workRoot = if (Test-Path 'D:\') { 'D:\temp\num-num-numbers' } else { Join-Path ([IO.Path]::GetTempPath()) 'num-num-numbers' }
+python tools/portable_production.py preview --production four-base --out-dir output/four-base-preview-new --work-dir $workRoot
+python tools/portable_production.py render --production four-base --out-dir output/four-base-render-new --work-dir $workRoot
+python tools/portable_production.py verify --production four-base --video output/four-base-render-new/paspla-studio-four-ways-to-count-0-to-200-1080p.mp4 --out-dir output/four-base-render-new/qa --work-dir $workRoot
+```
+
+出力先の動画、字幕、チャプター、タイトル・概要を確認します。既存完成品を上書きせず、完成MP4を対象とする検査を終えてから採用先を切り替えます。
+
+`preview` / `render` の出力先は未存在のフォルダを指定します。`verify` には確認する `--video` と未使用のQA出力先を渡します。元のレンダーフォルダをQA出力先に使いません。`--timeline`、`--audio`、小鳥用の `--motion-manifest` を省略すると採用原本を使います。別の設計入力を用意した場合は、それぞれを明示して描画・検査できます。
+
+移植用 `verify` は全5作品で完成MP4を全編デコードし、形式・フレーム数・音量に加え、最終AACを採用音源と照合して予定外の音や無音区間を確認します。作品ごとの追加範囲は次のとおりです。
+
+| 対象 | 追加する検査 |
+|---|---|
+| 十進数 | 全345音声イベント（312発話・33効果音）と346無音区間の照合、原寸代表7要素の配置 |
+| 二進数 | 全770桁の発話波形と実映像、642か所の桁間0.9秒、127数境界（通常124か所は2秒）、字幕、十進数看板と中央揃え |
+| 八進数・十六進数・4基数 | 全数値の表示サンプル、発話前後の同期、採用音源・無音区間の照合と各作品の配置 |
+
+新しいASR・CTCの推論と人による全編試聴は別工程です。過去の認識・採用記録を検証した結果と、新しく再認識した結果を分けて記録します。
+
+小鳥の現行レシピを新しい場所へ組み直す場合は、次で0〜200の実測計画と音声マスターを作れます。
+
+```powershell
+python tools/portable_production.py build-four-base --out-dir output/new-four-base-inputs --design-dir design/new-four-base-inputs --work-dir $workRoot
+```
+
+数の範囲、基数、台詞や画面構成を変える新作では、新しい版の設計・準備・描画・字幕・検査ツールを揃えます。既存レシピの数の範囲とscene構成は各制作記録の仕様に対応しています。
+
+同じ原本でもFFmpeg、フォント描画、エンコーダーの版等によってMP4のbytesやSHA-256は変わることがあります。新しい出力のSHAだけを旧完成品と比較して合否にせず、表示、時刻、フレーム数、音量、音声内容も検査します。
+
+## 作品ごとの重要な条件
+
+| 作品 | 維持する条件 |
+|---|---|
+| 十進数 | 1〜300の自然な英語読み。青空の庭、既存のくま、BGMなし。効果音は採用脚本どおり |
+| 二進数 | 全128値・770桁。桁間0.9秒。通常の数の読み終わりから次の数まで2秒。十進数の看板、文字の中央揃え |
+| 八進数 | 全128値・312桁。桁間0.9秒。通常2秒。読み上げ文字の共通ベースラインと等間隔。ピンクのウサギ |
+| 十六進数 | 0〜7F、全240桁。桁間0.9秒。通常2秒。単独Aは明瞭な採用版を使用 |
+| 4基数同時 | 十進0〜200、201値・804表記。音声は十進数の自然読み。通常197境界2秒、説明3境界5秒。200で終了 |
+
+説明・休憩のある境界は通常2秒より長くなります。具体的な間隔は各 `timeline.json` と制作記録に記載されています。数の最後の発話が終わってから次の数の最初の発話が始まるまでを測り、表示開始時刻との差と混同しません。
+
+小鳥の4基数同時動画は、短い挨拶の羽ばたき、48の後のついばみ、96の後の12pxのホップを一度ずつ使います。通常姿280px、足元 `(1675, 950)`、共通の登録基準を維持し、しゃがむ姿や広げた翼を枠に合わせて拡大しません。
+
+## 新作の設計
+
+1. `design/<新しい企画>/` に、対象年齢、数の範囲、表示する基数、ナレーションの読み方、目標尺を明記する。
+2. 脚本と英語台本を作り、導入、通常カウント、桁上がりの説明、終幕を分ける。各台詞にIDと編集枠を付ける。
+3. 一つの十進値を真値として、全ての表記・音声・字幕を同じ状態に結び付ける。全値の対応表を作る。
+4. 背景は数字やキャラクターを焼き込まない原画として保存し、植生、地域、季節、色をテーマに合わせる。
+5. 登録済みのキャラクターを選び、通常姿、足元支点、自然高、動作の最大幅を調べる。線幅、顔、体格、縮小品質を原寸で比較する。
+6. 導入、通常画面、桁上がり、最大桁数、終幕のモックアップを作る。最も長い数値や文字列も同じ文字サイズで収まるか確認する。
+7. 音声の実測長から尺を確定し、編集枠と動作を調整してから本番を描画する。
+
+新作の輪郭は実際の表示サイズで比較します。小鳥の現行構図では1080pで局所的に約7pxが目安です。キャラの体格、帽子の有無、元画像の解像度を理由に例外を設けず、動作へ切り替わったときの線や体格も確認します。
+
+演出は発話や数値の切替を妨げない待機時間へ短く置きます。同じ動作を常時ループする方法や、毎作同じ演出を増やす方法は避け、学習内容や場面に合うものを選びます。
+
+## 音声を再利用・新規採用する
+
+採用済みの `measurements.json` と `speech-acceptance.json` を優先します。本文、voice、model、速度、dtypeが異なる音声を既存採用版として扱いません。
+
+別PCで既存ライブラリを新作へ再利用する場合は、元のゲートを変更せず、現在のcloneに対応する派生ゲートを作ります。
+
+```powershell
+python tools/portable_speech_library.py --library assets/library/audio/speech/kokoro-af-heart/v002 --out-dir output/new-local-speech-gate
+```
+
+この処理は採用WAVと検査根拠のSHA-256を検証します。履歴に残る元PCの絶対パスは派生記録で解決し、元の採用記録・原音・根拠を上書きしません。
+
+新しい音声を作る場合の流れは次のとおりです。
+
+1. 未使用の候補フォルダへ生成し、生成文、声、モデル、速度、切り出し・fade・padとSHA-256を保存する。
+2. 正解文や隣の数字を入力しない単独ASRで確認する。
+3. 独立CTC音素、語末、波形、必要な試聴で余分な母音、子音欠落、反復、途中切断を確認する。
+4. 警告ごとの判断と根拠を残し、未解決のまま採用しない。
+5. 採用ゲートと実測マニフェストを作成してからミックスする。
+
+関連ツールは `generate_speech.mjs`、`generate_speech_candidates.mjs`、`verify_speech.mjs`、`verify_phonemes.mjs`、`verify_terminal_tails.py`、`review_speech_acceptance.mjs` です。個別CLIの元PC固定パスには注意し、[セットアップ](SETUP.md) と各ツールの引数を確認します。
+
+別PCで新規候補を作る場合は、移植用の候補生成・音素検査を使います。`jobs.json` は `id` と `text` を持つ配列で用意します。出力先は未使用の候補フォルダにします。
+
+```json
+[
+  {"id": "intro-new", "text": "Let's count together."}
+]
+```
+
+```powershell
+node tools/portable_speech_candidates.mjs --jobs jobs.json --out output/new-speech-candidates --cache $modelCache
+node tools/verify_speech.mjs --manifest output/new-speech-candidates/manifest.json --cache $modelCache --ffmpeg ffmpeg --out output/new-speech-asr.json
+node tools/portable_verify_phonemes.mjs --takes output/new-speech-candidates/takes.json --cache $modelCache --ffmpeg ffmpeg --out output/new-speech-phonemes.json
+```
+
+英語本文 `text` を指定した候補からは、生成ツールがASR用 `manifest.json` を同時出力します。生成来歴を含む `takes.json` と測定マニフェストは形式が異なるため、入力を取り違えないようにします。候補生成だけでは採用になりません。
+
+数値の意味が文脈の中で認識できても、単独音声の発音警告を消す理由にはしません。自動認識の一致を、人による全件試聴や発音の完全な保証として記録しません。
+
+## 完成MP4の検査と登録
+
+- 全編デコード、1080p30fps、映像・音声の終端、色タグ、フレーム数、AAC、音量とtrue peakを確認する。
+- 全数値の前後、発話直前・開始・終了・直後、桁上がり、最後の値、フェードを確認する。
+- 長い数値は行全体だけでなく各桁も照合し、更新途中の異なる値の混在、空白、文字切れを探す。
+- 最終AACを採用WAVと照合し、読み間違い、音切れ、予定外の音、クリップ、同期を確認する。
+- 左右音声の差は、ソース、エンコード、時間・音量を調べて判断する。AACへ符号化した後の左右の波形が完全一致するという前提は置かない。
+- 字幕、チャプター、タイトル・概要が実測タイムラインと完成範囲に合うことを確認する。
+- 完成品と依存ファイルをSHA-256で束ねた制作記録を保存し、検査後にカタログの採用先を切り替える。
+
+既存の制作記録・検査記録はその時点の証拠です。新しい検査を追記する場合は別フォルダへ保存し、前回の結果を書き換えて合格にしません。
+
+## 再現用入力をGitへ追加・更新する
+
+新作・新版の検査と制作記録を確定し、カタログの採用先を更新してから実行します。
+
+```powershell
+python tools/update_production_archive.py --write
+python tools/update_production_archive.py --check
+git lfs status
+git status --short
+```
+
+`--write` はカタログから必要な入力を再計算し、`reproducibility/production-inputs.json` と `.gitignore` の管理マーカー内の許可リストを更新します。`--check` はこれらの一致とファイルのSHA-256を確認し、ファイルを変更しません。収納方針は `reproducibility/archive-policy.json` にあります。
+
+差分で採用原本、作品固有の台詞、実測timeline、master、動作情報、必要な根拠が揃っていることを確認してコミットします。全 `output/` を強制追加してキャッシュや未採用候補を混ぜないでください。Gitの行末正規化で原本のSHA-256が変わらないよう、`.gitattributes` の設定も維持します。
