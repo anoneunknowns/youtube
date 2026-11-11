@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "kind": "new-user-requested-final-aac-recheck",
+  "status": "pass",
+  "accepted": true,
+  "unresolved": [],
+  "checked_at_utc": "2026-11-11T21:09:49.610454+09:00",
+  "video": {
+    "path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v002\\paspla-studio-odd-numbers-1-to-299-1080p.mp4",
+    "sha256": "7b9db137a55d8c35434b39573dd8d3fbf9d76860ac5716897942fd4a2d08710f"
+  },
+  "timeline": {
+    "path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v002\\timeline.json",
+    "sha256": "e11324c5afa1871a45ace215aa64155189a173971e2ed7e4226f40bbc46bf3ad"
+  },
+  "master": {
+    "path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v002\\master.wav",
+    "sha256": "dc8f069a27328473e944cb2bfaa46fe72c4cc0971e31fc3ee9ed28a545506116"
+  },
+  "scope": "New final-MP4 decode, fresh isolated ASR and CTC for all163 utterances;150 independently worded odd values,13 complete dialogue, guarded/exact controls, waveform/edge/onset/tail and consistency checks. Old review acceptance was not reused as the current verdict.",
+  "checks": {
+    "fresh_asr": 163,
+    "numeric_values_correct": 150,
+    "whole_dialogue_matches_or_format_equivalent": 13,
+    "raw_asr_warnings": 5,
+    "raw_warning_causes": "digits vs spoken numerals and leftover spacing",
+    "fresh_ctc": 163,
+    "limited_ctc_matches": 105,
+    "individually_reviewed_ctc_differences": 58,
+    "fricative_onsets": 34,
+    "fricative_prefix_candidates": 0,
+    "new_two_hundred_onsets": 50,
+    "new_two_hundred_prefix_complete": 50,
+    "terminal_classes": 163,
+    "terminal_tail_candidates": 0,
+    "events": 163,
+    "silence_intervals": 164,
+    "max_silence_peak_pcm16": 0,
+    "min_master_channel_correlation": 0.9985709164479162,
+    "clipped_samples": 0,
+    "min_head_activity_margin_s": 0.084,
+    "min_tail_activity_margin_s": 0.0830625,
+    "start_end_edges": {
+      "clips": 163,
+      "min_head_margin_s": 0.084,
+      "min_tail_margin_s": 0.0830625,
+      "max_first20ms_peak_pcm16": 0,
+      "max_last20ms_peak_pcm16": 0,
+      "max_nominal_boundary_step_pcm16": 11,
+      "clipped_samples": 0
+    },
+    "same_suffix_group_median_rms_delta_db": 0.0011711399249918486,
+    "199_to201_rms_delta_db": -0.0017004323619858042
+  },
+  "consistency_interpretation": "No loudness discontinuity at199→201: RMS delta about-0.0017dB. New200s versus100s median RMS differs about+0.0012dB. Phrase durations are content-dependent; all event source durations and2s count gaps are fixed by the reviewed timeline, not time-stretched. Full-range RMS varies across naturally different phonemes and source crest-factor limits; no clipping or group gain switch is established.",
+  "specific_raw_warnings": [
+    "N005 guarded z vs exact-event f-aI-v",
+    "N109 terminal d retained and tested in source/rate/padding grid",
+    "I04/I05 pairs raw p-eI-z retained with fresh rhotic LPC evidence"
+  ],
+  "full_human_listening_claimed": false,
+  "limits": "CTC/LPC and acoustic screens support review; they do not guarantee exact articulation or replace full human listening. Temporary extracted WAVs are reproducible from bound MP4 and event/extraction windows.",
+  "prior_mp4_or_source_modified": false,
+  "evidence": [
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\control-input-manifest.json",
+      "sha256": "3aa90d8deabb9baf9d3eee0a739c1a4de1f74139c33d9bee2febb8cdba8e636b",
+      "bytes": 5661
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\edge-signal-review.json",
+      "sha256": "a4e3fc360658ae9ca46a69cb00d7bd7ef42f3f9ce396a14ce02652c90b59b6f3",
+      "bytes": 64385
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\event-consistency.json",
+      "sha256": "45ab38d9058518c48499482a662d119573bfa06cab5a20d38e3db18addcb20fb",
+      "bytes": 314196
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\event_consistency.py",
+      "sha256": "be7a90ce67c5a7cf52c811752a34ad7dc2d240ce62596df3d1aff99c9e5e3cb2",
+      "bytes": 3596
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\exact-event-manifest.json",
+      "sha256": "af6fe38a269ea62eefa4fb1b3a37c060cdc1f1dea19312c4242e35a69739b0a5",
+      "bytes": 1817
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\extended-number-acoustics.json",
+      "sha256": "506b6c6991cf46b546d0bb8fa79c5e57608f54884912cf6eada1fbfdfa3473ed",
+      "bytes": 411397
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\finish_report.py",
+      "sha256": "c2356f8419cba4ce2f51bb1dff1b727e3d6ac5515028dc5d88b51ecbe017caee",
+      "bytes": 13481
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\fresh-aac-manifest.json",
+      "sha256": "80acee827c4156acbb48cecb693ed615306ea95c986006291335a2fc396e07b5",
+      "bytes": 124395
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\fresh-asr.json",
+      "sha256": "8cdc3a62d6138eeba327fa76aded1ad1ad8d51879e74fbc22f3bbbb272b84d0e",
+      "bytes": 70986
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\fresh-control-ctc.json",
+      "sha256": "40b5d7e33d6405b4100dd9215c21506601caac979785b29243f7efb408c80b0c",
+      "bytes": 23824
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\fresh-ctc.json",
+      "sha256": "8b1ce7b7f7ede83c3b8d1376e2d24ad2e221704e24f2742a15a30cf9a1626276",
+      "bytes": 422482
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\fresh-signal-checks.json",
+      "sha256": "c48246670654a829c65a3e43362085dc463b59089bfbc704a45d03bddf306d94",
+      "bytes": 100600
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\fresh-terminal-tails.json",
+      "sha256": "fe34251eddeb7a382008cd80ab5f26fc2619076985897e5368ad358dbf0652e3",
+      "bytes": 93446
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\individual-recognition-review.json",
+      "sha256": "a0991361a8ab14f03ac913e5df4ee949ce89ccd31c14c23a92c64d0ef3eb3b95",
+      "bytes": 134682
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\initial-fricative-screen.json",
+      "sha256": "04a6d3f39f9b2d191072f706963f494d3e7c8d70eb8c2dc7e06a047588dd5f6f",
+      "bytes": 462115
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\N109-diagnostic-grid-manifest.json",
+      "sha256": "72d4f1222d12e6ffea4f19b076b9ac99e771c4cb2ce6909f663e79e2610eb918",
+      "bytes": 4913
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\N109-local-terminal-waveform.json",
+      "sha256": "4179929b751b6267e6ee8bf1b27ccace88db69e366e79d9b35bd38e7a72d1dd4",
+      "bytes": 24076
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\prepare_controls.py",
+      "sha256": "d1f5dfd795dcc23ff30e2a7aaee57cee24969fd2164028afba454b4a1fd7d4cb",
+      "bytes": 2210
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\prepare_recheck.py",
+      "sha256": "605a0e6a8f84f60433ef2169e699c27a27d4593ffeace86998bbffa86d8b35f0",
+      "bytes": 5645
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\recheck_acoustics.py",
+      "sha256": "52636713306681f1494d2a71bc67ab45d2b232847f94a5c4c72bc40ebad887d9",
+      "bytes": 6919
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\recheck_extended.py",
+      "sha256": "47af3b7f8c4df837892eec40e09bbc9d14afb2c2f91b2013af75d2c6cc7292a0",
+      "bytes": 4069
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\recheck_n109_diagnostic_grid.py",
+      "sha256": "d7e79b3d032891c9cc11e21f74271c6f92c96de80aaee5483df750a9289f8eca",
+      "bytes": 4477
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\recheck_sparse_speech.mjs",
+      "sha256": "7f5340405bd6d67d6058507074ceb04163aa8545700eb92eb25ea9fa16e12d0a",
+      "bytes": 19608
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\targeted-boundaries.json",
+      "sha256": "f2ec667e7468a7f4b8eba6883839cb82fdefa2202193aaa2a31fea0d4a72f866",
+      "bytes": 38284
+    },
+    {
+      "path": "D:\\codex_projects\\youtube\\design\\odd-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\targeted-formants.json",
+      "sha256": "c538675da717dfa175377288748f7d1fb273a85ec640efb6d80797ba675a290d",
+      "bytes": 70082
+    }
+  ],
+  "issues": []
+}

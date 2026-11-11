@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "revision": "even-counting-v002",
+  "video_sha256": "aa70cd47f184cdab4daa72f6ac60dd81d91dc03eadb0d52d13ddf08de53f7633",
+  "timeline_sha256": "805fb2d9c8ca00a777a87055442e83f1fb3801b399d30509cbfb950591b6ee6f",
+  "findings_resolved": [
+    "VIS-01"
+  ],
+  "unresolved_findings": [],
+  "all_frame_independent_checks": {
+    "frames_decoded": 11070,
+    "glyph_frames_before_closing_fade": 11010,
+    "expected_even_values_constructed_independently": 101,
+    "field_checks": {
+      "number": 11010,
+      "reading": 11010,
+      "previous": 10761,
+      "current": 10761,
+      "next": 10761
+    },
+    "minimum_glyph_iou": {
+      "number": 0.9977846699158175,
+      "reading": 0.9390243902439024,
+      "previous": 0.9142857142857143,
+      "current": 0.9570552147239264,
+      "next": 0.9440559440559441
+    },
+    "missing_wrong_or_mixed_main_numbers": 0,
+    "blank_reading_or_progression_candidates": 0,
+    "unexpected_black_frames": 0,
+    "unexpected_static_background_or_bird_changes": 0,
+    "static_region_max_mean_absolute_rgb_change": 0.7727465986394558,
+    "closing_fade_monotonic": true,
+    "producer_Scene_renderer_used_for_expected_values": false
+  },
+  "transition_regression_checks": {
+    "actual_native_frames": 9,
+    "native_frames_visually_reviewed": true,
+    "intro_six_label": "PAIR CHECK alone during reveal and clear, with no EVEN NUMBER ghost.",
+    "twenty_and_hundred_diagram_fades": "No ADD TWO EACH TIME ink beneath the diagram during fade-in or fade-out.",
+    "normal_instruction_returns_after_diagram": true,
+    "single_header_native_min_iou": 0.9612837493632196,
+    "old_instruction_probe_pixels_per_frame": {
+      "twenty": 548,
+      "hundred": 1247
+    },
+    "maximum_mean_rgb_error_in_blank_old_instruction_probes": 0.712287104622871
+  },
+  "closing_cream_color": {
+    "native_rgb_mean": [
+      254.99974344135802,
+      245.9997439236111,
+      230.9997439236111
+    ],
+    "native_max_rgb_error_from_source_cream": [
+      3,
+      5,
+      4
+    ],
+    "dominant_rgb": [
+      255,
+      246,
+      231
+    ],
+    "dominant_color_fraction": 0.9998717206790123,
+    "tolerance": "Maximum 5 RGB levels from H264 BT.709 limited-range reconstruction.",
+    "decision": "Within codec/color-conversion rounding; visually uniform cream with no readable residue."
+  },
+  "scope": "All-frame quarter-resolution independent main numeral, English reading and progression glyph checks; whole-frame brightness and fixed background/bird stability; nine additional native actual-frame transition checks and visual review.",
+  "continuous_human_full_video_viewing_claimed": false,
+  "evidence": [
+    {
+      "path": "design/even-counting-v1/production-qa/v002-recheck-20261111/visual/all-frame-glyph-audit.json",
+      "sha256": "4c2ccfb3e164c500939b14c562c0a1e29f9fe5567d2d5049153045a58ece5597"
+    },
+    {
+      "path": "design/even-counting-v1/production-qa/v002-recheck-20261111/visual/v002-transition-actual-frame-checks.json",
+      "sha256": "66634b3a59341027ccb2bce9466abe3b9a43b851df53d2cad0d5c74b10196938"
+    },
+    {
+      "path": "design/even-counting-v1/production-qa/v002-recheck-20261111/visual/v002-transition-contact-sheet.png",
+      "sha256": "76be57cba10f2cc83eab77b59a5718228626015b87a419ec4079e5d40cf5320a"
+    }
+  ]
+}

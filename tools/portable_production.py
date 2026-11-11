@@ -1,4 +1,4 @@
-"""Portable entry point for the five adopted productions; original tools stay unchanged.
+"""Portable entry point for adopted productions; original tools stay unchanged.
 
 Run from any directory. Reproduction uses the adopted master and source assets,
 so rendering does not require Node or speech models. Existing deliverables are
@@ -28,6 +28,8 @@ ALIASES = {
     'octal': 'octal-counting-production-v002',
     'hexadecimal': 'hexadecimal-counting-production-v002',
     'four-base': 'four-base-counting-production-v002',
+    'even': 'even-counting-production-v002',
+    'odd': 'odd-counting-production-v002',
 }
 
 
@@ -95,6 +97,11 @@ def production(value):
     return key, kind, row
 
 
+def adopted_aliases():
+    active = read(ROOT / 'catalogs/library-v1.json')['active_production_set_ids']
+    return {alias: key for alias, key in ALIASES.items() if key in active}
+
+
 def inputs(row, args):
     video = project_path(row['output'])
     timeline = project_path(args.timeline or row['timeline'])
@@ -133,6 +140,14 @@ def make_scene(kind, row, plan, motion):
     elif kind == 'hexadecimal':
         renderer = module('render_hexadecimal_video')
         scene = renderer.Scene(plan)
+    elif kind in ('even', 'odd'):
+        default = f'render_{kind}_video'
+        name = Path(plan.get('renderer_implementation', row.get('render_implementation', default))).stem
+        allowed = ('render_even_video', 'render_even_video_v002') if kind == 'even' else ('render_odd_video', 'render_odd_video_v002')
+        if name not in allowed:
+            raise ValueError(f'Unknown adopted {kind}-number renderer')
+        renderer = module(name)
+        scene = renderer.Scene(plan)
     else:
         renderer = module('render_four_base_video_v002')
         scene = renderer.Scene(plan, motion)
@@ -165,7 +180,8 @@ def check_inputs(kind, row, timeline_path, audio, motion, custom=False):
             raise ValueError(f'Adopted input is not covered by its checksum archive: {path}')
         require_file(path, None if custom else expected.get(relative))
     plan = read(timeline_path)
-    speech = [e for e in plan['events'] if e.get('source_path') and e.get('source_sha256')]
+    events = plan['voice_events'] if kind in ('even', 'odd') else plan['events']
+    speech = [e for e in events if e.get('source_path') and e.get('source_sha256')]
     seen = set()
     for event in speech:
         key = (event['source_path'], event['source_sha256'])
@@ -228,7 +244,9 @@ def render_or_preview(args):
                                video, ffmpeg, audio, args.crf, args.preset)
     else:
         shared = module('render_octal_video')
-        gain = {'octal': .8, 'hexadecimal': 0, 'four-base': .8}[kind]
+        gain = float(plan['delivery_gain_db']) if kind in ('even', 'odd') else {'octal': .8, 'hexadecimal': 0, 'four-base': .8}[kind]
+        if not math.isfinite(gain):
+            raise ValueError('Delivery gain must be finite')
         with tempfile.TemporaryDirectory(prefix='youtube-render-', dir=work_directory(args.work_dir)) as temporary:
             index, unique, holds = shared.stage_frames(scene, Path(temporary))
             print(f'Staged {unique} images in {holds} holds.', flush=True)
@@ -266,6 +284,38 @@ def verify(args):
     require_file(video)
     ffmpeg, ffprobe = executable('ffmpeg', args.ffmpeg), executable('ffprobe', args.ffprobe)
     destination = new_directory(args.out_dir)
+    if kind in ('even', 'odd'):
+        require_file(audio)
+        default = f'verify_{kind}_video'
+        name = Path(plan.get('verifier_implementation', row.get('verifier_implementation', default))).stem
+        allowed = ('verify_even_video', 'verify_even_video_v002') if kind == 'even' else ('verify_odd_video',)
+        if name not in allowed:
+            raise ValueError(f'Unknown adopted {kind}-number verifier')
+        command = [sys.executable, '-B', str(TOOLS / f'{name}.py'),
+                   '--timeline', str(timeline_path), '--video', str(video), '--master', str(audio),
+                   '--output-dir', str(destination), '--delivery-dir', str(args.delivery_dir or video.parent),
+                   '--ffmpeg', ffmpeg, '--ffprobe', ffprobe, '--work-dir', str(work_directory(args.work_dir))]
+        subprocess.run(command, cwd=ROOT, check=True)
+        evidence_name = f'{kind}-final-qa.json'
+        evidence = read(destination / evidence_name)
+        if evidence['status'] != 'pass':
+            raise ValueError(f'{kind.capitalize()}-number final media checks did not pass')
+        if kind == 'even':
+            number_count, voice_count = 101, 115
+        else:
+            number_count = (plan['count_end'] - plan['count_start']) // plan['count_step'] + 1
+            voice_count = len(plan['voice_events'])
+        result = {'status': 'pass', 'production_id': key, 'video_sha256': sha256(video),
+                  'timeline_sha256': sha256(timeline_path), 'master_sha256': sha256(audio),
+                  'checks_performed': [
+                      'full decode, media format, frame grid/duration, final AAC loudness and peak',
+                      f'all {number_count} {kind} values, natural readings, progression, synchronization and teaching diagrams',
+                      f'all {voice_count} voices versus adopted sources in master and final AAC stereo channels, silence and captions'],
+                  'evidence': evidence_name,
+                  'not_performed': ['Fresh ASR/CTC inference and full human listening are separate checks.'],
+                  'checked_at_utc': datetime.now(timezone.utc).isoformat()}
+        save_new(destination / 'portable-verification.json', result)
+        return result
     bounds = (480, 1440) if kind == 'binary' else (480, 900)
     technical = module('verify_video').verify_video(video, destination, timeline_path, ffmpeg, ffprobe,
                                                    duration_bounds=bounds)
@@ -381,7 +431,7 @@ def main(argv=None):
             builder.source_path = original_resolver
     elif args.command == 'list':
         result = [{'alias': alias, 'production_id': key, 'duration_s': production(alias)[2]['duration_s']}
-                  for alias, key in ALIASES.items()]
+                  for alias, key in adopted_aliases().items()]
     elif args.command == 'doctor':
         executable('ffmpeg', args.ffmpeg)
         executable('ffprobe', args.ffprobe)
@@ -395,7 +445,7 @@ def main(argv=None):
                     raise ValueError(f'Archived input length changed: {entry["path"]}')
                 archived_files += 1
         rows = []
-        for choice in list(ALIASES) if args.production == 'all' else [args.production]:
+        for choice in list(adopted_aliases()) if args.production == 'all' else [args.production]:
             key, kind, row = production(choice)
             timeline, audio, motion = inputs(row, args)
             _, _, scene, sources = check_inputs(kind, row, timeline, audio, motion,

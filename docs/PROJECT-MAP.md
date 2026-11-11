@@ -37,6 +37,8 @@
 | `design/octal-counting-v1/` | 発音調査、台本、`production-run-v002.json` |
 | `design/hexadecimal-counting-v1/` | 発音調査、台本、明瞭なAの根拠、`production-run-v002.json` |
 | `design/four-base-counting-v1/` | `CURRENT.txt`、`count-to-200-v002/`、`production-run-v002.json`、`production-review-v002.txt` |
+| `design/even-counting-v1/` | `CURRENT.txt`、企画・台本、`production-run-v002.json`、`production-review-v002.txt`、`production-qa/v002-recheck-20261111/` |
+| `design/odd-counting-v1/` | `CURRENT.txt`、キャラ抽選、`concept-and-scenario-v002.txt`、`script-and-sound-cues-v002.txt`、`production-run-v002.json`、`production-review-v002.txt` |
 
 `production-run*.json` は、完成品と採用素材・道具・検査記録のSHA-256を束ねます。来歴や検査に絶対パスが残っていても、実行時はリポジトリ内の採用先とマニフェストを使います。古い記録のパス文字列を書き換えるとhashで結ばれた来歴が変わるため、移植だけを理由に書き換えません。
 
@@ -44,9 +46,9 @@
 
 完成MP4だけでは再編集できません。少なくとも採用原画、フォント、実測 `timeline.json`、採用音声WAV、対応する採用・測定記録が必要です。採用 `master.wav` を再利用すれば、音声の再生成・再ミックスを省いて映像を再描画できます。
 
-八進数、十六進数、4基数動画では、作品固有の新しい台詞が元の `output/<作品>/speech/` にあります。元の `output/` は生成物と原本が混在していたため、別PCへ移す際は再現用入力の収納・復元手順に従ってください。フォルダ名だけを見て `speech/` や `timeline.json` を不要なキャッシュとして削除しないでください。
+八進数、十六進数、4基数、偶数、奇数動画では、作品固有の新しい台詞が元の `output/<作品>/speech/` にあります。元の `output/` は生成物と原本が混在していたため、別PCへ移す際は再現用入力の収納・復元手順に従ってください。フォルダ名だけを見て `speech/` や `timeline.json` を不要なキャッシュとして削除しないでください。
 
-このリポジトリには現行5作品とその制作記録の依存先を収録します。収納対象は `reproducibility/production-inputs.json` に記録し、`tools/update_production_archive.py --check` で確認します。初回の `output/` 保存対象は558ファイル、約1.58GBです。MP4、WAV、PNG、フォント等のバイナリはGit LFSで取得します。Gitへ収納した採用 `output/` 入力と、後で作る任意の `output/<新しい作業>/` を区別してください。
+このリポジトリには現行7作品とその制作記録の依存先を収録します。収納対象は `reproducibility/production-inputs.json` に記録し、`tools/update_production_archive.py --check` で確認します。奇数v002採用後の `output/` 保存対象は1073ファイル、約1.97GBです。MP4、WAV、PNG、フォント等のバイナリはGit LFSで取得します。Gitへ収納した採用 `output/` 入力と、後で作る任意の `output/<新しい作業>/` を区別してください。
 
 現行作品が旧作品の台詞や比較基準を再利用する場合は、その旧フォルダ内の原本も残します。フォルダ名が旧版でも、依存元であれば保存対象です。不要な旧音声マスター、キャッシュ、診断用生PCMまで一括で収納する構成ではありません。
 
@@ -59,6 +61,8 @@
 | 八進数 | `output/octal-counting-001-v002-aligned-reading/` |
 | 十六進数 | `output/hexadecimal-counting-001-v002-clear-A/` |
 | 4基数 | `output/four-base-counting-001-v002-to-200/` |
+| 偶数 | `output/even-counting-001-v002/` |
+| 奇数 | `output/odd-counting-001-v002/`（1〜299、150値、8分55.80秒・16074フレーム） |
 
 各出力には完成MP4、字幕、チャプター、アップロード文、最終QA等があります。4基数動画は `bird-motions.json` も描画に必要です。
 
@@ -71,7 +75,7 @@
 | 固定モデルの取得・検証 | `tools/portable_models.py` |
 | 設計準備 | `video_pipeline.py`、`prepare_*_episode.py`、`build_*_episode.py` |
 | 背景・キャラ・数値のモック | `render_*_mockups.py` / `.mjs` |
-| 動画描画 | `render_counting_video.py`、`render_binary_video_v003.py`、`render_octal_video.py`、`render_hexadecimal_video.py`、`render_four_base_video_v002.py` |
+| 動画描画 | `render_counting_video.py`、`render_binary_video_v003.py`、`render_octal_video.py`、`render_hexadecimal_video.py`、`render_four_base_video_v002.py`、`render_even_video_v002.py`、`render_odd_video_v002.py` |
 | 字幕・チャプター・概要 | `export_*_delivery.py`、各 `build_*` のexport |
 | 音声合成・採用 | `portable_speech_candidates.mjs`、`verify_speech.mjs`、`portable_verify_phonemes.mjs`、`review_speech_acceptance.mjs` |
 | 別PCの採用音声ゲート | `portable_speech_library.py`（原本を保つ派生ゲート） |
@@ -83,7 +87,7 @@
 
 - 再利用する原画、台本、採用音声、実測入力、ライセンス、採用根拠、制作記録を保持する。
 - `node_modules/`、AIモデルキャッシュ、Pythonキャッシュ、ダウンロード途中、巨大な診断用生PCMは再取得・再生成できる作業データとして扱う。
-- `materials/` は持ち込まれた未登録のキャラ参照資料を原本のまま保持する。現行5作品とは独立し、新作へ採用する場合は権利と登録内容を確認してカタログへ追加する。
+- `materials/` は持ち込まれた未登録のキャラ参照資料を原本のまま保持する。現行7作品とは独立し、新作へ採用する場合は権利と登録内容を確認してカタログへ追加する。
 - 元ゲームの `four-operations` 系リポジトリは別プロジェクト。動画用に登録済みの素材・出典を使い、clone先から元ゲームへ暗黙に依存しない。
 
 Git LFSの対象はルートの `.gitattributes`、追加する原本と除外する作業データの設定は `.gitignore` を確認してください。制作に必要な原本を消して容量を減らす方法は使いません。

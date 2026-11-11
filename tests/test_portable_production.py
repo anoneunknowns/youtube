@@ -100,6 +100,190 @@ class PortableCompatibility(unittest.TestCase):
             _, scene = portable.make_scene('octal', {}, {'id': 1}, None)
         self.assertEqual(scene, ({'id': 1}, 'common-baseline'))
 
+    def test_even_adapter_passes_measured_scene_contract_without_base_adaptation(self):
+        plan = {'scenes': [{'scene': 'count', 'decimal_value': 200}], 'duration_s': 369.339125}
+        fake = SimpleNamespace(Scene=lambda actual: actual)
+        with patch.object(portable, 'module', return_value=fake) as imported:
+            _, scene = portable.make_scene('even', {}, plan, None)
+        imported.assert_called_once_with('render_even_video')
+        self.assertIs(scene, plan)
+
+    def test_new_even_alias_is_available_only_after_catalog_adoption(self):
+        old_id = portable.ALIASES['four-base']
+        even_id = portable.ALIASES['even']
+        catalog = {'active_production_set_ids': [old_id], 'production_sets': {}}
+        with patch.object(portable, 'read', return_value=catalog):
+            self.assertEqual(portable.adopted_aliases(), {'four-base': old_id})
+            with self.assertRaisesRegex(ValueError, 'adopted production'):
+                portable.production('even')
+            catalog['active_production_set_ids'].append(even_id)
+            catalog['production_sets'][even_id] = {'duration_s': 369.339125}
+            self.assertEqual(portable.production('even'),
+                             (even_id, 'even', catalog['production_sets'][even_id]))
+            self.assertEqual(portable.adopted_aliases()['even'], even_id)
+
+    def test_even_revision_selects_its_versioned_renderer(self):
+        plan = {'renderer_implementation': 'tools/render_even_video_v002.py'}
+        fake = SimpleNamespace(Scene=lambda actual: actual)
+        with patch.object(portable, 'module', return_value=fake) as imported:
+            _, scene = portable.make_scene('even', {}, plan, None)
+        imported.assert_called_once_with('render_even_video_v002')
+        self.assertIs(scene, plan)
+
+    def test_even_renderer_does_not_dispatch_arbitrary_modules(self):
+        with self.assertRaisesRegex(ValueError, 'Unknown adopted even-number renderer'):
+            portable.make_scene('even', {}, {'renderer_implementation': 'tools/unrelated.py'}, None)
+
+    def test_odd_adapter_passes_measured_scene_contract_without_base_adaptation(self):
+        plan = {'renderer_implementation': 'tools/render_odd_video.py',
+                'scenes': [{'scene': 'count', 'decimal_value': 199}], 'duration_s': 372.4}
+        fake = SimpleNamespace(Scene=lambda actual: actual)
+        with patch.object(portable, 'module', return_value=fake) as imported:
+            _, scene = portable.make_scene('odd', {}, plan, None)
+        imported.assert_called_once_with('render_odd_video')
+        self.assertIs(scene, plan)
+        with self.assertRaisesRegex(ValueError, 'Unknown adopted odd-number renderer'):
+            portable.make_scene('odd', {}, {'renderer_implementation': 'tools/unrelated.py'}, None)
+
+    def test_odd_alias_is_available_only_after_catalog_adoption(self):
+        even_id, odd_id = portable.ALIASES['even'], portable.ALIASES['odd']
+        catalog = {'active_production_set_ids': [even_id], 'production_sets': {}}
+        with patch.object(portable, 'read', return_value=catalog):
+            self.assertEqual(portable.adopted_aliases(), {'even': even_id})
+            with self.assertRaisesRegex(ValueError, 'adopted production'):
+                portable.production('odd')
+            catalog['active_production_set_ids'].append(odd_id)
+            catalog['production_sets'][odd_id] = {'duration_s': 372.4}
+            self.assertEqual(portable.production('odd'),
+                             (odd_id, 'odd', catalog['production_sets'][odd_id]))
+            self.assertEqual(portable.adopted_aliases()['odd'], odd_id)
+
+    def test_odd_input_checks_bind_voice_events_to_their_sources(self):
+        with tempfile.TemporaryDirectory() as folder:
+            checkout = Path(folder)
+            record, timeline = checkout / 'record.json', checkout / 'timeline.json'
+            master, speech = checkout / 'master.wav', checkout / 'N001.wav'
+            record.write_text('{"files": []}')
+            master.write_bytes(b'master')
+            speech.write_bytes(b'changed-source')
+            timeline.write_text(json.dumps({'voice_events': [
+                {'source_path': 'N001.wav', 'source_sha256': hashlib.sha256(b'accepted-source').hexdigest()}]}))
+            with patch.object(portable, 'ROOT', checkout), patch.object(portable, 'make_scene') as create_scene:
+                with self.assertRaisesRegex(ValueError, 'checksum differs'):
+                    portable.check_inputs('odd', {'production_record': 'record.json'}, timeline, master, None, custom=True)
+            create_scene.assert_not_called()
+
+    def test_even_render_uses_timeline_delivery_gain(self):
+        with tempfile.TemporaryDirectory() as folder:
+            work = Path(folder)
+            timeline, audio = work / 'timeline.json', work / 'master.wav'
+            timeline.write_text('{}')
+            audio.write_bytes(b'preserved-master')
+            calls = []
+            def encode(index, source, output, count, ffmpeg, crf, preset, gain):
+                calls.append((source, gain, count))
+                output.write_bytes(b'even-encoded-artifact')
+            shared = SimpleNamespace(stage_frames=lambda scene, directory: (directory / 'index', 1, 1), encode=encode)
+            row = {'output': 'output/even-counting-001-v001/even.mp4',
+                   'render_implementation': 'tools/render_even_video.py'}
+            args = argparse.Namespace(command='render', production='even', timeline=str(timeline), audio=str(audio),
+                                      motion_manifest=None, out_dir=str(work / 'render'), work_dir=str(work),
+                                      ffmpeg='ffmpeg', crf=18, preset='veryfast')
+            scene = SimpleNamespace(duration=369.339125, frame_count=11081)
+            with patch.object(portable, 'production', return_value=(portable.ALIASES['even'], 'even', row)), \
+                 patch.object(portable, 'check_inputs', return_value=({'delivery_gain_db': .65}, None, scene, 0)), \
+                 patch.object(portable, 'module', return_value=shared), \
+                 patch.object(portable, 'executable', return_value='ffmpeg'):
+                result = portable.render_or_preview(args)
+            self.assertEqual(calls, [(audio, .65, 11081)])
+            self.assertEqual(result['audio_mux_gain_db'], .65)
+            self.assertEqual(audio.read_bytes(), b'preserved-master')
+
+    def test_even_verification_calls_complete_verifier_once_with_master(self):
+        with tempfile.TemporaryDirectory() as folder:
+            work = Path(folder)
+            timeline, audio, video = work / 'timeline.json', work / 'master.wav', work / 'even.mp4'
+            timeline.write_text('{"duration_s": 369.339125}')
+            audio.write_bytes(b'master')
+            video.write_bytes(b'video')
+            destination = work / 'qa'
+            row = {'output': 'output/even-counting-001-v001/even.mp4'}
+            args = argparse.Namespace(production='even', timeline=str(timeline), audio=str(audio),
+                                      motion_manifest=None, video=str(video), out_dir=str(destination),
+                                      delivery_dir=work, work_dir=str(work), ffmpeg='ffmpeg', ffprobe='ffprobe')
+            def run(command, **kwargs):
+                self.assertIn('verify_even_video.py', ' '.join(command))
+                self.assertEqual(command[command.index('--master') + 1], str(audio))
+                self.assertEqual(command[command.index('--delivery-dir') + 1], str(work))
+                (destination / 'even-final-qa.json').write_text('{"status": "pass", "checks": {}}')
+            with patch.object(portable, 'production', return_value=(portable.ALIASES['even'], 'even', row)), \
+                 patch.object(portable, 'module') as imported, \
+                 patch.object(portable.subprocess, 'run', side_effect=run) as launched, \
+                 patch.object(portable, 'executable', side_effect=lambda name, explicit: name):
+                result = portable.verify(args)
+            launched.assert_called_once()
+            imported.assert_not_called()  # Avoid a duplicate generic technical run and its old duration gate.
+            self.assertEqual(result['status'], 'pass')
+            self.assertTrue((destination / 'portable-verification.json').is_file())
+
+    def test_odd_render_uses_timeline_delivery_gain(self):
+        with tempfile.TemporaryDirectory() as folder:
+            work = Path(folder)
+            timeline, audio = work / 'timeline.json', work / 'master.wav'
+            timeline.write_text('{}')
+            audio.write_bytes(b'preserved-master')
+            calls = []
+            def encode(index, source, output, count, ffmpeg, crf, preset, gain):
+                calls.append((source, gain, count))
+                output.write_bytes(b'odd-encoded-artifact')
+            shared = SimpleNamespace(stage_frames=lambda scene, directory: (directory / 'index', 1, 1), encode=encode)
+            row = {'output': 'output/odd-counting-001-v001/odd.mp4',
+                   'render_implementation': 'tools/render_odd_video.py'}
+            args = argparse.Namespace(command='render', production='odd', timeline=str(timeline), audio=str(audio),
+                                      motion_manifest=None, out_dir=str(work / 'render'), work_dir=str(work),
+                                      ffmpeg='ffmpeg', crf=18, preset='veryfast')
+            scene = SimpleNamespace(duration=372.4, frame_count=11172)
+            with patch.object(portable, 'production', return_value=(portable.ALIASES['odd'], 'odd', row)), \
+                 patch.object(portable, 'check_inputs', return_value=({'delivery_gain_db': .45}, None, scene, 0)), \
+                 patch.object(portable, 'module', return_value=shared), \
+                 patch.object(portable, 'executable', return_value='ffmpeg'):
+                result = portable.render_or_preview(args)
+            self.assertEqual(calls, [(audio, .45, 11172)])
+            self.assertEqual(result['audio_mux_gain_db'], .45)
+            self.assertEqual(audio.read_bytes(), b'preserved-master')
+
+    def test_odd_verification_calls_complete_verifier_once_with_master(self):
+        with tempfile.TemporaryDirectory() as folder:
+            work = Path(folder)
+            timeline, audio, video = work / 'timeline.json', work / 'master.wav', work / 'odd.mp4'
+            timeline.write_text(json.dumps({'duration_s': 540, 'count_start': 1, 'count_end': 299,
+                                            'count_step': 2, 'voice_events': [{}] * 163,
+                                            'verifier_implementation': 'tools/verify_odd_video.py'}))
+            audio.write_bytes(b'master')
+            video.write_bytes(b'video')
+            destination = work / 'qa'
+            row = {'output': 'output/odd-counting-001-v001/odd.mp4'}
+            args = argparse.Namespace(production='odd', timeline=str(timeline), audio=str(audio),
+                                      motion_manifest=None, video=str(video), out_dir=str(destination),
+                                      delivery_dir=work, work_dir=str(work), ffmpeg='ffmpeg', ffprobe='ffprobe')
+            def run(command, **kwargs):
+                self.assertIn('verify_odd_video.py', ' '.join(command))
+                self.assertEqual(command[command.index('--master') + 1], str(audio))
+                self.assertEqual(command[command.index('--delivery-dir') + 1], str(work))
+                self.assertEqual(command[command.index('--work-dir') + 1], str(work.resolve()))
+                (destination / 'odd-final-qa.json').write_text('{"status": "pass", "checks": {}}')
+            with patch.object(portable, 'production', return_value=(portable.ALIASES['odd'], 'odd', row)), \
+                 patch.object(portable, 'module') as imported, \
+                 patch.object(portable.subprocess, 'run', side_effect=run) as launched, \
+                 patch.object(portable, 'executable', side_effect=lambda name, explicit: name):
+                result = portable.verify(args)
+            launched.assert_called_once()
+            imported.assert_not_called()
+            self.assertEqual(result['evidence'], 'odd-final-qa.json')
+            self.assertIn('all 150 odd values', result['checks_performed'][1])
+            self.assertIn('all 163 voices', result['checks_performed'][2])
+            self.assertTrue((destination / 'portable-verification.json').is_file())
+
     def test_historical_record_list_and_dict_checksums_are_both_supported(self):
         checksum = 'a' * 64
         expected = {'output/example/master.wav': checksum}

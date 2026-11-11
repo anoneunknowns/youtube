@@ -56,7 +56,7 @@ python tools/character_library.py export --output D:/temp/num-num-character-libr
 
 `generation-prompt.txt`・`generation-input.json`・`source-manifest.json`・`registration.json` と各collectionの `qa-evidence/` は、派生素材を作る際の根拠です。過去の生成先 `C:/...` や `D:/temp/...` は履歴であり、現在のPCに存在する前提にしません。採用原画を上書きせず、修正版は新しい版として保存します。キーポーズの補間・音声同期・余白は実際の取り込み先の画面で確認してください。利用条件は各素材・依存物の既存記録を確認し、この説明から新たな利用許諾を推定しないでください。
 
-## 現行の5作品
+## 現行の7作品
 
 現行版の判定は [`catalogs/library-v1.json`](catalogs/library-v1.json) の `active_production_set_ids` を使います。素材の `v001` が旧素材を意味するとは限りません。
 
@@ -67,8 +67,14 @@ python tools/character_library.py export --output D:/temp/num-num-character-libr
 | 八進数カウント | 0〜177₈、各桁を英語で読む | ピンクのウサギ・オーロラの庭 | 10分42.97秒 | [配置修正版v002](design/octal-counting-v1/production-run-v002.json) |
 | 十六進数カウント | 0〜7F₁₆、数字とA〜Fを読む | とら・星空の天文台 | 9分22.73秒 | [明瞭なAへ改訂したv002](design/hexadecimal-counting-v1/production-run-v002.json) |
 | 4基数同時カウント | 十進0〜200を2・10・8・16進数で表示、音声は十進数 | 小鳥・海辺の灯台 | 11分02.37秒 | [200までのv002](design/four-base-counting-v1/production-run-v002.json) |
+| 偶数カウント | 0〜200を2ずつ、全101値、自然な英語読み | 小鳥・木のおもちゃ工房 | 6分09.00秒 | [語頭・図切替修正版v002](design/even-counting-v1/production-run-v002.json) |
+| 奇数カウント | 1〜299を2ずつ、全150値、自然な英語読み | レッサーパンダ・山のケーブルカー駅 | 8分55.80秒 | [299までのv002](design/odd-counting-v1/production-run-v002.json) |
 
-直近の小鳥動画は全201値・804表記、通常の数の読み終わりから次の読み始めまで197か所を2秒、説明を挟む3か所を5秒にしています。桁読み動画の「桁間0.9秒」を、自然な十進数の語の間へ挿入しないでください。
+4基数の小鳥動画は全201値・804表記、通常の数の読み終わりから次の読み始めまで197か所を2秒、説明を挟む3か所を5秒にしています。偶数動画は全101値、通常98境界を2秒、20と100の後の確認2境界を10秒にしています。桁読み動画の「桁間0.9秒」を、自然な十進数の語の間へ挿入しないでください。
+
+新作はショート動画以外は原則1本8分以上とします。数の間隔や読み速度を変えて尺を延ばさず、通常2秒の間隔を保ち、区切りのよい終点まで範囲を広げます。Shortsまたはユーザーの明示した例外だけを別扱いにし、過去の完成品は当時の尺を維持します。詳しくは [制作手順](docs/PRODUCTION.md) を参照してください。
+
+奇数v002は範囲を299まで広げ、通常147境界を2秒、9と101の後の確認2境界を10秒にします。切符を組にして一つ余ることと、99に2を足すと101になることを示します。レッサーパンダは尾を含む通常姿を使い、BGMと効果音は入れません。
 
 ## 最初に行うこと
 
@@ -88,7 +94,11 @@ python tools/character_library.py export --output D:/temp/num-num-character-libr
 - [`tools/`](tools/)：設計準備、音声合成・検査、動画描画、字幕出力、最終検査。
 - [`tests/`](tests/)：時刻計算、音声採用ゲート、配置等の回帰検査。
 
-直近の小鳥動画は [制作記録](design/four-base-counting-v1/production-run-v002.json) と [独立再検査](design/four-base-counting-v1/production-qa/v002-recheck-20261111/verification.json) を参照してください。検査は自動解析と抽出画像の確認を含み、全編の人による試聴・視聴を行ったという記録ではありません。
+偶数動画は [制作記録](design/even-counting-v1/production-run-v002.json) と [再検査・修正結果](design/even-counting-v1/production-qa/v002-recheck-20261111/verification.txt) を参照してください。再検査で見つけた6語の語頭と説明図の文字重なりをv002で修正しました。全11070フレームの追跡、独立した全101値・505欄、最終AAC全115発話の新規ASR・CTC、原音との左右波形照合、字幕を確認しています。回帰テスト163件も通過しています。検査は自動解析と抽出画像の確認を含み、全編の人による試聴・視聴を行ったという記録ではありません。
+
+4基数動画の [制作記録](design/four-base-counting-v1/production-run-v002.json) と [独立再検査](design/four-base-counting-v1/production-qa/v002-recheck-20261111/verification.json) も保存しています。
+
+奇数動画は全16074フレームの主数値・英語読み・7整数の数直線、原寸の切符の組・99から101への説明・中間フェード、全163発話の原音との左右照合と字幕を検査しました。最終AACの新規ASR・CTCと音響情報、独立した再デコード・発音差分確認も合格し、回帰テスト204件が通過しています。[制作記録](design/odd-counting-v1/production-run-v002.json) と [最終検査](design/odd-counting-v1/production-qa/v002/verification.txt) に根拠と実施範囲を保存しています。検査は自動解析と抽出画像の確認を含み、全編を人が連続試聴・視聴したという記録ではありません。
 
 移植手順は同じWindows上の別のGit/LFSチェックアウトで検証しました。137件のテスト、全5作品のプレビュー、新しい音声の生成・ASR・CTC、旧パスを持つ採用音声の参照解決を確認しています。[検証記録](reproducibility/validation-20261111/verification.json) に実施範囲と根拠を保存しています。
 

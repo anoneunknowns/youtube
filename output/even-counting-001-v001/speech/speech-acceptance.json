@@ -1,0 +1,634 @@
+{
+  "schema_version": 1,
+  "kind": "hash-bound-speech-acceptance",
+  "accepted": true,
+  "scope": "Checks documented isolated recognition, independent pronunciation-review coverage, and exact artifact hashes. It does not certify human listening or prove that an automatic phoneme recognizer is infallible.",
+  "policy": {
+    "context_recognition_can_clear_pronunciation_warning": false,
+    "isolated_asr_match_alone_approves_pronunciation": false,
+    "independent_pronunciation_evidence_required_for_every_clip": true,
+    "changed_source_requires_fresh_hash_bound_review": true
+  },
+  "inputs": {
+    "manifest": {
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\measurements.json",
+      "sha256": "a13d3b0ef591c21dc5b12881a81e5161c0e1b3d5bbc913ee24139609692f3131"
+    },
+    "isolated_asr": {
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-asr.json",
+      "sha256": "86875de0e2a9c494dc9c3e5f3881ebda8540a4547a61531f93ed1bd3e7bed22e"
+    },
+    "pronunciation": {
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\pronunciation-review.json",
+      "sha256": "e2144a3ae82df4cc43ffb1571ee1c1fa07dc963b7478c45d9a3c40ede0e46029"
+    },
+    "prior_manifest": null
+  },
+  "summary": {
+    "clips": 14,
+    "numbers": 0,
+    "dialogue": 14,
+    "independent_evidence_files": 3,
+    "accepted": 14,
+    "unresolved": 0,
+    "isolated_asr_warnings_reviewed": 7,
+    "replacements": 0
+  },
+  "unresolved": [],
+  "replacements": [],
+  "results": [
+    {
+      "id": "I01",
+      "text": "Hi! Let's count even numbers.",
+      "spoken_text": "Hi! Let's count even numbers.",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I01.wav",
+      "sample_frames": 43418,
+      "sample_rate": 24000,
+      "duration_s": 1.8090833333333334,
+      "sha256": "d9ab3df198cd01c7b71f499ddb06597e95c60fea6750a0fa58c80f94f32ddef4",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 2.525,
+          "leading_s": 0.2881666666666667,
+          "trailing_s": 0.42775,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I01.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "Hi! Let's count even numbers.",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "asr-match",
+      "isolated_asr_warning_reviewed": false,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Isolated lexical ASR matches all words. CTC resolves hi, lets, count, even, numbers in order, with final voiced /z/ and no added word or repeated count."
+        }
+      ]
+    },
+    {
+      "id": "I02",
+      "text": "We add two each time.",
+      "spoken_text": "We add two each time.",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I02.wav",
+      "sample_frames": 30558,
+      "sample_rate": 24000,
+      "duration_s": 1.27325,
+      "sha256": "85bddffdcce929f1770f5306138fc5f5a75e684b7e6432df101e0b87e64f9460",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 2,
+          "leading_s": 0.2989583333333333,
+          "trailing_s": 0.4277916666666667,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I02.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "We add two each time.",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "warning-review-listening",
+      "isolated_asr_warning_reviewed": true,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes to for two; both are /tu:/, not an acoustic discrepancy. Independent CTC is w i: ae d t u: i: tsh t ai m, covering add, two, each, time without omission. Original ASR warning retained."
+        }
+      ]
+    },
+    {
+      "id": "I03",
+      "text": "Two blocks make one pair.",
+      "spoken_text": "Two blocks make one pair.",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I03.wav",
+      "sample_frames": 34519,
+      "sample_rate": 24000,
+      "duration_s": 1.4382916666666667,
+      "sha256": "7639fbd9332426f59a96498c42d87270dc7ef30147e95c667e1eaa04865e60a0",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 2.175,
+          "leading_s": 0.3050833333333333,
+          "trailing_s": 0.431625,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I03.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "Two blocks make one pair.",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "asr-match",
+      "isolated_asr_warning_reviewed": false,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper independently recognizes one pair. CTC pair-vowel label eI is low-confidence 0.3315. Read-only LPC has a falling third formant from 2951.5Hz at1.16s to1984.0Hz at1.32s (F2 then1731.7Hz), consistent with US r-color rather than a sustained non-rhotic pay ending. Two, blocks, make, one consonants are resolved. Targeted stress alternative gives no recognition benefit, so original retained."
+        },
+        {
+          "kind": "isolated-acoustic-analysis",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\pair-vowel-formants.json",
+          "sha256": "f1dd151480eab1b9c32a110a05ba0202c193e619cc277b907c3af2d518e81bf9",
+          "summary": "Whisper independently recognizes one pair. CTC pair-vowel label eI is low-confidence 0.3315. Read-only LPC has a falling third formant from 2951.5Hz at1.16s to1984.0Hz at1.32s (F2 then1731.7Hz), consistent with US r-color rather than a sustained non-rhotic pay ending. Two, blocks, make, one consonants are resolved. Targeted stress alternative gives no recognition benefit, so original retained."
+        }
+      ]
+    },
+    {
+      "id": "I04",
+      "text": "Six blocks make three pairs, with none left over.",
+      "spoken_text": "Six blocks make three pairs, with none left over.",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I04.wav",
+      "sample_frames": 69439,
+      "sample_rate": 24000,
+      "duration_s": 2.893291666666667,
+      "sha256": "ae1aee8e1b9a11b4229a91417898688aa838f271b9721ae4d49f495673a2a9ac",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 3.65,
+          "leading_s": 0.28329166666666666,
+          "trailing_s": 0.47341666666666665,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I04.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "Six blocks make three pairs, with none left over.",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "warning-review-listening",
+      "isolated_asr_warning_reviewed": true,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes 6 and3 for six and three, preserving all words. CTC identifies six, blocks, three, pairs, with, none, left, over. Make final /k/ is absent from greedy CTC, but PCM shows closure at0.85–0.87s (-40.81 to-53.61dBFS), followed by release0.88s (-35.07dBFS,0.8813 power above2kHz), before three frication. Thus there is independent signal evidence for the stop, rather than approving via neighboring number context."
+        },
+        {
+          "kind": "isolated-acoustic-analysis",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\make-boundary-signal.json",
+          "sha256": "11e6f7169921df9f437c8bf3e76fb0843e47700483693e4690624b64b74d19e9",
+          "summary": "Whisper writes 6 and3 for six and three, preserving all words. CTC identifies six, blocks, three, pairs, with, none, left, over. Make final /k/ is absent from greedy CTC, but PCM shows closure at0.85–0.87s (-40.81 to-53.61dBFS), followed by release0.88s (-35.07dBFS,0.8813 power above2kHz), before three frication. Thus there is independent signal evidence for the stop, rather than approving via neighboring number context."
+        }
+      ]
+    },
+    {
+      "id": "I05",
+      "text": "Even numbers can be grouped in pairs.",
+      "spoken_text": "Even numbers can be grouped in pairs.",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I05.wav",
+      "sample_frames": 47929,
+      "sample_rate": 24000,
+      "duration_s": 1.9970416666666666,
+      "sha256": "42aa137daa0c8600d0e975c374b58d6ca6ff487c18b6e36b3d8f77d7fa94f2f3",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 2.75,
+          "leading_s": 0.321,
+          "trailing_s": 0.43195833333333333,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I05.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "Even numbers can be grouped in pairs.",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "asr-match",
+      "isolated_asr_warning_reviewed": false,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper matches all words, including pairs. CTC pair-vowel eI is low-confidence0.2077; LPC F3 falls from2919.6Hz at1.58s to2057.5Hz at1.74s with F21713.6Hz, consistent with an r-colored vowel. Final /z/ remains at1.86–1.905s; grouped has both /p/ and/t/. Targeted long-vowel alternative does not improve recognition, so original retained."
+        },
+        {
+          "kind": "isolated-acoustic-analysis",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\pair-vowel-formants.json",
+          "sha256": "f1dd151480eab1b9c32a110a05ba0202c193e619cc277b907c3af2d518e81bf9",
+          "summary": "Whisper matches all words, including pairs. CTC pair-vowel eI is low-confidence0.2077; LPC F3 falls from2919.6Hz at1.58s to2057.5Hz at1.74s with F21713.6Hz, consistent with an r-colored vowel. Final /z/ remains at1.86–1.905s; grouped has both /p/ and/t/. Targeted long-vowel alternative does not improve recognition, so original retained."
+        }
+      ]
+    },
+    {
+      "id": "I06",
+      "text": "Zero is even too.",
+      "spoken_text": "Zero is even too.",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I06.wav",
+      "sample_frames": 29677,
+      "sample_rate": 24000,
+      "duration_s": 1.2365416666666667,
+      "sha256": "b98c080c622d34ce84284c23b60540e24c2d530ef0b96dbe8d0f48ab950bfb75",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 1.95,
+          "leading_s": 0.29720833333333335,
+          "trailing_s": 0.41625,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I06.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "Zero is even too.",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "warning-review-listening",
+      "isolated_asr_warning_reviewed": true,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes 0 is even2: zero numeric formatting and too/two are homophones. Independent CTC resolves z i: r oU i z i: v schwa n t u:, matching every intended sound. The last word is the intended too; original formatting warning retained, no context recognition substituted."
+        }
+      ]
+    },
+    {
+      "id": "I06B",
+      "text": "There are no blocks left over.",
+      "spoken_text": "There are no blocks left over.",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I06B.wav",
+      "sample_frames": 36962,
+      "sample_rate": 24000,
+      "duration_s": 1.5400833333333332,
+      "sha256": "7e16294cb8926dddaca6408674d26c9af9c5ee7f92118e808297d42b95bbb119",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 2.3,
+          "leading_s": 0.3152916666666667,
+          "trailing_s": 0.444625,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I06B.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "There are no blocks left over.",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "asr-match",
+      "isolated_asr_warning_reviewed": false,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Lexical ASR matches all words. Independent CTC resolves there are no blocks left over including blocks /ks/, left /ft/, and final rhotic /er/; no repeated or missing word."
+        }
+      ]
+    },
+    {
+      "id": "I07",
+      "text": "Let's count from zero to two hundred.",
+      "spoken_text": "Let's count from zero to two hundred.",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I07.wav",
+      "sample_frames": 45693,
+      "sample_rate": 24000,
+      "duration_s": 1.903875,
+      "sha256": "328fb49387753f8eff8e065bd7a837761894713429b25370d740f65ed7352e6b",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 2.65,
+          "leading_s": 0.30404166666666665,
+          "trailing_s": 0.44208333333333333,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I07.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "Let's count from zero to two hundred.",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "warning-review-listening",
+      "isolated_asr_warning_reviewed": true,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes0 and200 for zero and two hundred. Independent CTC resolves lets count from zero to two hundred in order, including /t/ after count and the final /d/ of hundred. Warning is numeric spelling only."
+        }
+      ]
+    },
+    {
+      "id": "T020",
+      "text": "Twenty blocks make ten pairs, with none left over.",
+      "spoken_text": "Twenty blocks make ten pairs, with none left over.",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\T020.wav",
+      "sample_frames": 71969,
+      "sample_rate": 24000,
+      "duration_s": 2.9987083333333335,
+      "sha256": "123e25b659cfbd48c5f89e0fd641c0359f68c13bfa65450d41057b49ed5e648e",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 3.775,
+          "leading_s": 0.29670833333333335,
+          "trailing_s": 0.4795833333333333,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\T020.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "Twenty blocks make ten pairs, with none left over.",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "warning-review-listening",
+      "isolated_asr_warning_reviewed": true,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes20 and10 for twenty and ten. CTC resolves twenty blocks make ten pairs with none left over, including make /k/, pairs /er z/, and left /ft/. No digit spelling is spoken instead of the cardinal words; original lexical warning retained."
+        }
+      ]
+    },
+    {
+      "id": "T100",
+      "text": "The last digit is always zero, two, four, six, or eight.",
+      "spoken_text": "The last digit is always zero, two, four, six, or eight.",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\T100.wav",
+      "sample_frames": 84605,
+      "sample_rate": 24000,
+      "duration_s": 3.5252083333333335,
+      "sha256": "28fab785f07e3257c104ff65507b6df34f45aa41188e084e69ccf6a85bdb6448",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 4.275,
+          "leading_s": 0.29720833333333335,
+          "trailing_s": 0.45258333333333334,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\T100.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "The last digit is always zero, two, four, six, or eight.",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "warning-review-listening",
+      "isolated_asr_warning_reviewed": true,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes digit forms0,2,4,6,8 while preserving the complete list in order. CTC resolves the matching cardinal phones. Always-zero shares a continuous /z/ across the word boundary; or-eight has normal r-linking. Final /t/ is resolved and terminal-tail screen finds its release with no suspicious following voicing. The reduced last-digit stop cluster does not remove a word or alter the list."
+        }
+      ]
+    },
+    {
+      "id": "F01",
+      "text": "We did it!",
+      "spoken_text": "We did it!",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\reused\\F01.wav",
+      "sample_frames": 17341,
+      "sample_rate": 24000,
+      "duration_s": 0.7225416666666666,
+      "sha256": "f78e95f408a0f08bc7b866d11768c833188076fee0958c55d027742fed417d54",
+      "provenance": {
+        "type": "byte-preserving-accepted-library-reuse",
+        "source_path": "D:\\codex_projects\\youtube\\assets\\library\\audio\\speech\\kokoro-af-heart\\v002\\clips\\dialogue-f78e95f408a0f08b.wav",
+        "source_manifest": "D:\\codex_projects\\youtube\\assets\\library\\audio\\speech\\kokoro-af-heart\\v002\\measurements.json",
+        "source_manifest_sha256": "2071c15fdcb57d1f878ea89ad1c6744b864c8523c53926f7348f7c0b16bff287",
+        "verified_local_gate": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\library-verification\\acceptance.json",
+        "verified_local_gate_sha256": "e7402c1d9814a69692be3ccbb76fec1f88ea3314d8bd68b5873a7e89bd0f3787",
+        "historical_accepted": true
+      },
+      "role": "dialogue",
+      "expected_text": "We did it!",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "asr-match",
+      "isolated_asr_warning_reviewed": false,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Byte-identical reuse of already accepted We did it. Fresh lexical ASR matches and independent CTC resolves w i: d i d i t; final /t/ release is resolved with no suspicious voiced tail."
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "text": "We counted by twos, all the way to two hundred!",
+      "spoken_text": "We counted by twos, all the way to two hundred!",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\F02.wav",
+      "sample_frames": 65422,
+      "sample_rate": 24000,
+      "duration_s": 2.7259166666666665,
+      "sha256": "b2afdc02e0fbea7dd6215f4adfb054f75c2a7166648482eb88e899d2b2df117b",
+      "provenance": {
+        "type": "new-local-kokoro-candidate",
+        "generation": {
+          "provider": "local-kokoro",
+          "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+          "voice_id": "af_heart",
+          "speed": 0.98,
+          "dtype": "fp32",
+          "status": "unreviewed-candidate"
+        },
+        "trim": {
+          "raw_duration_s": 3.5,
+          "leading_s": 0.307125,
+          "trailing_s": 0.4669583333333333,
+          "peak_normalization_gain": 1
+        },
+        "generation_take_record": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\F02.wav.json"
+      },
+      "role": "dialogue",
+      "expected_text": "We counted by twos, all the way to two hundred!",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "warning-review-listening",
+      "isolated_asr_warning_reviewed": true,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes200 for two hundred. Independent CTC resolves we counted by twos all the way to two hundred, including plural twos /z/. Hundred final unstressed vowel variation /schwa/ vs eSpeak /I/ is an ordinary reduction, with final /d/ present. Numeric-format warning retained."
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "text": "Thanks for counting with me!",
+      "spoken_text": "Thanks for counting with me!",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\reused\\F03.wav",
+      "sample_frames": 33069,
+      "sample_rate": 24000,
+      "duration_s": 1.377875,
+      "sha256": "62cb04c29b372d52949d85bce55772ae4e813ff26c118ae6895fd344edc01296",
+      "provenance": {
+        "type": "byte-preserving-accepted-library-reuse",
+        "source_path": "D:\\codex_projects\\youtube\\assets\\library\\audio\\speech\\kokoro-af-heart\\v002\\clips\\dialogue-62cb04c29b372d52.wav",
+        "source_manifest": "D:\\codex_projects\\youtube\\assets\\library\\audio\\speech\\kokoro-af-heart\\v002\\measurements.json",
+        "source_manifest_sha256": "2071c15fdcb57d1f878ea89ad1c6744b864c8523c53926f7348f7c0b16bff287",
+        "verified_local_gate": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\library-verification\\acceptance.json",
+        "verified_local_gate_sha256": "e7402c1d9814a69692be3ccbb76fec1f88ea3314d8bd68b5873a7e89bd0f3787",
+        "historical_accepted": true
+      },
+      "role": "dialogue",
+      "expected_text": "Thanks for counting with me!",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "asr-match",
+      "isolated_asr_warning_reviewed": false,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Byte-identical reuse of already accepted Thanks for counting with me. Fresh lexical ASR matches and independent CTC resolves every word; weak-form for has reduced vowel and no added syllable. Existing hash-bound approval is additionally verified."
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "text": "Bye for now!",
+      "spoken_text": "Bye for now!",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\reused\\F04.wav",
+      "sample_frames": 19996,
+      "sample_rate": 24000,
+      "duration_s": 0.8331666666666667,
+      "sha256": "1d047d0223f29272d44e838ba325fbf9b94fe014b6b6066bda7164559689b8ab",
+      "provenance": {
+        "type": "byte-preserving-accepted-library-reuse",
+        "source_path": "D:\\codex_projects\\youtube\\assets\\library\\audio\\speech\\kokoro-af-heart\\v002\\clips\\dialogue-1d047d0223f29272.wav",
+        "source_manifest": "D:\\codex_projects\\youtube\\assets\\library\\audio\\speech\\kokoro-af-heart\\v002\\measurements.json",
+        "source_manifest_sha256": "2071c15fdcb57d1f878ea89ad1c6744b864c8523c53926f7348f7c0b16bff287",
+        "verified_local_gate": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\library-verification\\acceptance.json",
+        "verified_local_gate_sha256": "e7402c1d9814a69692be3ccbb76fec1f88ea3314d8bd68b5873a7e89bd0f3787",
+        "historical_accepted": true
+      },
+      "role": "dialogue",
+      "expected_text": "Bye for now!",
+      "accepted": true,
+      "failures": [],
+      "isolated_asr_status": "asr-match",
+      "isolated_asr_warning_reviewed": false,
+      "pronunciation_decision": "pass",
+      "pronunciation_evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Byte-identical reuse of already accepted Bye for now. Fresh lexical ASR matches and CTC has b ai f er n aU, including the ordinary reduced for. Existing hash-bound approval is verified;0.83317s duration fits the1.00s final spoken budget."
+        }
+      ]
+    }
+  ]
+}

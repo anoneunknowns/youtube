@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "completed_at_utc": "2026-11-11T10:57:50.4208715Z",
+  "artifact": "output/even-counting-001-v002/paspla-studio-even-numbers-0-to-200-1080p.mp4",
+  "video_sha256": "aa70cd47f184cdab4daa72f6ac60dd81d91dc03eadb0d52d13ddf08de53f7633",
+  "timeline_sha256": "805fb2d9c8ca00a777a87055442e83f1fb3801b399d30509cbfb950591b6ee6f",
+  "original_v001_artifact_modified": false,
+  "fixes_resolved": [
+    "AUD-01",
+    "VIS-01"
+  ],
+  "replacement_number_values": [
+    46,
+    56,
+    60,
+    66,
+    68,
+    76
+  ],
+  "unresolved_findings": [],
+  "coverage": {
+    "decoded_frames": 11070,
+    "even_values": 101,
+    "fresh_final_aac_asr_utterances": 115,
+    "fresh_final_aac_ctc_utterances": 115,
+    "caption_cues": 115,
+    "independent_actual_image_fields": 505,
+    "ordinary_two_second_boundaries": 98,
+    "teaching_ten_second_boundaries": 2,
+    "initial_fricative_utterances_screened": 31,
+    "voiceless_terminal_targets_screened": 38
+  },
+  "measurements": {
+    "duration_s": 369.0,
+    "integrated_lufs": -15.56,
+    "true_peak_dbtp": -1.26
+  },
+  "final_aac_minimum_source_correlation": 0.9977956255385939,
+  "numeric_and_explanation_content": "Correct; independent even sequence, English cardinals and mathematical explanations match",
+  "audio_revision": "Six separate reviewed takes remove source-confirmed voiced prefixes; correction survives final AAC encoding",
+  "visual_revision": "Clean teaching field and fixed headings remove incompatible labels during fades",
+  "recognizer_differences": "Raw number-format/homophone warnings and phoneme differences were individually reviewed. N056 guarded CTC vowel label is resolved by exact-event CTC and local source/AAC waveform/spectral controls.",
+  "continuous_human_full_listening_or_viewing_claimed": false,
+  "evidence": [
+    {
+      "path": "design/even-counting-v1/production-qa/v002-recheck-20261111/audio/audio-recheck-summary.json",
+      "sha256": "760b67229124bf2edae0e1cd8694d8e298e4a34b2a9c592617b2b70eba123b1c"
+    },
+    {
+      "path": "design/even-counting-v1/production-qa/v002-recheck-20261111/visual/visual-recheck-summary.json",
+      "sha256": "70804d135fa315b25c4af024b765dc811331367105ec55f118179a8c7dba1ea0"
+    },
+    {
+      "path": "design/even-counting-v1/production-qa/v002-recheck-20261111/content/content-review.json",
+      "sha256": "59dd6e9671854e83b390d1e62ce05590c32a1770c8bd47e67cf93937c10d1ebe"
+    },
+    {
+      "path": "output/even-counting-001-v002/qa/even-final-qa.json",
+      "sha256": "e4c3f785ed7730463a76251456a134e11417e67b4e416ef0c5620c6a1feceaeb"
+    },
+    {
+      "path": "output/even-counting-001-v002/qa/even-v002-verifier-wrapper.json",
+      "sha256": "4692150d869b2c855a5343fe78d61e6d82f187d3c9f0f0b9a2788b3805c7dfce"
+    },
+    {
+      "path": "design/even-counting-v1/test-review-v002.json",
+      "sha256": "6e8d18cb701e5b57cc7e14a101feae38bcfecd43bc3c112a9b8234d1e1be57a4"
+    }
+  ]
+}

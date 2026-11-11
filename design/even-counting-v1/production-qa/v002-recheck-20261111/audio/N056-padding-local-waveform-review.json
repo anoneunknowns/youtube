@@ -1,0 +1,43 @@
+{
+  "kind": "controlled-local-actual-aac-source-vowel-comparison",
+  "id": "N056",
+  "utterance_region_s": [
+    0.46,
+    0.6
+  ],
+  "sample_rate": 16000,
+  "source": {
+    "id": "N056-adopted-source",
+    "spoken_text": "fifty-six",
+    "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v002\\speech\\candidates-v002\\N056.wav",
+    "sha256": "11528851d17ca669ac83221473d1466a054775ef823852b669bf937d53137ad7",
+    "duration_s": 0.8232083329999966
+  },
+  "final_aac_exact_event": {
+    "id": "N056-final-exact",
+    "spoken_text": "fifty-six",
+    "path": "D:\\codex_projects\\youtube\\design\\even-counting-v1\\production-qa\\v002-recheck-20261111\\audio\\N056-final-exact-event.wav",
+    "sha256": "4dac8ad499a378ae270064eb35160f294168a0b96a263e2db83c00707b9504c8",
+    "duration_s": 0.8232083333333333
+  },
+  "method": "Same relative140ms vowel interval from unchanged adopted source and exact-event final AAC. Decode16kHz, search +/-4sample lag, compare gain-invariant waveforms and normalized Hamming-window FFT power. No waveform editing/generation.",
+  "local_waveform_correlation": 0.9999947524213817,
+  "best_lag_samples": 0,
+  "best_lag_s": 0.0,
+  "fitted_uniform_gain_db": 6.10364513088293,
+  "normalized_rms_residual": 0.003239618758372482,
+  "normalized_power_spectrum_cosine": 0.9999984485342451,
+  "source_spectral_bands": {
+    "under1k": 0.9005050995194075,
+    "1k_to3k": 0.09575326653041429,
+    "over3k": 0.00374163395017833,
+    "centroid_hz": 590.8023685768388
+  },
+  "final_aac_spectral_bands": {
+    "under1k": 0.9008812104080967,
+    "1k_to3k": 0.09544514522361922,
+    "over3k": 0.003673644368284059,
+    "centroid_hz": 589.7246830792986
+  },
+  "decision": "The local physical vowel is effectively preserved. Raw CTC with80ms exterior guards labels EH, but exact-event final AAC and the adopted source both label IH with no reference prompt. This is padding/input-normalization-sensitive recognition, not an AAC-introduced phoneme change. It is not a guarantee of perfect perceived articulation."
+}

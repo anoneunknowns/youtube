@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "status": "one-visual-readability-issue-confirmed",
+  "video_sha256": "a539fbe1843c73000172cf424b9a6c2438e0e6cb1a02e9a8e70b3ce5155b12f3",
+  "all_frame_glyph_and_stability": {
+    "status": "pass",
+    "frames_decoded": 11081,
+    "glyph_frames_checked_before_closing_fade": 11021,
+    "minimum_iou": {
+      "number": 0.997716894977169,
+      "reading": 0.9545454545454546,
+      "previous": 0.9142857142857143,
+      "current": 0.9629629629629629,
+      "next": 0.9507042253521126
+    },
+    "field_checks": {
+      "number": 11021,
+      "reading": 11021,
+      "previous": 10772,
+      "current": 10772,
+      "next": 10772
+    },
+    "all_101_values_have_decoded_frames": true,
+    "missing_wrong_or_mixed_number_glyphs": 0,
+    "unexpected_blank_readings_or_cards": 0,
+    "background_or_bird_position_flicker_candidates": 0,
+    "static_crop_mean_error_max": 0.7634991496598639,
+    "uses_producer_Scene_state": false
+  },
+  "resolved_measurement_candidate": {
+    "candidate": "Final cream-color distance 2.333/255 exceeded an initial audit-only mean threshold 2.",
+    "decision": "Codec/range conversion and rounding, not a visible end-frame defect.",
+    "standard_native_rgb_decode_mean": [
+      254.99833960262345,
+      245.99833960262345,
+      230.99833960262345
+    ],
+    "maximum_native_rgb_error_from_intended_cream": [
+      3,
+      5,
+      4
+    ],
+    "dominant_rgb": [
+      255,
+      246,
+      231
+    ],
+    "dominant_color_fraction": 0.9991700424382716,
+    "visual_observation": "Uniform cream; no readable number, character, label or previous-scene residual.",
+    "same_previous_production_tolerance_max_rgb": 5,
+    "evidence": {
+      "path": "design/even-counting-v1/production-qa/v001-recheck-20261111/visual/native-frame-011080.png",
+      "sha256": "e9db77417db3e156253096aacd2640be70a457c1cc71ecdfbd5c7adfdebd1c79"
+    }
+  },
+  "findings": [
+    {
+      "id": "VIS-01",
+      "severity": "minor",
+      "category": "transient-text-overlap",
+      "cause": "Whole-frame Image.blend mixes two different header or explanation labels at transition midpoints.",
+      "impact": "Numerals, readings and cardinals are correct, but small teaching labels become briefly superimposed and less readable.",
+      "examples": [
+        {
+          "frame": 378,
+          "time_s": 12.6,
+          "overlap": "EVEN NUMBER / PAIR CHECK",
+          "evidence": {
+            "path": "design/even-counting-v1/production-qa/v001-recheck-20261111/visual/overlap-intro-six-frame000378.png",
+            "sha256": "a8b129758178578b1748b51d2bfd05de1d3b8838a19ccdd8ae63559b4b11c5b8"
+          }
+        },
+        {
+          "frame": 2120,
+          "time_s": 70.66666666666667,
+          "overlap": "ADD TWO EACH TIME over the fading twenty-block diagram, plus header overlap",
+          "evidence": {
+            "path": "design/even-counting-v1/production-qa/v001-recheck-20261111/visual/overlap-twenty-frame002120.png",
+            "sha256": "27f3ebf821ed15ea3b965d1fe01f83188532cd23f3f8bf1b50427fcdfa0d0889"
+          }
+        },
+        {
+          "frame": 5706,
+          "time_s": 190.2,
+          "overlap": "ADD TWO EACH TIME over final-digit chips",
+          "evidence": {
+            "path": "design/even-counting-v1/production-qa/v001-recheck-20261111/visual/overlap-hundred-frame005706.png",
+            "sha256": "62a90ed44fcf6ef19e59088b8cf087910aaf4dc87b08dfa41643608bc07b530d"
+          }
+        }
+      ],
+      "recommended_fix": "Use a blank teaching field under the diagram fade, switch the header as a fixed label, and restore the normal instruction only after the diagram has cleared. Keep the large numeral, reading and progression fixed.",
+      "production_files_modified_by_this_audit": false
+    }
+  ],
+  "native_still_review": {
+    "additional_actual_frames": 18,
+    "contact_sheet": {
+      "path": "design/even-counting-v1/production-qa/v001-recheck-20261111/visual/additional-motion-contact-sheet.png",
+      "sha256": "dbdd7707cd9842e930b4a0fb2a8c4946a43e4d4574eb5a8a5300140a31ded899"
+    },
+    "reviewed": [
+      "Intro two-block start/midpoint/pair",
+      "Six reveal and clear",
+      "Zero reset",
+      "Twenty two-row ten-pair diagram",
+      "Hundred final-zero ring and end-digit examples",
+      "Final 200/END",
+      "Checkmark before/after",
+      "Closing fade"
+    ],
+    "continuous_human_full_video_viewing_claimed": false
+  },
+  "evidence": [
+    {
+      "path": "design/even-counting-v1/production-qa/v001-recheck-20261111/visual/all-frame-glyph-audit.json",
+      "sha256": "1ffd9349afa521b941f88091617847ff7e99831fc2f6cdea8cf6f4e6ec95fd7c"
+    },
+    {
+      "path": "design/even-counting-v1/production-qa/v001-recheck-20261111/visual/native-additional-observations.json",
+      "sha256": "8dede225b6c57b67db8a6d3bc88b94331f47a9742695ae59300cc1fa401cf2fc"
+    }
+  ]
+}

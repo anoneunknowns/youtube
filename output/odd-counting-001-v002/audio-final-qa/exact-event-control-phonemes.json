@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "isolated-phoneme-asr",
+  "source_manifest_sha256": "16d9010996127ae26f2d9b0a665152cdd3462de552d608e858d238a1bcf7cb2e",
+  "model": {
+    "id": "onnx-community/wav2vec2-lv-60-espeak-cv-ft-ONNX",
+    "revision": "c69750f5043e5e1f8a71ab95dd3b98338c280c92",
+    "dtype": "q8",
+    "sha256": "3d1479b5c70836645a4310902479f7f7e8bbc8c16c58745d918804f4f6f9d120",
+    "license": "Apache-2.0"
+  },
+  "method": "Independent 16 kHz CTC phoneme recognition, no expected text or neighbor-number prompt; eSpeak expected labels are computed only after inference. Approximate 20ms timestamps. Automated evidence, not proof of perfect pronunciation.",
+  "results": [
+    {
+      "role": "dialogue",
+      "number": 5,
+      "id": "N005-EXACT",
+      "expected_text": "five",
+      "expected_espeak": "fˈaɪv",
+      "source_path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v002\\audio-final-qa\\exact-event-controls\\N005-EXACT.wav",
+      "source_sha256": "b286530e03c2e9772731b1dfe5a8b8cfc4cfe36349edc7981e1759ebeae57e1a",
+      "duration_s": 0.6005625,
+      "recognized_phonemes": "f aɪ v",
+      "tokens": [
+        {
+          "token": "f",
+          "start_s": 0.08,
+          "end_s": 0.105,
+          "probability": 0.9479000999298575
+        },
+        {
+          "token": "aɪ",
+          "start_s": 0.14,
+          "end_s": 0.165,
+          "probability": 0.5249544422073789
+        },
+        {
+          "token": "v",
+          "start_s": 0.48,
+          "end_s": 0.505,
+          "probability": 0.9784045691671566
+        }
+      ]
+    }
+  ]
+}

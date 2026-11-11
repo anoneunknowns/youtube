@@ -1,0 +1,810 @@
+{
+  "schema_version": 1,
+  "kind": "independent-read-only-final-aac-peer-review",
+  "status": "pass",
+  "checked_at_utc": "2026-11-11T11:37:53.984297+00:00",
+  "historical_revision": "odd-counting-v001; this review does not accept v002 or satisfy its eight-minute requirement",
+  "reviewed_gate": {
+    "path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v001\\audio-final-qa\\final-aac-review.json",
+    "sha256": "078ed642d84dccbd8205b9c0c7a04a2d9fa787f367dc70197f6b9974718a7d35"
+  },
+  "video": {
+    "path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v001\\paspla-studio-odd-numbers-1-to-199-1080p.mp4",
+    "sha256": "01bf3461ac1aa3c904b12f01d5248b5254f0d198231ce5da4a8283b0fdf2899f"
+  },
+  "timeline": {
+    "path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v001\\timeline.json",
+    "sha256": "4fec62e30d2ba5ee5c9a93391c8be0e2456d33e9e332f337e4229850d9624409"
+  },
+  "findings": [],
+  "checks": {
+    "completed_gate_reviewed": true,
+    "utterances": 113,
+    "numeric": 100,
+    "dialogue": 13,
+    "source_substitution_ruled_out_by_independent_redecode": true,
+    "all_113_fresh_asr_and_ctc_clip_hashes_bound": true,
+    "ctc_differences_reviewed": 41,
+    "hash_bound_files_verified": 142,
+    "numeric_meaning_alone_used_to_clear_phone_differences": false,
+    "source_gate_automatically_reused_as_final_pronunciation_approval": false,
+    "read_only_gate_and_delivery_review": true
+  },
+  "specific_phonetic_review": [
+    {
+      "ids": [
+        "I04",
+        "I05",
+        "T009"
+      ],
+      "finding": "CTC pairs labels eI with no separate r are explicitly retained as differences, not normalized into an exact phone match.",
+      "basis": "Reviewed fresh delivery LPC tracks in targeted-formants.json and supplementary-formants.json; descending F3 into approximately 2.1–2.2 kHz toward F2 supports r-color. The report states this is diagnostic support, not proof of perfect articulation."
+    },
+    {
+      "ids": [
+        "N065",
+        "N173"
+      ],
+      "finding": "Source CTC split-s warnings were not silently inherited as cleared.",
+      "basis": "Fresh final-AAC CTC has a complete single s in both. Independently inspected targeted-boundaries.json: N065 aperiodic frication0.02–0.11s then periodicity0.811 at0.12s; N173 aperiodic frication0.60–0.70s then periodicity0.644 at0.71s. This addresses syllable repetition with actual acoustic evidence rather than numeric meaning."
+    },
+    {
+      "ids": [
+        "N005",
+        "N109"
+      ],
+      "finding": "Exterior-silence-sensitive extra terminal labels are documented rather than erased.",
+      "basis": "Same actual AAC exact-event controls, separately hashed and freshly recognized, recover f-aI-v and complete one-hundred-nine. Their original guard-retaining outputs remain in the raw CTC report."
+    },
+    {
+      "ids": [
+        "I02",
+        "I03",
+        "I06",
+        "I07",
+        "N021",
+        "N049",
+        "N059",
+        "N087",
+        "N089",
+        "N091",
+        "N093",
+        "N095",
+        "N097",
+        "N101",
+        "T101",
+        "N121",
+        "N123",
+        "N127",
+        "N129",
+        "N133",
+        "N139",
+        "N149",
+        "N151",
+        "N159",
+        "N163",
+        "N171",
+        "N185",
+        "N189",
+        "N191",
+        "N193",
+        "N195",
+        "N197",
+        "N199",
+        "F02",
+        "F03",
+        "F04"
+      ],
+      "finding": "Other differences received individual connected-US-speech/unstressed-vowel/tap/length explanations; reviewed all41 difference rows.",
+      "basis": "The raw phoneme strings are retained beside each decision. No whole-number value or ASR text match is used as the sole stated reason for a phoneme difference."
+    }
+  ],
+  "independent_redecode": {
+    "status": "pass",
+    "kind": "independent-final-aac-provenance-audit",
+    "checked_at_utc": "2026-11-11T11:33:43.035092+00:00",
+    "scope": "Read-only; proves ASR and CTC inputs derive from current video; does not itself approve pronunciation.",
+    "video": {
+      "path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v001\\paspla-studio-odd-numbers-1-to-199-1080p.mp4",
+      "sha256": "01bf3461ac1aa3c904b12f01d5248b5254f0d198231ce5da4a8283b0fdf2899f"
+    },
+    "manifest": {
+      "path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v001\\audio-final-qa\\final-aac-manifest.json",
+      "sha256": "ea530e70bb870ccdde3988a26808fb62da37e06d65242bff6734ca555658ccc2"
+    },
+    "utterances_redecoded": 113,
+    "results": [
+      {
+        "id": "I01",
+        "clip_sha256": "7be92090350ebeda3ddbfab48f10b20707849f302adeb6f9208647c4702b0493",
+        "aac_left_samples_bit_exact": true,
+        "frames": 90242
+      },
+      {
+        "id": "I02",
+        "clip_sha256": "a6fe0148f162bd2696ff3d98bdcace2e740de4bf2646a73dbd834593810dadb4",
+        "aac_left_samples_bit_exact": true,
+        "frames": 83780
+      },
+      {
+        "id": "I03",
+        "clip_sha256": "19ec8467e3dde964706aa43a3c33fc16c27ae87cb92cb810551c20f3cc39fd02",
+        "aac_left_samples_bit_exact": true,
+        "frames": 88646
+      },
+      {
+        "id": "I04",
+        "clip_sha256": "27ce796aea6b598fc2f0ba592ebc179e782e6f4a25c2288264eb7601daefaa44",
+        "aac_left_samples_bit_exact": true,
+        "frames": 137264
+      },
+      {
+        "id": "I05",
+        "clip_sha256": "2f81cd3c0b39676e3591688eaf3038f7ff88d6edf1ceee2472fbb4e61d617fe2",
+        "aac_left_samples_bit_exact": true,
+        "frames": 137490
+      },
+      {
+        "id": "I06",
+        "clip_sha256": "ce12b79ea338cdba6fb16f0a1532e9c68a929249b67a3bfa71d425ab57f9cb89",
+        "aac_left_samples_bit_exact": true,
+        "frames": 128362
+      },
+      {
+        "id": "I07",
+        "clip_sha256": "e75b2778848e1542a35fced4ad62582e7a7567377cbe715691de47c7cfb987db",
+        "aac_left_samples_bit_exact": true,
+        "frames": 125318
+      },
+      {
+        "id": "N001",
+        "clip_sha256": "f8edcaf4d6baa36c15c65ed32087f7c9f09501ddc788232a529dac5677a0dd39",
+        "aac_left_samples_bit_exact": true,
+        "frames": 30520
+      },
+      {
+        "id": "N003",
+        "clip_sha256": "22f3f6d245768b0349b4f2c3e0bdf496efab892268f7aa80de3239740d9a12d0",
+        "aac_left_samples_bit_exact": true,
+        "frames": 34430
+      },
+      {
+        "id": "N005",
+        "clip_sha256": "9261e8acb918689ed2e7a56067d8b192a5015eca478a5a5da6752d0aa1c75069",
+        "aac_left_samples_bit_exact": true,
+        "frames": 36506
+      },
+      {
+        "id": "N007",
+        "clip_sha256": "e52d10c874f584485d03a67190cdfe96b798bbda115abd57c7bd7134116a6103",
+        "aac_left_samples_bit_exact": true,
+        "frames": 34124
+      },
+      {
+        "id": "N009",
+        "clip_sha256": "98f9be9f4ffca0622bcb0c99069e4b1a909e420543f1ff5b8f6d04d0f9df1f9d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 33802
+      },
+      {
+        "id": "T009",
+        "clip_sha256": "6c3f146b340a7e4c971c2057c933c1ea0c01759b16150f067e13eddfb54ea03c",
+        "aac_left_samples_bit_exact": true,
+        "frames": 148432
+      },
+      {
+        "id": "N011",
+        "clip_sha256": "968af35581d11dfd2a222f74fbf20a691c69ab95d2e3bb19d4e485f498e2d37d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 36440
+      },
+      {
+        "id": "N013",
+        "clip_sha256": "dece276b51d3adc6b0e04145d4a6c07b559757752e26d13a1af87d91bb939297",
+        "aac_left_samples_bit_exact": true,
+        "frames": 40844
+      },
+      {
+        "id": "N015",
+        "clip_sha256": "b7c54b9567b6bff8dbe4b0e1730ad0ed856fec2dac923b24fe8eb62a8b8ed35e",
+        "aac_left_samples_bit_exact": true,
+        "frames": 41350
+      },
+      {
+        "id": "N017",
+        "clip_sha256": "aa1202df8c3cae90541074767d78fe259f4d1bfec049ba2e73a2e14b2eca304b",
+        "aac_left_samples_bit_exact": true,
+        "frames": 46966
+      },
+      {
+        "id": "N019",
+        "clip_sha256": "794bfaa7a1c1af3a28d16f234ed508166764896fda502bd9f9513be6e9a6f77d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 42380
+      },
+      {
+        "id": "N021",
+        "clip_sha256": "7b21e501efc7d9cf7f8fa101c4bc7c7741474526bee24c14086f73508e14c32d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 40336
+      },
+      {
+        "id": "N023",
+        "clip_sha256": "51bf81e783dd81734ce2b3f3c88bdc2944bb0bc053106daf8d46a822170bce3e",
+        "aac_left_samples_bit_exact": true,
+        "frames": 45928
+      },
+      {
+        "id": "N025",
+        "clip_sha256": "a1809d1ad3ab3642071968bf2473306af57a2a8d852003b87f7eede76da9da3c",
+        "aac_left_samples_bit_exact": true,
+        "frames": 48422
+      },
+      {
+        "id": "N027",
+        "clip_sha256": "362b98a872f317ff625fe4e9a3a0361a0944bb047aa843f2f362fd7c49b9075d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 47468
+      },
+      {
+        "id": "N029",
+        "clip_sha256": "7c5a6f912562bdb63ed05e588dcf7169a464a223e50fbaf932aa497a9970a6f9",
+        "aac_left_samples_bit_exact": true,
+        "frames": 44940
+      },
+      {
+        "id": "N031",
+        "clip_sha256": "d269e1c5d4d678538cb56134d399f8735d997fe6adcbf995f14f3b6d3e4dcf7e",
+        "aac_left_samples_bit_exact": true,
+        "frames": 42930
+      },
+      {
+        "id": "N033",
+        "clip_sha256": "53e438a6984b7e635c36c4dd61576fbd733eb542676b1fe20bcb913214619e39",
+        "aac_left_samples_bit_exact": true,
+        "frames": 46148
+      },
+      {
+        "id": "N035",
+        "clip_sha256": "d869e8eccfb6412f897da35b82ff83abea2a97bb122492ece888af2d95add988",
+        "aac_left_samples_bit_exact": true,
+        "frames": 48256
+      },
+      {
+        "id": "N037",
+        "clip_sha256": "8f6afe2b56132baf90d749ec6a8bbd4753bdf1d3c0954092821579c32644aff0",
+        "aac_left_samples_bit_exact": true,
+        "frames": 47200
+      },
+      {
+        "id": "N039",
+        "clip_sha256": "38934729fc995308f9c88d3b7cb40d08b6330268adf662c908d6db2046fa37ec",
+        "aac_left_samples_bit_exact": true,
+        "frames": 47652
+      },
+      {
+        "id": "N041",
+        "clip_sha256": "299827db5723cd61a917fcaf500c67fa4a41fe13b4fa372994ff8cd016e0fdf7",
+        "aac_left_samples_bit_exact": true,
+        "frames": 44290
+      },
+      {
+        "id": "N043",
+        "clip_sha256": "02141a6c3bde463540bf3d90d5350b3cd868593b25bdeb947a0fb50f61ea5eaf",
+        "aac_left_samples_bit_exact": true,
+        "frames": 47044
+      },
+      {
+        "id": "N045",
+        "clip_sha256": "825941ef9ad3e7e32482198e1a1c930db3414cbea949b25d9680d511f1f6770a",
+        "aac_left_samples_bit_exact": true,
+        "frames": 49660
+      },
+      {
+        "id": "N047",
+        "clip_sha256": "03baef737bafa73580effbee9694b0508a563181f0ce0c29f6fbdffcd19cee01",
+        "aac_left_samples_bit_exact": true,
+        "frames": 48710
+      },
+      {
+        "id": "N049",
+        "clip_sha256": "f700ac0abf6c5cdd26af8b5b3a93c275c3c5af58980177e53a1e5851fa29c754",
+        "aac_left_samples_bit_exact": true,
+        "frames": 48354
+      },
+      {
+        "id": "N051",
+        "clip_sha256": "212abbd0694f63a7d17c5078d875c311cd5bd56c4157d1bc83ce23774924eb06",
+        "aac_left_samples_bit_exact": true,
+        "frames": 43656
+      },
+      {
+        "id": "N053",
+        "clip_sha256": "f2d20715cdf583dc564e9c778e7dd2a2f5ffc42000547ecd7ae0f7438fa4e10b",
+        "aac_left_samples_bit_exact": true,
+        "frames": 48444
+      },
+      {
+        "id": "N055",
+        "clip_sha256": "1f90ba5165c4b0a96d4033a84de2034fbdb24317fbcae4b075ccc89a41029566",
+        "aac_left_samples_bit_exact": true,
+        "frames": 50494
+      },
+      {
+        "id": "N057",
+        "clip_sha256": "b447cb7f623ae215cbd37553fb03cd46995eaae03ec2f1042994b64749a01b85",
+        "aac_left_samples_bit_exact": true,
+        "frames": 48554
+      },
+      {
+        "id": "N059",
+        "clip_sha256": "3e7a375f4b7bfe62a822094015debbd3ab28df12059996bcccbb0858d694e125",
+        "aac_left_samples_bit_exact": true,
+        "frames": 48602
+      },
+      {
+        "id": "N061",
+        "clip_sha256": "a6d22779077734743adfe41bb4a0cf39eb0892ac69e180506cfb7e3e6a3c29ae",
+        "aac_left_samples_bit_exact": true,
+        "frames": 43950
+      },
+      {
+        "id": "N063",
+        "clip_sha256": "605e8db6e0131ce0f1e343785df2ffc6158ced96e9879e4492c45d5ed31c5a79",
+        "aac_left_samples_bit_exact": true,
+        "frames": 49616
+      },
+      {
+        "id": "N065",
+        "clip_sha256": "095a10532aeaaa1a49701d23e0e07b91b7d438e93d776d44ac9d6dd3eaa30e54",
+        "aac_left_samples_bit_exact": true,
+        "frames": 49828
+      },
+      {
+        "id": "N067",
+        "clip_sha256": "8557d508082f8468cf052465eeddcc0597fde140c648489296c0f6aa39e4da40",
+        "aac_left_samples_bit_exact": true,
+        "frames": 51034
+      },
+      {
+        "id": "N069",
+        "clip_sha256": "e7263a429e4b552f2905a721c5421d992e6cc8a358993f762b039a389d1b0fdd",
+        "aac_left_samples_bit_exact": true,
+        "frames": 47290
+      },
+      {
+        "id": "N071",
+        "clip_sha256": "0e43ea9b5e91b850256ea281599ebc933f639d56cf291be0416a81284407f7b7",
+        "aac_left_samples_bit_exact": true,
+        "frames": 49840
+      },
+      {
+        "id": "N073",
+        "clip_sha256": "9b8ea6f7da9d986f87dbafbd277e5d90cab8025c352918b68efe63aec20f4c02",
+        "aac_left_samples_bit_exact": true,
+        "frames": 53242
+      },
+      {
+        "id": "N075",
+        "clip_sha256": "cdba45af955590baee2d8fedc77735233df6947e0927e13d14c81ff5096298dd",
+        "aac_left_samples_bit_exact": true,
+        "frames": 56186
+      },
+      {
+        "id": "N077",
+        "clip_sha256": "1c2ce73873a6d8030cf32043741130e7853f0886911ddde9566bf17d2ab8544d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 55156
+      },
+      {
+        "id": "N079",
+        "clip_sha256": "bde42752efe84edaf93d4d530ff7c0178fcadeafcd2fe269897c6651afd39689",
+        "aac_left_samples_bit_exact": true,
+        "frames": 54440
+      },
+      {
+        "id": "N081",
+        "clip_sha256": "6cc9a27ae603bd581abf84ddb0c0077ef98536ff53a6ea711de346d513f5eab0",
+        "aac_left_samples_bit_exact": true,
+        "frames": 40676
+      },
+      {
+        "id": "N083",
+        "clip_sha256": "2ddedeba2611bd44d4d4ccf41f0625baad8485dd406429afe7087a33bb29ffa7",
+        "aac_left_samples_bit_exact": true,
+        "frames": 45390
+      },
+      {
+        "id": "N085",
+        "clip_sha256": "4ad567dd8fe47e98f63c7b786c248467ad68752c9215d9be564f2816bc59454c",
+        "aac_left_samples_bit_exact": true,
+        "frames": 46962
+      },
+      {
+        "id": "N087",
+        "clip_sha256": "6c7ea644376f18a8d08367f54fa6af7fa9b1b80bd2ef5b54abf647daa2c81fdc",
+        "aac_left_samples_bit_exact": true,
+        "frames": 46290
+      },
+      {
+        "id": "N089",
+        "clip_sha256": "ffbfe399b11b3ceeec7c49376a4f9b082eb1f9d6390e8b5290c342b06351d94b",
+        "aac_left_samples_bit_exact": true,
+        "frames": 44558
+      },
+      {
+        "id": "N091",
+        "clip_sha256": "e915ca4aded0c47117ce698460f8a6b2b7ace610ba23440f68ae2ba0ca7f2175",
+        "aac_left_samples_bit_exact": true,
+        "frames": 45648
+      },
+      {
+        "id": "N093",
+        "clip_sha256": "5dd92e4b20cea4444a3808b4132e3ec4b410639affca31c1901a888b41b325a3",
+        "aac_left_samples_bit_exact": true,
+        "frames": 48770
+      },
+      {
+        "id": "N095",
+        "clip_sha256": "a00b6008a413aab10168ad9690fd9651a82d0212bf24c719b20f49779fe57051",
+        "aac_left_samples_bit_exact": true,
+        "frames": 50424
+      },
+      {
+        "id": "N097",
+        "clip_sha256": "2d2027e64eb18ba12a1bf11fcdafc22c53a801324cc4380caea63022d046c819",
+        "aac_left_samples_bit_exact": true,
+        "frames": 51528
+      },
+      {
+        "id": "N099",
+        "clip_sha256": "13010a3388e7a0998cf6d245d9e4843c4334bb904d8098f7110a2b654d216267",
+        "aac_left_samples_bit_exact": true,
+        "frames": 49930
+      },
+      {
+        "id": "N101",
+        "clip_sha256": "054782cd257b6a605f964874af28e78185401561327c0e67fff86700d7e6d374",
+        "aac_left_samples_bit_exact": true,
+        "frames": 58638
+      },
+      {
+        "id": "T101",
+        "clip_sha256": "982d833914e33d149ff2fd636f4226bd8fcb62ea4d1cb5569a9b9e34ac384466",
+        "aac_left_samples_bit_exact": true,
+        "frames": 163114
+      },
+      {
+        "id": "N103",
+        "clip_sha256": "96b9aefc249e3661bd91bdc1260d7a54bec895b3708f6c047a2fb538a7940161",
+        "aac_left_samples_bit_exact": true,
+        "frames": 59732
+      },
+      {
+        "id": "N105",
+        "clip_sha256": "9c45b3fdd6540018faf9adde61a7673e2a04de3f4f3d3f0d13faf0b62fe4d569",
+        "aac_left_samples_bit_exact": true,
+        "frames": 63046
+      },
+      {
+        "id": "N107",
+        "clip_sha256": "65fe1df85d084b15e08a47727bc460d4d69580033613f8116265119603b89049",
+        "aac_left_samples_bit_exact": true,
+        "frames": 61656
+      },
+      {
+        "id": "N109",
+        "clip_sha256": "73293bd97c489c16a0d082158130eed1c2e5301c0b3fe0b8778418f9f2363e90",
+        "aac_left_samples_bit_exact": true,
+        "frames": 60502
+      },
+      {
+        "id": "N111",
+        "clip_sha256": "0bf766b3cf5886c332f44fde0f6371887ee21f78153c87b5193e99ad131ce39f",
+        "aac_left_samples_bit_exact": true,
+        "frames": 63478
+      },
+      {
+        "id": "N113",
+        "clip_sha256": "a0c1ccc8815ce4fb7a85bfaf5c6c09a67582c91e1343b26f2be1d40ad8a2df66",
+        "aac_left_samples_bit_exact": true,
+        "frames": 69410
+      },
+      {
+        "id": "N115",
+        "clip_sha256": "4b3d358511a12f67cc270afab2174b65ed92f7753d0593a189a8fbdbc1d07d3b",
+        "aac_left_samples_bit_exact": true,
+        "frames": 67658
+      },
+      {
+        "id": "N117",
+        "clip_sha256": "8281c001eeb1f7a06a852fdd23e17155eff307e99733d72f152e8442d744250f",
+        "aac_left_samples_bit_exact": true,
+        "frames": 72114
+      },
+      {
+        "id": "N119",
+        "clip_sha256": "6b69cf16198113a4c8a642b94f05c679a1aa3490e165083a1960fbad506bdc0b",
+        "aac_left_samples_bit_exact": true,
+        "frames": 70190
+      },
+      {
+        "id": "N121",
+        "clip_sha256": "9d01bc48b3c56702df1d10e04be0e4f6cb0adb6e392afbf9ca984aa0b996b7af",
+        "aac_left_samples_bit_exact": true,
+        "frames": 70610
+      },
+      {
+        "id": "N123",
+        "clip_sha256": "5b71fc7bbba51603c43785fb18287bdbf41136829919986dd9926ac523b14a38",
+        "aac_left_samples_bit_exact": true,
+        "frames": 72748
+      },
+      {
+        "id": "N125",
+        "clip_sha256": "737153acd29c7b26e9be0d973c14729f16c40f10ff0313c3a3aea1115904bda1",
+        "aac_left_samples_bit_exact": true,
+        "frames": 74548
+      },
+      {
+        "id": "N127",
+        "clip_sha256": "d5bf5aa71538d894e9614fe820ae2fdf73c5d4faac297e796840bd415d48de41",
+        "aac_left_samples_bit_exact": true,
+        "frames": 75110
+      },
+      {
+        "id": "N129",
+        "clip_sha256": "a9ca26c707a6fb3c6c2b9c74051e242e43ce2b7e454ace8900e1407090878085",
+        "aac_left_samples_bit_exact": true,
+        "frames": 72486
+      },
+      {
+        "id": "N131",
+        "clip_sha256": "bd19c57ab7735c7f96baded9c33baca14d369414b8f9acc168785e606ce67c31",
+        "aac_left_samples_bit_exact": true,
+        "frames": 68954
+      },
+      {
+        "id": "N133",
+        "clip_sha256": "aa7179393bc04c514c6355fb40795bdad5be84d547d0f6b87e57aa4f665fd1e1",
+        "aac_left_samples_bit_exact": true,
+        "frames": 74134
+      },
+      {
+        "id": "N135",
+        "clip_sha256": "c9423daaf89f5a81630c584f848ccbd93395959be39d98889aa65f2d4b9e5097",
+        "aac_left_samples_bit_exact": true,
+        "frames": 76942
+      },
+      {
+        "id": "N137",
+        "clip_sha256": "de6ac19fb51cc5862238775f660f193ecd4c255e422473bed9f5a2ad6498834d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 75258
+      },
+      {
+        "id": "N139",
+        "clip_sha256": "34dba960a5558199d3ec7a41ff89915f3c39e6a43779a0d12de3485fa0b6532c",
+        "aac_left_samples_bit_exact": true,
+        "frames": 73942
+      },
+      {
+        "id": "N141",
+        "clip_sha256": "9636889709a536e320b93be1c0aa1c0761d48bdab6bbb511241395f094a15674",
+        "aac_left_samples_bit_exact": true,
+        "frames": 70600
+      },
+      {
+        "id": "N143",
+        "clip_sha256": "2f1f6aa2b608e34aedcbd49eea9a33c7844a48352bbaa80d605d378abc8f97c7",
+        "aac_left_samples_bit_exact": true,
+        "frames": 72490
+      },
+      {
+        "id": "N145",
+        "clip_sha256": "f4bb84534306f0912004dc745345e3a93561feb66f6202d080a0d6e02fa59250",
+        "aac_left_samples_bit_exact": true,
+        "frames": 79532
+      },
+      {
+        "id": "N147",
+        "clip_sha256": "9e298fca4a9dc58c7e129f33f3358b9f1bb1bef753e3c3a5b0b124086b9e7778",
+        "aac_left_samples_bit_exact": true,
+        "frames": 75096
+      },
+      {
+        "id": "N149",
+        "clip_sha256": "c8fe4432751360d5fc2f2a04ac398d74b29302d6c5f2c6fe1bc855f57d850fb2",
+        "aac_left_samples_bit_exact": true,
+        "frames": 75996
+      },
+      {
+        "id": "N151",
+        "clip_sha256": "bb1ba1bbb94209b8121bbd3ab1910a2a7873e6c14f7a2c0e7ace59808b7a94b9",
+        "aac_left_samples_bit_exact": true,
+        "frames": 68724
+      },
+      {
+        "id": "N153",
+        "clip_sha256": "8e0385d893eb8345146aa7751bf501a44c068010bdebef0f53a948350434a81d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 72746
+      },
+      {
+        "id": "N155",
+        "clip_sha256": "41e2fbb9d691fab6a20763a97324a5882e28e2056be9de28352527e0f6e05470",
+        "aac_left_samples_bit_exact": true,
+        "frames": 76610
+      },
+      {
+        "id": "N157",
+        "clip_sha256": "11765537c93b446a6d02eab9c129c25f851a69f98753b7ce0e60c2b8e2ff81c6",
+        "aac_left_samples_bit_exact": true,
+        "frames": 76460
+      },
+      {
+        "id": "N159",
+        "clip_sha256": "a46855ec1263833f96210e4655495973539c17d4bd3b9fe060806e4bedbceab6",
+        "aac_left_samples_bit_exact": true,
+        "frames": 74192
+      },
+      {
+        "id": "N161",
+        "clip_sha256": "d6b5548c6fdf4160be200d5d78ccb854700aae6cd720b1363558dded9e567769",
+        "aac_left_samples_bit_exact": true,
+        "frames": 71552
+      },
+      {
+        "id": "N163",
+        "clip_sha256": "94dfa17eaf1c8f37fc93e0ff066bbac79839f1afd967d4992715805299eb11fb",
+        "aac_left_samples_bit_exact": true,
+        "frames": 74914
+      },
+      {
+        "id": "N165",
+        "clip_sha256": "ae80e0aa74f61462f914c77567a419703fade021196dcc701703669615dfe59d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 77358
+      },
+      {
+        "id": "N167",
+        "clip_sha256": "4a610d55b8624ad6c6f08ce94f4ae2b6667d767b3c37d10e164a49b39dee312c",
+        "aac_left_samples_bit_exact": true,
+        "frames": 78334
+      },
+      {
+        "id": "N169",
+        "clip_sha256": "6f8f1ddd6dffe1c6bbf584de89670789292fc9433bc88c3e7ab9f7dfb673e25a",
+        "aac_left_samples_bit_exact": true,
+        "frames": 74810
+      },
+      {
+        "id": "N171",
+        "clip_sha256": "522e5d4e5b3b5b476e55431d5e5b4137471834f6fd0511f7fd06cb20604ebb3b",
+        "aac_left_samples_bit_exact": true,
+        "frames": 75936
+      },
+      {
+        "id": "N173",
+        "clip_sha256": "b3b0314847335033bbfc6bc2f574cb1138e7f093d85a42a8ab9df7e144a6fb45",
+        "aac_left_samples_bit_exact": true,
+        "frames": 77784
+      },
+      {
+        "id": "N175",
+        "clip_sha256": "5f67793039da5330e0e7a47b95b4b07c02c5f1021582c3e226c10a7b22b24e17",
+        "aac_left_samples_bit_exact": true,
+        "frames": 80702
+      },
+      {
+        "id": "N177",
+        "clip_sha256": "ff41fed17047650079551c59db6a6234699f14101a94948f97228ba9b0fe52b1",
+        "aac_left_samples_bit_exact": true,
+        "frames": 81712
+      },
+      {
+        "id": "N179",
+        "clip_sha256": "4ceda588462a404771a2084c08e087ff33b891604dab81eaa247a9545aad8814",
+        "aac_left_samples_bit_exact": true,
+        "frames": 78696
+      },
+      {
+        "id": "N181",
+        "clip_sha256": "8828543f41e31349739824a70073083e07633300f1254e8a3e87c95741673ba1",
+        "aac_left_samples_bit_exact": true,
+        "frames": 66498
+      },
+      {
+        "id": "N183",
+        "clip_sha256": "796a50315abacd940f826b257393e7272d640e11ef438eefa86ac8159c6a22a4",
+        "aac_left_samples_bit_exact": true,
+        "frames": 74544
+      },
+      {
+        "id": "N185",
+        "clip_sha256": "5c0cd0b0ebfb263052a595bb73081b00790b8c186d8eabe64ecb9497c2f4a4bb",
+        "aac_left_samples_bit_exact": true,
+        "frames": 79236
+      },
+      {
+        "id": "N187",
+        "clip_sha256": "2d1dec48492bde9d58517f279715cfe0615faa0a55d9f5e6a8cec8e4d607027d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 77458
+      },
+      {
+        "id": "N189",
+        "clip_sha256": "fc3c162f1a6b5fd8342032a78668dfe3ad3b6e749fbe7494d4368bc90cad64c1",
+        "aac_left_samples_bit_exact": true,
+        "frames": 76928
+      },
+      {
+        "id": "N191",
+        "clip_sha256": "3fc08cbc7861875ac435af3c3bcc2f4a2312a2bbc402120ae71641940885a5e3",
+        "aac_left_samples_bit_exact": true,
+        "frames": 72904
+      },
+      {
+        "id": "N193",
+        "clip_sha256": "e284755b02855d84b9ba3edd9c368d0f79d8127de4007b354b5ca493b3bea432",
+        "aac_left_samples_bit_exact": true,
+        "frames": 74878
+      },
+      {
+        "id": "N195",
+        "clip_sha256": "4079f48730667c4fa6756ac5d133ff16e81dc0369880ee24cd7fb7f909cc1c3f",
+        "aac_left_samples_bit_exact": true,
+        "frames": 80568
+      },
+      {
+        "id": "N197",
+        "clip_sha256": "f7bb858a793a87e0b908ad89992b37c70fd0556f4058c4a875a9b38e42ff5894",
+        "aac_left_samples_bit_exact": true,
+        "frames": 81630
+      },
+      {
+        "id": "N199",
+        "clip_sha256": "fa9a050eca998494f3bd0299cd7d902c738b567db5bb1985f92ab1119fce2c80",
+        "aac_left_samples_bit_exact": true,
+        "frames": 77524
+      },
+      {
+        "id": "F01",
+        "clip_sha256": "9982d6a4dda1404faa80503b417aafa6552e49dae48b439de05e3cd94e6e0345",
+        "aac_left_samples_bit_exact": true,
+        "frames": 42362
+      },
+      {
+        "id": "F02",
+        "clip_sha256": "99769ef0c03f8262d73fda5f035157adf9a5853cf91a4885de17c12753878c83",
+        "aac_left_samples_bit_exact": true,
+        "frames": 168088
+      },
+      {
+        "id": "F03",
+        "clip_sha256": "58432b3b549e95b640d37e8673958dfcefddf3d625ff430e04b18f5cd6a0db4e",
+        "aac_left_samples_bit_exact": true,
+        "frames": 73818
+      },
+      {
+        "id": "F04",
+        "clip_sha256": "c80ac52ed784f265b47f295367a20600633d1b1fb091ea50909a2c371f6cf91d",
+        "aac_left_samples_bit_exact": true,
+        "frames": 47672
+      }
+    ],
+    "fresh_model_bindings": [
+      {
+        "path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v001\\audio-final-qa\\fresh-asr.json",
+        "sha256": "6adc8ac5f8d24c8e36d4f9333ee4857fcd5fedb9ec1891d0bf916c3a19750ff7",
+        "all_113_clip_sha_bound": true
+      },
+      {
+        "path": "D:\\codex_projects\\youtube\\output\\odd-counting-001-v001\\audio-final-qa\\fresh-phonemes.json",
+        "sha256": "1a0f442d1a88614a39352f7c585fcc36e4224e07de4607d86b6af00ffd5c7a9e",
+        "all_113_clip_sha_bound": true
+      }
+    ]
+  },
+  "limitations": "Read-only schema, hash, waveform provenance and phonetic-evidence review. Does not claim full human listening or a guarantee of perceived articulation. v002 requires a new final AAC review."
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "preproduction-deliverables-reviewed",
+  "reviewed_date_jst": "2026-11-11",
+  "selected_mockup_version": "v002",
+  "selected_mockup_manifest": "assets/library/references/even-counting/v002/reference-manifest.json",
+  "review_scope": "Scripts, number data, timing estimate, source provenance and static image layout. No new speech or finished video.",
+  "concept": "Wooden Toy Workshop",
+  "character": "little-bird",
+  "selection": "One Get-SecureRandom draw from four registered characters; no reroll",
+  "independent_content_checks": {
+    "even_values": 101,
+    "range": [
+      0,
+      200
+    ],
+    "step": 2,
+    "duplicates_or_omissions": 0,
+    "english_readings_match_independent_number_function": true,
+    "json_tsv_consistent": true,
+    "ordinary_boundaries_2s": 98,
+    "teaching_boundaries_10s": 2,
+    "total_source_number_pcm_frames": 2470539,
+    "source_rate_hz": 24000,
+    "source_number_speech_s": 102.939125,
+    "conditional_estimated_video_s": 369.339125
+  },
+  "source_verification": {
+    "number_wav_sha_and_prior_acceptance_checked": 101,
+    "number_pcm_format_and_duration_checked": 101,
+    "new_asr_or_listening_performed": false
+  },
+  "static_image_review": {
+    "storyboard_all_nine_scenes_viewed": true,
+    "native_size_root_review": [
+      "01-introduction.png",
+      "07-hundred-rule.png",
+      "09-finale.png"
+    ],
+    "additional_native_size_delegate_review": [
+      "04-twenty-pairs.png",
+      "08-maximum-reading-width.png"
+    ],
+    "findings": [
+      "Six tokens are arranged as three vertical pairs; twenty tokens as ten vertical pairs.",
+      "100 highlights only the final zero without moving the number.",
+      "The finale holds 200, shows a checkmark and uses END instead of 202.",
+      "The existing registered bird stands on the floor; no number or text overlaps the character.",
+      "The number and reading sizes stay fixed for all 101 states; the widest reading is one hundred seventy-eight.",
+      "The teaching field and persistent progression cards match the written scene specification."
+    ],
+    "unresolved_findings": []
+  },
+  "integrity": {
+    "nine_selected_still_hashes_match_manifest": true,
+    "selected_renderer_hash_matches_manifest": true,
+    "background_hash_matches_manifest": true,
+    "background_sha256": "316c00702cbfa5cb779bb00e290d1f1a42da2e2028184849328dd1641833a77b"
+  },
+  "production_status": {
+    "new_dialogue_recorded": false,
+    "audio_master_generated": false,
+    "finished_video_generated": false,
+    "final_video_qa_performed": false
+  },
+  "duration_condition": "The new dialogue must fit the 36-second intro, two 8-second teaching windows and 14-second finale. Actual speech measurement is required at production time.",
+  "generation_mode": "Built-in image_gen.imagegen for the new background; existing character source reused. Educational text, tokens and emphasis are composed by the local scene renderer.",
+  "prompt_file": "assets/library/worlds/wooden-toy-workshop/backgrounds/v001/generation-prompt.txt"
+}

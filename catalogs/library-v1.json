@@ -7,7 +7,9 @@
     "binary-counting-reference-v001",
     "octal-counting-reference-v004",
     "hexadecimal-counting-reference-v001",
-    "four-base-counting-reference-v004"
+    "four-base-counting-reference-v004",
+    "even-counting-reference-v002",
+    "odd-counting-reference-v002"
   ],
   "storage_policy": {
     "project_local_paths": true,
@@ -213,6 +215,24 @@
       "video_generated": true,
       "supersedes_reference_set_id": "four-base-counting-reference-v003",
       "implemented_by_production_set_id": "four-base-counting-production-v002"
+    },
+    "even-counting-reference-v002": {
+      "status": "assistant-image-reviewed",
+      "user_approved": false,
+      "manifest": "assets/library/references/even-counting/v002/reference-manifest.json",
+      "key_visual": "assets/library/references/even-counting/v002/key-visual.png",
+      "storyboard": "assets/library/references/even-counting/v002/storyboard.png",
+      "review_record": "design/even-counting-v1/preproduction-review.json",
+      "purpose": "Static scene composition, distinct from completed-video acceptance."
+    },
+    "odd-counting-reference-v002": {
+      "status": "assistant-image-reviewed",
+      "user_approved": false,
+      "manifest": "assets/library/references/odd-counting/v002/reference-manifest.json",
+      "key_visual": "assets/library/references/odd-counting/v002/key-visual.png",
+      "storyboard": "assets/library/references/odd-counting/v002/storyboard.png",
+      "review_record": "assets/library/references/odd-counting/v002/character-and-layout-review.json",
+      "purpose": "Static composition, registered neutral character and ticket-diagram reference; completed-video acceptance is recorded separately."
     }
   },
   "items": {
@@ -876,6 +896,13 @@
       "path": "assets/library/references/four-base-counting/v004/reference-manifest.json",
       "sha256": "1d8573852d724435bafd825fd059b92a9f80ebc94bd45eca55ddb1cb6d1cd3a5"
     },
+    "wooden-toy-workshop-background-v001": {
+      "kind": "reusable-background-plate",
+      "status": "assistant-image-reviewed",
+      "path": "assets/library/worlds/wooden-toy-workshop/backgrounds/v001/wooden-toy-workshop-background.png",
+      "sha256": "316c00702cbfa5cb779bb00e290d1f1a42da2e2028184849328dd1641833a77b",
+      "generation_record": "assets/library/worlds/wooden-toy-workshop/backgrounds/v001/generation-record.json"
+    },
     "siamese-cat-stock-source-v005": {
       "kind": "generated-character-stock-bundle",
       "version": "v005",
@@ -1008,6 +1035,51 @@
       "path": "assets/library/characters/onagadori/motions/v001/registration.json",
       "sha256": "d4a9c1fa9b04515b7ad07d0ce930a67d99555c6aa70b2f3fda6e11d9d785bbae",
       "reusable_across_episodes": true
+    },
+    "odd-counting-reference-v002": {
+      "kind": "static-preproduction-reference-bundle",
+      "version": "v002",
+      "status": "assistant-image-reviewed",
+      "production_asset": false,
+      "reusable_across_episodes": false,
+      "path": "assets/library/references/odd-counting/v002/reference-manifest.json",
+      "sha256": "a4674d28f3c0b141b2d1c752e073c35d368aad20d92fe110ce95bf8cfbe3a50e",
+      "bytes": 129182,
+      "review_record": "assets/library/references/odd-counting/v002/character-and-layout-review.json"
+    },
+    "mountain-cable-station-background-v001": {
+      "kind": "reusable-background-plate",
+      "version": "v001",
+      "status": "assistant-image-reviewed",
+      "reusable_across_episodes": true,
+      "path": "assets/library/worlds/mountain-cable-station/backgrounds/v001/mountain-cable-station-background.png",
+      "sha256": "5839b9226c40699ba9f917758fce616f4e15040671508d2c8fb151153bff13fd",
+      "bytes": 2475314,
+      "generation_record": "assets/library/worlds/mountain-cable-station/backgrounds/v001/generation-record.json",
+      "generation_prompt": "assets/library/worlds/mountain-cable-station/backgrounds/v001/generation-prompt.txt",
+      "review_record": "assets/library/references/odd-counting/v001/character-and-layout-review.json"
+    },
+    "odd-counting-speech-v002": {
+      "kind": "approved_episode_speech_bundle",
+      "version": "v002",
+      "status": "hash_bound_pronunciation_reviewed",
+      "production_asset": true,
+      "reusable_across_episodes": false,
+      "user_approved": false,
+      "path": "output/odd-counting-001-v002/speech/measurements.json",
+      "sha256": "f0f68370ac4e76d46f3a4cf206f6fade6369e05d60ce8ba86137c29474af647a",
+      "bytes": 173925,
+      "measurements": "output/odd-counting-001-v002/speech/measurements.json",
+      "acceptance": "output/odd-counting-001-v002/speech/speech-acceptance.json",
+      "acceptance_sha256": "80fdf9c7d7eb7f11c06c00ac877e0eab57ef36466b5f861342578a3a45779159",
+      "review_record": "output/odd-counting-001-v002/speech/pronunciation-review.json",
+      "language": "en-US",
+      "voice_id": "af_heart",
+      "dtype": "fp32",
+      "generation_speed": 0.98,
+      "number_clips": 150,
+      "dialogue_clips": 13,
+      "usage": "Exact hash-bound adopted sources with fresh isolated recognition, phoneme and boundary evidence; this does not claim full human listening."
     }
   },
   "motion_catalog": "catalogs/motions-v1.json",
@@ -1470,6 +1542,156 @@
       ],
       "delivery_gain_db": 0.8,
       "supersedes_production_set_id": "four-base-counting-production-v001"
+    },
+    "even-counting-production-v001": {
+      "status": "superseded-after-independent-recheck",
+      "user_approved": false,
+      "episode_id": "even-counting-001",
+      "visual_reference_set_id": "even-counting-reference-v002",
+      "count_start": 0,
+      "count_end": 200,
+      "count_step": 2,
+      "bases": [
+        10
+      ],
+      "narration_base": 10,
+      "items": [
+        "little-bird-existing-source-v002",
+        "wooden-toy-workshop-background-v001",
+        "kokoro-af-heart-binary-v001",
+        "kokoro-af-heart-en-us-v002"
+      ],
+      "build_implementation": "tools/build_even_episode.py",
+      "render_implementation": "tools/render_even_video.py",
+      "production_record": "design/even-counting-v1/production-run-v001.json",
+      "review_record": "design/even-counting-v1/production-review-v001.txt",
+      "output": "output/even-counting-001-v001/paspla-studio-even-numbers-0-to-200-1080p.mp4",
+      "timeline": "output/even-counting-001-v001/timeline.json",
+      "master": "output/even-counting-001-v001/master.wav",
+      "actor_height_px": 280,
+      "duration_s": 369.3666666666667,
+      "video_sha256": "a539fbe1843c73000172cf424b9a6c2438e0e6cb1a02e9a8e70b3ce5155b12f3",
+      "technical_qa": "output/even-counting-001-v001/qa/technical-qa.json",
+      "visual_qa": "output/even-counting-001-v001/qa/even-final-qa.json",
+      "audio_qa": "output/even-counting-001-v001/qa/even-final-qa.json",
+      "between_number_voice_gap_s": 2,
+      "ordinary_two_second_transitions": 98,
+      "teaching_transition_durations_s": [
+        10,
+        10
+      ],
+      "delivery_gain_db": 0.8,
+      "superseded_by": "even-counting-production-v002"
+    },
+    "even-counting-production-v002": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "even-counting-001",
+      "visual_reference_set_id": "even-counting-reference-v002",
+      "count_start": 0,
+      "count_end": 200,
+      "count_step": 2,
+      "bases": [
+        10
+      ],
+      "narration_base": 10,
+      "items": [
+        "little-bird-existing-source-v002",
+        "wooden-toy-workshop-background-v001",
+        "kokoro-af-heart-binary-v001",
+        "kokoro-af-heart-en-us-v002"
+      ],
+      "build_implementation": "tools/build_even_episode_v002.py",
+      "render_implementation": "tools/render_even_video_v002.py",
+      "production_record": "design/even-counting-v1/production-run-v002.json",
+      "review_record": "design/even-counting-v1/production-review-v002.txt",
+      "output": "output/even-counting-001-v002/paspla-studio-even-numbers-0-to-200-1080p.mp4",
+      "timeline": "output/even-counting-001-v002/timeline.json",
+      "master": "output/even-counting-001-v002/master.wav",
+      "actor_height_px": 280,
+      "duration_s": 369.0,
+      "video_sha256": "aa70cd47f184cdab4daa72f6ac60dd81d91dc03eadb0d52d13ddf08de53f7633",
+      "technical_qa": "output/even-counting-001-v002/qa/technical-qa.json",
+      "visual_qa": "output/even-counting-001-v002/qa/even-final-qa.json",
+      "audio_qa": "output/even-counting-001-v002/qa/even-final-qa.json",
+      "between_number_voice_gap_s": 2,
+      "ordinary_two_second_transitions": 98,
+      "teaching_transition_durations_s": [
+        10,
+        10
+      ],
+      "delivery_gain_db": 0.8,
+      "verifier_implementation": "tools/verify_even_video_v002.py",
+      "independent_recheck": "design/even-counting-v1/production-qa/v002-recheck-20261111/verification.json",
+      "supersedes_production_set_id": "even-counting-production-v001"
+    },
+    "odd-counting-production-v002": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "odd-counting-001",
+      "visual_reference_set_id": "odd-counting-reference-v002",
+      "count_start": 1,
+      "count_end": 299,
+      "count_step": 2,
+      "counted_values": 150,
+      "voice_events": 163,
+      "bases": [
+        10
+      ],
+      "narration_base": 10,
+      "items": [
+        "red-panda-stock-source-v001",
+        "mountain-cable-station-background-v001",
+        "odd-counting-speech-v002",
+        "kokoro-af-heart-en-us-v002"
+      ],
+      "build_implementation": "tools/build_odd_episode_v002.py",
+      "render_implementation": "tools/render_odd_video_v002.py",
+      "verifier_implementation": "tools/verify_odd_video.py",
+      "production_record": "design/odd-counting-v1/production-run-v002.json",
+      "review_record": "design/odd-counting-v1/production-review-v002.txt",
+      "character_review": "assets/library/references/odd-counting/v002/character-and-layout-review.json",
+      "character_pose": "neutral",
+      "output": "output/odd-counting-001-v002/paspla-studio-odd-numbers-1-to-299-1080p.mp4",
+      "timeline": "output/odd-counting-001-v002/timeline.json",
+      "master": "output/odd-counting-001-v002/master.wav",
+      "actor_height_px": 420,
+      "actor_foot_root_px": [
+        1615,
+        950
+      ],
+      "duration_s": 535.8,
+      "audio_duration_s": 535.7809166666667,
+      "frames": 16074,
+      "fps": 30,
+      "video_sha256": "7b9db137a55d8c35434b39573dd8d3fbf9d76860ac5716897942fd4a2d08710f",
+      "video_bytes": 31833262,
+      "technical_qa": "output/odd-counting-001-v002/qa/technical-qa.json",
+      "visual_qa": "output/odd-counting-001-v002/qa/odd-final-qa.json",
+      "audio_qa": "output/odd-counting-001-v002/qa/odd-final-qa.json",
+      "between_number_voice_gap_s": 2,
+      "ordinary_two_second_transitions": 147,
+      "teaching_transition_durations_s": [
+        10,
+        10
+      ],
+      "teaching_after_values": [
+        9,
+        101
+      ],
+      "display_lead_s": 0.12,
+      "final_number_hold_s": 0.28,
+      "delivery_gain_db": 0.8,
+      "bgm": false,
+      "sound_effects": [],
+      "minimum_duration_s": 480,
+      "pacing_policy": {
+        "ordinary_gap_s": 2,
+        "teaching_gap_s": 10,
+        "minimum_duration_s": 480
+      },
+      "independent_recheck": "design/odd-counting-v1/production-qa/v002/verification.json",
+      "fresh_final_aac_review": "output/odd-counting-001-v002/audio-final-qa/final-aac-review.json"
     }
   },
   "active_production_set_ids": [
@@ -1477,7 +1699,9 @@
     "binary-counting-production-v005",
     "octal-counting-production-v002",
     "hexadecimal-counting-production-v002",
-    "four-base-counting-production-v002"
+    "four-base-counting-production-v002",
+    "even-counting-production-v002",
+    "odd-counting-production-v002"
   ],
   "preproduction_sets": {
     "binary-counting-preproduction-v001": {

@@ -1,0 +1,25 @@
+Num-Num Numbers 第六弾 Even Numbers 完成v001
+
+0から200まで2ずつ数える全101値、英語の自然な米国英語読み。
+背景は木のおもちゃ工房、既存の黄色い小鳥を280px高・足元(1675,950)で使用。
+導入の二個一組、六個三組、20の十組、100の一の位の確認、終幕のチェックを描画した。
+BGM・効果音なし。毎数の動作ループや小鳥の過去の演技は追加していない。
+
+完成動画: output/even-counting-001-v001/paspla-studio-even-numbers-0-to-200-1080p.mp4
+映像: 1920×1080、30fps、11081フレーム、369.366667秒。
+音声マスター: 369.339125秒、48kHz・24bit・ステレオ。
+全115発話（カウント101、新規台詞11、既存台詞3）と英語字幕115件。
+通常98境界は発話終了から次の発話開始まで2秒。20と100の後は10秒。
+数値を発話0.12秒前に表示し、200は発話後0.28秒保持して14秒の締めへ進む。
+
+新規音声と採用台詞は単独ASR、独立CTC、語尾、個別の音響情報を用いて検査し、14件の採用と未解決0件をハッシュに結び付けた。
+最終MP4は全編デコード、形式・フレーム時刻・音量・true peakを検査した。
+全101値の表示と発話境界を抽出して独立した数詞・字形と照合し、代表場面の積み木の個数・組分け・小鳥・文字・フェードも確認した。
+115発話それぞれについて、原音とマスターおよび最終AACの左右音声を波形照合し、発話外の無音区間と字幕を確認した。
+最終AACの原音との最小相関: 0.997804163。
+これらは自動解析と抽出画像の確認であり、人が全編を連続視聴・全件試聴したという記録ではない。
+
+再出力:
+  python tools/portable_production.py preview --production even --out-dir output/even-new-preview
+  python tools/portable_production.py render --production even --out-dir output/even-new-render
+  python tools/portable_production.py verify --production even --video output/even-new-render/paspla-studio-even-numbers-0-to-200-1080p.mp4 --out-dir output/even-new-qa

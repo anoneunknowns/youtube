@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "kind": "speech-pronunciation-review",
+  "source_manifest_sha256": "a13d3b0ef591c21dc5b12881a81e5161c0e1b3d5bbc913ee24139609692f3131",
+  "scope": "Explicit agent review of isolated lexical ASR, independent acoustic CTC, and targeted PCM diagnostics. No full human or agent listening claimed. Automatic models and LPC have limitations; this receipt documents concrete source-bound evidence rather than guaranteeing perfect articulation.",
+  "human_listening_performed": false,
+  "summary": {
+    "clips": 14,
+    "newly_generated": 11,
+    "accepted_library_reuse": 3,
+    "asr_warnings_reviewed": 7,
+    "unresolved_warnings": 0
+  },
+  "results": [
+    {
+      "role": "dialogue",
+      "id": "I01",
+      "number": null,
+      "expected_text": "Hi! Let's count even numbers.",
+      "source_sha256": "d9ab3df198cd01c7b71f499ddb06597e95c60fea6750a0fa58c80f94f32ddef4",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "asr-match",
+      "recognized_text": "Hi, let's count even numbers.",
+      "recognized_phonemes": "h aɪ l ɛ t s k aʊ n t iː v ə n n ʌ m b ɚ z",
+      "review_summary": "Isolated lexical ASR matches all words. CTC resolves hi, lets, count, even, numbers in order, with final voiced /z/ and no added word or repeated count.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Isolated lexical ASR matches all words. CTC resolves hi, lets, count, even, numbers in order, with final voiced /z/ and no added word or repeated count."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "I02",
+      "number": null,
+      "expected_text": "We add two each time.",
+      "source_sha256": "85bddffdcce929f1770f5306138fc5f5a75e684b7e6432df101e0b87e64f9460",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "warning-review-listening",
+      "recognized_text": "We add to each time.",
+      "recognized_phonemes": "w iː æ d t uː iː tʃ t aɪ m",
+      "review_summary": "Whisper writes to for two; both are /tu:/, not an acoustic discrepancy. Independent CTC is w i: ae d t u: i: tsh t ai m, covering add, two, each, time without omission. Original ASR warning retained.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes to for two; both are /tu:/, not an acoustic discrepancy. Independent CTC is w i: ae d t u: i: tsh t ai m, covering add, two, each, time without omission. Original ASR warning retained."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "I03",
+      "number": null,
+      "expected_text": "Two blocks make one pair.",
+      "source_sha256": "7639fbd9332426f59a96498c42d87270dc7ef30147e95c667e1eaa04865e60a0",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "asr-match",
+      "recognized_text": "Two blocks make one pair.",
+      "recognized_phonemes": "t uː b l ɑː k s m eɪ k w ʌ n p eɪ",
+      "review_summary": "Whisper independently recognizes one pair. CTC pair-vowel label eI is low-confidence 0.3315. Read-only LPC has a falling third formant from 2951.5Hz at1.16s to1984.0Hz at1.32s (F2 then1731.7Hz), consistent with US r-color rather than a sustained non-rhotic pay ending. Two, blocks, make, one consonants are resolved. Targeted stress alternative gives no recognition benefit, so original retained.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper independently recognizes one pair. CTC pair-vowel label eI is low-confidence 0.3315. Read-only LPC has a falling third formant from 2951.5Hz at1.16s to1984.0Hz at1.32s (F2 then1731.7Hz), consistent with US r-color rather than a sustained non-rhotic pay ending. Two, blocks, make, one consonants are resolved. Targeted stress alternative gives no recognition benefit, so original retained."
+        },
+        {
+          "kind": "isolated-acoustic-analysis",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\pair-vowel-formants.json",
+          "sha256": "f1dd151480eab1b9c32a110a05ba0202c193e619cc277b907c3af2d518e81bf9",
+          "summary": "Whisper independently recognizes one pair. CTC pair-vowel label eI is low-confidence 0.3315. Read-only LPC has a falling third formant from 2951.5Hz at1.16s to1984.0Hz at1.32s (F2 then1731.7Hz), consistent with US r-color rather than a sustained non-rhotic pay ending. Two, blocks, make, one consonants are resolved. Targeted stress alternative gives no recognition benefit, so original retained."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "I04",
+      "number": null,
+      "expected_text": "Six blocks make three pairs, with none left over.",
+      "source_sha256": "ae1aee8e1b9a11b4229a91417898688aa838f271b9721ae4d49f495673a2a9ac",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "warning-review-listening",
+      "recognized_text": "6 blocks make 3 pairs with none left over.",
+      "recognized_phonemes": "s ɪ k s b l ɑː k s m eɪ θ ɹ iː p ɛɹ z w ɪ ð n ʌ n l ɛ f t oʊ v ɚ",
+      "review_summary": "Whisper writes 6 and3 for six and three, preserving all words. CTC identifies six, blocks, three, pairs, with, none, left, over. Make final /k/ is absent from greedy CTC, but PCM shows closure at0.85–0.87s (-40.81 to-53.61dBFS), followed by release0.88s (-35.07dBFS,0.8813 power above2kHz), before three frication. Thus there is independent signal evidence for the stop, rather than approving via neighboring number context.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes 6 and3 for six and three, preserving all words. CTC identifies six, blocks, three, pairs, with, none, left, over. Make final /k/ is absent from greedy CTC, but PCM shows closure at0.85–0.87s (-40.81 to-53.61dBFS), followed by release0.88s (-35.07dBFS,0.8813 power above2kHz), before three frication. Thus there is independent signal evidence for the stop, rather than approving via neighboring number context."
+        },
+        {
+          "kind": "isolated-acoustic-analysis",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\make-boundary-signal.json",
+          "sha256": "11e6f7169921df9f437c8bf3e76fb0843e47700483693e4690624b64b74d19e9",
+          "summary": "Whisper writes 6 and3 for six and three, preserving all words. CTC identifies six, blocks, three, pairs, with, none, left, over. Make final /k/ is absent from greedy CTC, but PCM shows closure at0.85–0.87s (-40.81 to-53.61dBFS), followed by release0.88s (-35.07dBFS,0.8813 power above2kHz), before three frication. Thus there is independent signal evidence for the stop, rather than approving via neighboring number context."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "I05",
+      "number": null,
+      "expected_text": "Even numbers can be grouped in pairs.",
+      "source_sha256": "42aa137daa0c8600d0e975c374b58d6ca6ff487c18b6e36b3d8f77d7fa94f2f3",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "asr-match",
+      "recognized_text": "even numbers can be grouped in pairs.",
+      "recognized_phonemes": "iː v ə n n ʌ m b ɚ z k æ n b iː ɡ ɹ uː p t ɪ n p eɪ z",
+      "review_summary": "Whisper matches all words, including pairs. CTC pair-vowel eI is low-confidence0.2077; LPC F3 falls from2919.6Hz at1.58s to2057.5Hz at1.74s with F21713.6Hz, consistent with an r-colored vowel. Final /z/ remains at1.86–1.905s; grouped has both /p/ and/t/. Targeted long-vowel alternative does not improve recognition, so original retained.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper matches all words, including pairs. CTC pair-vowel eI is low-confidence0.2077; LPC F3 falls from2919.6Hz at1.58s to2057.5Hz at1.74s with F21713.6Hz, consistent with an r-colored vowel. Final /z/ remains at1.86–1.905s; grouped has both /p/ and/t/. Targeted long-vowel alternative does not improve recognition, so original retained."
+        },
+        {
+          "kind": "isolated-acoustic-analysis",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\pair-vowel-formants.json",
+          "sha256": "f1dd151480eab1b9c32a110a05ba0202c193e619cc277b907c3af2d518e81bf9",
+          "summary": "Whisper matches all words, including pairs. CTC pair-vowel eI is low-confidence0.2077; LPC F3 falls from2919.6Hz at1.58s to2057.5Hz at1.74s with F21713.6Hz, consistent with an r-colored vowel. Final /z/ remains at1.86–1.905s; grouped has both /p/ and/t/. Targeted long-vowel alternative does not improve recognition, so original retained."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "I06",
+      "number": null,
+      "expected_text": "Zero is even too.",
+      "source_sha256": "b98c080c622d34ce84284c23b60540e24c2d530ef0b96dbe8d0f48ab950bfb75",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "warning-review-listening",
+      "recognized_text": "0 is even 2.",
+      "recognized_phonemes": "z iː ɹ oʊ ɪ z iː v ə n t uː",
+      "review_summary": "Whisper writes 0 is even2: zero numeric formatting and too/two are homophones. Independent CTC resolves z i: r oU i z i: v schwa n t u:, matching every intended sound. The last word is the intended too; original formatting warning retained, no context recognition substituted.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes 0 is even2: zero numeric formatting and too/two are homophones. Independent CTC resolves z i: r oU i z i: v schwa n t u:, matching every intended sound. The last word is the intended too; original formatting warning retained, no context recognition substituted."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "I06B",
+      "number": null,
+      "expected_text": "There are no blocks left over.",
+      "source_sha256": "7e16294cb8926dddaca6408674d26c9af9c5ee7f92118e808297d42b95bbb119",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "asr-match",
+      "recognized_text": "There are no blocks left over.",
+      "recognized_phonemes": "ð ɛ ɹ ɑːɹ n oʊ b l ɑː k s l ɛ f t oʊ v ɚ",
+      "review_summary": "Lexical ASR matches all words. Independent CTC resolves there are no blocks left over including blocks /ks/, left /ft/, and final rhotic /er/; no repeated or missing word.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Lexical ASR matches all words. Independent CTC resolves there are no blocks left over including blocks /ks/, left /ft/, and final rhotic /er/; no repeated or missing word."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "I07",
+      "number": null,
+      "expected_text": "Let's count from zero to two hundred.",
+      "source_sha256": "328fb49387753f8eff8e065bd7a837761894713429b25370d740f65ed7352e6b",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "warning-review-listening",
+      "recognized_text": "Let's count from 0 to 200.",
+      "recognized_phonemes": "l ɛ t s k aʊ n t f ɹ ʌ m z iː ɹ oʊ t ə t uː h ʌ n d ɹ ɪ d",
+      "review_summary": "Whisper writes0 and200 for zero and two hundred. Independent CTC resolves lets count from zero to two hundred in order, including /t/ after count and the final /d/ of hundred. Warning is numeric spelling only.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes0 and200 for zero and two hundred. Independent CTC resolves lets count from zero to two hundred in order, including /t/ after count and the final /d/ of hundred. Warning is numeric spelling only."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "T020",
+      "number": null,
+      "expected_text": "Twenty blocks make ten pairs, with none left over.",
+      "source_sha256": "123e25b659cfbd48c5f89e0fd641c0359f68c13bfa65450d41057b49ed5e648e",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "warning-review-listening",
+      "recognized_text": "20 blocks make 10 pairs with none left over.",
+      "recognized_phonemes": "t w ɛ n t i b l ɑː k s m eɪ k t ɛ n p ɛɹ z w ɪ ð n ʌ n l ɛ f t oʊ v ɚ",
+      "review_summary": "Whisper writes20 and10 for twenty and ten. CTC resolves twenty blocks make ten pairs with none left over, including make /k/, pairs /er z/, and left /ft/. No digit spelling is spoken instead of the cardinal words; original lexical warning retained.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes20 and10 for twenty and ten. CTC resolves twenty blocks make ten pairs with none left over, including make /k/, pairs /er z/, and left /ft/. No digit spelling is spoken instead of the cardinal words; original lexical warning retained."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "T100",
+      "number": null,
+      "expected_text": "The last digit is always zero, two, four, six, or eight.",
+      "source_sha256": "28fab785f07e3257c104ff65507b6df34f45aa41188e084e69ccf6a85bdb6448",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "warning-review-listening",
+      "recognized_text": "The last digit is always 0, 2, 4, 6, or 8.",
+      "recognized_phonemes": "ð ə l æ s d ɪ dʒ ɪ t ɪ z ɔː l w eɪ z iː ɹ oʊ t uː f ɔːɹ s ɪ k s ɔːɹ ɹ eɪ t",
+      "review_summary": "Whisper writes digit forms0,2,4,6,8 while preserving the complete list in order. CTC resolves the matching cardinal phones. Always-zero shares a continuous /z/ across the word boundary; or-eight has normal r-linking. Final /t/ is resolved and terminal-tail screen finds its release with no suspicious following voicing. The reduced last-digit stop cluster does not remove a word or alter the list.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes digit forms0,2,4,6,8 while preserving the complete list in order. CTC resolves the matching cardinal phones. Always-zero shares a continuous /z/ across the word boundary; or-eight has normal r-linking. Final /t/ is resolved and terminal-tail screen finds its release with no suspicious following voicing. The reduced last-digit stop cluster does not remove a word or alter the list."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "F01",
+      "number": null,
+      "expected_text": "We did it!",
+      "source_sha256": "f78e95f408a0f08bc7b866d11768c833188076fee0958c55d027742fed417d54",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "asr-match",
+      "recognized_text": "We did it.",
+      "recognized_phonemes": "w iː d ɪ d ɪ t",
+      "review_summary": "Byte-identical reuse of already accepted We did it. Fresh lexical ASR matches and independent CTC resolves w i: d i d i t; final /t/ release is resolved with no suspicious voiced tail.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Byte-identical reuse of already accepted We did it. Fresh lexical ASR matches and independent CTC resolves w i: d i d i t; final /t/ release is resolved with no suspicious voiced tail."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "F02",
+      "number": null,
+      "expected_text": "We counted by twos, all the way to two hundred!",
+      "source_sha256": "b2afdc02e0fbea7dd6215f4adfb054f75c2a7166648482eb88e899d2b2df117b",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "warning-review-listening",
+      "recognized_text": "We counted by twos all the way to 200.",
+      "recognized_phonemes": "w iː k aʊ n t ᵻ d b aɪ t uː z ɔː l ð ə w eɪ t ə t uː h ʌ n d ɹ ə d",
+      "review_summary": "Whisper writes200 for two hundred. Independent CTC resolves we counted by twos all the way to two hundred, including plural twos /z/. Hundred final unstressed vowel variation /schwa/ vs eSpeak /I/ is an ordinary reduction, with final /d/ present. Numeric-format warning retained.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Whisper writes200 for two hundred. Independent CTC resolves we counted by twos all the way to two hundred, including plural twos /z/. Hundred final unstressed vowel variation /schwa/ vs eSpeak /I/ is an ordinary reduction, with final /d/ present. Numeric-format warning retained."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "F03",
+      "number": null,
+      "expected_text": "Thanks for counting with me!",
+      "source_sha256": "62cb04c29b372d52949d85bce55772ae4e813ff26c118ae6895fd344edc01296",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "asr-match",
+      "recognized_text": "Thanks for counting with me.",
+      "recognized_phonemes": "θ æ ŋ k s f ɜː k aʊ n t ɪ ŋ w ɪ ð m i",
+      "review_summary": "Byte-identical reuse of already accepted Thanks for counting with me. Fresh lexical ASR matches and independent CTC resolves every word; weak-form for has reduced vowel and no added syllable. Existing hash-bound approval is additionally verified.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Byte-identical reuse of already accepted Thanks for counting with me. Fresh lexical ASR matches and independent CTC resolves every word; weak-form for has reduced vowel and no added syllable. Existing hash-bound approval is additionally verified."
+        }
+      ],
+      "unresolved_warnings": []
+    },
+    {
+      "role": "dialogue",
+      "id": "F04",
+      "number": null,
+      "expected_text": "Bye for now!",
+      "source_sha256": "1d047d0223f29272d44e838ba325fbf9b94fe014b6b6066bda7164559689b8ab",
+      "decision": "pass",
+      "human_listening_performed": false,
+      "isolated_asr_status": "asr-match",
+      "recognized_text": "Bye for now.",
+      "recognized_phonemes": "b aɪ f ɚ n aʊ",
+      "review_summary": "Byte-identical reuse of already accepted Bye for now. Fresh lexical ASR matches and CTC has b ai f er n aU, including the ordinary reduced for. Existing hash-bound approval is verified;0.83317s duration fits the1.00s final spoken budget.",
+      "evidence": [
+        {
+          "kind": "isolated-phoneme-asr",
+          "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\isolated-phonemes.json",
+          "sha256": "72a592ece97bd07ac200275317f48f95462889487142af235a2f021c262c5a52",
+          "summary": "Byte-identical reuse of already accepted Bye for now. Fresh lexical ASR matches and CTC has b ai f er n aU, including the ordinary reduced for. Existing hash-bound approval is verified;0.83317s duration fits the1.00s final spoken budget."
+        }
+      ],
+      "unresolved_warnings": []
+    }
+  ]
+}

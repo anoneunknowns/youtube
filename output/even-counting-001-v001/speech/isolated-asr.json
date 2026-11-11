@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "kind": "independent-local-asr-review",
+  "source_manifest": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\measurements.json",
+  "source_manifest_sha256": "a13d3b0ef591c21dc5b12881a81e5161c0e1b3d5bbc913ee24139609692f3131",
+  "automatic_regeneration": false,
+  "model": {
+    "id": "Xenova/whisper-tiny.en",
+    "repository_revision_at_verification": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+    "dtype": "q8",
+    "runtime": "@huggingface/transformers@3.8.1",
+    "intra_op_threads": 2,
+    "inter_op_threads": 1,
+    "model_card": "https://huggingface.co/Xenova/whisper-tiny.en",
+    "model_license": "Apache-2.0",
+    "original_code_license": "https://github.com/openai/whisper/blob/main/LICENSE",
+    "checked_onnx_files": [
+      {
+        "file": "encoder_model_quantized.onnx",
+        "bytes": 10124913,
+        "sha256": "8cc3c6f8563d1b3fbd2c5af9f64c2bed8b020bc593c402d1ef53b9f08fbf1b90"
+      },
+      {
+        "file": "decoder_model_merged_quantized.onnx",
+        "bytes": 30727382,
+        "sha256": "dbb2e063b7fbc41d9803b9698f93ecb035c50cbb3fb87b56cb131e4a5eb99059"
+      }
+    ]
+  },
+  "method": {
+    "sampling_rate": 16000,
+    "channels": 1,
+    "input_format": "float32",
+    "recognizer_only_edge_padding_s": 0.15,
+    "source_audio_modified": false,
+    "expected_text_used_as_recognition_prompt": false,
+    "numeric_comparison": "cardinal numeric value",
+    "dialogue_comparison": "case/punctuation normalization, expanding let's to let us",
+    "limitations": "Tiny ASR can misrecognize isolated numbers. Numeric/text matches check recognized meaning, not correct articulation. Context matches never clear isolated pronunciation warnings. Independent pronunciation review is required; automated checks do not replace final listening."
+  },
+  "acceptance": {
+    "accepted": false,
+    "reason": "An ASR match alone is not pronunciation approval. Use the separate hash-bound pronunciation acceptance gate."
+  },
+  "summary": {
+    "clips": 14,
+    "numbers": 0,
+    "dialogue": 14,
+    "asr_matches": 7,
+    "warnings": 7,
+    "elapsed_s": 35.392
+  },
+  "warnings": [
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "We add two each time.",
+      "recognized_text": "We add to each time.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I02.wav",
+      "source_sha256": "85bddffdcce929f1770f5306138fc5f5a75e684b7e6432df101e0b87e64f9460",
+      "source_duration_s": 1.27325
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Six blocks make three pairs, with none left over.",
+      "recognized_text": "6 blocks make 3 pairs with none left over.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I04.wav",
+      "source_sha256": "ae1aee8e1b9a11b4229a91417898688aa838f271b9721ae4d49f495673a2a9ac",
+      "source_duration_s": 2.893291666666667
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Zero is even too.",
+      "recognized_text": "0 is even 2.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I06.wav",
+      "source_sha256": "b98c080c622d34ce84284c23b60540e24c2d530ef0b96dbe8d0f48ab950bfb75",
+      "source_duration_s": 1.2365416666666667
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Let's count from zero to two hundred.",
+      "recognized_text": "Let's count from 0 to 200.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I07.wav",
+      "source_sha256": "328fb49387753f8eff8e065bd7a837761894713429b25370d740f65ed7352e6b",
+      "source_duration_s": 1.903875
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Twenty blocks make ten pairs, with none left over.",
+      "recognized_text": "20 blocks make 10 pairs with none left over.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\T020.wav",
+      "source_sha256": "123e25b659cfbd48c5f89e0fd641c0359f68c13bfa65450d41057b49ed5e648e",
+      "source_duration_s": 2.9987083333333335
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "The last digit is always zero, two, four, six, or eight.",
+      "recognized_text": "The last digit is always 0, 2, 4, 6, or 8.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\T100.wav",
+      "source_sha256": "28fab785f07e3257c104ff65507b6df34f45aa41188e084e69ccf6a85bdb6448",
+      "source_duration_s": 3.5252083333333335
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "We counted by twos, all the way to two hundred!",
+      "recognized_text": "We counted by twos all the way to 200.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\F02.wav",
+      "source_sha256": "b2afdc02e0fbea7dd6215f4adfb054f75c2a7166648482eb88e899d2b2df117b",
+      "source_duration_s": 2.7259166666666665
+    }
+  ],
+  "results": [
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Hi! Let's count even numbers.",
+      "recognized_text": "Hi, let's count even numbers.",
+      "interpreted_number": null,
+      "status": "asr-match",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I01.wav",
+      "source_sha256": "d9ab3df198cd01c7b71f499ddb06597e95c60fea6750a0fa58c80f94f32ddef4",
+      "source_duration_s": 1.8090833333333334
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "We add two each time.",
+      "recognized_text": "We add to each time.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I02.wav",
+      "source_sha256": "85bddffdcce929f1770f5306138fc5f5a75e684b7e6432df101e0b87e64f9460",
+      "source_duration_s": 1.27325
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Two blocks make one pair.",
+      "recognized_text": "Two blocks make one pair.",
+      "interpreted_number": null,
+      "status": "asr-match",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I03.wav",
+      "source_sha256": "7639fbd9332426f59a96498c42d87270dc7ef30147e95c667e1eaa04865e60a0",
+      "source_duration_s": 1.4382916666666667
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Six blocks make three pairs, with none left over.",
+      "recognized_text": "6 blocks make 3 pairs with none left over.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I04.wav",
+      "source_sha256": "ae1aee8e1b9a11b4229a91417898688aa838f271b9721ae4d49f495673a2a9ac",
+      "source_duration_s": 2.893291666666667
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Even numbers can be grouped in pairs.",
+      "recognized_text": "even numbers can be grouped in pairs.",
+      "interpreted_number": null,
+      "status": "asr-match",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I05.wav",
+      "source_sha256": "42aa137daa0c8600d0e975c374b58d6ca6ff487c18b6e36b3d8f77d7fa94f2f3",
+      "source_duration_s": 1.9970416666666666
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Zero is even too.",
+      "recognized_text": "0 is even 2.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I06.wav",
+      "source_sha256": "b98c080c622d34ce84284c23b60540e24c2d530ef0b96dbe8d0f48ab950bfb75",
+      "source_duration_s": 1.2365416666666667
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "There are no blocks left over.",
+      "recognized_text": "There are no blocks left over.",
+      "interpreted_number": null,
+      "status": "asr-match",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I06B.wav",
+      "source_sha256": "7e16294cb8926dddaca6408674d26c9af9c5ee7f92118e808297d42b95bbb119",
+      "source_duration_s": 1.5400833333333332
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Let's count from zero to two hundred.",
+      "recognized_text": "Let's count from 0 to 200.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\I07.wav",
+      "source_sha256": "328fb49387753f8eff8e065bd7a837761894713429b25370d740f65ed7352e6b",
+      "source_duration_s": 1.903875
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Twenty blocks make ten pairs, with none left over.",
+      "recognized_text": "20 blocks make 10 pairs with none left over.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\T020.wav",
+      "source_sha256": "123e25b659cfbd48c5f89e0fd641c0359f68c13bfa65450d41057b49ed5e648e",
+      "source_duration_s": 2.9987083333333335
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "The last digit is always zero, two, four, six, or eight.",
+      "recognized_text": "The last digit is always 0, 2, 4, 6, or 8.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\T100.wav",
+      "source_sha256": "28fab785f07e3257c104ff65507b6df34f45aa41188e084e69ccf6a85bdb6448",
+      "source_duration_s": 3.5252083333333335
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "We did it!",
+      "recognized_text": "We did it.",
+      "interpreted_number": null,
+      "status": "asr-match",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\reused\\F01.wav",
+      "source_sha256": "f78e95f408a0f08bc7b866d11768c833188076fee0958c55d027742fed417d54",
+      "source_duration_s": 0.7225416666666666
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "We counted by twos, all the way to two hundred!",
+      "recognized_text": "We counted by twos all the way to 200.",
+      "interpreted_number": null,
+      "status": "warning-review-listening",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\candidates-v001\\F02.wav",
+      "source_sha256": "b2afdc02e0fbea7dd6215f4adfb054f75c2a7166648482eb88e899d2b2df117b",
+      "source_duration_s": 2.7259166666666665
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Thanks for counting with me!",
+      "recognized_text": "Thanks for counting with me.",
+      "interpreted_number": null,
+      "status": "asr-match",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\reused\\F03.wav",
+      "source_sha256": "62cb04c29b372d52949d85bce55772ae4e813ff26c118ae6895fd344edc01296",
+      "source_duration_s": 1.377875
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Bye for now!",
+      "recognized_text": "Bye for now.",
+      "interpreted_number": null,
+      "status": "asr-match",
+      "path": "D:\\codex_projects\\youtube\\output\\even-counting-001-v001\\speech\\reused\\F04.wav",
+      "source_sha256": "1d047d0223f29272d44e838ba325fbf9b94fe014b6b6066bda7164559689b8ab",
+      "source_duration_s": 0.8331666666666667
+    }
+  ]
+}

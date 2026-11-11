@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "revision-required",
+  "artifact": "output/even-counting-001-v001/paspla-studio-even-numbers-0-to-200-1080p.mp4",
+  "video_sha256": "a539fbe1843c73000172cf424b9a6c2438e0e6cb1a02e9a8e70b3ce5155b12f3",
+  "original_artifact_modified": false,
+  "independent_content_status": "pass",
+  "baseline_recheck_status": "pass",
+  "finding_summary": [
+    {
+      "id": "AUD-01",
+      "status": "requires-replacement-takes",
+      "values": [46, 56, 60, 66, 68, 76],
+      "description": "A short low-band periodic voiced prefix precedes the expected unvoiced initial fricative in six number takes. It exists in the source PCM and final AAC. Numerical ASR agreement does not clear this pronunciation-quality finding.",
+      "evidence": "audio/audio-recheck-summary.json"
+    },
+    {
+      "id": "VIS-01",
+      "status": "requires-clean-diagram-transition",
+      "description": "Crossfading full images briefly overlays different headers or the normal instruction with teaching-diagram text and tokens.",
+      "evidence": "visual/visual-recheck-summary.json"
+    }
+  ],
+  "content_report": "content/content-review.json",
+  "technical_and_sampled_checks": "baseline/even-final-qa.json",
+  "coverage": {
+    "count_values": 101,
+    "fresh_final_aac_asr_utterances": 115,
+    "fresh_final_aac_ctc_utterances": 115,
+    "all_decoded_video_frames": 11081,
+    "independent_101_value_image_fields": 505,
+    "caption_cues": 115
+  },
+  "interpretation": "The earlier sampled visual and waveform-identity checks passed but missed transition-label overlap and source-pronunciation anomalies. Broader frame tracking, transition review and source-independent acoustic screening found the two issues. A separate v002 revision is being prepared; this v001 evidence is retained."
+}
