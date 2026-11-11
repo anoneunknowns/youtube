@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "baseline_validates": true,
+  "schedule_summary": {
+    "counted_values": 201,
+    "four_base_representations_checked": 804,
+    "narration_base": 10,
+    "whole_number_voices": 201,
+    "ordinary_two_second_transitions": 197,
+    "teaching_five_second_transitions": 3,
+    "within_number_words_artificially_spaced": false,
+    "intro_ten_following_dialogue_gap_s": 0.3,
+    "independent_cardinal_meaning_checks": 603,
+    "canonical_representation_checks": 804,
+    "display_continuity_boundaries_checked": 200,
+    "final_value": 200,
+    "minimum_duration_s": 480
+  },
+  "timeline_sha256": "540a3b9a981fc79e832991023452c5aef1b0eee37c4f78ca946e77215069443c",
+  "validator_sha256": "6f7faa52f696c1d6bc5064d8986163b199731626d3e9b03a3932191e6bfd9ac9",
+  "incorrect_schedule_cases_rejected": 8,
+  "cases": [
+    {
+      "case": "200 key mapped consistently to 199 wording/source",
+      "incorrect_schedule_rejected": true,
+      "error": "Wrong spoken number at N200"
+    },
+    {
+      "case": "duration below requested eight minutes",
+      "incorrect_schedule_rejected": true,
+      "error": "The requested final duration is at least eight minutes"
+    },
+    {
+      "case": "missing terminal counted state 200",
+      "incorrect_schedule_rejected": true,
+      "error": "AssertionError"
+    },
+    {
+      "case": "incorrect canonical hexadecimal endpoint",
+      "incorrect_schedule_rejected": true,
+      "error": "AssertionError"
+    },
+    {
+      "case": "noncanonical leading-zero binary endpoint",
+      "incorrect_schedule_rejected": true,
+      "error": "AssertionError"
+    },
+    {
+      "case": "missing numeric source 200",
+      "incorrect_schedule_rejected": true,
+      "error": "AssertionError"
+    },
+    {
+      "case": "display continuity differs by one sample",
+      "incorrect_schedule_rejected": true,
+      "error": "AssertionError"
+    },
+    {
+      "case": "final hold shortened by one sample",
+      "incorrect_schedule_rejected": true,
+      "error": "AssertionError"
+    }
+  ],
+  "production_inputs_modified": false
+}

@@ -1,0 +1,196 @@
+Paspla Studio 動画制作パイプライン／現行一式
+
+  第二弾の現行版は末尾の「v005：桁間0.9秒・数の間2秒」を優先する。第一弾の現行完成品は維持する。
+
+対象
+  青空の庭で赤い帽子のくまが英語で1〜300を数える動画。
+  8分以上9分未満。チャンネルバナーの制作とは別の構成。
+  現行の制作セット：counting-garden-blue-sky-production-v002。
+  冒頭は効果音なし。BGMなし、効果音は10種類を計33回。
+  完成品・字幕・チャプター・技術検査：output/counting-garden-001-bright-v002/。
+  採用素材一覧：catalogs/library-v1.json。
+  採用仕様：design/counting-video-v1/production-spec-v2.txt。
+  効果音・演技脚本：design/counting-video-v1/sound-cue-script-v2.txt。
+  全発話本文と演出：design/counting-video-v1/cue-sheet-v2.json。
+  音声準備表：design/counting-video-v1/audio-preparation-v5.json。
+
+実行環境
+  共通PowerShell：D:/dev/PowerShell/7/pwsh.exe。
+  Node：D:/Program Files/nodejs/node.exe、Python：C:/Python315/python.exe。
+  FFmpeg：D:/dev/FFmpeg/ffmpeg-9.0.2-essentials_build/bin/。
+  FFmpegはGyan Essentialsの配布ZIPからD:/dev/FFmpegへ導入し、OSのユーザーPATHに登録した。
+  プロジェクト専用のランタイム複製・恒久PATH追加は行わない。
+  共通PowerShell内ではOS登録のMachine/User PATHを優先して引き継ぐ。
+  作業ディレクトリはD:/codex_projects/youtube、一時保存はD:/temp。
+  NodeキャッシュはD:/dev/caches/npm、モデルはD:/dev/caches/huggingface。
+  package-lock.jsonでkokoro-jsとTransformers.jsの採用版を固定する。
+  モデルが未配置ならtools/prepare_speech_model.ps1とtools/prepare_phoneme_model.ps1で取得・hash検証する。
+
+採用音声の再利用
+  assets/library/audio/speech/kokoro-af-heart/v002/measurements.json を直接参照する。
+  clips/に数300本・セリフ11本を保存し、相対path・実測長・SHA-256を記録した。
+  voiceはen-US af_heart、Kokoro fp32、生成速度0.98。Apache-2.0、関連ライセンスを同梱。
+  speech-acceptance.jsonがaccepted:trueかつ現音声・manifest・根拠のhashが一致することが必須。
+  generate_speech.mjsも同じmodel/voice/speed/dtypeならこの検査済み音声を優先する。
+  rejected-source-hashes.jsonの旧takeはキャッシュ再利用時・新規生成直後とも拒否する。
+  数字音声を再生成しないため、同じ発音不備を毎回作り直すことを防ぐ。
+  英語字幕・表示数字・演出は同一timelineから出力する。
+
+制作コマンド例
+  以下は未存在の新しい出力フォルダに対して実行する。既存完成品への上書きは拒否する。
+  $episodeOut = 'output/new-counting-video'
+  $speech = 'assets/library/audio/speech/kokoro-af-heart/v002/measurements.json'
+  $acceptance = 'assets/library/audio/speech/kokoro-af-heart/v002/speech-acceptance.json'
+
+  python tools/video_pipeline.py validate --episode episodes/counting-garden-001.json --cues design/counting-video-v1/cue-sheet-v2.json
+  python tools/video_pipeline.py plan --episode episodes/counting-garden-001.json --cues design/counting-video-v1/cue-sheet-v2.json --speech-manifest $speech --out "$episodeOut/timeline.json"
+  python tools/build_audio_mix.py mix --timeline "$episodeOut/timeline.json" --speech-manifest $speech --speech-acceptance $acceptance --sfx-dir assets/library/audio/sfx/garden/v001 --out "$episodeOut/master.wav" --work-dir D:/temp/youtube-audio
+  python tools/render_counting_video.py --timeline "$episodeOut/timeline.json" --audio "$episodeOut/master.wav" --theme design/counting-video-v1/themes/bright-garden-v002.json --output "$episodeOut/paspla-studio-count-1-to-300-blue-sky-1080p.mp4" --preset veryfast --crf 18
+  python tools/export_delivery_metadata.py --timeline "$episodeOut/timeline.json" --output-dir $episodeOut --video-filename paspla-studio-count-1-to-300-blue-sky-1080p.mp4
+
+新しい音声が必要な場合
+  未検査の生成候補はD:/tempに置き、採用音声フォルダへ直接上書きしない。
+  tools/generate_speech_candidates.mjs --jobs <JSON配列> --out <新しい候補フォルダ> で自然な文脈を生成できる。
+  jobsの各行はidとtext、またはidとphonemes。生成条件とsourcehashを記録する。
+  必要な語は音響・音素の確認後、tools/extract_reviewed_word.pyで切り出す。
+  CTCの時刻だけで切らず、前後語の混入と最終子音の切断がないことを波形でも確認する。
+  切り出し後の単独音声を必ず再検査する。
+  採用候補一式はtools/register_speech_library.mjsで新しいlibrary版へ登録できる。
+  登録は発音の承認を意味しない。新しいmanifestに対する全件検査と採用ゲートが必要。
+
+音声の検査と採用ゲート
+  node tools/verify_speech.mjs --manifest <新manifest> --out <新isolated-asr.json>
+  node tools/verify_phonemes.mjs --manifest <新manifest> --out <新isolated-phonemes.json>
+  python tools/verify_terminal_tails.py --manifest <新manifest> --out <新terminal-tail-review.json>
+  単独音声認識は正解本文・前後の数をpromptへ与えずに実施する。
+  独立音素認識で余分母音、欠落、異なる子音、反復を確認する。
+  終端スクリーニングの疑い0件だけで全発音を合格にしない。
+  数の意味が文脈中で正しく認識されても、元の単独音声警告は保持する。
+  不一致はモデルの誤認の可能性も含め独立に検討し、未解決のまま採用しない。
+  pronunciation-review.jsonに各音声hash、判断、独立根拠ファイルhashと具体的理由を記録する。
+  node tools/review_speech_acceptance.mjs --manifest <新manifest> --asr <新isolated-asr.json> --pronunciation <新pronunciation-review.json> --out <新speech-acceptance.json>
+  全件の網羅、音声hash、根拠hash、判断を照合し、古いクリップのレビュー流用を拒否する。
+  build_audio_mix.pyも--speech-acceptanceを要求し、検査後に素材や根拠が変われば停止する。
+  自動検査の一致は完全な発音保証ではない。人が全件試聴したと記録しない。
+
+映像の最終検査
+  python tools/verify_video.py --video <MP4> --timeline <timeline.json> --output-dir <未使用QA出力先>
+  python tools/verify_layout.py --video <MP4> --timeline <timeline.json> --theme design/counting-video-v1/themes/bright-garden-v002.json --out-dir <未使用layout-QAフォルダ>
+  python tools/video_contact_sheet.py --video <MP4> --timeline <timeline.json> --output-dir <未使用visual-QAフォルダ>
+  全編decode、frame数・尺・1080p30fps・codec・BT.709・AAC・最終LUFS/true peakを検査する。
+  frame数は切上げて音声の終端を覆い、最後のサンプルを切らない。
+  decoded映像の範囲札と1/6/10/100/128/300を実測し、中央からのずれを1px以内とする。
+  実際の導入、通常演出、開花、100のお祝い、200の休憩、300とフェードを画像で確認する。
+  python -B -m unittest discover -s tests -q
+  node tools/verify_speech.mjs --self-test
+  node tools/review_speech_acceptance.mjs --self-test
+
+管理
+  旧版・不採用画像・比較用出力・作業キャッシュは最新検査後に削除する。
+  最新で使う元PNG・登録・フォント・利用条件・生成元は再編集と再利用のため保持する。
+  素材単位のv001は、その素材の現行採用版である場合がある。
+  バナー・アイコン・サムネイルはbranding/paspla-studio/v001の現行一式を使う。
+  関連するfour-operations／four-operations-2／four-operations-commonの修正は、ユーザーが明示した輪郭統一の範囲で行う。ユーザーのmaterials/はこの整理の対象外。
+  validate/plan/prepare-audioのproduction_ready:falseは計画ツールの属性であり、完成判定はproduction-runと最終QAで行う。
+
+第二弾：二進数カウント完成版
+  完成品：output/binary-counting-001-v001/paspla-studio-binary-count-0-to-127-1080p.mp4。
+  尺532.633333秒、0〜1111111₂（十進0〜127）、128状態、770桁の発話。
+  仕様：design/binary-counting-v1/production-spec-v001.txt。
+  完成確認：design/binary-counting-v1/production-review-v001.txt、production-run-v001.json。
+  第一弾と第二弾は別の完成動画として保持する。
+
+  二進数は十進数用plan/mix/exportへ渡さない。0を含む桁読み専用の処理を使う。
+  採用音声：assets/library/audio/speech/kokoro-af-heart/binary-v001/measurements.json。
+  採用gate：同speech-acceptance.json。旧v002は上書きしない。
+  効果音：assets/library/audio/sfx/binary/v001/。
+  再出力時は未使用の新しいフォルダを指定する。
+
+  python tools/build_binary_episode.py plan --speech-manifest <二進数manifest> --out <新出力先>/timeline.json
+  python tools/verify_binary_production.py --timeline <timeline> --speech-manifest <manifest> --out <新QA.json>
+  python tools/build_binary_episode.py mix --timeline <timeline> --speech-manifest <manifest> --speech-acceptance <gate> --sfx-dir assets/library/audio/sfx/binary/v001 --out <新master.wav> --work-dir D:/temp
+  python tools/render_binary_video.py --timeline <timeline> --audio <master.wav> --output <新MP4> --preset veryfast --crf 18
+  python tools/build_binary_episode.py export --timeline <timeline> --out <新出力先> --video-filename <MP4名>
+  python tools/verify_binary_production.py --timeline <timeline> --speech-manifest <manifest> --video <MP4> --captions <SRT> --out <新最終QA.json>
+  python tools/verify_video.py --video <MP4> --timeline <timeline> --output-dir <新技術QA出力先>
+  tools/verify_binary_visual.pyで、実際の圧縮映像の全770発話時刻、セル状態、字形、強調セルと20場面を検査する。
+  最終の音声・映像検査を完了するまでproduction_setsの採用先を切り替えない。
+
+第二弾の現行版：ゆっくり＋十進数看板v002
+  現行完成品：output/binary-counting-001-v002/paspla-studio-binary-count-slower-decimal-sign-1080p.mp4。
+  574.300秒。ユーザーの速度変更を優先し、この版は480秒以上600秒未満を検査範囲とする。
+  全128状態と採用音声は維持。桁の語間0.100秒、読み終えた後の保持0.280秒。
+  クマの看板は同じ状態から十進数を表示する。数字のfontは112px。
+  前節のv001は修正前の保管版であり、現行の出力先ではない。
+  build_binary_episode_v002.pyのplan/mix/export、render_binary_video_v002.pyを使う。
+  検査はverify_binary_production_v002.py、verify_video_v002.py、verify_binary_visual_v002.py。
+  v001用の標準検査範囲は変更せず、v002の明示ポリシーを専用wrapperで確認する。
+  production-spec-v002.txt、production-review-v002.txt、production-run-v002.jsonを参照する。
+
+第二弾の現行版v004：語間0.9秒、中央揃え、十進数看板
+  完成品：output/binary-counting-001-v004-gap900ms/paspla-studio-binary-count-gap900ms-centered-1080p.mp4。
+  全642語間0.900秒、全128状態・770語を維持。完成尺1087.900秒（18分7.9秒）。
+  最新の明示指定0.9秒を採用し、0.8秒の出力は作成していない。
+  音声の長さ・速度・音程、発話前0.120秒、発話後0.280秒は維持する。
+  新しい構成はbuild_binary_episode_v004.py、音声・技術検査はverify_binary_production_v004.pyとverify_video_v004.py。
+  映像は中央揃えを検査済みのrender_binary_video_v003.pyを変更せず使う。
+  画面検査も既存のverify_binary_visual_v003.pyを新タイムラインに結び、全770か所と配置を確認する。
+  v004の専用尺の検査範囲は480秒以上1200秒未満。旧版の検査条件は変更しない。
+  現行の完成確認はproduction-spec-v004.txt、production-review-v004.txt、production-run-v004.json。
+  新出力先に英語字幕、チャプター、アップロード文、19秒の確認用音声、全最終検査を保管する。
+
+第二弾の現行版v005：桁間0.9秒・数の間2秒
+  完成品：output/binary-counting-001-v005-number-gap2s/paspla-studio-binary-count-gap900ms-numbergap2s-1080p.mp4。
+  完成尺1291.100秒（21分31.1秒）。全128状態・770語は維持。
+  通常124境界は、最後の桁の発話終了から次の数の最初の発話まで正確に2.000秒。
+  説明・休憩3境界は既存の場面を加えて5/10/5秒。最後の127の後は次の数がないため従来の終幕へ進む。
+  発話後1.880秒は旧表示を保ち、次の数を発話0.120秒前に表示する。桁間0.900秒は維持。
+  build_binary_episode_v005.py、verify_binary_production_v005.py、verify_video_v005.pyを使う。
+  映像と中央揃えは既存のv003実装を再利用し、verify_binary_value_holds.pyで待機・切替の実映像も確認する。
+  新出力先のtechnical-qa.json、binary-final-qa.json、binary-visual-qa.json、alignment-qa.json、between-number-visual-qa.jsonが完成検査。
+  間隔確認用の約20秒の映像・音声はvalue-gap2s-preview.mp4 / .wav。
+  production-spec-v005.txt、production-review-v005.txt、production-run-v005.jsonを参照する。
+
+第四弾：16進数0〜7F（十進0〜127）
+  正本：output/hexadecimal-counting-001-v001/timeline.json、master.wav。
+  収録台本、発音調査、production-run-v001.jsonはdesign/hexadecimal-counting-v1/。
+  render_hexadecimal_video.py --timeline <実測timeline> --audio <master.wav> --output <新MP4> --preset veryfast --crf 18
+  export_hexadecimal_delivery.py --timeline <実測timeline> --output-dir <納品先> --video-filename <MP4名>
+  verify_hexadecimal_video.py --timeline <実測timeline> --video <MP4> --output-dir <QA保存先>
+  verify_hexadecimal_audio.py --timeline <実測timeline> --master <master.wav> --video <MP4> --out <新QA.json>
+  各コマンドはpython tools/以下から実行する。元の完成品を上書きせず、新しい出力先で検査する。
+  全128状態・240発音、桁間112か所0.9秒、通常125境界2秒、式と文字配置を圧縮映像から検査。
+  完成動画の全デコード、30fps・色タグ・音量・波形照合が通過してから採用カタログを切り替える。
+
+第四弾の再検査・改訂版v002
+  単独Aの発音を見直し、自然な文から抽出したAへ変更。ほかの数字・文字は同じ採用音声を使う。
+  正本はoutput/hexadecimal-counting-001-v002-clear-A/timeline.json と master.wav。完成尺は9分22.73秒。
+  完成MP4、字幕、アップロード文と最終検査は同フォルダ。production-run-v002.jsonを参照。
+  カタログの現行版はhexadecimal-counting-production-v002。
+
+第五弾完成版v001：4基数同時カウント
+  正本はoutput/four-base-counting-001-v001/timeline.json、master.wav、bird-motions.json。
+  完成品と字幕・アップロード文・全QAは同フォルダ。採用先はfour-base-counting-production-v001。
+  production-run-v001.jsonは完成品と素材・道具・検査をSHA-256で結び付ける。
+  現行参照画像はassets/library/references/four-base-counting/v003/、小鳥は280px。
+  通常姿sources/v002と新しいmotions/v001を使う。古い太線atlasは流用しない。
+  十進数0〜127の自然読み。通常124境界2秒、確認3境界5秒。語内に0.9秒を挿入しない。
+
+  音声の再構築はdesign/four-base-counting-v1/audio-reproduction.txtに従い、新出力先を使う。
+  完成動画を作り直す場合も、既存完成品へ上書きしない。
+  python -B tools/render_four_base_video.py --timeline <実測timeline> --audio <master.wav> --motion-manifest <bird-motions.json> --output <新MP4> --preset veryfast --crf 18 --audio-gain-db 0.8
+  python -B tools/export_four_base_delivery.py --timeline <実測timeline> --output-dir <新納品先> --video-filename <MP4名>
+  python -B tools/verify_four_base_video.py --timeline <実測timeline> --video <新MP4> --output-dir <新QA先> --delivery-dir <新納品先> --motion-manifest <bird-motions.json>
+  python -B tools/verify_four_base_audio.py --timeline <実測timeline> --master <master.wav> --video <新MP4> --out <新音声QA.json>
+  中間master.wavは-17.51LUFS/-2.00dBTP。最終符号化には+0.8dBを適用し、完成AACを測定する。
+  今回の完成AACは-16.72LUFS/-1.24dBTPで通過。ゲイン設定だけで合格とせず、毎回完成ファイルを検査する。
+  音声計画のvideo_generated:falseは計画作成時の属性。完成判定はproduction-runと最終QAを使う。
+  静止画の再作成はrender_four_base_mockups.py --out <新出力先>。既定はv003の280px構図。
+
+第五弾の現行版v002：十進0〜200、8分以上
+  完成品：output/four-base-counting-001-v002-to-200/paspla-studio-four-ways-to-count-0-to-200-1080p.mp4
+  11分02.37秒、全201値・804表記、通常197境界2秒・説明3境界5秒。
+  新規v002のbuild/render/export/verify_four_base各toolを使う。旧v001用toolは履歴として維持。
+  台本と再構築手順：design/four-base-counting-v1/count-to-200-v002/。
+  最終ゲイン+0.8dB。完成MP4の全編decode・最終AAC・全215発話ASRを毎回検査する。
+  採用先four-base-counting-production-v002、参照v004。production-run-v002.jsonを正本とする。

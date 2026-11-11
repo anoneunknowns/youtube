@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "source_repository_prefixes": [
+    "D:/codex_projects/youtube"
+  ],
+  "functional_json_names": [
+    "timeline.json",
+    "measurements.json",
+    "source-manifest.json",
+    "registration.json",
+    "reference-manifest.json",
+    "generation-spec.json",
+    "model-files.json",
+    "voice-profile.json",
+    "reuse-acceptance.json",
+    "bird-motions.json",
+    "speech-acceptance.json",
+    "rejected-source-hashes.json",
+    "provenance-path-map.json"
+  ],
+  "current_delivery_filenames": [
+    "english-captions.srt",
+    "chapters.txt",
+    "upload-details.txt",
+    "timeline.json",
+    "master.wav",
+    "audio-qa.json",
+    "technical-qa.json"
+  ],
+  "additional_required_files": [
+    {
+      "path": "output/binary-counting-001-v002/decoded-visual-qa/06-pause-1.png",
+      "reason": "tools/verify_binary_visual_v003.py compares this fixed visual reference."
+    },
+    {
+      "path": "output/binary-counting-001-v002/paspla-studio-binary-count-slower-decimal-sign-1080p.mp4",
+      "reason": "tools/verify_binary_visual_v003.py decodes this baseline movie."
+    }
+  ],
+  "policy": "Preserve every direct file in the five active production inventories. Recurse through runtime timeline, speech and registration manifests, not historical production or QA inventories. Keep source gates and their proof files. External machine-local paths retained only as provenance are informational; they are not copied or required on another PC."
+}

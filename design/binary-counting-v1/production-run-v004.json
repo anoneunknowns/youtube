@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "episode_id": "binary-counting-001",
+  "revision_id": "binary-counting-v004",
+  "status": "completed-and-assistant-reviewed",
+  "user_approved": false,
+  "completed_at_utc": "2026-11-10T15:48:46.122707+00:00",
+  "video_completed": true,
+  "request": "Use the latest explicitly requested0.9-second gap between each spoken binary digit; retain centered layout and decimal sign.",
+  "output": "output/binary-counting-001-v004-gap900ms/paspla-studio-binary-count-gap900ms-centered-1080p.mp4",
+  "video_sha256": "13a2e79438170a54f86db92809b1a292ae9c6f51a8fce38c3ae04e920efbc26d",
+  "bytes": 69172539,
+  "duration_s": 1087.9,
+  "measured_timeline_duration_s": 1087.894,
+  "duration_policy": {
+    "minimum_s": 480,
+    "maximum_exclusive_s": 1200,
+    "reason": "user-requested-longer-between-digit-pauses"
+  },
+  "pacing": {
+    "pre_speech_s": 0.12,
+    "post_speech_s": 0.28,
+    "within_number_gap_s": 0.9,
+    "playback_speed_changed": false,
+    "all_durations_measured": true
+  },
+  "counted_states": 128,
+  "spoken_bit_words": 770,
+  "inter_digit_pauses": 642,
+  "decimal_range": [
+    0,
+    127
+  ],
+  "timeline": "output/binary-counting-001-v004-gap900ms/timeline.json",
+  "baseline_timeline_sha256": "3d75ec2c192d7a014060fe9449354b0be44bf102f6afe8a25900d8da7e2d669b",
+  "layout_implementation": "tools/render_binary_video_v003.py",
+  "layout_changed_from_v003": false,
+  "speech_manifest": "assets/library/audio/speech/kokoro-af-heart/binary-v001/measurements.json",
+  "speech_acceptance": "assets/library/audio/speech/kokoro-af-heart/binary-v001/speech-acceptance.json",
+  "new_speech_generated": false,
+  "bgm": false,
+  "sfx_uses": 7,
+  "technical_qa": "output/binary-counting-001-v004-gap900ms/technical-qa.json",
+  "binary_qa": "output/binary-counting-001-v004-gap900ms/binary-final-qa.json",
+  "visual_qa": "output/binary-counting-001-v004-gap900ms/binary-visual-qa.json",
+  "alignment_qa": "output/binary-counting-001-v004-gap900ms/alignment-qa.json",
+  "master_gap_verification": {
+    "passed": true,
+    "path": "D:\\codex_projects\\youtube\\output\\binary-counting-001-v004-gap900ms\\master.wav",
+    "sha256": "eb899dc3ffbfb3c935b78c05b70dcb4f6926b173298499b75b2b07b0391fdcf0",
+    "inter_digit_pauses_checked": 642,
+    "scheduled_pause_s": 0.9,
+    "boundary_guard_s": 0.002,
+    "peak_limit_pcm16": 1,
+    "minimum_verified_silent_interior_s": 0.896,
+    "maximum_observed_interior_peak_pcm16": 0,
+    "scope": "Only within-number word gaps; playback clips and number-transition holds are checked separately. Codec boundary guards exclude AAC pre-echo, not any intended speech."
+  },
+  "encoded_gap_verification": {
+    "passed": true,
+    "path": "D:\\codex_projects\\youtube\\output\\binary-counting-001-v004-gap900ms\\paspla-studio-binary-count-gap900ms-centered-1080p.mp4",
+    "sha256": "13a2e79438170a54f86db92809b1a292ae9c6f51a8fce38c3ae04e920efbc26d",
+    "inter_digit_pauses_checked": 642,
+    "scheduled_pause_s": 0.9,
+    "boundary_guard_s": 0.03,
+    "peak_limit_pcm16": 3,
+    "minimum_verified_silent_interior_s": 0.84,
+    "maximum_observed_interior_peak_pcm16": 0,
+    "scope": "Only within-number word gaps; playback clips and number-transition holds are checked separately. Codec boundary guards exclude AAC pre-echo, not any intended speech."
+  },
+  "vertical_alignment": {
+    "passed": true,
+    "method": "Independent decoded RGB glyph/marker masks compared with fixed content-box centers; renderer text origins are not used.",
+    "tolerance_px": 1.5,
+    "samples_checked": 779,
+    "spoken_lower_board_groups_checked": 770,
+    "measurements_checked": 927,
+    "maximum_absolute_vertical_delta_px": 0.5
+  },
+  "tests": {
+    "repository_tests_passed": 107
+  },
+  "first_video_preserved_sha256": "5fbcb6cf2a03c23d6d4a3ff7081382153a313b189aee58092d0667ee52313ce0",
+  "prior_gap600ms_video_sha256": "5c14ac422fb639b673f1dcbbcffa66236dd5cd5721a1d06ae54d08ddc5c29e88",
+  "review_scope": "All128 states/770bit highlights and decimal sign values, all786 encoded speech intervals, all642 actual900ms word gaps, centered text groups, captions, full decode/loudness. Automated audio checks and assistant image inspection.",
+  "files": [
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/alignment-qa.json",
+      "bytes": 497659,
+      "sha256": "21d0a836cfd8d917208cf92736876746b153da97cc8f1881e294ff05af805e10"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/alignment-source-audit.json",
+      "bytes": 5682,
+      "sha256": "01636e722061da60b72bc29efefe075608e1d8d8a013888fcaad206475a3b0b9"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/binary-final-qa.json",
+      "bytes": 443710,
+      "sha256": "a5f5976a2a8840fb73c8152b896b7343331f4841507899af224b9f89a1562c2c"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/binary-master-audio-qa.json",
+      "bytes": 443996,
+      "sha256": "def3d76f74caba1afa278e8dc1f926956871c72db69efbf8b9d5123b49fd7ec8"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/binary-timeline-qa.json",
+      "bytes": 2333,
+      "sha256": "172ad99d44012b341d3d5b79ab02a0de086738abc616c9c4501cfa13ee78f995"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/binary-visual-qa.json",
+      "bytes": 1900874,
+      "sha256": "5604af618e86e65c878de72f64377965fe395629542e006f414d28f3564aa4cf"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/chapters.txt",
+      "bytes": 220,
+      "sha256": "7dae7e4b5992456a77cab89ccadb0b8602c69291a05fbf3b63cc7e388ddd4758"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/english-captions.srt",
+      "bytes": 8939,
+      "sha256": "15b467072117060984a00c871a4bbb2e5f95dfaac23f0c3b5676a22aaa7809d0"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/master.mix.json",
+      "bytes": 5155,
+      "sha256": "6018de2195baf5b8781bcbefc9cc67fc15b1ca639883fee148d2737ebaecfc9f"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/master.wav",
+      "bytes": 313313574,
+      "sha256": "eb899dc3ffbfb3c935b78c05b70dcb4f6926b173298499b75b2b07b0391fdcf0"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/pacing-preview-900ms.wav",
+      "bytes": 3712942,
+      "sha256": "1894117ec1fe933ee5c4b2223654c9d6b7b061ef9e877ffb8b583d4d888417ca"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/paspla-studio-binary-count-gap900ms-centered-1080p.mp4",
+      "bytes": 69172539,
+      "sha256": "13a2e79438170a54f86db92809b1a292ae9c6f51a8fce38c3ae04e920efbc26d"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/paspla-studio-binary-count-gap900ms-centered-1080p.render.json",
+      "bytes": 10738,
+      "sha256": "b4115e1c4e60bf189fe7a246ff4504ae592990055d42f4bfa2b305f67905ceca"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/source-contact-sheet.png",
+      "bytes": 2214831,
+      "sha256": "7887d0fedbb37ffb28bc584f1bf9e504e655e9ce341167fb730267dc78f8d9c0"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/technical-decode.progress.txt",
+      "bytes": 20761,
+      "sha256": "0b5cc93f6727d4575d904f65bca89229197a34c1375854c91354c3702d8b2599"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/technical-ffprobe.json",
+      "bytes": 4666,
+      "sha256": "5ebd2aef908aadde1cef9ba257a5e154d4b80a1d32d7a82192246ae70315ffb7"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/technical-loudness.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/technical-qa.json",
+      "bytes": 10798,
+      "sha256": "1781ace70ad82262cc1039939605160fc9bee304b0ddb8ce964e92239a83ab4d"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/timeline.json",
+      "bytes": 774974,
+      "sha256": "7e016909d7e7b3247b997b3248c845b248cb9143ce041564a76c44692959bcb0"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/upload-details.txt",
+      "bytes": 783,
+      "sha256": "9ccd5d5ae252a8ede13b9107aaace4164da75c747cdf7aa3dfcc48d851821cbf"
+    },
+    {
+      "path": "output/binary-counting-001-v004-gap900ms/word-timings.json",
+      "bytes": 317284,
+      "sha256": "1728c8185ab1f17342c2faa721b8be6f6fde2cf9a6251602f70cad0a2e520108"
+    }
+  ]
+}

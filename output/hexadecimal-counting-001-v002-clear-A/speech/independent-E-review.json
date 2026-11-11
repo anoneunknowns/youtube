@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "kind": "independent-extracted-letter-acoustic-review",
+  "candidate_path": "D:/temp/hexadecimal-audio-production-c873e81b/E-extracted/LETTER-E-extracted47.wav",
+  "candidate_sha256": "49aa641f5809be23160f0beb4229ddf612c1a8c3947995219dea7e14a95349c8",
+  "letter": "E",
+  "recommendation": "Use the phrase-extracted candidate with the hash-bound phoneme recognition of the complete natural source.",
+  "source": {
+    "path": "D:/temp/hexadecimal-audio-production-c873e81b/E-natural/E-natural.wav",
+    "sha256": "1dd1e37aa7b97454c8f11f1b466e876f39565961e1bb30b7d1f689cc9e7491ac",
+    "text": "The letter E."
+  },
+  "pcm_comparison": {
+    "sample_rate_hz": 24000,
+    "source_start_sample": 11280,
+    "source_start_s": 0.47,
+    "candidate_sample_frames": 9351,
+    "candidate_duration_s": 0.389625,
+    "onset_fade_samples": 48,
+    "onset_fade_s": 0.002,
+    "all_samples_after_onset_fade_identical_to_source_tail": true,
+    "source_onset_fade_window_rms_dbfs": -59.95686999554507,
+    "source_onset_fade_window_peak_pcm16": 58
+  },
+  "lpc_comparison": {
+    "method": "30 ms Hamming windows,15 ms hop,24 LPC coefficients,0.97 preemphasis; approximate spectral peaks on20Hz grid.",
+    "source_report_path": "D:/temp/hexadecimal-audio-production-c873e81b/spectral-comparison-independent-v2.json",
+    "source_report_sha256": "2b4ecf3aff24c02dc306461546cb60608a29560b8c9303af8945fa160c55bebc",
+    "controls": {
+      "E-extracted47": {
+        "source_sha256": "49aa641f5809be23160f0beb4229ddf612c1a8c3947995219dea7e14a95349c8",
+        "analysis_window_s": [
+          0.06,
+          0.28
+        ],
+        "first_six_lpc_f1_hz": [
+          280,
+          280,
+          280,
+          320,
+          340,
+          340
+        ]
+      },
+      "A": {
+        "source_sha256": "cd4b8c8135ab4b4f358789ec3fec7db16cbe0d100fa0a0c8ecb03926f983e83e",
+        "analysis_window_s": [
+          0.1,
+          0.35
+        ],
+        "first_six_lpc_f1_hz": [
+          760,
+          760,
+          740,
+          700,
+          680,
+          620
+        ]
+      },
+      "eight": {
+        "source_sha256": "3662c8de41c36c505ff877e4317d9694e8088fef931c63d93cd7077a2c35557e",
+        "analysis_window_s": [
+          0.1,
+          0.3
+        ],
+        "first_six_lpc_f1_hz": [
+          660,
+          560,
+          500,
+          440,
+          420,
+          400
+        ]
+      },
+      "I03E-initial": {
+        "source_sha256": "0497c3fa1688b86bb1581d1ad90082fa41c2380e2b5a5d3c3e59c3c8ef81c39f",
+        "analysis_window_s": [
+          0.025,
+          0.15
+        ],
+        "first_six_lpc_f1_hz": [
+          380,
+          360,
+          320,
+          300,
+          300,
+          300
+        ]
+      }
+    },
+    "interpretation": "Low early F1 supports the high vowel in the natural-source CTC result. It differs from the observed early F1 descent in A and eight."
+  },
+  "limitations": [
+    "No human listening performed.",
+    "LPC estimates and spectral similarities alone do not identify a phoneme. Broad spectral cosine rankings changed with the selected window.",
+    "Evaluate alongside exact-source phoneme recognition and the source/extraction provenance."
+  ]
+}

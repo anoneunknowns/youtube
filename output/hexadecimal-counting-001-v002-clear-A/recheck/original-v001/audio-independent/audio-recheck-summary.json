@@ -1,0 +1,69 @@
+{
+  "kind": "independent-final-AAC-audio-recheck",
+  "original_video_sha256": "e0c6ede114ee663c8a57c5479441f9840eead34fc5274ef2b3ff3a562d54aec2",
+  "original_timeline_sha256": "13b9fd2dfcd6156f31715e8b34437e73e43256632915fc190c8b5b5970b4a49d",
+  "source_media_modified": false,
+  "observed_defects": [],
+  "improvements_recommended": [
+    {
+      "scope": "A letter token, eight main counts plus intro1A",
+      "reason": "Low/central early vowel and isolated CTC a\u026a contrast with clear introductory A/eight controls; use a front-vowel natural phrase extraction for clarity.",
+      "candidate": {
+        "path": "D:\\temp\\hex-audio-recheck-d3f20e7447104467ae5c0e160a731a75\\A-level-balanced\\takes.json",
+        "sha256": "1f167fd1e838ab79ccf1893c8435ba0c46b39bcbf4e7c6594133c82225e3aeb5"
+      },
+      "review": {
+        "path": "D:\\temp\\hex-audio-recheck-d3f20e7447104467ae5c0e160a731a75\\independent-A-balanced-review.json",
+        "sha256": "57918baaae4057a18c59f2abc646f9e4b2654ccd4f6a9cd2381357689f6bf59b"
+      },
+      "selected_candidate_sha256": "eedb08cb8ae2f89f1033d99fc9ba32b2e7b132f26d18257da7f8e2a3016adac8",
+      "processing": "Uniform+7.912725961dB, ceiling\u22124.500292dBFS affects3samples/.125ms; independently verified every sample; RMS\u221220.604772dBFS."
+    }
+  ],
+  "passes": {
+    "fresh_transcriptions": 47,
+    "all_semantically_match": true,
+    "isolated_E_CTC": "i\u02d0",
+    "complete_1E_CTC": "w \u028c n i\u02d0",
+    "complete_7E_CTC": "s \u025b v \u0259 n i\u02d0",
+    "speech_events_analyzed": 263,
+    "clipped_pcm_samples": 0,
+    "largest_edge_sample_pcm16": 11,
+    "largest_edge_first_difference_pcm16": 23,
+    "detectable_within_count_gaps_s": [
+      0.9226041666666667,
+      0.9551666666666667
+    ],
+    "detectable_ordinary_between_count_gaps_s": [
+      2.0300625,
+      2.0555208333333335
+    ]
+  },
+  "evidence": [
+    {
+      "path": "D:\\temp\\hex-audio-recheck-d3f20e7447104467ae5c0e160a731a75\\waveform-audit.json",
+      "sha256": "863ee2438ef0166172dde8a50b04f115807ace011a87b43294641167cef2b67d"
+    },
+    {
+      "path": "D:\\temp\\hex-audio-recheck-d3f20e7447104467ae5c0e160a731a75\\final-aac-fresh-asr.json",
+      "sha256": "d133be752d803948d5983f96fa58e91a3a6737aa40729723545861da932f2315"
+    },
+    {
+      "path": "D:\\temp\\hex-audio-recheck-d3f20e7447104467ae5c0e160a731a75\\final-aac-fresh-phonemes.json",
+      "sha256": "9391bb40cc464a35474b30a791a4ed6de8eb3194a65cd043cac8d360ad004228"
+    },
+    {
+      "path": "D:\\temp\\hex-audio-recheck-d3f20e7447104467ae5c0e160a731a75\\A-control-phonemes.json",
+      "sha256": "dd7fdcbe97e71c54cadd6a1c6ae23adf564b0a66cb69c4b69ec5bce02cf48759"
+    },
+    {
+      "path": "D:\\temp\\hex-audio-recheck-d3f20e7447104467ae5c0e160a731a75\\A-formant-comparison.json",
+      "sha256": "8d5c950d5b6db14bfed6a865d8096d0539c3e55675073e9eb576d01215405876"
+    }
+  ],
+  "limitations": [
+    "Automated ASR, phoneme and waveform evidence; no human full listening claim.",
+    "Detectable gaps use a1%of-event-peak sample threshold and include natural attack/decay, unlike exact clip-boundary schedule gaps."
+  ],
+  "selection_status": "Definitive A candidate accepted by root; v002 final encoded media targeted recheck pending."
+}

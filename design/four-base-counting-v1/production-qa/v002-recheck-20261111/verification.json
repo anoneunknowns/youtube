@@ -1,0 +1,271 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-11-11T08:53:17.563960+00:00",
+  "scope": "Independent follow-up audit of current delivered four-base 0–200 video after the user requested another error check.",
+  "video": "output/four-base-counting-001-v002-to-200/paspla-studio-four-ways-to-count-0-to-200-1080p.mp4",
+  "video_sha256": "3a84d9aa0861fd16958676140c3c8506fbdf305679f405b021be7d35f1fd886a",
+  "production_record": "design/four-base-counting-v1/production-run-v002.json",
+  "production_record_sha256": "70dbf25a80121e1e97081cd8bff177d57ea2e9d999ecf8c1d5021265c68abd8d",
+  "duration_s": 662.366667,
+  "decimal_range": [
+    0,
+    200
+  ],
+  "production_dependency_files_rechecked": 650,
+  "media_or_original_qa_changed": false,
+  "confirmed_media_defects": [],
+  "findings_resolved_as_non_defects": [
+    {
+      "topic": "SRT rounding",
+      "resolution": "An exact 0.5ms tie can round either way to the nearest SRT millisecond. All 430 endpoints remain within 0.5ms; this is not a synchronization error.",
+      "evidence": "content/content-audit.json"
+    },
+    {
+      "topic": "Lossy AAC channel sample differences",
+      "resolution": "The initial dual-mono sample-identity guard was an invalid assumption for this AAC encoder. A default-PNS re-encode reproduces all decoded final AAC samples exactly; PNS-off removes the N164 difference. Both channels preserve source timing and waveform, with no missing or delayed channel. The original failed guard is retained.",
+      "evidence": "audio/independent-audio-audit-resolved.json"
+    }
+  ],
+  "checks": {
+    "decimal_values": 201,
+    "base_representations": 804,
+    "english_caption_cues": 215,
+    "decoded_video_frames": 19871,
+    "sampled_visual_times": 1227,
+    "individual_symbol_and_empty_cells_at_carry_boundaries": 640,
+    "full_video_numeric_fields_scanned": 75644,
+    "unexpected_blank_fields": 0,
+    "unexpected_black_frames": 0,
+    "speech_semantic_matches": 215,
+    "source_pronunciation_gates_in_extension": 73,
+    "audio_event_onset_and_tail_checks": 216,
+    "maximum_onset_or_tail_difference_s": 0.005,
+    "audio_global_delay_s": 0,
+    "pcm_clipped_samples": 0,
+    "silent_interiors_checked": 217,
+    "ordinary_two_second_gaps": 197,
+    "teaching_five_second_gaps": 3
+  },
+  "root_image_review": [
+    "visual/additional/boundaries-contact-sheet.png",
+    "visual/additional/finale-motion-contact-sheet.png"
+  ],
+  "limitations": "Full video decoding and automated content/audio checks plus extracted image review; no full human listening or viewing review is claimed.",
+  "evidence": [
+    {
+      "path": "latest/check_current_files.py",
+      "sha256": "3575dc30f976eee0be0657305ad7aa87d8046c10ab66027379862e98f8abeba8",
+      "bytes": 3725
+    },
+    {
+      "path": "latest/current-files.json",
+      "sha256": "e179c6dfb501c18099b0b900ba5dd4ad7eecb19f02fa777aa3beb01eca30c1d7",
+      "bytes": 638
+    },
+    {
+      "path": "content/content-audit.json",
+      "sha256": "13cf07e7367fd0173603a8b053c21978f6ead89b03fd913d794b0e38beef79a8",
+      "bytes": 6861
+    },
+    {
+      "path": "content/independent_content_audit.py",
+      "sha256": "f058ff4c791debd8e226a30ddbaad19400bfc7844377d408ce5499959673d776",
+      "bytes": 13604
+    },
+    {
+      "path": "content/initial-rounding-check.json",
+      "sha256": "d1e3c5ae87eb521fd9f7b4d8ae115572b0214e7505982b2b74abc843087368b6",
+      "bytes": 6570
+    },
+    {
+      "path": "visual/additional/additional-visual-checks.json",
+      "sha256": "afd1dd817880f359d06710bf40d8adcea84e3c0ee97e1ce8310dc482185d248c",
+      "bytes": 11517
+    },
+    {
+      "path": "visual/additional/boundaries-contact-sheet.png",
+      "sha256": "d4b2a4f873cd656120614c588d6a488b5e1dc481f4e3d1c242effeed2e2835e0",
+      "bytes": 420351
+    },
+    {
+      "path": "visual/additional/finale-motion-contact-sheet.png",
+      "sha256": "bb778743b8608bfb133b4acb15b28c3f04375b2dab7b462d0284419572be0251",
+      "bytes": 534784
+    },
+    {
+      "path": "visual/additional/per-symbol-cells.json",
+      "sha256": "c06818045ad6f5b68ad72c4e83718f9a3ef91f73009634386ed42f0d7d88027f",
+      "bytes": 127452
+    },
+    {
+      "path": "visual/additional-log.txt",
+      "sha256": "8cef0e7b7d2b28f133e893bee06062e8f9bd87c5b0eef051ce0013fc40996a0b",
+      "bytes": 148
+    },
+    {
+      "path": "visual/additional_visual_checks.py",
+      "sha256": "8f8e5d4f8ac5ff07dc9c7ad9f0666b03841a4559d5a35ed1529638d47f7d8823",
+      "bytes": 5969
+    },
+    {
+      "path": "visual/check_symbol_cells.py",
+      "sha256": "1ce07eebc6797c75f0f264eebc3e5177c685d147d4e30775a71f97baf28668dd",
+      "bytes": 3936
+    },
+    {
+      "path": "visual/finalize_visual_audit.py",
+      "sha256": "e7fe15ca2c5f47ba43401d982bf976255e68010891a9aac6c0845ce3d9c7f0dc",
+      "bytes": 3805
+    },
+    {
+      "path": "visual/four-base-final-qa.json",
+      "sha256": "4b3d76503e096d4a69b6fa78dc5bfc4299778fa73670cfb327d7ac6b1780c84a",
+      "bytes": 47394
+    },
+    {
+      "path": "visual/run-log.txt",
+      "sha256": "96028c2f76b95b065f90267af3eddf17f2710215d9999e5aff89c3ef2b298e80",
+      "bytes": 388
+    },
+    {
+      "path": "visual/technical-decode.progress.txt",
+      "sha256": "f8e086d26545f75ba2776a6446c1832c7872d95917e5b19f302fe6096afb32c3",
+      "bytes": 3100
+    },
+    {
+      "path": "visual/technical-ffprobe.json",
+      "sha256": "20748c9ec53929b5c5bb12e9bbaf16fd52b726a5ee8a8ca3d27a7f11c6bbcfc0",
+      "bytes": 4661
+    },
+    {
+      "path": "visual/technical-loudness.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "visual/technical-qa.json",
+      "sha256": "c13d3b51a73c79564de5b1f6f8e80fe18fd8c3b1bd34b44bfac3ae63fa84741d",
+      "bytes": 10525
+    },
+    {
+      "path": "visual/visual-audit-summary.json",
+      "sha256": "829284c88562a8996a66d8172ce07f4ac86ad3e32bfceaf5a47f192cba48c818",
+      "bytes": 2998
+    },
+    {
+      "path": "audio/aac-encoder-help.txt",
+      "sha256": "bb67f393ef68e7cb0166512996c8a37ae0178f2309aa71acb09ce47104e9a7d5",
+      "bytes": 980
+    },
+    {
+      "path": "audio/aac-pns-causal-diagnostic.json",
+      "sha256": "8df4d85060478e53f3a1d2e471f812cd541382a497cb6bd1c08aff3894956206",
+      "bytes": 5861
+    },
+    {
+      "path": "audio/aac.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "audio/check_stereo_difference.py",
+      "sha256": "9507af9c93a5c5491507a4117458fec7cc1364af0cc2559a60f619af12c6a162",
+      "bytes": 1953
+    },
+    {
+      "path": "audio/diagnose_aac_pns.py",
+      "sha256": "a742efd8d7af1c4c6ffee63fb82517f20697ead9bcbf417462d2c81142514c85",
+      "bytes": 4723
+    },
+    {
+      "path": "audio/diagnostic-pns-0.m4a",
+      "sha256": "ce9edf1a24769468ce4b5a56b07888e464341f97b7641463e9596d77f9d7c7fb",
+      "bytes": 6337445
+    },
+    {
+      "path": "audio/diagnostic-pns-1.m4a",
+      "sha256": "91c62a23c5842b354071c5c389976e6ce7d7fd44c0fbfc02a1d22de9d273aac3",
+      "bytes": 6337226
+    },
+    {
+      "path": "audio/fresh-ebur128.stderr.txt",
+      "sha256": "dd4b3f5a1ddf85c44c6082fc87ac284f04742903333b0e982ee10d8de5bedab6",
+      "bytes": 1161732
+    },
+    {
+      "path": "audio/independent-audio-audit-resolved.json",
+      "sha256": "a564329575c386cd25d40db430025ff9a0b36efef161d2547923dddfde8e15bc",
+      "bytes": 2805
+    },
+    {
+      "path": "audio/independent-audio-audit.json",
+      "sha256": "4bb079ed013857bbb8c53ff92aa95e69ddbaa915c8fd0e35ae63bff1f53e2d43",
+      "bytes": 62848
+    },
+    {
+      "path": "audio/independent_audio_audit.py",
+      "sha256": "69cb10d7071b0e4d1450640c6a3fde36cb7d0d636a9850bf1307b722c9372acb",
+      "bytes": 12494
+    },
+    {
+      "path": "audio/master.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "audio/N164-diagnostic-clips.json",
+      "sha256": "8c7fbdcc01a9cf61af98a5527ea8649479b77a6abbadf7d30c707637a5ada1a7",
+      "bytes": 1330
+    },
+    {
+      "path": "audio/N164-diagnostic-pns-off.wav",
+      "sha256": "4fbdc74cc12c9d5fa9af1fbd3773614de0520b94a8bdd10b761792e8e913627d",
+      "bytes": 264044
+    },
+    {
+      "path": "audio/N164-final-pns-on.wav",
+      "sha256": "9d9a37b90c5e15b54a7c806b22424967c7c43df76e02e7d3274af8b89a6662a9",
+      "bytes": 264044
+    },
+    {
+      "path": "audio/N164-reference-master.wav",
+      "sha256": "f9a987916fb83de2a7be31d26f95f542b7488b15ef211b1d28d00d81ba5248e2",
+      "bytes": 264044
+    },
+    {
+      "path": "audio/pns-0-decode.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "audio/pns-0-encode.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "audio/pns-1-decode.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "audio/pns-1-encode.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "audio/resolve_audio_audit.py",
+      "sha256": "9edc14ec0b2b85b33b08123bd8e1df52be543cc4d48499b0f3a7ea5bf268e351",
+      "bytes": 4271
+    },
+    {
+      "path": "audio/save_diagnostic_clips.py",
+      "sha256": "a995bf48e45ac1fe94436b3647c0620e6045dc2afa0de8c5c4d79a00886084e4",
+      "bytes": 1604
+    },
+    {
+      "path": "audio/stereo-difference-analysis.json",
+      "sha256": "ad7e348ba79ffb7137c3c368d239da323e3ae5e9051f230d61e26b5f99c3817f",
+      "bytes": 74958
+    }
+  ]
+}

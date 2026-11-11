@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "status": "completed_and_assistant_reviewed",
+  "production_ready": true,
+  "user_approved": false,
+  "completed_at_utc": "2026-11-10T13:39:35.953713+00:00",
+  "episode_id": "counting-garden-001",
+  "variant_id": "original-blue-sky",
+  "production_set_id": "counting-garden-blue-sky-production-v002",
+  "count_start": 1,
+  "count_end": 300,
+  "language": "en-US",
+  "channel_banner_design_is_separate": true,
+  "video": {
+    "path": "output/counting-garden-001-bright-v002/paspla-studio-count-1-to-300-blue-sky-1080p.mp4",
+    "bytes": 50278429,
+    "sha256": "5fbcb6cf2a03c23d6d4a3ff7081382153a313b189aee58092d0667ee52313ce0"
+  },
+  "duration_s": 496.966667,
+  "frames": 14909,
+  "technical_checks": {
+    "ffprobe_exit_zero": true,
+    "exactly_one_video_and_one_audio": true,
+    "duration_480_inclusive_540_exclusive": true,
+    "dimensions_1920x1080": true,
+    "fps_30": true,
+    "progressive": true,
+    "codec_h264": true,
+    "pixel_format_yuv420p": true,
+    "bt709_tags": true,
+    "limited_range": true,
+    "audio_aac_48khz_stereo": true,
+    "integrated_loudness_within_one_lu": true,
+    "true_peak_at_or_below_minus_one_with_0_05db_tolerance": true,
+    "full_decode_exit_zero": true,
+    "loudness_measurement_exit_zero": true,
+    "decoded_frames_match_declared_frames": true,
+    "timeline_frame_count": true,
+    "timeline_container_duration_within_one_frame": true,
+    "timeline_video_duration": true,
+    "timeline_audio_duration_within_one_aac_frame": true,
+    "artifact_unchanged_during_verification": true
+  },
+  "final_audio_lufs": -16.5,
+  "final_audio_true_peak_dbtp": -1.49,
+  "speech": {
+    "clips": 311,
+    "numbers": 300,
+    "unique_dialogue": 11,
+    "changed_numbers": [
+      6,
+      36,
+      80,
+      81,
+      88,
+      181,
+      188,
+      274,
+      288
+    ],
+    "isolated_word_asr_matches": 311,
+    "isolated_word_asr_warnings": 0,
+    "independent_phoneme_review_clips": 311,
+    "voiceless_tail_screened": 56,
+    "voiced_tail_candidates": 0,
+    "acceptance": {
+      "path": "assets/library/audio/speech/kokoro-af-heart/v002/speech-acceptance.json",
+      "bytes": 562249,
+      "sha256": "0a82508d38899ff57b8e70c118a009e3adec00d16eeb9cc47f280b1a42bde4d6"
+    },
+    "manifest": {
+      "path": "assets/library/audio/speech/kokoro-af-heart/v002/measurements.json",
+      "bytes": 177763,
+      "sha256": "2071c15fdcb57d1f878ea89ad1c6744b864c8523c53926f7348f7c0b16bff287"
+    },
+    "automatic_recognition_limits_documented": true,
+    "all_clips_human_listened": false
+  },
+  "visual_review": {
+    "decoded_scene_samples": 18,
+    "decoded_centering_components": 7,
+    "maximum_center_delta_px": 0.5,
+    "source_glyphs_centered": 300,
+    "full_continuous_manual_watch": false,
+    "layout_report": "output/counting-garden-001-bright-v002/layout-qa/layout-review.json"
+  },
+  "cue_counts": {
+    "ordinary": 24,
+    "milestone_pause_finale": 6,
+    "total_tens": 30,
+    "sfx_uses": 33
+  },
+  "reusability": {
+    "all_311_reused_after_old_data_removal": true,
+    "speech_acceptance_required_at_mix": true,
+    "rejected_old_hashes_blocked": 9,
+    "adopted_audio_in_temporary_directory": false,
+    "source_provenance_preserved_within_library": true
+  },
+  "regression_tests": {
+    "python_tests_passed": 56,
+    "speech_parser_cases": 19,
+    "context_warning_regression_passed": true,
+    "speech_acceptance_cases": 9
+  },
+  "cleanup": {
+    "path": "output/counting-garden-001-bright-v002/cleanup-record.json",
+    "bytes": 10903,
+    "sha256": "c2b25da4de069854433fa572bb054949710a0cf2aff55a8e12c6b87eb0e84308"
+  },
+  "sources": [
+    {
+      "path": "episodes/counting-garden-001.json",
+      "bytes": 2235,
+      "sha256": "0f68af6232459fc1b557a5afdb25bb84a2ebbd4651cf84fb4b234afa9f9c28f3"
+    },
+    {
+      "path": "design/counting-video-v1/cue-sheet-v2.json",
+      "bytes": 50869,
+      "sha256": "5cdaec888cdbbb6305d49014c5f1877e26329e61b9d4e69782670821eb8e776c"
+    },
+    {
+      "path": "design/counting-video-v1/audio-preparation-v5.json",
+      "bytes": 38146,
+      "sha256": "1825658faf5f85afa9815c45804946956ded588d1016a3bec574f83bf507c6a8"
+    },
+    {
+      "path": "design/counting-video-v1/themes/bright-garden-v002.json",
+      "bytes": 3137,
+      "sha256": "9f5fc03186795b56bdbb9fbe6d6f1c0f923fe84eedf78e53107e758b385804d5"
+    },
+    {
+      "path": "catalogs/render-assets-v1.json",
+      "bytes": 21787,
+      "sha256": "287638a771b704ea9f2716da8e6bd4e0a8d73b849ffbb0ef6c95dff81bcede13"
+    },
+    {
+      "path": "tools/render_counting_video.py",
+      "bytes": 52667,
+      "sha256": "23c0836ca2d9620c4ce26c6e517bd9441d1be19b90f7b31cc7a0f9dfacba1b5c"
+    },
+    {
+      "path": "tools/bright_garden_effects.py",
+      "bytes": 10922,
+      "sha256": "39e7a4de11dc0d98e487a4dc9b50b6294f2aaf7831aaee6eb151ec4b89e8854c"
+    },
+    {
+      "path": "tools/generate_speech.mjs",
+      "bytes": 10581,
+      "sha256": "928564e5a715ba3f3e114e7ad058ead682bf60b20f87ca5aed09672703821cf6"
+    },
+    {
+      "path": "tools/verify_speech.mjs",
+      "bytes": 19566,
+      "sha256": "a2d52366dbd02d5c33d6afc4ceccd04e2b93235d221461f63cc1fd45586cbc5e"
+    },
+    {
+      "path": "tools/verify_phonemes.mjs",
+      "bytes": 5065,
+      "sha256": "dc5beb0dc96a4262990d9276807e624d446ba92d27aa2dab9a4424c6f821a93a"
+    },
+    {
+      "path": "tools/verify_terminal_tails.py",
+      "bytes": 12445,
+      "sha256": "2130985648e63bb97ffd479bfabfd598c3bad3bfb2f6bf667f738a6a4c6a83b1"
+    },
+    {
+      "path": "tools/review_speech_acceptance.mjs",
+      "bytes": 10719,
+      "sha256": "6205b28957526543348afc12aa0c74043387076c737188b1a441be4270ab5fe0"
+    },
+    {
+      "path": "tools/build_audio_mix.py",
+      "bytes": 28537,
+      "sha256": "2468c4cfc7c29f8c867fd8821f51bae4e7c0a11382c48406349ebb813a5acd61"
+    },
+    {
+      "path": "tools/verify_layout.py",
+      "bytes": 4426,
+      "sha256": "e7e3603931bef8b380d155f1090491043e32ee63c938e5355c954f520b05354c"
+    },
+    {
+      "path": "tools/remove_opening_sfx.py",
+      "bytes": 5107,
+      "sha256": "67d67b97399035bcc821272c72f58e00d4ed1d8f1788027f8af32934cd2d1b44"
+    }
+  ],
+  "limitations": [
+    "Voice review combines independent automatic word/phoneme recognition and targeted acoustic analysis; it is not a human-listening claim or an infallible phonetic guarantee.",
+    "Existing registered character poses and small whole-body motion are used; no new eye/head rig or continuous anatomical animation is claimed."
+  ],
+  "audio_master": {
+    "path": "output/counting-garden-001-bright-v002/master.wav",
+    "bytes": 143118342,
+    "sha256": "1c5cfcb781a932d2bda05997069d1dd59f63d251d20ac415921c972d7a202350"
+  },
+  "audio_mix_receipt": {
+    "path": "output/counting-garden-001-bright-v002/master.mix.json",
+    "bytes": 78200,
+    "sha256": "6318126663992ee6f0fb0de072992946abd2982f4e3ca5b0da5fd683a36cac36"
+  },
+  "audio_revision": {
+    "removed_cue": {
+      "kind": "sfx",
+      "id": "SE_WIND",
+      "start_s": 0.1,
+      "end_s": 0.5,
+      "source": "intro"
+    },
+    "speech_regenerated": false,
+    "later_master_pcm_bit_identical": true,
+    "video_packet_payloads_and_timestamps_bit_identical": true,
+    "verification": {
+      "path": "output/counting-garden-001-bright-v002/opening-audio-edit-verification.json",
+      "bytes": 1866,
+      "sha256": "5a8e3a9f504f3af2408d9d69fcfdb94fdbaa69be8b9a07fa50856a8b4c3b9c51"
+    }
+  }
+}

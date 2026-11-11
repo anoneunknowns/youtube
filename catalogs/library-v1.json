@@ -1,0 +1,1499 @@
+{
+  "schema_version": 1,
+  "catalog_id": "youtube-shared-library-v1",
+  "root": "assets/library",
+  "active_reference_set_ids": [
+    "counting-garden-reference-v002",
+    "binary-counting-reference-v001",
+    "octal-counting-reference-v004",
+    "hexadecimal-counting-reference-v001",
+    "four-base-counting-reference-v004"
+  ],
+  "storage_policy": {
+    "project_local_paths": true,
+    "versioned_assets": true,
+    "overwrite_existing_versions": false,
+    "retain_originals_and_generation_records": true,
+    "temporary_directory_is_not_permanent_storage": true,
+    "adopted_assets_are_not_gitignored": true,
+    "reference_and_production_assets_are_separate": true,
+    "new_reusable_materials_default_location": "assets/library/<category>/<asset-name>/<version>/",
+    "production_asset_requires_separate_visual_and_motion_review": true,
+    "latest_production_only": true,
+    "retention_scope": "Keep current production inputs, current QA and reusable original assets; obsolete episode outputs/caches are removed under the user request.",
+    "latest_adopted_versions_only": true,
+    "retain_superseded_outputs": false
+  },
+  "reference_sets": {
+    "counting-garden-reference-v002": {
+      "status": "assistant_visually_reviewed",
+      "user_approved": false,
+      "purpose": "Composition, stage sequence, overlay placement and provisional timing reference for counting videos.",
+      "canonical_identity_id": "bear-beret-identity-neutral-v001",
+      "items": [
+        "counting-garden-key-visual-v002",
+        "counting-garden-storyboard-a-v002",
+        "counting-garden-storyboard-b-v002"
+      ],
+      "generation_record": "assets/library/references/counting-garden/v002/generation-record.json",
+      "review_record": "design/counting-video-v1/visual-review-v2.txt",
+      "count_example": 300,
+      "final_count_provisional": false,
+      "absolute_midpoint_timings": "Use the current measured timeline; mockup timing is illustrative.",
+      "thumbnail_progress_labels": "omitted; full-size key visual is the layout reference",
+      "source_of_truth": {
+        "character": "bear-beret-identity-neutral-v001",
+        "spoken_text_and_sound": "design/counting-video-v1/cue-sheet-v2.json",
+        "episode_configuration": "episodes/counting-garden-001.json"
+      },
+      "measured_timeline": "output/counting-garden-001-bright-v002/timeline.json"
+    },
+    "binary-counting-reference-v001": {
+      "status": "assistant-image-reviewed",
+      "user_approved": false,
+      "purpose": "Binary counting static frames and storyboard; no voice/video approval",
+      "items": [
+        "binary-counting-reference-v001",
+        "binary-lantern-garden-background-v001"
+      ],
+      "manifest": "assets/library/references/binary-counting/v001/reference-manifest.json",
+      "canonical_identity_id": "bear-beret-identity-neutral-v001",
+      "audio_generated": false,
+      "video_generated": false
+    },
+    "octal-counting-reference-v001": {
+      "status": "prepared-for-user-review",
+      "user_approved": false,
+      "purpose": "Static layout and scene sequence for octal counting.",
+      "items": [
+        "octal-counting-reference-v001",
+        "eight-step-garden-background-v001"
+      ],
+      "manifest": "assets/library/references/octal-counting/v001/reference-manifest.json",
+      "key_visual": "assets/library/references/octal-counting/v001/key-visual.png",
+      "storyboard": "assets/library/references/octal-counting/v001/storyboard.png",
+      "canonical_identity_id": "bear-beret-identity-neutral-v001",
+      "audio_generated": false,
+      "video_generated": false
+    },
+    "octal-counting-reference-v002": {
+      "status": "prepared-for-user-review",
+      "user_approved": false,
+      "purpose": "Static layout and scene sequence for octal counting in the Aurora Garden.",
+      "items": [
+        "octal-counting-reference-v002",
+        "aurora-garden-background-v001"
+      ],
+      "manifest": "assets/library/references/octal-counting/v002/reference-manifest.json",
+      "key_visual": "assets/library/references/octal-counting/v002/key-visual.png",
+      "storyboard": "assets/library/references/octal-counting/v002/storyboard.png",
+      "canonical_identity_id": "bear-beret-identity-neutral-v001",
+      "audio_generated": false,
+      "video_generated": false
+    },
+    "octal-counting-reference-v003": {
+      "status": "prepared-for-user-review",
+      "user_approved": false,
+      "purpose": "Static layout and scene sequence for octal counting in the Aurora Garden, with Scots pine and mountain birch inspired by Finnish Lapland near Inari.",
+      "items": [
+        "octal-counting-reference-v003",
+        "aurora-garden-background-v002"
+      ],
+      "manifest": "assets/library/references/octal-counting/v003/reference-manifest.json",
+      "key_visual": "assets/library/references/octal-counting/v003/key-visual.png",
+      "storyboard": "assets/library/references/octal-counting/v003/storyboard.png",
+      "canonical_identity_id": "bear-beret-identity-neutral-v001",
+      "audio_generated": false,
+      "video_generated": false
+    },
+    "octal-counting-reference-v004": {
+      "status": "prepared-for-user-review",
+      "user_approved": false,
+      "purpose": "Static layout and scene sequence for octal counting in the Aurora Garden with a pink rabbit mascot.",
+      "items": [
+        "octal-counting-reference-v004",
+        "aurora-garden-background-v002",
+        "rabbit-beret-poses-v001"
+      ],
+      "manifest": "assets/library/references/octal-counting/v004/reference-manifest.json",
+      "key_visual": "assets/library/references/octal-counting/v004/key-visual.png",
+      "storyboard": "assets/library/references/octal-counting/v004/storyboard.png",
+      "canonical_identity_id": "rabbit-beret-poses-v001",
+      "audio_generated": false,
+      "video_generated": false
+    },
+    "hexadecimal-counting-reference-v001": {
+      "status": "prepared-for-user-review",
+      "user_approved": false,
+      "purpose": "Static layout and scene sequence for hexadecimal counting in the Starry Observatory with the existing Tora character.",
+      "items": [
+        "hexadecimal-counting-reference-v001",
+        "starry-observatory-background-v001",
+        "tora-existing-source-v001"
+      ],
+      "manifest": "assets/library/references/hexadecimal-counting/v001/reference-manifest.json",
+      "key_visual": "assets/library/references/hexadecimal-counting/v001/key-visual.png",
+      "storyboard": "assets/library/references/hexadecimal-counting/v001/storyboard.png",
+      "canonical_identity_id": "tora-existing-source-v001",
+      "audio_generated": false,
+      "video_generated": false
+    },
+    "four-base-counting-reference-v001": {
+      "status": "prepared-for-user-review",
+      "user_approved": false,
+      "purpose": "Four bases shown simultaneously with decimal narration.",
+      "items": [
+        "little-bird-existing-source-v001",
+        "seaside-lighthouse-background-v001",
+        "four-base-counting-reference-v001"
+      ],
+      "manifest": "assets/library/references/four-base-counting/v001/reference-manifest.json",
+      "key_visual": "assets/library/references/four-base-counting/v001/key-visual.png",
+      "storyboard": "assets/library/references/four-base-counting/v001/storyboard.png",
+      "canonical_identity_id": "little-bird-existing-source-v001",
+      "audio_generated": false,
+      "video_generated": false
+    },
+    "four-base-counting-reference-v002": {
+      "status": "prepared-for-user-review",
+      "user_approved": false,
+      "purpose": "Four bases shown simultaneously with decimal narration.",
+      "items": [
+        "little-bird-existing-source-v002",
+        "seaside-lighthouse-background-v001",
+        "four-base-counting-reference-v002"
+      ],
+      "manifest": "assets/library/references/four-base-counting/v002/reference-manifest.json",
+      "key_visual": "assets/library/references/four-base-counting/v002/key-visual.png",
+      "storyboard": "assets/library/references/four-base-counting/v002/storyboard.png",
+      "canonical_identity_id": "little-bird-existing-source-v002",
+      "audio_generated": false,
+      "video_generated": false,
+      "supersedes_reference_set_id": "four-base-counting-reference-v001",
+      "motion_approved": false
+    },
+    "four-base-counting-reference-v003": {
+      "status": "implemented-and-assistant-reviewed",
+      "user_approved": false,
+      "purpose": "Four bases shown simultaneously with decimal narration; final280px bird composition.",
+      "items": [
+        "little-bird-existing-source-v002",
+        "little-bird-matching-motions-v001",
+        "seaside-lighthouse-background-v001",
+        "four-base-counting-reference-v003"
+      ],
+      "manifest": "assets/library/references/four-base-counting/v003/reference-manifest.json",
+      "key_visual": "assets/library/references/four-base-counting/v003/key-visual.png",
+      "storyboard": "assets/library/references/four-base-counting/v003/storyboard.png",
+      "canonical_identity_id": "little-bird-existing-source-v002",
+      "actor_height_px": 280,
+      "motion_approved": true,
+      "audio_generated": true,
+      "video_generated": true,
+      "supersedes_reference_set_id": "four-base-counting-reference-v002",
+      "implemented_by_production_set_id": "four-base-counting-production-v001"
+    },
+    "four-base-counting-reference-v004": {
+      "status": "implemented-and-assistant-reviewed",
+      "user_approved": false,
+      "purpose": "Four simultaneous bases with decimal narration from zero to 200; 280px Little Bird.",
+      "items": [
+        "little-bird-existing-source-v002",
+        "little-bird-matching-motions-v001",
+        "seaside-lighthouse-background-v001",
+        "four-base-counting-reference-v004"
+      ],
+      "manifest": "assets/library/references/four-base-counting/v004/reference-manifest.json",
+      "key_visual": "assets/library/references/four-base-counting/v004/key-visual.png",
+      "storyboard": "assets/library/references/four-base-counting/v004/storyboard.png",
+      "canonical_identity_id": "little-bird-existing-source-v002",
+      "actor_height_px": 280,
+      "motion_approved": true,
+      "audio_generated": true,
+      "video_generated": true,
+      "supersedes_reference_set_id": "four-base-counting-reference-v003",
+      "implemented_by_production_set_id": "four-base-counting-production-v002"
+    }
+  },
+  "items": {
+    "bear-beret-identity-neutral-v001": {
+      "kind": "character_identity_reference",
+      "status": "original_pixels_preserved",
+      "version": "v001",
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "8512984d0660fea738192619b2bfccff1ce42a9493db49c980452ff904296e4e",
+      "reusable_across_episodes": true,
+      "source_type": "unchanged_copy",
+      "ai_generated_in_this_review": false,
+      "source": {
+        "project": "four-operations-common",
+        "relative_path": "runtime/assets/characters/revisions/bear-beret-neutral-outline-v4.png",
+        "reference_only_original_root": "D:/codex_projects/four-operations-common",
+        "source_file_modified": false,
+        "copy_hash_matches_source": true
+      },
+      "identity_rules": [
+        "coral red beret",
+        "pale yellow body",
+        "warm brown outline",
+        "original face and proportions",
+        "no cheek blush",
+        "preserve alpha and aspect ratio"
+      ],
+      "rights_record": {
+        "basis": "User-authorized reuse of the project's main character.",
+        "public_redistribution_license": null,
+        "note": "This catalog does not grant a public license; retain the source project's rights and production history."
+      },
+      "production_asset": true,
+      "bytes": 955092
+    },
+    "counting-garden-key-visual-v002": {
+      "kind": "composition_reference",
+      "status": "assistant_visually_reviewed",
+      "version": "v002",
+      "path": "assets/library/references/counting-garden/v002/key-visual.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e7eaf4d48585b8baa38d73a64146bd76566f939ff2b314951c1e170f86e60b18",
+      "reusable_across_episodes": true,
+      "production_asset": false,
+      "generated_with": "built-in image_gen",
+      "generation_record": "assets/library/references/counting-garden/v002/generation-record.json",
+      "reviewed": {
+        "count": 128,
+        "open_flowers": 2,
+        "closed_buds": 4,
+        "milestone_labels": [
+          50,
+          100,
+          150,
+          200,
+          250,
+          300
+        ],
+        "ordinary_count_no_milestone_sparkles": true
+      },
+      "usage": "Layout/color/legibility reference only. The generated bear is not the canonical character source and must not be extracted as a production sprite.",
+      "bytes": 2021848
+    },
+    "counting-garden-storyboard-a-v002": {
+      "kind": "storyboard_reference",
+      "status": "assistant_visually_reviewed",
+      "version": "v002",
+      "path": "assets/library/references/counting-garden/v002/storyboard-a.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "dee8f10cabd2d51fa7998b622b027756412fac12974a008b1a093d6dedc9fc9d",
+      "reusable_across_episodes": true,
+      "production_asset": false,
+      "generated_with": "built-in image_gen",
+      "generation_record": "assets/library/references/counting-garden/v002/generation-record.json",
+      "reviewed": {
+        "panels": 6,
+        "main_board_counts": [
+          null,
+          1,
+          10,
+          20,
+          30,
+          40
+        ],
+        "open_flower_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "intro_board_blank": true,
+        "one_starts_at_s": 12,
+        "obsolete_absolute_times_removed": true,
+        "miniature_progress_numbers_intentionally_omitted": true
+      },
+      "usage": "Stage layout and event-layering reference. Read exact words, SFX and measured timings from the cue sheet, not by extracting the image.",
+      "bytes": 2193643
+    },
+    "counting-garden-storyboard-b-v002": {
+      "kind": "storyboard_reference",
+      "status": "assistant_visually_reviewed",
+      "version": "v002",
+      "path": "assets/library/references/counting-garden/v002/storyboard-b.png",
+      "width": 1671,
+      "height": 941,
+      "sha256": "c2217060a766ccf405bd6d9243b955c4749e5919e5c84dc664c7d23d8d085329",
+      "reusable_across_episodes": true,
+      "production_asset": false,
+      "generated_with": "built-in image_gen",
+      "generation_record": "assets/library/references/counting-garden/v002/generation-record.json",
+      "reviewed": {
+        "panels": 6,
+        "main_board_counts": [
+          50,
+          100,
+          128,
+          200,
+          300,
+          300
+        ],
+        "open_flower_counts": [
+          1,
+          2,
+          2,
+          4,
+          6,
+          6
+        ],
+        "rainbow_at_100": true,
+        "seated_stretch_at_200": true,
+        "resume_after_break": 201,
+        "final_count_provisional": false,
+        "fade_to_cream": true,
+        "miniature_progress_numbers_intentionally_omitted": true
+      },
+      "usage": "Milestone, 200 break and 300 finale composition reference. Current count end is fixed at 300; exact speech and measured timings come from the current cue sheet and timeline.",
+      "bytes": 2218815
+    },
+    "bear-beret-reactions-source-v001": {
+      "kind": "sprite_atlas",
+      "status": "unchanged_source_copy",
+      "version": "v001",
+      "path": "assets/library/characters/bear-beret/sources/v001/reactions-v2.png",
+      "sha256": "e279efc952f7c50aacd0b2d600f0ff843279340aaa5492017295a579f3ca4d4f",
+      "reusable_across_episodes": true,
+      "production_asset": false,
+      "origin": {
+        "project": "four-operations-common",
+        "relative_path": "runtime/assets/characters/reactions-v2/bear-beret-reactions.png",
+        "reference_only_original_root": "D:/codex_projects/four-operations-common",
+        "source_modified": false,
+        "copy_hash_matches_source": true
+      },
+      "registration_usage": "Use registered coordinates through catalogs/motions-v1.json; no guessed atlas crops.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1063077
+    },
+    "bear-beret-playful-source-v001": {
+      "kind": "sprite_atlas",
+      "status": "unchanged_source_copy",
+      "version": "v001",
+      "path": "assets/library/characters/bear-beret/sources/v001/playful-v1.png",
+      "sha256": "035cfa1bbc3cd3c7b520b4c8677af14b5d5c5caaa07f8ec4a9be7842c77a235f",
+      "reusable_across_episodes": true,
+      "production_asset": false,
+      "origin": {
+        "project": "four-operations-common",
+        "relative_path": "runtime/assets/characters/playful-v1/bear-beret-playful.png",
+        "reference_only_original_root": "D:/codex_projects/four-operations-common",
+        "source_modified": false,
+        "copy_hash_matches_source": true
+      },
+      "registration_usage": "Use registered coordinates through catalogs/motions-v1.json; no guessed atlas crops.",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1986934
+    },
+    "bear-beret-reactions-registration-source-v001": {
+      "kind": "source_registration",
+      "status": "unchanged_source_copy",
+      "version": "v001",
+      "path": "assets/library/characters/bear-beret/sources/v001/reactions-registration-v4.json",
+      "sha256": "eda0202e3fc8bf9429f86f12123c2aa7e7a24754de919f2d1c1b14ee127a75aa",
+      "reusable_across_episodes": true,
+      "production_asset": false,
+      "origin": {
+        "project": "four-operations-common",
+        "relative_path": "runtime/assets/characters/reactions-v4/runtime-all-characters.json",
+        "reference_only_original_root": "D:/codex_projects/four-operations-common",
+        "source_modified": false,
+        "copy_hash_matches_source": true
+      },
+      "registration_usage": "Use registered coordinates through catalogs/motions-v1.json; no guessed atlas crops.",
+      "bytes": 54542,
+      "entry": "characters.bear-beret"
+    },
+    "bear-beret-idle-registration-source-v001": {
+      "kind": "source_registration",
+      "status": "unchanged_source_copy",
+      "version": "v001",
+      "path": "assets/library/characters/bear-beret/sources/v001/idle-registration-v1.json",
+      "sha256": "e2bee7a613487f62b5fb77507a33a949e4d7e6580f744a03dcb5ff0c262ecdc1",
+      "reusable_across_episodes": true,
+      "production_asset": false,
+      "origin": {
+        "project": "four-operations-common",
+        "relative_path": "runtime/assets/characters/idle-v1/runtime.json",
+        "reference_only_original_root": "D:/codex_projects/four-operations-common",
+        "source_modified": false,
+        "copy_hash_matches_source": true
+      },
+      "registration_usage": "Use registered coordinates through catalogs/motions-v1.json; no guessed atlas crops.",
+      "bytes": 5694,
+      "entry": "characters.bear-beret"
+    },
+    "bear-beret-wave-sheet-v001": {
+      "kind": "sprite_sheet_candidate",
+      "status": "rendered_motion_reviewed",
+      "version": "v001",
+      "path": "assets/library/characters/bear-beret/animations/wave/v001/wave-sheet.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "921102acb607b52c84f0ac16ea0a24ec63359976e9317dac51450f1a7ec8ad76",
+      "reusable_across_episodes": true,
+      "production_asset": true,
+      "production_ready": true,
+      "transparent_background": true,
+      "generated_with": "built-in image_gen",
+      "identity_reference_id": "bear-beret-identity-neutral-v001",
+      "registration_path": "assets/library/characters/bear-beret/animations/wave/v001/registration.json",
+      "generation_record": "assets/library/characters/bear-beret/animations/wave/v001/generation-record.json",
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "note": "Registered scale and support points used in encoded greeting/farewell wave previews and the completed video.",
+      "bytes": 1105783
+    },
+    "paspla-studio-channel-banner-v001": {
+      "kind": "channel_banner",
+      "status": "assistant_visually_reviewed",
+      "version": "v001",
+      "path": "assets/library/branding/paspla-studio/v001/exports/banner-2560x1440.png",
+      "width": 2560,
+      "height": 1440,
+      "mode": "RGB",
+      "bytes": 4899832,
+      "sha256": "eb15742bd8812494567edd9afa58535ddc26664b9841d3f40b788e25ed4e0fc4",
+      "reusable_across_episodes": true,
+      "production_asset": false,
+      "upload_export_ready": true,
+      "motion_review": "not_applicable_static_branding",
+      "user_approved": false,
+      "generated_with": "built-in image_gen",
+      "generation_record": "assets/library/branding/paspla-studio/v001/generation-record.json",
+      "review_record": "assets/library/branding/paspla-studio/v001/review.txt",
+      "usage": "Use as channel branding or a counting-series thumbnail; flattened artwork is not a production sprite source."
+    },
+    "paspla-studio-channel-icon-v001": {
+      "kind": "channel_profile_icon",
+      "status": "assistant_visually_reviewed",
+      "version": "v001",
+      "path": "assets/library/branding/paspla-studio/v001/exports/icon-1024x1024.png",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 1394902,
+      "sha256": "1e242470096bf88e1b27eb9e428d55a76d7caaf3a01363f6b46116a78b69da3d",
+      "reusable_across_episodes": true,
+      "production_asset": false,
+      "upload_export_ready": true,
+      "motion_review": "not_applicable_static_branding",
+      "user_approved": false,
+      "generated_with": "built-in image_gen",
+      "generation_record": "assets/library/branding/paspla-studio/v001/generation-record.json",
+      "review_record": "assets/library/branding/paspla-studio/v001/review.txt",
+      "usage": "Use as channel branding or a counting-series thumbnail; flattened artwork is not a production sprite source."
+    },
+    "paspla-studio-counting-thumbnail-v001": {
+      "kind": "counting_video_thumbnail",
+      "status": "assistant_visually_reviewed",
+      "version": "v001",
+      "path": "assets/library/branding/paspla-studio/v001/exports/thumbnail-3840x2160.jpg",
+      "width": 3840,
+      "height": 2160,
+      "mode": "RGB",
+      "bytes": 664852,
+      "sha256": "76ebf1176b965fc0992d6c90f5d89a4351accafbb2e1169d75be4fedcff58bea",
+      "reusable_across_episodes": true,
+      "production_asset": false,
+      "upload_export_ready": true,
+      "motion_review": "not_applicable_static_branding",
+      "user_approved": false,
+      "generated_with": "built-in image_gen",
+      "generation_record": "assets/library/branding/paspla-studio/v001/generation-record.json",
+      "review_record": "assets/library/branding/paspla-studio/v001/review.txt",
+      "usage": "Use as channel branding or a counting-series thumbnail; flattened artwork is not a production sprite source."
+    },
+    "bear-beret-postures-sheet-v001": {
+      "kind": "registered_character_postures",
+      "version": "v001",
+      "status": "rendered_and_assistant_reviewed",
+      "path": "assets/library/characters/bear-beret/animations/postures/v001/postures-sheet.png",
+      "bytes": 1128181,
+      "sha256": "1b67c95c8a71d7ec787b4aabe30b4146eb85596a49b9d096e5e76e60a0b58a3c",
+      "width": 1254,
+      "height": 1254,
+      "reusable_across_episodes": true,
+      "production_asset": true,
+      "user_approved": false,
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "usage": "Reusable project asset or immutable bundle manifest; individual source registrations and rights records remain authoritative.",
+      "generation_record": "assets/library/characters/bear-beret/animations/postures/v001/generation-record.json",
+      "generated_with": "built-in image_gen"
+    },
+    "garden-render-sources-v001": {
+      "kind": "registered_atlas_and_font_bundle",
+      "version": "v001",
+      "status": "rendered_and_assistant_reviewed",
+      "path": "catalogs/render-assets-v1.json",
+      "bytes": 21787,
+      "sha256": "287638a771b704ea9f2716da8e6bd4e0a8d73b849ffbb0ef6c95dff81bcede13",
+      "reusable_across_episodes": true,
+      "production_asset": true,
+      "user_approved": false,
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "usage": "Reusable project asset or immutable bundle manifest; individual source registrations and rights records remain authoritative."
+    },
+    "garden-sfx-library-v001": {
+      "kind": "original_synthesized_sfx_bundle",
+      "version": "v001",
+      "status": "rendered_and_assistant_reviewed",
+      "path": "assets/library/audio/sfx/garden/v001/generation-spec.json",
+      "bytes": 5340,
+      "sha256": "69b9b86e017b02a4691ce1bc0af58bd519e27504c9d71865837361eff81035c7",
+      "reusable_across_episodes": true,
+      "production_asset": true,
+      "user_approved": false,
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "usage": "Reusable project asset or immutable bundle manifest; individual source registrations and rights records remain authoritative."
+    },
+    "bright-garden-golden-board-v001": {
+      "kind": "reusable_blank_number_board",
+      "version": "v001",
+      "status": "encoded_video_visually_and_technically_reviewed",
+      "path": "assets/library/worlds/bright-garden/components/v001/empty-golden-board.png",
+      "bytes": 2035106,
+      "sha256": "7e43ec5ede32d8a5c33b85503d55520c608d288a5de0b7819c8c46ad5a323533",
+      "width": 1586,
+      "height": 992,
+      "reusable_across_episodes": true,
+      "production_asset": true,
+      "user_approved": false,
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "generation_record": "assets/library/worlds/bright-garden/components/v001/generation-record.json",
+      "registration_path": "assets/library/worlds/bright-garden/components/v001/registration.json"
+    },
+    "bright-garden-white-progress-plants-v001": {
+      "kind": "registered_flower_and_bud_sheet",
+      "version": "v001",
+      "status": "encoded_video_visually_and_technically_reviewed",
+      "path": "assets/library/worlds/bright-garden/components/v001/white-flower-cream-bud.png",
+      "bytes": 676473,
+      "sha256": "f38db16f41e86766242bc2a1010d12e1f41441d67a9dbcbeab20b836cb0f6d6b",
+      "width": 1804,
+      "height": 872,
+      "reusable_across_episodes": true,
+      "production_asset": true,
+      "user_approved": false,
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "generation_record": "assets/library/worlds/bright-garden/components/v001/generation-record.json",
+      "registration_path": "assets/library/worlds/bright-garden/components/v001/registration.json"
+    },
+    "kokoro-af-heart-en-us-v002": {
+      "kind": "approved_reusable_speech_library",
+      "version": "v002",
+      "status": "hash_bound_pronunciation_reviewed",
+      "path": "assets/library/audio/speech/kokoro-af-heart/v002/voice-profile.json",
+      "bytes": 4876,
+      "sha256": "4019145f316689066287f069061d108b9518879cd260b4d0452fb2fac7961761",
+      "reusable_across_episodes": true,
+      "production_asset": true,
+      "user_approved": false,
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "language": "en-US",
+      "voice_id": "af_heart",
+      "dtype": "fp32",
+      "generation_speed": 0.98,
+      "clips": 311,
+      "measurements": "assets/library/audio/speech/kokoro-af-heart/v002/measurements.json",
+      "acceptance": "assets/library/audio/speech/kokoro-af-heart/v002/speech-acceptance.json",
+      "usage": "Reuse exact approved clips after manifest/receipt/source/evidence hash checks; reject known defective source hashes. Machine-assisted verification does not claim full human listening."
+    },
+    "counting-garden-blue-sky-theme-v002": {
+      "kind": "production_theme",
+      "version": "v002",
+      "status": "completed_and_assistant_reviewed",
+      "path": "design/counting-video-v1/themes/bright-garden-v002.json",
+      "bytes": 3137,
+      "sha256": "9f5fc03186795b56bdbb9fbe6d6f1c0f923fe84eedf78e53107e758b385804d5",
+      "reusable_across_episodes": true,
+      "production_asset": true,
+      "user_approved": false,
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "alignment_review": "output/counting-garden-001-bright-v002/centering-audit-after.json",
+      "usage": "Current blue-sky layout with actual glyph-ink centering; channel branding remains separate."
+    },
+    "binary-lantern-garden-background-v001": {
+      "kind": "reusable-background-plate",
+      "version": "v001",
+      "status": "assistant-static-background-reviewed",
+      "production_asset": true,
+      "reusable_across_episodes": true,
+      "path": "assets/library/worlds/binary-lantern-garden/backgrounds/v001/lantern-garden-background.png",
+      "bytes": 2231084,
+      "sha256": "a540249b6225e5ff2ca98ced5a2a47d6d17a2de994e248c3eb99daede5feb4c4",
+      "generation_record": "assets/library/worlds/binary-lantern-garden/backgrounds/v001/generation-record.json",
+      "review_record": "assets/library/references/binary-counting/v001/review.txt"
+    },
+    "binary-counting-reference-v001": {
+      "kind": "static-preproduction-reference-bundle",
+      "version": "v001",
+      "status": "assistant-image-reviewed",
+      "production_asset": false,
+      "reusable_across_episodes": true,
+      "path": "assets/library/references/binary-counting/v001/reference-manifest.json",
+      "bytes": 3780,
+      "sha256": "1c5d8220ffd004db67fdfe5aaea3832720798a40417db9e97e6abeb37be4e584",
+      "review_record": "assets/library/references/binary-counting/v001/review.txt"
+    },
+    "octal-counting-reference-v001": {
+      "kind": "static-preproduction-reference-bundle",
+      "version": "v001",
+      "status": "prepared-for-user-review",
+      "production_asset": false,
+      "path": "assets/library/references/octal-counting/v001/reference-manifest.json"
+    },
+    "eight-step-garden-background-v001": {
+      "kind": "reusable-background-plate",
+      "version": "v001",
+      "status": "prepared-for-user-review",
+      "production_asset": false,
+      "reusable_across_episodes": true,
+      "path": "assets/library/worlds/eight-step-garden/backgrounds/v001/eight-step-garden-background.png"
+    },
+    "octal-counting-reference-v002": {
+      "kind": "static-preproduction-reference-bundle",
+      "version": "v002",
+      "status": "prepared-for-user-review",
+      "production_asset": false,
+      "path": "assets/library/references/octal-counting/v002/reference-manifest.json"
+    },
+    "aurora-garden-background-v001": {
+      "kind": "reusable-background-plate",
+      "version": "v001",
+      "status": "prepared-for-user-review",
+      "production_asset": false,
+      "reusable_across_episodes": true,
+      "path": "assets/library/worlds/aurora-garden/backgrounds/v001/aurora-garden-background.png"
+    },
+    "octal-counting-reference-v003": {
+      "kind": "static-preproduction-reference-bundle",
+      "version": "v003",
+      "status": "prepared-for-user-review",
+      "production_asset": false,
+      "path": "assets/library/references/octal-counting/v003/reference-manifest.json"
+    },
+    "aurora-garden-background-v002": {
+      "kind": "reusable-background-plate",
+      "version": "v002",
+      "status": "prepared-for-user-review",
+      "production_asset": false,
+      "reusable_across_episodes": true,
+      "path": "assets/library/worlds/aurora-garden/backgrounds/v002/aurora-garden-background.png"
+    },
+    "octal-counting-reference-v004": {
+      "kind": "static-preproduction-reference-bundle",
+      "version": "v004",
+      "status": "prepared-for-user-review",
+      "production_asset": false,
+      "path": "assets/library/references/octal-counting/v004/reference-manifest.json"
+    },
+    "rabbit-beret-poses-v001": {
+      "kind": "registered_character_poses",
+      "version": "v001",
+      "status": "prepared-for-user-review",
+      "production_asset": false,
+      "reusable_across_episodes": true,
+      "path": "assets/library/characters/rabbit-beret/sources/v001/registration.json",
+      "sheet_path": "assets/library/characters/rabbit-beret/sources/v001/rabbit-poses.png",
+      "pose_count": 4,
+      "generated_with": "built-in image_gen",
+      "style_reference_id": "bear-beret-identity-neutral-v001"
+    },
+    "hexadecimal-counting-reference-v001": {
+      "kind": "static-preproduction-reference-bundle",
+      "version": "v001",
+      "status": "prepared-for-user-review",
+      "production_asset": false,
+      "path": "assets/library/references/hexadecimal-counting/v001/reference-manifest.json"
+    },
+    "starry-observatory-background-v001": {
+      "kind": "reusable-background-plate",
+      "version": "v001",
+      "status": "assistant-reviewed-in-final-video",
+      "production_asset": true,
+      "reusable_across_episodes": true,
+      "path": "assets/library/worlds/starry-observatory/backgrounds/v001/starry-observatory-background.png",
+      "sha256": "68edca190ccb98b314150d005cbea84050495d03065f6a7115b82f8d4a585ae9"
+    },
+    "tora-existing-source-v001": {
+      "kind": "character_source_bundle",
+      "version": "v001",
+      "status": "assistant-reviewed-in-final-video",
+      "production_asset": true,
+      "reusable_across_episodes": true,
+      "path": "assets/library/characters/tora/sources/v001/source-manifest.json",
+      "sha256": "9c448daeed2eace4f87f24f531465df91464b252848cf0fd0b1988c654f2d7fb"
+    },
+    "kokoro-af-heart-binary-v001": {
+      "kind": "measured-and-reviewed-speech-library",
+      "version": "binary-v001",
+      "production_asset": true,
+      "path": "assets/library/audio/speech/kokoro-af-heart/binary-v001/measurements.json",
+      "sha256": "bc78b5fd5d23f407c0b4f9106756ae8ff1fef75cd8aab8877dae577949ff14bf",
+      "speech_acceptance": "assets/library/audio/speech/kokoro-af-heart/binary-v001/speech-acceptance.json",
+      "clips": 17,
+      "voice": "af_heart",
+      "reusable_across_episodes": true
+    },
+    "binary-sfx-library-v001": {
+      "kind": "original-procedural-sfx-library",
+      "version": "v001",
+      "production_asset": true,
+      "path": "assets/library/audio/sfx/binary/v001/generation-spec.json",
+      "sha256": "8cde57d62572a9a29a9d56b8618c1ccc847576eaa6400aac9bd236a253eaa035",
+      "sounds": 2,
+      "reusable_across_episodes": true
+    },
+    "binary-decimal-sign-v002": {
+      "kind": "procedural-held-sign",
+      "version": "v002",
+      "production_asset": true,
+      "path": "tools/render_binary_video_v002.py",
+      "sha256": "c6224a87fe9f0d50ea7c339474df35591dfb4bd2870e19b648aa62f97400ca2f",
+      "decimal_range": [
+        0,
+        127
+      ],
+      "font_size_px": 112,
+      "reusable_across_episodes": true,
+      "rendering": "Warm cream/wood sign and foreground paw grips; registered canonical bear unchanged."
+    },
+    "binary-centered-text-layout-v003": {
+      "kind": "ink-centered-multiline-layout",
+      "version": "v003",
+      "production_asset": true,
+      "path": "tools/render_binary_video_v003.py",
+      "sha256": "5cf7920971da170315e393b0a2bb0c1e1b0292dc09e65e3f3937d5937138e61e",
+      "maximum_decoded_center_delta_px": 0.5,
+      "alignment_report": "output/binary-counting-001-v003-gap600ms/alignment-qa.json",
+      "reusable_across_episodes": true
+    },
+    "kokoro-af-heart-hexadecimal-v001": {
+      "kind": "measured-and-reviewed-episode-speech",
+      "version": "hexadecimal-v001",
+      "production_asset": true,
+      "path": "output/hexadecimal-counting-001-v001/speech/measurements.json",
+      "sha256": "8777f6936de91aacdb55cce80324662c533185d2e327223d7d73839354dba095",
+      "voice": "af_heart",
+      "reusable_across_episodes": true,
+      "human_listening_performed": false,
+      "new_dialogue_clips": 14,
+      "new_letter_clips": 6
+    },
+    "kokoro-af-heart-hexadecimal-v002": {
+      "kind": "measured-and-reviewed-episode-speech",
+      "version": "hexadecimal-v002",
+      "production_asset": true,
+      "path": "output/hexadecimal-counting-001-v002-clear-A/speech/measurements.json",
+      "sha256": "22711c1c82afd03a7a7eb3b4e9bc3f6bdf3d68ad296ae6ee2f18c9ceb31fa6aa",
+      "voice": "af_heart",
+      "reusable_across_episodes": true,
+      "human_listening_performed": false,
+      "new_letter_replacement": "A"
+    },
+    "little-bird-existing-source-v001": {
+      "kind": "character_source_bundle",
+      "version": "v001",
+      "status": "assistant-reviewed-preproduction",
+      "production_asset": false,
+      "reusable_across_episodes": true,
+      "path": "assets/library/characters/little-bird/sources/v001/source-manifest.json",
+      "sha256": "53377abe737706c4e20f683ad1d8316c5fdd6fb09fa00f9546d6002b0e13badd"
+    },
+    "seaside-lighthouse-background-v001": {
+      "kind": "reusable-background-plate",
+      "version": "v001",
+      "status": "adopted-and-assistant-reviewed",
+      "production_asset": true,
+      "reusable_across_episodes": true,
+      "path": "assets/library/worlds/seaside-lighthouse/backgrounds/v001/seaside-lighthouse-background.png",
+      "sha256": "7b7432b069a81cbd5eafd97eaccceb2704f4b24a71aef10340360cfaa33afb37"
+    },
+    "four-base-counting-reference-v001": {
+      "kind": "preproduction-reference-bundle",
+      "version": "v001",
+      "status": "assistant-reviewed-preproduction",
+      "production_asset": false,
+      "reusable_across_episodes": false,
+      "path": "assets/library/references/four-base-counting/v001/reference-manifest.json",
+      "sha256": "7d21c55f292e29c11937353905da01bea192369fefa3465cf32b47a7c9dcb233"
+    },
+    "little-bird-existing-source-v002": {
+      "kind": "character_source_bundle",
+      "version": "v002",
+      "status": "adopted-and-assistant-reviewed",
+      "production_asset": true,
+      "reusable_across_episodes": true,
+      "path": "assets/library/characters/little-bird/sources/v002/source-manifest.json",
+      "sha256": "f17c03159b4f0654af6585c8b7d79b8765f3829c253fba5e4cd93e755e53f10f",
+      "new_art_generated": false
+    },
+    "four-base-counting-reference-v002": {
+      "kind": "preproduction-reference-bundle",
+      "version": "v002",
+      "status": "assistant-reviewed-preproduction",
+      "production_asset": false,
+      "path": "assets/library/references/four-base-counting/v002/reference-manifest.json",
+      "sha256": "f189f1afdd620679ecdfa98c2a500abfe25c89b56bb3242ca75af2293a7fa9c0"
+    },
+    "four-base-counting-reference-v003": {
+      "kind": "production-reference-bundle",
+      "version": "v003",
+      "status": "adopted-and-assistant-reviewed",
+      "production_asset": true,
+      "reusable_across_episodes": false,
+      "path": "assets/library/references/four-base-counting/v003/reference-manifest.json",
+      "sha256": "5a67ce02d5313680546f228dcfacc416ded820c7a952310e5f96590f1dfdb03c"
+    },
+    "little-bird-matching-motions-v001": {
+      "kind": "registered-character-motion-bundle",
+      "version": "v001",
+      "status": "adopted-and-assistant-reviewed",
+      "production_asset": true,
+      "reusable_across_episodes": true,
+      "path": "assets/library/characters/little-bird/motions/v001/registration.json",
+      "sha256": "14c7fa19615b3779b3ba603255527576a2dfc8ec62ace73365a297e1ac1f9a90",
+      "generation_record": "assets/library/characters/little-bird/motions/v001/generation-record.json"
+    },
+    "four-base-counting-reference-v004": {
+      "kind": "production-reference-bundle",
+      "version": "v004",
+      "status": "adopted-and-assistant-reviewed",
+      "production_asset": true,
+      "reusable_across_episodes": false,
+      "path": "assets/library/references/four-base-counting/v004/reference-manifest.json",
+      "sha256": "1d8573852d724435bafd825fd059b92a9f80ebc94bd45eca55ddb1cb6d1cd3a5"
+    }
+  },
+  "motion_catalog": "catalogs/motions-v1.json",
+  "branding_sets": {
+    "paspla-studio-branding-v001": {
+      "channel_name": "Paspla Studio",
+      "status": "assistant_visually_reviewed",
+      "user_approved": false,
+      "purpose": "Reusable channel banner, profile icon and counting-series thumbnail; separate from episode layout references.",
+      "items": [
+        "paspla-studio-channel-banner-v001",
+        "paspla-studio-channel-icon-v001",
+        "paspla-studio-counting-thumbnail-v001"
+      ],
+      "style_reference": "assets/library/branding/paspla-studio/v001/sources/user-style-reference.png",
+      "generation_record": "assets/library/branding/paspla-studio/v001/generation-record.json",
+      "review_record": "assets/library/branding/paspla-studio/v001/review.txt",
+      "upload_directory": "assets/library/branding/paspla-studio/v001/exports",
+      "all_device_preview": "assets/library/branding/paspla-studio/v001/previews/banner-all-devices.png",
+      "rights_record": {
+        "basis": "User-authorized project branding creation",
+        "public_redistribution_license": null
+      }
+    }
+  },
+  "active_branding_set_ids": [
+    "paspla-studio-branding-v001"
+  ],
+  "production_sets": {
+    "counting-garden-blue-sky-production-v002": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "counting-garden-001",
+      "variant_id": "original-blue-sky",
+      "baseline": "design/counting-video-v1/blue-sky-baseline-1848-v001.txt",
+      "visual_reference_set_id": "counting-garden-reference-v002",
+      "count_start": 1,
+      "count_end": 300,
+      "items": [
+        "bright-garden-golden-board-v001",
+        "bright-garden-white-progress-plants-v001",
+        "counting-garden-blue-sky-theme-v002",
+        "bear-beret-identity-neutral-v001",
+        "bear-beret-wave-sheet-v001",
+        "bear-beret-postures-sheet-v001",
+        "garden-render-sources-v001",
+        "garden-sfx-library-v001",
+        "kokoro-af-heart-en-us-v002"
+      ],
+      "render_implementation": "tools/render_counting_video.py",
+      "ordinary_effects_implementation": "tools/bright_garden_effects.py",
+      "render_asset_manifest": "catalogs/render-assets-v1.json",
+      "theme": "design/counting-video-v1/themes/bright-garden-v002.json",
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "production_record": "design/counting-video-v1/blue-sky-production-run-v002.json",
+      "output": "output/counting-garden-001-bright-v002/paspla-studio-count-1-to-300-blue-sky-1080p.mp4",
+      "timeline": "output/counting-garden-001-bright-v002/timeline.json",
+      "speech_acceptance": "assets/library/audio/speech/kokoro-af-heart/v002/speech-acceptance.json",
+      "technical_qa": "output/counting-garden-001-bright-v002/technical-qa.json",
+      "channel_art_direction_applied": false,
+      "reference_priority": "Current production set, renderer and measured timeline are authoritative; composition mockups and generic motion plans retain their explicit scope limits.",
+      "duration_s": 496.966667,
+      "video_sha256": "5fbcb6cf2a03c23d6d4a3ff7081382153a313b189aee58092d0667ee52313ce0",
+      "opening_audio": "No opening wind/static SFX; narration and later SFX retained."
+    },
+    "binary-counting-production-v001": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "binary-counting-001",
+      "visual_reference_set_id": "binary-counting-reference-v001",
+      "count_start": 0,
+      "count_end": 127,
+      "items": [
+        "bear-beret-identity-neutral-v001",
+        "bear-beret-wave-sheet-v001",
+        "bear-beret-postures-sheet-v001",
+        "binary-lantern-garden-background-v001",
+        "kokoro-af-heart-binary-v001",
+        "binary-sfx-library-v001"
+      ],
+      "render_implementation": "tools/render_binary_video.py",
+      "build_implementation": "tools/build_binary_episode.py",
+      "production_record": "design/binary-counting-v1/production-run-v001.json",
+      "review_record": "design/binary-counting-v1/production-review-v001.txt",
+      "output": "output/binary-counting-001-v001/paspla-studio-binary-count-0-to-127-1080p.mp4",
+      "timeline": "output/binary-counting-001-v001/timeline.json",
+      "duration_s": 532.633333,
+      "video_sha256": "cbce5a38edb0f32bc9d09de627fcaf1fcd73b320494d82e0852066b472c217d2",
+      "technical_qa": "output/binary-counting-001-v001/technical-qa.json",
+      "binary_qa": "output/binary-counting-001-v001/binary-final-qa.json",
+      "visual_qa": "output/binary-counting-001-v001/binary-visual-qa.json",
+      "speech_acceptance": "assets/library/audio/speech/kokoro-af-heart/binary-v001/speech-acceptance.json",
+      "revised_by": "binary-counting-production-v002"
+    },
+    "binary-counting-production-v002": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "binary-counting-001",
+      "visual_reference_set_id": "binary-counting-reference-v001",
+      "count_start": 0,
+      "count_end": 127,
+      "items": [
+        "bear-beret-identity-neutral-v001",
+        "bear-beret-wave-sheet-v001",
+        "bear-beret-postures-sheet-v001",
+        "binary-lantern-garden-background-v001",
+        "kokoro-af-heart-binary-v001",
+        "binary-sfx-library-v001",
+        "binary-decimal-sign-v002"
+      ],
+      "render_implementation": "tools/render_binary_video_v002.py",
+      "build_implementation": "tools/build_binary_episode_v002.py",
+      "production_record": "design/binary-counting-v1/production-run-v002.json",
+      "review_record": "design/binary-counting-v1/production-review-v002.txt",
+      "output": "output/binary-counting-001-v002/paspla-studio-binary-count-slower-decimal-sign-1080p.mp4",
+      "timeline": "output/binary-counting-001-v002/timeline.json",
+      "duration_s": 574.3,
+      "video_sha256": "fe8955da2ac56afa56a31fcf6492d70774ac151105021f187c9884d4cffb1b0d",
+      "technical_qa": "output/binary-counting-001-v002/technical-qa.json",
+      "binary_qa": "output/binary-counting-001-v002/binary-final-qa.json",
+      "visual_qa": "output/binary-counting-001-v002/binary-visual-qa.json",
+      "speech_acceptance": "assets/library/audio/speech/kokoro-af-heart/binary-v001/speech-acceptance.json",
+      "revision": "Slightly longer digit gaps and post-count holds; large decimal sign held by bear.",
+      "revised_by": "binary-counting-production-v003"
+    },
+    "binary-counting-production-v003": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "binary-counting-001",
+      "visual_reference_set_id": "binary-counting-reference-v001",
+      "count_start": 0,
+      "count_end": 127,
+      "items": [
+        "bear-beret-identity-neutral-v001",
+        "bear-beret-wave-sheet-v001",
+        "bear-beret-postures-sheet-v001",
+        "binary-lantern-garden-background-v001",
+        "kokoro-af-heart-binary-v001",
+        "binary-sfx-library-v001",
+        "binary-decimal-sign-v002",
+        "binary-centered-text-layout-v003"
+      ],
+      "render_implementation": "tools/render_binary_video_v003.py",
+      "build_implementation": "tools/build_binary_episode_v003.py",
+      "production_record": "design/binary-counting-v1/production-run-v003.json",
+      "review_record": "design/binary-counting-v1/production-review-v003.txt",
+      "output": "output/binary-counting-001-v003-gap600ms/paspla-studio-binary-count-clear-pauses-centered-1080p.mp4",
+      "timeline": "output/binary-counting-001-v003-gap600ms/timeline.json",
+      "duration_s": 895.3,
+      "video_sha256": "5c14ac422fb639b673f1dcbbcffa66236dd5cd5721a1d06ae54d08ddc5c29e88",
+      "technical_qa": "output/binary-counting-001-v003-gap600ms/technical-qa.json",
+      "binary_qa": "output/binary-counting-001-v003-gap600ms/binary-final-qa.json",
+      "visual_qa": "output/binary-counting-001-v003-gap600ms/binary-visual-qa.json",
+      "alignment_qa": "output/binary-counting-001-v003-gap600ms/alignment-qa.json",
+      "speech_acceptance": "assets/library/audio/speech/kokoro-af-heart/binary-v001/speech-acceptance.json",
+      "within_number_gap_s": 0.6,
+      "revision": "Exact600ms between spoken bits; vertically centered DECIMAL/Say, carry title/markers and range-card text.",
+      "revised_by": "binary-counting-production-v004"
+    },
+    "binary-counting-production-v004": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "binary-counting-001",
+      "visual_reference_set_id": "binary-counting-reference-v001",
+      "count_start": 0,
+      "count_end": 127,
+      "items": [
+        "bear-beret-identity-neutral-v001",
+        "bear-beret-wave-sheet-v001",
+        "bear-beret-postures-sheet-v001",
+        "binary-lantern-garden-background-v001",
+        "kokoro-af-heart-binary-v001",
+        "binary-sfx-library-v001",
+        "binary-decimal-sign-v002",
+        "binary-centered-text-layout-v003"
+      ],
+      "render_implementation": "tools/render_binary_video_v003.py",
+      "build_implementation": "tools/build_binary_episode_v004.py",
+      "production_record": "design/binary-counting-v1/production-run-v004.json",
+      "review_record": "design/binary-counting-v1/production-review-v004.txt",
+      "output": "output/binary-counting-001-v004-gap900ms/paspla-studio-binary-count-gap900ms-centered-1080p.mp4",
+      "timeline": "output/binary-counting-001-v004-gap900ms/timeline.json",
+      "duration_s": 1087.9,
+      "video_sha256": "13a2e79438170a54f86db92809b1a292ae9c6f51a8fce38c3ae04e920efbc26d",
+      "technical_qa": "output/binary-counting-001-v004-gap900ms/technical-qa.json",
+      "binary_qa": "output/binary-counting-001-v004-gap900ms/binary-final-qa.json",
+      "visual_qa": "output/binary-counting-001-v004-gap900ms/binary-visual-qa.json",
+      "alignment_qa": "output/binary-counting-001-v004-gap900ms/alignment-qa.json",
+      "speech_acceptance": "assets/library/audio/speech/kokoro-af-heart/binary-v001/speech-acceptance.json",
+      "within_number_gap_s": 0.9,
+      "revision": "Latest explicit900ms between spoken bits; existing centered layout and held decimal sign retained.",
+      "revised_by": "binary-counting-production-v005"
+    },
+    "binary-counting-production-v005": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "binary-counting-001",
+      "visual_reference_set_id": "binary-counting-reference-v001",
+      "count_start": 0,
+      "count_end": 127,
+      "items": [
+        "bear-beret-identity-neutral-v001",
+        "bear-beret-wave-sheet-v001",
+        "bear-beret-postures-sheet-v001",
+        "binary-lantern-garden-background-v001",
+        "kokoro-af-heart-binary-v001",
+        "binary-sfx-library-v001",
+        "binary-decimal-sign-v002",
+        "binary-centered-text-layout-v003"
+      ],
+      "render_implementation": "tools/render_binary_video_v003.py",
+      "build_implementation": "tools/build_binary_episode_v005.py",
+      "production_record": "design/binary-counting-v1/production-run-v005.json",
+      "review_record": "design/binary-counting-v1/production-review-v005.txt",
+      "output": "output/binary-counting-001-v005-number-gap2s/paspla-studio-binary-count-gap900ms-numbergap2s-1080p.mp4",
+      "timeline": "output/binary-counting-001-v005-number-gap2s/timeline.json",
+      "duration_s": 1291.1,
+      "video_sha256": "cb11dc680ddcedda82206e083568cba5837b2ee6e714883c18bdbd4b477be5b0",
+      "technical_qa": "output/binary-counting-001-v005-number-gap2s/technical-qa.json",
+      "binary_qa": "output/binary-counting-001-v005-number-gap2s/binary-final-qa.json",
+      "visual_qa": "output/binary-counting-001-v005-number-gap2s/binary-visual-qa.json",
+      "alignment_qa": "output/binary-counting-001-v005-number-gap2s/alignment-qa.json",
+      "between_number_visual_qa": "output/binary-counting-001-v005-number-gap2s/between-number-visual-qa.json",
+      "speech_acceptance": "assets/library/audio/speech/kokoro-af-heart/binary-v001/speech-acceptance.json",
+      "within_number_gap_s": 0.9,
+      "between_number_voice_gap_s": 2.0,
+      "ordinary_two_second_transitions": 124,
+      "teaching_transition_durations_s": [
+        5,
+        10,
+        5
+      ],
+      "revision": "900ms between bits; 2.0s between completed values; existing teaching pauses, centered layout and decimal sign retained."
+    },
+    "octal-counting-production-v001": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "octal-counting-001",
+      "visual_reference_set_id": "octal-counting-reference-v004",
+      "count_start": 0,
+      "count_end": 127,
+      "octal_range": [
+        "0",
+        "177"
+      ],
+      "items": [
+        "rabbit-beret-poses-v001",
+        "aurora-garden-background-v002",
+        "kokoro-af-heart-binary-v001",
+        "kokoro-af-heart-en-us-v002",
+        "binary-sfx-library-v001"
+      ],
+      "build_implementation": "tools/build_octal_episode.py",
+      "render_implementation": "tools/render_octal_video.py",
+      "production_record": "design/octal-counting-v1/production-run-v001.json",
+      "output": "output/octal-counting-001-v001/paspla-studio-octal-count-0-to-177-1080p.mp4",
+      "timeline": "output/octal-counting-001-v001/timeline.json",
+      "duration_s": 642.966667,
+      "video_sha256": "cb2fd83bd5ac1c98f7c5a9837db1fe31e46bac6a987ee5fd33c6118d259ff3f2",
+      "technical_qa": "output/octal-counting-001-v001/technical-qa.json",
+      "visual_qa": "output/octal-counting-001-v001/octal-final-qa.json",
+      "audio_qa": "output/octal-counting-001-v001/octal-audio-final-qa.json",
+      "alignment_qa": "output/octal-counting-001-v001/octal-layout-qa.json",
+      "within_number_gap_s": 0.9,
+      "between_number_voice_gap_s": 2.0,
+      "ordinary_two_second_transitions": 124,
+      "revised_by": "octal-counting-production-v002"
+    },
+    "octal-counting-production-v002": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "octal-counting-001",
+      "visual_reference_set_id": "octal-counting-reference-v004",
+      "count_start": 0,
+      "count_end": 127,
+      "octal_range": [
+        "0",
+        "177"
+      ],
+      "items": [
+        "rabbit-beret-poses-v001",
+        "aurora-garden-background-v002",
+        "kokoro-af-heart-binary-v001",
+        "kokoro-af-heart-en-us-v002",
+        "binary-sfx-library-v001"
+      ],
+      "render_implementation": "tools/render_octal_video.py",
+      "reading_layout": "common-baseline",
+      "production_record": "design/octal-counting-v1/production-run-v002.json",
+      "output": "output/octal-counting-001-v002-aligned-reading/paspla-studio-octal-count-0-to-177-aligned-1080p.mp4",
+      "timeline": "output/octal-counting-001-v001/timeline.json",
+      "master": "output/octal-counting-001-v001/master.wav",
+      "duration_s": 642.966667,
+      "video_sha256": "a79ec5e5401aa4c5b822670dda9ff5641d290fb96d9e67a15e7a7d7248f78563",
+      "technical_qa": "output/octal-counting-001-v002-aligned-reading/technical-qa.json",
+      "visual_qa": "output/octal-counting-001-v002-aligned-reading/octal-final-qa.json",
+      "audio_qa": "output/octal-counting-001-v002-aligned-reading/octal-audio-final-qa.json",
+      "within_number_gap_s": 0.9,
+      "between_number_voice_gap_s": 2.0,
+      "ordinary_two_second_transitions": 124
+    },
+    "hexadecimal-counting-production-v001": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "hexadecimal-counting-001",
+      "visual_reference_set_id": "hexadecimal-counting-reference-v001",
+      "count_start": 0,
+      "count_end": 127,
+      "hexadecimal_range": [
+        "0",
+        "7F"
+      ],
+      "items": [
+        "tora-existing-source-v001",
+        "starry-observatory-background-v001",
+        "kokoro-af-heart-hexadecimal-v001",
+        "kokoro-af-heart-binary-v001",
+        "kokoro-af-heart-en-us-v002",
+        "binary-sfx-library-v001"
+      ],
+      "render_implementation": "tools/render_hexadecimal_video.py",
+      "reading_layout": "common-baseline",
+      "production_record": "design/hexadecimal-counting-v1/production-run-v001.json",
+      "output": "output/hexadecimal-counting-001-v001/paspla-studio-hexadecimal-count-0-to-7F-1080p.mp4",
+      "timeline": "output/hexadecimal-counting-001-v001/timeline.json",
+      "master": "output/hexadecimal-counting-001-v001/master.wav",
+      "duration_s": 563.8,
+      "video_sha256": "e0c6ede114ee663c8a57c5479441f9840eead34fc5274ef2b3ff3a562d54aec2",
+      "technical_qa": "output/hexadecimal-counting-001-v001/technical-qa.json",
+      "visual_qa": "output/hexadecimal-counting-001-v001/hexadecimal-final-qa.json",
+      "audio_qa": "output/hexadecimal-counting-001-v001/hexadecimal-audio-final-qa.json",
+      "within_number_gap_s": 0.9,
+      "between_number_voice_gap_s": 2.0,
+      "ordinary_two_second_transitions": 125
+    },
+    "hexadecimal-counting-production-v002": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "hexadecimal-counting-001",
+      "visual_reference_set_id": "hexadecimal-counting-reference-v001",
+      "count_start": 0,
+      "count_end": 127,
+      "hexadecimal_range": [
+        "0",
+        "7F"
+      ],
+      "items": [
+        "tora-existing-source-v001",
+        "starry-observatory-background-v001",
+        "kokoro-af-heart-hexadecimal-v002",
+        "kokoro-af-heart-binary-v001",
+        "kokoro-af-heart-en-us-v002",
+        "binary-sfx-library-v001"
+      ],
+      "render_implementation": "tools/render_hexadecimal_video.py",
+      "reading_layout": "common-baseline",
+      "production_record": "design/hexadecimal-counting-v1/production-run-v002.json",
+      "output": "output/hexadecimal-counting-001-v002-clear-A/paspla-studio-hexadecimal-count-0-to-7F-1080p.mp4",
+      "timeline": "output/hexadecimal-counting-001-v002-clear-A/timeline.json",
+      "master": "output/hexadecimal-counting-001-v002-clear-A/master.wav",
+      "duration_s": 562.733333,
+      "video_sha256": "f022887253577c7a9f848ec9c45d8b7a3890b6da3c07e2aebdd31b50caab16c7",
+      "technical_qa": "output/hexadecimal-counting-001-v002-clear-A/technical-qa.json",
+      "visual_qa": "output/hexadecimal-counting-001-v002-clear-A/hexadecimal-final-qa.json",
+      "audio_qa": "output/hexadecimal-counting-001-v002-clear-A/hexadecimal-audio-final-qa.json",
+      "within_number_gap_s": 0.9,
+      "between_number_voice_gap_s": 2.0,
+      "ordinary_two_second_transitions": 125,
+      "supersedes_production_set_id": "hexadecimal-counting-production-v001"
+    },
+    "four-base-counting-production-v001": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "four-base-counting-001",
+      "visual_reference_set_id": "four-base-counting-reference-v003",
+      "count_start": 0,
+      "count_end": 127,
+      "bases": [
+        2,
+        10,
+        8,
+        16
+      ],
+      "narration_base": 10,
+      "items": [
+        "little-bird-existing-source-v002",
+        "little-bird-matching-motions-v001",
+        "seaside-lighthouse-background-v001",
+        "kokoro-af-heart-binary-v001",
+        "kokoro-af-heart-en-us-v002",
+        "binary-sfx-library-v001"
+      ],
+      "build_implementation": "tools/build_four_base_episode.py",
+      "render_implementation": "tools/render_four_base_video.py",
+      "production_record": "design/four-base-counting-v1/production-run-v001.json",
+      "review_record": "design/four-base-counting-v1/production-review-v001.txt",
+      "output": "output/four-base-counting-001-v001/paspla-studio-four-ways-to-count-0-to-127-1080p.mp4",
+      "timeline": "output/four-base-counting-001-v001/timeline.json",
+      "master": "output/four-base-counting-001-v001/master.wav",
+      "motion_manifest": "output/four-base-counting-001-v001/bird-motions.json",
+      "actor_height_px": 280,
+      "duration_s": 416.066667,
+      "video_sha256": "cdd865ec3e26d7e762c04dff4415ecece7f44865161a4dbbd130816b23fe9a0c",
+      "technical_qa": "output/four-base-counting-001-v001/technical-qa.json",
+      "visual_qa": "output/four-base-counting-001-v001/four-base-final-qa.json",
+      "audio_qa": "output/four-base-counting-001-v001/four-base-audio-final-qa.json",
+      "encoded_dialogue_review": "output/four-base-counting-001-v001/encoded-dialogue-review/fresh-asr.json",
+      "between_number_voice_gap_s": 2.0,
+      "ordinary_two_second_transitions": 124,
+      "teaching_transition_durations_s": [
+        5,
+        5,
+        5
+      ],
+      "delivery_gain_db": 0.8
+    },
+    "four-base-counting-production-v002": {
+      "status": "completed_and_assistant_reviewed",
+      "user_approved": false,
+      "episode_id": "four-base-counting-001",
+      "visual_reference_set_id": "four-base-counting-reference-v004",
+      "count_start": 0,
+      "count_end": 200,
+      "bases": [
+        2,
+        10,
+        8,
+        16
+      ],
+      "narration_base": 10,
+      "items": [
+        "little-bird-existing-source-v002",
+        "little-bird-matching-motions-v001",
+        "seaside-lighthouse-background-v001",
+        "kokoro-af-heart-binary-v001",
+        "kokoro-af-heart-en-us-v002",
+        "binary-sfx-library-v001"
+      ],
+      "build_implementation": "tools/build_four_base_episode_v002.py",
+      "render_implementation": "tools/render_four_base_video_v002.py",
+      "production_record": "design/four-base-counting-v1/production-run-v002.json",
+      "review_record": "design/four-base-counting-v1/production-review-v002.txt",
+      "output": "output/four-base-counting-001-v002-to-200/paspla-studio-four-ways-to-count-0-to-200-1080p.mp4",
+      "timeline": "output/four-base-counting-001-v002-to-200/timeline.json",
+      "master": "output/four-base-counting-001-v002-to-200/master.wav",
+      "motion_manifest": "output/four-base-counting-001-v002-to-200/bird-motions.json",
+      "actor_height_px": 280,
+      "duration_s": 662.366667,
+      "video_sha256": "3a84d9aa0861fd16958676140c3c8506fbdf305679f405b021be7d35f1fd886a",
+      "technical_qa": "output/four-base-counting-001-v002-to-200/technical-qa.json",
+      "visual_qa": "output/four-base-counting-001-v002-to-200/four-base-final-qa.json",
+      "audio_qa": "output/four-base-counting-001-v002-to-200/four-base-audio-final-qa.json",
+      "encoded_dialogue_review": "output/four-base-counting-001-v002-to-200/encoded-speech-review/fresh-asr.json",
+      "between_number_voice_gap_s": 2.0,
+      "ordinary_two_second_transitions": 197,
+      "teaching_transition_durations_s": [
+        5,
+        5,
+        5
+      ],
+      "delivery_gain_db": 0.8,
+      "supersedes_production_set_id": "four-base-counting-production-v001"
+    }
+  },
+  "active_production_set_ids": [
+    "counting-garden-blue-sky-production-v002",
+    "binary-counting-production-v005",
+    "octal-counting-production-v002",
+    "hexadecimal-counting-production-v002",
+    "four-base-counting-production-v002"
+  ],
+  "preproduction_sets": {
+    "binary-counting-preproduction-v001": {
+      "status": "prepared-for-user-review",
+      "episode_id": "binary-counting-001",
+      "series": "Num-Num Numbers",
+      "range_provisional": true,
+      "decimal_range": [
+        0,
+        127
+      ],
+      "binary_range": [
+        "0",
+        "1111111"
+      ],
+      "counted_states": 128,
+      "production_ready": false,
+      "reference_set_id": "binary-counting-reference-v001",
+      "episode_plan": "design/binary-counting-v1/episode-plan.json",
+      "scripts": [
+        "design/binary-counting-v1/concept-and-scenario.txt",
+        "design/binary-counting-v1/script-and-sound-cues.txt"
+      ],
+      "review_record": "design/binary-counting-v1/preflight-review.json",
+      "audio_generated": false,
+      "video_generated": false,
+      "implemented_by_production_set_id": "binary-counting-production-v001"
+    },
+    "octal-counting-preproduction-v001": {
+      "status": "prepared-for-user-review",
+      "episode_id": "octal-counting-001",
+      "series": "Num-Num Numbers",
+      "range_provisional": true,
+      "decimal_range": [
+        0,
+        127
+      ],
+      "octal_range": [
+        "0",
+        "177"
+      ],
+      "counted_states": 128,
+      "estimated_duration_s": 643,
+      "production_ready": false,
+      "reference_set_id": "octal-counting-reference-v004",
+      "episode_plan": "design/octal-counting-v1/README.txt",
+      "research": "design/octal-counting-v1/research-reading.txt",
+      "scripts": [
+        "design/octal-counting-v1/concept-and-scenario.txt",
+        "design/octal-counting-v1/script-and-sound-cues.txt",
+        "design/octal-counting-v1/count-lines.tsv",
+        "design/octal-counting-v1/count-lines.json"
+      ],
+      "estimated_timeline": "design/octal-counting-v1/estimated-timeline.json",
+      "audio_generated": false,
+      "video_generated": false,
+      "implemented_by_production_set_id": "octal-counting-production-v001"
+    },
+    "hexadecimal-counting-preproduction-v001": {
+      "status": "prepared-for-user-review",
+      "episode_id": "hexadecimal-counting-001",
+      "series": "Num-Num Numbers",
+      "range_provisional": true,
+      "decimal_range": [
+        0,
+        127
+      ],
+      "hexadecimal_range": [
+        "0",
+        "7F"
+      ],
+      "counted_states": 128,
+      "estimated_duration_s": 564.533666667,
+      "production_ready": false,
+      "reference_set_id": "hexadecimal-counting-reference-v001",
+      "episode_plan": "design/hexadecimal-counting-v1/README.txt",
+      "research": "design/hexadecimal-counting-v1/research-reading.txt",
+      "scripts": [
+        "design/hexadecimal-counting-v1/concept-and-scenario.txt",
+        "design/hexadecimal-counting-v1/script-and-sound-cues.txt",
+        "design/hexadecimal-counting-v1/count-lines.tsv",
+        "design/hexadecimal-counting-v1/count-lines.json"
+      ],
+      "estimated_timeline": "design/hexadecimal-counting-v1/estimated-timeline.json",
+      "audio_generated": false,
+      "video_generated": false,
+      "implemented_by_production_set_id": "hexadecimal-counting-production-v002"
+    },
+    "four-base-counting-preproduction-v001": {
+      "status": "implemented",
+      "episode_id": "four-base-counting-001",
+      "series": "Num-Num Numbers",
+      "decimal_range": [
+        0,
+        127
+      ],
+      "bases": [
+        2,
+        10,
+        8,
+        16
+      ],
+      "narration_base": 10,
+      "counted_states": 128,
+      "estimated_duration_s": 416.04583333333335,
+      "production_ready": true,
+      "reference_set_id": "four-base-counting-reference-v001",
+      "episode_plan": "design/four-base-counting-v1/README.txt",
+      "scripts": [
+        "design/four-base-counting-v1/concept-and-scenario.txt",
+        "design/four-base-counting-v1/script-and-sound-cues.txt"
+      ],
+      "estimated_timeline": "design/four-base-counting-v1/estimated-timeline.json",
+      "review_record": "design/four-base-counting-v1/preflight-review.json",
+      "audio_generated": true,
+      "video_generated": true,
+      "implemented_by_production_set_id": "four-base-counting-production-v001"
+    },
+    "four-base-counting-preproduction-v002": {
+      "status": "implemented",
+      "episode_id": "four-base-counting-001",
+      "series": "Num-Num Numbers",
+      "decimal_range": [
+        0,
+        127
+      ],
+      "bases": [
+        2,
+        10,
+        8,
+        16
+      ],
+      "narration_base": 10,
+      "counted_states": 128,
+      "estimated_duration_s": 416.04583333333335,
+      "production_ready": true,
+      "reference_set_id": "four-base-counting-reference-v002",
+      "episode_plan": "design/four-base-counting-v1/README.txt",
+      "scripts": [
+        "design/four-base-counting-v1/concept-and-scenario.txt",
+        "design/four-base-counting-v1/script-and-sound-cues.txt"
+      ],
+      "estimated_timeline": "design/four-base-counting-v1/estimated-timeline.json",
+      "review_record": "design/four-base-counting-v1/preflight-review-v002.json",
+      "audio_generated": true,
+      "video_generated": true,
+      "supersedes_preproduction_set_id": "four-base-counting-preproduction-v001",
+      "implemented_by_production_set_id": "four-base-counting-production-v001"
+    }
+  },
+  "active_preproduction_set_ids": []
+}

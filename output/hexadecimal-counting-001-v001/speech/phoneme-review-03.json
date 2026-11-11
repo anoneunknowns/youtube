@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "kind": "isolated-phoneme-asr",
+  "source_manifest_sha256": null,
+  "model": {
+    "id": "onnx-community/wav2vec2-lv-60-espeak-cv-ft-ONNX",
+    "revision": "c69750f5043e5e1f8a71ab95dd3b98338c280c92",
+    "dtype": "q8",
+    "sha256": "3d1479b5c70836645a4310902479f7f7e8bbc8c16c58745d918804f4f6f9d120",
+    "license": "Apache-2.0"
+  },
+  "method": "Independent 16 kHz CTC phoneme recognition, no expected text or neighbor-number prompt; eSpeak expected labels are computed only after inference. Approximate 20ms timestamps. Automated evidence, not proof of perfect pronunciation.",
+  "results": [
+    {
+      "role": "candidate",
+      "number": null,
+      "id": "E-natural",
+      "expected_text": "The letter E.",
+      "expected_espeak": "ðə lˈɛɾɚɹ ˈiː",
+      "source_path": "D:\\temp\\hexadecimal-audio-production-c873e81b\\E-natural/E-natural.wav",
+      "source_sha256": "1dd1e37aa7b97454c8f11f1b466e876f39565961e1bb30b7d1f689cc9e7491ac",
+      "duration_s": 0.859625,
+      "recognized_phonemes": "ð ə l ɛ ɾ ɚ iː",
+      "tokens": [
+        {
+          "token": "ð",
+          "start_s": 0.02,
+          "end_s": 0.045,
+          "probability": 0.8904406043611109
+        },
+        {
+          "token": "ə",
+          "start_s": 0.04,
+          "end_s": 0.065,
+          "probability": 0.9116641694226817
+        },
+        {
+          "token": "l",
+          "start_s": 0.16,
+          "end_s": 0.185,
+          "probability": 0.9794720270578118
+        },
+        {
+          "token": "ɛ",
+          "start_s": 0.2,
+          "end_s": 0.225,
+          "probability": 0.8076627629385073
+        },
+        {
+          "token": "ɾ",
+          "start_s": 0.3,
+          "end_s": 0.325,
+          "probability": 0.9065711557061242
+        },
+        {
+          "token": "ɚ",
+          "start_s": 0.34,
+          "end_s": 0.365,
+          "probability": 0.7781773252675486
+        },
+        {
+          "token": "iː",
+          "start_s": 0.54,
+          "end_s": 0.565,
+          "probability": 0.7932003493859962
+        }
+      ]
+    },
+    {
+      "role": "candidate",
+      "number": null,
+      "id": "E-short",
+      "expected_text": "E",
+      "expected_espeak": "ˈiː",
+      "source_path": "D:\\temp\\hexadecimal-audio-production-c873e81b\\E-natural/E-short.wav",
+      "source_sha256": "a739a688dcf3f30606d64783ff81dbdcb19a4f14017a5f2bbe875d4c4bd45445",
+      "duration_s": 0.376,
+      "recognized_phonemes": "a j",
+      "tokens": [
+        {
+          "token": "a",
+          "start_s": 0.04,
+          "end_s": 0.065,
+          "probability": 0.5335168697408575
+        },
+        {
+          "token": "j",
+          "start_s": 0.12,
+          "end_s": 0.145,
+          "probability": 0.478222971778437
+        }
+      ]
+    }
+  ]
+}

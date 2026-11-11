@@ -1,0 +1,50 @@
+Hexadecimal Count v002-clear-A の音声再構築
+
+保存先
+  output/hexadecimal-counting-001-v002-clear-A/
+
+v002 は単独の文字名 A を、自然な「The letter A.」の末尾から取り出した /eɪ/ に差し替えた版。従来の A は初頭の母音が /aɪ/ に近くなる音響上の曖昧さがあった。採用した A は、原文の音素認識、数字 eight と導入の A を対照としたフォルマント比較、単独・one A の独立した音声認識で確認した。自動検査の結果と相反する単独 CTC の警告を speech フォルダに記録している。
+
+測定値
+  長さ 562.701 秒、48 kHz、ステレオ、24 bit PCM
+  27,009,648 サンプル／チャンネル
+  マスター -16.75 LUFS、-2.00 dBTP
+  最終の全体ゲイン +5.11 dB
+
+文字名 A の制作履歴
+  原文 The letter A.
+  原文からの抽出区間 0.465〜0.795875 秒
+  文字名の長さ 0.330875 秒
+  抽出時の立ち上がりフェード 0.002 秒
+  レベル調整 +7.912725961029391 dB
+  PCM16 ピーク上限 19,518（-4.500292425884415 dBFS）
+  上限を適用したサンプル番号 860、861、862（合計 0.125 ms）
+  レベル調整後 RMS -20.604771707116008 dBFS
+
+採用済み A、処理前の抽出音声、原文の音声は、それぞれ speech/LETTER-A.wav、speech/LETTER-A-processing-input.wav、speech/LETTER-A-source-phrase.wav に保存した。speech/measurements.json に抽出元、処理前後のハッシュ、ゲイン、ピーク上限を記録している。制作コードはこの手順から全 PCM サンプルを再計算し、採用音声と一致することを検査する。
+
+A 以外の新規制作素材 19 件を v001 からハッシュで照合して引き継いだ。数字、既存の案内と挨拶、効果音も同じ元素材を使う。2桁内の 0.900 秒、通常の数の間の 2.000 秒、F の後の 5 秒、3F の後の 10 秒を保ち、実測した A の長さから表示と強調の時刻を再計算した。
+
+マスターの再構築
+
+プロジェクトルートで共通 PowerShell 7 と登録済み Python、FFmpeg を使い、新しい保存先を指定する。
+
+  $hexV2AudioCheck = Join-Path 'D:\temp' ('hexadecimal-v002-audio-check-' + [guid]::NewGuid().ToString('N'))
+  python -B tools/build_hexadecimal_episode.py --rebalance-timeline output/hexadecimal-counting-001-v002-clear-A/timeline.json --out $hexV2AudioCheck --work-dir D:/temp
+
+タイムラインに結び付いたプロジェクト内の素材から、master.wav と audio-qa.json を作成する。通常の制作処理とこの再構築処理は、同じ mix_balanced 関数を使う。音声のピーク上限は -4.5 dBFS。six、A、E は同じ上限の範囲内で RMS -20.5 dBFS を目標にする。素材ごとの線形ゲインは audio-qa.json の speech_balancing.sources に記録している。音源の時間伸縮は行っていない。
+
+引き継ぎと保存確認
+
+  design/hexadecimal-counting-v1/audio-inheritance-v002.json
+
+この検査記録では、v001 のマスター、タイムライン、音声素材など 42 件の変更前後のハッシュを照合した。v001 制作記録に登録された出力ファイル 43 件も一致している。共有の制作コードは改訂対象として、v001 出力ファイルの保存検査と区別している。
+
+v002 マスター SHA-256
+  c42bdec19bda211ba5a64f7bcc4b85f9479846c0723e1a6e9686470d708a1ad1
+
+v002 タイムライン SHA-256
+  51551521c07259066a0f359cb9b6fddb014a95dc2d1da68bad551a10dc6d211d
+
+v002 speech/measurements.json SHA-256
+  22711c1c82afd03a7a7eb3b4e9bc3f6bdf3d68ad296ae6ee2f18c9ceb31fa6aa

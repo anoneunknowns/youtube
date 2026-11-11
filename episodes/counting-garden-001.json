@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "episode_id": "counting-garden-001",
+  "shared_template_id": "counting-garden-v1",
+  "count_start": 1,
+  "count_end": 300,
+  "final_count_provisional": false,
+  "count_end_candidates": [
+    300
+  ],
+  "duration": {
+    "target_s": 510,
+    "min_inclusive_s": 480,
+    "max_exclusive_s": 540
+  },
+  "timing": {
+    "minimum_display_s": 0.8,
+    "ordinary_gap_s": 0.3,
+    "pre_sfx_gap_s": 0.1,
+    "post_sfx_gap_s": 0.15
+  },
+  "voice": {
+    "language": "en-US",
+    "provider": "local-kokoro",
+    "voice_id": "af_heart",
+    "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+    "generation_speed": 0.98,
+    "model_sha256": "8fbea51ea711f2af382e88c833d9e288c6dc82ce5e98421ea61c058ce21a34cb"
+  },
+  "render": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "container": "mp4",
+    "video_codec": "h264",
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "sample_rate": 48000,
+    "channels": 2
+  },
+  "cue_sheet": "design/counting-video-v1/cue-sheet-v2.json",
+  "asset_catalog": "catalogs/assets-v1.json",
+  "assets": {
+    "main_character": "bear-main",
+    "background": "garden-background",
+    "bird": "garden-bird",
+    "cloud": "garden-cloud",
+    "rainbow": "garden-rainbow",
+    "airplane": "toy-airplane",
+    "leaf": "garden-leaf",
+    "bud": "counting-bud",
+    "flower": "counting-flower",
+    "petal": "flower-petal",
+    "font": "rounded-font"
+  },
+  "media_generation_allowed": true,
+  "library_catalog": "catalogs/library-v1.json",
+  "visual_reference_set_id": "counting-garden-reference-v002",
+  "identity_reference_id": "bear-beret-identity-neutral-v001",
+  "motion_catalog": "catalogs/motions-v1.json",
+  "audio_preparation": "design/counting-video-v1/audio-preparation-v5.json",
+  "speech_library": {
+    "id": "kokoro-af-heart-en-us-v002",
+    "manifest": "assets/library/audio/speech/kokoro-af-heart/v002/measurements.json",
+    "acceptance": "assets/library/audio/speech/kokoro-af-heart/v002/speech-acceptance.json",
+    "policy": "Use only the current hash-bound accepted library. Context recognition alone cannot clear pronunciation warnings."
+  },
+  "asset_preparation_allowed": true
+}

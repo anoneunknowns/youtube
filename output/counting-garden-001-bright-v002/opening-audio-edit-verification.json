@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "kind": "opening-sfx-removal-invariants",
+  "source_video_sha256": "64231c3c9adf112dd9bd0d8c3fdf96b30af2f6f20b3f2fbe157559b686fe89aa",
+  "video_sha256": "5fbcb6cf2a03c23d6d4a3ff7081382153a313b189aee58092d0667ee52313ce0",
+  "h264_packets_and_pts_dts_duration_identical": true,
+  "compared_video_packets": 14909,
+  "speech_and_later_sfx_events_identical": true,
+  "number_displays_and_cue_groups_identical": true,
+  "timeline_duration_identical": true,
+  "decoded_opening_aac_silence_interval_s": [
+    0,
+    0.8
+  ],
+  "decoded_opening_aac_peak": 0.0,
+  "pcm_edit": {
+    "schema_version": 1,
+    "kind": "targeted-opening-sfx-removal",
+    "removed_cue": {
+      "kind": "sfx",
+      "id": "SE_WIND",
+      "start_s": 0.1,
+      "end_s": 0.5,
+      "source": "intro"
+    },
+    "source_master_sha256": "53606889635888a1dc3d25086064568efcc4cbe1d9d83e7e0a01ea2ae262001d",
+    "master_sha256": "1c5cfcb781a932d2bda05997069d1dd59f63d251d20ac415921c972d7a202350",
+    "master_path": "D:\\codex_projects\\youtube\\output\\counting-garden-001-bright-v002\\master.wav",
+    "sample_rate": 48000,
+    "channels": 2,
+    "pcm_bits": 24,
+    "duration_s": 496.93833333333333,
+    "silenced_frames": [
+      0,
+      24000
+    ],
+    "silenced_seconds": [
+      0,
+      0.5
+    ],
+    "wav_data_offset": 102,
+    "unchanged_pcm_tail_sha256": "8e136a77d6946924fe9cfc1bbb85c3d523ec5a42acfb38ee36b705b03de1bbf6",
+    "verification": {
+      "opening_is_silent": true,
+      "later_pcm_bytes_identical": true,
+      "wav_header_identical": true,
+      "file_length_identical": true
+    },
+    "normalization_reapplied": false,
+    "speech_regenerated": false
+  },
+  "note": "AAC was encoded from the edited lossless master once; exact later-audio preservation is verified at the PCM master level."
+}

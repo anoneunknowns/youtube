@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "id": "kokoro-af-heart-en-us-v002",
+  "status": "approved_hash_bound_reusable_speech_library",
+  "provider": "local-kokoro",
+  "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+  "model_revision": "1939ad2a8e416c0acfeecc08a694d14ef25f2231",
+  "onnx_model_sha256": "8fbea51ea711f2af382e88c833d9e288c6dc82ce5e98421ea61c058ce21a34cb",
+  "library": "kokoro-js@1.2.1",
+  "transformers_js": "3.8.1",
+  "voice_id": "af_heart",
+  "language": "en-US",
+  "voice_character": "Warm American English preset voice",
+  "dtype": "fp32",
+  "generation_speed": 0.98,
+  "post_generation_time_stretch": false,
+  "sample_rate": 24000,
+  "channels": 1,
+  "sample_format": "signed PCM16 WAV",
+  "clip_directory": "clips",
+  "clip_paths_relative_to": "measurements.json directory",
+  "measurements": {
+    "path": "measurements.json",
+    "bytes": 177763,
+    "sha256": "2071c15fdcb57d1f878ea89ad1c6744b864c8523c53926f7348f7c0b16bff287"
+  },
+  "acceptance": {
+    "path": "speech-acceptance.json",
+    "bytes": 562249,
+    "sha256": "0a82508d38899ff57b8e70c118a009e3adec00d16eeb9cc47f280b1a42bde4d6"
+  },
+  "pronunciation_review": {
+    "path": "pronunciation-review.json",
+    "bytes": 421670,
+    "sha256": "54e06eb8f927a948c6a664baab0e26a1530a536d69494764e38ca3ce1422b00a"
+  },
+  "rejected_source_hashes": {
+    "path": "rejected-source-hashes.json",
+    "bytes": 2440,
+    "sha256": "d788703a96d86ec7ca1dd1f8316b28c88189546e248613fa3c56aba9e0a430eb"
+  },
+  "provenance": {
+    "path": "provenance.json",
+    "bytes": 126701,
+    "sha256": "bb3d91d087c3a90bb3ccb7a66f4c59d079087180dc34ff80605803857a460b9c"
+  },
+  "coverage": {
+    "clips": 311,
+    "numbers": {
+      "first": 1,
+      "last": 300,
+      "count": 300
+    },
+    "unique_dialogue": 11,
+    "corrected_numbers": [
+      6,
+      36,
+      80,
+      81,
+      88,
+      181,
+      188,
+      274,
+      288
+    ]
+  },
+  "quality_control": {
+    "isolated_lexical_asr": {
+      "path": "isolated-asr.json",
+      "clips": 311,
+      "matches": 311,
+      "warnings": 0
+    },
+    "isolated_phoneme_recognition": {
+      "path": "isolated-phonemes.json",
+      "clips": 311,
+      "expected_text_prompt": false
+    },
+    "terminal_acoustic_screen": {
+      "path": "terminal-tail-review.json",
+      "classified": 311,
+      "voiceless_final_targets": 56,
+      "suspect_tail_candidates": 0
+    },
+    "known_ctc_limitations_reviewed": {
+      "number2": "Isolated short-word language confusion; independent lexical ASR and vowel-resonance comparison support two.",
+      "numbers65_and173": "Single fricatives split by short CTC blank frames; no repeated syllable."
+    },
+    "decision_notes": "qa/pronunciation-decision-notes.json",
+    "context_asr_alone_can_resolve_pronunciation_warning": false,
+    "human_full_listening_performed": false,
+    "limits": "Machine-assisted recognition and targeted acoustic analysis can miss pronunciation nuances. Acceptance records exact-source coverage and evidence; it does not certify flawless pronunciation or human full listening."
+  },
+  "reuse_policy": {
+    "default": "Reuse this approved library when model, voice, dtype, language, speed and text match.",
+    "hash_checks_required": [
+      "manifest",
+      "accepted receipt",
+      "source clips",
+      "referenced evidence"
+    ],
+    "rejected_source_hashes_must_be_blocked": true,
+    "new_or_changed_speech": "Generate into a separate destination and complete isolated lexical/phoneme review and acceptance before mixing.",
+    "do_not_bypass_warnings_with_context_only": true
+  },
+  "license": "Apache-2.0",
+  "source_model": "https://huggingface.co/hexgrad/Kokoro-82M",
+  "onnx_conversion": "https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX",
+  "model_card_copy": "model-card.md",
+  "model_integrity_record": "model-files.json",
+  "dependency_licenses": [
+    "licenses/kokoro-js-LICENSE.txt",
+    "licenses/huggingface-transformers-LICENSE.txt",
+    "licenses/phonemizer-LICENSE.txt",
+    "licenses/onnxruntime-LICENSE.txt"
+  ],
+  "rights_note": "Generated locally from the published preset model under its original Apache-2.0 terms. No real person voice was uploaded or cloned. Preserve upstream terms and attribution where required. This profile does not grant an additional public redistribution license.",
+  "production_review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+  "source_provenance_path_map": {
+    "path": "assets/library/audio/speech/kokoro-af-heart/v002/provenance-path-map.json",
+    "bytes": 3254,
+    "sha256": "e5a8b12ad8944c2319313002ac255910a480107d3a0e974ac576188cd4e584c0",
+    "note": "Historical generation paths are not runtime inputs; retained full-source bytes map to adopted library clips."
+  }
+}

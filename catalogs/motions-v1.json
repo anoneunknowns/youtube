@@ -1,0 +1,1019 @@
+{
+  "schema_version": 1,
+  "catalog_id": "bear-beret-motions-v1",
+  "character_id": "bear-beret",
+  "status": "registered_motion_plans_with_reviewed_episode_implementations",
+  "production_ready": false,
+  "library_catalog": "catalogs/library-v1.json",
+  "identity_reference_id": "bear-beret-identity-neutral-v001",
+  "specification": "assets/library/characters/bear-beret/motions/v001/motion-spec.txt",
+  "policy": {
+    "renderer_verified": false,
+    "animated_preview_generated": false,
+    "source_atlases_cropped_or_resaved": false,
+    "all_clips_require_renderer_review": true,
+    "frame_duration_unit": "30fps output frames",
+    "frame_indices_do_not_define_crop_rectangles": true,
+    "unregistered_candidate_regions_must_not_be_guessed": true,
+    "loop_seams_and_neutral_return_must_be_reviewed": true,
+    "source_geometry_does_not_imply_video_production_acceptance": true,
+    "source_rights_and_history_preserved": true,
+    "new_video_or_audio_generated": false,
+    "generated_image_candidate_ids": [
+      "bear-beret-wave-sheet-v001"
+    ]
+  },
+  "coordinates": {
+    "source_units": "pixels",
+    "source_origin": "top_left_of_registered_region",
+    "positive_x": "right",
+    "positive_y": "down",
+    "actor_root": "Scene ground-contact reference; do not fit each pose to its visible bounding box.",
+    "scale_formula": "display_natural_height_px / calibration.natural_height_px",
+    "registered_pixel_transform": "actor_root + scale * (rotate(local_pixel, registration.rotation_degrees or 0) + registration.translation_px - calibration.anchor_px)",
+    "canonical_transform": "actor_root + scale * (source_pixel - canonical.anchor_px)",
+    "display_natural_height_px": "Injected by scene; the counting-garden guide is 650px, not a per-frame measurement.",
+    "mirror_rule": "No automatic whole-character mirroring; maintain hat and hand identity. Board gaze changes eyes/head only.",
+    "head_or_shoulder_pivot_px": null,
+    "missing_pivot_rule": "A head/shoulder pivot has not been measured. Do not present a guessed point as registered source geometry."
+  },
+  "sources": {
+    "bear-beret-identity-neutral-v001": {
+      "library_asset_id": "bear-beret-identity-neutral-v001",
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+      "kind": "character_identity_reference",
+      "sha256": "8512984d0660fea738192619b2bfccff1ce42a9493db49c980452ff904296e4e",
+      "width": 1254,
+      "height": 1254,
+      "status": "existing_unchanged_identity_reference",
+      "production_ready": false
+    },
+    "bear-beret-reactions-source-v001": {
+      "library_asset_id": "bear-beret-reactions-source-v001",
+      "path": "assets/library/characters/bear-beret/sources/v001/reactions-v2.png",
+      "kind": "sprite_atlas",
+      "sha256": "e279efc952f7c50aacd0b2d600f0ff843279340aaa5492017295a579f3ca4d4f",
+      "status": "unchanged_source_copy",
+      "production_ready": false,
+      "origin": {
+        "project": "four-operations-common",
+        "relative_path": "runtime/assets/characters/reactions-v2/bear-beret-reactions.png",
+        "reference_only_original_root": "D:/codex_projects/four-operations-common",
+        "source_modified": false,
+        "copy_hash_matches_source": true
+      },
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1063077
+    },
+    "bear-beret-playful-source-v001": {
+      "library_asset_id": "bear-beret-playful-source-v001",
+      "path": "assets/library/characters/bear-beret/sources/v001/playful-v1.png",
+      "kind": "sprite_atlas",
+      "sha256": "035cfa1bbc3cd3c7b520b4c8677af14b5d5c5caaa07f8ec4a9be7842c77a235f",
+      "status": "unchanged_source_copy",
+      "production_ready": false,
+      "origin": {
+        "project": "four-operations-common",
+        "relative_path": "runtime/assets/characters/playful-v1/bear-beret-playful.png",
+        "reference_only_original_root": "D:/codex_projects/four-operations-common",
+        "source_modified": false,
+        "copy_hash_matches_source": true
+      },
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1986934
+    },
+    "bear-beret-reactions-registration-source-v001": {
+      "library_asset_id": "bear-beret-reactions-registration-source-v001",
+      "path": "assets/library/characters/bear-beret/sources/v001/reactions-registration-v4.json",
+      "kind": "source_registration",
+      "sha256": "eda0202e3fc8bf9429f86f12123c2aa7e7a24754de919f2d1c1b14ee127a75aa",
+      "status": "unchanged_source_copy",
+      "production_ready": false,
+      "origin": {
+        "project": "four-operations-common",
+        "relative_path": "runtime/assets/characters/reactions-v4/runtime-all-characters.json",
+        "reference_only_original_root": "D:/codex_projects/four-operations-common",
+        "source_modified": false,
+        "copy_hash_matches_source": true
+      },
+      "bytes": 54542,
+      "entry": "characters.bear-beret"
+    },
+    "bear-beret-idle-registration-source-v001": {
+      "library_asset_id": "bear-beret-idle-registration-source-v001",
+      "path": "assets/library/characters/bear-beret/sources/v001/idle-registration-v1.json",
+      "kind": "source_registration",
+      "sha256": "e2bee7a613487f62b5fb77507a33a949e4d7e6580f744a03dcb5ff0c262ecdc1",
+      "status": "unchanged_source_copy",
+      "production_ready": false,
+      "origin": {
+        "project": "four-operations-common",
+        "relative_path": "runtime/assets/characters/idle-v1/runtime.json",
+        "reference_only_original_root": "D:/codex_projects/four-operations-common",
+        "source_modified": false,
+        "copy_hash_matches_source": true
+      },
+      "bytes": 5694,
+      "entry": "characters.bear-beret"
+    },
+    "bear-beret-wave-sheet-v001": {
+      "library_asset_id": "bear-beret-wave-sheet-v001",
+      "path": "assets/library/characters/bear-beret/animations/wave/v001/wave-sheet.png",
+      "kind": "generated_motion_candidate",
+      "status": "static_pose_reviewed_motion_preview_pending",
+      "production_ready": false,
+      "registration_path": "assets/library/characters/bear-beret/animations/wave/v001/registration.json",
+      "registration_source": "Frame regions and support points are measured in registration_path. Natural-height calibration and actual playback remain unverified; do not derive a scale from the grid.",
+      "sha256_source": "catalogs/library-v1.json"
+    }
+  },
+  "registration_source_resolution": {
+    "note": "Copied JSON retains its original res:// names unchanged for provenance. Resolve these names to local sources below; do not require the external Godot checkout at playback time.",
+    "mappings": {
+      "res://assets/characters/revisions/bear-beret-neutral-outline-v4.png": "bear-beret-identity-neutral-v001",
+      "res://assets/characters/reactions-v2/bear-beret-reactions.png": "bear-beret-reactions-source-v001",
+      "res://assets/characters/playful-v1/bear-beret-playful.png": "bear-beret-playful-source-v001"
+    },
+    "legacy_source_neutral_note": "idle-registration-v1.json also references original base-v3 art for its historical 985px measurement; that file is not a playback input for these clips."
+  },
+  "calibrations": {
+    "canonical": {
+      "source_asset_id": "bear-beret-identity-neutral-v001",
+      "registration_source_id": "bear-beret-reactions-registration-source-v001",
+      "registration_entry": "characters.bear-beret.neutral_*",
+      "natural_height_px": 997.5249772933697,
+      "anchor_px": [
+        622.5,
+        1186
+      ],
+      "measurement_status": "existing_registration_value_not_newly_measured"
+    },
+    "reactions": {
+      "source_asset_id": "bear-beret-reactions-source-v001",
+      "registration_source_id": "bear-beret-reactions-registration-source-v001",
+      "registration_entry": "characters.bear-beret.atlas_*",
+      "natural_height_px": 241,
+      "anchor_px": [
+        185,
+        318
+      ],
+      "measurement_status": "existing_provisional_registration_proxy",
+      "note": "Natural-height proxy excludes the beret. Use each frame's registered translation; baked-in airborne lift is not a second root jump."
+    },
+    "seated": {
+      "source_asset_id": "bear-beret-playful-source-v001",
+      "registration_source_id": "bear-beret-idle-registration-source-v001",
+      "registration_entry": "characters.bear-beret",
+      "natural_height_px": 396.2973760932945,
+      "anchor_px": [
+        256,
+        460
+      ],
+      "measurement_status": "existing_provisional_head_width_transfer",
+      "legacy_original_ear_to_ground_px": 985,
+      "note": "985 * 276 / 686 is the inherited proxy. It is distinct from the current canonical PNG's 997.5249772933697px registration. Seated total bounding-box height is not natural standing height."
+    },
+    "wave_candidate": {
+      "source_asset_id": "bear-beret-wave-sheet-v001",
+      "natural_height_px": null,
+      "anchor_px": null,
+      "registration_path": "assets/library/characters/bear-beret/animations/wave/v001/registration.json",
+      "measurement_status": "natural_height_pending_renderer_calibration",
+      "scale_rule": "One common scale for all four frames, aligned by their registered support points. The source PNG has not been resaved."
+    }
+  },
+  "pose_refs": {
+    "stand_neutral": {
+      "source_asset_id": "bear-beret-identity-neutral-v001",
+      "calibration_id": "canonical",
+      "stance": "standing",
+      "facing": "front",
+      "status": "canonical_static_reference"
+    },
+    "blink_closed": {
+      "source_asset_id": "bear-beret-reactions-source-v001",
+      "calibration_id": "reactions",
+      "registration_source_id": "bear-beret-reactions-registration-source-v001",
+      "registration_character": "bear-beret",
+      "registration_frame": "blink",
+      "stance": "standing",
+      "facing": "front",
+      "status": "registered_source_pose_unverified_in_video"
+    },
+    "think_up": {
+      "source_asset_id": "bear-beret-reactions-source-v001",
+      "calibration_id": "reactions",
+      "registration_source_id": "bear-beret-reactions-registration-source-v001",
+      "registration_character": "bear-beret",
+      "registration_frame": "think",
+      "stance": "standing",
+      "facing": "front",
+      "status": "registered_source_pose_unverified_in_video",
+      "note": "A complete thinking pose also changes the hand; it is not an eyes-only overlay."
+    },
+    "greeting_aha": {
+      "source_asset_id": "bear-beret-reactions-source-v001",
+      "calibration_id": "reactions",
+      "registration_source_id": "bear-beret-reactions-registration-source-v001",
+      "registration_character": "bear-beret",
+      "registration_frame": "aha",
+      "stance": "standing",
+      "facing": "front",
+      "status": "registered_source_pose_unverified_in_video"
+    },
+    "clap_contact": {
+      "source_asset_id": "bear-beret-reactions-source-v001",
+      "calibration_id": "reactions",
+      "registration_source_id": "bear-beret-reactions-registration-source-v001",
+      "registration_character": "bear-beret",
+      "registration_frame": "cheer",
+      "stance": "standing",
+      "facing": "front",
+      "status": "registered_source_pose_unverified_in_video",
+      "note": "Registered name cheer depicts hands together; this is one finished pose, not a complete clap cycle."
+    },
+    "cheer_ready": {
+      "source_asset_id": "bear-beret-reactions-source-v001",
+      "calibration_id": "reactions",
+      "registration_source_id": "bear-beret-reactions-registration-source-v001",
+      "registration_character": "bear-beret",
+      "registration_frame": "success_ready",
+      "stance": "standing_crouch",
+      "facing": "front",
+      "status": "registered_source_pose_unverified_in_video"
+    },
+    "cheer_air": {
+      "source_asset_id": "bear-beret-reactions-source-v001",
+      "calibration_id": "reactions",
+      "registration_source_id": "bear-beret-reactions-registration-source-v001",
+      "registration_character": "bear-beret",
+      "registration_frame": "success_air",
+      "stance": "airborne",
+      "facing": "front",
+      "status": "registered_source_pose_unverified_in_video"
+    },
+    "cheer_land": {
+      "source_asset_id": "bear-beret-reactions-source-v001",
+      "calibration_id": "reactions",
+      "registration_source_id": "bear-beret-reactions-registration-source-v001",
+      "registration_character": "bear-beret",
+      "registration_frame": "success_land",
+      "stance": "standing_crouch",
+      "facing": "front",
+      "status": "registered_source_pose_unverified_in_video"
+    },
+    "seated_rest": {
+      "source_asset_id": "bear-beret-playful-source-v001",
+      "calibration_id": "seated",
+      "registration_source_id": "bear-beret-idle-registration-source-v001",
+      "registration_character": "bear-beret",
+      "registration_frame": "idle_rest",
+      "stance": "seated",
+      "facing": "front",
+      "status": "registered_source_pose_unverified_in_video",
+      "source_pose_id": "silly_rest",
+      "translation_px": [
+        11,
+        -4
+      ],
+      "note": "Hand-on-cheek completed rest pose; an endpoint reference, not a newly authored neutral seated transition."
+    },
+    "seated_stretch": {
+      "source_asset_id": "bear-beret-playful-source-v001",
+      "calibration_id": "seated",
+      "registration_source_id": "bear-beret-idle-registration-source-v001",
+      "registration_character": "bear-beret",
+      "registration_frame": "idle_stretch",
+      "stance": "seated",
+      "facing": "front",
+      "status": "registered_source_pose_unverified_in_video",
+      "source_pose_id": "big_stretch",
+      "translation_px": [
+        6.5,
+        0
+      ],
+      "note": "The existing registration explicitly places both seated feet at local y460 before translation."
+    },
+    "nod_lowered_pending": {
+      "source_asset_id": null,
+      "calibration_id": null,
+      "stance": "standing",
+      "facing": "front",
+      "status": "new_pose_or_registered_overlay_required",
+      "description": "Head-only lowered pose or layered head pivot still required; do not nod by stretching the whole PNG."
+    },
+    "clap_open_pending": {
+      "source_asset_id": null,
+      "calibration_id": null,
+      "stance": "standing",
+      "facing": "front",
+      "status": "new_pose_or_registered_overlay_required",
+      "description": "Hands-apart counterpart to clap_contact, with unchanged face, natural height and foot contact."
+    },
+    "seated_blink_pending": {
+      "source_asset_id": null,
+      "calibration_id": null,
+      "stance": "seated",
+      "facing": "front",
+      "status": "new_pose_or_registered_overlay_required",
+      "description": "Closed eyes for the seated body; the standing blink image cannot replace the seated body."
+    },
+    "seated_up_gaze_pending": {
+      "source_asset_id": null,
+      "calibration_id": null,
+      "stance": "seated",
+      "facing": "front",
+      "status": "new_pose_or_registered_overlay_required",
+      "description": "Seated gaze following a leaf without replacing the seated torso with standing think art."
+    },
+    "stand_board_gaze_pending": {
+      "source_asset_id": null,
+      "calibration_id": null,
+      "stance": "standing",
+      "facing": "front",
+      "status": "new_pose_or_registered_overlay_required",
+      "description": "Front-facing body and feet remain unchanged; only eyes/head face the number board."
+    }
+  },
+  "motions": {
+    "stand_idle": {
+      "id": "bear-beret-motion-stand-idle-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "stand_neutral",
+      "exit_pose": "stand_neutral",
+      "body_facing": "front",
+      "stance": "standing",
+      "support_anchor": "Use the calibration of each referenced pose; scene injects one ground-plane actor root.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 30,
+        "duration_s": 1,
+        "repeat_count": null,
+        "loop": true
+      },
+      "implementation": "static_hold",
+      "frame_refs": [
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 30
+        }
+      ],
+      "production_ready": false,
+      "material_status": "static_source_available_video_render_unverified",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": false,
+      "difference_from_canonical": "No anatomical or pose change. Optional blink is scheduled separately; do not add a bob for every number.",
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "renderer_path": "tools/render_counting_video.py",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record.",
+        "status": "canonical_static_hold_with_registered_root",
+        "limitations": "The canonical front-facing drawing is held at the measured root. This is not a dense idle animation cycle."
+      }
+    },
+    "blink": {
+      "id": "bear-beret-motion-blink-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "stand_neutral",
+      "exit_pose": "stand_neutral",
+      "body_facing": "front",
+      "stance": "standing",
+      "support_anchor": "Use the calibration of each referenced pose; scene injects one ground-plane actor root.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 6,
+        "duration_s": 0.2,
+        "repeat_count": 1,
+        "loop": false
+      },
+      "implementation": "registered_two_pose_swap",
+      "frame_refs": [
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 1
+        },
+        {
+          "pose_ref": "blink_closed",
+          "duration_frames": 4
+        },
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 1
+        }
+      ],
+      "production_ready": false,
+      "material_status": "standing_open_closed_sources_available",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": false,
+      "difference_from_canonical": "Eyes close and reopen. Existing complete drawings must be aligned by their own source calibration; verify that body and face do not pop.",
+      "stance_variants": {
+        "standing": "defined",
+        "seated": "Optional future seated_blink_pending. This episode holds seated front art at E(200)+9.6..12s and blinks only after standing at +14s."
+      },
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "renderer_path": "tools/render_counting_video.py",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record.",
+        "status": "registered_completed_pose_substitution",
+        "limitations": "Uses the registered blink drawing for brief intervals and returns to neutral. No newly generated eyelid rig or seated-specific blink is claimed."
+      }
+    },
+    "nod": {
+      "id": "bear-beret-motion-nod-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "stand_neutral",
+      "exit_pose": "stand_neutral",
+      "body_facing": "front",
+      "stance": "standing",
+      "support_anchor": "Use the calibration of each referenced pose; scene injects one ground-plane actor root.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 18,
+        "duration_s": 0.6,
+        "repeat_count": 1,
+        "loop": false
+      },
+      "implementation": "head_nod_frames_or_registered_layer_required",
+      "frame_refs": [
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 3
+        },
+        {
+          "pose_ref": "nod_lowered_pending",
+          "duration_frames": 6
+        },
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 9
+        }
+      ],
+      "production_ready": false,
+      "material_status": "only_canonical_endpoint_available",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": true,
+      "difference_from_canonical": "Small head dip and return, with feet, torso, hat identity and body scale fixed. No measured head pivot exists yet.",
+      "fallback": "Remain in stand_idle or blink until the nod has accepted art or a registered head layer.",
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "renderer_path": "tools/render_counting_video.py",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record.",
+        "status": "whole_sprite_micro_offset_only",
+        "limitations": "At ordinary multiples of five, the full sprite moves vertically by at most 1.5 output pixels for .4s. A head-only nod with fixed feet and a measured head pivot is not implemented."
+      }
+    },
+    "wave": {
+      "id": "bear-beret-motion-wave-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "stand_neutral",
+      "exit_pose": "stand_neutral",
+      "body_facing": "front",
+      "stance": "standing",
+      "support_anchor": "Use the calibration of each referenced pose; scene injects one ground-plane actor root.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 36,
+        "duration_s": 1.2,
+        "repeat_count": 1,
+        "loop": false
+      },
+      "implementation": "generated_sheet_candidate",
+      "frame_refs": [
+        {
+          "source_asset_id": "bear-beret-wave-sheet-v001",
+          "logical_frame_index": 0,
+          "duration_frames": 3
+        },
+        {
+          "source_asset_id": "bear-beret-wave-sheet-v001",
+          "logical_frame_index": 1,
+          "duration_frames": 5
+        },
+        {
+          "source_asset_id": "bear-beret-wave-sheet-v001",
+          "logical_frame_index": 2,
+          "duration_frames": 6
+        },
+        {
+          "source_asset_id": "bear-beret-wave-sheet-v001",
+          "logical_frame_index": 3,
+          "duration_frames": 8
+        },
+        {
+          "source_asset_id": "bear-beret-wave-sheet-v001",
+          "logical_frame_index": 2,
+          "duration_frames": 6
+        },
+        {
+          "source_asset_id": "bear-beret-wave-sheet-v001",
+          "logical_frame_index": 1,
+          "duration_frames": 5
+        },
+        {
+          "source_asset_id": "bear-beret-wave-sheet-v001",
+          "logical_frame_index": 0,
+          "duration_frames": 3
+        }
+      ],
+      "production_ready": false,
+      "material_status": "static_pose_reviewed_natural_height_and_motion_preview_pending",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": false,
+      "source_asset_id": "bear-beret-wave-sheet-v001",
+      "candidate_frame_meanings": [
+        "lowered arm",
+        "sideways raised arm",
+        "high arm inward",
+        "high arm outward"
+      ],
+      "candidate_frame_indexing": "Visual row-major identities only; no crop coordinates are inferred.",
+      "difference_from_canonical": "The character's left arm, appearing on screen-right in the candidate, moves; body remains front-facing and planted.",
+      "loop_rule": "Do not loop frame3 directly to frame0. Repeat interior 2,3,2 if needed, then return through 1,0; review every seam and the canonical-to-candidate endpoint.",
+      "frame_registration_available": true,
+      "natural_height_and_motion_QA_required": true,
+      "additional_smoothing_frames_may_be_needed": true,
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "renderer_path": "tools/render_counting_video.py",
+        "source_image_path": "assets/library/characters/bear-beret/animations/wave/v001/wave-sheet.png",
+        "registration_path": "assets/library/characters/bear-beret/animations/wave/v001/registration.json",
+        "status": "rendered_and_reviewed_in_completed_episode",
+        "takes_precedence_over_planned_pose_references": true,
+        "limitations": "Registered four-pose return sequence, one common scale and measured support anchors; generic readiness remains unchanged.",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record."
+      }
+    },
+    "clap": {
+      "id": "bear-beret-motion-clap-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "stand_neutral",
+      "exit_pose": "stand_neutral",
+      "body_facing": "front",
+      "stance": "standing",
+      "support_anchor": "Use the calibration of each referenced pose; scene injects one ground-plane actor root.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 36,
+        "duration_s": 1.2,
+        "repeat_count": 1,
+        "loop": false
+      },
+      "implementation": "completed_contact_pose_plus_missing_open_pose",
+      "frame_refs": [
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 3
+        },
+        {
+          "pose_ref": "clap_open_pending",
+          "duration_frames": 9
+        },
+        {
+          "pose_ref": "clap_contact",
+          "duration_frames": 6
+        },
+        {
+          "pose_ref": "clap_open_pending",
+          "duration_frames": 9
+        },
+        {
+          "pose_ref": "clap_contact",
+          "duration_frames": 6
+        },
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 3
+        }
+      ],
+      "production_ready": false,
+      "material_status": "contact_pose_exists_open_and_transition_frames_missing",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": true,
+      "difference_from_canonical": "Hands move apart and meet at chest height. Face, body height and feet stay stable; do not substitute an airborne pose for open hands.",
+      "fallback": "One held clap_contact pose with a timed pose return is a completed-pose preview only, not a verified repeated clap.",
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "renderer_path": "tools/render_counting_video.py",
+        "status": "existing_chest_pose_alternation",
+        "limitations": "At 50/100, alternates existing cheer and success_ready chest poses. No new hand-open/closed clap cycle is claimed.",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record."
+      }
+    },
+    "cheer": {
+      "id": "bear-beret-motion-cheer-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "stand_neutral",
+      "exit_pose": "stand_neutral",
+      "body_facing": "front",
+      "stance": "standing_to_registered_airborne_to_standing",
+      "support_anchor": "Keep the registered ground-plane root. Honor per-pose translation and airborne art; never add a second jump offset.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 30,
+        "duration_s": 1,
+        "repeat_count": 1,
+        "loop": false
+      },
+      "implementation": "existing_success_pose_sequence",
+      "frame_refs": [
+        {
+          "pose_ref": "cheer_ready",
+          "duration_frames": 6
+        },
+        {
+          "pose_ref": "cheer_air",
+          "duration_frames": 12
+        },
+        {
+          "pose_ref": "cheer_land",
+          "duration_frames": 6
+        },
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 6
+        }
+      ],
+      "production_ready": false,
+      "material_status": "registered_finished_success_poses_available",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": false,
+      "difference_from_canonical": "One small existing hop with arms open, then land and return. The source air image already contains leg lift.",
+      "alternative": "If a planted-feet arms-up celebration is preferred, prepare a distinct standing cheer pose instead of distorting success_air.",
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "renderer_path": "tools/render_counting_video.py",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record.",
+        "status": "registered_success_key_pose_sequence",
+        "limitations": "Uses success_ready, success_air and success_land completed poses. These are discrete key poses, not newly authored dense anatomical inbetweens."
+      }
+    },
+    "sit_down": {
+      "id": "bear-beret-motion-sit-down-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "stand_neutral",
+      "exit_pose": "seated_rest",
+      "body_facing": "front",
+      "stance": "standing_to_seated",
+      "support_anchor": "Use the calibration of each referenced pose; scene injects one ground-plane actor root.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 24,
+        "duration_s": 0.8,
+        "repeat_count": 1,
+        "loop": false
+      },
+      "implementation": "transition_frames_required",
+      "frame_refs": [
+        {
+          "pose_ref": "stand_neutral",
+          "role": "entry_reference"
+        },
+        {
+          "pose_ref": "seated_rest",
+          "role": "exit_reference"
+        }
+      ],
+      "production_ready": false,
+      "material_status": "endpoint_sources_only_no_continuous_sit_frames",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": true,
+      "difference_from_canonical": "Lower into a seated posture while keeping head identity and natural-body scale. Calibrate seated contact independently; never shrink standing art to mimic sitting.",
+      "planned_interval": {
+        "anchor": "E(200)",
+        "start_offset_s": 2.2,
+        "end_offset_s": 3
+      },
+      "timeline_note": "24 output frames are reserved; endpoint refs are not a playable 24-frame transition.",
+      "tween_only_fallback": "A source-pose cut or crossfade is a planning preview and requires explicit visual acceptance; it is not a prepared sit motion.",
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "renderer_path": "tools/render_counting_video.py",
+        "source_image_path": "assets/library/characters/bear-beret/animations/postures/v001/postures-sheet.png",
+        "registration_path": "assets/library/characters/bear-beret/animations/postures/v001/registration.json",
+        "status": "rendered_and_reviewed_in_completed_episode",
+        "takes_precedence_over_planned_pose_references": true,
+        "limitations": "New postures sheet takes precedence over the earlier idle_rest plan for this episode. Half-seated/seated/stretch key poses are switched without face-doubling crossfades; no dense anatomical inbetweens are claimed.",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record."
+      }
+    },
+    "seated_stretch": {
+      "id": "bear-beret-motion-seated-stretch-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "seated_rest",
+      "exit_pose": "seated_rest",
+      "body_facing": "front",
+      "stance": "seated",
+      "support_anchor": "Use the calibration of each referenced pose; scene injects one ground-plane actor root.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 60,
+        "duration_s": 2,
+        "repeat_count": 1,
+        "loop": false
+      },
+      "implementation": "registered_completed_poses_with_transition_differences_needed",
+      "frame_refs": [
+        {
+          "pose_ref": "seated_rest",
+          "duration_frames": 6
+        },
+        {
+          "pose_ref": "seated_stretch",
+          "duration_frames": 48
+        },
+        {
+          "pose_ref": "seated_rest",
+          "duration_frames": 6
+        }
+      ],
+      "production_ready": false,
+      "material_status": "seated_rest_and_finished_stretch_exist_inbetweens_missing",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": true,
+      "difference_from_canonical": "Seated arms extend and lower; preserve the shared inherited natural-height scale and the y460 seated support line.",
+      "planned_interval": {
+        "anchor": "E(200)",
+        "start_offset_s": 3,
+        "end_offset_s": 5
+      },
+      "tween_only_fallback": "The three pose references are a timing draft. Do not scale a pose's bounding box or stretch the PNG anatomy to synthesize movement.",
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "renderer_path": "tools/render_counting_video.py",
+        "source_image_path": "assets/library/characters/bear-beret/animations/postures/v001/postures-sheet.png",
+        "registration_path": "assets/library/characters/bear-beret/animations/postures/v001/registration.json",
+        "status": "rendered_and_reviewed_in_completed_episode",
+        "takes_precedence_over_planned_pose_references": true,
+        "limitations": "New postures sheet takes precedence over the earlier idle_rest plan for this episode. Half-seated/seated/stretch key poses are switched without face-doubling crossfades; no dense anatomical inbetweens are claimed.",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record."
+      }
+    },
+    "stand_up": {
+      "id": "bear-beret-motion-stand-up-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "seated_rest",
+      "exit_pose": "stand_neutral",
+      "body_facing": "front",
+      "stance": "seated_to_standing",
+      "support_anchor": "Use the calibration of each referenced pose; scene injects one ground-plane actor root.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 60,
+        "duration_s": 2,
+        "repeat_count": 1,
+        "loop": false
+      },
+      "implementation": "transition_frames_required",
+      "frame_refs": [
+        {
+          "pose_ref": "seated_rest",
+          "role": "entry_reference"
+        },
+        {
+          "pose_ref": "stand_neutral",
+          "role": "exit_reference"
+        }
+      ],
+      "production_ready": false,
+      "material_status": "endpoint_sources_only_no_continuous_stand_frames",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": true,
+      "difference_from_canonical": "Rise from registered seated contact to canonical standing feet, returning to front-facing body before the next number.",
+      "planned_interval": {
+        "anchor": "E(200)",
+        "start_offset_s": 12,
+        "end_offset_s": 14
+      },
+      "timeline_note": "60 output frames are reserved; no inbetween poses are claimed as existing.",
+      "tween_only_fallback": "A source-pose cut or crossfade remains an unaccepted planning preview.",
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "renderer_path": "tools/render_counting_video.py",
+        "source_image_path": "assets/library/characters/bear-beret/animations/postures/v001/postures-sheet.png",
+        "registration_path": "assets/library/characters/bear-beret/animations/postures/v001/registration.json",
+        "status": "rendered_and_reviewed_in_completed_episode",
+        "takes_precedence_over_planned_pose_references": true,
+        "limitations": "New postures sheet takes precedence over the earlier idle_rest plan for this episode. Half-seated/seated/stretch key poses are switched without face-doubling crossfades; no dense anatomical inbetweens are claimed.",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record."
+      }
+    },
+    "look_up": {
+      "id": "bear-beret-motion-look-up-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "stand_neutral",
+      "exit_pose": "stand_neutral",
+      "body_facing": "front",
+      "stance": "standing_or_seated_variant",
+      "support_anchor": "Use the calibration of each referenced pose; scene injects one ground-plane actor root.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 24,
+        "duration_s": 0.8,
+        "repeat_count": 1,
+        "loop": false
+      },
+      "implementation": "standing_think_pose_preview_or_new_gaze_variant",
+      "frame_refs": [
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 6
+        },
+        {
+          "pose_ref": "think_up",
+          "duration_frames": 12
+        },
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 6
+        }
+      ],
+      "production_ready": false,
+      "material_status": "standing_complete_pose_exists_seated_gaze_and_intermediates_missing",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": true,
+      "difference_from_canonical": "Look toward the leaf above the hat without changing the torso's facing or moving the planted support.",
+      "stance_variants": {
+        "standing": "think_up is a completed pose with a hand change, not pure eye motion",
+        "seated": "seated_up_gaze_pending; required if following the falling leaf while seated"
+      },
+      "fallback": "Hold the appropriate standing/seated source pose until a matching gaze variant is prepared.",
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "renderer_path": "tools/render_counting_video.py",
+        "status": "brief_standing_think_expression_only",
+        "limitations": "Standing think poses express attention during the intro/10 cue. Eye-only tracking and seated look-up/leaf-follow variants remain unavailable.",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record."
+      }
+    },
+    "look_at_board": {
+      "id": "bear-beret-motion-look-at-board-v001",
+      "version": "v001",
+      "character_id": "bear-beret",
+      "entry_pose": "stand_neutral",
+      "exit_pose": "stand_neutral",
+      "body_facing": "front",
+      "stance": "standing",
+      "support_anchor": "Use the calibration of each referenced pose; scene injects one ground-plane actor root.",
+      "timing": {
+        "fps": 30,
+        "duration_frames": 15,
+        "duration_s": 0.5,
+        "repeat_count": 1,
+        "loop": false
+      },
+      "implementation": "eyes_or_head_gaze_frames_required",
+      "frame_refs": [
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 3
+        },
+        {
+          "pose_ref": "stand_board_gaze_pending",
+          "duration_frames": 9
+        },
+        {
+          "pose_ref": "stand_neutral",
+          "duration_frames": 3
+        }
+      ],
+      "production_ready": false,
+      "material_status": "front_body_source_exists_board_gaze_variant_missing",
+      "baseline_difference_rule": "Preserve canonical face, red beret, pale-yellow body, warm-brown outline, no cheek blush and one natural-height scale; change only the declared gesture.",
+      "continuous_frames_needed": true,
+      "difference_from_canonical": "Only eyes/head turn toward the board on screen-right; shoulders, body and feet stay front-facing.",
+      "can_hold_exit_pose": true,
+      "planned_interval": {
+        "anchor": "E(200)",
+        "start_offset_s": 18.1,
+        "end_offset_s": 18.6,
+        "hold_neutral_until_offset_s": 20
+      },
+      "return_rule": "Do not turn the whole body. Complete the brief eye/head glance and return eyes to camera before count 201.",
+      "production_implementation": {
+        "episode_id": "counting-garden-001",
+        "renderer_path": "tools/render_counting_video.py",
+        "status": "brief_standing_think_expression_only",
+        "limitations": "A brief existing think pose is used before resuming at 201 and around 250. It is a completed-pose expression, not independent eye rotation or a gaze rig.",
+        "production_set_id": "counting-garden-blue-sky-production-v002",
+        "theme_path": "design/counting-video-v1/themes/bright-garden-v002.json",
+        "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+        "status_scope": "Implemented in current renderer and reviewed preview; final encoded episode check is recorded in production record."
+      }
+    }
+  },
+  "episode_200_block": {
+    "anchor": "E(200)",
+    "action_windows": [
+      {
+        "start_s": 2.2,
+        "end_s": 3,
+        "action": "sit_down"
+      },
+      {
+        "start_s": 3,
+        "end_s": 5,
+        "action": "seated_stretch"
+      },
+      {
+        "start_s": 5.95,
+        "end_s": 8.2,
+        "action": "look_up",
+        "stance": "seated",
+        "status": "seated_variant_not_prepared"
+      },
+      {
+        "start_s": 9.6,
+        "end_s": 12,
+        "action": "hold_pose",
+        "pose_ref": "seated_rest",
+        "stance": "seated",
+        "note": "Seated front hold only; the blink is moved to standing after +14s."
+      },
+      {
+        "start_s": 12,
+        "end_s": 14,
+        "action": "stand_up"
+      },
+      {
+        "start_s": 14,
+        "end_s": 18.1,
+        "action": "stand_idle",
+        "body_facing": "front"
+      },
+      {
+        "start_s": 18.1,
+        "end_s": 18.6,
+        "action": "look_at_board",
+        "body_facing": "front",
+        "note": "Gaze only, then eyes return to camera. Body remains canonical standing and front-facing."
+      },
+      {
+        "start_s": 18.6,
+        "end_s": 18.8,
+        "action": "blink",
+        "stance": "standing"
+      },
+      {
+        "start_s": 18.8,
+        "end_s": 20,
+        "action": "stand_idle",
+        "body_facing": "front",
+        "note": "Hold the returned neutral pose before count 201."
+      }
+    ],
+    "next_count": 201,
+    "repeat_pause_for_missing_frames": false,
+    "note": "Missing frames are preparation work, not permission to extend the 20-second block or silently replace seated art with standing art."
+  },
+  "episode_implementation": {
+    "production_set_id": "counting-garden-blue-sky-production-v002",
+    "theme": "design/counting-video-v1/themes/bright-garden-v002.json",
+    "status": "completed_and_assistant_reviewed",
+    "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+    "production_record": "design/counting-video-v1/blue-sky-production-run-v002.json",
+    "generic_motion_readiness_changed": false,
+    "limits": "Only the episode implementations below are claimed. No new eye/head rig, dense anatomical inbetweens or complete generic clap cycle is implied."
+  }
+}

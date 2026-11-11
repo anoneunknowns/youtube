@@ -1,0 +1,26 @@
+Hexadecimal Count の音声再構築
+
+tools/build_hexadecimal_episode.py の通常の制作処理と --rebalance-timeline は、同じ mix_balanced 関数を使う。
+
+1. 各音声の波形と長さを保ったまま、素材ごとに一つの線形ゲインを適用する。
+2. 音声素材のピーク上限を -4.5 dBFS にする。six と E は同じピーク上限の範囲内で RMS -20.5 dBFS を目標に上げる。
+3. 効果音を有声区間の RMS より 18 dB 下に置く。
+4. 全体に一つの線形ゲインを適用し、-16 LUFS と -2 dBTP を目標にする。完成条件は -17〜-15 LUFS、true peak -2 dBTP。
+
+採用したマスターは 563.775666667 秒、48 kHz、ステレオ、24 bit PCM。
+実測値は -16.67 LUFS、-2.00 dBTP。全体のゲインは +5.18 dB。8素材の個別ゲインと測定値は output/hexadecimal-counting-001-v001/audio-qa.json の speech_balancing.sources に記録している。
+
+再構築はプロジェクトルートから共通 PowerShell 7 で実行する。保存先には新しいフォルダを指定する。
+
+  $hexAudioCheck = Join-Path 'D:\temp' ('hexadecimal-audio-check-' + [guid]::NewGuid().ToString('N'))
+  python -B tools/build_hexadecimal_episode.py --rebalance-timeline output/hexadecimal-counting-001-v001/timeline.json --out $hexAudioCheck --work-dir D:/temp
+
+この処理は、タイムラインにハッシュで結び付いた既存 WAV を読み、保存先に master.wav と audio-qa.json を作成する。素材は assets/library/audio/speech と output/hexadecimal-counting-001-v001/speech に揃っている。E の抽出元である「The letter E.」と独立した音素・音響検査記録も speech フォルダに保管している。
+
+採用マスターの SHA-256
+  122b230a31646a0cf8f01d15a6050b169f6c8ce8ddbf0a169dbd2b5325d1bbc5
+
+採用タイムラインの SHA-256
+  13b9fd2dfcd6156f31715e8b34437e73e43256632915fc190c8b5b5970b4a49d
+
+実行環境は制作時と同じ FFmpeg 9.0.2、Python 3.15 を使う。字幕・チャプター・映像は、測定済みタイムラインから別の処理で作成する。

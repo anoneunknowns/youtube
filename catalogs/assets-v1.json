@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "catalog_id": "counting-garden-assets-v1",
+  "status": "materialized_current_episode_asset_index",
+  "production_ready": false,
+  "media_generated": true,
+  "reference_policy": {
+    "external_paths_are_readonly_candidates": true,
+    "external_projects_are_production_dependencies": false,
+    "assets_copied_into_this_repository": true,
+    "new_creation_allowed": true,
+    "new_creation_authorizes_generation_now": true,
+    "production_path_base": "repository_root",
+    "production_path_null_means_unprepared": true,
+    "registration_entries_are_names_not_crop_estimates": true,
+    "preserve_source_pixels_alpha_and_production_history": true,
+    "preserve_original_license_terms": true,
+    "reference_unverified_means": "The candidate exists, but its video crop, scale, alpha, motion and final rendered appearance have not been accepted.",
+    "active_visual_reference_set_id": "counting-garden-reference-v002",
+    "production_authorization_scope": "Current user-authorized video production; future tasks govern additional creation."
+  },
+  "source_projects": {
+    "four_operations": {
+      "reference_root": "D:/codex_projects/four-operations",
+      "readonly": true,
+      "required_for_production": false
+    },
+    "four_operations_common": {
+      "reference_root": "D:/codex_projects/four-operations-common/runtime",
+      "readonly": true,
+      "required_for_production": false
+    }
+  },
+  "assets": {
+    "bear-main": {
+      "role": "Main red-beret bear; stable identity across episodes.",
+      "kind": "character",
+      "source_project": "four_operations_common",
+      "source_path": "assets/characters/revisions/bear-beret-neutral-outline-v4.png",
+      "registration": {
+        "path": "assets/characters/reactions-v4/runtime-all-characters.json",
+        "entry": "characters.bear-beret"
+      },
+      "variants": {
+        "original": {
+          "source_path": "assets/characters/base-v3/bear-beret.png",
+          "role": "Original canonical art; identity and natural-height reference."
+        },
+        "reactions": {
+          "source_path": "assets/characters/reactions-v2/bear-beret-reactions.png",
+          "registration_path": "assets/characters/reactions-v4/runtime-all-characters.json",
+          "registration_entry": "characters.bear-beret.frames",
+          "poses": [
+            "blink",
+            "tap_down",
+            "tap_pop",
+            "think",
+            "aha",
+            "success_ready",
+            "success_air",
+            "success_land",
+            "oops",
+            "retry",
+            "cheer",
+            "signature"
+          ],
+          "role_notes": {
+            "aha": "One raised hand; a static greeting candidate, without dedicated waving frames.",
+            "cheer": "Hands together in a clap-like completed pose; no dedicated open/close clap cycle."
+          }
+        },
+        "idle": {
+          "source_path": "assets/characters/playful-v1/bear-beret-playful.png",
+          "registration_path": "assets/characters/idle-v1/runtime.json",
+          "registration_entry": "characters.bear-beret.frames",
+          "poses": [
+            "idle_nap",
+            "idle_stretch",
+            "idle_rest"
+          ],
+          "role_notes": {
+            "idle_stretch": "Existing seated stretch, sourced from big_stretch.",
+            "idle_nap": "Existing lying rest, sourced from lazy_nap.",
+            "idle_rest": "Existing hand-on-cheek rest, sourced from silly_rest."
+          }
+        },
+        "directional": {
+          "source_path": "assets/characters/pond-jump-v1/bear-beret-jump.png",
+          "registration_path": "assets/characters/reactions-v4/runtime-all-characters.json",
+          "registration_entry": "characters.bear-beret.supplemental_atlases",
+          "poses": [
+            "pond_stand_right",
+            "pond_air_right",
+            "pond_land_right",
+            "pond_air_left"
+          ]
+        }
+      },
+      "reference_code": [
+        "scripts/mockup/reaction_actor.gd",
+        "scripts/mockup/idle_choreography.gd"
+      ],
+      "preserve": [
+        "red beret",
+        "yellow body",
+        "warm brown outline",
+        "no cheek blush",
+        "isotropic natural-height scale",
+        "registered support anchors"
+      ],
+      "preparation_notes": [
+        "Canonical art, reaction sheets and registrations have been copied without source modification.",
+        "Wave and posture sheets are registered and used in the current renderer. Other planned head/eye motions retain their explicit limitations in motions-v1.json.",
+        "Completed pose sheets do not provide lip sync."
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+      "project_identity_reference_id": "bear-beret-identity-neutral-v001",
+      "project_identity_reference_path": "assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+      "production_sha256": "8512984d0660fea738192619b2bfccff1ce42a9493db49c980452ff904296e4e",
+      "production_registration": {
+        "path": "catalogs/motions-v1.json",
+        "entry": "identity_reference_id"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "prepared_motion_sources": {
+        "wave": "assets/library/characters/bear-beret/animations/wave/v001/registration.json",
+        "sit_stretch_stand": "assets/library/characters/bear-beret/animations/postures/v001/registration.json"
+      }
+    },
+    "garden-background": {
+      "role": "Sunny garden backdrop with a quiet central area for the bear and numbers.",
+      "kind": "background",
+      "source_project": "four_operations",
+      "source_path": "assets/mockup/garden-background.png",
+      "registration": {
+        "path": "assets/garden/backdrops-v1/catalog.json",
+        "entry": "sections[block=1]"
+      },
+      "preserve": [
+        "watercolor texture",
+        "turquoise sky",
+        "lime grass",
+        "warm brown contours",
+        "clear central composition"
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/render-sources/counting-garden/v001/garden-background.png",
+      "production_sha256": "e3d2ccda87c2d95d76b89e5dfa421c21fbfad000727939708cf10e8fb116c51f",
+      "production_registration": {
+        "path": "catalogs/render-assets-v1.json",
+        "entry": "images.garden_background"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt"
+    },
+    "garden-bird": {
+      "role": "Short bird crossing or movement break.",
+      "kind": "sprite_atlas",
+      "source_project": "four_operations",
+      "source_path": "assets/garden/v1/garden-life-atlas.png",
+      "registration": {
+        "path": "assets/garden/v1/garden-life-atlas.json",
+        "entry": "regions",
+        "region_names": [
+          "bird_flight_1",
+          "bird_flight_2",
+          "bird_flight_3"
+        ]
+      },
+      "reference_code": [
+        "scripts/mockup/garden_environment.gd"
+      ],
+      "preparation_notes": [
+        "Three registered flight drawings and episode-specific trajectories are implemented by the current renderer and bright_garden_effects.py."
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/render-sources/counting-garden/v001/garden-life-atlas.png",
+      "production_sha256": "bdbfe9bbd473441332f4ae3e18dd33fd7335cbf4d4f1ecc426a0fac7601a7698",
+      "production_registration": {
+        "path": "assets/library/render-sources/counting-garden/v001/garden-life-atlas.json",
+        "entry": "regions.bird_flight_1, bird_flight_2, bird_flight_3"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt"
+    },
+    "garden-cloud": {
+      "role": "Independent cloud that can move without its separate raindrop sprite.",
+      "kind": "sprite_atlas",
+      "source_project": "four_operations",
+      "source_path": "assets/garden/v1/garden-weather-atlas.png",
+      "registration": {
+        "path": "assets/garden/v1/garden-weather-atlas.json",
+        "entry": "regions",
+        "region_names": [
+          "rain_cloud"
+        ]
+      },
+      "reference_code": [
+        "scripts/mockup/garden_environment.gd"
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/render-sources/counting-garden/v001/garden-weather-atlas.png",
+      "production_sha256": "a23fd6497eb7decbee4c21faf17baacb6dc809d9c48cc41693c2618f4146733d",
+      "production_registration": {
+        "path": "assets/library/render-sources/counting-garden/v001/garden-weather-atlas.json",
+        "entry": "regions.rain_cloud"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt"
+    },
+    "garden-rainbow": {
+      "role": "Gentle rainbow reveal or milestone decoration.",
+      "kind": "sprite_atlas",
+      "source_project": "four_operations",
+      "source_path": "assets/garden/v1/garden-life-atlas.png",
+      "registration": {
+        "path": "assets/garden/v1/garden-life-atlas.json",
+        "entry": "regions",
+        "region_names": [
+          "rainbow"
+        ]
+      },
+      "reference_code": [
+        "scripts/mockup/garden_environment.gd"
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/render-sources/counting-garden/v001/garden-life-atlas.png",
+      "production_sha256": "bdbfe9bbd473441332f4ae3e18dd33fd7335cbf4d4f1ecc426a0fac7601a7698",
+      "production_registration": {
+        "path": "assets/library/render-sources/counting-garden/v001/garden-life-atlas.json",
+        "entry": "regions.rainbow"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt"
+    },
+    "toy-airplane": {
+      "role": "Brief propeller-plane crossing.",
+      "kind": "sprite_atlas",
+      "source_project": "four_operations_common",
+      "source_path": "assets/shop-props/v1/airplane-atlas.png",
+      "registration": {
+        "path": "assets/shop-props/v1/catalog.json",
+        "entry": "items.airplane.frames",
+        "frame_indices": [
+          0,
+          1
+        ]
+      },
+      "reference_code": [
+        "scripts/mockup/shop_prop_view.gd"
+      ],
+      "preparation_notes": [
+        "Two registered drawings with current episode crossing/reverse/arc/tilt variations implemented by the renderer."
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/render-sources/counting-garden/v001/airplane-atlas.png",
+      "production_sha256": "131af95fe4063c7e2c61a6f72ad8212ea0b143879d929ed7c8d3398dfcdf5bf9",
+      "production_registration": {
+        "path": "assets/library/render-sources/counting-garden/v001/shop-props-catalog.json",
+        "entry": "items.airplane.frames"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt"
+    },
+    "garden-leaf": {
+      "role": "Falling or drifting leaf decoration.",
+      "kind": "sprite_atlas",
+      "source_project": "four_operations_common",
+      "source_path": "assets/mockup/tokens-atlas.png",
+      "registration": {
+        "path": "assets/mockup/atlas-regions.json",
+        "entry": "tokens.leaf"
+      },
+      "reference_code": [
+        "scripts/mockup/painted_ui.gd"
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/render-sources/counting-garden/v001/tokens-atlas.png",
+      "production_sha256": "6c0f8ed81a7e6d776cc14e129ea9755fe86a4352d03e79e25e0f4e359a665b7e",
+      "production_registration": {
+        "path": "assets/library/render-sources/counting-garden/v001/tokens-atlas-regions.json",
+        "entry": "tokens.leaf"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt"
+    },
+    "counting-bud": {
+      "role": "Bud position before a counting milestone blooms.",
+      "kind": "sprite_atlas",
+      "source_project": "four_operations_common",
+      "source_path": "assets/mockup/tokens-atlas.png",
+      "registration": {
+        "path": "assets/mockup/atlas-regions.json",
+        "entry": "tokens.bud"
+      },
+      "reference_code": [
+        "scripts/mockup/painted_ui.gd"
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/worlds/bright-garden/components/v001/white-flower-cream-bud.png",
+      "production_sha256": "f38db16f41e86766242bc2a1010d12e1f41441d67a9dbcbeab20b836cb0f6d6b",
+      "production_registration": {
+        "path": "assets/library/worlds/bright-garden/components/v001/registration.json",
+        "entry": "regions.cream_bud"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt"
+    },
+    "counting-flower": {
+      "role": "Flower in a completed counting-milestone position.",
+      "kind": "sprite_atlas",
+      "source_project": "four_operations_common",
+      "source_path": "assets/mockup/tokens-atlas.png",
+      "registration": {
+        "path": "assets/mockup/atlas-regions.json",
+        "entry": "tokens.flower"
+      },
+      "reference_code": [
+        "scripts/mockup/painted_ui.gd"
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/worlds/bright-garden/components/v001/white-flower-cream-bud.png",
+      "production_sha256": "f38db16f41e86766242bc2a1010d12e1f41441d67a9dbcbeab20b836cb0f6d6b",
+      "production_registration": {
+        "path": "assets/library/worlds/bright-garden/components/v001/registration.json",
+        "entry": "regions.white_flower"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt"
+    },
+    "flower-petal": {
+      "role": "Sparse petal effect between spoken number groups.",
+      "kind": "sprite_atlas",
+      "source_project": "four_operations_common",
+      "source_path": "assets/mockup/tokens-atlas.png",
+      "registration": {
+        "path": "assets/mockup/atlas-regions.json",
+        "entry": "tokens",
+        "region_names": [
+          "petal_white",
+          "petal_pink"
+        ]
+      },
+      "reference_code": [
+        "scripts/mockup/painted_ui.gd",
+        "scripts/mockup/game_fx.gd"
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/render-sources/counting-garden/v001/tokens-atlas.png",
+      "production_sha256": "6c0f8ed81a7e6d776cc14e129ea9755fe86a4352d03e79e25e0f4e359a665b7e",
+      "production_registration": {
+        "path": "assets/library/render-sources/counting-garden/v001/tokens-atlas-regions.json",
+        "entry": "tokens.petal_white, tokens.petal_pink"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt"
+    },
+    "rounded-font": {
+      "role": "Rounded numerals and short on-screen text.",
+      "kind": "font",
+      "source_project": "four_operations_common",
+      "source_path": "assets/fonts/MPLUSRounded1c-Black.ttf",
+      "license_path": "assets/fonts/MPLUSRounded1c-OFL.txt",
+      "provenance_path": "assets/fonts/MPLUSRounded1c-source.md",
+      "preparation_notes": [
+        "Preserve the SIL OFL terms when materializing or distributing the font; verify final numerals and text at output resolution."
+      ],
+      "status": "materialized_registered_renderer_input",
+      "new_creation_allowed": true,
+      "production_path": "assets/library/render-sources/counting-garden/v001/MPLUSRounded1c-Black.ttf",
+      "production_sha256": "d5981a59ccc5f00da1bd3ae46750fa95cd165b0e6b3a5fc7a1945f94c59449e3",
+      "production_registration": {
+        "path": "catalogs/render-assets-v1.json",
+        "entry": "font"
+      },
+      "review_record": "design/counting-video-v1/blue-sky-production-review-v002.txt",
+      "production_license_path": "assets/library/render-sources/counting-garden/v001/MPLUSRounded1c-OFL.txt",
+      "production_provenance_path": "assets/library/render-sources/counting-garden/v001/MPLUSRounded1c-source.md"
+    }
+  },
+  "shared_library_catalog": "catalogs/library-v1.json",
+  "selected_episode_assets_materialized": true,
+  "active_production_set_id": "counting-garden-blue-sky-production-v002",
+  "readiness_scope": "Current selected inputs are copied into the repository and registered. Atlas availability does not imply readiness of every planned motion; final episode acceptance is a separate production record.",
+  "production_record": "design/counting-video-v1/blue-sky-production-run-v002.json"
+}

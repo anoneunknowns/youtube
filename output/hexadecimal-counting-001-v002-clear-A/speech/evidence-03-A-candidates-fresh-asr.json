@@ -1,0 +1,42 @@
+{
+  "kind": "fresh-final-aac-asr-recheck",
+  "method": "Fresh source-independent transcription of final encoded AAC event excerpts and complete counts, no expected-text prompt. Recognizer-only 150 ms guards.",
+  "model": "Xenova/whisper-tiny.en q8",
+  "model_files_sha256": [
+    [
+      "encoder_model_quantized.onnx",
+      "8cc3c6f8563d1b3fbd2c5af9f64c2bed8b020bc593c402d1ef53b9f08fbf1b90"
+    ],
+    [
+      "decoder_model_merged_quantized.onnx",
+      "dbb2e063b7fbc41d9803b9698f93ecb035c50cbb3fb87b56cb131e4a5eb99059"
+    ]
+  ],
+  "limitations": "Automated recognition, not human listening or perfect articulation proof.",
+  "results": [
+    {
+      "id": "A-natural",
+      "path": "D:\\temp\\hex-audio-recheck-d3f20e7447104467ae5c0e160a731a75\\A-natural/A-natural.wav",
+      "sha256": "7df5baed8576c83e48f9e4b5b0a3e20142b40d286869c2013ad81cdab37d6d59",
+      "expected": "The letter A.",
+      "role": "new-A-candidate",
+      "recognized_text": "The letter A."
+    },
+    {
+      "id": "LETTER-A",
+      "path": "D:\\temp\\hex-audio-recheck-d3f20e7447104467ae5c0e160a731a75\\A-extracted\\LETTER-A.wav",
+      "sha256": "f51912f2cb5658e9d8911e1ee57541f0491cff7c8b5284d5b6c563177088f9cc",
+      "expected": "A",
+      "role": "new-A-candidate",
+      "recognized_text": "A."
+    },
+    {
+      "id": "LETTER-A-prefix",
+      "path": "D:\\temp\\hex-audio-recheck-d3f20e7447104467ae5c0e160a731a75\\A-prefix-control\\LETTER-A-prefix.wav",
+      "sha256": "dd98be97cc7a7c95adb504d77e72b014e9e32bc04d75b7ea234482f2537844e9",
+      "expected": "A",
+      "role": "new-A-candidate",
+      "recognized_text": ">>"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "kind": "binary-episode-preproduction-plan",
+  "episode_id": "binary-counting-001",
+  "series": {
+    "name": "Num-Num Numbers",
+    "url": "https://pasplastudio.com/num-num-numbers/"
+  },
+  "status": "concept-script-and-static-mockup",
+  "production_ready": false,
+  "audio_generated": false,
+  "video_generated": false,
+  "range": {
+    "decimal_start": 0,
+    "decimal_end": 127,
+    "display_start": "0",
+    "display_end": "1111111",
+    "states_including_zero": 128,
+    "endpoint_provisional": true
+  },
+  "duration": {
+    "min_inclusive_s": 480,
+    "max_exclusive_s": 540,
+    "source": "Inherited first-episode preference; current planning assumption",
+    "estimate_s": 515.3233333333408,
+    "measured": false
+  },
+  "reading": {
+    "language": "en-US",
+    "mode": "left-to-right digit words",
+    "allowed_tokens": [
+      "zero",
+      "one"
+    ],
+    "leading_slots": "blank, not spoken",
+    "decimal_values_narrated_during_count": false,
+    "tts_input": "Explicit zero/one word list or reviewed digit clips; never raw numeric strings",
+    "bit_words": 770,
+    "one_words": 448,
+    "zero_words": 322
+  },
+  "visual": {
+    "theme_id": "binary-lantern-garden-v001",
+    "canvas": [
+      1920,
+      1080
+    ],
+    "max_slots": 7,
+    "slot_order": [
+      64,
+      32,
+      16,
+      8,
+      4,
+      2,
+      1
+    ],
+    "cell_alignment": "Visible ink centered within each cell; fixed right-aligned places",
+    "background": "assets/library/worlds/binary-lantern-garden/backgrounds/v001/lantern-garden-background.png",
+    "mockup_source": "design/binary-counting-v1/mockup/index.html",
+    "reference_directory": "assets/library/references/binary-counting/v001",
+    "canonical_character": "assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+    "color_is_not_the_only_state_marker": true
+  },
+  "audio": {
+    "voice_candidate": "af_heart",
+    "generation_speed": 0.98,
+    "bgm": false,
+    "opening_noise": false,
+    "one_candidate": {
+      "path": "assets/library/audio/speech/kokoro-af-heart/v002/clips/number-001-58d4ab64f6a9.wav",
+      "duration_s": 0.47583333333333333,
+      "sha256": "58d4ab64f6a90c84474791bfcf868b29f875a971ab633afc3627732f7af1c389"
+    },
+    "zero_status": "not-generated-not-measured",
+    "sfx_types": 2,
+    "sfx_uses": 7,
+    "sfx_gain_relative_to_voice_rms_db": -18,
+    "master_target_lufs": -16,
+    "master_true_peak_max_dbtp": -1
+  },
+  "production_gates": [
+    "Dedicated zero-based binary planner/renderer adapter",
+    "Review new zero/dialogue voices and repeated-digit sequences",
+    "Measure all adopted speech and recompute duration before endpoint lock",
+    "Token-by-token hash-bound audio QA; decimal ASR parsing cannot approve binary strings",
+    "Review actual carry animation and per-bit highlighting in video; static mockups do not approve motion",
+    "Complete full encoded-video and final-audio QA before delivery"
+  ],
+  "existing_first_episode_is_modified": false
+}

@@ -1,0 +1,48 @@
+Four Ways to Count to 200 — v002 audio reproduction
+
+Working directory: D:/codex_projects/youtube
+Shared PowerShell: D:/dev/PowerShell/7/pwsh.exe
+Python: C:/Python315/python.exe
+Temporary files: D:/temp
+
+Build into a fresh destination. Existing completed v001 files are immutable.
+
+  python -B tools/build_four_base_episode_v002.py --out <fresh-output> --design-dir <fresh-design> --work-dir D:/temp
+
+The default destinations are output/four-base-counting-001-v002-to-200 and
+design/four-base-counting-v1/count-to-200-v002. Reusing a destination with
+timeline/master/speech or an existing scenario is rejected before writing.
+
+All 201 natural decimal number utterances are reused from accepted libraries:
+zero from kokoro-af-heart/binary-v001; 1 through 200 from kokoro-af-heart/v002.
+The builder verifies source gates, their current evidence hashes, exact text,
+PCM format, clip duration and clip SHA-256. The thirteen unchanged dialogue
+lines and source-bound recognition/phoneme evidence come from completed
+four-base-counting v001. No new speech synthesis is required.
+
+The new speech/measurements.json and speech/reuse-acceptance.json bind every
+number, dialogue source, source gate and original production dependency.
+Existing v001 files and its 265 recorded dependencies are not modified.
+
+Schedule: 30-second introduction, 201 complete values from 0 through 200,
+three existing teaching checks after 8/16/64, and a 12-second finale.
+197 ordinary transitions are exactly 2 seconds from previous voice end to
+next voice start; three teaching transitions are 5 seconds. Each display
+begins 0.12 seconds before its voice. The final value is held for 0.28 seconds
+after its voice before the finale begins. There are 216 audio events:
+202 number_voice (201 counts plus introductory ten), 13 dialogue and one SFX.
+The final representations are 11001000 / 200 / 310 / C8.
+
+Audio timeline: 662.3552916666666 seconds, 31,793,054 samples at 48 kHz.
+At 30 fps, render 19,871 frames (662.3666666666667 seconds), covering the
+complete master including the final audio sample. Do not trim to 662 seconds.
+
+The master uses the existing uniform per-source gain balancing and linear
+whole-track gain. No time stretch, pitch change or intra-number gaps.
+Its 24-bit 48 kHz stereo PCM is a peak-safe intermediate. Rendering requires
+the documented +0.8 dB delivery gain; the builder encodes and measures a fresh
+AAC probe before accepting the master. Final MP4 audio must be checked again.
+
+The existing three small Little Bird gestures remain at their original times.
+No new narration or gesture is added at 128. The original motion manifest is
+copied and rebound to the new timeline by the video-production stage.

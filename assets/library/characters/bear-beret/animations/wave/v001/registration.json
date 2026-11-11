@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "asset_id": "bear-beret-wave-sheet-v001",
+  "status": "static_pose_reviewed_motion_preview_pending",
+  "production_ready": false,
+  "image_path": "assets/library/characters/bear-beret/animations/wave/v001/wave-sheet.png",
+  "sha256": "921102ACB607B52C84F0AC16EA0A24EC63359976E9317DAC51450F1A7EC8AD76",
+  "width": 1254,
+  "height": 1254,
+  "pixel_format": "RGBA",
+  "alpha_range": [
+    0,
+    255
+  ],
+  "identity_reference_id": "bear-beret-identity-neutral-v001",
+  "coordinate_convention": "Image coordinates in pixels; regions are x,y,width,height; local anchors refer to their frame region; support y uses the exclusive lower visible bound.",
+  "grid": {
+    "columns": 2,
+    "rows": 2,
+    "cell_width": 627,
+    "cell_height": 627,
+    "origin": "top-left",
+    "provenance": "Requested equal-cell generation layout, verified against actual image dimensions and alpha clearances."
+  },
+  "measurement": {
+    "alpha_threshold": 128,
+    "edge_guard_threshold": 32,
+    "bitmap_modified": false,
+    "source_png_resaved": false
+  },
+  "frames": [
+    {
+      "index": 0,
+      "region": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "visible_bbox_alpha128": [
+        157,
+        29,
+        493,
+        580
+      ],
+      "support_anchor_local": [
+        325.5,
+        580
+      ],
+      "cell_edge_alpha_max": 1,
+      "content_margin_min": 29,
+      "pose": "stand_neutral_candidate"
+    },
+    {
+      "index": 1,
+      "region": [
+        627,
+        0,
+        627,
+        627
+      ],
+      "visible_bbox_alpha128": [
+        136,
+        29,
+        489,
+        580
+      ],
+      "support_anchor_local": [
+        304.5,
+        580
+      ],
+      "cell_edge_alpha_max": 0,
+      "content_margin_min": 29,
+      "pose": "wave_raise"
+    },
+    {
+      "index": 2,
+      "region": [
+        0,
+        627,
+        627,
+        627
+      ],
+      "visible_bbox_alpha128": [
+        158,
+        30,
+        501,
+        582
+      ],
+      "support_anchor_local": [
+        325.5,
+        582
+      ],
+      "cell_edge_alpha_max": 1,
+      "content_margin_min": 30,
+      "pose": "wave_near_ear_in"
+    },
+    {
+      "index": 3,
+      "region": [
+        627,
+        627,
+        627,
+        627
+      ],
+      "visible_bbox_alpha128": [
+        137,
+        31,
+        496,
+        582
+      ],
+      "support_anchor_local": [
+        304.5,
+        582
+      ],
+      "cell_edge_alpha_max": 1,
+      "content_margin_min": 31,
+      "pose": "wave_near_ear_out"
+    }
+  ],
+  "suggested_clip": {
+    "id": "bear-beret-wave-v001",
+    "fps": 30,
+    "sequence": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      0
+    ],
+    "durations_frames": [
+      3,
+      5,
+      6,
+      8,
+      6,
+      5,
+      3
+    ],
+    "total_frames": 36,
+    "duration_s": 1.2,
+    "loop_count": 1,
+    "entry_frame": 0,
+    "exit_frame": 0,
+    "scale_policy": "One common scale for every frame; align using each measured support anchor, not each frame's bounding box.",
+    "natural_height_proxy": null,
+    "natural_height_status": "Must match canonical head size and natural height in the renderer before adoption.",
+    "animation_playback_verified": false
+  },
+  "review": {
+    "static_identity": "Recognizable red beret/yellow body/brown outline/muzzle/tongue; no clear malformed limbs seen in independent static review.",
+    "cell_bounds": "Visible alpha does not cross cell boundaries; max edge alpha is 0 or 1.",
+    "alignment": "Raw cells differ by 21 pixels horizontally and 2 vertically at support anchors. Apply per-frame anchor alignment.",
+    "remaining": [
+      "Render at the intended character scale.",
+      "Check face/head stability when entering from canonical neutral.",
+      "Watch the full wave loop for popping and foot sliding.",
+      "Verify transparent edge colors against the final garden."
+    ]
+  },
+  "generation_record": "assets/library/characters/bear-beret/animations/wave/v001/generation-record.json"
+}

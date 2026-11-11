@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "id": "character-idle-registration-v1",
+  "date_jst": "2026-11-03",
+  "status": "visual_reviewed_runtime_registered",
+  "coordinate_convention": "region_px is [x,y,width,height]. visible_bbox_local_px is [left,top,right-exclusive,bottom-exclusive]. sprite local origin is (0,0), then rotation_degrees, then isotropic atlas scale. sprite position is (translation_px - atlas_anchor_px) * scale.",
+  "alpha_discard_below": 0.02,
+  "source_pixels_modified": false,
+  "characters": {
+    "bear-beret": {
+      "atlas_path": "res://assets/characters/playful-v1/bear-beret-playful.png",
+      "atlas_sha256": "035cfa1bbc3cd3c7b520b4c8677af14b5d5c5caaa07f8ec4a9be7842c77a235f",
+      "source_neutral_path": "res://assets/characters/base-v3/bear-beret.png",
+      "source_neutral_sha256": "c5459d3e33ac3d5c5a3fe46bfcef9fa5b1c32aca2129424585f808d2b92415d3",
+      "atlas_natural_height_px": 396.2973760932945,
+      "display_natural_height": 350,
+      "atlas_anchor_px": [
+        256,
+        460
+      ],
+      "natural_height_note": "All playful frames are seated, reclining or inverted. Transfer the neutral's ear-to-ground natural height through frontal head width before the stretch pose's raised arms enter the row span: 985 * 276 / 686. This is one shared art-registration proxy, not a pose-bbox normalization or newly user-approved size.",
+      "measurement": {
+        "source_neutral_ear_to_ground_px": 985,
+        "neutral_head_band_roi_px": [
+          250,
+          400,
+          750,
+          270
+        ],
+        "neutral_head_band_alpha_gte_128_max_width_px": 686,
+        "neutral_head_band_widest_row_y": 504,
+        "atlas_stretch_head_band_roi_px": [
+          512,
+          645,
+          512,
+          65
+        ],
+        "atlas_stretch_head_band_alpha_gte_128_max_width_px": 276,
+        "atlas_stretch_head_band_widest_row_y": 704,
+        "isotropic_scale": 0.883175163687192,
+        "minimum_visible_cell_padding_px": 43,
+        "visible_threshold_byte": 6
+      },
+      "frames": [
+        {
+          "id": "idle_nap",
+          "source_pose_id": "lazy_nap",
+          "region_px": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "visible_bbox_local_px": [
+            70,
+            81,
+            461,
+            448
+          ],
+          "rotation_degrees": -35,
+          "translation_px": [
+            -125.72529602050798,
+            264.43002319335903
+          ],
+          "support_note": "Use rotated visible alpha>=6 pixels, not the unrotated foot bottom. Horizontal center and greatest transformed Y are registered to anchor. Root may shift the complete actor toward the screen interior; do not rescale this pose to fit.",
+          "measurement_rotated_visible_aabb_px": [
+            167.859039306641,
+            -86.3058471679688,
+            595.591552734375,
+            195.569976806641
+          ],
+          "visible_bbox_transformed_px": [
+            166.859039306641,
+            -87.3058471679688,
+            596.591552734375,
+            196.569976806641
+          ]
+        },
+        {
+          "id": "idle_stretch",
+          "source_pose_id": "big_stretch",
+          "region_px": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "visible_bbox_local_px": [
+            75,
+            43,
+            424,
+            460
+          ],
+          "rotation_degrees": 0,
+          "translation_px": [
+            6.5,
+            0
+          ],
+          "support_note": "Both seated feet share the original lower support line at local y460.",
+          "measurement_rotated_visible_aabb_px": [
+            75,
+            43,
+            424,
+            460
+          ],
+          "visible_bbox_transformed_px": [
+            74.0,
+            42.0,
+            425.0,
+            461.0
+          ]
+        },
+        {
+          "id": "idle_rest",
+          "source_pose_id": "silly_rest",
+          "region_px": [
+            512,
+            1024,
+            512,
+            512
+          ],
+          "visible_bbox_local_px": [
+            93,
+            50,
+            397,
+            464
+          ],
+          "rotation_degrees": 0,
+          "translation_px": [
+            11,
+            -4
+          ],
+          "support_note": "Both seated feet share local y464; translation returns this to the common anchor.",
+          "measurement_rotated_visible_aabb_px": [
+            93,
+            50,
+            397,
+            464
+          ],
+          "visible_bbox_transformed_px": [
+            92.0,
+            49.0,
+            398.0,
+            465.0
+          ]
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Original sprites and neutral art are not changed; six preproduction frames remain a historical source atlas.",
+    "Continuous get-up/lie-down body animation is not claimed: these are registered poses whose transitions are controlled by choreography.",
+    "The rotated nap is about 377.76 logical pixels wide at the shared scale. The actor root must be placed safely inside the screen. A rotated rectangular bbox is conservative and wider than the actual visible raster.",
+    "Natural-height transfer is a visual art-direction proxy derived from the frontal head band; game-screen review remains required."
+  ],
+  "bbox_interpolation_margin_px": 1,
+  "review_capture_paths": [
+    "design/idle-v1/nap.png",
+    "design/idle-v1/stretch.png",
+    "design/idle-v1/flight.png",
+    "design/idle-v1/blink.png"
+  ]
+}

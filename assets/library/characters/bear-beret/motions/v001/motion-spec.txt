@@ -1,0 +1,90 @@
+くまの再利用モーション準備仕様 v001
+状態：素材参照と動作設計。全clipはproduction_ready:false。
+正本：assets/library/characters/bear-beret/references/canonical-neutral-v001.png
+機械可読定義：catalogs/motions-v1.json
+この作業では動画、音声、動作プレビューを生成していない。
+
+共通の造形と座標
+  赤いベレー帽、淡黄色の体、茶色の輪郭、元の顔と体形、頬紅なしを維持する。
+  各ポーズを外接矩形いっぱいに拡大せず、一つの自然体高で等方拡大する。
+  身体は原則正面。左右反転で手や帽子の向きを代用しない。
+  立位の足元と座位の接地は、同じsceneのground-planeを基準に登録する。
+  頭や肩の回転支点は未計測。推測点を実測登録値として扱わない。
+
+確認した既存登録値
+  採用canonical PNG：自然高997.5249772933697px、anchor[622.5,1186]。
+  反応atlas：自然高proxy241px、anchor[185,318]。各frameのtranslationを併用する。
+  座位atlas：自然高proxy396.2973760932945px、anchor[256,460]。
+  座位proxyは旧原画985pxと頭部幅276/686による転写値であり、
+  採用canonicalの997.5249772933697pxとは別の登録値。
+  idle_stretch：translation[6.5,0]、両足の元支持線y460。
+  idle_rest：translation[11,-4]、元支持線y464を共通anchorへ戻す。
+  これらは既存の登録値で、新たな測定や動画での見え方の認定ではない。
+  表示scale＝sceneで指定する自然高／素材群の登録自然高。
+  登録JSONのregion_px、translation_px、rotation_degreesをそのまま参照する。
+  コピーしたJSONのres://名は由来の記録で、外部Godotプロジェクトを再生依存にしない。
+
+動作IDと内容（30fps）
+  stand_idle：bear-beret-motion-stand-idle-v001
+    canonicalの立位正面を保持。1秒の保持単位を必要な長さまで繰り返す。
+    1数ごとの大きな上下動や口パクは加えない。
+  blink：bear-beret-motion-blink-v001
+    0.20秒、通常1frame→閉眼4frame→通常1frame。既存の完成ポーズ2種で設計。
+    同じ支点で接続しても輪郭や体が跳ねないか、実レンダラーで確認する。
+    既存閉眼は立位。座位版は将来の選択肢で、この動画では座位に立位PNGを差し込まない。
+  nod：bear-beret-motion-nod-v001
+    0.60秒、頭だけ小さく下げて戻る。頭の差分または登録済み分割パーツが必要。
+    全身PNGの縦伸縮や未計測pivotで頭の動きを代用しない。
+  wave：bear-beret-motion-wave-v001
+    候補：bear-beret-wave-sheet-v001
+    PNG：assets/library/characters/bear-beret/animations/wave/v001/wave-sheet.png
+    各姿勢のregionと支持点はanimations/wave/v001/registration.jsonへ実測登録済み。
+    自然高proxyは未確定。全4姿勢は共通scaleと支持点合わせを使い、顔サイズとループは確認待ち。
+    画像上の論理順0/1/2/3は、通常／横へ上げる／高く内側／高く外側。
+    予定順0→1→2→3→2→1→0、3/5/6/8/6/5/3frame＝1.20秒。
+    論理indexは切り出し矩形を意味しない。正確なregionは登録側に従う。
+    繰り返す場合は内側2/3を往復し、終わりは1/0を通る。3から0へ直結しない。
+  clap：bear-beret-motion-clap-v001
+    1.20秒案。既存cheerは両手を合わせた完成ポーズ。
+    手を開く相方と接続差分は未準備。足と体を固定し、胸前で開閉する。
+    一枚を保持・Tweenするだけの案と、拍手の連続フレームを区別する。
+  cheer：bear-beret-motion-cheer-v001
+    1.00秒案。success_ready→success_air→success_land→通常。
+    既存の小ジャンプは絵に足上げが含まれるので、rootで二重に跳ねさせない。
+    足を地面へ置いたまま両手だけ上げる案なら、別の立位差分を用意する。
+  sit_down：bear-beret-motion-sit-down-v001
+    0.80秒。立位通常→座位。既存素材は始点と完成座位だけで、途中差分は未準備。
+    PNGの縮小、支点の無視、未確認のクロスフェードを完成動作と扱わない。
+  seated_stretch：bear-beret-motion-seated-stretch-v001
+    2.00秒。座位休止→座った伸び→座位休止。
+    元の完成姿勢はあるが、滑らかな腕の伸び・戻りの差分は未準備。
+  stand_up：bear-beret-motion-stand-up-v001
+    2.00秒。座位→立位正面。始点と終点は既存、起立途中の連続差分は未準備。
+  look_up：bear-beret-motion-look-up-v001
+    0.80秒案。立位thinkは手も変わる完成姿勢で、純粋な視線移動ではない。
+    座位のまま葉を見送る視線差分は未準備。座位を立位thinkへ置き換えない。
+  look_at_board：bear-beret-motion-look-at-board-v001
+    0.50秒案。身体と足は正面に固定し、視線・必要最小限の頭だけ数字板へ向けて戻す。
+    その視線差分は未準備。身体全体の回転・反転を使わない。
+
+200の特別ブロック
+  時刻はtwo hundredの発話終端E(200)からの相対値。
+  +2.20〜3.00秒：sit_down。
+  +3.00〜5.00秒：seated_stretch。終わりは座位休止へ戻す。
+  +5.95〜8.20秒：座位のまま葉を見送る。座位の視線差分は準備対象。
+  +9.60〜12.00秒：座位正面を保持。座位blinkはこの動画では使わない。
+  +12.00〜14.00秒：stand_up。14秒には立位正面を成立させる。
+  +14.00〜18.10秒：立位正面を保持し、声とSE_READYの構成に合わせる。
+  +18.10〜18.60秒：身体正面のまま視線だけ板へ向け、正面へ戻す。
+  +18.60〜18.80秒：立位でblink。
+  +18.80〜20.00秒：立位正面・通常の視線を保持し、201へ接続する。
+  20秒後に201へ。差分不足を理由に休憩を伸ばしたり、数を追加しない。
+
+素材保管と採用
+  sources/v001のPNG2枚と登録JSON2件はfour-operations-commonからの無改変コピー。
+  元画像の切り抜き、PNG再保存、alphaの書き換えは行っていない。
+  SHA-256と元パスはmotions-v1.jsonのsourcesへ記録した。
+  登録JSON全体は制作履歴として保管し、bear-beretの項目だけを利用する。
+  wave候補を含む全clipは実レンダラー、足元、輪郭、顔、開始終了、ループ未検証。
+  未準備の差分は今後別版として制作し、動作IDから採用素材を差し替える。
+  本番採用は連続再生と通常画面への戻りを確認してから登録する。

@@ -1,0 +1,205 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-11-11T08:45:24.855947+00:00",
+  "method": "Fresh standard-library arithmetic, English number construction, WAV headers, independent SRT parser and exact boundary frame extraction. No production renderer/verifier imports.",
+  "video_sha256": "3a84d9aa0861fd16958676140c3c8506fbdf305679f405b021be7d35f1fd886a",
+  "timeline_sha256": "540a3b9a981fc79e832991023452c5aef1b0eee37c4f78ca946e77215069443c",
+  "checks": {
+    "coverage": 1,
+    "ordered_states": 1,
+    "ordered_voices": 1,
+    "source_keys": 1,
+    "row_order_and_narration": 1,
+    "independent_804_representations": 804,
+    "canonical_glyphs_and_no_leading_zeros": 804,
+    "natural_decimal_english": 603,
+    "source_hash_alignment": 201,
+    "source_path_alignment": 201,
+    "source_wav_format": 201,
+    "source_wav_not_truncated": 201,
+    "whole_number_clip_in_schedule": 201,
+    "contiguous_display": 201,
+    "display_lead_120ms": 201,
+    "measured_voice_binding": 201,
+    "voice_inside_correct_state": 201,
+    "all_rows_together": 201,
+    "between_whole_numbers": 200,
+    "manuscript_coverage": 1,
+    "manuscript_order": 201,
+    "manuscript_representations": 201,
+    "manuscript_english": 201,
+    "caption_coverage": 1,
+    "caption_numbering": 215,
+    "caption_boundaries": 215,
+    "caption_matches_sample_times_within_half_millisecond": 215,
+    "caption_exact_speech": 215,
+    "caption_decimal_meaning": 202,
+    "intro_ten_conversions": 1,
+    "intro_ten_display_coverage": 1,
+    "new_place_claim_math": 3,
+    "spoken_teaching_claim": 3,
+    "teaching_on_correct_value": 3,
+    "final_values": 1,
+    "count_reaches_finale": 1,
+    "final_hold_280ms": 1,
+    "finale_12_seconds": 1,
+    "last_words_finish_before_fade": 1,
+    "eight_minute_minimum": 1,
+    "chapter_times": 1,
+    "chapter_minimum_duration": 1,
+    "chapter_final_value": 1,
+    "english_title": 1,
+    "english_description_range": 1,
+    "description_explains_narration": 1,
+    "upload_chapters": 1,
+    "upload_new_filename_and_no_old_range": 1,
+    "delivered_frame_count": 1,
+    "delivered_duration": 1,
+    "fresh_boundary_images_bound_to_same_video": 1,
+    "boundary_image_coverage": 1
+  },
+  "total_checks": 6122,
+  "counted_values": 201,
+  "representations": 804,
+  "captions": 215,
+  "maximum_caption_quantization_error_ms": 0.5,
+  "rounding_review": "An initial exact ties-to-even test flagged N079 at 257.4095s. The SRT uses 257.409s, exactly 0.5ms away, so either adjacent millisecond is equally nearest. All 430 caption endpoints are within 0.5ms of source sample times. This is not a synchronization fault.",
+  "gaps": {
+    "2": 197,
+    "5": 3
+  },
+  "teaching_claims": [
+    {
+      "decimal_value": 8,
+      "grew_rows": [
+        "binary",
+        "octal"
+      ],
+      "text": "The octal row now has two places."
+    },
+    {
+      "decimal_value": 16,
+      "grew_rows": [
+        "binary",
+        "hexadecimal"
+      ],
+      "text": "Hexadecimal now has two places."
+    },
+    {
+      "decimal_value": 64,
+      "grew_rows": [
+        "binary",
+        "octal"
+      ],
+      "text": "Both binary and octal add a new place."
+    }
+  ],
+  "boundaries": [
+    {
+      "frame": 12169,
+      "time_s": 405.6333333333333,
+      "expected_decimal": 127,
+      "expected_rows": {
+        "binary": "1111111",
+        "decimal": "127",
+        "octal": "177",
+        "hexadecimal": "7F"
+      },
+      "image": "D:\\temp\\bird-v002-error-audit-20261111\\content\\boundary-01.png",
+      "sha256": "686deee6e328e2c7826353d1c7578f697d21a4fdbc8b8b16ae38fbb1a7fa5841"
+    },
+    {
+      "frame": 12170,
+      "time_s": 405.6666666666667,
+      "expected_decimal": 128,
+      "expected_rows": {
+        "binary": "10000000",
+        "decimal": "128",
+        "octal": "200",
+        "hexadecimal": "80"
+      },
+      "image": "D:\\temp\\bird-v002-error-audit-20261111\\content\\boundary-02.png",
+      "sha256": "1b60f5169414fdcb3fc3232c99b6f49675f1272cf9b04d51cb78cc722e151120"
+    },
+    {
+      "frame": 15389,
+      "time_s": 512.9666666666667,
+      "expected_decimal": 159,
+      "expected_rows": {
+        "binary": "10011111",
+        "decimal": "159",
+        "octal": "237",
+        "hexadecimal": "9F"
+      },
+      "image": "D:\\temp\\bird-v002-error-audit-20261111\\content\\boundary-03.png",
+      "sha256": "4f459482f45aeed61723bcb46c3ec02214b6a38ac3bfa92aaf92c29e003969a4"
+    },
+    {
+      "frame": 15390,
+      "time_s": 513.0,
+      "expected_decimal": 160,
+      "expected_rows": {
+        "binary": "10100000",
+        "decimal": "160",
+        "octal": "240",
+        "hexadecimal": "A0"
+      },
+      "image": "D:\\temp\\bird-v002-error-audit-20261111\\content\\boundary-04.png",
+      "sha256": "051436f3eb5532f48c576e473184e496248aac507e3631b87a5aef90d783284e"
+    },
+    {
+      "frame": 18649,
+      "time_s": 621.6333333333333,
+      "expected_decimal": 191,
+      "expected_rows": {
+        "binary": "10111111",
+        "decimal": "191",
+        "octal": "277",
+        "hexadecimal": "BF"
+      },
+      "image": "D:\\temp\\bird-v002-error-audit-20261111\\content\\boundary-05.png",
+      "sha256": "a5c4143c04575aab7e80b133faedec9d6a4b8680a3eb12718fc63b6cbe05243f"
+    },
+    {
+      "frame": 18650,
+      "time_s": 621.6666666666666,
+      "expected_decimal": 192,
+      "expected_rows": {
+        "binary": "11000000",
+        "decimal": "192",
+        "octal": "300",
+        "hexadecimal": "C0"
+      },
+      "image": "D:\\temp\\bird-v002-error-audit-20261111\\content\\boundary-06.png",
+      "sha256": "b02febe989c24ba0bf0ef59c351d7957c480522c85b85be56b9366663b2d7528"
+    },
+    {
+      "frame": 19476,
+      "time_s": 649.2,
+      "expected_decimal": 199,
+      "expected_rows": {
+        "binary": "11000111",
+        "decimal": "199",
+        "octal": "307",
+        "hexadecimal": "C7"
+      },
+      "image": "D:\\temp\\bird-v002-error-audit-20261111\\content\\boundary-07.png",
+      "sha256": "150b2a0015e0ad6bfa0ae806cfe53699fc3a843e6537cfedc6c01f8fc232a78c"
+    },
+    {
+      "frame": 19477,
+      "time_s": 649.2333333333333,
+      "expected_decimal": 200,
+      "expected_rows": {
+        "binary": "11001000",
+        "decimal": "200",
+        "octal": "310",
+        "hexadecimal": "C8"
+      },
+      "image": "D:\\temp\\bird-v002-error-audit-20261111\\content\\boundary-08.png",
+      "sha256": "c21cb97d59425b0fe43a1d4317df5a1fca1ffba8e977927c4962357cef204259"
+    }
+  ],
+  "errors": [],
+  "scope_limit": "Counts/source metadata and raw decoded boundary images; visual interpretation of extracted images recorded separately. Audio semantics/acoustics are another audit."
+}

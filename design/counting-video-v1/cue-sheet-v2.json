@@ -1,0 +1,1979 @@
+{
+  "schema_version": 1,
+  "status": "production-authorized",
+  "language": "en-US",
+  "voice_id": "af_heart",
+  "final_count": 300,
+  "provisional_count": 300,
+  "target_duration_s": 510,
+  "allowed_duration_s": {
+    "min_inclusive": 480,
+    "max_exclusive": 540
+  },
+  "provisional_counting_budget_s": 450,
+  "non_counting_budget_s": 60,
+  "audio_assets_generated": false,
+  "video_generated": false,
+  "precedence": "Production count 1 through 300 fixed by user on 2026-11-10; v2 supersedes preproduction v1. Exact time positions derive from measured audio.",
+  "timing": {
+    "anchor_definition": "spoken_end(n) is the end of the audible spoken number n, not the end of padded audio.",
+    "ordinary_gap_s": 0.3,
+    "ordinary_gap_adjustment_range_s": [
+      0.12,
+      0.3
+    ],
+    "ordinary_minimum_digit_display_s": 0.8,
+    "ordinary_tens_pre_sfx_gap_s": 0.1,
+    "ordinary_tens_post_sfx_gap_s": 0.15,
+    "sfx_durations_include_all_tails": true,
+    "counting_budget_includes_all_ordinary_gaps_and_27_ordinary_sfx_slots": true,
+    "absolute_midpoint_timestamps_pending_real_voice": false,
+    "avoid_fixed_1_5_seconds_per_number": true,
+    "pause_block_playback": "If pause_block exists, play ONLY pause_block.events. Outer audio fields are null; never schedule a second outer SFX.",
+    "number_switch": "at actual speech onset",
+    "counting": "one uninterrupted integer sequence, pauses at 100 and 200 do not restart or repeat numbers",
+    "minimum_display_precedence": "Minimum digit display may extend a short spoken number beyond the ordinary gap upper bound; include that extra hold in measured count time. Do not add hold before an active pause block because the held digit already remains visible.",
+    "production_pacing_note": "The measured 300 numbers use a 0.30s ordinary pause; total planned duration is 497.161083s. No post-generation speech time stretching."
+  },
+  "mix": {
+    "bgm": false,
+    "continuous_count_click": false,
+    "voice_priority": 1,
+    "sfx_priority": 2,
+    "initial_sfx_gain_relative_to_voice_db": -12,
+    "sfx_gain_adjustment_range_relative_to_voice_db": [
+      -16,
+      -10
+    ],
+    "master_target_integrated_lufs": -16,
+    "master_tolerance_lu": 1,
+    "master_true_peak_max_dbtp": -1,
+    "targets_are_internal_not_youtube_requirements": true,
+    "stereo_pan_range": [
+      -0.25,
+      0.25
+    ],
+    "no_sfx_or_tail_overlap_with_any_speech": true,
+    "sfx_auto_reschedule_or_trim_to_safe_gap": false,
+    "overflow_policy": "Reject overlapping or overlong audio windows. Manually revise the cue, then validate again. No automatic rescheduling, speech trimming or time stretching is implemented."
+  },
+  "intro": {
+    "duration_s": 12,
+    "events": [
+      {
+        "kind": "speech",
+        "spoken_text": "Let's count together!",
+        "window_s": [
+          1,
+          3.2
+        ]
+      },
+      {
+        "kind": "speech",
+        "spoken_text": "Follow along with me.",
+        "window_s": [
+          5.0,
+          6.7
+        ]
+      },
+      {
+        "kind": "speech",
+        "spoken_text": "Here we go!",
+        "window_s": [
+          8.5,
+          9.9
+        ]
+      }
+    ],
+    "first_count_at_s": 12,
+    "visual_note": "0〜0.6秒で庭を表示、0.6〜1秒でくま。3.2〜4.5秒で挨拶、4.5〜5秒で無地の数字板、6.7〜8.5秒で蕾を表示。9.9〜12秒で通常姿勢へ。12秒のone発話まで数字板は空欄。"
+  },
+  "palette": [
+    {
+      "id": "SE_BIRD",
+      "name": "小鳥の短いさえずり",
+      "duration_s": 0.32,
+      "description": "柔らかい2音のさえずり。鳴き声を連打しない。"
+    },
+    {
+      "id": "SE_WIND",
+      "name": "軽い風",
+      "duration_s": 0.4,
+      "description": "短く薄い空気音。低い唸りや強い高音を含めない。"
+    },
+    {
+      "id": "SE_RAINBOW",
+      "name": "虹のきらめき",
+      "duration_s": 0.55,
+      "description": "柔らかい2音の上昇音。金属的な鋭いアタックを抑える。"
+    },
+    {
+      "id": "SE_PLANE",
+      "name": "おもちゃ飛行機の通過",
+      "duration_s": 0.55,
+      "description": "軽い羽音と空気音。実機の大きなエンジン音は使わない。"
+    },
+    {
+      "id": "SE_BLOOM",
+      "name": "開花のポン",
+      "duration_s": 0.45,
+      "description": "丸い木琴系の短音。花の開き始めに合わせる。"
+    },
+    {
+      "id": "SE_LEAF",
+      "name": "葉っぱのかさり",
+      "duration_s": 0.35,
+      "description": "軽い紙・葉のこすれ。打撃音にしない。"
+    },
+    {
+      "id": "SE_CELEBRATE",
+      "name": "100到達の小さなファンファーレ",
+      "duration_s": 0.65,
+      "description": "短い3音の上昇モチーフ。拍手や歓声の録音は重ねない。"
+    },
+    {
+      "id": "SE_READY",
+      "name": "再開の合図",
+      "duration_s": 0.3,
+      "description": "控えめな1音。数字を数える声と区別できる楽器音。"
+    },
+    {
+      "id": "SE_FINISH",
+      "name": "完走のフレーズ",
+      "duration_s": 1,
+      "description": "100到達と同じ音色の短い解決フレーズ。"
+    },
+    {
+      "id": "SE_SPARKLE",
+      "name": "余韻のきらめき",
+      "duration_s": 0.35,
+      "description": "締めで一度だけ鳴らす柔らかい短音。"
+    }
+  ],
+  "count_lines": [
+    {
+      "number": 1,
+      "spoken_text": "one"
+    },
+    {
+      "number": 2,
+      "spoken_text": "two"
+    },
+    {
+      "number": 3,
+      "spoken_text": "three"
+    },
+    {
+      "number": 4,
+      "spoken_text": "four"
+    },
+    {
+      "number": 5,
+      "spoken_text": "five"
+    },
+    {
+      "number": 6,
+      "spoken_text": "six"
+    },
+    {
+      "number": 7,
+      "spoken_text": "seven"
+    },
+    {
+      "number": 8,
+      "spoken_text": "eight"
+    },
+    {
+      "number": 9,
+      "spoken_text": "nine"
+    },
+    {
+      "number": 10,
+      "spoken_text": "ten"
+    },
+    {
+      "number": 11,
+      "spoken_text": "eleven"
+    },
+    {
+      "number": 12,
+      "spoken_text": "twelve"
+    },
+    {
+      "number": 13,
+      "spoken_text": "thirteen"
+    },
+    {
+      "number": 14,
+      "spoken_text": "fourteen"
+    },
+    {
+      "number": 15,
+      "spoken_text": "fifteen"
+    },
+    {
+      "number": 16,
+      "spoken_text": "sixteen"
+    },
+    {
+      "number": 17,
+      "spoken_text": "seventeen"
+    },
+    {
+      "number": 18,
+      "spoken_text": "eighteen"
+    },
+    {
+      "number": 19,
+      "spoken_text": "nineteen"
+    },
+    {
+      "number": 20,
+      "spoken_text": "twenty"
+    },
+    {
+      "number": 21,
+      "spoken_text": "twenty-one"
+    },
+    {
+      "number": 22,
+      "spoken_text": "twenty-two"
+    },
+    {
+      "number": 23,
+      "spoken_text": "twenty-three"
+    },
+    {
+      "number": 24,
+      "spoken_text": "twenty-four"
+    },
+    {
+      "number": 25,
+      "spoken_text": "twenty-five"
+    },
+    {
+      "number": 26,
+      "spoken_text": "twenty-six"
+    },
+    {
+      "number": 27,
+      "spoken_text": "twenty-seven"
+    },
+    {
+      "number": 28,
+      "spoken_text": "twenty-eight"
+    },
+    {
+      "number": 29,
+      "spoken_text": "twenty-nine"
+    },
+    {
+      "number": 30,
+      "spoken_text": "thirty"
+    },
+    {
+      "number": 31,
+      "spoken_text": "thirty-one"
+    },
+    {
+      "number": 32,
+      "spoken_text": "thirty-two"
+    },
+    {
+      "number": 33,
+      "spoken_text": "thirty-three"
+    },
+    {
+      "number": 34,
+      "spoken_text": "thirty-four"
+    },
+    {
+      "number": 35,
+      "spoken_text": "thirty-five"
+    },
+    {
+      "number": 36,
+      "spoken_text": "thirty-six"
+    },
+    {
+      "number": 37,
+      "spoken_text": "thirty-seven"
+    },
+    {
+      "number": 38,
+      "spoken_text": "thirty-eight"
+    },
+    {
+      "number": 39,
+      "spoken_text": "thirty-nine"
+    },
+    {
+      "number": 40,
+      "spoken_text": "forty"
+    },
+    {
+      "number": 41,
+      "spoken_text": "forty-one"
+    },
+    {
+      "number": 42,
+      "spoken_text": "forty-two"
+    },
+    {
+      "number": 43,
+      "spoken_text": "forty-three"
+    },
+    {
+      "number": 44,
+      "spoken_text": "forty-four"
+    },
+    {
+      "number": 45,
+      "spoken_text": "forty-five"
+    },
+    {
+      "number": 46,
+      "spoken_text": "forty-six"
+    },
+    {
+      "number": 47,
+      "spoken_text": "forty-seven"
+    },
+    {
+      "number": 48,
+      "spoken_text": "forty-eight"
+    },
+    {
+      "number": 49,
+      "spoken_text": "forty-nine"
+    },
+    {
+      "number": 50,
+      "spoken_text": "fifty"
+    },
+    {
+      "number": 51,
+      "spoken_text": "fifty-one"
+    },
+    {
+      "number": 52,
+      "spoken_text": "fifty-two"
+    },
+    {
+      "number": 53,
+      "spoken_text": "fifty-three"
+    },
+    {
+      "number": 54,
+      "spoken_text": "fifty-four"
+    },
+    {
+      "number": 55,
+      "spoken_text": "fifty-five"
+    },
+    {
+      "number": 56,
+      "spoken_text": "fifty-six"
+    },
+    {
+      "number": 57,
+      "spoken_text": "fifty-seven"
+    },
+    {
+      "number": 58,
+      "spoken_text": "fifty-eight"
+    },
+    {
+      "number": 59,
+      "spoken_text": "fifty-nine"
+    },
+    {
+      "number": 60,
+      "spoken_text": "sixty"
+    },
+    {
+      "number": 61,
+      "spoken_text": "sixty-one"
+    },
+    {
+      "number": 62,
+      "spoken_text": "sixty-two"
+    },
+    {
+      "number": 63,
+      "spoken_text": "sixty-three"
+    },
+    {
+      "number": 64,
+      "spoken_text": "sixty-four"
+    },
+    {
+      "number": 65,
+      "spoken_text": "sixty-five"
+    },
+    {
+      "number": 66,
+      "spoken_text": "sixty-six"
+    },
+    {
+      "number": 67,
+      "spoken_text": "sixty-seven"
+    },
+    {
+      "number": 68,
+      "spoken_text": "sixty-eight"
+    },
+    {
+      "number": 69,
+      "spoken_text": "sixty-nine"
+    },
+    {
+      "number": 70,
+      "spoken_text": "seventy"
+    },
+    {
+      "number": 71,
+      "spoken_text": "seventy-one"
+    },
+    {
+      "number": 72,
+      "spoken_text": "seventy-two"
+    },
+    {
+      "number": 73,
+      "spoken_text": "seventy-three"
+    },
+    {
+      "number": 74,
+      "spoken_text": "seventy-four"
+    },
+    {
+      "number": 75,
+      "spoken_text": "seventy-five"
+    },
+    {
+      "number": 76,
+      "spoken_text": "seventy-six"
+    },
+    {
+      "number": 77,
+      "spoken_text": "seventy-seven"
+    },
+    {
+      "number": 78,
+      "spoken_text": "seventy-eight"
+    },
+    {
+      "number": 79,
+      "spoken_text": "seventy-nine"
+    },
+    {
+      "number": 80,
+      "spoken_text": "eighty"
+    },
+    {
+      "number": 81,
+      "spoken_text": "eighty-one"
+    },
+    {
+      "number": 82,
+      "spoken_text": "eighty-two"
+    },
+    {
+      "number": 83,
+      "spoken_text": "eighty-three"
+    },
+    {
+      "number": 84,
+      "spoken_text": "eighty-four"
+    },
+    {
+      "number": 85,
+      "spoken_text": "eighty-five"
+    },
+    {
+      "number": 86,
+      "spoken_text": "eighty-six"
+    },
+    {
+      "number": 87,
+      "spoken_text": "eighty-seven"
+    },
+    {
+      "number": 88,
+      "spoken_text": "eighty-eight"
+    },
+    {
+      "number": 89,
+      "spoken_text": "eighty-nine"
+    },
+    {
+      "number": 90,
+      "spoken_text": "ninety"
+    },
+    {
+      "number": 91,
+      "spoken_text": "ninety-one"
+    },
+    {
+      "number": 92,
+      "spoken_text": "ninety-two"
+    },
+    {
+      "number": 93,
+      "spoken_text": "ninety-three"
+    },
+    {
+      "number": 94,
+      "spoken_text": "ninety-four"
+    },
+    {
+      "number": 95,
+      "spoken_text": "ninety-five"
+    },
+    {
+      "number": 96,
+      "spoken_text": "ninety-six"
+    },
+    {
+      "number": 97,
+      "spoken_text": "ninety-seven"
+    },
+    {
+      "number": 98,
+      "spoken_text": "ninety-eight"
+    },
+    {
+      "number": 99,
+      "spoken_text": "ninety-nine"
+    },
+    {
+      "number": 100,
+      "spoken_text": "one hundred"
+    },
+    {
+      "number": 101,
+      "spoken_text": "one hundred one"
+    },
+    {
+      "number": 102,
+      "spoken_text": "one hundred two"
+    },
+    {
+      "number": 103,
+      "spoken_text": "one hundred three"
+    },
+    {
+      "number": 104,
+      "spoken_text": "one hundred four"
+    },
+    {
+      "number": 105,
+      "spoken_text": "one hundred five"
+    },
+    {
+      "number": 106,
+      "spoken_text": "one hundred six"
+    },
+    {
+      "number": 107,
+      "spoken_text": "one hundred seven"
+    },
+    {
+      "number": 108,
+      "spoken_text": "one hundred eight"
+    },
+    {
+      "number": 109,
+      "spoken_text": "one hundred nine"
+    },
+    {
+      "number": 110,
+      "spoken_text": "one hundred ten"
+    },
+    {
+      "number": 111,
+      "spoken_text": "one hundred eleven"
+    },
+    {
+      "number": 112,
+      "spoken_text": "one hundred twelve"
+    },
+    {
+      "number": 113,
+      "spoken_text": "one hundred thirteen"
+    },
+    {
+      "number": 114,
+      "spoken_text": "one hundred fourteen"
+    },
+    {
+      "number": 115,
+      "spoken_text": "one hundred fifteen"
+    },
+    {
+      "number": 116,
+      "spoken_text": "one hundred sixteen"
+    },
+    {
+      "number": 117,
+      "spoken_text": "one hundred seventeen"
+    },
+    {
+      "number": 118,
+      "spoken_text": "one hundred eighteen"
+    },
+    {
+      "number": 119,
+      "spoken_text": "one hundred nineteen"
+    },
+    {
+      "number": 120,
+      "spoken_text": "one hundred twenty"
+    },
+    {
+      "number": 121,
+      "spoken_text": "one hundred twenty-one"
+    },
+    {
+      "number": 122,
+      "spoken_text": "one hundred twenty-two"
+    },
+    {
+      "number": 123,
+      "spoken_text": "one hundred twenty-three"
+    },
+    {
+      "number": 124,
+      "spoken_text": "one hundred twenty-four"
+    },
+    {
+      "number": 125,
+      "spoken_text": "one hundred twenty-five"
+    },
+    {
+      "number": 126,
+      "spoken_text": "one hundred twenty-six"
+    },
+    {
+      "number": 127,
+      "spoken_text": "one hundred twenty-seven"
+    },
+    {
+      "number": 128,
+      "spoken_text": "one hundred twenty-eight"
+    },
+    {
+      "number": 129,
+      "spoken_text": "one hundred twenty-nine"
+    },
+    {
+      "number": 130,
+      "spoken_text": "one hundred thirty"
+    },
+    {
+      "number": 131,
+      "spoken_text": "one hundred thirty-one"
+    },
+    {
+      "number": 132,
+      "spoken_text": "one hundred thirty-two"
+    },
+    {
+      "number": 133,
+      "spoken_text": "one hundred thirty-three"
+    },
+    {
+      "number": 134,
+      "spoken_text": "one hundred thirty-four"
+    },
+    {
+      "number": 135,
+      "spoken_text": "one hundred thirty-five"
+    },
+    {
+      "number": 136,
+      "spoken_text": "one hundred thirty-six"
+    },
+    {
+      "number": 137,
+      "spoken_text": "one hundred thirty-seven"
+    },
+    {
+      "number": 138,
+      "spoken_text": "one hundred thirty-eight"
+    },
+    {
+      "number": 139,
+      "spoken_text": "one hundred thirty-nine"
+    },
+    {
+      "number": 140,
+      "spoken_text": "one hundred forty"
+    },
+    {
+      "number": 141,
+      "spoken_text": "one hundred forty-one"
+    },
+    {
+      "number": 142,
+      "spoken_text": "one hundred forty-two"
+    },
+    {
+      "number": 143,
+      "spoken_text": "one hundred forty-three"
+    },
+    {
+      "number": 144,
+      "spoken_text": "one hundred forty-four"
+    },
+    {
+      "number": 145,
+      "spoken_text": "one hundred forty-five"
+    },
+    {
+      "number": 146,
+      "spoken_text": "one hundred forty-six"
+    },
+    {
+      "number": 147,
+      "spoken_text": "one hundred forty-seven"
+    },
+    {
+      "number": 148,
+      "spoken_text": "one hundred forty-eight"
+    },
+    {
+      "number": 149,
+      "spoken_text": "one hundred forty-nine"
+    },
+    {
+      "number": 150,
+      "spoken_text": "one hundred fifty"
+    },
+    {
+      "number": 151,
+      "spoken_text": "one hundred fifty-one"
+    },
+    {
+      "number": 152,
+      "spoken_text": "one hundred fifty-two"
+    },
+    {
+      "number": 153,
+      "spoken_text": "one hundred fifty-three"
+    },
+    {
+      "number": 154,
+      "spoken_text": "one hundred fifty-four"
+    },
+    {
+      "number": 155,
+      "spoken_text": "one hundred fifty-five"
+    },
+    {
+      "number": 156,
+      "spoken_text": "one hundred fifty-six"
+    },
+    {
+      "number": 157,
+      "spoken_text": "one hundred fifty-seven"
+    },
+    {
+      "number": 158,
+      "spoken_text": "one hundred fifty-eight"
+    },
+    {
+      "number": 159,
+      "spoken_text": "one hundred fifty-nine"
+    },
+    {
+      "number": 160,
+      "spoken_text": "one hundred sixty"
+    },
+    {
+      "number": 161,
+      "spoken_text": "one hundred sixty-one"
+    },
+    {
+      "number": 162,
+      "spoken_text": "one hundred sixty-two"
+    },
+    {
+      "number": 163,
+      "spoken_text": "one hundred sixty-three"
+    },
+    {
+      "number": 164,
+      "spoken_text": "one hundred sixty-four"
+    },
+    {
+      "number": 165,
+      "spoken_text": "one hundred sixty-five"
+    },
+    {
+      "number": 166,
+      "spoken_text": "one hundred sixty-six"
+    },
+    {
+      "number": 167,
+      "spoken_text": "one hundred sixty-seven"
+    },
+    {
+      "number": 168,
+      "spoken_text": "one hundred sixty-eight"
+    },
+    {
+      "number": 169,
+      "spoken_text": "one hundred sixty-nine"
+    },
+    {
+      "number": 170,
+      "spoken_text": "one hundred seventy"
+    },
+    {
+      "number": 171,
+      "spoken_text": "one hundred seventy-one"
+    },
+    {
+      "number": 172,
+      "spoken_text": "one hundred seventy-two"
+    },
+    {
+      "number": 173,
+      "spoken_text": "one hundred seventy-three"
+    },
+    {
+      "number": 174,
+      "spoken_text": "one hundred seventy-four"
+    },
+    {
+      "number": 175,
+      "spoken_text": "one hundred seventy-five"
+    },
+    {
+      "number": 176,
+      "spoken_text": "one hundred seventy-six"
+    },
+    {
+      "number": 177,
+      "spoken_text": "one hundred seventy-seven"
+    },
+    {
+      "number": 178,
+      "spoken_text": "one hundred seventy-eight"
+    },
+    {
+      "number": 179,
+      "spoken_text": "one hundred seventy-nine"
+    },
+    {
+      "number": 180,
+      "spoken_text": "one hundred eighty"
+    },
+    {
+      "number": 181,
+      "spoken_text": "one hundred eighty-one"
+    },
+    {
+      "number": 182,
+      "spoken_text": "one hundred eighty-two"
+    },
+    {
+      "number": 183,
+      "spoken_text": "one hundred eighty-three"
+    },
+    {
+      "number": 184,
+      "spoken_text": "one hundred eighty-four"
+    },
+    {
+      "number": 185,
+      "spoken_text": "one hundred eighty-five"
+    },
+    {
+      "number": 186,
+      "spoken_text": "one hundred eighty-six"
+    },
+    {
+      "number": 187,
+      "spoken_text": "one hundred eighty-seven"
+    },
+    {
+      "number": 188,
+      "spoken_text": "one hundred eighty-eight"
+    },
+    {
+      "number": 189,
+      "spoken_text": "one hundred eighty-nine"
+    },
+    {
+      "number": 190,
+      "spoken_text": "one hundred ninety"
+    },
+    {
+      "number": 191,
+      "spoken_text": "one hundred ninety-one"
+    },
+    {
+      "number": 192,
+      "spoken_text": "one hundred ninety-two"
+    },
+    {
+      "number": 193,
+      "spoken_text": "one hundred ninety-three"
+    },
+    {
+      "number": 194,
+      "spoken_text": "one hundred ninety-four"
+    },
+    {
+      "number": 195,
+      "spoken_text": "one hundred ninety-five"
+    },
+    {
+      "number": 196,
+      "spoken_text": "one hundred ninety-six"
+    },
+    {
+      "number": 197,
+      "spoken_text": "one hundred ninety-seven"
+    },
+    {
+      "number": 198,
+      "spoken_text": "one hundred ninety-eight"
+    },
+    {
+      "number": 199,
+      "spoken_text": "one hundred ninety-nine"
+    },
+    {
+      "number": 200,
+      "spoken_text": "two hundred"
+    },
+    {
+      "number": 201,
+      "spoken_text": "two hundred one"
+    },
+    {
+      "number": 202,
+      "spoken_text": "two hundred two"
+    },
+    {
+      "number": 203,
+      "spoken_text": "two hundred three"
+    },
+    {
+      "number": 204,
+      "spoken_text": "two hundred four"
+    },
+    {
+      "number": 205,
+      "spoken_text": "two hundred five"
+    },
+    {
+      "number": 206,
+      "spoken_text": "two hundred six"
+    },
+    {
+      "number": 207,
+      "spoken_text": "two hundred seven"
+    },
+    {
+      "number": 208,
+      "spoken_text": "two hundred eight"
+    },
+    {
+      "number": 209,
+      "spoken_text": "two hundred nine"
+    },
+    {
+      "number": 210,
+      "spoken_text": "two hundred ten"
+    },
+    {
+      "number": 211,
+      "spoken_text": "two hundred eleven"
+    },
+    {
+      "number": 212,
+      "spoken_text": "two hundred twelve"
+    },
+    {
+      "number": 213,
+      "spoken_text": "two hundred thirteen"
+    },
+    {
+      "number": 214,
+      "spoken_text": "two hundred fourteen"
+    },
+    {
+      "number": 215,
+      "spoken_text": "two hundred fifteen"
+    },
+    {
+      "number": 216,
+      "spoken_text": "two hundred sixteen"
+    },
+    {
+      "number": 217,
+      "spoken_text": "two hundred seventeen"
+    },
+    {
+      "number": 218,
+      "spoken_text": "two hundred eighteen"
+    },
+    {
+      "number": 219,
+      "spoken_text": "two hundred nineteen"
+    },
+    {
+      "number": 220,
+      "spoken_text": "two hundred twenty"
+    },
+    {
+      "number": 221,
+      "spoken_text": "two hundred twenty-one"
+    },
+    {
+      "number": 222,
+      "spoken_text": "two hundred twenty-two"
+    },
+    {
+      "number": 223,
+      "spoken_text": "two hundred twenty-three"
+    },
+    {
+      "number": 224,
+      "spoken_text": "two hundred twenty-four"
+    },
+    {
+      "number": 225,
+      "spoken_text": "two hundred twenty-five"
+    },
+    {
+      "number": 226,
+      "spoken_text": "two hundred twenty-six"
+    },
+    {
+      "number": 227,
+      "spoken_text": "two hundred twenty-seven"
+    },
+    {
+      "number": 228,
+      "spoken_text": "two hundred twenty-eight"
+    },
+    {
+      "number": 229,
+      "spoken_text": "two hundred twenty-nine"
+    },
+    {
+      "number": 230,
+      "spoken_text": "two hundred thirty"
+    },
+    {
+      "number": 231,
+      "spoken_text": "two hundred thirty-one"
+    },
+    {
+      "number": 232,
+      "spoken_text": "two hundred thirty-two"
+    },
+    {
+      "number": 233,
+      "spoken_text": "two hundred thirty-three"
+    },
+    {
+      "number": 234,
+      "spoken_text": "two hundred thirty-four"
+    },
+    {
+      "number": 235,
+      "spoken_text": "two hundred thirty-five"
+    },
+    {
+      "number": 236,
+      "spoken_text": "two hundred thirty-six"
+    },
+    {
+      "number": 237,
+      "spoken_text": "two hundred thirty-seven"
+    },
+    {
+      "number": 238,
+      "spoken_text": "two hundred thirty-eight"
+    },
+    {
+      "number": 239,
+      "spoken_text": "two hundred thirty-nine"
+    },
+    {
+      "number": 240,
+      "spoken_text": "two hundred forty"
+    },
+    {
+      "number": 241,
+      "spoken_text": "two hundred forty-one"
+    },
+    {
+      "number": 242,
+      "spoken_text": "two hundred forty-two"
+    },
+    {
+      "number": 243,
+      "spoken_text": "two hundred forty-three"
+    },
+    {
+      "number": 244,
+      "spoken_text": "two hundred forty-four"
+    },
+    {
+      "number": 245,
+      "spoken_text": "two hundred forty-five"
+    },
+    {
+      "number": 246,
+      "spoken_text": "two hundred forty-six"
+    },
+    {
+      "number": 247,
+      "spoken_text": "two hundred forty-seven"
+    },
+    {
+      "number": 248,
+      "spoken_text": "two hundred forty-eight"
+    },
+    {
+      "number": 249,
+      "spoken_text": "two hundred forty-nine"
+    },
+    {
+      "number": 250,
+      "spoken_text": "two hundred fifty"
+    },
+    {
+      "number": 251,
+      "spoken_text": "two hundred fifty-one"
+    },
+    {
+      "number": 252,
+      "spoken_text": "two hundred fifty-two"
+    },
+    {
+      "number": 253,
+      "spoken_text": "two hundred fifty-three"
+    },
+    {
+      "number": 254,
+      "spoken_text": "two hundred fifty-four"
+    },
+    {
+      "number": 255,
+      "spoken_text": "two hundred fifty-five"
+    },
+    {
+      "number": 256,
+      "spoken_text": "two hundred fifty-six"
+    },
+    {
+      "number": 257,
+      "spoken_text": "two hundred fifty-seven"
+    },
+    {
+      "number": 258,
+      "spoken_text": "two hundred fifty-eight"
+    },
+    {
+      "number": 259,
+      "spoken_text": "two hundred fifty-nine"
+    },
+    {
+      "number": 260,
+      "spoken_text": "two hundred sixty"
+    },
+    {
+      "number": 261,
+      "spoken_text": "two hundred sixty-one"
+    },
+    {
+      "number": 262,
+      "spoken_text": "two hundred sixty-two"
+    },
+    {
+      "number": 263,
+      "spoken_text": "two hundred sixty-three"
+    },
+    {
+      "number": 264,
+      "spoken_text": "two hundred sixty-four"
+    },
+    {
+      "number": 265,
+      "spoken_text": "two hundred sixty-five"
+    },
+    {
+      "number": 266,
+      "spoken_text": "two hundred sixty-six"
+    },
+    {
+      "number": 267,
+      "spoken_text": "two hundred sixty-seven"
+    },
+    {
+      "number": 268,
+      "spoken_text": "two hundred sixty-eight"
+    },
+    {
+      "number": 269,
+      "spoken_text": "two hundred sixty-nine"
+    },
+    {
+      "number": 270,
+      "spoken_text": "two hundred seventy"
+    },
+    {
+      "number": 271,
+      "spoken_text": "two hundred seventy-one"
+    },
+    {
+      "number": 272,
+      "spoken_text": "two hundred seventy-two"
+    },
+    {
+      "number": 273,
+      "spoken_text": "two hundred seventy-three"
+    },
+    {
+      "number": 274,
+      "spoken_text": "two hundred seventy-four"
+    },
+    {
+      "number": 275,
+      "spoken_text": "two hundred seventy-five"
+    },
+    {
+      "number": 276,
+      "spoken_text": "two hundred seventy-six"
+    },
+    {
+      "number": 277,
+      "spoken_text": "two hundred seventy-seven"
+    },
+    {
+      "number": 278,
+      "spoken_text": "two hundred seventy-eight"
+    },
+    {
+      "number": 279,
+      "spoken_text": "two hundred seventy-nine"
+    },
+    {
+      "number": 280,
+      "spoken_text": "two hundred eighty"
+    },
+    {
+      "number": 281,
+      "spoken_text": "two hundred eighty-one"
+    },
+    {
+      "number": 282,
+      "spoken_text": "two hundred eighty-two"
+    },
+    {
+      "number": 283,
+      "spoken_text": "two hundred eighty-three"
+    },
+    {
+      "number": 284,
+      "spoken_text": "two hundred eighty-four"
+    },
+    {
+      "number": 285,
+      "spoken_text": "two hundred eighty-five"
+    },
+    {
+      "number": 286,
+      "spoken_text": "two hundred eighty-six"
+    },
+    {
+      "number": 287,
+      "spoken_text": "two hundred eighty-seven"
+    },
+    {
+      "number": 288,
+      "spoken_text": "two hundred eighty-eight"
+    },
+    {
+      "number": 289,
+      "spoken_text": "two hundred eighty-nine"
+    },
+    {
+      "number": 290,
+      "spoken_text": "two hundred ninety"
+    },
+    {
+      "number": 291,
+      "spoken_text": "two hundred ninety-one"
+    },
+    {
+      "number": 292,
+      "spoken_text": "two hundred ninety-two"
+    },
+    {
+      "number": 293,
+      "spoken_text": "two hundred ninety-three"
+    },
+    {
+      "number": 294,
+      "spoken_text": "two hundred ninety-four"
+    },
+    {
+      "number": 295,
+      "spoken_text": "two hundred ninety-five"
+    },
+    {
+      "number": 296,
+      "spoken_text": "two hundred ninety-six"
+    },
+    {
+      "number": 297,
+      "spoken_text": "two hundred ninety-seven"
+    },
+    {
+      "number": 298,
+      "spoken_text": "two hundred ninety-eight"
+    },
+    {
+      "number": 299,
+      "spoken_text": "two hundred ninety-nine"
+    },
+    {
+      "number": 300,
+      "spoken_text": "three hundred"
+    }
+  ],
+  "cues": [
+    {
+      "cue_id": "CUE_010",
+      "count": 10,
+      "spoken_text": "ten",
+      "title": "小鳥の通過",
+      "visual": "小鳥が左上から右上へ飛ぶ。くまは軽く見上げる。",
+      "anchor": "spoken_end(10)",
+      "sfx_id": "SE_BIRD",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.32,
+      "ordinary_next_speech_not_before_s": 0.57,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 0,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_020",
+      "count": 20,
+      "spoken_text": "twenty",
+      "title": "流れる雲",
+      "visual": "丸い雲が右から左へ通過する。",
+      "anchor": "spoken_end(20)",
+      "sfx_id": "SE_WIND",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.4,
+      "ordinary_next_speech_not_before_s": 0.65,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 0,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_030",
+      "count": 30,
+      "spoken_text": "thirty",
+      "title": "小さな虹",
+      "visual": "空の片隅に小さな虹が現れ、淡く消える。",
+      "anchor": "spoken_end(30)",
+      "sfx_id": "SE_RAINBOW",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 0,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_040",
+      "count": 40,
+      "spoken_text": "forty",
+      "title": "飛行機",
+      "visual": "小さなプロペラ機が左から右へ横切る。",
+      "anchor": "spoken_end(40)",
+      "sfx_id": "SE_PLANE",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 0,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_050",
+      "count": 50,
+      "spoken_text": "fifty",
+      "title": "最初の開花",
+      "visual": "1輪目が開く。くまは小さく拍手するが、拍手音は追加しない。",
+      "anchor": "spoken_end(50)",
+      "sfx_id": "SE_BLOOM",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.45,
+      "ordinary_next_speech_not_before_s": 0.7,
+      "visual_duration_s": 2,
+      "pause_block": null,
+      "bloom_count": 1,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_060",
+      "count": 60,
+      "spoken_text": "sixty",
+      "title": "小鳥の羽ばたき",
+      "visual": "小鳥が軽く上下しながら空を通過する。",
+      "anchor": "spoken_end(60)",
+      "sfx_id": "SE_BIRD",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.32,
+      "ordinary_next_speech_not_before_s": 0.57,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 1,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_070",
+      "count": 70,
+      "spoken_text": "seventy",
+      "title": "雲の入れ替わり",
+      "visual": "大小の雲が重なって離れ、空の形が変わる。",
+      "anchor": "spoken_end(70)",
+      "sfx_id": "SE_WIND",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.4,
+      "ordinary_next_speech_not_before_s": 0.65,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 1,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_080",
+      "count": 80,
+      "spoken_text": "eighty",
+      "title": "虹の橋",
+      "visual": "細い虹が左から右へ伸び、淡く消える。",
+      "anchor": "spoken_end(80)",
+      "sfx_id": "SE_RAINBOW",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 1,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_090",
+      "count": 90,
+      "spoken_text": "ninety",
+      "title": "飛行機の旋回",
+      "visual": "飛行機が上部で緩い弧を描いて退場する。",
+      "anchor": "spoken_end(90)",
+      "sfx_id": "SE_PLANE",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 1,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_100",
+      "count": 100,
+      "spoken_text": "one hundred",
+      "title": "100のお祝い",
+      "visual": "2輪目が開花。虹と少量の光の粒、くまが両手を上げる。",
+      "anchor": "spoken_end(100)",
+      "playback_mode": "pause_block_events_only",
+      "sfx_id": null,
+      "relative_start_s": null,
+      "sfx_duration_s": null,
+      "ordinary_next_speech_not_before_s": null,
+      "visual_duration_s": 8,
+      "pause_block": {
+        "duration_s": 8,
+        "events": [
+          {
+            "kind": "sfx",
+            "id": "SE_CELEBRATE",
+            "start_s": 0.1,
+            "end_s": 0.75
+          },
+          {
+            "kind": "speech",
+            "spoken_text": "Great counting!",
+            "window_s": [
+              0.9,
+              2.4
+            ]
+          },
+          {
+            "kind": "speech",
+            "spoken_text": "Let's keep going!",
+            "window_s": [
+              3.6,
+              5.2
+            ]
+          }
+        ],
+        "resume_number": 101,
+        "visual_note": "100を保ち、次の数字は8.00秒後に101から。拍手動作自体は無音。"
+      },
+      "bloom_count": 2,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_110",
+      "count": 110,
+      "spoken_text": "one hundred ten",
+      "title": "風の通過",
+      "visual": "小さな葉が画面端を流れ、奥の木が軽く揺れる。",
+      "anchor": "spoken_end(110)",
+      "sfx_id": "SE_WIND",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.4,
+      "ordinary_next_speech_not_before_s": 0.65,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 2,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_120",
+      "count": 120,
+      "spoken_text": "one hundred twenty",
+      "title": "小鳥の寄り道",
+      "visual": "小鳥が空で一度ふわりと止まり、再び飛んでいく。",
+      "anchor": "spoken_end(120)",
+      "sfx_id": "SE_BIRD",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.32,
+      "ordinary_next_speech_not_before_s": 0.57,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 2,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_130",
+      "count": 130,
+      "spoken_text": "one hundred thirty",
+      "title": "反対向きの飛行機",
+      "visual": "飛行機が右上から左上へ通過する。",
+      "anchor": "spoken_end(130)",
+      "sfx_id": "SE_PLANE",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 2,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_140",
+      "count": 140,
+      "spoken_text": "one hundred forty",
+      "title": "雲の後ろの虹",
+      "visual": "雲が動くと、隠れていた小さな虹が見える。",
+      "anchor": "spoken_end(140)",
+      "sfx_id": "SE_RAINBOW",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 2,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_150",
+      "count": 150,
+      "spoken_text": "one hundred fifty",
+      "title": "3輪目の開花",
+      "visual": "3輪目が開く。右端の鉢の芽も少し伸びる。",
+      "anchor": "spoken_end(150)",
+      "sfx_id": "SE_BLOOM",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.45,
+      "ordinary_next_speech_not_before_s": 0.7,
+      "visual_duration_s": 2,
+      "pause_block": null,
+      "bloom_count": 3,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_160",
+      "count": 160,
+      "spoken_text": "one hundred sixty",
+      "title": "小鳥の追いかけっこ",
+      "visual": "2羽が間隔を空けて空を渡る。音は1キューだけ。",
+      "anchor": "spoken_end(160)",
+      "sfx_id": "SE_BIRD",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.32,
+      "ordinary_next_speech_not_before_s": 0.57,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 3,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_170",
+      "count": 170,
+      "spoken_text": "one hundred seventy",
+      "title": "雲のすき間",
+      "visual": "雲の間から柔らかい光が差し、元の明るさへ戻る。",
+      "anchor": "spoken_end(170)",
+      "sfx_id": "SE_WIND",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.4,
+      "ordinary_next_speech_not_before_s": 0.65,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 3,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_180",
+      "count": 180,
+      "spoken_text": "one hundred eighty",
+      "title": "虹の描き足し",
+      "visual": "虹が下から上へ、筆で描くように現れる。",
+      "anchor": "spoken_end(180)",
+      "sfx_id": "SE_RAINBOW",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 3,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_190",
+      "count": 190,
+      "spoken_text": "one hundred ninety",
+      "title": "飛行機の翼振り",
+      "visual": "飛行機が小さく翼を傾けて通過する。",
+      "anchor": "spoken_end(190)",
+      "sfx_id": "SE_PLANE",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 3,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_200",
+      "count": 200,
+      "spoken_text": "two hundred",
+      "title": "帽子の葉っぱと休憩",
+      "visual": "4輪目が開花。帽子に葉が乗り、くまが気づいて伸びをする。",
+      "anchor": "spoken_end(200)",
+      "playback_mode": "pause_block_events_only",
+      "sfx_id": null,
+      "relative_start_s": null,
+      "sfx_duration_s": null,
+      "ordinary_next_speech_not_before_s": null,
+      "visual_duration_s": 20,
+      "pause_block": {
+        "duration_s": 20,
+        "events": [
+          {
+            "kind": "sfx",
+            "id": "SE_LEAF",
+            "start_s": 0.1,
+            "end_s": 0.45
+          },
+          {
+            "kind": "speech",
+            "spoken_text": "Let's stretch.",
+            "window_s": [
+              0.8,
+              2.2
+            ]
+          },
+          {
+            "kind": "sfx",
+            "id": "SE_LEAF",
+            "start_s": 5.6,
+            "end_s": 5.95
+          },
+          {
+            "kind": "speech",
+            "spoken_text": "Nice and easy.",
+            "window_s": [
+              8.2,
+              9.6
+            ]
+          },
+          {
+            "kind": "speech",
+            "spoken_text": "Ready? Let's keep going!",
+            "window_s": [
+              14,
+              16.5
+            ]
+          },
+          {
+            "kind": "sfx",
+            "id": "SE_READY",
+            "start_s": 17.8,
+            "end_s": 18.1
+          }
+        ],
+        "resume_number": 201,
+        "visual_note": "200保持。2.2〜3秒着座、3〜5秒座位伸び。5.6秒葉が滑る。9.6〜12秒は座位正面保持。12〜14秒立位復帰。身体は正面固定。18.1〜18.6秒で視線だけ板へ往復して正面へ戻す。18.6〜20秒は正面保持、立位blink可。20秒後201。"
+      },
+      "bloom_count": 4,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_210",
+      "count": 210,
+      "spoken_text": "two hundred ten",
+      "title": "再出発の小鳥",
+      "visual": "小鳥が左から入り、緩やかに上昇して退場する。",
+      "anchor": "spoken_end(210)",
+      "sfx_id": "SE_BIRD",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.32,
+      "ordinary_next_speech_not_before_s": 0.57,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 4,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_220",
+      "count": 220,
+      "spoken_text": "two hundred twenty",
+      "title": "長い雲",
+      "visual": "横長の雲が流れ、空に広い余白が戻る。",
+      "anchor": "spoken_end(220)",
+      "sfx_id": "SE_WIND",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.4,
+      "ordinary_next_speech_not_before_s": 0.65,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 4,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_230",
+      "count": 230,
+      "spoken_text": "two hundred thirty",
+      "title": "遠くの飛行機",
+      "visual": "小さめの飛行機が遠景を通過する。",
+      "anchor": "spoken_end(230)",
+      "sfx_id": "SE_PLANE",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 4,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_240",
+      "count": 240,
+      "spoken_text": "two hundred forty",
+      "title": "淡い二重の虹",
+      "visual": "細い虹が2本重なり、外側から順に消える。",
+      "anchor": "spoken_end(240)",
+      "sfx_id": "SE_RAINBOW",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 4,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_250",
+      "count": 250,
+      "spoken_text": "two hundred fifty",
+      "title": "5輪目の開花",
+      "visual": "5輪目が開く。くまが残り1つの蕾を見る。",
+      "anchor": "spoken_end(250)",
+      "sfx_id": "SE_BLOOM",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.45,
+      "ordinary_next_speech_not_before_s": 0.7,
+      "visual_duration_s": 2,
+      "pause_block": null,
+      "bloom_count": 5,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_260",
+      "count": 260,
+      "spoken_text": "two hundred sixty",
+      "title": "小鳥の帰還",
+      "visual": "最初の小鳥が戻り、短く羽ばたいて通過する。",
+      "anchor": "spoken_end(260)",
+      "sfx_id": "SE_BIRD",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.32,
+      "ordinary_next_speech_not_before_s": 0.57,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 5,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_270",
+      "count": 270,
+      "spoken_text": "two hundred seventy",
+      "title": "雲のカーテン",
+      "visual": "左右の雲がゆっくり離れ、中央の空が開ける。",
+      "anchor": "spoken_end(270)",
+      "sfx_id": "SE_WIND",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.4,
+      "ordinary_next_speech_not_before_s": 0.65,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 5,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_280",
+      "count": 280,
+      "spoken_text": "two hundred eighty",
+      "title": "飛行機のあいさつ",
+      "visual": "飛行機が翼を一度傾けて空の端へ抜ける。",
+      "anchor": "spoken_end(280)",
+      "sfx_id": "SE_PLANE",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 5,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_290",
+      "count": 290,
+      "spoken_text": "two hundred ninety",
+      "title": "最後の予告",
+      "visual": "空の端に小さな虹が現れ、最後の蕾が軽く揺れる。",
+      "anchor": "spoken_end(290)",
+      "sfx_id": "SE_RAINBOW",
+      "relative_start_s": 0.1,
+      "sfx_duration_s": 0.55,
+      "ordinary_next_speech_not_before_s": 0.8,
+      "visual_duration_s": 3.5,
+      "pause_block": null,
+      "bloom_count": 5,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    },
+    {
+      "cue_id": "CUE_300",
+      "count": 300,
+      "spoken_text": "three hundred",
+      "title": "完走",
+      "visual": "6輪すべて開花。大きな虹が現れ、くまが手を振る。",
+      "anchor": "spoken_end(300)",
+      "playback_mode": "pause_block_events_only",
+      "sfx_id": null,
+      "relative_start_s": null,
+      "sfx_duration_s": null,
+      "ordinary_next_speech_not_before_s": null,
+      "visual_duration_s": 20,
+      "pause_block": {
+        "duration_s": 20,
+        "events": [
+          {
+            "kind": "sfx",
+            "id": "SE_FINISH",
+            "start_s": 0.1,
+            "end_s": 1.1
+          },
+          {
+            "kind": "speech",
+            "spoken_text": "We did it!",
+            "window_s": [
+              1.4,
+              2.6
+            ]
+          },
+          {
+            "kind": "speech",
+            "spoken_text": "Great counting!",
+            "window_s": [
+              3,
+              4.6
+            ]
+          },
+          {
+            "kind": "sfx",
+            "id": "SE_SPARKLE",
+            "start_s": 7,
+            "end_s": 7.35
+          },
+          {
+            "kind": "speech",
+            "spoken_text": "Thanks for counting with me!",
+            "window_s": [
+              7.6,
+              10.0
+            ]
+          },
+          {
+            "kind": "speech",
+            "spoken_text": "Bye for now!",
+            "window_s": [
+              16.0,
+              17.2
+            ]
+          }
+        ],
+        "resume_number": null,
+        "visual_note": "最終Nを保持。0〜1.4秒で全開花と虹、4.6〜6秒で喜び、10〜14秒で挨拶、14〜16秒で穏やかな身振り。17.2〜18秒で最終姿勢、18〜20秒でクリーム色へフェード。"
+      },
+      "bloom_count": 6,
+      "on_final_count": "FINISH overrides every other cue at final N"
+    }
+  ],
+  "final_count_rule": {
+    "first_candidate": 300,
+    "second_candidate": 250,
+    "final_count_multiple": 50,
+    "decision": "Measure natural English speech before fixing N. Prefer 300 if final duration fits [480,540). Adjust ordinary gaps only within the specified range. If too long, evaluate 250. Do not cut off partway through a count, accelerate long numbers unnaturally, or add arbitrary silent padding.",
+    "at_250": "Omit ALL numbers 251–300. Trim count_lines to 1–250 and cues to 10–250 (25 cue groups). Replace CUE_250 with a 20-second FINISH pause_block whose held count is 250 and whose outer audio fields are null. Display 1→250 and exactly five flower positions; keep the earlier 100/200 blocks. Never speak or display 251 after the finale. Generate the revised script/cue sheet before rendering.",
+    "too_short_at_300": "If ordinary gaps up to 0.30s and minimum display holds still leave total duration below 480s, stop finalization and redesign the round final count. Never add arbitrary frozen or silent padding to reach 8 minutes."
+  },
+  "revision": "preflight-2026-11-10",
+  "new_asset_creation_allowed": true,
+  "motion_catalog": "catalogs/motions-v1.json",
+  "default_character_facing": "front",
+  "preflight_audit_revision": "cross-check-2026-11-10"
+}

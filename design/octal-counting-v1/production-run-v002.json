@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "episode_id": "octal-counting-001",
+  "revision_id": "octal-counting-v002",
+  "status": "completed-and-assistant-reviewed",
+  "user_approved": false,
+  "completed_at_utc": "2026-11-11T01:22:22.728784+00:00",
+  "baseline_production_record": "design/octal-counting-v1/production-run-v001.json",
+  "revision": [
+    "Set digit words on a common typographic baseline with equally spaced centers.",
+    "Balance the reading block with and without the active-word badge.",
+    "Mark the blank left place during the measured I07 explanation."
+  ],
+  "output": "output/octal-counting-001-v002-aligned-reading/paspla-studio-octal-count-0-to-177-aligned-1080p.mp4",
+  "video_sha256": "a79ec5e5401aa4c5b822670dda9ff5641d290fb96d9e67a15e7a7d7248f78563",
+  "video_bytes": 38613870,
+  "duration_s": 642.966667,
+  "frames": 19289,
+  "fps": 30,
+  "resolution_px": [
+    1920,
+    1080
+  ],
+  "pacing": {
+    "counted_values": 128,
+    "count_digit_voices": 312,
+    "within_count_gaps_checked": 184,
+    "within_count_gap_s": 0.9,
+    "intro_digit_gap_s": 0.9,
+    "between_values_checked": 127,
+    "ordinary_two_second_gaps": 124,
+    "teaching_gaps_s": {
+      "7": 5,
+      "31": 10,
+      "63": 5
+    }
+  },
+  "audio_stream_comparison": {
+    "aac_payload_sha256": "6f3f2f05c8d32e270ffc850a1259f21371171159eb2767d2b8c18d614702b63f",
+    "aac_packet_timing_sha256": "b295b4f95db15269d15ac79e320206e4832a6cdaa3c166ca8f5f5181001bdb07",
+    "matches_v001_payload": true,
+    "matches_v001_timing": true
+  },
+  "decoded_visual_qa": {
+    "frames_sampled": 1511,
+    "native_reading_probes": 8,
+    "observed_baselines_px": [
+      765
+    ],
+    "maximum_reading_block_center_error_px": 2.0,
+    "opening_blank_place_frames_checked": 3,
+    "carry_banners_checked": 3
+  },
+  "before_render_qa": {
+    "v001_157_word_dark_ink_bottoms_px": [
+      759,
+      765,
+      759
+    ],
+    "v002_dark_ink_bottom_px": 765,
+    "v002_max_reading_block_center_offset_px": 2,
+    "timeline_video_frames_compared": 19289,
+    "blank_slot_cue_frame_range": [
+      717,
+      760
+    ],
+    "all_128_word_rows_checked": true
+  },
+  "visual_reference_set_id": "octal-counting-reference-v004",
+  "render": "tools/render_octal_video.py",
+  "render_options": [
+    "--crf",
+    "18",
+    "--preset",
+    "veryfast",
+    "--audio-gain-db",
+    "0.8",
+    "--reading-layout",
+    "common-baseline"
+  ],
+  "qa_options": [
+    "--reading-layout",
+    "common-baseline"
+  ],
+  "tests_passed": 117,
+  "files": {
+    "output/octal-counting-001-v002-aligned-reading/paspla-studio-octal-count-0-to-177-aligned-1080p.mp4": "a79ec5e5401aa4c5b822670dda9ff5641d290fb96d9e67a15e7a7d7248f78563",
+    "output/octal-counting-001-v001/timeline.json": "f8e3230378633b9fa59607617ba76e99545f79f436906012d83af58910a85023",
+    "output/octal-counting-001-v001/master.wav": "301bd97e40fdb9bd5611e8af4e4d85fd6ef891422d0e7e2243e2ca54b5fa2532",
+    "design/octal-counting-v1/production-run-v001.json": "ad94237fc10d8ef6dae6de4effab2296d89d11bb9628c3c3e59a1a198a2ed044",
+    "output/octal-counting-001-v002-aligned-reading/english-captions.srt": "b317de279c46c9c6922733d1e2ac1f52d9f3bf95ede98d3bb1bf6e5f4f414579",
+    "output/octal-counting-001-v002-aligned-reading/chapters.txt": "c0bb32761ea99651d92df6f5a5ac64c5b46c7a43c0c7061fc5e46674560739f1",
+    "output/octal-counting-001-v002-aligned-reading/upload-details.txt": "4f1530bef413bccfbfa9bc3e261e607c40a89f85c728343d9ade17394776b9ac",
+    "output/octal-counting-001-v002-aligned-reading/technical-qa.json": "b0e5b81098c86af3e4580bbf22effa0ceda368064cc9a6d189b4bd5587f8eb76",
+    "output/octal-counting-001-v002-aligned-reading/octal-final-qa.json": "833534a98abfb62d175831a6b924b065c9771dfac1a55d9c4e376b35d2c58ea7",
+    "output/octal-counting-001-v002-aligned-reading/octal-audio-final-qa.json": "53edaf55a5555ab80fdba89de5ab1b8340c055abca84ce5b0a3387ee808a2a21",
+    "output/octal-counting-001-v002-aligned-reading/preview-157-octal.png": "79aaa74e984d4d9c2fda7ba8c8a09edeac88007fde4d6da780bb69cd7a3d9592"
+  }
+}
