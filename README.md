@@ -8,6 +8,54 @@ Paspla Studio の数を学ぶ YouTube シリーズについて、企画、英語
 
 画像、WAV、MP4、フォント等はGit LFSで管理します。コードだけでなく採用素材・実測入力・現行の完成品も取得するため、clone後に `git lfs pull` を実行してください。モデルキャッシュと `node_modules/` は保存していません。
 
+## 他プロジェクトのAI向け：キャラクター素材の場所と利用方法
+
+このリポジトリは、動画制作に加えて共通キャラクター素材の保管先です。別のプロジェクトへ取り込むAIは、まず[利用案内](assets/library/README.md)と[素材を扱うAIへの指示](assets/library/AGENTS.md)を読み、[採用版台帳](catalogs/character-library-v1.json)の明示されたパスから素材を選んでください。
+
+| 探すもの | 保存場所・入口 |
+|---|---|
+| 採用する画像・ポーズ・SHA-256・描画座標 | [`catalogs/character-library-v1.json`](catalogs/character-library-v1.json) |
+| キャラクターの原画・動作PNG | [`assets/library/characters/`](assets/library/characters/) |
+| 新7種類の通常姿一覧・採用版記録 | [`assets/library/collections/animal-stock/v001/`](assets/library/collections/animal-stock/v001/) |
+| 新7種類・42ポーズの一覧・動作プレビュー | [`assets/library/collections/animal-motions/v001/`](assets/library/collections/animal-motions/v001/) |
+| 全保管ファイルのサイズ・ハッシュ | [`catalogs/character-library-files-v1.json`](catalogs/character-library-files-v1.json) |
+| 一覧・検証・プレビュー・素材専用ZIPの作成 | [`tools/character_library.py`](tools/character_library.py) |
+
+既存のクマ・ウサギ・とら・小鳥を含む11種類の通常姿を参照できます。新しいシャム猫、レッサーパンダ、ミーアキャット、カンガルー、ハリネズミ、ヤイロチョウ、オナガドリには、それぞれ通常姿と6種類の表情・動作PNGを保存しています。既存4種類の従来の動作は専用の登録・描画処理を使います。
+
+新7種類の通常姿は `assets/library/characters/<ID>/sources/<採用版>/neutral.png`、動作PNGと足支点は同じキャラクターの `motions/v001/` にあります。例えばレッサーパンダの通常姿は [`assets/library/characters/red-panda/sources/v001/neutral.png`](assets/library/characters/red-panda/sources/v001/neutral.png)、動作登録は [`assets/library/characters/red-panda/motions/v001/registration.json`](assets/library/characters/red-panda/motions/v001/registration.json) です。調整前の画像も保存しているため、最大のバージョン番号や更新日時から採用版を推測せず、台帳の指定を使ってください。
+
+
+
+| 新キャラクター | ID | 採用する通常姿PNG |
+|---|---|---|
+| シャム猫 | `siamese-cat` | [`sources/v005/neutral.png`](assets/library/characters/siamese-cat/sources/v005/neutral.png) |
+| レッサーパンダ | `red-panda` | [`sources/v001/neutral.png`](assets/library/characters/red-panda/sources/v001/neutral.png) |
+| ミーアキャット | `meerkat` | [`sources/v004/neutral.png`](assets/library/characters/meerkat/sources/v004/neutral.png) |
+| カンガルー | `kangaroo` | [`sources/v002/neutral.png`](assets/library/characters/kangaroo/sources/v002/neutral.png) |
+| ハリネズミ | `hedgehog` | [`sources/v003/neutral.png`](assets/library/characters/hedgehog/sources/v003/neutral.png) |
+| ヤイロチョウ | `fairy-pitta` | [`sources/v001/neutral.png`](assets/library/characters/fairy-pitta/sources/v001/neutral.png) |
+| オナガドリ | `onagadori` | [`sources/v002/neutral.png`](assets/library/characters/onagadori/sources/v002/neutral.png) |
+
+動作PNGは上の各IDの `assets/library/characters/<ID>/motions/v001/<pose>.png` にあります。例えば `red-panda/motions/v001/greet.png` が挨拶ポーズです。既存4種類のIDは `bear-beret`、`rabbit-beret`、`tora`、`little-bird` です。
+
+画像・GIFはGit LFSで管理しています。素材だけを取得する場合は、初回clone時のLFS自動取得を止めたうえで、`assets/library/characters/**` と `assets/library/collections/animal-stock/**` と `assets/library/collections/animal-motions/**` を対象に `git lfs pull` を実行します。画像本体を取得後、リポジトリのルートから次を実行してください。
+
+```powershell
+git lfs pull --include="assets/library/characters/**,assets/library/collections/animal-stock/**,assets/library/collections/animal-motions/**" --exclude=""
+python -m pip install -r requirements.txt
+python tools/character_library.py list --json
+python tools/character_library.py verify
+python tools/character_library.py preview --character red-panda --pose cheer --height 430 --output D:/temp/red-panda-cheer.png
+python tools/character_library.py export --output D:/temp/num-num-character-library.zip
+```
+
+出力先は取り込み先の環境に合わせて変更してください。`export` のZIPは、11種類の通常姿、新7種類の動作、台帳、生成条件、検証記録、ツール、依存指定をまとめた素材専用パッケージです。取り込み時は画像だけを抜き出さず、台帳・登録情報と相対配置を一緒に維持してください。動画本体や音声モデルのキャッシュは不要です。
+
+台帳の `path_base` は `library-root` です。通常姿の `image_region_px`・`anchor_px`・`reference_height_px`、動作の `key_poses.poses`・`common_reference_height_px` を使って描画します。ウサギの通常姿はシート内の指定領域であり、単独PNGとしてシート全体を使わないでください。同じ動物の動作には共通の縮尺と足支点を使い、屈伸やついばみ姿勢を個別の画像高さで拡大しません。オナガドリは身体で縮尺を決め、長い尾の領域を別に確保します。
+
+`generation-prompt.txt`・`generation-input.json`・`source-manifest.json`・`registration.json` と各collectionの `qa-evidence/` は、派生素材を作る際の根拠です。過去の生成先 `C:/...` や `D:/temp/...` は履歴であり、現在のPCに存在する前提にしません。採用原画を上書きせず、修正版は新しい版として保存します。キーポーズの補間・音声同期・余白は実際の取り込み先の画面で確認してください。利用条件は各素材・依存物の既存記録を確認し、この説明から新たな利用許諾を推定しないでください。
+
 ## 現行の5作品
 
 現行版の判定は [`catalogs/library-v1.json`](catalogs/library-v1.json) の `active_production_set_ids` を使います。素材の `v001` が旧素材を意味するとは限りません。
