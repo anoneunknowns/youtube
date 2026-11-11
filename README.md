@@ -40,6 +40,8 @@ Paspla Studio の数を学ぶ YouTube シリーズについて、企画、英語
 
 直近の小鳥動画は [制作記録](design/four-base-counting-v1/production-run-v002.json) と [独立再検査](design/four-base-counting-v1/production-qa/v002-recheck-20261111/verification.json) を参照してください。検査は自動解析と抽出画像の確認を含み、全編の人による試聴・視聴を行ったという記録ではありません。
 
+移植手順は同じWindows上の別のGit/LFSチェックアウトで検証しました。137件のテスト、全5作品のプレビュー、新しい音声の生成・ASR・CTC、旧パスを持つ採用音声の参照解決を確認しています。[検証記録](reproducibility/validation-20261111/verification.json) に実施範囲と根拠を保存しています。
+
 ## 利用条件
 
 モデル、フォント、外部ライブラリ等の条件は、各素材の出典・モデルカード・`licenses/` を確認してください。このREADMEは画像・音声・キャラクターへ新しい再配布ライセンスを付与しません。
