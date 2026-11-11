@@ -4,6 +4,8 @@ Paspla Studio の数を学ぶ YouTube シリーズについて、企画、英語
 
 別PCでの導入は [セットアップ](docs/SETUP.md)、既存作品の再出力と新作の設計は [制作手順](docs/PRODUCTION.md)、正本の位置は [ファイル構成](docs/PROJECT-MAP.md) を参照してください。
 
+キャラクターの採用原画・基本動作を他のAIや別PCで利用する場合は、[素材の利用案内](assets/library/README.md)と[機械可読台帳](catalogs/character-library-v1.json)を起点にしてください。検証・プレビュー・保管用ZIPの作成は `python tools/character_library.py` で行えます。
+
 画像、WAV、MP4、フォント等はGit LFSで管理します。コードだけでなく採用素材・実測入力・現行の完成品も取得するため、clone後に `git lfs pull` を実行してください。モデルキャッシュと `node_modules/` は保存していません。
 
 ## 現行の5作品

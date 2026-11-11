@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "scope": "Independent relocation audit of exported character library; original project and source-temp roots inaccessible through patched Python file operations.",
+  "archive": {
+    "status": "pass",
+    "archive": "D:\\codex_backups\\youtube\\character-library-v1-20261111.zip",
+    "archive_bytes": 115759966,
+    "archive_sha256": "5b0cca6e8d92f3def0cad8b2e698cbb8812dd7f6ca11f7dae3612549d0497c6d",
+    "member_hashes_verified": 302,
+    "extracted_root": "D:\\temp\\animal-library-handoff-20261111\\relocated package independent audit\\character-library",
+    "path_traversal_members": 0
+  },
+  "actual_validation_report": "D:\\temp\\animal-library-handoff-20261111\\portability\\relocated-validation-outputs\\relocated-verification.json",
+  "guarded_roots": [
+    "D:/codex_projects/youtube",
+    "D:/temp/animal-stock-20261111",
+    "D:/temp/animal-stock-expansion-20261111"
+  ],
+  "guarded_operations": [
+    "builtins.open",
+    "io.open",
+    "os.open",
+    "os.stat",
+    "os.lstat",
+    "os.scandir",
+    "os.listdir",
+    "os.access"
+  ],
+  "blocked_original_root_access_attempts": 0,
+  "cli_list": "pass",
+  "cli_verify": "pass",
+  "all_11_neutral_and42_pose_api_loads": "pass",
+  "all53_cli_previews": "pass",
+  "common_pose_reference_height_and_scale": "pass",
+  "rabbit_crop_anchor_translation": "pass",
+  "existing_preview_overwrite_refused": "pass",
+  "existing_png_report_overwrite_refused": "pass",
+  "declared_file_one_byte_change_detected_and_restored": "pass",
+  "all302_declared_files_unchanged_after_tests": true,
+  "representative_visual_checks": [
+    "rabbit-beret-neutral.png (full registered crop, ears/feet visible)",
+    "onagadori-peck_down.png (full long tail retained, dip remains naturally shorter)"
+  ],
+  "source_project_modified": false,
+  "physical_second_pc_tested": false,
+  "runtime_absolute_path_dependency_found": false,
+  "notes": [
+    "The access guard covers ordinary Python file operations rather than OS ACLs. This is a relocation check within the same PC, not a second-device or hostile-code sandbox test.",
+    "Historical absolute paths remain intact in original generation and QA records; no runtime reads of them occurred."
+  ]
+}

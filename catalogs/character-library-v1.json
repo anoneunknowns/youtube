@@ -1,0 +1,1365 @@
+{
+  "schema_version": 1,
+  "kind": "portable-character-library-index",
+  "path_base": "library-root",
+  "guide": "assets/library/README.md",
+  "agent_instructions": "assets/library/AGENTS.md",
+  "coordinate_units": "source pixels; xyxy boxes use exclusive right/bottom",
+  "selection_policy": "Use these explicit adopted paths, never the largest version number or an unselected trial.",
+  "source_collections": [
+    {
+      "path": "assets/library/collections/animal-stock/v001/manifest.json",
+      "sha256": "d7302913a3f5d5cc2e521d32c25e24c16b6e111d87e34ffce42a109e39fc3013"
+    },
+    {
+      "path": "assets/library/collections/animal-motions/v001/manifest.json",
+      "sha256": "9ed4eb98cd517c5b8f40353e771f484dc90e0639fa75e0afa33f2400dd6588f8"
+    }
+  ],
+  "usage_rules": [
+    "Preserve the canonical face, palette, texture, contour and species markings.",
+    "Use target_body_height / reference_height as one isotropic scale for all key poses of a species.",
+    "Align the anatomical foot anchor; do not fit each pose bounding box or long tail footprint.",
+    "Saved PNG alpha and pixels are originals or lossless cell extractions. Alpha254 is valid.",
+    "Absolute generation/QA paths are historical records, not runtime dependencies.",
+    "Peck keys are downward gestures; exact beak/ground contact is not guaranteed.",
+    "Key poses are reviewed stock. Actual episode timing, clearance and continuous movement need scene review."
+  ],
+  "characters": [
+    {
+      "id": "bear-beret",
+      "name_ja": "赤い帽子のクマ",
+      "name_en": "Bear",
+      "availability": "reviewed-neutral-and-legacy-episode-assets",
+      "neutral": {
+        "path": "assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+        "sha256": "8512984d0660fea738192619b2bfccff1ce42a9493db49c980452ff904296e4e",
+        "source_size_px": [
+          1254,
+          1254
+        ],
+        "image_region_px": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "body_bbox_px": [
+          273,
+          71,
+          972,
+          1186
+        ],
+        "anchor_px": [
+          622.5,
+          1186
+        ],
+        "reference_height_px": 1115,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral"
+      },
+      "comparison_body_height_px": 430,
+      "legacy_usage": "Use existing episode adapters for legacy reactions. The generic key-pose loader exposes this reviewed neutral only."
+    },
+    {
+      "id": "rabbit-beret",
+      "name_ja": "ピンクのウサギ",
+      "name_en": "Rabbit",
+      "availability": "reviewed-neutral-and-legacy-episode-assets",
+      "neutral": {
+        "path": "assets/library/characters/rabbit-beret/sources/v001/rabbit-poses.png",
+        "sha256": "7b347adcbb6427cf753c4017e87575e2997df7f215ed72ba78d10db2c6a7916b",
+        "source_size_px": [
+          1287,
+          1222
+        ],
+        "image_region_px": [
+          205,
+          9,
+          557,
+          594
+        ],
+        "body_bbox_px": [
+          205,
+          9,
+          557,
+          594
+        ],
+        "anchor_px": [
+          365,
+          589
+        ],
+        "reference_height_px": 585,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral"
+      },
+      "comparison_body_height_px": 430,
+      "legacy_usage": "Use existing episode adapters for legacy reactions. The generic key-pose loader exposes this reviewed neutral only."
+    },
+    {
+      "id": "tora",
+      "name_ja": "とら",
+      "name_en": "Tora",
+      "availability": "reviewed-neutral-and-legacy-episode-assets",
+      "neutral": {
+        "path": "assets/library/characters/tora/sources/v001/neutral.png",
+        "sha256": "e71d1805327afea9077cfa0398f19fa994ad057588df6a085b373025afec3ee6",
+        "source_size_px": [
+          1254,
+          1254
+        ],
+        "image_region_px": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "body_bbox_px": [
+          251,
+          124,
+          1041,
+          1181
+        ],
+        "anchor_px": [
+          646.0,
+          1181.0
+        ],
+        "reference_height_px": 1057,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral"
+      },
+      "comparison_body_height_px": 430,
+      "legacy_usage": "Use existing episode adapters for legacy reactions. The generic key-pose loader exposes this reviewed neutral only."
+    },
+    {
+      "id": "little-bird",
+      "name_ja": "小鳥",
+      "name_en": "Little Bird",
+      "availability": "reviewed-neutral-and-legacy-episode-assets",
+      "neutral": {
+        "path": "assets/library/characters/little-bird/sources/v002/neutral.png",
+        "sha256": "8ae84e74b521005bbee0e0c2fb206009874b0c456d0003ea218cf9ae1a5d731c",
+        "source_size_px": [
+          1254,
+          1254
+        ],
+        "image_region_px": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "body_bbox_px": [
+          312,
+          335,
+          959,
+          966
+        ],
+        "anchor_px": [
+          635.5,
+          966
+        ],
+        "reference_height_px": 631,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral"
+      },
+      "comparison_body_height_px": 280,
+      "legacy_usage": "Use existing episode adapters for legacy reactions. The generic key-pose loader exposes this reviewed neutral only."
+    },
+    {
+      "id": "siamese-cat",
+      "name_ja": "シャム猫",
+      "name_en": "Siamese Cat",
+      "availability": "reviewed-neutral-and-six-key-poses",
+      "neutral": {
+        "path": "assets/library/characters/siamese-cat/sources/v005/neutral.png",
+        "sha256": "94e494e89adfa12b6175437b1697be1ef691409e69f8c3fb00b46496d2bfdb36",
+        "source_size_px": [
+          1254,
+          1254
+        ],
+        "image_region_px": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "body_bbox_px": [
+          244,
+          119,
+          998,
+          1189
+        ],
+        "anchor_px": [
+          611,
+          1189
+        ],
+        "reference_height_px": 1070,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral",
+        "source_manifest": "assets/library/characters/siamese-cat/sources/v005/source-manifest.json",
+        "source_manifest_sha256": "2f2cb303a8314bfe1d7b69624ccfdcd491048dca15119c8983416354a9e26549"
+      },
+      "comparison_body_height_px": 430,
+      "canonical_source_version": "v005",
+      "key_poses": {
+        "version": "v001",
+        "registration": "assets/library/characters/siamese-cat/motions/v001/registration.json",
+        "registration_sha256": "c11a66e406b0962b508eb1d8b71bcb86dccf2e1d4d88221cc0a3d70b1914a8b9",
+        "common_reference_height_px": 413,
+        "coordinate_space": "individual exact cell PNG",
+        "poses": {
+          "blink": {
+            "path": "assets/library/characters/siamese-cat/motions/v001/blink.png",
+            "sha256": "247fd0cd039ec5085f214a058d65ec49130c274b9628551580ff83088344096e",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              266.0,
+              463
+            ],
+            "body_bbox_px": [
+              131,
+              50,
+              430,
+              463
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 413
+          },
+          "greet": {
+            "path": "assets/library/characters/siamese-cat/motions/v001/greet.png",
+            "sha256": "1787d03b39d502f2a8d4d09aba6abef2cefb99324d958e1baa1328c03fd81369",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              247.5,
+              463
+            ],
+            "body_bbox_px": [
+              112,
+              50,
+              410,
+              463
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 413
+          },
+          "think": {
+            "path": "assets/library/characters/siamese-cat/motions/v001/think.png",
+            "sha256": "328db937f1b1c0e0e14416d1c0b5439995c5fd8c380f77ac8faa42795d5831f8",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              233.0,
+              463
+            ],
+            "body_bbox_px": [
+              99,
+              49,
+              398,
+              463
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 413
+          },
+          "aha": {
+            "path": "assets/library/characters/siamese-cat/motions/v001/aha.png",
+            "sha256": "d090e00fceb1f6fe5bbe5fdee4e7d199871ad7f433f7063217406e7f26a29602",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              266.5,
+              463
+            ],
+            "body_bbox_px": [
+              134,
+              46,
+              434,
+              463
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 413
+          },
+          "cheer": {
+            "path": "assets/library/characters/siamese-cat/motions/v001/cheer.png",
+            "sha256": "64031ed44839b11549548af7d442098fce66b8cef06aa696e18c60c4680279b2",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              250.0,
+              463
+            ],
+            "body_bbox_px": [
+              109,
+              48,
+              411,
+              463
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 413
+          },
+          "species_action": {
+            "path": "assets/library/characters/siamese-cat/motions/v001/species_action.png",
+            "sha256": "0f3233ac5c5e280b66fb44f1eeb41e69357985c577f0b8f177384c4858a1d260",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              232.5,
+              463
+            ],
+            "body_bbox_px": [
+              99,
+              47,
+              403,
+              463
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 413
+          }
+        },
+        "preview": "assets/library/characters/siamese-cat/motions/v001/pose-review.png",
+        "motion_preview": "assets/library/characters/siamese-cat/motions/v001/key-pose-preview.gif"
+      }
+    },
+    {
+      "id": "red-panda",
+      "name_ja": "レッサーパンダ",
+      "name_en": "Red Panda",
+      "availability": "reviewed-neutral-and-six-key-poses",
+      "neutral": {
+        "path": "assets/library/characters/red-panda/sources/v001/neutral.png",
+        "sha256": "2bc52232008b43250b6382df4097bf526bb325925a6c50be567b0baa5c565cff",
+        "source_size_px": [
+          1254,
+          1254
+        ],
+        "image_region_px": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "body_bbox_px": [
+          209,
+          106,
+          942,
+          1184
+        ],
+        "anchor_px": [
+          565,
+          1184
+        ],
+        "reference_height_px": 1078,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral",
+        "source_manifest": "assets/library/characters/red-panda/sources/v001/source-manifest.json",
+        "source_manifest_sha256": "1f1f720c7de45aced1a8a4e489f7cc3aff1c2460e250b6814ede201f934e5532"
+      },
+      "comparison_body_height_px": 430,
+      "canonical_source_version": "v001",
+      "key_poses": {
+        "version": "v001",
+        "registration": "assets/library/characters/red-panda/motions/v001/registration.json",
+        "registration_sha256": "54023aa0a9a31d62ee94ace6b6621ad6b96083d1ca6030ed73585d45b8e7949d",
+        "common_reference_height_px": 420,
+        "coordinate_space": "individual exact cell PNG",
+        "poses": {
+          "blink": {
+            "path": "assets/library/characters/red-panda/motions/v001/blink.png",
+            "sha256": "a42af19a5cdba4234ef5e4cb1b9dbfa7f735e6224f5d01f8d3a9323f23cb44b6",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              247,
+              463
+            ],
+            "body_bbox_px": [
+              117,
+              43,
+              386,
+              463
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 420
+          },
+          "greet": {
+            "path": "assets/library/characters/red-panda/motions/v001/greet.png",
+            "sha256": "69de36a50ddd8b4ff758bf00fa58ec5c61ae03a4673fd536715f6d47e4ec4c17",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              235,
+              464
+            ],
+            "body_bbox_px": [
+              105,
+              44,
+              381,
+              464
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 420
+          },
+          "think": {
+            "path": "assets/library/characters/red-panda/motions/v001/think.png",
+            "sha256": "02e8fefec23ba2788c824b4476d32e3835e2e99ebf5ce7424633ffba74d7e65a",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              234,
+              463
+            ],
+            "body_bbox_px": [
+              109,
+              44,
+              382,
+              463
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 420
+          },
+          "aha": {
+            "path": "assets/library/characters/red-panda/motions/v001/aha.png",
+            "sha256": "b4b59df03a71a591e74e4d1dbab00629eb8235e163448236f2d600fa8a3e44e0",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              240,
+              464
+            ],
+            "body_bbox_px": [
+              112,
+              43,
+              385,
+              464
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 420
+          },
+          "cheer": {
+            "path": "assets/library/characters/red-panda/motions/v001/cheer.png",
+            "sha256": "b0a5e4f0417f591c19025d10bd1ac1cd764bdff1053abe2fe81bce5c82a60e9a",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              235,
+              464
+            ],
+            "body_bbox_px": [
+              92,
+              43,
+              405,
+              464
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 420
+          },
+          "species_action": {
+            "path": "assets/library/characters/red-panda/motions/v001/species_action.png",
+            "sha256": "59db4a63fa2c8c59ea020f6be22b5f79c9dbbeb52d8ec8c0e7d37bd543f49f27",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              227,
+              464
+            ],
+            "body_bbox_px": [
+              111,
+              43,
+              393,
+              464
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 420
+          }
+        },
+        "preview": "assets/library/characters/red-panda/motions/v001/pose-review.png",
+        "motion_preview": "assets/library/characters/red-panda/motions/v001/key-pose-preview.gif"
+      }
+    },
+    {
+      "id": "meerkat",
+      "name_ja": "ミーアキャット",
+      "name_en": "Meerkat",
+      "availability": "reviewed-neutral-and-six-key-poses",
+      "neutral": {
+        "path": "assets/library/characters/meerkat/sources/v004/neutral.png",
+        "sha256": "421190cb2cd65e8a42c9a1bb9883dfa333c96ce21918a80b953314f1ac6b3c7d",
+        "source_size_px": [
+          1254,
+          1254
+        ],
+        "image_region_px": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "body_bbox_px": [
+          315,
+          47,
+          904,
+          1220
+        ],
+        "anchor_px": [
+          602,
+          1220
+        ],
+        "reference_height_px": 1173,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral",
+        "source_manifest": "assets/library/characters/meerkat/sources/v004/source-manifest.json",
+        "source_manifest_sha256": "88b60e99488d330f0f8014b6de3cd1e4ff2bdebe3d481498062435b83a13672d"
+      },
+      "comparison_body_height_px": 430,
+      "canonical_source_version": "v004",
+      "key_poses": {
+        "version": "v001",
+        "registration": "assets/library/characters/meerkat/motions/v001/registration.json",
+        "registration_sha256": "d1e538ecc6f8e6025e821c8559d3027ab53f9e98f4e895108d5176f5da93a50f",
+        "common_reference_height_px": 450,
+        "coordinate_space": "individual exact cell PNG",
+        "poses": {
+          "blink": {
+            "path": "assets/library/characters/meerkat/motions/v001/blink.png",
+            "sha256": "f01725b62865d38387977c348b5cdd9802fea8bfe442c058f5d2a121c254f2c2",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              268,
+              480
+            ],
+            "body_bbox_px": [
+              152,
+              30,
+              387,
+              480
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 450
+          },
+          "greet": {
+            "path": "assets/library/characters/meerkat/motions/v001/greet.png",
+            "sha256": "5213c2307c9e2dc2e372191238ac8f1a9c7804ac4f7dc32b976e22a8bf6143a4",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              254,
+              481
+            ],
+            "body_bbox_px": [
+              139,
+              30,
+              373,
+              481
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 450
+          },
+          "think": {
+            "path": "assets/library/characters/meerkat/motions/v001/think.png",
+            "sha256": "7409ed756e9fea068c080fdc05267a17e13a50b55779eb8c4db437dbdd347376",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              241,
+              480
+            ],
+            "body_bbox_px": [
+              124,
+              30,
+              360,
+              480
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 450
+          },
+          "aha": {
+            "path": "assets/library/characters/meerkat/motions/v001/aha.png",
+            "sha256": "bba2c87c8021f3950c70177a0dc5374f16babaafa021bc32e01e77abeaa68c8b",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              268,
+              481
+            ],
+            "body_bbox_px": [
+              153,
+              32,
+              387,
+              481
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 450
+          },
+          "cheer": {
+            "path": "assets/library/characters/meerkat/motions/v001/cheer.png",
+            "sha256": "32705101a01b7d04a3d0982c497f3f4803d9669a2e3e2a54f05d9ba3cc1d3889",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              254,
+              482
+            ],
+            "body_bbox_px": [
+              139,
+              32,
+              378,
+              482
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 450
+          },
+          "species_action": {
+            "path": "assets/library/characters/meerkat/motions/v001/species_action.png",
+            "sha256": "cbade311e8c83ce2ca8d7268490f63fa60b215fa20f97f7c5917e04815637515",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              241,
+              481
+            ],
+            "body_bbox_px": [
+              123,
+              36,
+              377,
+              481
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 450
+          }
+        },
+        "preview": "assets/library/characters/meerkat/motions/v001/pose-review.png",
+        "motion_preview": "assets/library/characters/meerkat/motions/v001/key-pose-preview.gif"
+      }
+    },
+    {
+      "id": "kangaroo",
+      "name_ja": "カンガルー",
+      "name_en": "Kangaroo",
+      "availability": "reviewed-neutral-and-six-key-poses",
+      "neutral": {
+        "path": "assets/library/characters/kangaroo/sources/v002/neutral.png",
+        "sha256": "a08e5ab198bf986720fef9fb29d8f985411525647abe09ded5788bd0b8950b12",
+        "source_size_px": [
+          1254,
+          1254
+        ],
+        "image_region_px": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "body_bbox_px": [
+          256,
+          141,
+          819,
+          1158
+        ],
+        "anchor_px": [
+          546,
+          1158
+        ],
+        "reference_height_px": 1017,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral",
+        "source_manifest": "assets/library/characters/kangaroo/sources/v002/source-manifest.json",
+        "source_manifest_sha256": "c4521dc6e7c7edaceb8be10bba53fc0879e05cf58638007316e3171c2ee076ab"
+      },
+      "comparison_body_height_px": 430,
+      "canonical_source_version": "v002",
+      "key_poses": {
+        "version": "v001",
+        "registration": "assets/library/characters/kangaroo/motions/v001/registration.json",
+        "registration_sha256": "7d8d1d2c8152c19c77506cdd55a3205dcfd713dca930818c14be42b13d72f60d",
+        "common_reference_height_px": 441,
+        "coordinate_space": "individual exact cell PNG",
+        "poses": {
+          "blink": {
+            "path": "assets/library/characters/kangaroo/motions/v001/blink.png",
+            "sha256": "f3f3942e6c086a43e0a3086c9ada956c0c9682dcde4fce7f74e2535eb7eb65d3",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              239,
+              480
+            ],
+            "body_bbox_px": [
+              121,
+              40,
+              359,
+              480
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 441
+          },
+          "greet": {
+            "path": "assets/library/characters/kangaroo/motions/v001/greet.png",
+            "sha256": "c3fdb2080efeef6c3c4b0c5713f1ef418b1b474c0f71d46c11df365168a8c170",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              239,
+              480
+            ],
+            "body_bbox_px": [
+              121,
+              39,
+              359,
+              480
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 441
+          },
+          "think": {
+            "path": "assets/library/characters/kangaroo/motions/v001/think.png",
+            "sha256": "f38217052f97a8578be0b4cf515fdd3e1fd45b2da9bd47ebbbdb919fc13f62be",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              239,
+              480
+            ],
+            "body_bbox_px": [
+              121,
+              39,
+              359,
+              480
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 441
+          },
+          "aha": {
+            "path": "assets/library/characters/kangaroo/motions/v001/aha.png",
+            "sha256": "ea31176b8b28dfb628f16ca7712acd5c3a3e8b3f07d20aebe3c146c958ac5d06",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              239,
+              481
+            ],
+            "body_bbox_px": [
+              121,
+              40,
+              359,
+              481
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 441
+          },
+          "cheer": {
+            "path": "assets/library/characters/kangaroo/motions/v001/cheer.png",
+            "sha256": "10b7d66e535865bda66c2ed181a2492c537958cc2c28c3080ed3fcfe64a190d7",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              239,
+              481
+            ],
+            "body_bbox_px": [
+              121,
+              40,
+              359,
+              481
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 441
+          },
+          "species_action": {
+            "path": "assets/library/characters/kangaroo/motions/v001/species_action.png",
+            "sha256": "ad7ccc865e332f7c818d4605e94c71f875b54da3b4daec14686a5e833c74e389",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              234,
+              481
+            ],
+            "body_bbox_px": [
+              108,
+              77,
+              368,
+              481
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 441
+          }
+        },
+        "preview": "assets/library/characters/kangaroo/motions/v001/pose-review.png",
+        "motion_preview": "assets/library/characters/kangaroo/motions/v001/key-pose-preview.gif"
+      }
+    },
+    {
+      "id": "hedgehog",
+      "name_ja": "ハリネズミ",
+      "name_en": "Hedgehog",
+      "availability": "reviewed-neutral-and-six-key-poses",
+      "neutral": {
+        "path": "assets/library/characters/hedgehog/sources/v003/neutral.png",
+        "sha256": "746fc698df5a9afd31f6bea5a399baf134cd0e263e6729499a3e17c49f5ec87a",
+        "source_size_px": [
+          1254,
+          1254
+        ],
+        "image_region_px": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "body_bbox_px": [
+          211,
+          127,
+          1026,
+          1166
+        ],
+        "anchor_px": [
+          611,
+          1166
+        ],
+        "reference_height_px": 1039,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral",
+        "source_manifest": "assets/library/characters/hedgehog/sources/v003/source-manifest.json",
+        "source_manifest_sha256": "0231a6d97b3b3972a9cba4411048db8c117b3bdfe661fb45f079ef71b42fc3d2"
+      },
+      "comparison_body_height_px": 430,
+      "canonical_source_version": "v003",
+      "key_poses": {
+        "version": "v001",
+        "registration": "assets/library/characters/hedgehog/motions/v001/registration.json",
+        "registration_sha256": "e288733d24420014502499d1c88e48b499d725a9566195175627311759ed4c9f",
+        "common_reference_height_px": 429,
+        "coordinate_space": "individual exact cell PNG",
+        "poses": {
+          "blink": {
+            "path": "assets/library/characters/hedgehog/motions/v001/blink.png",
+            "sha256": "a1dde0932e5f08ebd7566c56732289c4c1b8d15637976bb97361f04e249369b4",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              256,
+              473
+            ],
+            "body_bbox_px": [
+              92,
+              44,
+              423,
+              473
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 429
+          },
+          "greet": {
+            "path": "assets/library/characters/hedgehog/motions/v001/greet.png",
+            "sha256": "953f299b276efb2ca41df94ad213b382d1e2be0f35435066d334d2ab9169b303",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              256,
+              473
+            ],
+            "body_bbox_px": [
+              93,
+              44,
+              423,
+              473
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 429
+          },
+          "think": {
+            "path": "assets/library/characters/hedgehog/motions/v001/think.png",
+            "sha256": "9cb6daca828263e0e59924c879f9fbf5ecd0435542e3d084b265ac129ba7ad3d",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              256,
+              473
+            ],
+            "body_bbox_px": [
+              92,
+              44,
+              423,
+              473
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 429
+          },
+          "aha": {
+            "path": "assets/library/characters/hedgehog/motions/v001/aha.png",
+            "sha256": "def60a02822ed0563e5e8b75506460d12d45c361600611b3d4e2837ed6a38f66",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              256,
+              473
+            ],
+            "body_bbox_px": [
+              92,
+              44,
+              424,
+              473
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 429
+          },
+          "cheer": {
+            "path": "assets/library/characters/hedgehog/motions/v001/cheer.png",
+            "sha256": "1289fc0fdcea1aa1a3aa0447e36c7ecf13924ffa9d0e3355d1dbf3dc9f87c5e5",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              256,
+              473
+            ],
+            "body_bbox_px": [
+              93,
+              45,
+              424,
+              473
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 429
+          },
+          "species_action": {
+            "path": "assets/library/characters/hedgehog/motions/v001/species_action.png",
+            "sha256": "09ddc9568a6b1f18137d259398dbfb080954b1e7911d178a335267576a34aafb",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              256,
+              473
+            ],
+            "body_bbox_px": [
+              92,
+              49,
+              426,
+              473
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 429
+          }
+        },
+        "preview": "assets/library/characters/hedgehog/motions/v001/pose-review.png",
+        "motion_preview": "assets/library/characters/hedgehog/motions/v001/key-pose-preview.gif"
+      }
+    },
+    {
+      "id": "fairy-pitta",
+      "name_ja": "ヤイロチョウ",
+      "name_en": "Fairy Pitta",
+      "availability": "reviewed-neutral-and-six-key-poses",
+      "neutral": {
+        "path": "assets/library/characters/fairy-pitta/sources/v001/neutral.png",
+        "sha256": "973239c5c7dcd94d6bef70f2557520454c6ac57dbc0e8fe59158e7375314cc9c",
+        "source_size_px": [
+          1254,
+          1254
+        ],
+        "image_region_px": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "body_bbox_px": [
+          311,
+          332,
+          879,
+          969
+        ],
+        "anchor_px": [
+          593,
+          969
+        ],
+        "reference_height_px": 637,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral",
+        "source_manifest": "assets/library/characters/fairy-pitta/sources/v001/source-manifest.json",
+        "source_manifest_sha256": "d42b12e86c829d87bbe903521a522f80657506e3277537a8ff05098b6c8f1729"
+      },
+      "comparison_body_height_px": 280,
+      "canonical_source_version": "v001",
+      "key_poses": {
+        "version": "v001",
+        "registration": "assets/library/characters/fairy-pitta/motions/v001/registration.json",
+        "registration_sha256": "af4c77be25bea25334304d28537997ac9ca89ad0bf37afe7a2eea9e4982f529b",
+        "common_reference_height_px": 408,
+        "coordinate_space": "individual exact cell PNG",
+        "poses": {
+          "blink": {
+            "path": "assets/library/characters/fairy-pitta/motions/v001/blink.png",
+            "sha256": "683426b52fcd633286e9e449a7d51a59e79d41dc97082d2fcff7d55c29a123ee",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              281.0,
+              447
+            ],
+            "body_bbox_px": [
+              120,
+              39,
+              454,
+              447
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 408
+          },
+          "wing_half": {
+            "path": "assets/library/characters/fairy-pitta/motions/v001/wing_half.png",
+            "sha256": "3d1739b213edbe7af29b95c2001542a93c87829b8a8c3257afd9b2a15115b2c8",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              267.0,
+              447
+            ],
+            "body_bbox_px": [
+              103,
+              38,
+              441,
+              447
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 408
+          },
+          "wing_up": {
+            "path": "assets/library/characters/fairy-pitta/motions/v001/wing_up.png",
+            "sha256": "fe8cc1f92f7e7c269f32682031ec14ff0e28f852af07d6d41580e216fb089a87",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              252.5,
+              447
+            ],
+            "body_bbox_px": [
+              89,
+              38,
+              418,
+              447
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 408
+          },
+          "peck_half": {
+            "path": "assets/library/characters/fairy-pitta/motions/v001/peck_half.png",
+            "sha256": "e3dcb20680a62a69d82725f9eed489862da116c9acb5d2d5f2d228bae29b49f7",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              282.0,
+              446
+            ],
+            "body_bbox_px": [
+              86,
+              89,
+              464,
+              446
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 408
+          },
+          "peck_down": {
+            "path": "assets/library/characters/fairy-pitta/motions/v001/peck_down.png",
+            "sha256": "a8fb58c352fe2021649681654c189678ecb436edcff8409713b053b70974748d",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              267.5,
+              446
+            ],
+            "body_bbox_px": [
+              51,
+              165,
+              459,
+              446
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 408
+          },
+          "cheer": {
+            "path": "assets/library/characters/fairy-pitta/motions/v001/cheer.png",
+            "sha256": "74be3762608c1d11fd201239011eee2aa8097a7b85e5309e291a6433177714a0",
+            "size_px": [
+              512,
+              512
+            ],
+            "anchor_px": [
+              252.5,
+              447
+            ],
+            "body_bbox_px": [
+              63,
+              39,
+              432,
+              447
+            ],
+            "tail_bbox_px": null,
+            "reference_height_px": 408
+          }
+        },
+        "preview": "assets/library/characters/fairy-pitta/motions/v001/pose-review.png",
+        "motion_preview": "assets/library/characters/fairy-pitta/motions/v001/key-pose-preview.gif"
+      }
+    },
+    {
+      "id": "onagadori",
+      "name_ja": "オナガドリ",
+      "name_en": "Onagadori",
+      "availability": "reviewed-neutral-and-six-key-poses",
+      "neutral": {
+        "path": "assets/library/characters/onagadori/sources/v002/neutral.png",
+        "sha256": "ad606f66fd10d947f0ed1a47ee7e33720b48237847039c35d02d930021929bba",
+        "source_size_px": [
+          1774,
+          887
+        ],
+        "image_region_px": [
+          0,
+          0,
+          1774,
+          887
+        ],
+        "body_bbox_px": [
+          143,
+          83,
+          632,
+          819
+        ],
+        "anchor_px": [
+          350,
+          819
+        ],
+        "reference_height_px": 736,
+        "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral",
+        "source_manifest": "assets/library/characters/onagadori/sources/v002/source-manifest.json",
+        "source_manifest_sha256": "2575ab7692c48346f4d2d5a25d4af73f88ab9f5c20e0b9c6e7a81f30301f2839"
+      },
+      "comparison_body_height_px": 280,
+      "canonical_source_version": "v002",
+      "key_poses": {
+        "version": "v001",
+        "registration": "assets/library/characters/onagadori/motions/v001/registration.json",
+        "registration_sha256": "d4a9c1fa9b04515b7ad07d0ce930a67d99555c6aa70b2f3fda6e11d9d785bbae",
+        "common_reference_height_px": 309,
+        "coordinate_space": "individual exact cell PNG",
+        "poses": {
+          "blink": {
+            "path": "assets/library/characters/onagadori/motions/v001/blink.png",
+            "sha256": "fe8d56b4e44bb30e68d23dbc5baa5bd6beece320bfb757832d4e1955729e0818",
+            "size_px": [
+              724,
+              362
+            ],
+            "anchor_px": [
+              161.5,
+              348
+            ],
+            "body_bbox_px": [
+              69,
+              39,
+              280,
+              348
+            ],
+            "tail_bbox_px": [
+              206,
+              108,
+              682,
+              342
+            ],
+            "reference_height_px": 309
+          },
+          "wing_half": {
+            "path": "assets/library/characters/onagadori/motions/v001/wing_half.png",
+            "sha256": "e52af456e7f2070211aae03b20131a3e054b0d4f10b449badad63e1127a25003",
+            "size_px": [
+              724,
+              362
+            ],
+            "anchor_px": [
+              153.5,
+              348
+            ],
+            "body_bbox_px": [
+              53,
+              40,
+              282,
+              348
+            ],
+            "tail_bbox_px": [
+              198,
+              109,
+              674,
+              341
+            ],
+            "reference_height_px": 309
+          },
+          "wing_up": {
+            "path": "assets/library/characters/onagadori/motions/v001/wing_up.png",
+            "sha256": "def367ca673bf324b0a8d03e888e63a9b1109fd954103801515130abcbb51122",
+            "size_px": [
+              724,
+              362
+            ],
+            "anchor_px": [
+              165.0,
+              339
+            ],
+            "body_bbox_px": [
+              66,
+              27,
+              278,
+              339
+            ],
+            "tail_bbox_px": [
+              204,
+              89,
+              680,
+              332
+            ],
+            "reference_height_px": 309
+          },
+          "peck_half": {
+            "path": "assets/library/characters/onagadori/motions/v001/peck_half.png",
+            "sha256": "b2ff3ac1161f1e20ab1a361d804c309191466b235a9bba13c2bc8b0d9d5a201e",
+            "size_px": [
+              724,
+              362
+            ],
+            "anchor_px": [
+              180.0,
+              339
+            ],
+            "body_bbox_px": [
+              13,
+              100,
+              292,
+              339
+            ],
+            "tail_bbox_px": [
+              232,
+              93,
+              684,
+              331
+            ],
+            "reference_height_px": 309
+          },
+          "peck_down": {
+            "path": "assets/library/characters/onagadori/motions/v001/peck_down.png",
+            "sha256": "7a4d8f7ea4d782fff089a623383ec9eb323fa26d8701662867bfaa01477ac44b",
+            "size_px": [
+              724,
+              362
+            ],
+            "anchor_px": [
+              247.5,
+              325
+            ],
+            "body_bbox_px": [
+              59,
+              155,
+              345,
+              325
+            ],
+            "tail_bbox_px": [
+              245,
+              90,
+              693,
+              318
+            ],
+            "reference_height_px": 309
+          },
+          "cheer": {
+            "path": "assets/library/characters/onagadori/motions/v001/cheer.png",
+            "sha256": "8fa4f96e2ab4da491b82fb6dac5da04ceee57f124f6f54a56e96a17dc1ef9af3",
+            "size_px": [
+              724,
+              362
+            ],
+            "anchor_px": [
+              160.0,
+              325
+            ],
+            "body_bbox_px": [
+              20,
+              16,
+              280,
+              325
+            ],
+            "tail_bbox_px": [
+              204,
+              80,
+              676,
+              318
+            ],
+            "reference_height_px": 309
+          }
+        },
+        "preview": "assets/library/characters/onagadori/motions/v001/pose-review.png",
+        "motion_preview": "assets/library/characters/onagadori/motions/v001/key-pose-preview.gif"
+      }
+    }
+  ]
+}

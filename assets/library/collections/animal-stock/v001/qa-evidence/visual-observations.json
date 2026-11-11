@@ -1,0 +1,145 @@
+{
+  "status": "complete-final-selection",
+  "method": "Original-size view_image inspections plus cream and dark-teal comparison sheets. Original PNG bytes were not edited.",
+  "reference_notes": [
+    "Tora and little-bird originals are the art-style references. Small-game baked variants were not enlarged.",
+    "Ink-run sampling excludes dark fur as far as practical, but curve angle and attached whiskers can still alter it. It is an approximate local diagnostic, not an exact whole-contour measurement."
+  ],
+  "candidates": {
+    "siamese-cat/v001": {
+      "appearance": "Seal-point mask, ears, four paws and tail with blue eyes; the Tora family face/body and watercolor paper texture are clear.",
+      "alpha_and_completeness": "RGBA, full visible animal, all corners alpha0, no visible canvas contact or checkerboard/halo on cream/dark preview.",
+      "recommendation": "Keep the identity and color design; revise the outer contour toward Tora's visual weight."
+    },
+    "red-panda/v001": {
+      "appearance": "Rust-red fur, cream face/ear markings, dark belly/paws and a bushy ringed tail identify a red panda. The face, rounded body, ink and paper texture fit the existing family.",
+      "alpha_and_completeness": "RGBA with transparent background and full tail/ears/paws; no visible clipping or halo.",
+      "recommendation": "Suitable style baseline; keep this version rather than thickening indiscriminately."
+    },
+    "meerkat/v001": {
+      "appearance": "Upright slim body/neck, dark eye patches, small rounded ears, pale belly and long thin dark-tipped tail are recognizable.",
+      "alpha_and_completeness": "RGBA with full body/tail and no visible canvas contact. One corner alpha1 is below the visible alpha8 threshold and does not form a visible matte.",
+      "recommendation": "Outer contour is visibly thinner than Tora at the same full visible body height; revise line weight while preserving species and pose."
+    },
+    "kangaroo/v001": {
+      "appearance": "Large hindquarters/long feet, short forearms, empty pouch line and thick tapering support tail identify a kangaroo. Very large upright ears and short catlike muzzle give a rabbit-like impression; eyelashes are an extra style detail.",
+      "alpha_and_completeness": "No actual edge cut, but visible bbox starts16px from top and ends22px from bottom on the1254px canvas, too close for a comfortable reusable stock asset.",
+      "recommendation": "Regenerate with more transparent margin, no eyelashes, a clearer kangaroo muzzle and appropriately smaller ears; retain the hindfeet/support tail and strengthen the thin outer ink. Do not solve the line mismatch by silently excluding ears from the scaling box."
+    },
+    "hedgehog/v001": {
+      "appearance": "Rounded short-spined back, cream face/belly, small ears, short muzzle and tiny limbs read as a friendly hedgehog; no long porcupine tail or quills.",
+      "alpha_and_completeness": "RGBA, whole quill silhouette/paws visible, no visible background matte or halo.",
+      "recommendation": "Retain the species and rounded family design; bring the outer ink closer to Tora's weight."
+    },
+    "siamese-cat/v002": {
+      "appearance": "Identity and texture remain correct, but the ears, feet and tail now have an overly heavy sticker-like outer contour at the same 430px height.",
+      "approximate_display_ink_px": 8.5,
+      "recommendation": "Revise the outer contour about 25-30 percent thinner; preserve v001 and v002 source bytes."
+    },
+    "meerkat/v002": {
+      "appearance": "Species and anatomy remain clear. Outer contour is heavier than the Tora reference at matched 430px visible height.",
+      "approximate_display_ink_px": 7.8,
+      "recommendation": "Revise the outer contour about 20-25 percent thinner."
+    },
+    "kangaroo/v002": {
+      "appearance": "Smaller species-appropriate ears, clearer kangaroo muzzle and lack of eyelashes resolve the rabbit-like first version. Long hind feet, short forearms, pouch and support tail remain clear.",
+      "alpha_and_completeness": "Visible bbox [256,141,1041,1158] gives comfortable transparent margins on the 1254px canvas; alpha composition is clean and there is no clipping.",
+      "approximate_display_ink_px": 5.9,
+      "recommendation": "Accept. Outer contour is visually consistent with the Tora reference at 430px visible height."
+    },
+    "hedgehog/v002": {
+      "appearance": "Rounded species design remains good, but the outer spine/body contour is markedly heavier than the reference.",
+      "approximate_display_ink_px": 9.6,
+      "recommendation": "Revise the outer contour about 30-35 percent thinner."
+    },
+    "fairy-pitta/v001": {
+      "appearance": "Chestnut/black crown, pale eyebrow, black eye mask, green back/wing, blue rump/wing, cream throat and belly, red vent, very short tail and substantial legs match the species reference. The simple brown dot eye remains visible on the black mask at the intended display size and is consistent with the existing bird.",
+      "alpha_and_completeness": "RGBA, all corners alpha0, no clipping. Cream, gray and dark-teal alpha composites show no painted checkerboard or visible halo.",
+      "approximate_display_ink_px": 5.7,
+      "recommendation": "Accept. The 280px body-height comparison is close to the existing bird's approximate 6.2px outline."
+    },
+    "siamese-cat/v003": {
+      "appearance": "Species/shape/alpha remain correct, but reducing v002 overshot to a slightly finer outline than the existing Tora at the same 430px height.",
+      "approximate_display_ink_px": 4.4,
+      "recommendation": "For strict screen-weight matching, increase only the v003 outer contour about25-30 percent. Parent notified; do not certify exact6-7px weight."
+    },
+    "meerkat/v003": {
+      "appearance": "Species/shape/alpha remain correct; outer contour now runs a little lighter than Tora at matched430px height.",
+      "approximate_display_ink_px": 4.8,
+      "recommendation": "For strict matching, increase only the v003 outer contour about20 percent."
+    },
+    "hedgehog/v003": {
+      "appearance": "No new species or anatomy issue; outer quill/body contour is slightly lighter than the baseline family at matched430px height.",
+      "approximate_display_ink_px": 5.0,
+      "recommendation": "For strict matching, increase only the v003 outer contour about15-20 percent."
+    },
+    "onagadori/v002": {
+      "appearance": "The warmer dark-brown exterior body and tail contours now visually match the existing bird family at280px registered body height. Interior feather lines remain thinner and readable.",
+      "alpha_and_completeness": "RGBA, alpha0..255, all cornersalpha0, no visible canvas contact. Proper cream/dark composites are clean. Only2 tail yellow pixels have alpha>=8, both atalpha8; none atalpha>=128. No visible colored halo.",
+      "body_bbox_px": [
+        143,
+        83,
+        632,
+        819
+      ],
+      "tail_bbox_px": [
+        463,
+        245,
+        1691,
+        808
+      ],
+      "support_anchor_px": [
+        350,
+        819
+      ],
+      "recommendation": "Accept. Whole tail retained for full composition; use body bounds and foot support anchor for production scaling."
+    },
+    "onagadori/v001": {
+      "appearance": "White variety with a red single comb/wattles, pale legs and several individually flowing long tail feathers. Anatomy is recognizable and the tail is not drawn as a peacock fan.",
+      "alpha_and_completeness": "No clipping, checkerboard or visible alpha-composited halo. The neon yellow/red fringe apparent in the native black transparency preview is not reproduced on proper cream/dark compositing; yellow tail pixels with alpha>=8 number 7 and all have alpha<=14.",
+      "body_bbox_candidate_px": [
+        147,
+        88,
+        628,
+        816
+      ],
+      "tail_bbox_candidate_px": [
+        467,
+        246,
+        1691,
+        810
+      ],
+      "support_anchor_candidate_px": [
+        350,
+        815
+      ],
+      "approximate_display_body_outer_ink_px": [
+        2.7,
+        3.8
+      ],
+      "recommendation": "Revise exterior body and tail contour toward source15-17px in the same dark brown, about1.7-2 times the current body outline, while retaining thin interior feather detail. The tail footprint must not be used as the body scaling height. Re-register body/tail/feet after any revision."
+    }
+  },
+  "not_yet_reviewed": [],
+  "sources_modified": false,
+  "history_note": "Earlier candidate recommendations are retained as trial history. Final acceptance uses the natural-series-consistency criterion in final-review.json, rather than certifying identical pixel-wide strokes.",
+  "final_review": "final-review.json",
+  "final_selected_versions": {
+    "siamese-cat": "v005",
+    "red-panda": "v001",
+    "meerkat": "v004",
+    "kangaroo": "v002",
+    "hedgehog": "v003",
+    "fairy-pitta": "v001",
+    "onagadori": "v002"
+  },
+  "final_selected_notes": {
+    "siamese-cat": "Seal points and blue eyes remain clear. v005 removes the heavy v004 contour and fits Tora face/body proportions with a naturally moderate warm-brown outline.",
+    "red-panda": "v001 retains rust/cream markings, dark paws/belly and a bushy ringed tail, with a naturally moderate outline and paper texture.",
+    "meerkat": "v004 has a clear slim upright body, eye patches and narrow dark-tipped tail. Its moderate contour is more consistent with Tora than the finer v005 body line; it is not sticker-like.",
+    "kangaroo": "v002 corrects the oversized rabbit-like ears, catlike muzzle, eyelashes and narrow canvas margin. Long hind feet, short forearms, pouch and support tail remain clear.",
+    "hedgehog": "v003 retains rounded short spines, cream face/belly, small ears and tiny limbs. Its softer moderate outline integrates more naturally than the heavier v004 and slightly finer v005.",
+    "fairy-pitta": "Chestnut/black crown, pale eyebrow, dark eye mask, green/blue upperparts, cream chest, red vent, short tail and substantial legs remain recognizable. The simple brown eye is readable at280px body height and matches the existing bird dot-eye convention.",
+    "onagadori": "v002 is a white-variety rooster with red single comb/wattles, pale legs and individually flowing long white tail feathers. Exterior body/tail contour now matches the family; interior feather lines stay fine. The full tail is retained and body scale is registered separately."
+  }
+}

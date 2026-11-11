@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "scope": "Independent18pose review for Siamese Cat v002, Fairy Pitta v001 and Onagadori v001",
+  "items": [
+    {
+      "id": "siamese-cat",
+      "version": "v002",
+      "source_sheet_sha256": "5dfd6299ab314060d754bd5e7316df627d85f10b1f43c431aabac98da0200ecb",
+      "common_reference_height_px": 413,
+      "poses_passed": 6,
+      "geometry": "siamese-cat-v002-final-geometry.json",
+      "geometry_sha256": "7463f0553b6cc390da2d29b0d378a09a388567a66fa0f46cc2ff4abee2fb2ae4",
+      "exact_crop_pixels": "pass",
+      "review": {
+        "identity": "All six poses preserve the adopted seal-point Siamese identity, blue oval eyes, whiskers, rounded face/body proportions and watercolor-paper fill. The unrequested yellow aha accents are removed in v002.",
+        "style": "Canonical-plus-six-pose renders at430px body height on cream and dark teal look natural, with moderate family-brown contours and no sticker-like outlier.",
+        "alpha": "Actual RGBA0..254: effectively opaque subject with genuinely transparent surroundings. All cell-edge maxima<=1. Correct alpha composites show no visible brown background, halo or clipping.",
+        "motion": "One standing reference413px and manually reviewed actual-toe anchors are fixed for all six poses. Neutral entry/exit keyframes retain head/body size and foot baseline. Key-pose playback is discrete, not interpolated final animation."
+      }
+    },
+    {
+      "id": "fairy-pitta",
+      "version": "v001",
+      "source_sheet_sha256": "75786c86152ddf974179bb8b53316885971b9487233f2a4c7d282fd09ea510d1",
+      "common_reference_height_px": 408,
+      "poses_passed": 6,
+      "geometry": "fairy-pitta-v001-final-geometry.json",
+      "geometry_sha256": "757deb3afca039ee1e845a40c86402376bf430dbfadb507f5ff66633e862fd15",
+      "exact_crop_pixels": "pass",
+      "review": {
+        "style": "Canonical280px comparison on cream/dark preserves the warm-brown moderate contour, dot-eye convention and watercolor-paper family design.",
+        "alpha": "RGBA alpha0..254, subject clear, cell edge alpha maxima0..1, no visible matte/halo or boundary clipping.",
+        "identity": "Six poses preserve pitta color regions, compact body, one beak/tail and two legs/wings; no duplicated or cut anatomy.",
+        "motion": "One common upright reference408px for all six frames, with actual toe anchors aligned at280px body display. Canonical entry/exit keeps size and baseline natural. The deeper dip remains about25..28screen pixels above the toe baseline and is described as a downward pecking/dipping gesture, not beak-ground contact. Discrete keyposes only; episode timing/interpolation is not yet certified."
+      }
+    },
+    {
+      "id": "onagadori",
+      "version": "v001",
+      "source_sheet_sha256": "14ff3d9559b0af40aedcda931b8da34d3b20ab8683ccf6537864cbc9e9996d8a",
+      "common_reference_height_px": 309,
+      "poses_passed": 6,
+      "geometry": "onagadori-v001-final-geometry.json",
+      "geometry_sha256": "1c3571c7d3198cafe464eb3868c63ec672c46ce8cde66b23a17c4490e9576368",
+      "exact_crop_pixels": "pass",
+      "review": {
+        "identity": "All six poses preserve the white-variety rooster, red single comb/wattles, pale legs and multiple separate flowing white tail feathers. No missing or duplicated body parts; entire long tail remains visible.",
+        "style": "Canonical-plus-six-pose renders at280px anatomical body height preserve the family watercolor-paper texture and warm-brown contour. Fine interior feather lines remain distinct from the exterior silhouette.",
+        "alpha": "RGBA0..255 with cell-edge maxima<=1. Correct cream/dark composites show no visible fringe, matte, hidden-RGB discoloration or cut parts. Minimum visible cell margin13px in the forward dip remains clear.",
+        "motion": "One upright-body reference309px for every pose, separate manual body/tail bounds and actual-toe anchors. Neutral and wing frames align naturally. Downward dip is a near-ground pecking gesture; beak appears about5..10px above the support baseline at280px, so exact beak-ground contact is not certified. Full tail remains reserved independently of body scale."
+      }
+    }
+  ],
+  "existing_neutral_originals_unchanged": 7,
+  "source_pixels_edited_by_qa": false,
+  "evidence_directory": "D:\\temp\\animal-stock-expansion-20261111\\motion-qa",
+  "motion_review_method": "Native originals and canonical-registered cream/dark composites were viewed. Discrete GIF previews were decoded, timed and checked for neutral entry/exit, with first/last frames exact. This does not certify interpolation or final episode timing.",
+  "final_tool_preview_review": {
+    "status": "pass",
+    "checked_at_utc": "2026-11-11T11:08:14.362400+00:00",
+    "scope": "Final actual toolpreview for Siamese Cat v002, Fairy Pitta v001 and Onagadori v001",
+    "pose_reviews_viewed": [
+      "pipeline/final-preview-v001/siamese-cat/pose-review.png",
+      "pipeline/final-preview-v001/fairy-pitta/pose-review.png",
+      "pipeline/final-preview-v001/onagadori/pose-review.png"
+    ],
+    "bird_motion_review": "Both birds flutter and peck GIFs were fully decoded to duration-labelled frame filmstrips and reviewed. Each has5 frames, durations[500,140,200,140,500]ms and exact neutral first/last frames. Foot baseline, body scale, anatomy and long-tail clearance remain natural across the sequence.",
+    "new_findings": [],
+    "additional_generation_required": false,
+    "continued_contact_notes": "Pitta deepest beak remains about25..28px above support at280px display; Onagadori about5..10px. Describe downward pecking/dipping rather than guaranteed physical ground contact.",
+    "evidence": "final-tool-bird-gif-check.json and four *tool-*-filmstrip.png files in motion-qa."
+  }
+}
