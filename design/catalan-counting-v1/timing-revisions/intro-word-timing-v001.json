@@ -1,0 +1,69 @@
+{
+  "kind": "speech-bound-Catalan-intro-rule-timing",
+  "cue_id": "T000a",
+  "source_audio": {
+    "path": "output/catalan-counting-001-v001/speech/candidates-v001/T000a.wav",
+    "sha256": "f26ae24da0802246f91a584401fdf6e44062e1e5eceb0382d37fadacb8cc1180"
+  },
+  "timeline": {
+    "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/adopted-v002/timeline.json",
+    "sha256": "f0ebdfc20ffda765a74f9ef3329c0d5191a7edc36bca6289f35646ff4803cf86"
+  },
+  "accepted_aac": {
+    "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/adopted-v002/accepted-candidate-aac.m4a",
+    "sha256": "3e656f5bc066755d6d30a4accb910acff443de045a2a7cec08b6a48aab332b18"
+  },
+  "multiply_start_offset_s": 3.3,
+  "then_start_offset_s": 6.62,
+  "divide_start_offset_s": 6.82,
+  "measurement": "Fresh independent CTC from finalv005 left/right with80ms real context removed from token times; both channels agree.",
+  "evidence": [
+    {
+      "path": "design/catalan-counting-v1/production-qa/detail-recheck-20261112-02/audio/left/T000a-fresh-phonemes.json",
+      "sha256": "02b26f62839d1771177a65475c5527620a759df38cefde761b9fc9adc80e85fe"
+    },
+    {
+      "path": "design/catalan-counting-v1/production-qa/detail-recheck-20261112-02/audio/right/T000a-fresh-phonemes.json",
+      "sha256": "adeb3f8dd3663bd893d79c42f6c823ea06f6d60f3ed9fcfc3d9ec2675f84014e"
+    }
+  ],
+  "stages": [
+    {
+      "interval_s": [
+        0,
+        3.3
+      ],
+      "window": "LAST VALUE",
+      "moving_operation": null,
+      "idle_gaze_target": [
+        440,
+        470
+      ]
+    },
+    {
+      "interval_s": [
+        3.3,
+        6.62
+      ],
+      "window": "WHOLE PRODUCT",
+      "moving_operation": "multiply",
+      "idle_gaze_target": [
+        960,
+        470
+      ]
+    },
+    {
+      "interval_s": [
+        6.62,
+        8.660125
+      ],
+      "window": "NEXT VALUE",
+      "moving_operation": "divide",
+      "idle_gaze_target": [
+        1480,
+        470
+      ]
+    }
+  ],
+  "policy": "Hold the last-value window through take/last/value; start multiplication on multiply. Begin the divider transition at Then so it is active for divide. No timeline, speech, arithmetic or artwork change."
+}

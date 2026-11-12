@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "kind": "v004-audio-reencoded-copy-remux-and-visual-inheritance-review",
+  "created_at_utc": "2026-11-12T04:02:10.362970+00:00",
+  "passed": true,
+  "unresolved_findings": [],
+  "video": {
+    "path": "output/powers-of-two-counting-001-v001/video/v004-audio-reencoded/paspla-studio-powers-of-two-1-to-18446744073709551616-1080p.mp4",
+    "sha256": "ff0375d857354285fa9aebbe08f3f95072fd7f8ce9ed97947e0b3c0ada602e61"
+  },
+  "new_timeline": {
+    "path": "output/powers-of-two-counting-001-v001/audio-build/codec-v003/timeline.json",
+    "sha256": "7584bff038ca9e42951f09e5f0e61b44af1b5ceec3dd8d7453228d67a6ab735c"
+  },
+  "accepted_aac": {
+    "path": "output/powers-of-two-counting-001-v001/audio-build/codec-v003/accepted-aac.m4a",
+    "sha256": "6e3cbac811194a930b9523eb0a8546f3932199e695db9770d126f244a5218e3b"
+  },
+  "original_master": {
+    "path": "output/powers-of-two-counting-001-v001/audio-build/master.wav",
+    "sha256": "fc0564b0d474fcae762272cc243ce4facd19aebd38859cb6afdccae4778a5b52"
+  },
+  "root_reviewed_audio_acceptance": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/audio-correction-v001/candidate-review.json",
+    "sha256": "ce9cdee5de6913b759de21abf9c4763a95433d269fb854c8aee63ae611109c9a"
+  },
+  "copy_remux_identity_proof": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/remux-v004-final/verification.json",
+    "sha256": "f70cdd4fb36c7c83b489534b87ec5122c6c39780666141f80135624747f3b9b6"
+  },
+  "visual_inheritance_verification": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/v004-visual-inheritance/verification.json",
+    "sha256": "47652b4562783813078302388f0ba55e81678e1e1bc70db92886230dd8f52a10"
+  },
+  "fade_inheritance_verification": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/v004-fade-inheritance/verification.json",
+    "sha256": "4b4d94c599499f2c29b169e2353edf101724e3f2a0e65f4adf77c11a9e1446b6"
+  },
+  "source_fresh_visual_review": {
+    "path": "design/powers-of-two-counting-v1/recheck-20261112-v001/video/visual-review.json",
+    "sha256": "f9eba826b81d2090a1b9d297dde2f01612427f9955b897718e81ce2f97b6a1ab"
+  },
+  "summary": {
+    "H264_packets_with_identical_payload_PTS_DTS_duration_flags": 16954,
+    "native_decoded_YUV420p_frames_with_identical_MD5_and_timestamps": 16954,
+    "accepted_AAC_packets_identical_to_final_MP4": 26492,
+    "accepted_AAC_full_decoded_PCM_identical_to_final_MP4": {
+      "sha256": "a7917cd8d88c7dec24c27861e989cbc484adc5263864dbbb9cd712e9875b4104",
+      "bytes": 162755580,
+      "sample_frames_48k_stereo24": 27125930
+    },
+    "BT709_and_video_clock_extradata_identical": true,
+    "endpoints": {
+      "start_sample_48k": 0,
+      "expected_end_sample_48k": 27125930,
+      "actual_end_sample_48k": "27125930",
+      "audio_end_s": "2712593/4800",
+      "video_end_s": "8477/15",
+      "video_minus_audio_end_s": "47/4800"
+    }
+  },
+  "scope": "Executed authorized v004 audio-only streamcopy remux. New actual finalMP4 all16954nativeframes decoded and compared bit-exactly to freshly reviewed v003. Original all65value/64operation/per-digit/1px-two-axis/actor/quantity/fade observations inherited only after exactpixel/timestamp identity. NewAAC is the root-approved candidate; all26492packets and entire decodedPCM equal the accepted candidate, including sample count. No additional phonetic inference, fresh human full-length viewing/listening or repeated glyph scan claimed here. Shared adoption/catalog updates left to root.",
+  "preservation": "Original v003 MP4, old helper/preparation/QA, source master and shared catalogs preserved. Only new v004 and new QA/design files written."
+}

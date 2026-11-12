@@ -1,0 +1,62 @@
+ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/Users/support/.local/share/youtube-toolchain/ffmpeg/9.0.2 --enable-gpl --enable-libx264 --enable-static --disable-shared --disable-autodetect --enable-zlib --enable-videotoolbox --enable-audiotoolbox --enable-securetransport --disable-ffplay --disable-doc --disable-debug --pkg-config-flags=--static
+  libavutil      61.  1.102 / 61.  1.102
+  libavcodec     63.  1.102 / 63.  1.102
+  libavformat    63.  1.102 / 63.  1.102
+  libavdevice    63.  1.102 / 63.  1.102
+  libavfilter    12.  1.102 / 12.  1.102
+  libswscale     10.  1.102 / 10.  1.102
+  libswresample   7.  1.102 /  7.  1.102
+[in#0/wav @ 0x7a7ec24000] parser not found for codec pcm_s24le, packets or times may be invalid.
+    Last message repeated 1 times
+Input #0, wav, from 'output/powers-of-two-counting-001-v001/audio-build/master.wav':
+  Metadata:
+    encoder         : Lavf63.1.102
+  Duration: 00:09:25.12, bitrate: 2304 kb/s
+  Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+[out#0/ipod @ 0x7a7ec083c0] Adding streams from explicit maps...
+[aost#0:0/aac @ 0x7a7ec7c000] Created audio stream from input stream 0:0
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s24le (native) -> aac (native))
+[aost#0:0/aac @ 0x7a7ec7c000] Starting thread...
+[af#0:0 @ 0x7a7ec80000] Starting thread...
+[aist#0:0/pcm_s24le @ 0x7a7ec18180] [dec:pcm_s24le @ 0x7a7f00c3c0] Starting thread...
+[in#0/wav @ 0x7a7f00c000] Starting thread...
+[graph_-1_in_0:0 @ 0x7a7ec08c00] tb:1/48000 samplefmt:s32 samplerate:48000 chlayout:stereo
+[Parsed_aformat_0 @ 0x7a7ec08b40] auto-inserting filter 'auto_aresample_0' between the filter 'graph_-1_in_0:0' and the filter 'Parsed_aformat_0'
+[auto_aresample_0 @ 0x7a7ec08fc0] ch:2 chl:stereo fmt:s32 r:48000Hz -> ch:2 chl:stereo fmt:fltp r:48000Hz
+Output #0, ipod, to 'output/powers-of-two-counting-001-v001/recheck-20261112-v001/audio-correction-v001/candidate-original-master-auto-ms-no-is-pns.m4a':
+  Metadata:
+    encoder         : Lavf63.1.102
+  Stream #0:0: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, delay 1024, 192 kb/s
+    Metadata:
+      encoder         : Lavc63.1.102 aac
+[out#0/ipod @ 0x7a7ec083c0] Starting thread...
+size=     512KiB time=00:00:35.02 bitrate= 119.7kbits/s speed=68.7x elapsed=0:00:00.51    size=    1024KiB time=00:01:20.17 bitrate= 104.6kbits/s speed=78.6x elapsed=0:00:01.02    size=    1792KiB time=00:01:59.91 bitrate= 122.4kbits/s speed=78.7x elapsed=0:00:01.52    size=    2304KiB time=00:02:38.33 bitrate= 119.2kbits/s speed=77.9x elapsed=0:00:02.03    size=    3072KiB time=00:03:15.58 bitrate= 128.7kbits/s speed=76.9x elapsed=0:00:02.54    size=    3584KiB time=00:03:52.64 bitrate= 126.2kbits/s speed=76.2x elapsed=0:00:03.05    size=    4352KiB time=00:04:30.46 bitrate= 131.8kbits/s speed=75.9x elapsed=0:00:03.56    size=    5120KiB time=00:05:06.15 bitrate= 137.0kbits/s speed=75.2x elapsed=0:00:04.07    size=    5632KiB time=00:05:42.33 bitrate= 134.8kbits/s speed=74.7x elapsed=0:00:04.58    size=    6400KiB time=00:06:18.17 bitrate= 138.6kbits/s speed=74.3x elapsed=0:00:05.09    size=    7168KiB time=00:06:52.97 bitrate= 142.2kbits/s speed=73.7x elapsed=0:00:05.60    size=    7680KiB time=00:07:27.97 bitrate= 140.4kbits/s speed=73.4x elapsed=0:00:06.10    size=    8448KiB time=00:08:03.02 bitrate= 143.3kbits/s speed=73.1x elapsed=0:00:06.60    size=    9216KiB time=00:08:36.05 bitrate= 146.3kbits/s speed=72.5x elapsed=0:00:07.11    size=    9984KiB time=00:09:08.90 bitrate= 149.0kbits/s speed=  72x elapsed=0:00:07.61    [in#0/wav @ 0x7a7f00c000] EOF while reading input
+[in#0/wav @ 0x7a7f00c000] Terminating thread with return code 0 (success)
+[aist#0:0/pcm_s24le @ 0x7a7ec18180] [dec:pcm_s24le @ 0x7a7f00c3c0] Decoder thread received EOF packet
+[aist#0:0/pcm_s24le @ 0x7a7ec18180] [dec:pcm_s24le @ 0x7a7f00c3c0] Decoder returned EOF, finishing
+[aist#0:0/pcm_s24le @ 0x7a7ec18180] [dec:pcm_s24le @ 0x7a7f00c3c0] Terminating thread with return code 0 (success)
+[af#0:0 @ 0x7a7ec80000] Filtergraph returned EOF, finishing
+[af#0:0 @ 0x7a7ec80000] All consumers returned EOF
+[af#0:0 @ 0x7a7ec80000] Terminating thread with return code 0 (success)
+[aost#0:0/aac @ 0x7a7ec7c000] [enc:aac @ 0x7a7ec04bd0] Encoder thread received EOF
+[aost#0:0/aac @ 0x7a7ec7c000] Terminating thread with return code 0 (success)
+[out#0/ipod @ 0x7a7ec083c0] All streams finished
+[out#0/ipod @ 0x7a7ec083c0] Terminating thread with return code 0 (success)
+[ipod @ 0x7a7ec24280] Starting second pass: moving the moov atom to the beginning of the file
+[AVIOContext @ 0x7a7f00c640] Statistics: 10592678 bytes read, 0 seeks
+[AVIOContext @ 0x7a7f00c500] Statistics: 21274440 bytes written, 4 seeks, 85 writeouts
+[out#0/ipod @ 0x7a7ec083c0] Output file #0 (output/powers-of-two-counting-001-v001/recheck-20261112-v001/audio-correction-v001/candidate-original-master-auto-ms-no-is-pns.m4a):
+[out#0/ipod @ 0x7a7ec083c0]   Output stream #0:0 (audio): 26491 frames encoded (27125930 samples); 26492 packets muxed (10583743 bytes); 
+[out#0/ipod @ 0x7a7ec083c0]   Total: 26492 packets (10583743 bytes) muxed
+[out#0/ipod @ 0x7a7ec083c0] video:0KiB audio:10336KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.010361%
+size=   10440KiB time=00:09:25.12 bitrate= 151.3kbits/s speed=71.6x elapsed=0:00:07.89    
+[aac @ 0x7a7ec6ca80] Qavg: 19351.844
+[in#0/wav @ 0x7a7f00c000] Input file #0 (output/powers-of-two-counting-001-v001/audio-build/master.wav):
+[in#0/wav @ 0x7a7f00c000]   Input stream #0:0 (audio): 6623 packets read (162755580 bytes); 6623 frames decoded; 0 decode errors (27125930 samples); 
+[in#0/wav @ 0x7a7f00c000]   Total: 6623 packets (162755580 bytes) demuxed
+[AVIOContext @ 0x7a7f00c140] Statistics: 162821218 bytes read, 1 seeks
+
+Exiting with exit code 0

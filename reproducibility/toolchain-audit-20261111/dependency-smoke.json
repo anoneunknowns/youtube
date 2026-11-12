@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "node": "v26.13.0",
+  "npm_lock_versions": {
+    "@huggingface/transformers": "3.8.1",
+    "@huggingface/jinja": "0.5.12",
+    "kokoro-js": "1.2.1",
+    "onnxruntime-node": "1.21.0",
+    "onnxruntime-web": "1.22.0-dev.20250409-89f8206ba4",
+    "protobufjs": "7.6.6",
+    "sharp": "0.34.5",
+    "phonemizer": "1.2.1"
+  },
+  "imports": [
+    "KokoroTTS",
+    "AutoTokenizer",
+    "StyleTextToSpeech2Model",
+    "AutoProcessor",
+    "Wav2Vec2ForCTC",
+    "pipeline"
+  ],
+  "tensor_roundtrip": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "sharp_resize": {
+    "format": "png",
+    "width": 6,
+    "height": 6,
+    "channels": 4,
+    "premultiplied": true,
+    "size": 96
+  },
+  "phonemizer_input": "Two, three, five, seven.",
+  "phonemes": [
+    "tˈuː",
+    "θɹˈiː",
+    "fˈaɪv",
+    "sˈɛvən"
+  ],
+  "onnx_native_versions": {
+    "common": "1.21.0",
+    "node": "1.21.0"
+  },
+  "scope": "Imports, native tensor, native image encode/resize, phonemization. No model inference, TTS/ASR/CTC, video rendering or production-media QA."
+}

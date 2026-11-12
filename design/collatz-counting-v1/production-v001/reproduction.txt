@@ -1,0 +1,144 @@
+コラッツ本制作v001・採用入力からの再現手順 / 2026-11-12
+この手順はプロジェクトrootを作業ディレクトリとし、コマンド内のパスをroot相対で指定する。
+既存の採用WAV・ゲート・登録原画から組み直す。TTSや画像を再生成して同じ完成品を再現したと扱わない。
+以下のcollatz-reproduction-v001という出力先は未使用であることを確認し、既にあれば新しい専用名へ置き換える。旧出力・過去QAを削除して空けない。
+
+0. 環境と採用入力
+cd /Users/support/codex/youtube
+source .venv/bin/activate
+python --version
+node --version
+ffmpeg -version
+
+再現基準：Python3.15.2/Pillow13.0.0/FFmpeg9.0.2。source WAV24kmonoPCM16、master48kstereoPCM24、1080p30/H.264/yuv420p/BT.709/AAC192k。
+必要な採用入力：
+- design/collatz-counting-v1/script/script.json
+- design/collatz-counting-v1/math/verified-sequences.json
+- output/collatz-counting-001-v001/speech/measurements-selected-v002.jsonとspeech-acceptance.json、全採用WAVと参照証拠
+- design/collatz-counting-v1/generation-batches/collatz-preproduction-20261112-01a1cd57/source/waterworks-clean-plate.png
+- assets/library/characters/hedgehog/sources/v003/neutral.png
+- assets/library/characters/hedgehog/generation-batches/collatz-production-20261112-01a1cd57/の原画/来歴/登録
+- assets/library/render-sources/counting-garden/v001/MPLUSRounded1c-Black.ttfとOFL
+- tools/{build_collatz_episode.py,render_collatz_video.py,finalize_collatz_video.py,collatz_animation.py,verify_collatz_video.py}とそれらがimportする既存共通ツール
+
+1. 音声・実測timeline・字幕・章・概要を再構築
+python tools/build_collatz_episode.py build \
+  --manifest output/collatz-counting-001-v001/speech/measurements-selected-v002.json \
+  --gate output/collatz-counting-001-v001/speech/speech-acceptance.json \
+  --audio-out output/collatz-reproduction-v001/audio-build \
+  --ffmpeg .venv/bin/ffmpeg
+
+採用源・本文・ゲート・証拠SHAを検査してから、源ごとの一定gainと共通一定gainでミックスする。48kへの変換は再生速度を変えない。全143cue/129数詞/127演算/通常2秒/四説明境界/480秒以上を検証し、出力masterの音量を実測する。
+生成物：output/collatz-reproduction-v001/audio-build/{timeline.json,master.wav,subtitles.srt,english-captions.srt,captions/english.srt,chapters.txt,youtube-title.txt,youtube-description.txt,build-record.json}。
+同じ源でも異なるFFmpegやエンコーダーでbytes/SHAが変わる場合は、時刻・表示・音量・源対応を改めて検査する。
+
+2. 原寸全フレームの事前描画検査、preview、本レンダー
+rendererの通常CLIはcontractの保存先PRODが元production-v001に固定されている。歴史的contractを上書きしないよう、同じ公開Episode/render APIでPRODだけ新しい再現先へ向ける。元のPythonファイルは編集しない。
+
+python - <<'PY'
+from pathlib import Path
+import sys
+sys.path.insert(0, 'tools')
+import render_collatz_video as r
+r.PROD = Path('output/collatz-reproduction-v001/design')
+timeline = Path('output/collatz-reproduction-v001/audio-build/timeline.json')
+actor = Path('tools/collatz_animation.py')
+ep = r.Episode(timeline, animation=actor)
+print(ep.preflight(Path('output/collatz-reproduction-v001/native'), every_frame=True))
+ep = r.Episode(timeline, animation=actor)
+print(r.preview(ep, Path('output/collatz-reproduction-v001/preview')))
+ep = r.Episode(timeline, animation=actor)
+print(r.render(ep, Path('output/collatz-reproduction-v001/render')))
+PY
+
+音源を組み直さず現在の採用master/timelineを直接描画する場合、上記timelineの行だけを
+Path('output/collatz-counting-001-v001/audio-build/timeline.json')
+へ変更する。出力先とPRODは新しい専用先のままにする。
+本レンダー出力名：paspla-studio-collatz-sequence-7-and-27-1080p.mp4。
+
+元の本制作を実行したCLIの形式は次の通りだが、元production-v001のcontractを更新するため、履歴を保全する再現作業では上のAPI手順を使う。
+python tools/render_collatz_video.py render \
+  --timeline output/collatz-counting-001-v001/audio-build/timeline.json \
+  --out-dir output/collatz-counting-001-v001/render-v001
+（この出力先は完成品保全対象。再実行しない。）
+
+2b. 原レンダーを保全したままBT.709 VUIを最終化する
+初回のH.264にはCLI指定だけではprimaries/transferの両タグが明示されなかったため、映像・音声の再エンコードを行わずh264_metadataとstream copyで三つのBT.709タグを確定する。
+最終化ツールは元MP4と同じフォルダに納品用SRT/TXTがあることを必要とする。原143cue/全発話時刻を維持する再現なので、採用audio-buildから143cueの英語SRTとTXTを新しいraw renderフォルダへコピーする。既存のファイルへ上書きしない。
+
+python - <<'PY_COPY'
+from pathlib import Path
+metadata = Path('output/collatz-counting-001-v001/audio-build')
+render_dir = Path('output/collatz-reproduction-v001/render')
+for name in ('english-captions.srt', 'subtitles.srt', 'chapters.txt',
+             'youtube-title.txt', 'youtube-description.txt', 'upload-details.txt'):
+    with (render_dir / name).open('xb') as target:
+        target.write((metadata / name).read_bytes())
+PY_COPY
+python tools/finalize_collatz_video.py \
+  --source output/collatz-reproduction-v001/render/paspla-studio-collatz-sequence-7-and-27-1080p.mp4 \
+  --out-dir output/collatz-reproduction-v001/delivery-v001
+
+out-dirは未存在のフォルダを指定する。原render/のMP4・字幕・TXTは保全され、delivery-v001/へ最終MP4・納品資料・全RGB frame hash比較・全AAC packet/PTS比較・color-finalization.jsonが保存される。
+確認する三タグはcolor_primaries/color_transfer/color_space=bt709。全14,562 RGBフレームと22,754 AAC packetの内容・PTS等が一致して初めて、同じ元媒体の内容/演技/音声QAを継承できる。最終化先のtechnicalタグとファイルSHAは別に記録する。
+現行採用媒体はoutput/collatz-counting-001-v001/delivery-v001/paspla-studio-collatz-sequence-7-and-27-1080p.mp4、SHA256 dc2d1b88d1c9ee5cadccaa7ae74c72efedc1808c1c224a651ba64de3c887f8a0。元render-v001のMP4も履歴とQA継承の依存元として保持する。
+
+3. 最終化後の完成MP4を独立検査し、最終AACの実音声を143cueへ取り出す
+python tools/verify_collatz_video.py \
+  --timeline output/collatz-reproduction-v001/audio-build/timeline.json \
+  --video output/collatz-reproduction-v001/delivery-v001/paspla-studio-collatz-sequence-7-and-27-1080p.mp4 \
+  --master output/collatz-reproduction-v001/audio-build/master.wav \
+  --captions output/collatz-reproduction-v001/delivery-v001/english-captions.srt \
+  --out-dir output/collatz-reproduction-v001/qa-new \
+  --ffmpeg .venv/bin/ffmpeg \
+  --ffprobe .venv/bin/ffprobe \
+  --export-final-aac
+
+採用源gate、整数/逆数詞、129値/127演算/123通常2秒/四説明、全編decode、原寸両軸、算術図、更新途中、末尾fade、両音声channelの143源波形/gain/無音、SRT143cueを調べる。負の対照で主値が正しくても演算領域を凍結すると検出できることも確かめる。
+verification.jsonのpassだけで演出・動作・発音を無制限に保証しない。次項の新規認識と、原寸・全画面・連続動作の品質判断を別に行う。
+
+4. 再出力した最終AACを新規の単独ASR/CTCへ通す場合
+固定モデルcacheの利用が必要。既にcacheがある場合はネットワーク取得をせず確認する。
+python tools/portable_models.py --cache-root .model-cache --model all --check-only
+node tools/verify_square_speech.mjs \
+  --manifest output/collatz-reproduction-v001/qa-new/final-aac-clips/final-aac-manifest.json \
+  --out output/collatz-reproduction-v001/qa-new/final-aac-asr.json \
+  --cache .model-cache \
+  --ffmpeg .venv/bin/ffmpeg
+node tools/portable_verify_phonemes.mjs \
+  --manifest output/collatz-reproduction-v001/qa-new/final-aac-clips/final-aac-manifest.json \
+  --out output/collatz-reproduction-v001/qa-new/final-aac-phonemes.json \
+  --cache .model-cache \
+  --ffmpeg .venv/bin/ffmpeg
+
+ASRツール名はsquareだが、独立の数詞parser/単独推論入口として本作の143cue schemaを扱う。正解文や隣の数を推論へ与えない。抽出音は実AAC左channelに最大80msの前後余白を付け、左右それぞれの波形/gain検査とは区別する。
+ASR表記警告やCTCの弱母音/子音差は、源SHAと結び付けて個別判断する。ASR一致だけ、源との波形一致だけ、前後の数との文脈一致だけで発音警告を消さない。必要なら新しいQA先へguard・音響・全文take修正の証拠を保存する。
+
+4b. 最終AACの独立判断を完成QAへ束ねる場合
+ASR/CTCの出力を源SHAへ結び付けて個別に判断し、accepted:trueかつunresolvedなしのfinal-aac-recognition-review.jsonを新規QAへ保存する。推論を実行しただけでは採用にならない。
+新しく再生成した媒体のreviewを使う場合は、同じmedia SHAへ束縛されたreviewを--recognition-reviewで指定する。別のmedia SHAのreviewを使う場合は、--content-identityでそのreviewのsource_video_sha256から検査対象final SHAへの完全な画素/AAC/PTS一致を示す必要がある。新しいエンコードに古い認識の合格を自動継承しない。
+
+既存の採用raw renderを新規認識した判断は、BT.709最終化の一致証拠を使って現行deliveryへ継承できる。現行採用媒体を別の未使用QA先で再確認するコマンド例：
+python tools/verify_collatz_video.py \
+  --timeline output/collatz-counting-001-v001/audio-build/timeline.json \
+  --video output/collatz-counting-001-v001/delivery-v001/paspla-studio-collatz-sequence-7-and-27-1080p.mp4 \
+  --master output/collatz-counting-001-v001/audio-build/master.wav \
+  --captions output/collatz-counting-001-v001/delivery-v001/english-captions.srt \
+  --out-dir output/collatz-reproduction-v001/adopted-delivery-qa-new \
+  --recognition-review design/collatz-counting-v1/production-qa/v001/final-aac-recognition-v001/final-aac-recognition-review.json \
+  --content-identity output/collatz-counting-001-v001/delivery-v001/color-finalization.json \
+  --ffmpeg .venv/bin/ffmpeg \
+  --ffprobe .venv/bin/ffprobe
+
+最終の制作合格はrootが制作記録へ束ねた対象と範囲を正本とする。上のqa-newは将来の再現・再検査用の例であり、過去に不合格や途中結果を記録したQA先へ書き戻さない。
+
+5. 保存と採用
+完成MP4の原寸/全画面/連続動作、静止の長さ、適切な指示方向、顔/身体の跳ね、二重像、ちらつき、字幕/教材/発話対応、圧縮後の背景/顔/文字の精細さを確認し、新しい制作記録へ対象SHAと範囲を残す。
+共通カタログへの採用切替と画像バッチ引渡しはroot管理担当が直列実施する。root以外はactive予約領域や旧採用先を書き換えない。
+共通更新後のみ：
+python tools/verify_workspace.py
+python tools/update_production_archive.py --check
+
+再現用入力のwrite、commit、共有先反映、別PC取得、YouTube公開はそれぞれ別の作業状態として記録する。検査途中に完成を宣言せず、旧媒体・旧QA・候補・来歴を保全する。
+
+この手順書は最終化工程を反映した時点で凍結。以後のbrief・review・採用状態・最終QAリンクの確定はroot管理担当が行う。

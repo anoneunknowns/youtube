@@ -1,0 +1,14 @@
+三角数カウント 現行修正版v002
+
+状態：完成動画の修正2点・独立数学/画素/音声/字幕/技術/原寸演出の確認が合格。採用登録と全体照合の完了はproduction-closeout-v002.jsonで確認する。
+制作レビュー：production-review-v002.txt。現行実測台本：scenario-production-v002.txt。仕様：production-spec-v002.json。根拠：revision-v002/final-qa.json。
+旧production-run-v001と元企画・原画・媒体・音声・コードは保存済み。新規原画・TTS生成は不要。26登録姿を再利用し、実表示は22論理状態。完成8:01.43/1080p30/BT709。音声はv001合格AACを同じ時刻のままcopyする。
+
+再出力はリポジトリルートで未使用の動画出力先へ行う。
+.venv/bin/python tools/render_triangular_video_v002.py --timeline output/triangular-counting-001-v002/timeline.json --registry output/triangular-counting-001-v001/art-runtime/registration.json --out-dir output/triangular-v002-reproduction-new
+
+AACcopy元v001動画とtimelineはSHAで固定され、内容・時刻が変わった場合は停止する。描画と納品metadataを分担したため、再出力後に採用済み7納品ファイルをbyte同一で複写し、独立検査へ渡す。
+.venv/bin/python tools/verify_triangular_video_v002.py --video output/triangular-v002-reproduction-new/paspla-studio-triangular-numbers-0-to-1830-1080p-bt709.mp4 --timeline output/triangular-counting-001-v002/timeline.json --master output/triangular-counting-001-v001/audio-build/v002/master.wav --out-dir output/triangular-v002-reproduction-new-qa --phase all
+
+上の基本検査に加え、revision-v002/qa-math-visualの単数/notice/履歴の補助検査と原寸演出判断を対応付ける。全QAの入力・出力・snapshotはproduction-run-v002へ束縛する。
+保存状態：ローカル保存。Gitcommit/push・別PC検証・アップロードは実施していない。

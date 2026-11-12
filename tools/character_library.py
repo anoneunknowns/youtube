@@ -6,25 +6,53 @@ in original generation and QA records are historical provenance only.
 from __future__ import annotations
 
 import argparse
+from contextlib import ExitStack, contextmanager
 from datetime import datetime, timezone
 import hashlib
 import json
+import math
+import os
 from pathlib import Path, PureWindowsPath
 import sys
+import uuid
 import zipfile
 
 from PIL import Image, ImageChops, ImageDraw
 
+try:
+    from . import manage_character_assets as management
+except ImportError:  # Direct CLI execution, including an extracted bundle.
+    import manage_character_assets as management
+
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = 'catalogs/character-library-v1.json'
 FILES = 'catalogs/character-library-files-v1.json'
+PUBLICATION = 'catalogs/github-publication-v1.json'
 STOCK = 'assets/library/collections/animal-stock/v001/manifest.json'
 MOTIONS = 'assets/library/collections/animal-motions/v001/manifest.json'
 STYLE = 'assets/library/collections/animal-motions/v001/qa-evidence/series-style-review.json'
+EXPANSION = 'assets/library/collections/character-expansion/v001/manifest.json'
+EYECATCHES = 'assets/library/collections/character-eyecatches/v001/manifest.json'
+MANAGEMENT = 'catalogs/character-asset-management-v1.json'
 SCOPES = ['assets/library/characters', 'assets/library/collections/animal-stock/v001',
-          'assets/library/collections/animal-motions/v001']
+          'assets/library/collections/animal-motions/v001',
+          'assets/library/collections/character-expansion/v001',
+          'assets/library/collections/character-eyecatches/v001',
+          'assets/library/collections/character-style-audit/v001',
+          'assets/library/collections/character-management/v001']
 EXTRAS = ['assets/library/README.md', 'assets/library/AGENTS.md', 'tools/character_library.py',
-          'requirements.txt', INDEX]
+          'tools/register_character_expansion.py', 'tools/register_character_eyecatches.py', 'tools/component_alignment.py',
+          'tools/manage_character_assets.py', 'tools/audit_character_style.py',
+          'docs/IMAGE-ASSET-MANAGEMENT.md', 'docs/LAYOUT-ALIGNMENT.md',
+          'assets/library/character-assets.html', MANAGEMENT,
+          'catalogs/character-asset-registry-v1.json', 'requirements.txt', INDEX]
+# Videos are optional local production evidence. They are not published with
+# the portable artwork library; recorded provenance and registrations stay intact.
+LOCAL_VIDEO_EXTENSIONS = frozenset({
+    '.mp4', '.m4v', '.mov', '.mkv', '.webm', '.avi', '.wmv', '.flv', '.f4v',
+    '.mpeg', '.mpg', '.mpe', '.3gp', '.3g2', '.mts', '.m2ts', '.ts', '.vob',
+    '.ogv', '.m2v', '.divx', '.mxf', '.asf', '.qt', '.rm', '.rmvb',
+})
 NAMES = {'bear-beret': ('赤い帽子のクマ', 'Bear'), 'rabbit-beret': ('ピンクのウサギ', 'Rabbit'),
          'tora': ('とら', 'Tora'), 'little-bird': ('小鳥', 'Little Bird'),
          'siamese-cat': ('シャム猫', 'Siamese Cat'), 'red-panda': ('レッサーパンダ', 'Red Panda'),
@@ -56,24 +84,190 @@ def write(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 
+def pending_generation_roots(root):
+    """Keep a new live-writer tree pending without hiding inventoried originals."""
+    root = Path(root).resolve()
+    config_path = publication_path(root, MANAGEMENT)
+    if not config_path.is_file():
+        return []
+    config = read(config_path)
+    previous_path = publication_path(root, FILES)
+    previous = read(previous_path)['files'] if previous_path.is_file() else []
+    pending = []
+    for reservation in config.get('reservations', []):
+        if reservation.get('status') != 'active':
+            continue
+        if not reservation.get('id') or not reservation.get('owner'):
+            raise ValueError('Active asset reservation needs an id and owner')
+        path = management.lexical_path(root, reservation['root'])
+        relative = management.lexical_relative(root, path)
+        if not relative.startswith('assets/library/characters/') or len(Path(relative).parts) < 5:
+            raise ValueError('Generation reservation must name a new character batch')
+        if any(management.contains(relative, entry['path']) for entry in previous):
+            raise ValueError('Active reservation cannot hide already inventoried files; use a new generation batch')
+        pending.append(path)
+    return pending
+
+
+@contextmanager
+def reservation_snapshot(root):
+    """Keep reservations stable until the last source read in an operation."""
+    root = Path(root).resolve()
+    config = publication_path(root, MANAGEMENT)
+    with management.lock(config.with_suffix(config.suffix + '.lock')):
+        yield root
+
+
 def inventory_paths(root):
-    paths = set(EXTRAS)
+    with reservation_snapshot(root) as root:
+        return _inventory_paths_locked(root)
+
+
+def _inventory_paths_locked(root):
+    root = Path(root).resolve()
+    pending = pending_generation_roots(root)
+    profile = publication_path(root, PUBLICATION)
+    if profile.is_file():
+        return _published_inventory_paths_locked(root, read(profile), pending)
+    def is_pending(path):
+        return any(management.contains(prefix.as_posix(), path.as_posix()) for prefix in pending)
+    paths = {relative for relative in EXTRAS
+             if Path(relative).suffix.lower() not in LOCAL_VIDEO_EXTENSIONS
+             and not is_pending(management.lexical_path(root, relative))}
     for scope in SCOPES:
-        for path in resolve(root, scope).rglob('*'):
-            if path.is_file() and '__pycache__' not in path.parts and path.suffix != '.pyc':
-                paths.add(path.relative_to(root).as_posix())
+        directory = management.lexical_path(root, scope)
+        if is_pending(directory):
+            continue
+        for current, directories, names in os.walk(readable_source(root, scope, pending), followlinks=False):
+            here = Path(current)
+            # Exclude the lexical writer tree before following file links or
+            # visiting its contents. A live input-reference link can resolve
+            # onto a frozen original outside this tree without being finished.
+            if is_pending(here):
+                directories[:] = []
+                continue
+            directories[:] = [name for name in directories if name != '__pycache__'
+                              and not is_pending(here / name)]
+            for name in names:
+                path = here / name
+                if is_pending(path) or path.suffix.lower() in LOCAL_VIDEO_EXTENSIONS:
+                    continue
+                if path.is_symlink():
+                    raise ValueError(f'Library source file must not be a symlink: {path.relative_to(root).as_posix()}')
+                if path.is_file() and path.suffix != '.pyc':
+                    paths.add(path.relative_to(root).as_posix())
     return sorted(paths)
 
 
-def refresh(root):
-    stock, motions, style = [read(resolve(root, path)) for path in (STOCK, MOTIONS, STYLE)]
+def _publication_paths(value, label):
+    if not isinstance(value, list) or any(not isinstance(path, str) for path in value):
+        raise ValueError(f'Publication {label} must be a list of relative path strings')
+    if len(value) != len(set(value)):
+        raise ValueError(f'Publication {label} contains duplicate paths')
+    for path in value:
+        if (not path or '\\' in path or Path(path).is_absolute() or PureWindowsPath(path).drive
+                or any(part in ('', '.', '..') for part in path.split('/'))):
+            raise ValueError(f'Publication path must be canonical and root-relative: {path}')
+    return set(value)
+
+
+def _required_current_library_paths_locked(root, pending):
+    """Derive required adopted sources independently of the publication list."""
+    index = _build_index_locked(root)
+    required = {PUBLICATION, *EXTRAS, STYLE}
+    required.update(item['path'] for item in index['source_collections'])
+    for character in index['characters']:
+        neutral = character['neutral']
+        required.update(neutral[key] for key in ('path', 'source_manifest') if neutral.get(key))
+        for block_name in ('key_poses', 'expanded_key_poses', 'eyecatch_key_poses'):
+            block = character.get(block_name)
+            if not block:
+                continue
+            required.update(block[key] for key in ('registration', 'preview', 'motion_preview') if block.get(key))
+            required.update(frame['path'] for frame in block['poses'].values())
+            registration = read(readable_source(root, block['registration'], pending))
+            if registration.get('source_sheet'):
+                required.add(registration['source_sheet'])
+            for sheet in registration.get('sheets', []):
+                required.add(sheet['source_sheet'])
+                required.update(sheet[key] for key in ('generation_input', 'generation_prompt') if sheet.get(key))
+    return required
+
+
+def _published_inventory_paths_locked(root, profile, pending):
+    if (not isinstance(profile, dict) or profile.get('schema_version') != 1
+            or profile.get('scope') != 'current-only-nonvideo'):
+        raise ValueError('Unsupported character publication profile')
+    published = _publication_paths(profile.get('files'), 'files')
+    selected = _publication_paths(profile.get('character_library_files'), 'character_library_files')
+    if not selected <= published:
+        raise ValueError('Character publication files must be included in published files')
+    if FILES in selected:
+        raise ValueError('Character publication cannot inventory its own file inventory')
+    for relative in selected:
+        if Path(relative).suffix.lower() in LOCAL_VIDEO_EXTENSIONS:
+            raise ValueError(f'Video media cannot be a required publication file: {relative}')
+        if any(part.casefold() in ('candidates', 'generation-candidates') for part in Path(relative).parts):
+            raise ValueError(f'Unselected candidate directory cannot be published: {relative}')
+        readable_source(root, relative, pending)
+    required = _required_current_library_paths_locked(root, pending)
+    if missing := sorted(required - selected):
+        raise ValueError(f'Publication omits required adopted library source: {missing[0]}')
+    return sorted(selected)
+
+
+def readable_source(root, relative, pending):
+    """Reject live paths and aliases before resolving or opening a source."""
+    if not isinstance(relative, str) or Path(relative).is_absolute() or PureWindowsPath(relative).drive:
+        raise ValueError(f'Operational path must be root-relative: {relative}')
+    base = Path(root).resolve()
+    lexical = Path(os.path.abspath(base / relative))
+    if not lexical.is_relative_to(base):
+        raise ValueError(f'Path leaves library root: {relative}')
+    if any(management.contains(prefix.as_posix(), lexical.as_posix()) for prefix in pending):
+        raise ValueError(f'Library source is inside an active generation tree: {relative}')
+    path = base
+    for part in lexical.relative_to(base).parts:
+        path = path / part
+        if path.is_symlink():
+            raise ValueError(f'Library source path must not contain a symlink: {relative}')
+    return lexical
+
+
+def build_index(root):
+    with reservation_snapshot(root) as root:
+        return _build_index_locked(root)
+
+
+def _build_index_locked(root):
+    pending = pending_generation_roots(root)
+    def source_path(relative):
+        return readable_source(root, relative, pending)
+    def registration_source(relative):
+        registration = read(source_path(relative))
+        if registration.get('source_sheet'):
+            source_path(registration['source_sheet'])
+        for sheet in registration.get('sheets', []):
+            source_path(sheet['source_sheet'])
+        for frame in registration['frames']:
+            source_path(frame['path'])
+        return registration
+    stock, motions, style = [read(source_path(path)) for path in (STOCK, MOTIONS, STYLE)]
     selected = {item['id']: item for item in stock['items']}
     movements = {item['id']: item for item in motions['items']}
     records = {item['id']: item for item in style['records']}
+    expansion = read(source_path(EXPANSION)) if source_path(EXPANSION).is_file() else None
+    additions = {item['id']: item for item in expansion['items']} if expansion else {}
+    if expansion and expansion.get('status') != 'stocked-and-assistant-reviewed':
+        raise ValueError('Only an explicitly reviewed expansion may be adopted')
+    eyecatches = read(source_path(EYECATCHES)) if source_path(EYECATCHES).is_file() else None
+    eye_additions = {item['id']: item for item in eyecatches['items']} if eyecatches else {}
+    if eyecatches and eyecatches.get('status') != 'stocked-and-assistant-reviewed':
+        raise ValueError('Only an explicitly reviewed eye-catch collection may be adopted')
     characters = []
     for identity, (ja, en) in NAMES.items():
         source = records[identity]
-        with Image.open(resolve(root, source['path'])) as image:
+        with Image.open(readable_source(root, source['path'], pending)) as image:
             size = list(image.size)
         region = source.get('crop_px', [0, 0, *size])
         item = {
@@ -89,7 +283,7 @@ def refresh(root):
         if identity in selected:
             canonical = selected[identity]
             movement = movements[identity]
-            registration = read(resolve(root, movement['registration']))
+            registration = registration_source(movement['registration'])
             item['canonical_source_version'] = canonical['source_version']
             item['neutral']['source_manifest'] = canonical['source_manifest_path']
             item['neutral']['source_manifest_sha256'] = canonical['source_manifest_sha256']
@@ -105,6 +299,61 @@ def refresh(root):
             }
         else:
             item['legacy_usage'] = 'Use existing episode adapters for legacy reactions. The generic key-pose loader exposes this reviewed neutral only.'
+        if identity in additions:
+            movement = additions[identity]
+            if sha(readable_source(root, movement['registration'], pending)) != movement['registration_sha256']:
+                raise ValueError(f'Expansion registration changed: {identity}')
+            registration = registration_source(movement['registration'])
+            if (registration.get('canonical_neutral', {}).get('path') != item['neutral']['path']
+                    or registration.get('canonical_neutral', {}).get('sha256') != item['neutral']['sha256']):
+                raise ValueError(f'Expansion canonical neutral differs from adopted source: {identity}')
+            # Add an explicit namespace. Existing adapters index key_poses and
+            # its common scale directly; changing that block would silently
+            # change concurrent episodes merely because new stock was saved.
+            poses = {}
+            for frame in registration['frames']:
+                pose_id = frame['id']
+                poses[pose_id] = {key: frame[key] for key in
+                    ['path', 'sha256', 'size_px', 'anchor_px', 'body_bbox_px', 'tail_bbox_px', 'reference_height_px']}
+                poses[pose_id].update(sheet_id=frame['sheet_id'], frame_id=frame['id'])
+            item['expanded_key_poses'] = {
+                'version': 'v002', 'registration': movement['registration'],
+                'registration_sha256': movement['registration_sha256'],
+                'namespace': 'expanded/', 'coordinate_space': 'individual exact cell PNG',
+                'reference_height_policy': 'One calibrated standing reference height per source sheet; each frame carries its sheet reference. Never fit each pose.',
+                'sheet_reference_heights_px': {sheet['id']: sheet['reference_height_px'] for sheet in registration['sheets']},
+                'poses': poses, 'preview': movement['preview'], 'motion_preview': movement['motion_preview'],
+            }
+            item['availability'] = 'reviewed-neutral-and-expanded-key-poses'
+            item['expansion_collection'] = EXPANSION
+        if identity in eye_additions:
+            movement = eye_additions[identity]
+            if sha(readable_source(root, movement['registration'], pending)) != movement['registration_sha256']:
+                raise ValueError(f'Eye-catch registration changed: {identity}')
+            registration = registration_source(movement['registration'])
+            if (registration.get('canonical_neutral', {}).get('path') != item['neutral']['path']
+                    or registration.get('canonical_neutral', {}).get('sha256') != item['neutral']['sha256']):
+                raise ValueError(f'Eye-catch canonical neutral differs from adopted source: {identity}')
+            # Add an explicit namespace. Existing adapters index key_poses and
+            # its common scale directly; changing that block would silently
+            # change concurrent episodes merely because new stock was saved.
+            poses = {}
+            for frame in registration['frames']:
+                pose_id = frame['id']
+                poses[pose_id] = {key: frame[key] for key in
+                    ['path', 'sha256', 'size_px', 'anchor_px', 'body_bbox_px', 'tail_bbox_px', 'reference_height_px']}
+                poses[pose_id].update(sheet_id=frame['sheet_id'], frame_id=frame['id'])
+            item['eyecatch_key_poses'] = {
+                'version': 'v001', 'registration': movement['registration'],
+                'registration_sha256': movement['registration_sha256'],
+                'namespace': 'eyecatch/', 'coordinate_space': 'individual exact cell PNG',
+                'reference_height_policy': 'One calibrated standing reference height per source sheet; each frame carries its sheet reference. Never fit each pose.',
+                'sheet_reference_heights_px': {sheet['id']: sheet['reference_height_px'] for sheet in registration['sheets']},
+                'poses': poses, 'preview': movement['preview'], 'motion_preview': movement['motion_preview'],
+                'clips': registration.get('clips', {}),
+            }
+            item['availability'] = 'reviewed-neutral-with-supplemental-eyecatches'
+            item['eyecatch_collection'] = EYECATCHES
         characters.append(item)
     index = {
         'schema_version': 1, 'kind': 'portable-character-library-index',
@@ -112,110 +361,308 @@ def refresh(root):
         'agent_instructions': 'assets/library/AGENTS.md',
         'coordinate_units': 'source pixels; xyxy boxes use exclusive right/bottom',
         'selection_policy': 'Use these explicit adopted paths, never the largest version number or an unselected trial.',
-        'source_collections': [{'path': path, 'sha256': sha(resolve(root, path))} for path in (STOCK, MOTIONS)],
+        'source_collections': [{'path': path, 'sha256': sha(readable_source(root, path, pending))} for path in
+                               ([STOCK, MOTIONS] + ([EXPANSION] if expansion else []) + ([EYECATCHES] if eyecatches else []))],
         'usage_rules': ['Preserve the canonical face, palette, texture, contour and species markings.',
-                        'Use target_body_height / reference_height as one isotropic scale for all key poses of a species.',
+                        'Use target_body_height / reference_height as one isotropic scale for all poses from a calibrated source sheet; never fit individual poses.',
                         'Align the anatomical foot anchor; do not fit each pose bounding box or long tail footprint.',
                         'Saved PNG alpha and pixels are originals or lossless cell extractions. Alpha254 is valid.',
                         'Absolute generation/QA paths are historical records, not runtime dependencies.',
                         'Peck keys are downward gestures; exact beak/ground contact is not guaranteed.',
+                        'New expansion poses require expanded/<pose>; unprefixed poses and the canonical neutral retain their original selections.',
+                        'Eye-catch poses require eyecatch/<pose>; prior original and expanded selections are unchanged.',
                         'Key poses are reviewed stock. Actual episode timing, clearance and continuous movement need scene review.'],
         'characters': characters,
     }
-    write(resolve(root, INDEX), index)
+    for character in characters:
+        for key in ('path', 'source_manifest'):
+            if character['neutral'].get(key) is not None:
+                readable_source(root, character['neutral'][key], pending)
+        for block_name in ('key_poses', 'expanded_key_poses', 'eyecatch_key_poses'):
+            block = character.get(block_name)
+            if block:
+                for key in ('registration', 'preview', 'motion_preview'):
+                    if block.get(key) is not None:
+                        readable_source(root, block[key], pending)
+    return index
+
+
+def publication_path(root, relative):
+    """Keep fixed catalog outputs from resolving onto original asset files."""
+    path = Path(root).resolve()
+    for part in Path(relative).parts:
+        path = path / part
+        if path.is_symlink():
+            raise ValueError(f'Library publication path must not contain a symlink: {path}')
+    return path
+
+
+def snapshot_files(root, index_payload):
+    with reservation_snapshot(root) as root:
+        return _snapshot_files_locked(root, index_payload)
+
+
+def _snapshot_files_locked(root, index_payload):
+    """Measure a stable source set while accounting for the proposed index."""
+    pending = pending_generation_roots(root)
     files = []
-    for relative in inventory_paths(root):
-        path = resolve(root, relative)
-        files.append({'path': relative, 'bytes': path.stat().st_size, 'sha256': sha(path)})
-    write(resolve(root, FILES), {'schema_version': 1, 'kind': 'character-library-file-inventory',
-                               'path_base': 'library-root', 'files': files,
-                               'scope': 'Complete eleven character folders, both stock collections, AI guide, loader and requirements; historical trials retained.'})
-    return {'status': 'pass', 'action': 'refresh', 'characters': len(characters), 'files': len(files)}
+    paths = set(_inventory_paths_locked(root)) | {INDEX}
+    # These control files are not source data, even in a caller's broader scan.
+    paths -= {FILES, *(path + '.lock' for path in (MANAGEMENT, INDEX, FILES))}
+    for relative in sorted(paths):
+        if relative == INDEX:
+            files.append({'path': INDEX, 'bytes': len(index_payload),
+                          'sha256': management.checksum(index_payload)})
+        else:
+            record, _ = management.file_record(root, readable_source(root, relative, pending))
+            record['path'] = relative
+            files.append(record)
+    return files
+
+
+def refresh(root):
+    root = Path(root).resolve()
+    config = publication_path(root, MANAGEMENT)
+    index_path, files_path = [publication_path(root, relative) for relative in (INDEX, FILES)]
+    guards = {path: management.current_hash(path)
+              for path in (config, index_path, files_path, publication_path(root, PUBLICATION))}
+    temporary = []
+    # reserve/release and management publication use the same config lock.
+    # Hold it throughout the scans and publication so new writer claims cannot
+    # turn a source set we just measured into an active generation tree.
+    with ExitStack() as stack:
+        for path in (config, index_path, files_path):
+            stack.enter_context(management.lock(path.with_suffix(path.suffix + '.lock')))
+        def check_guards():
+            for path, expected in guards.items():
+                if management.current_hash(path) != expected:
+                    raise ValueError(f'Concurrent library/config edit detected: {path}')
+        check_guards()
+        first_index = _build_index_locked(root)
+        first_payload = management.canonical_json(first_index)
+        first_files = _snapshot_files_locked(root, first_payload)
+        index = _build_index_locked(root)
+        index_payload = management.canonical_json(index)
+        files = _snapshot_files_locked(root, index_payload)
+        check_guards()
+        if first_index != index or first_files != files:
+            raise ValueError('Library sources changed during scan; reserve active writer roots and retry')
+        scope = ('Current adopted character sources and explicitly selected publication files; local historical trials and video media are excluded. Historical metadata references do not make omitted files required.'
+                 if publication_path(root, PUBLICATION).is_file() else
+                 'Frozen character folders, stock and management evidence, guides and tools; historical trials retained. Video media is optional local evidence and excluded from this inventory and portable ZIP; provenance references are preserved. New active writer roots are pending in the management registry and excluded until handoff.')
+        inventory = {'schema_version': 1, 'kind': 'character-library-file-inventory',
+                     'path_base': 'library-root', 'files': files,
+                     'scope': scope}
+        try:
+            # Prepare both complete files before replacing either. The two
+            # replacements are guarded publication, not a multi-file transaction.
+            for path, payload in [(index_path, index_payload), (files_path, management.canonical_json(inventory))]:
+                staged = path.with_name(path.name + '.tmp-' + uuid.uuid4().hex)
+                temporary.append(staged)
+                with staged.open('xb') as stream:
+                    stream.write(payload)
+                    stream.flush()
+                    os.fsync(stream.fileno())
+            check_guards()
+            for relative in (INDEX, FILES):
+                publication_path(root, relative)
+            for staged, destination in zip(temporary, (index_path, files_path)):
+                os.replace(staged, destination)
+        finally:
+            for staged in temporary:
+                if staged.exists():
+                    staged.unlink()
+    return {'status': 'pass', 'action': 'refresh', 'characters': len(index['characters']), 'files': len(files)}
 
 
 def load_pose(root, identity, pose='neutral'):
-    """Return (RGBA image, image-local foot anchor, common reference height)."""
-    index = read(resolve(root, INDEX))
+    """Return (RGBA image, local support anchor, calibrated sheet reference height)."""
+    with reservation_snapshot(root) as root:
+        return _load_pose_locked(root, identity, pose)
+
+
+def _load_pose_locked(root, identity, pose='neutral', pending=None):
+    if pending is None:
+        pending = pending_generation_roots(root)
+    def source_path(relative):
+        return readable_source(root, relative, pending)
+    index = read(source_path(INDEX))
     matches = [item for item in index['characters'] if item['id'] == identity]
     if len(matches) != 1:
         raise ValueError(f'Unknown character: {identity}')
     character = matches[0]
-    if pose == 'neutral':
+    if pose.startswith(('expanded/', 'eyecatch/')):
+        prefix, name = pose.split('/', 1)
+        block = 'expanded_key_poses' if prefix == 'expanded' else 'eyecatch_key_poses'
+        record = character.get(block, {}).get('poses', {}).get(name)
+        if record is None:
+            raise ValueError(f'No explicitly adopted {prefix} pose {identity}/{name}')
+        with Image.open(source_path(record['path'])) as opened:
+            image = opened.copy()
+        anchor = record['anchor_px']
+    elif pose == 'neutral':
         record = character['neutral']
         region = record['image_region_px']
-        with Image.open(resolve(root, record['path'])) as opened:
+        with Image.open(source_path(record['path'])) as opened:
             image = opened.crop(region)
         anchor = [record['anchor_px'][0] - region[0], record['anchor_px'][1] - region[1]]
     else:
         record = character.get('key_poses', {}).get('poses', {}).get(pose)
         if record is None:
             raise ValueError(f'No generic reviewed pose {identity}/{pose}; see the library guide for legacy adapters')
-        with Image.open(resolve(root, record['path'])) as opened:
+        with Image.open(source_path(record['path'])) as opened:
             image = opened.copy()
         anchor = record['anchor_px']
     return image, anchor, record['reference_height_px']
 
 
+def verify_pose_registration(root, registration, identity):
+    """Validate old and multi-sheet registrations independently of pose aliases."""
+    with reservation_snapshot(root) as root:
+        return _verify_pose_registration_locked(root, registration, identity)
+
+
+def _verify_pose_registration_locked(root, registration, identity, pending=None):
+    if pending is None:
+        pending = pending_generation_roots(root)
+    def source_path(relative):
+        return readable_source(root, relative, pending)
+    sheets = ({sheet['id']: sheet for sheet in registration['sheets']}
+              if registration.get('sheets') else None)
+    if sheets and len(sheets) != len(registration['sheets']):
+        raise ValueError('Duplicate source sheet identifier')
+    seen, output, opened_sheets = set(), [], {}
+    for frame in registration['frames']:
+        if frame['id'] in seen:
+            raise ValueError('Duplicate registered pose identifier')
+        seen.add(frame['id'])
+        source = sheets[frame['sheet_id']] if sheets else registration
+        reference = source['reference_height_px'] if sheets else registration['common_reference_height_px']
+        if (isinstance(reference, bool) or not isinstance(reference, (int, float))
+                or not math.isfinite(reference) or reference <= 0
+                or frame['reference_height_px'] != reference):
+            raise ValueError(f'Pose sheet scale changed: {identity}/{frame["id"]}')
+        if sheets and (frame['source_sheet'] != source['source_sheet']
+                       or frame['source_sheet_sha256'] != source['source_sheet_sha256']):
+            raise ValueError('Pose source sheet differs from its calibration')
+        sheet_path = source_path(source['source_sheet'])
+        if source['source_sheet'] not in opened_sheets:
+            if sha(sheet_path) != source['source_sheet_sha256']:
+                raise ValueError('Generated source sheet changed')
+            with Image.open(sheet_path) as opened:
+                opened_sheets[source['source_sheet']] = opened.copy()
+        sheet = opened_sheets[source['source_sheet']]
+        path = source_path(frame['path'])
+        if sha(path) != frame['sha256']:
+            raise ValueError('Pose PNG changed')
+        with Image.open(path) as image:
+            crop = sheet.crop(frame['crop_from_sheet_xyxy'])
+            if (image.mode != 'RGBA' or image.size != crop.size or image.size != tuple(frame['size_px'])
+                    or image.tobytes() != crop.tobytes()):
+                raise ValueError(f'Pose pixels changed: {identity}/{frame["id"]}')
+            anchor = frame['anchor_px']
+            if (len(anchor) != 2 or not all(isinstance(value, (int, float)) and math.isfinite(value) for value in anchor)
+                    or not 0 <= anchor[0] <= image.width or not 0 <= anchor[1] <= image.height):
+                raise ValueError('Invalid pose support anchor')
+            alpha = image.getchannel('A')
+            if alpha.getextrema()[0] != 0 or alpha.getextrema()[1] < 240:
+                raise ValueError('Invalid source transparency')
+            visible = alpha.point(lambda a: 255 if a >= 8 else 0).getbbox()
+            if visible is None or min(visible[0], visible[1], image.width - visible[2], image.height - visible[3]) < 2:
+                raise ValueError('Empty or clipped source pose')
+            if identity == 'onagadori':
+                union = Image.new('L', image.size, 0)
+                draw = ImageDraw.Draw(union)
+                for box in [frame['body_bbox_px'], frame['tail_bbox_px']]:
+                    if box is None:
+                        raise ValueError('Onagadori needs separate body and tail bounds')
+                    draw.rectangle((box[0], box[1], box[2] - 1, box[3] - 1), fill=255)
+                if ImageChops.subtract(alpha.point(lambda a: 255 if a >= 8 else 0), union).getbbox():
+                    raise ValueError('Long tail leaves its registered body/tail bounds')
+        output.append(frame)
+    return output
+
+
 def verify(root):
-    inventory = read(resolve(root, FILES))
+    with reservation_snapshot(root) as root:
+        return _verify_locked(root)
+
+
+def _verify_locked(root):
+    pending = pending_generation_roots(root)
+    def source_path(relative):
+        return readable_source(root, relative, pending)
+    inventory = read(source_path(FILES))
     expected = {entry['path'] for entry in inventory['files']}
-    if expected != set(inventory_paths(root)):
+    if expected != set(_inventory_paths_locked(root)):
         raise ValueError('Library inventory is stale; review changes and run refresh')
     for entry in inventory['files']:
-        path = resolve(root, entry['path'])
+        path = source_path(entry['path'])
         if not path.is_file() or path.stat().st_size != entry['bytes'] or sha(path) != entry['sha256']:
             raise ValueError(f'Missing or changed library file: {entry["path"]}')
-    index = read(resolve(root, INDEX))
+    index = read(source_path(INDEX))
     frames = 0
+    neutral_sources = set()
     for collection in index['source_collections']:
-        if sha(resolve(root, collection['path'])) != collection['sha256']:
+        if sha(source_path(collection['path'])) != collection['sha256']:
             raise ValueError('Adopted collection changed')
     for character in index['characters']:
         neutral = character['neutral']
-        if sha(resolve(root, neutral['path'])) != neutral['sha256']:
+        if sha(source_path(neutral['path'])) != neutral['sha256']:
             raise ValueError(f'Neutral changed: {character["id"]}')
-        image, anchor, height = load_pose(root, character['id'])
+        neutral_sources.add(source_path(neutral['path']))
+        image, anchor, height = _load_pose_locked(root, character['id'], pending=pending)
         if image.mode != 'RGBA' or not (0 <= anchor[0] <= image.width and 0 <= anchor[1] <= image.height) or height <= 0:
             raise ValueError('Invalid neutral geometry')
-        keys = character.get('key_poses')
-        if not keys:
-            continue
-        if sha(resolve(root, keys['registration'])) != keys['registration_sha256']:
-            raise ValueError('Pose registration changed')
-        registration = read(resolve(root, keys['registration']))
-        with Image.open(resolve(root, registration['source_sheet'])) as sheet:
-            if sha(resolve(root, registration['source_sheet'])) != registration['source_sheet_sha256']:
-                raise ValueError('Generated source sheet changed')
-            for frame in registration['frames']:
-                image, anchor, height = load_pose(root, character['id'], frame['id'])
-                if (image.mode != 'RGBA' or image.tobytes() != sheet.crop(frame['crop_from_sheet_xyxy']).tobytes()
-                        or height != keys['common_reference_height_px']
-                        or sha(resolve(root, frame['path'])) != frame['sha256']):
-                    raise ValueError(f'Pose pixels or common scale changed: {character["id"]}/{frame["id"]}')
-                alpha = image.getchannel('A')
-                if alpha.getextrema()[0] != 0 or alpha.getextrema()[1] < 240:
-                    raise ValueError('Invalid source transparency')
-                if character['id'] == 'onagadori':
-                    union = Image.new('L', image.size, 0)
-                    draw = ImageDraw.Draw(union)
-                    for box in [frame['body_bbox_px'], frame['tail_bbox_px']]:
-                        draw.rectangle((box[0], box[1], box[2] - 1, box[3] - 1), fill=255)
-                    if ImageChops.subtract(alpha.point(lambda a: 255 if a >= 8 else 0), union).getbbox():
-                        raise ValueError('Long tail leaves its registered body/tail bounds')
+        for block, prefix in [('key_poses', ''), ('expanded_key_poses', 'expanded/'), ('eyecatch_key_poses', 'eyecatch/')]:
+            keys = character.get(block)
+            if not keys:
+                continue
+            if sha(source_path(keys['registration'])) != keys['registration_sha256']:
+                raise ValueError('Pose registration changed')
+            registration = read(source_path(keys['registration']))
+            if block == 'key_poses' and keys['common_reference_height_px'] != registration['common_reference_height_px']:
+                raise ValueError('Original pose common scale differs from registration')
+            if block in ('expanded_key_poses', 'eyecatch_key_poses') and keys['sheet_reference_heights_px'] != {
+                    sheet['id']: sheet['reference_height_px'] for sheet in registration['sheets']}:
+                raise ValueError('Supplemental pose sheet scales differ from registration')
+            native_frames = _verify_pose_registration_locked(root, registration, character['id'], pending=pending)
+            registered = {frame['id']: frame for frame in native_frames}
+            if len(registered) != len(native_frames) or set(registered) != set(keys['poses']):
+                raise ValueError('Selected pose coverage differs from registration')
+            for pose_id, record in keys['poses'].items():
+                frame = registered[pose_id]
+                if (record['path'] != frame['path']
+                        or ('frame_id' in record and record['frame_id'] != pose_id)
+                        or ('sheet_id' in record and record['sheet_id'] != frame.get('sheet_id'))
+                        or (block in ('expanded_key_poses', 'eyecatch_key_poses')
+                            and (record.get('frame_id') != pose_id or record.get('sheet_id') != frame.get('sheet_id')))):
+                    raise ValueError(f'Pose name or sheet differs from registration: {character["id"]}/{prefix}{pose_id}')
+                if any(record[key] != frame[key] for key in
+                        ['sha256', 'size_px', 'anchor_px', 'body_bbox_px', 'tail_bbox_px', 'reference_height_px']):
+                    raise ValueError(f'Pose geometry differs from registration: {character["id"]}/{prefix}{pose_id}')
+                image, anchor, height = _load_pose_locked(root, character['id'], prefix + pose_id, pending=pending)
+                if image.mode != 'RGBA' or height != frame['reference_height_px']:
+                    raise ValueError('Invalid loaded pose')
                 frames += 1
-    return {'status': 'pass', 'characters': len(index['characters']), 'neutral_png_sources': 11,
+    return {'status': 'pass', 'characters': len(index['characters']), 'neutral_png_sources': len(neutral_sources),
             'generic_key_pose_pngs': frames, 'files': len(inventory['files']),
             'bytes': sum(entry['bytes'] for entry in inventory['files']),
             'absolute_provenance_paths_required_for_runtime': False}
 
 
 def preview(root, identity, pose, height, output, background):
+    with reservation_snapshot(root) as root:
+        return _preview_locked(root, identity, pose, height, output, background)
+
+
+def _preview_locked(root, identity, pose, height, output, background):
     if not 1 <= height <= 8192:
         raise ValueError('Preview body height must be 1..8192 pixels')
     output = Path(output).resolve()
     if output.exists() or output.is_relative_to(resolve(root, 'assets/library')):
         raise ValueError('Choose a new preview output outside the source asset library')
-    image, anchor, reference = load_pose(root, identity, pose)
+    image, anchor, reference = _load_pose_locked(root, identity, pose)
     bounds = image.getchannel('A').point(lambda a: 255 if a >= 8 else 0).getbbox()
     if bounds is None:
         raise ValueError('Empty source image')
@@ -232,18 +679,26 @@ def preview(root, identity, pose, height, output, background):
 
 
 def export(root, output):
-    result = verify(root)
+    with reservation_snapshot(root) as root:
+        return _export_locked(root, output)
+
+
+def _export_locked(root, output):
+    result = _verify_locked(root)
+    pending = pending_generation_roots(root)
+    def source_path(relative):
+        return readable_source(root, relative, pending)
     output = Path(output).resolve()
     if (any(path.exists() for path in [output, output.with_suffix(output.suffix + '.sha256'), output.with_suffix(output.suffix + '.json')])
-            or output.is_relative_to(resolve(root, 'assets/library'))):
+            or output.is_relative_to(source_path('assets/library'))):
         raise ValueError('Choose a new ZIP output outside the source asset library')
     output.parent.mkdir(parents=True, exist_ok=True)
-    inventory = read(resolve(root, FILES))
-    entries = [*inventory['files'], {'path': FILES, 'bytes': resolve(root, FILES).stat().st_size, 'sha256': sha(resolve(root, FILES))}]
+    inventory = read(source_path(FILES))
+    entries = [*inventory['files'], {'path': FILES, 'bytes': source_path(FILES).stat().st_size, 'sha256': sha(source_path(FILES))}]
     sums = {entry['path']: entry['sha256'] for entry in entries}
     with zipfile.ZipFile(output, 'x', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         for entry in entries:
-            archive.write(resolve(root, entry['path']), 'character-library/' + entry['path'])
+            archive.write(source_path(entry['path']), 'character-library/' + entry['path'])
         archive.writestr('character-library/SHA256SUMS.json', json.dumps(sums, indent=2) + '\n')
     with zipfile.ZipFile(output) as archive:
         for relative, expected in sums.items():
@@ -255,7 +710,9 @@ def export(root, output):
     receipt = {'status': 'pass', 'created_at_utc': datetime.now(timezone.utc).isoformat(), 'archive': str(output),
                'archive_sha256': checksum, 'archive_bytes': output.stat().st_size, 'member_files': len(entries) + 1,
                'all_members_hash_verified': True, 'library': result,
-               'scope': 'Self-contained character-library bundle; does not include complete video productions or caches.'}
+               'scope': ('Current-only character-library publication; omitted historical trials and videos are optional local records.'
+                         if publication_path(root, PUBLICATION).is_file() else
+                         'Self-contained character-library bundle; video media and caches are excluded. References to optional local video evidence remain in historical records.')}
     write(output.with_suffix(output.suffix + '.json'), receipt)
     return receipt
 
@@ -281,12 +738,13 @@ def main(argv=None):
     root = args.root.resolve()
     try:
         if args.command == 'list':
-            index = read(resolve(root, INDEX))
+            with reservation_snapshot(root):
+                index = read(publication_path(root, INDEX))
             if args.json:
                 print(json.dumps(index, ensure_ascii=False, indent=2))
             else:
                 for item in index['characters']:
-                    print(f'{item["id"]}\t{item["name_ja"]}\tneutral + {len(item.get("key_poses", {}).get("poses", {}))} generic poses')
+                    print(f'{item["id"]}\t{item["name_ja"]}\tneutral + {len(item.get("key_poses", {}).get("poses", {}))} original poses + {len(item.get("expanded_key_poses", {}).get("poses", {}))} expanded poses + {len(item.get("eyecatch_key_poses", {}).get("poses", {}))} eye-catch poses')
             return 0
         if args.command == 'refresh':
             result = refresh(root)

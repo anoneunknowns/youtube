@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "kind": "isolated-phoneme-asr",
+  "source_manifest_sha256": "5492b2f250b702dc0b12b5067f806cf7cd1d7f9925f034f8ae2ffe5f9d7c10ed",
+  "model": {
+    "id": "onnx-community/wav2vec2-lv-60-espeak-cv-ft-ONNX",
+    "revision": "c69750f5043e5e1f8a71ab95dd3b98338c280c92",
+    "dtype": "q8",
+    "sha256": "3d1479b5c70836645a4310902479f7f7e8bbc8c16c58745d918804f4f6f9d120",
+    "license": "Apache-2.0"
+  },
+  "method": "Independent 16 kHz CTC phoneme recognition, no expected text or neighbor-number prompt; eSpeak expected labels are computed only after inference. Approximate 20ms timestamps. Automated evidence, not proof of perfect pronunciation.",
+  "results": [
+    {
+      "role": "dialogue",
+      "number": null,
+      "id": "toolchain-smoke",
+      "expected_text": "Two, three, five, seven.",
+      "expected_espeak": "tˈuː θɹˈiː fˈaɪv sˈɛvən",
+      "source_path": "/Users/support/codex/youtube/.cache/toolchain-smoke-20261111/speech/toolchain-smoke.wav",
+      "source_sha256": "44fbda625a6cd4894877ecafc2191ac2feb7ca66de5858304f91293ab82e3a23",
+      "duration_s": 1.3554375,
+      "recognized_phonemes": "t uː θ ɹ iː f aɪ v s ɛ v ə n",
+      "tokens": [
+        {
+          "token": "t",
+          "start_s": 0.02,
+          "end_s": 0.045,
+          "probability": 0.9373657465702688
+        },
+        {
+          "token": "uː",
+          "start_s": 0.1,
+          "end_s": 0.125,
+          "probability": 0.9265123291434365
+        },
+        {
+          "token": "θ",
+          "start_s": 0.3,
+          "end_s": 0.325,
+          "probability": 0.912050029916624
+        },
+        {
+          "token": "ɹ",
+          "start_s": 0.36,
+          "end_s": 0.385,
+          "probability": 0.9874550084993893
+        },
+        {
+          "token": "iː",
+          "start_s": 0.4,
+          "end_s": 0.425,
+          "probability": 0.8192080636909612
+        },
+        {
+          "token": "f",
+          "start_s": 0.58,
+          "end_s": 0.605,
+          "probability": 0.9801424314203423
+        },
+        {
+          "token": "aɪ",
+          "start_s": 0.64,
+          "end_s": 0.665,
+          "probability": 0.870441908767774
+        },
+        {
+          "token": "v",
+          "start_s": 0.84,
+          "end_s": 0.865,
+          "probability": 0.9897413416267968
+        },
+        {
+          "token": "s",
+          "start_s": 0.9,
+          "end_s": 0.945,
+          "probability": 0.9934594707830714
+        },
+        {
+          "token": "ɛ",
+          "start_s": 1,
+          "end_s": 1.025,
+          "probability": 0.9421480813807839
+        },
+        {
+          "token": "v",
+          "start_s": 1.1,
+          "end_s": 1.125,
+          "probability": 0.9947116675482961
+        },
+        {
+          "token": "ə",
+          "start_s": 1.14,
+          "end_s": 1.165,
+          "probability": 0.9605809209362983
+        },
+        {
+          "token": "n",
+          "start_s": 1.24,
+          "end_s": 1.265,
+          "probability": 0.9966477698763544
+        }
+      ]
+    }
+  ]
+}

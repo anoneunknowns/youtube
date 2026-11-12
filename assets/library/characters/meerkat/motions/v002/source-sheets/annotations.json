@@ -1,0 +1,1278 @@
+{
+  "items": [
+    {
+      "id": "meerkat",
+      "version": "v002",
+      "sheets": [
+        {
+          "id": "reactions",
+          "source_sheet": "assets/library/characters/meerkat/motions/v002/source-sheets/reactions.png",
+          "source_sheet_sha256": "75326e1b2a4535c239bced18f8dd4db0449caf003f3385278cc44fee4d721281",
+          "prompt_path": "assets/library/characters/meerkat/motions/v002/source-sheets/reactions-prompt.txt",
+          "generation_input_path": "assets/library/characters/meerkat/motions/v002/source-sheets/reactions-input.json",
+          "reference_height_px": 328,
+          "calibration": {
+            "method": "One standing-reference alpha>=128 top-to-anatomical-foot natural-height proxy measured for this sheet; same isotropic scale for all nine keys.",
+            "reference_pose": "neutral",
+            "notes": "Canonical neutral was the identity input. Ref height is a sheet art-registration proxy, not a per-pose bounding-box fit or a claim that nodding preserves exact anatomical height. Sheet scale is transferred at its standing reference and all seated/crouched/airborne poses retain the same source scale. In-scene timing and final composition still require episode review."
+          },
+          "frames": [
+            {
+              "id": "neutral",
+              "index": 0,
+              "body_bbox_px": [
+                139,
+                42,
+                333,
+                371
+              ],
+              "anchor_px": [
+                229.5,
+                371
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                355,
+                280,
+                372
+              ],
+              "support_visible_bbox_alpha128_px": [
+                179,
+                355,
+                280,
+                371
+              ],
+              "visible_bbox_alpha128_px": [
+                140,
+                43,
+                331,
+                371
+              ],
+              "visible_alpha8_margins_px": [
+                139,
+                42,
+                85,
+                47
+              ]
+            },
+            {
+              "id": "blink",
+              "index": 1,
+              "body_bbox_px": [
+                121,
+                42,
+                314,
+                373
+              ],
+              "anchor_px": [
+                213.5,
+                371
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                355,
+                265,
+                372
+              ],
+              "support_visible_bbox_alpha128_px": [
+                162,
+                355,
+                265,
+                371
+              ],
+              "visible_bbox_alpha128_px": [
+                122,
+                43,
+                313,
+                371
+              ],
+              "visible_alpha8_margins_px": [
+                121,
+                42,
+                104,
+                45
+              ]
+            },
+            {
+              "id": "tap_down",
+              "index": 2,
+              "body_bbox_px": [
+                107,
+                69,
+                306,
+                373
+              ],
+              "anchor_px": [
+                195.0,
+                371
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                355,
+                245,
+                372
+              ],
+              "support_visible_bbox_alpha128_px": [
+                145,
+                355,
+                245,
+                371
+              ],
+              "visible_bbox_alpha128_px": [
+                108,
+                70,
+                305,
+                371
+              ],
+              "visible_alpha8_margins_px": [
+                107,
+                69,
+                112,
+                45
+              ]
+            },
+            {
+              "id": "tap_pop",
+              "index": 3,
+              "body_bbox_px": [
+                140,
+                14,
+                318,
+                343
+              ],
+              "anchor_px": [
+                232.5,
+                361.5
+              ],
+              "support_kind": "inferred-ground-plane",
+              "support_notes": "Airborne key has no foot-ground contact. Ground Y=361.5 is inferred as mean registered hind-paw Y of same-row grounded keys think, aha. X uses the visually selected paw span. The source's baked-in vertical lift is retained; do not add a second jump offset.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                324,
+                275,
+                341
+              ],
+              "support_visible_bbox_alpha128_px": [
+                190,
+                324,
+                275,
+                340
+              ],
+              "visible_bbox_alpha128_px": [
+                141,
+                15,
+                317,
+                340
+              ],
+              "visible_alpha8_margins_px": [
+                140,
+                14,
+                100,
+                75
+              ],
+              "art_foot_y_px": 340
+            },
+            {
+              "id": "think",
+              "index": 4,
+              "body_bbox_px": [
+                114,
+                32,
+                315,
+                362
+              ],
+              "anchor_px": [
+                212.0,
+                361
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                345,
+                260,
+                362
+              ],
+              "support_visible_bbox_alpha128_px": [
+                164,
+                345,
+                260,
+                361
+              ],
+              "visible_bbox_alpha128_px": [
+                115,
+                32,
+                314,
+                361
+              ],
+              "visible_alpha8_margins_px": [
+                114,
+                32,
+                103,
+                56
+              ]
+            },
+            {
+              "id": "aha",
+              "index": 5,
+              "body_bbox_px": [
+                101,
+                30,
+                304,
+                364
+              ],
+              "anchor_px": [
+                195.0,
+                362
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                346,
+                245,
+                363
+              ],
+              "support_visible_bbox_alpha128_px": [
+                145,
+                346,
+                245,
+                362
+              ],
+              "visible_bbox_alpha128_px": [
+                102,
+                30,
+                303,
+                362
+              ],
+              "visible_alpha8_margins_px": [
+                101,
+                30,
+                114,
+                54
+              ]
+            },
+            {
+              "id": "oops",
+              "index": 6,
+              "body_bbox_px": [
+                138,
+                21,
+                327,
+                352
+              ],
+              "anchor_px": [
+                228.5,
+                351
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                335,
+                275,
+                352
+              ],
+              "support_visible_bbox_alpha128_px": [
+                182,
+                335,
+                275,
+                351
+              ],
+              "visible_bbox_alpha128_px": [
+                139,
+                22,
+                326,
+                351
+              ],
+              "visible_alpha8_margins_px": [
+                138,
+                21,
+                91,
+                66
+              ]
+            },
+            {
+              "id": "retry",
+              "index": 7,
+              "body_bbox_px": [
+                117,
+                23,
+                314,
+                352
+              ],
+              "anchor_px": [
+                211.5,
+                351
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                335,
+                260,
+                352
+              ],
+              "support_visible_bbox_alpha128_px": [
+                163,
+                335,
+                260,
+                351
+              ],
+              "visible_bbox_alpha128_px": [
+                118,
+                24,
+                313,
+                351
+              ],
+              "visible_alpha8_margins_px": [
+                117,
+                23,
+                104,
+                66
+              ]
+            },
+            {
+              "id": "signature",
+              "index": 8,
+              "body_bbox_px": [
+                107,
+                18,
+                303,
+                352
+              ],
+              "anchor_px": [
+                197.5,
+                351
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                335,
+                245,
+                352
+              ],
+              "support_visible_bbox_alpha128_px": [
+                150,
+                335,
+                245,
+                351
+              ],
+              "visible_bbox_alpha128_px": [
+                108,
+                19,
+                302,
+                351
+              ],
+              "visible_alpha8_margins_px": [
+                107,
+                18,
+                115,
+                66
+              ]
+            }
+          ]
+        },
+        {
+          "id": "actions",
+          "source_sheet": "assets/library/characters/meerkat/motions/v002/source-sheets/actions.png",
+          "source_sheet_sha256": "1602d987de95e2954127dd1f5011ca22c87743ab7f75a24398cdf8589c7cbeb7",
+          "prompt_path": "assets/library/characters/meerkat/motions/v002/source-sheets/actions-prompt.txt",
+          "generation_input_path": "assets/library/characters/meerkat/motions/v002/source-sheets/actions-input.json",
+          "reference_height_px": 305,
+          "calibration": {
+            "method": "One standing-reference alpha>=128 top-to-anatomical-foot natural-height proxy measured for this sheet; same isotropic scale for all nine keys.",
+            "reference_pose": "wave_rest",
+            "notes": "Canonical neutral was the identity input. Ref height is a sheet art-registration proxy, not a per-pose bounding-box fit or a claim that nodding preserves exact anatomical height. Sheet scale is transferred at its standing reference and all seated/crouched/airborne poses retain the same source scale. In-scene timing and final composition still require episode review."
+          },
+          "frames": [
+            {
+              "id": "success_ready",
+              "index": 0,
+              "body_bbox_px": [
+                133,
+                94,
+                320,
+                353
+              ],
+              "anchor_px": [
+                220.0,
+                352
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                336,
+                270,
+                353
+              ],
+              "support_visible_bbox_alpha128_px": [
+                170,
+                336,
+                270,
+                352
+              ],
+              "visible_bbox_alpha128_px": [
+                134,
+                95,
+                319,
+                352
+              ],
+              "visible_alpha8_margins_px": [
+                133,
+                94,
+                98,
+                65
+              ]
+            },
+            {
+              "id": "success_air",
+              "index": 1,
+              "body_bbox_px": [
+                122,
+                52,
+                304,
+                321
+              ],
+              "anchor_px": [
+                206.5,
+                352.0
+              ],
+              "support_kind": "inferred-ground-plane",
+              "support_notes": "Airborne key has no foot-ground contact. Ground Y=352.0 is inferred as mean registered hind-paw Y of same-row grounded keys success_ready, success_land. X uses the visually selected paw span. The source's baked-in vertical lift is retained; do not add a second jump offset.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                304,
+                250,
+                321
+              ],
+              "support_visible_bbox_alpha128_px": [
+                163,
+                304,
+                250,
+                320
+              ],
+              "visible_bbox_alpha128_px": [
+                123,
+                52,
+                303,
+                320
+              ],
+              "visible_alpha8_margins_px": [
+                122,
+                52,
+                114,
+                97
+              ],
+              "art_foot_y_px": 320
+            },
+            {
+              "id": "success_land",
+              "index": 2,
+              "body_bbox_px": [
+                112,
+                82,
+                298,
+                353
+              ],
+              "anchor_px": [
+                192.5,
+                352
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                336,
+                240,
+                353
+              ],
+              "support_visible_bbox_alpha128_px": [
+                145,
+                336,
+                240,
+                352
+              ],
+              "visible_bbox_alpha128_px": [
+                113,
+                83,
+                297,
+                352
+              ],
+              "visible_alpha8_margins_px": [
+                112,
+                82,
+                120,
+                65
+              ]
+            },
+            {
+              "id": "cheer",
+              "index": 3,
+              "body_bbox_px": [
+                137,
+                47,
+                322,
+                353
+              ],
+              "anchor_px": [
+                221.0,
+                350
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                334,
+                270,
+                351
+              ],
+              "support_visible_bbox_alpha128_px": [
+                172,
+                334,
+                270,
+                350
+              ],
+              "visible_bbox_alpha128_px": [
+                138,
+                47,
+                322,
+                350
+              ],
+              "visible_alpha8_margins_px": [
+                137,
+                47,
+                96,
+                65
+              ]
+            },
+            {
+              "id": "clap_open",
+              "index": 4,
+              "body_bbox_px": [
+                127,
+                47,
+                311,
+                353
+              ],
+              "anchor_px": [
+                211.5,
+                350
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                334,
+                260,
+                351
+              ],
+              "support_visible_bbox_alpha128_px": [
+                163,
+                334,
+                260,
+                350
+              ],
+              "visible_bbox_alpha128_px": [
+                128,
+                48,
+                310,
+                350
+              ],
+              "visible_alpha8_margins_px": [
+                127,
+                47,
+                107,
+                65
+              ]
+            },
+            {
+              "id": "wave_low",
+              "index": 5,
+              "body_bbox_px": [
+                115,
+                47,
+                300,
+                353
+              ],
+              "anchor_px": [
+                197.5,
+                351
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                335,
+                245,
+                352
+              ],
+              "support_visible_bbox_alpha128_px": [
+                150,
+                335,
+                245,
+                351
+              ],
+              "visible_bbox_alpha128_px": [
+                116,
+                47,
+                299,
+                351
+              ],
+              "visible_alpha8_margins_px": [
+                115,
+                47,
+                118,
+                65
+              ]
+            },
+            {
+              "id": "wave_high_in",
+              "index": 6,
+              "body_bbox_px": [
+                137,
+                43,
+                324,
+                353
+              ],
+              "anchor_px": [
+                222.5,
+                350
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                334,
+                275,
+                351
+              ],
+              "support_visible_bbox_alpha128_px": [
+                170,
+                334,
+                275,
+                350
+              ],
+              "visible_bbox_alpha128_px": [
+                138,
+                44,
+                323,
+                350
+              ],
+              "visible_alpha8_margins_px": [
+                137,
+                43,
+                94,
+                65
+              ]
+            },
+            {
+              "id": "wave_high_out",
+              "index": 7,
+              "body_bbox_px": [
+                119,
+                43,
+                311,
+                353
+              ],
+              "anchor_px": [
+                210.0,
+                350
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                334,
+                260,
+                351
+              ],
+              "support_visible_bbox_alpha128_px": [
+                160,
+                334,
+                260,
+                350
+              ],
+              "visible_bbox_alpha128_px": [
+                120,
+                44,
+                310,
+                350
+              ],
+              "visible_alpha8_margins_px": [
+                119,
+                43,
+                107,
+                65
+              ]
+            },
+            {
+              "id": "wave_rest",
+              "index": 8,
+              "body_bbox_px": [
+                113,
+                44,
+                300,
+                353
+              ],
+              "anchor_px": [
+                197.0,
+                350
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                334,
+                245,
+                351
+              ],
+              "support_visible_bbox_alpha128_px": [
+                149,
+                334,
+                245,
+                350
+              ],
+              "visible_bbox_alpha128_px": [
+                114,
+                45,
+                299,
+                350
+              ],
+              "visible_alpha8_margins_px": [
+                113,
+                44,
+                118,
+                65
+              ]
+            }
+          ]
+        },
+        {
+          "id": "postures",
+          "source_sheet": "assets/library/characters/meerkat/motions/v002/source-sheets/postures.png",
+          "source_sheet_sha256": "d51d25d949ac15346e68afd524ff6cf77e6f1aaa0081856809aca4474fccde8f",
+          "prompt_path": "assets/library/characters/meerkat/motions/v002/source-sheets/postures-prompt.txt",
+          "generation_input_path": "assets/library/characters/meerkat/motions/v002/source-sheets/postures-input.json",
+          "reference_height_px": 308,
+          "calibration": {
+            "method": "One standing-reference alpha>=128 top-to-anatomical-foot natural-height proxy measured for this sheet; same isotropic scale for all nine keys.",
+            "reference_pose": "nod_down",
+            "notes": "Canonical neutral was the identity input. Ref height is a sheet art-registration proxy, not a per-pose bounding-box fit or a claim that nodding preserves exact anatomical height. Sheet scale is transferred at its standing reference and all seated/crouched/airborne poses retain the same source scale. In-scene timing and final composition still require episode review."
+          },
+          "frames": [
+            {
+              "id": "half_seated",
+              "index": 0,
+              "body_bbox_px": [
+                137,
+                81,
+                345,
+                381
+              ],
+              "anchor_px": [
+                222.5,
+                380
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                364,
+                280,
+                381
+              ],
+              "support_visible_bbox_alpha128_px": [
+                165,
+                364,
+                280,
+                380
+              ],
+              "visible_bbox_alpha128_px": [
+                138,
+                82,
+                344,
+                380
+              ],
+              "visible_alpha8_margins_px": [
+                137,
+                81,
+                73,
+                37
+              ]
+            },
+            {
+              "id": "seated_neutral",
+              "index": 1,
+              "body_bbox_px": [
+                116,
+                95,
+                319,
+                383
+              ],
+              "anchor_px": [
+                208.0,
+                381
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                365,
+                275,
+                382
+              ],
+              "support_visible_bbox_alpha128_px": [
+                141,
+                365,
+                275,
+                381
+              ],
+              "visible_bbox_alpha128_px": [
+                117,
+                96,
+                319,
+                381
+              ],
+              "visible_alpha8_margins_px": [
+                116,
+                95,
+                99,
+                35
+              ]
+            },
+            {
+              "id": "seated_stretch_half",
+              "index": 2,
+              "body_bbox_px": [
+                90,
+                97,
+                297,
+                381
+              ],
+              "anchor_px": [
+                183.0,
+                381
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                365,
+                250,
+                382
+              ],
+              "support_visible_bbox_alpha128_px": [
+                116,
+                365,
+                250,
+                381
+              ],
+              "visible_bbox_alpha128_px": [
+                91,
+                98,
+                296,
+                381
+              ],
+              "visible_alpha8_margins_px": [
+                90,
+                97,
+                121,
+                37
+              ]
+            },
+            {
+              "id": "seated_stretch",
+              "index": 3,
+              "body_bbox_px": [
+                133,
+                54,
+                345,
+                354
+              ],
+              "anchor_px": [
+                230.5,
+                353
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                337,
+                300,
+                354
+              ],
+              "support_visible_bbox_alpha128_px": [
+                161,
+                337,
+                300,
+                353
+              ],
+              "visible_bbox_alpha128_px": [
+                134,
+                55,
+                344,
+                353
+              ],
+              "visible_alpha8_margins_px": [
+                133,
+                54,
+                73,
+                64
+              ]
+            },
+            {
+              "id": "seated_nap",
+              "index": 4,
+              "body_bbox_px": [
+                92,
+                80,
+                323,
+                354
+              ],
+              "anchor_px": [
+                213.5,
+                353
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                337,
+                285,
+                354
+              ],
+              "support_visible_bbox_alpha128_px": [
+                142,
+                337,
+                285,
+                353
+              ],
+              "visible_bbox_alpha128_px": [
+                93,
+                81,
+                322,
+                353
+              ],
+              "visible_alpha8_margins_px": [
+                92,
+                80,
+                95,
+                64
+              ]
+            },
+            {
+              "id": "seated_look_up",
+              "index": 5,
+              "body_bbox_px": [
+                92,
+                74,
+                299,
+                354
+              ],
+              "anchor_px": [
+                185.0,
+                354
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                338,
+                250,
+                355
+              ],
+              "support_visible_bbox_alpha128_px": [
+                120,
+                338,
+                250,
+                354
+              ],
+              "visible_bbox_alpha128_px": [
+                93,
+                75,
+                298,
+                354
+              ],
+              "visible_alpha8_margins_px": [
+                92,
+                74,
+                119,
+                64
+              ]
+            },
+            {
+              "id": "seated_look_board",
+              "index": 6,
+              "body_bbox_px": [
+                132,
+                52,
+                352,
+                336
+              ],
+              "anchor_px": [
+                234.5,
+                333
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                317,
+                300,
+                334
+              ],
+              "support_visible_bbox_alpha128_px": [
+                169,
+                317,
+                300,
+                333
+              ],
+              "visible_bbox_alpha128_px": [
+                133,
+                54,
+                352,
+                333
+              ],
+              "visible_alpha8_margins_px": [
+                132,
+                52,
+                66,
+                82
+              ]
+            },
+            {
+              "id": "stand_half",
+              "index": 7,
+              "body_bbox_px": [
+                111,
+                14,
+                322,
+                334
+              ],
+              "anchor_px": [
+                209.5,
+                331
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                315,
+                275,
+                332
+              ],
+              "support_visible_bbox_alpha128_px": [
+                144,
+                315,
+                275,
+                331
+              ],
+              "visible_bbox_alpha128_px": [
+                112,
+                15,
+                322,
+                331
+              ],
+              "visible_alpha8_margins_px": [
+                111,
+                14,
+                96,
+                84
+              ]
+            },
+            {
+              "id": "nod_down",
+              "index": 8,
+              "body_bbox_px": [
+                93,
+                23,
+                299,
+                334
+              ],
+              "anchor_px": [
+                192.5,
+                332
+              ],
+              "support_kind": "anatomical-support",
+              "support_notes": "Visually selected lower hind-paw contact ROI excludes right-hand tail; support X is the midpoint of the alpha>=128 paw contact span and Y its exclusive lower bound.",
+              "review": "Full-body cell visually inspected: correct character identity and declared pose, both hind paws retained; no clipping or neighbouring character.",
+              "measurement_notes": [
+                "body_bbox_px is complete visible alpha>=8 character envelope including short tail; body reference height is fixed once per sheet, never fitted per pose.",
+                "Foot ROI bounds and measured contact span are retained below."
+              ],
+              "support_roi_px": [
+                0,
+                316,
+                250,
+                333
+              ],
+              "support_visible_bbox_alpha128_px": [
+                135,
+                316,
+                250,
+                332
+              ],
+              "visible_bbox_alpha128_px": [
+                94,
+                24,
+                298,
+                332
+              ],
+              "visible_alpha8_margins_px": [
+                93,
+                23,
+                119,
+                84
+              ]
+            }
+          ]
+        }
+      ],
+      "review": {
+        "identity": "All27 sprites visually inspected against the selected canonical neutral. Species face, eye form, muzzle, palette, markings and tail retained; no props, clothing or text.",
+        "style": "Soft watercolor fill/paper texture inside body and warm brown contours follow this animal own canonical art. Head/body scale held within each sheet; separate fixed standing-reference scale per source sheet.",
+        "alpha": "Genuine RGBA retained unchanged. Correct white composite inspected; all27 alpha>=8 envelopes have at least2px empty margins in all four directions. Sparse low alpha RGB/edge noise preserved rather than cleaned. Rejected gray-haze red-panda action candidate remains separate.",
+        "motion": "Declared27 pose keys inspected. Wave low/in/out/rest and stretch half/full visibly different; clap-open differs from touching paws; crouch/air/land distinct. Airborne support explicitly inferred. These are registered key-pose stocks, not dense continuous frames or a final episode choreography acceptance."
+      }
+    }
+  ]
+}

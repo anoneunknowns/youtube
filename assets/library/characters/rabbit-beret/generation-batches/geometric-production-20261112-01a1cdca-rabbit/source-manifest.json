@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "kind": "geometric-rabbit-production-generation-provenance",
+  "owner": "codex:geometric-production:01a1cdca",
+  "reservation_id": "geometric-production-20261112-01a1cdca-rabbit",
+  "requested_sheet_size_px": [
+    2048,
+    2048
+  ],
+  "requested_underlay_size_px": [
+    1536,
+    1536
+  ],
+  "actual_sizes_are_recorded_per_output": true,
+  "outputs": [
+    {
+      "path": "assets/library/characters/rabbit-beret/generation-batches/geometric-production-20261112-01a1cdca-rabbit/source/production-arm-poses.png",
+      "sha256": "3a2e0e588f9038b8f5be6d9546e7b2f72fe7cd472bbbd277cadb33bd819f70a5",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "prompt_path": "assets/library/characters/rabbit-beret/generation-batches/geometric-production-20261112-01a1cdca-rabbit/provenance/production-pose-prompt.txt",
+      "prompt_sha256": "77c0d570cbebfad5f280149fc8085e6e32ce46145746beadcbc0a2f012c5ab5d",
+      "original_tool_output_path": "/Users/support/.codex/generated_images/01a1cdea-9f24-7ee2-924e-c3f03c101b9d/exec-82c493f0-f119-4baf-90b9-22e22f0803f6.png",
+      "tool_output_byte_match": true,
+      "role": "new 2x2 standing arm source sheet",
+      "direct_inputs": [
+        {
+          "path": "assets/library/characters/rabbit-beret/eyecatches/v001/source-sheets/identity-reference-crop.png",
+          "sha256": "891be59563a0f0075b2fb47978851554284efd09d6f4e1f9fe80d7fc225b2a41",
+          "role": "exact adopted character identity and watercolor style reference"
+        }
+      ],
+      "tool": "built-in image_gen",
+      "model": "not disclosed",
+      "transparent_background": true
+    },
+    {
+      "path": "assets/library/characters/rabbit-beret/generation-batches/geometric-production-20261112-01a1cdca-rabbit/source/torso-underlay.png",
+      "sha256": "793385b82b9e7be6d9b315c1f4097d9e17e29d392821e2be960311670c54252e",
+      "size_px": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "prompt_path": "assets/library/characters/rabbit-beret/generation-batches/geometric-production-20261112-01a1cdca-rabbit/provenance/torso-underlay-prompt.txt",
+      "prompt_sha256": "8b41cd0d9b66c0e7062f7977c0cd08f0b9dfcf96b5d01d17ea57d1582101489b",
+      "original_tool_output_path": "/Users/support/.codex/generated_images/01a1cdea-9f24-7ee2-924e-c3f03c101b9d/exec-3318a145-4f73-4266-a80a-886a828cf23e.png",
+      "tool_output_byte_match": true,
+      "role": "new clean body/torso underlay; original RGB under alpha0 is retained",
+      "direct_inputs": [
+        {
+          "path": "assets/library/characters/rabbit-beret/eyecatches/v001/source-sheets/identity-reference-crop.png",
+          "sha256": "891be59563a0f0075b2fb47978851554284efd09d6f4e1f9fe80d7fc225b2a41",
+          "role": "exact adopted character identity and watercolor style reference"
+        }
+      ],
+      "tool": "built-in image_gen",
+      "model": "not disclosed",
+      "transparent_background": true
+    },
+    {
+      "path": "assets/library/characters/rabbit-beret/generation-batches/geometric-production-20261112-01a1cdca-rabbit/candidates/torso-underlay-alpha-edit.png",
+      "sha256": "5eccea2ac9db6738a66ba577045f9cb3b908b9fa0572ca73f56c7679506f933d",
+      "size_px": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "prompt_path": "assets/library/characters/rabbit-beret/generation-batches/geometric-production-20261112-01a1cdca-rabbit/provenance/torso-underlay-alpha-edit-prompt.txt",
+      "prompt_sha256": "87f7bceef2837b5d3cb22136c096b17c0bc6565a8b90b73444f82e397654beda",
+      "original_tool_output_path": "/Users/support/.codex/generated_images/01a1cdea-9f24-7ee2-924e-c3f03c101b9d/exec-44028bc9-5a8b-4deb-93f8-f2e8eea588bf.png",
+      "tool_output_byte_match": true,
+      "role": "unused edit variant, no need to replace original after correct light/dark alpha compositing",
+      "direct_inputs": [
+        {
+          "path": "assets/library/characters/rabbit-beret/generation-batches/geometric-production-20261112-01a1cdca-rabbit/candidates/torso-underlay-halo.png",
+          "sha256": "793385b82b9e7be6d9b315c1f4097d9e17e29d392821e2be960311670c54252e",
+          "role": "edit target, byte-identical copy of first generated torso"
+        }
+      ],
+      "tool": "built-in image_gen",
+      "model": "not disclosed",
+      "transparent_background": true
+    }
+  ],
+  "canonical_ancestor": {
+    "path": "assets/library/characters/rabbit-beret/sources/v001/rabbit-poses.png",
+    "sha256": "7b347adcbb6427cf753c4017e87575e2997df7f215ed72ba78d10db2c6a7916b",
+    "role": "adopted atlas ancestor; not directly passed to image_gen",
+    "crop_xyxy": [
+      205,
+      9,
+      557,
+      594
+    ]
+  },
+  "new_independent_drawings": 5,
+  "drawing_count_policy": "4 pose drawings on one sheet + 1 body clean-plate drawing. Edited torso is a variant, derived pixels/32 phase states are not independent new drawings.",
+  "selection": "Generated point-pose local left arm and torso clean plate; adopted right arm and prior local gaze/blink eye drawings. Other source poses retained as candidates.",
+  "preservation": "All originals/unused edit/prototypes retained unchanged. No global alpha cleanup or recolour was applied to existing images. Native sprites are explicit local compositing derivatives.",
+  "transparency_note": "First torso filename mentions halo because the initial display showed hidden RGB. Correct light/dark alpha compositing showed the brown RGB at alpha0 is invisible; original is usable and is not marked defective. The follow-up edit was unnecessary and remains a separate unused variant."
+}

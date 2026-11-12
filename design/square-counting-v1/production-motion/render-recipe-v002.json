@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "kind": "square-two-stage-reproduction-recipe",
+  "episode_id": "square-counting-001",
+  "content_revision": "v001",
+  "final_output_version": "production-v004",
+  "workspace_root": "repository root",
+  "scripts": [
+    {
+      "path": "tools/render_square_video.py",
+      "sha256": "ab983b94ec01be21660dc6aa89d25a8c56c9ab687c1f2844b6f67c603b5deea5"
+    },
+    {
+      "path": "tools/repair_square_color_tags.py",
+      "sha256": "c87061db1f0140a2aa0264dfb5727cd95da926332ea2a05d3ab52f2b04596ecd"
+    },
+    {
+      "path": "tools/verify_square_remux_rgb.py",
+      "sha256": "e553a483d1128f504156ddc054dd14e970b29a680223508ebc725260d0dc4edb"
+    },
+    {
+      "path": "tools/verify_square_audio_inheritance.py",
+      "sha256": "f2add23a60a59be06bf29a7a6312a5b16c4514da4d262a317fbb73e944ae6146"
+    }
+  ],
+  "regression_test": {
+    "path": "tests/test_square_factor_ink_origin.py",
+    "sha256": "1ee23604f743a4120022a7979e3086e665c1b02720ce969381d683783be0bc28"
+  },
+  "source_history": {
+    "path": "design/square-counting-v1/production-motion/source-history/pre-bearing-fix-preservation.json",
+    "sha256": "1f7f89bd2a8fe6e6edb16c519bef4dd9c6bf67f011f8a2488250be823e9447c0"
+  },
+  "bearing_local_independent_QA": {
+    "path": "design/square-counting-v1/production-qa/bearing-fix-v001/verification.json",
+    "sha256": "9424b7e469234129d51ecc4250cb2bb10a5c7660a223b9584c773faaa6daf3ce"
+  },
+  "commands": [
+    [
+      ".venv/bin/python",
+      "tools/render_square_video.py",
+      "--timeline",
+      "output/square-counting-001-v001/audio-build/timeline.json",
+      "--registry",
+      "assets/library/characters/red-panda/generation-batches/square-production-20261112-b-01a1cd26/registration-v002.json",
+      "--out-dir",
+      "output/square-counting-001-v001/production-v003"
+    ],
+    [
+      ".venv/bin/python",
+      "tools/repair_square_color_tags.py",
+      "--source",
+      "output/square-counting-001-v001/production-v003/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+      "--out-dir",
+      "output/square-counting-001-v001/production-v004",
+      "--qa-dir",
+      "design/square-counting-v1/production-qa/metadata-correction-v002"
+    ],
+    [
+      ".venv/bin/python",
+      "tools/verify_square_remux_rgb.py",
+      "--original",
+      "output/square-counting-001-v001/production-v003/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+      "--corrected",
+      "output/square-counting-001-v001/production-v004/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+      "--out-dir",
+      "design/square-counting-v1/production-qa/metadata-correction-rgb-v002",
+      "--native-report",
+      "output/square-counting-001-v001/production-v003/native-layout-verification.json"
+    ],
+    [
+      ".venv/bin/python",
+      "tools/verify_square_audio_inheritance.py",
+      "--original",
+      "output/square-counting-001-v001/production-v001/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+      "--candidate",
+      "output/square-counting-001-v001/production-v004/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+      "--out-dir",
+      "design/square-counting-v1/production-qa/audio-inheritance-v001"
+    ]
+  ],
+  "rerun_policy": "All output and QA directories must be fresh. Replace directory arguments consistently when reproducing; never overwrite preserved media or earlier QA. Use the prepared Python interpreter for the current OS.",
+  "known_renderer_boundary": "Raw encoder output lacks explicit H.264 color primaries/transfer tags on this toolchain. The metadata-helper stage is required for the adopted output.",
+  "final_result": {
+    "path": "output/square-counting-001-v001/production-v004/render-result.json",
+    "sha256": "9c7b0339a500653a12071fc185305d9fcd16f2e6d701e28271c432fdf7899318"
+  },
+  "verification": [
+    {
+      "path": "design/square-counting-v1/production-qa/metadata-correction-v002/metadata-correction.json",
+      "sha256": "3153b6bd2d5a37e4863737cbeae2e5d3550c86782520bf63ef26a0d53c01e2d7"
+    },
+    {
+      "path": "design/square-counting-v1/production-qa/metadata-correction-rgb-v002/rgb-identity.json",
+      "sha256": "6417e71935a68d9e840190c466f84bc6992bedb9066b1051224942eacd54c86b"
+    },
+    {
+      "path": "design/square-counting-v1/production-qa/audio-inheritance-v001/audio-inheritance.json",
+      "sha256": "0f4a9e9ce3f958df3c2c226b31c9d4879887151dd338f0860cf8e77961c699b8"
+    }
+  ],
+  "finished_video_independent_QA_is_separate": true
+}

@@ -1,0 +1,58 @@
+{
+  "kind": "geometric-episode-constant-delivery-gain-acceptance",
+  "accepted": true,
+  "scope": "PCM master; final AAC requires independent conventional gate",
+  "criteria": {
+    "integrated_lufs": [
+      -17,
+      -15
+    ],
+    "true_peak_max_dbtp": -1.8
+  },
+  "final_aac_criteria": {
+    "integrated_lufs": [
+      -17,
+      -15
+    ],
+    "true_peak_max_dbtp": -1
+  },
+  "parent_decision": "Geometric production: retain shared strict -2dBTP attempt, apply a single extra +0.20dB to meet I=-16±1 with PCM TP<=-1.8; final AAC retains established TP<=-1.",
+  "source_attempt": {
+    "path": "output/geometric-sequence-counting-001-v001/audio-build/.work/linear-truepeak-v001/master-level-rejected.wav",
+    "sha256": "e43aa4b666c0a8c051ec2a237149d6591ccf76278d87272616d5be08fc57bfd8"
+  },
+  "source_attempt_receipt": {
+    "path": "output/geometric-sequence-counting-001-v001/audio-build/.work/linear-truepeak-v001/level-report.json",
+    "sha256": "f82ab221f161a0dcd07f4a8ec266ae8b08c03bf859cdf0982992e30cd357f1c4"
+  },
+  "extra_constant_gain_db": 0.2,
+  "shared_attempt_loudness": {
+    "input_i": "-17.08",
+    "input_tp": "-2.04",
+    "input_lra": "5.00",
+    "input_thresh": "-27.39",
+    "output_i": "-16.62",
+    "output_tp": "-1.50",
+    "output_lra": "4.50",
+    "output_thresh": "-26.93",
+    "normalization_type": "dynamic",
+    "target_offset": "0.62"
+  },
+  "after": {
+    "input_i": "-16.88",
+    "input_tp": "-1.84",
+    "input_lra": "5.00",
+    "input_thresh": "-27.19",
+    "output_i": "-16.62",
+    "output_tp": "-1.50",
+    "output_lra": "4.50",
+    "output_thresh": "-26.93",
+    "normalization_type": "dynamic",
+    "target_offset": "0.62"
+  },
+  "master": {
+    "path": "output/geometric-sequence-counting-001-v001/audio-build/master.wav",
+    "sha256": "d801f3e290f0a59451cd23e3112bc22483406ed00cf697df18f9e3bf4b68ce68"
+  },
+  "signal_processing": "Only constant volume scalar and PCM24 quantization. No limiting/compression/time stretch. Same channels, sample count, cue times and silent intervals."
+}

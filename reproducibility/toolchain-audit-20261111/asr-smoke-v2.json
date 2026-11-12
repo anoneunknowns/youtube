@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "kind": "independent-local-asr-review",
+  "source_manifest": "/Users/support/codex/youtube/.cache/toolchain-smoke-20261111/speech-v2/functional-manifest.json",
+  "source_manifest_sha256": "c70ee0343190d4d2408c50293a99e24dd52f35371156ffa3e72c3e4eb00298b0",
+  "automatic_regeneration": false,
+  "model": {
+    "id": "Xenova/whisper-tiny.en",
+    "repository_revision_at_verification": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+    "dtype": "q8",
+    "runtime": "@huggingface/transformers@3.8.1",
+    "intra_op_threads": 2,
+    "inter_op_threads": 1,
+    "model_card": "https://huggingface.co/Xenova/whisper-tiny.en",
+    "model_license": "Apache-2.0",
+    "original_code_license": "https://github.com/openai/whisper/blob/main/LICENSE",
+    "checked_onnx_files": [
+      {
+        "file": "encoder_model_quantized.onnx",
+        "bytes": 10124913,
+        "sha256": "8cc3c6f8563d1b3fbd2c5af9f64c2bed8b020bc593c402d1ef53b9f08fbf1b90"
+      },
+      {
+        "file": "decoder_model_merged_quantized.onnx",
+        "bytes": 30727382,
+        "sha256": "dbb2e063b7fbc41d9803b9698f93ecb035c50cbb3fb87b56cb131e4a5eb99059"
+      }
+    ]
+  },
+  "method": {
+    "sampling_rate": 16000,
+    "channels": 1,
+    "input_format": "float32",
+    "recognizer_only_edge_padding_s": 0.15,
+    "source_audio_modified": false,
+    "expected_text_used_as_recognition_prompt": false,
+    "numeric_comparison": "cardinal numeric value",
+    "dialogue_comparison": "case/punctuation normalization, expanding let's to let us",
+    "limitations": "Tiny ASR can misrecognize isolated numbers. Numeric/text matches check recognized meaning, not correct articulation. Context matches never clear isolated pronunciation warnings. Independent pronunciation review is required; automated checks do not replace final listening."
+  },
+  "acceptance": {
+    "accepted": false,
+    "reason": "An ASR match alone is not pronunciation approval. Use the separate hash-bound pronunciation acceptance gate."
+  },
+  "summary": {
+    "clips": 2,
+    "numbers": 1,
+    "dialogue": 1,
+    "asr_matches": 2,
+    "warnings": 0,
+    "elapsed_s": 0.575
+  },
+  "warnings": [],
+  "results": [
+    {
+      "role": "number",
+      "number": 1,
+      "expected_text": "One.",
+      "recognized_text": "1.",
+      "interpreted_number": 1,
+      "status": "asr-match",
+      "path": "/Users/support/codex/youtube/.cache/toolchain-smoke-20261111/speech-v2/toolchain-one.wav",
+      "source_sha256": "7a0dc5223e2b1478749cc6204c581bde826f94eec97fb8b5dfd0df1667d6544e",
+      "source_duration_s": 0.47579166666666667
+    },
+    {
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Let's count together.",
+      "recognized_text": "Let's count together.",
+      "interpreted_number": null,
+      "status": "asr-match",
+      "path": "/Users/support/codex/youtube/.cache/toolchain-smoke-20261111/speech-v2/toolchain-sentence.wav",
+      "source_sha256": "cbb78ae025d66fb4089c9213d5d0c096b462242d559ffb99e777d157300a70a2",
+      "source_duration_s": 1.136
+    }
+  ]
+}

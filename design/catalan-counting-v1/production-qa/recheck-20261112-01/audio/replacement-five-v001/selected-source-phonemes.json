@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "isolated-phoneme-asr",
+  "source_manifest_sha256": "d4993ccd053d613402cb32da017172db7e6cd623dd2984adc574eec7b37f2eed",
+  "model": {
+    "id": "onnx-community/wav2vec2-lv-60-espeak-cv-ft-ONNX",
+    "revision": "c69750f5043e5e1f8a71ab95dd3b98338c280c92",
+    "dtype": "q8",
+    "sha256": "3d1479b5c70836645a4310902479f7f7e8bbc8c16c58745d918804f4f6f9d120",
+    "license": "Apache-2.0"
+  },
+  "method": "Independent 16 kHz CTC phoneme recognition, no expected text or neighbor-number prompt; eSpeak expected labels are computed only after inference. Approximate 20ms timestamps. Automated evidence, not proof of perfect pronunciation.",
+  "results": [
+    {
+      "role": "number",
+      "number": "5",
+      "id": "N003",
+      "expected_text": "five",
+      "expected_espeak": "fˈaɪv",
+      "source_path": "/Users/support/codex/youtube/design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/N003-selected-source.wav",
+      "source_sha256": "e8b75bed3dee8e527252792c586c63c094645f5ce14863626be62f432a582c02",
+      "duration_s": 0.6005625,
+      "recognized_phonemes": "f aɪ v",
+      "tokens": [
+        {
+          "token": "f",
+          "start_s": 0.08,
+          "end_s": 0.105,
+          "probability": 0.9433716021139659
+        },
+        {
+          "token": "aɪ",
+          "start_s": 0.16,
+          "end_s": 0.185,
+          "probability": 0.6975775594071266
+        },
+        {
+          "token": "v",
+          "start_s": 0.46,
+          "end_s": 0.485,
+          "probability": 0.8953223747774594
+        }
+      ]
+    }
+  ]
+}

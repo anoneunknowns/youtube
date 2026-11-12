@@ -1,0 +1,297 @@
+{
+  "kind": "independent-geometric-corrected-media-v002-aggregate",
+  "status": "pass",
+  "passed": true,
+  "created_at_utc": "2026-11-12T06:30:46.035879+00:00",
+  "inputs": {
+    "video": {
+      "path": "output/geometric-sequence-counting-001-v002/delivery-v001/paspla-studio-geometric-sequence-2-times-3-1080p.mp4",
+      "sha256": "479afec332c2e7371dac941857b1d583223ecefc54084cbbb1d4244007bd7062",
+      "bytes": 83706285
+    },
+    "timeline": {
+      "path": "output/geometric-sequence-counting-001-v002/audio-build/timeline-v004.json",
+      "sha256": "70df95ddfe53e96607dc72cdf89560a6cd73893a27ae2dc0aeb964ae2a200245",
+      "bytes": 728917
+    },
+    "master": {
+      "path": "output/geometric-sequence-counting-001-v002/audio-build/master.wav",
+      "sha256": "f667bcc41a124dff28fa9f18fecf2ad0a86f9de8f489f4816fa1b487c48ce631",
+      "bytes": 196377702
+    },
+    "speech_manifest": {
+      "path": "output/geometric-sequence-counting-001-v002/audio-build/measurements.json",
+      "sha256": "54b8dcb392367afff9422b2dcde5a1ad68012a4d6fd0fa09b7d1f14f25854ca1",
+      "bytes": 115113
+    },
+    "speech_acceptance": {
+      "path": "output/geometric-sequence-counting-001-v002/audio-build/speech-acceptance-final.json",
+      "sha256": "4c198c77e291bfadad687a2a001e1f753f7755089b06b790a8d8f85354e1a3f3",
+      "bytes": 294261
+    },
+    "accepted_aac": {
+      "path": "output/geometric-sequence-counting-001-v002/audio-build/encoded-aac-v002-256k/accepted-aac.m4a",
+      "sha256": "3cc1f26981102e4480f8e9d0e2c0953d3e7f37d6ccb4b0cb38177643631ebce2",
+      "bytes": 17784737
+    },
+    "encoded_audio_acceptance": {
+      "path": "output/geometric-sequence-counting-001-v002/audio-build/encoded-aac-v002-256k/acceptance.json",
+      "sha256": "a92b4507960308d1791546ed2e84080632703eb317915cb0479bff3c6ba10157",
+      "bytes": 5098
+    }
+  },
+  "unresolved_material_findings": [],
+  "required_fixes": [],
+  "correction": {
+    "cue_ids": [
+      "D016"
+    ],
+    "method": "Only the list-context Six in D016 was replaced; 109 exact source WAVs retain adoption. All dependent clocks were regenerated.",
+    "focused_regression": {
+      "path": "output/geometric-sequence-counting-001-v002/audio-build/D016-negative-control.json",
+      "sha256": "bcb082f8a69742afc00e43e7783bb3e65a11dbe4ef436446652856559e5d33c2",
+      "bytes": 2960
+    },
+    "old_accepted_gate_D016_is_not_a_new_pronunciation_approval": true
+  },
+  "technical": {
+    "passed": true,
+    "evidence": {
+      "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-technical-001/verification.json",
+      "sha256": "7529928061d8c11d410738b7c9a3a2d187d375b50cd790692380bba2537f5047",
+      "bytes": 20438
+    },
+    "frames": 20456,
+    "duration_s": 681.8666666666667,
+    "measurements": {
+      "decode_exit_code": 0,
+      "loudness_exit_code": 0,
+      "duration_s": 681.866667,
+      "decoded_video_frames": 20456,
+      "integrated_lufs": -16.88,
+      "true_peak_dbtp": -1.83,
+      "lra_lu": 4.9,
+      "loudnorm_raw": {
+        "input_i": "-16.88",
+        "input_tp": "-1.83",
+        "input_lra": "4.90",
+        "input_thresh": "-27.20",
+        "output_i": "-16.62",
+        "output_tp": "-1.00",
+        "output_lra": "4.30",
+        "output_thresh": "-26.93",
+        "normalization_type": "dynamic",
+        "target_offset": "0.62"
+      },
+      "analysis_input_fields": "input_i/input_tp measure final encoded AAC, not normalized filter output",
+      "declared_video_frames": 20456,
+      "video_stream_duration_s": 681.866667,
+      "audio_stream_duration_s": 681.866667
+    }
+  },
+  "math": {
+    "passed": true,
+    "evidence": [
+      {
+        "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-technical-001/verification.json",
+        "sha256": "7529928061d8c11d410738b7c9a3a2d187d375b50cd790692380bba2537f5047",
+        "bytes": 20438
+      },
+      {
+        "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-teaching-001/verification.json",
+        "sha256": "f347b28f8cd249d8b1e8335e41af365c507fb90ee63aeaabb65f40b53ec0a2ee",
+        "bytes": 189794
+      }
+    ],
+    "terms": 41,
+    "operations": 40,
+    "cues": 110,
+    "last": "24315330918113857602",
+    "sum": "36472996377170786402",
+    "method": "new arbitrary-precision exponentiation, repeated three-group addition, Fraction ratios, inverse English grammar",
+    "general_semantic_frames": 380
+  },
+  "timing": {
+    "passed": true,
+    "evidence": [
+      {
+        "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-technical-001/verification.json",
+        "sha256": "7529928061d8c11d410738b7c9a3a2d187d375b50cd790692380bba2537f5047",
+        "bytes": 20438
+      },
+      {
+        "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-audio-001/verification.json",
+        "sha256": "4bf7ed42f58a070cd8f272eed993fda182a3aa1d0a0e48faa9966e0dabee83ec",
+        "bytes": 257303
+      },
+      {
+        "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-teaching-001/verification.json",
+        "sha256": "f347b28f8cd249d8b1e8335e41af365c507fb90ee63aeaabb65f40b53ec0a2ee",
+        "bytes": 189794
+      }
+    ],
+    "voice_events": 110,
+    "word_reveal_observations": 207,
+    "ordinary_result_end_to_next_operand_s": 2,
+    "operand_to_result_s": 0.16,
+    "result_display_lead_s": 0.12,
+    "progress": "commit after result reading ends"
+  },
+  "audio": {
+    "passed": true,
+    "evidence": [
+      {
+        "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-audio-001/verification.json",
+        "sha256": "4bf7ed42f58a070cd8f272eed993fda182a3aa1d0a0e48faa9966e0dabee83ec",
+        "bytes": 257303
+      },
+      {
+        "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-aac-copy-001/verification.json",
+        "sha256": "b32c783e88acb767790ea35b340313a5c8059773542163308e142e703ca55638",
+        "bytes": 1580
+      },
+      {
+        "path": "output/geometric-sequence-counting-001-v002/audio-build/encoded-aac-v002-256k/acceptance.json",
+        "sha256": "a92b4507960308d1791546ed2e84080632703eb317915cb0479bff3c6ba10157",
+        "bytes": 5098
+      }
+    ],
+    "source_to_master_cues": 110,
+    "final_left_right_cues": 110,
+    "minimum_correlation": 0.9999920073701648,
+    "silence_intervals": 111,
+    "new_encoded_recognition": "New256k AAC: ASR220 and CTC220 across110 cues×2 channels, isolated corrected Six on both channels and two additional base.en checks.",
+    "master_rebuild_quantization": {
+      "path": "design/geometric-sequence-counting-v1/production-qa/v002/root-correction-001/unchanged-master-regions-difference-v002.json",
+      "sha256": "ec0bbd95e000ab63f4879870e989e05eb495d714659c46e717b1ba0a3dbca19a",
+      "bytes": 3912
+    },
+    "master_bytes_identical_to_old_version_claimed": false
+  },
+  "visual": {
+    "passed": true,
+    "complete_picture": {
+      "path": "design/geometric-sequence-counting-v1/production-qa/v002/full-picture-001/verification.json",
+      "sha256": "9d6b874d0777dff79bad44a362dba1bb442420e917f52837842ca4ae688be524",
+      "bytes": 28337
+    },
+    "resolved_measurements": [
+      {
+        "frame": 417,
+        "component_id": "return-caption",
+        "initial": {
+          "path": "design/geometric-sequence-counting-v1/production-qa/v002/full-picture-001/verification.json",
+          "sha256": "9d6b874d0777dff79bad44a362dba1bb442420e917f52837842ca4ae688be524",
+          "bytes": 28337
+        },
+        "correction": {
+          "path": "design/geometric-sequence-counting-v1/production-qa/v002/caption-neighbor-001/verification.json",
+          "sha256": "28a339490fcdd3980624cad72cb585a86239610475d38cdef2db1d7e4c9462a5",
+          "bytes": 6356
+        },
+        "delta_x_px": 0.0,
+        "delta_y_px": 0.5,
+        "reason": "Adjacent teal moving6 contaminated the muted-caption guard; same box/tolerance remeasured with color separation.",
+        "content_box_changed": false,
+        "tolerance_changed": false,
+        "passed": true
+      },
+      {
+        "frame": 418,
+        "component_id": "return-caption",
+        "initial": {
+          "path": "design/geometric-sequence-counting-v1/production-qa/v002/full-picture-001/verification.json",
+          "sha256": "9d6b874d0777dff79bad44a362dba1bb442420e917f52837842ca4ae688be524",
+          "bytes": 28337
+        },
+        "correction": {
+          "path": "design/geometric-sequence-counting-v1/production-qa/v002/caption-neighbor-001/verification.json",
+          "sha256": "28a339490fcdd3980624cad72cb585a86239610475d38cdef2db1d7e4c9462a5",
+          "bytes": 6356
+        },
+        "delta_x_px": 0.0,
+        "delta_y_px": 0.5,
+        "reason": "Adjacent teal moving6 contaminated the muted-caption guard; same box/tolerance remeasured with color separation.",
+        "content_box_changed": false,
+        "tolerance_changed": false,
+        "passed": true
+      }
+    ],
+    "unresolved_measurements": [],
+    "YUV_identity": {
+      "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-yuv-identity-001/verification.json",
+      "sha256": "f341e7e2f2371e4d9a0733142e6f3139241b59ad103bfd49639218d6944d4662",
+      "bytes": 1170
+    },
+    "finalization": {
+      "path": "output/geometric-sequence-counting-001-v002/finalization-v001/finalization.json",
+      "sha256": "f14f177744324e48bda4af3623fd24ae1514617c641fd17a59926e831a8a532e",
+      "bytes": 6860
+    },
+    "decoded_frames": 20456,
+    "half_resolution_glyph_observations": 160698,
+    "native_sample_frames": 1903,
+    "native_components": 17659,
+    "native_digits": 51653,
+    "actor_alpha250": {
+      "path": "design/geometric-sequence-counting-v1/production-qa/v002/actor-alpha250-001/verification.json",
+      "sha256": "6603630a3b9581f04a05bbd9ce0bc13a546b78e16dc4ed960d186dfba2dd9b5a",
+      "bytes": 217319
+    },
+    "teaching": {
+      "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-teaching-001/verification.json",
+      "sha256": "f347b28f8cd249d8b1e8335e41af365c507fb90ee63aeaabb65f40b53ec0a2ee",
+      "bytes": 189794
+    },
+    "scope": "All-frame critical glyph/state checks at half resolution, native event/transition samples and individual digits; both axes and clipping at original tolerances."
+  },
+  "captions": {
+    "passed": true,
+    "evidence": {
+      "path": "design/geometric-sequence-counting-v1/production-qa/v002/final-audio-001/verification.json",
+      "sha256": "4bf7ed42f58a070cd8f272eed993fda182a3aa1d0a0e48faa9966e0dabee83ec",
+      "bytes": 257303
+    },
+    "files": [
+      {
+        "path": "output/geometric-sequence-counting-001-v002/delivery-v001/english-captions.srt",
+        "sha256": "270a72ec178408ebd0c192f39022bec9bfeadde35c0cccd2f4ce7b13daa392ce",
+        "cues": 110,
+        "passed": true
+      },
+      {
+        "path": "output/geometric-sequence-counting-001-v002/delivery-v001/subtitles.srt",
+        "sha256": "270a72ec178408ebd0c192f39022bec9bfeadde35c0cccd2f4ce7b13daa392ce",
+        "cues": 110,
+        "passed": true
+      }
+    ]
+  },
+  "creative": {
+    "passed": true,
+    "evidence": {
+      "path": "design/geometric-sequence-counting-v1/production-qa/v002/creative-review/verification.json",
+      "sha256": "b20ad5cf0433194ac9b2268861c34a80460629790226d92a2e04d2a91e6a548c",
+      "bytes": 10986
+    },
+    "separate_from_technical": true
+  },
+  "reproducibility": {
+    "verifier_snapshot": {
+      "path": "design/geometric-sequence-counting-v1/production-qa/v002/verifier-source-v002.py",
+      "sha256": "9c5ae409e3841d3e7c8e07966b14ac59cf3aa4a3b6b6c1f89542c447ee4555d0",
+      "bytes": 65385
+    },
+    "aggregate_verifier": {
+      "path": "tools/aggregate_geometric_revision_v002.py",
+      "sha256": "c23c2dc8fd2955c9c4ed986d550438a4a7a0f72b6dd83f7c7a70a05f7aedfe3b",
+      "bytes": 11651
+    },
+    "old_media_and_failed_diagnostics_preserved": true
+  },
+  "scope_limits": [
+    "Automated full decode, signal/recognition tests, native stills and continuous-frame contacts are distinguished from human uninterrupted full playback/listening.",
+    "109 prior source decisions are inherited only for exact WAV hashes; the new encoded AAC has a new full recognition/signal gate.",
+    "Exact PCM24 equality with the previous master is not a requirement or claim: old two-stage gain quantization and new single-stage total gain differ by at most the measured tiny quantization residual. All new output checks stand independently."
+  ]
+}

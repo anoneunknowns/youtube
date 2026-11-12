@@ -1,0 +1,1042 @@
+{
+  "id": "rabbit-beret",
+  "version": "v001",
+  "review": {
+    "identity": "Reviewed against the explicitly adopted canonical neutral: pale-yellow bear or pink rabbit, original large brown oval eyes, muzzle, red beret and asymmetric rabbit ears retained. The new teacup is an intentional eye-catch prop.",
+    "style": "Original warm-brown contour and watercolor fill retained. Light and dark alpha composites inspected, without alpha cleanup, contour filtering or source rescaling.",
+    "alpha": "Both original RGBA sheets and all18 exact cell crops pass alpha8 nonempty margins>=2px. No clipped ears, feet, cups or empty poses. Non-divisible source dimensions use rounded fractional 3x3 boundaries.",
+    "motion": "Four stock actions inspected. Cup hold/raise/sip/lower positions distinct; tea_sip upper rim meets the lower mouth contour. Bow is a modest angled forward bend with two degrees, not a 90-degree bow. Jump crouch/takeoff/air/land retain actual drawn lift; dance left/right lean in opposite directions and step has one planted foot. GIFs show discrete key poses; timing and dense interpolation remain scene work."
+  },
+  "sheets": [
+    {
+      "id": "tea_bow",
+      "source_sheet": "assets/library/characters/rabbit-beret/eyecatches/v001/source-sheets/tea_bow.png",
+      "source_sheet_sha256": "b99ec659d7a6b536e4f5037a64ac85955675d3379c0dbe9b367086760f40f555",
+      "prompt_path": "assets/library/characters/rabbit-beret/eyecatches/v001/source-sheets/tea_bow-prompt.txt",
+      "generation_input_path": "assets/library/characters/rabbit-beret/eyecatches/v001/source-sheets/tea_bow-input.json",
+      "reference_height_px": 336.0,
+      "calibration": {
+        "method": "Measured neutral standing-height proxy plus sheet-to-sheet head-width transfer; one isotropic scale per sheet.",
+        "reference_pose": "neutral",
+        "notes": "The tea-sheet neutral top-to-foot proxy includes its existing ears/beret. Jump-sheet scale is transferred by the manually reviewed cheek/head span; ear tips and beret are excluded from that width. No per-pose fit or inferred head pivot.",
+        "head_scan_band_y_px": [
+          195,
+          225
+        ],
+        "head_width_px": 173,
+        "head_scanline_y_px": 207,
+        "head_scanline_x_span_px": [
+          132,
+          305
+        ],
+        "alpha_threshold": 128,
+        "tea_neutral_standing_proxy_px": 336,
+        "tea_neutral_head_width_px": 173,
+        "sheet_to_tea_head_width_ratio": 1.0
+      },
+      "frames": [
+        {
+          "id": "neutral",
+          "index": 0,
+          "body_bbox_px": [
+            129,
+            42,
+            327,
+            380
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            218.0,
+            379
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                365,
+                416,
+                379
+              ],
+              "foot_visible_bbox_px": [
+                170,
+                365,
+                266,
+                379
+              ],
+              "strong_body_bbox_px": [
+                130,
+                43,
+                326,
+                379
+              ],
+              "visible_bbox_alpha8_px": [
+                129,
+                42,
+                327,
+                380
+              ],
+              "visible_alpha8_margins_px": [
+                129,
+                42,
+                89,
+                40
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "tea_hold",
+          "index": 1,
+          "body_bbox_px": [
+            110,
+            42,
+            310,
+            380
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            200.5,
+            379
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                365,
+                415,
+                379
+              ],
+              "foot_visible_bbox_px": [
+                152,
+                365,
+                249,
+                379
+              ],
+              "strong_body_bbox_px": [
+                111,
+                43,
+                308,
+                379
+              ],
+              "visible_bbox_alpha8_px": [
+                110,
+                42,
+                310,
+                380
+              ],
+              "visible_alpha8_margins_px": [
+                110,
+                42,
+                105,
+                40
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "tea_raise",
+          "index": 2,
+          "body_bbox_px": [
+            96,
+            42,
+            296,
+            380
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            186.5,
+            379
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                365,
+                416,
+                379
+              ],
+              "foot_visible_bbox_px": [
+                138,
+                365,
+                235,
+                379
+              ],
+              "strong_body_bbox_px": [
+                98,
+                43,
+                295,
+                379
+              ],
+              "visible_bbox_alpha8_px": [
+                96,
+                42,
+                296,
+                380
+              ],
+              "visible_alpha8_margins_px": [
+                96,
+                42,
+                120,
+                40
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "tea_sip",
+          "index": 3,
+          "body_bbox_px": [
+            128,
+            25,
+            327,
+            365
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            218.5,
+            364
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                350,
+                416,
+                364
+              ],
+              "foot_visible_bbox_px": [
+                169,
+                350,
+                268,
+                364
+              ],
+              "strong_body_bbox_px": [
+                129,
+                26,
+                326,
+                364
+              ],
+              "visible_bbox_alpha8_px": [
+                128,
+                25,
+                327,
+                365
+              ],
+              "visible_alpha8_margins_px": [
+                128,
+                25,
+                89,
+                56
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "tea_lower",
+          "index": 4,
+          "body_bbox_px": [
+            110,
+            28,
+            311,
+            365
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            202.0,
+            363
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                349,
+                415,
+                363
+              ],
+              "foot_visible_bbox_px": [
+                152,
+                349,
+                252,
+                363
+              ],
+              "strong_body_bbox_px": [
+                111,
+                29,
+                310,
+                363
+              ],
+              "visible_bbox_alpha8_px": [
+                110,
+                28,
+                311,
+                365
+              ],
+              "visible_alpha8_margins_px": [
+                110,
+                28,
+                104,
+                56
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "bow_ready",
+          "index": 5,
+          "body_bbox_px": [
+            94,
+            25,
+            296,
+            365
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            187.0,
+            363
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                349,
+                416,
+                363
+              ],
+              "foot_visible_bbox_px": [
+                139,
+                349,
+                235,
+                363
+              ],
+              "strong_body_bbox_px": [
+                96,
+                26,
+                295,
+                363
+              ],
+              "visible_bbox_alpha8_px": [
+                94,
+                25,
+                296,
+                365
+              ],
+              "visible_alpha8_margins_px": [
+                94,
+                25,
+                120,
+                56
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "bow_half",
+          "index": 6,
+          "body_bbox_px": [
+            117,
+            13,
+            327,
+            346
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            237.0,
+            345
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                331,
+                416,
+                345
+              ],
+              "foot_visible_bbox_px": [
+                190,
+                331,
+                284,
+                345
+              ],
+              "strong_body_bbox_px": [
+                120,
+                14,
+                327,
+                345
+              ],
+              "visible_bbox_alpha8_px": [
+                117,
+                13,
+                327,
+                346
+              ],
+              "visible_alpha8_margins_px": [
+                117,
+                13,
+                89,
+                74
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "bow_deep",
+          "index": 7,
+          "body_bbox_px": [
+            84,
+            39,
+            310,
+            345
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            215.5,
+            344
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                330,
+                415,
+                344
+              ],
+              "foot_visible_bbox_px": [
+                169,
+                330,
+                262,
+                344
+              ],
+              "strong_body_bbox_px": [
+                85,
+                39,
+                308,
+                344
+              ],
+              "visible_bbox_alpha8_px": [
+                84,
+                39,
+                310,
+                345
+              ],
+              "visible_alpha8_margins_px": [
+                84,
+                39,
+                105,
+                75
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "bow_return",
+          "index": 8,
+          "body_bbox_px": [
+            95,
+            9,
+            300,
+            346
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            189.0,
+            345
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                331,
+                416,
+                345
+              ],
+              "foot_visible_bbox_px": [
+                140,
+                331,
+                238,
+                345
+              ],
+              "strong_body_bbox_px": [
+                97,
+                10,
+                298,
+                345
+              ],
+              "visible_bbox_alpha8_px": [
+                95,
+                9,
+                300,
+                346
+              ],
+              "visible_alpha8_margins_px": [
+                95,
+                9,
+                116,
+                74
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        }
+      ]
+    },
+    {
+      "id": "jump_dance",
+      "source_sheet": "assets/library/characters/rabbit-beret/eyecatches/v001/source-sheets/jump_dance.png",
+      "source_sheet_sha256": "f526a12df4d4a598021214a7c08b3cc9a13dbf399b63b113b57cd4aee39ec4a1",
+      "prompt_path": "assets/library/characters/rabbit-beret/eyecatches/v001/source-sheets/jump_dance-prompt.txt",
+      "generation_input_path": "assets/library/characters/rabbit-beret/eyecatches/v001/source-sheets/jump_dance-input.json",
+      "reference_height_px": 326.28901734104045,
+      "calibration": {
+        "method": "Measured neutral standing-height proxy plus sheet-to-sheet head-width transfer; one isotropic scale per sheet.",
+        "reference_pose": "jump_ready",
+        "notes": "The tea-sheet neutral top-to-foot proxy includes its existing ears/beret. Jump-sheet scale is transferred by the manually reviewed cheek/head span; ear tips and beret are excluded from that width. No per-pose fit or inferred head pivot.",
+        "head_scan_band_y_px": [
+          200,
+          230
+        ],
+        "head_width_px": 168,
+        "head_scanline_y_px": 206,
+        "head_scanline_x_span_px": [
+          135,
+          303
+        ],
+        "alpha_threshold": 128,
+        "tea_neutral_standing_proxy_px": 336,
+        "tea_neutral_head_width_px": 173,
+        "sheet_to_tea_head_width_ratio": 0.9710982658959537
+      },
+      "frames": [
+        {
+          "id": "jump_ready",
+          "index": 0,
+          "body_bbox_px": [
+            127,
+            55,
+            326,
+            390
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            219.0,
+            388
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                374,
+                406,
+                388
+              ],
+              "foot_visible_bbox_px": [
+                171,
+                374,
+                267,
+                388
+              ],
+              "strong_body_bbox_px": [
+                128,
+                56,
+                325,
+                388
+              ],
+              "visible_bbox_alpha8_px": [
+                127,
+                55,
+                326,
+                390
+              ],
+              "visible_alpha8_margins_px": [
+                127,
+                55,
+                80,
+                41
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "jump_crouch",
+          "index": 1,
+          "body_bbox_px": [
+            103,
+            78,
+            309,
+            390
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            198.0,
+            388
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                374,
+                405,
+                388
+              ],
+              "foot_visible_bbox_px": [
+                141,
+                374,
+                255,
+                388
+              ],
+              "strong_body_bbox_px": [
+                106,
+                79,
+                306,
+                388
+              ],
+              "visible_bbox_alpha8_px": [
+                103,
+                78,
+                309,
+                390
+              ],
+              "visible_alpha8_margins_px": [
+                103,
+                78,
+                96,
+                41
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "jump_takeoff",
+          "index": 2,
+          "body_bbox_px": [
+            84,
+            54,
+            286,
+            379
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            178.5,
+            388.0
+          ],
+          "support_kind": "inferred-ground-plane",
+          "support_notes": "No foot-ground contact in jump_takeoff. Ground Y=388.0px inferred from grounded same-row keys jump_ready,jump_crouch; source foot bottom is 378px, retaining baked-in lift 10.0px. Do not add a second root jump.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                364,
+                406,
+                378
+              ],
+              "foot_visible_bbox_px": [
+                141,
+                364,
+                216,
+                378
+              ],
+              "strong_body_bbox_px": [
+                85,
+                56,
+                286,
+                378
+              ],
+              "visible_bbox_alpha8_px": [
+                84,
+                54,
+                286,
+                379
+              ],
+              "visible_alpha8_margins_px": [
+                84,
+                54,
+                120,
+                52
+              ]
+            },
+            {
+              "inferred_ground_y_px": 388.0,
+              "original_art_foot_y_px": 378,
+              "baked_in_lift_px": 10.0,
+              "ground_reference_pose_ids": [
+                "jump_ready",
+                "jump_crouch"
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "jump_air",
+          "index": 3,
+          "body_bbox_px": [
+            120,
+            24,
+            326,
+            330
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            223.0,
+            361.0
+          ],
+          "support_kind": "inferred-ground-plane",
+          "support_notes": "No foot-ground contact in jump_air. Ground Y=361.0px inferred from grounded same-row keys jump_land,dance_left; source foot bottom is 329px, retaining baked-in lift 32.0px. Do not add a second root jump.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                315,
+                406,
+                329
+              ],
+              "foot_visible_bbox_px": [
+                181,
+                315,
+                265,
+                329
+              ],
+              "strong_body_bbox_px": [
+                122,
+                26,
+                325,
+                329
+              ],
+              "visible_bbox_alpha8_px": [
+                120,
+                24,
+                326,
+                330
+              ],
+              "visible_alpha8_margins_px": [
+                120,
+                24,
+                80,
+                100
+              ]
+            },
+            {
+              "inferred_ground_y_px": 361.0,
+              "original_art_foot_y_px": 329,
+              "baked_in_lift_px": 32.0,
+              "ground_reference_pose_ids": [
+                "jump_land",
+                "dance_left"
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "jump_land",
+          "index": 4,
+          "body_bbox_px": [
+            106,
+            48,
+            307,
+            362
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            199.0,
+            361
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                347,
+                405,
+                361
+              ],
+              "foot_visible_bbox_px": [
+                142,
+                347,
+                256,
+                361
+              ],
+              "strong_body_bbox_px": [
+                106,
+                50,
+                305,
+                361
+              ],
+              "visible_bbox_alpha8_px": [
+                106,
+                48,
+                307,
+                362
+              ],
+              "visible_alpha8_margins_px": [
+                106,
+                48,
+                98,
+                68
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "dance_left",
+          "index": 5,
+          "body_bbox_px": [
+            70,
+            51,
+            285,
+            362
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            172.5,
+            361
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                347,
+                406,
+                361
+              ],
+              "foot_visible_bbox_px": [
+                116,
+                347,
+                229,
+                361
+              ],
+              "strong_body_bbox_px": [
+                71,
+                52,
+                284,
+                361
+              ],
+              "visible_bbox_alpha8_px": [
+                70,
+                51,
+                285,
+                362
+              ],
+              "visible_alpha8_margins_px": [
+                70,
+                51,
+                121,
+                68
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "dance_right",
+          "index": 6,
+          "body_bbox_px": [
+            108,
+            13,
+            332,
+            354
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            218.5,
+            353
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                339,
+                406,
+                353
+              ],
+              "foot_visible_bbox_px": [
+                162,
+                339,
+                275,
+                353
+              ],
+              "strong_body_bbox_px": [
+                109,
+                15,
+                331,
+                353
+              ],
+              "visible_bbox_alpha8_px": [
+                108,
+                13,
+                332,
+                354
+              ],
+              "visible_alpha8_margins_px": [
+                108,
+                13,
+                74,
+                77
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "dance_step",
+          "index": 7,
+          "body_bbox_px": [
+            90,
+            18,
+            298,
+            355
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            171.5,
+            354
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                340,
+                405,
+                354
+              ],
+              "foot_visible_bbox_px": [
+                146,
+                340,
+                197,
+                354
+              ],
+              "strong_body_bbox_px": [
+                91,
+                20,
+                297,
+                354
+              ],
+              "visible_bbox_alpha8_px": [
+                90,
+                18,
+                298,
+                355
+              ],
+              "visible_alpha8_margins_px": [
+                90,
+                18,
+                107,
+                76
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        },
+        {
+          "id": "dance_finish",
+          "index": 8,
+          "body_bbox_px": [
+            85,
+            22,
+            294,
+            356
+          ],
+          "tail_bbox_px": null,
+          "anchor_px": [
+            186.0,
+            355
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Foot support measured inside the manually reviewed lowest-foot ROI at alpha128. The cup is above this ROI; dance_step uses only its lower planted foot, excluding the raised foot.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                0,
+                341,
+                406,
+                355
+              ],
+              "foot_visible_bbox_px": [
+                134,
+                341,
+                238,
+                355
+              ],
+              "strong_body_bbox_px": [
+                86,
+                24,
+                293,
+                355
+              ],
+              "visible_bbox_alpha8_px": [
+                85,
+                22,
+                294,
+                356
+              ],
+              "visible_alpha8_margins_px": [
+                85,
+                22,
+                112,
+                75
+              ]
+            }
+          ],
+          "review": "Full character, ears and beret visible; source pixels unchanged. Declared pose and support inspected on light and dark backgrounds."
+        }
+      ]
+    }
+  ]
+}

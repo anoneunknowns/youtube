@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "kind": "square-vui-correction-complete-RGB24-identity",
+  "original": {
+    "path": "output/square-counting-001-v001/production-v003/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+    "sha256": "6dd2ebbc7861b99a7749cfe2e9bda4c86754d863a0bcc8edb923455187ce8fe1"
+  },
+  "corrected": {
+    "path": "output/square-counting-001-v001/production-v004/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+    "sha256": "7a45f134fb7ebc719a51d46efe7856853d0d92251fd4e35523c15d1de07f62f6"
+  },
+  "verifier": {
+    "path": "tools/verify_square_remux_rgb.py",
+    "sha256": "e553a483d1128f504156ddc054dd14e970b29a680223508ebc725260d0dc4edb"
+  },
+  "pixel_format": "rgb24",
+  "decoded_frame_count": 19405,
+  "frame_differences": [],
+  "checks": {
+    "all_19405_RGB24_decoded_frame_rows_identical": true,
+    "source_video_bytes_preserved": true,
+    "corrected_video_bytes_preserved": true
+  },
+  "status": "PASS",
+  "artifacts": {
+    "old": {
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "4",
+        "-i",
+        "/Users/support/codex/youtube/output/square-counting-001-v001/production-v003/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-pix_fmt",
+        "rgb24",
+        "-fps_mode",
+        "passthrough",
+        "-threads:v",
+        "1",
+        "-f",
+        "framemd5",
+        "/Users/support/codex/youtube/design/square-counting-v1/production-qa/metadata-correction-rgb-v002/old-decoded-rgb24.framemd5"
+      ],
+      "artifact": {
+        "path": "design/square-counting-v1/production-qa/metadata-correction-rgb-v002/old-decoded-rgb24.framemd5",
+        "sha256": "7f7b3626444a577a200a273427b1fbce090bbbc326d947431b7b5e1bab3fa9ea"
+      }
+    },
+    "new": {
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "4",
+        "-i",
+        "/Users/support/codex/youtube/output/square-counting-001-v001/production-v004/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-pix_fmt",
+        "rgb24",
+        "-fps_mode",
+        "passthrough",
+        "-threads:v",
+        "1",
+        "-f",
+        "framemd5",
+        "/Users/support/codex/youtube/design/square-counting-v1/production-qa/metadata-correction-rgb-v002/new-decoded-rgb24.framemd5"
+      ],
+      "artifact": {
+        "path": "design/square-counting-v1/production-qa/metadata-correction-rgb-v002/new-decoded-rgb24.framemd5",
+        "sha256": "7f7b3626444a577a200a273427b1fbce090bbbc326d947431b7b5e1bab3fa9ea"
+      }
+    }
+  },
+  "native_layout_recomputed": false,
+  "inherited_native_layout_report": {
+    "path": "output/square-counting-001-v001/production-v003/native-layout-verification.json",
+    "sha256": "5ec11caf10932101b1eb2176531ff5eab3dc548887f3e01cb813be050e3362d3"
+  },
+  "inheritance_reason": "Every full-resolution decoded RGB24 frame, frame time and duration is identical. The original native layout and independent pixel-content evidence apply to the unchanged imagery; the corrected MP4 receives new metadata verification."
+}

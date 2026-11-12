@@ -1,0 +1,1203 @@
+{
+  "id": "tora",
+  "version": "v002",
+  "review": {
+    "identity": "Reviewed against selected canonical original: same face, brown oval eyes, watercolor texture and species markings; rabbit red beret/pink fur or Tora orange stripes and curled tail preserved.",
+    "style": "Light and dark composites inspected at full source resolution; warm brown contour and watercolor fill retained. No source painting, alpha cleanup or per-pose scaling.",
+    "alpha": "RGBA source transparency and alpha8 cell margins passed all 27 exact cells; no clipping or empty frame. Alpha128 used for anatomy only; original feather/edge alpha retained.",
+    "motion": "All 27 distinct key poses inspected. Blinks, pop, think/aha/oops/retry, clap pair, 5 wave states, celebration ready/air/land, seat/stretch/stand and gaze states present. nod_down has limited range; GIFs are discrete key-pose reviews, not certified continuous animation."
+  },
+  "sheets": [
+    {
+      "id": "reactions",
+      "source_sheet": "assets/library/characters/tora/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "d53983cdc00ef3cf3a1601d677930e57c8c05c2b6f5a500b386e886ffcc66606",
+      "prompt_path": "assets/library/characters/tora/motions/v002/source-sheets/reactions-prompt.txt",
+      "generation_input_path": "assets/library/characters/tora/motions/v002/source-sheets/reactions-input.json",
+      "reference_height_px": 358.0,
+      "calibration": {
+        "method": "alpha128-neutral-height-and-head-width-transfer",
+        "reference_pose": "neutral",
+        "notes": "One common standing-equivalent reference for all nine poses in this source sheet. Reactions measured from head/ear top to anatomical foot support; actions/postures transferred by reviewed face width, excluding ears/whiskers. This is a scale calibration, not a measured head pivot.",
+        "neutral_standing_reference_height_px": 358,
+        "neutral_head_width_px": 226,
+        "sheet_to_reactions_head_width_ratio": 1.0,
+        "numeric_evidence": {
+          "reference_pose": "neutral",
+          "head_width_px": 226,
+          "head_scanline_y_px": 145,
+          "head_scanline_x_span_px": [
+            111,
+            337
+          ],
+          "head_scan_band_y_px": [
+            135,
+            146
+          ],
+          "alpha_threshold": 128,
+          "anatomical_scope": "Main cheek/face width; rabbit ears and Tora whiskers excluded by manually reviewed scan band."
+        }
+      },
+      "frames": [
+        {
+          "id": "neutral",
+          "index": 0,
+          "body_bbox_px": [
+            95,
+            22,
+            364,
+            383
+          ],
+          "anchor_px": [
+            221.0,
+            381
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                155,
+                345,
+                295,
+                385
+              ],
+              "measured_foot_bbox_px": [
+                156,
+                345,
+                286,
+                381
+              ],
+              "actual_visible_bbox_alpha8": [
+                95,
+                22,
+                364,
+                383
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blink",
+          "index": 1,
+          "body_bbox_px": [
+            69,
+            22,
+            336,
+            383
+          ],
+          "anchor_px": [
+            195.0,
+            381
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                128,
+                345,
+                268,
+                385
+              ],
+              "measured_foot_bbox_px": [
+                130,
+                345,
+                260,
+                381
+              ],
+              "actual_visible_bbox_alpha8": [
+                69,
+                22,
+                336,
+                383
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tap_down",
+          "index": 2,
+          "body_bbox_px": [
+            57,
+            37,
+            343,
+            381
+          ],
+          "anchor_px": [
+            184.0,
+            379
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                114,
+                343,
+                254,
+                383
+              ],
+              "measured_foot_bbox_px": [
+                114,
+                343,
+                254,
+                379
+              ],
+              "actual_visible_bbox_alpha8": [
+                57,
+                37,
+                343,
+                381
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tap_pop",
+          "index": 3,
+          "body_bbox_px": [
+            90,
+            3,
+            362,
+            365
+          ],
+          "anchor_px": [
+            214.0,
+            381
+          ],
+          "support_kind": "inferred-ground-plane",
+          "support_notes": "Ground y inferred from grounded neutral in the same source sheet; airborne visible feet stay 18px above it. X follows airborne anatomical foot center. No airborne ground contact measurement is claimed.",
+          "review": "Small airborne pop with separated feet; lift retained against inferred neutral ground plane. Requires episode timing review.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                154,
+                327,
+                294,
+                367
+              ],
+              "measured_foot_bbox_px": [
+                154,
+                327,
+                274,
+                363
+              ],
+              "actual_visible_bbox_alpha8": [
+                90,
+                3,
+                362,
+                365
+              ]
+            },
+            {
+              "inferred_from_grounded_pose": "neutral",
+              "ground_y_px": 381,
+              "actual_airborne_foot_bottom_px": 363,
+              "source_lift_px": 18
+            }
+          ]
+        },
+        {
+          "id": "think",
+          "index": 4,
+          "body_bbox_px": [
+            65,
+            4,
+            347,
+            383
+          ],
+          "anchor_px": [
+            196.5,
+            380
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                129,
+                345,
+                269,
+                385
+              ],
+              "measured_foot_bbox_px": [
+                129,
+                345,
+                264,
+                380
+              ],
+              "actual_visible_bbox_alpha8": [
+                65,
+                4,
+                347,
+                383
+              ]
+            }
+          ]
+        },
+        {
+          "id": "aha",
+          "index": 5,
+          "body_bbox_px": [
+            53,
+            5,
+            335,
+            381
+          ],
+          "anchor_px": [
+            185.5,
+            380
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                115,
+                343,
+                255,
+                383
+              ],
+              "measured_foot_bbox_px": [
+                116,
+                343,
+                255,
+                380
+              ],
+              "actual_visible_bbox_alpha8": [
+                53,
+                5,
+                335,
+                381
+              ]
+            }
+          ]
+        },
+        {
+          "id": "oops",
+          "index": 6,
+          "body_bbox_px": [
+            83,
+            2,
+            360,
+            387
+          ],
+          "anchor_px": [
+            217.5,
+            386
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                153,
+                349,
+                293,
+                389
+              ],
+              "measured_foot_bbox_px": [
+                153,
+                349,
+                282,
+                386
+              ],
+              "actual_visible_bbox_alpha8": [
+                83,
+                2,
+                360,
+                387
+              ]
+            }
+          ]
+        },
+        {
+          "id": "retry",
+          "index": 7,
+          "body_bbox_px": [
+            60,
+            6,
+            342,
+            387
+          ],
+          "anchor_px": [
+            195.0,
+            386
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                127,
+                349,
+                267,
+                389
+              ],
+              "measured_foot_bbox_px": [
+                127,
+                349,
+                263,
+                386
+              ],
+              "actual_visible_bbox_alpha8": [
+                60,
+                6,
+                342,
+                387
+              ]
+            }
+          ]
+        },
+        {
+          "id": "signature",
+          "index": 8,
+          "body_bbox_px": [
+            50,
+            4,
+            338,
+            390
+          ],
+          "anchor_px": [
+            182.5,
+            389
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                114,
+                352,
+                254,
+                392
+              ],
+              "measured_foot_bbox_px": [
+                122,
+                352,
+                243,
+                389
+              ],
+              "actual_visible_bbox_alpha8": [
+                50,
+                4,
+                338,
+                390
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "actions",
+      "source_sheet": "assets/library/characters/tora/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "af066726c1a176d0424644907da8e365eb21c3253a2e7faf1970ed74fa1e33d8",
+      "prompt_path": "assets/library/characters/tora/motions/v002/source-sheets/actions-prompt.txt",
+      "generation_input_path": "assets/library/characters/tora/motions/v002/source-sheets/actions-input.json",
+      "reference_height_px": 343.7433628318584,
+      "calibration": {
+        "method": "alpha128-neutral-height-and-head-width-transfer",
+        "reference_pose": "wave_rest",
+        "notes": "One common standing-equivalent reference for all nine poses in this source sheet. Reactions measured from head/ear top to anatomical foot support; actions/postures transferred by reviewed face width, excluding ears/whiskers. This is a scale calibration, not a measured head pivot.",
+        "neutral_standing_reference_height_px": 358,
+        "neutral_head_width_px": 226,
+        "sheet_to_reactions_head_width_ratio": 0.9601769911504425,
+        "numeric_evidence": {
+          "reference_pose": "wave_rest",
+          "head_width_px": 217,
+          "head_scanline_y_px": 140,
+          "head_scanline_x_span_px": [
+            81,
+            298
+          ],
+          "head_scan_band_y_px": [
+            140,
+            141
+          ],
+          "alpha_threshold": 128,
+          "anatomical_scope": "Main cheek/face width; rabbit ears and Tora whiskers excluded by manually reviewed scan band."
+        }
+      },
+      "frames": [
+        {
+          "id": "success_ready",
+          "index": 0,
+          "body_bbox_px": [
+            109,
+            70,
+            374,
+            373
+          ],
+          "anchor_px": [
+            235.0,
+            372
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                165,
+                335,
+                305,
+                375
+              ],
+              "measured_foot_bbox_px": [
+                165,
+                335,
+                305,
+                372
+              ],
+              "actual_visible_bbox_alpha8": [
+                109,
+                70,
+                374,
+                373
+              ]
+            }
+          ]
+        },
+        {
+          "id": "success_air",
+          "index": 1,
+          "body_bbox_px": [
+            85,
+            32,
+            333,
+            354
+          ],
+          "anchor_px": [
+            201.5,
+            372
+          ],
+          "support_kind": "inferred-ground-plane",
+          "support_notes": "Ground y inferred from grounded success_ready in the same source sheet; airborne visible feet stay 19px above it. X follows airborne anatomical foot center. No airborne ground contact measurement is claimed.",
+          "review": "Airborne celebration pose; actual feet remain above inferred success grounded plane. No foot contact is claimed.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                139,
+                316,
+                279,
+                356
+              ],
+              "measured_foot_bbox_px": [
+                139,
+                316,
+                264,
+                353
+              ],
+              "actual_visible_bbox_alpha8": [
+                85,
+                32,
+                333,
+                354
+              ]
+            },
+            {
+              "inferred_from_grounded_pose": "success_ready",
+              "ground_y_px": 372,
+              "actual_airborne_foot_bottom_px": 353,
+              "source_lift_px": 19
+            }
+          ]
+        },
+        {
+          "id": "success_land",
+          "index": 2,
+          "body_bbox_px": [
+            55,
+            79,
+            324,
+            368
+          ],
+          "anchor_px": [
+            190.0,
+            367
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                120,
+                330,
+                260,
+                370
+              ],
+              "measured_foot_bbox_px": [
+                120,
+                330,
+                260,
+                367
+              ],
+              "actual_visible_bbox_alpha8": [
+                55,
+                79,
+                324,
+                368
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cheer",
+          "index": 3,
+          "body_bbox_px": [
+            114,
+            30,
+            367,
+            367
+          ],
+          "anchor_px": [
+            235.5,
+            366
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                160,
+                329,
+                300,
+                369
+              ],
+              "measured_foot_bbox_px": [
+                175,
+                329,
+                296,
+                366
+              ],
+              "actual_visible_bbox_alpha8": [
+                114,
+                30,
+                367,
+                367
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clap_open",
+          "index": 4,
+          "body_bbox_px": [
+            87,
+            30,
+            339,
+            366
+          ],
+          "anchor_px": [
+            210.0,
+            366
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                131,
+                328,
+                271,
+                368
+              ],
+              "measured_foot_bbox_px": [
+                149,
+                328,
+                271,
+                366
+              ],
+              "actual_visible_bbox_alpha8": [
+                87,
+                30,
+                339,
+                366
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wave_low",
+          "index": 5,
+          "body_bbox_px": [
+            67,
+            30,
+            326,
+            366
+          ],
+          "anchor_px": [
+            189.5,
+            366
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                111,
+                328,
+                251,
+                368
+              ],
+              "measured_foot_bbox_px": [
+                128,
+                328,
+                251,
+                366
+              ],
+              "actual_visible_bbox_alpha8": [
+                67,
+                30,
+                326,
+                366
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wave_high_in",
+          "index": 6,
+          "body_bbox_px": [
+            110,
+            23,
+            362,
+            368
+          ],
+          "anchor_px": [
+            227.0,
+            366
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                155,
+                330,
+                295,
+                370
+              ],
+              "measured_foot_bbox_px": [
+                164,
+                330,
+                290,
+                366
+              ],
+              "actual_visible_bbox_alpha8": [
+                110,
+                23,
+                362,
+                368
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wave_high_out",
+          "index": 7,
+          "body_bbox_px": [
+            65,
+            23,
+            343,
+            368
+          ],
+          "anchor_px": [
+            205.5,
+            365
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                134,
+                330,
+                274,
+                370
+              ],
+              "measured_foot_bbox_px": [
+                141,
+                330,
+                270,
+                365
+              ],
+              "actual_visible_bbox_alpha8": [
+                65,
+                23,
+                343,
+                368
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wave_rest",
+          "index": 8,
+          "body_bbox_px": [
+            67,
+            26,
+            330,
+            368
+          ],
+          "anchor_px": [
+            188.5,
+            365
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                119,
+                330,
+                259,
+                370
+              ],
+              "measured_foot_bbox_px": [
+                124,
+                330,
+                253,
+                365
+              ],
+              "actual_visible_bbox_alpha8": [
+                67,
+                26,
+                330,
+                368
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "postures",
+      "source_sheet": "assets/library/characters/tora/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "15558d144ab3be551baadc59119c68475af86a6861c4ea6f06a15bd61a6c5b28",
+      "prompt_path": "assets/library/characters/tora/motions/v002/source-sheets/postures-prompt.txt",
+      "generation_input_path": "assets/library/characters/tora/motions/v002/source-sheets/postures-input.json",
+      "reference_height_px": 373.8407079646018,
+      "calibration": {
+        "method": "alpha128-neutral-height-and-head-width-transfer",
+        "reference_pose": "seated_neutral",
+        "notes": "One common standing-equivalent reference for all nine poses in this source sheet. Reactions measured from head/ear top to anatomical foot support; actions/postures transferred by reviewed face width, excluding ears/whiskers. This is a scale calibration, not a measured head pivot.",
+        "neutral_standing_reference_height_px": 358,
+        "neutral_head_width_px": 226,
+        "sheet_to_reactions_head_width_ratio": 1.0442477876106195,
+        "numeric_evidence": {
+          "reference_pose": "seated_neutral",
+          "head_width_px": 236,
+          "head_scanline_y_px": 170,
+          "head_scanline_x_span_px": [
+            87,
+            323
+          ],
+          "head_scan_band_y_px": [
+            170,
+            171
+          ],
+          "alpha_threshold": 128,
+          "anatomical_scope": "Main cheek/face width; rabbit ears and Tora whiskers excluded by manually reviewed scan band."
+        }
+      },
+      "frames": [
+        {
+          "id": "half_seated",
+          "index": 0,
+          "body_bbox_px": [
+            86,
+            31,
+            364,
+            389
+          ],
+          "anchor_px": [
+            227.5,
+            388
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                138,
+                351,
+                318,
+                391
+              ],
+              "measured_foot_bbox_px": [
+                138,
+                351,
+                317,
+                388
+              ],
+              "actual_visible_bbox_alpha8": [
+                86,
+                31,
+                364,
+                389
+              ]
+            }
+          ]
+        },
+        {
+          "id": "seated_neutral",
+          "index": 1,
+          "body_bbox_px": [
+            71,
+            39,
+            352,
+            389
+          ],
+          "anchor_px": [
+            207.0,
+            388
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Seated feet/bottom contact measured from alpha128 lower-foot ROI; no seated bbox height fitting.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                117,
+                351,
+                297,
+                391
+              ],
+              "measured_foot_bbox_px": [
+                117,
+                351,
+                297,
+                388
+              ],
+              "actual_visible_bbox_alpha8": [
+                71,
+                39,
+                352,
+                389
+              ]
+            }
+          ]
+        },
+        {
+          "id": "seated_stretch_half",
+          "index": 2,
+          "body_bbox_px": [
+            60,
+            39,
+            348,
+            389
+          ],
+          "anchor_px": [
+            189.0,
+            388
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Seated feet/bottom contact measured from alpha128 lower-foot ROI; no seated bbox height fitting.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                99,
+                351,
+                279,
+                391
+              ],
+              "measured_foot_bbox_px": [
+                99,
+                351,
+                279,
+                388
+              ],
+              "actual_visible_bbox_alpha8": [
+                60,
+                39,
+                348,
+                389
+              ]
+            }
+          ]
+        },
+        {
+          "id": "seated_stretch",
+          "index": 3,
+          "body_bbox_px": [
+            85,
+            27,
+            372,
+            378
+          ],
+          "anchor_px": [
+            228.0,
+            378
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Seated feet/bottom contact measured from alpha128 lower-foot ROI; no seated bbox height fitting.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                138,
+                340,
+                318,
+                380
+              ],
+              "measured_foot_bbox_px": [
+                138,
+                340,
+                318,
+                378
+              ],
+              "actual_visible_bbox_alpha8": [
+                85,
+                27,
+                372,
+                378
+              ]
+            }
+          ]
+        },
+        {
+          "id": "seated_nap",
+          "index": 4,
+          "body_bbox_px": [
+            65,
+            30,
+            356,
+            377
+          ],
+          "anchor_px": [
+            207.0,
+            376
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Seated feet/bottom contact measured from alpha128 lower-foot ROI; no seated bbox height fitting.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                117,
+                339,
+                297,
+                379
+              ],
+              "measured_foot_bbox_px": [
+                117,
+                339,
+                297,
+                376
+              ],
+              "actual_visible_bbox_alpha8": [
+                65,
+                30,
+                356,
+                377
+              ]
+            }
+          ]
+        },
+        {
+          "id": "seated_look_up",
+          "index": 5,
+          "body_bbox_px": [
+            59,
+            26,
+            340,
+            377
+          ],
+          "anchor_px": [
+            185.0,
+            376
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Seated feet/bottom contact measured from alpha128 lower-foot ROI; no seated bbox height fitting.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                95,
+                339,
+                275,
+                379
+              ],
+              "measured_foot_bbox_px": [
+                95,
+                339,
+                275,
+                376
+              ],
+              "actual_visible_bbox_alpha8": [
+                59,
+                26,
+                340,
+                377
+              ]
+            }
+          ]
+        },
+        {
+          "id": "seated_look_board",
+          "index": 6,
+          "body_bbox_px": [
+            82,
+            24,
+            369,
+            379
+          ],
+          "anchor_px": [
+            227.0,
+            376
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Seated feet/bottom contact measured from alpha128 lower-foot ROI; no seated bbox height fitting.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                137,
+                341,
+                317,
+                381
+              ],
+              "measured_foot_bbox_px": [
+                137,
+                341,
+                317,
+                376
+              ],
+              "actual_visible_bbox_alpha8": [
+                82,
+                24,
+                369,
+                379
+              ]
+            }
+          ]
+        },
+        {
+          "id": "stand_half",
+          "index": 7,
+          "body_bbox_px": [
+            72,
+            7,
+            354,
+            379
+          ],
+          "anchor_px": [
+            211.5,
+            378
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Visible complete pose reviewed on light and dark composites; exact source pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                118,
+                341,
+                298,
+                381
+              ],
+              "measured_foot_bbox_px": [
+                125,
+                341,
+                298,
+                378
+              ],
+              "actual_visible_bbox_alpha8": [
+                72,
+                7,
+                354,
+                379
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nod_down",
+          "index": 8,
+          "body_bbox_px": [
+            58,
+            8,
+            349,
+            384
+          ],
+          "anchor_px": [
+            193.5,
+            382
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical foot-contact center measured from substantive alpha128 inside reviewed lower-foot ROI; tail endpoints excluded.",
+          "review": "Subtle standing head-down/downward-eye key pose; full nod range is limited and no continuous nod motion is certified.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "foot_roi_px": [
+                99,
+                346,
+                279,
+                386
+              ],
+              "measured_foot_bbox_px": [
+                116,
+                346,
+                271,
+                382
+              ],
+              "actual_visible_bbox_alpha8": [
+                58,
+                8,
+                349,
+                384
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

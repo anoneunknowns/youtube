@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "episode_id": "arithmetic-sequence-counting-001",
+  "revision_id": "arithmetic-sequence-counting-v002-recheck",
+  "language": "American English",
+  "voice": "af_heart",
+  "tts_dtype": "fp32",
+  "tts_speed": 0.98,
+  "audience": "infancy through elementary school; conceptual difficulty is intentional",
+  "math": {
+    "a1": 2,
+    "common_difference": 3,
+    "index_range": [
+      1,
+      101
+    ],
+    "result_range": [
+      2,
+      302
+    ],
+    "term_count": 101,
+    "operations": 100,
+    "closed_form": "a_n=2+3(n-1)",
+    "recurrence": "a_1=2;a_(n+1)=a_n+3",
+    "replays_after_n": [
+      4,
+      34,
+      51,
+      101
+    ],
+    "replays_do_not_increment_progress": true,
+    "intermediate_carry_values_do_not_count_as_terms": true
+  },
+  "timeline": {
+    "path": "output/arithmetic-sequence-counting-001-v001/audio-build-v003/timeline.json",
+    "sha256": "168bf4853881d8824e6e7630fa7a87d03244c200c810d9adadb592d099a0617e"
+  },
+  "measured_audio_duration_s": 620.3923333333333,
+  "duration_frames": 18612,
+  "video": {
+    "resolution_px": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "codec": "H.264",
+    "pixel_format": "yuv420p",
+    "color": "BT.709 tv limited",
+    "target_duration_s": 620.4
+  },
+  "audio": {
+    "master": "48000Hz24bitstereo",
+    "delivery": "AAC192kbps48kHz",
+    "music": false,
+    "ambience": false,
+    "effects": false,
+    "normal_result_end_to_next_formula_start_s": 2.0,
+    "ordinary_boundaries": 97,
+    "formula_prefix_end_to_result_start_s": 0.16,
+    "result_display_lead_s": 0.12,
+    "progress_commit": "after measured result speech end"
+  },
+  "world": "morning wind organ recital hall",
+  "camera_scope": "frontal architecture; mathematical diagram composition changes for replays. No actual overhead camera claim.",
+  "actor": {
+    "character": "hedgehog",
+    "canonical_preserved": true,
+    "module": {
+      "path": "tools/arithmetic_animation.py",
+      "sha256": "c1da1c8e0ea2e41fbd9fc21b7f3b3447dc855fbcd481c8cbdea5bed4f1ad658c"
+    },
+    "registration": {
+      "path": "assets/library/characters/hedgehog/generation-batches/arithmetic-production-20261112-01a1cdca-b/registration.json",
+      "sha256": "493fed7beaa8cdd66c85e0577ba840dc4dd291d352711ec0cc5b6094cd535159"
+    },
+    "intro_height_px": 350,
+    "count_and_outro_height_px": 280,
+    "replay_height_px": 260,
+    "same_scene_scale": "one physical body scale for all motion states",
+    "support": "anatomical foot anchor",
+    "whole_body_crossfade": false,
+    "new_source_full_body_drawings": 4,
+    "new_source_head_drawings": 4,
+    "selected_new_local_regions": 2,
+    "runtime_logical_states": 11
+  },
+  "background": {
+    "path": "assets/library/characters/hedgehog/generation-batches/arithmetic-production-20261112-01a1cdca-b/source/wind-organ-hall-production.png",
+    "effective_pixels": [
+      1672,
+      941
+    ],
+    "maximum_display_px": [
+      1920,
+      1080
+    ],
+    "additional_zoom": false,
+    "review_requirement": "Final encoded frame native detail plus reduced viewing review; pixel dimensions alone do not decide acceptance"
+  },
+  "layout_acceptance": {
+    "native_axis_tolerance_px": 0.5,
+    "decoded_axis_tolerance_px": 1.0,
+    "measure": "actual visible glyph/group bounds against declared content box; blank/clipping/measurement edge checked",
+    "character": "foot anchor rather than centering"
+  },
+  "final_acceptance": "independent decoded-MP4 math/numeric/formula/counter/progress/alignment/audio/caption/acting checks and recorded visual review",
+  "preservation": "Previous adopted production, every old QA, rejected candidates and all source media retained without modifying past approvals.",
+  "supersedes_specification": {
+    "path": "design/arithmetic-sequence-counting-v1/production-v001/specification.json",
+    "sha256": "069502e009d308a5a888668d37ea46387259ed513a47fbb0cb6abc9532135dc7"
+  },
+  "changes_from_v001": [
+    {
+      "cue": "X034",
+      "frames_inclusive": [
+        5725,
+        5784
+      ],
+      "change": "The character at lower left raises the screen-right arm toward the mathematical material; scale, anatomy and anchor unchanged."
+    },
+    {
+      "cue": "O003",
+      "change": "Same voice, speed and words; fresh punctuation-clarified source. Only528 trailing zero samples added to preserve88528sample slot; one constant gain matches previous mastered cue RMS."
+    }
+  ],
+  "selected_video": "output/arithmetic-sequence-counting-001-v001/render/v004/paspla-studio-arithmetic-sequence-2-to-302-1080p.mp4",
+  "source_to_master_recipe": "tools/build_arithmetic_recheck_revision_20261112_v002.py",
+  "explicit_motion": "design/arithmetic-sequence-counting-v1/recheck-20261112-v001/root/corrected-motion.json"
+}

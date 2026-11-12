@@ -1,0 +1,51 @@
+動画制作ライブラリ確認 / 2026-11-11
+
+実施した更新
+  @huggingface/jinja 0.5.11 → 0.5.12
+  Transformers3.8.1の依存範囲^0.5.3に含まれる安定版へpackage-lock.jsonを更新。
+  更新後のlockでnpm ciを実行し、56パッケージの導入が完了した。
+
+現在の主なライブラリ
+  Pillow13.0.0: PyPI最新安定版と一致。
+  kokoro-js1.2.1: npm最新安定版と一致。
+  phonemizer1.2.1: npm最新安定版と一致。
+  Transformers.js3.8.1: 3系の最新安定版。全体の最新安定版は4.3.2。
+
+Transformers.js4系を本環境へ採用しなかった根拠
+  kokoro-js1.2.1は@huggingface/transformers^3.5.1を依存として宣言している。
+  4.3.2を直接依存へ入れると、Kokoro側に別の3.8.1が入り、Tensorの実装が二つになる。
+  Kokoroはその3系Tensorでstyle/speedを作成し、リポジトリは外で作ったモデルをKokoroへ注入する。
+  4.3.2の実際のsession input validatorは、4系Tensorでないstyle/speedをMissing inputsとして拒否した。
+  別の候補ディレクトリでその入力判定を実行し、style/speedだけが拒否されることを再現した。
+  モデル推論は行っていない。検証用4系候補は作業後に削除し、本番用node_modulesには入れていない。
+  新しいアダプターや非対応バージョンを強制するnpm overridesは追加せず、サポートされる3.8.1を維持した。
+
+間接依存
+  sharp0.34.5: 上流^0.34.1の範囲内で最新。全体最新0.35.5は上流の依存範囲外。
+  onnxruntime-node1.21.0: Transformers3.8.1の完全固定依存。全体最新は1.31.1。
+  onnxruntime-web1.22.0-dev.20250409-89f8206ba4: 安定版Transformers3.8.1に含まれる上流の完全固定依存。
+    ブラウザ用ランタイムにはdev表記が残る。今回のNode処理は上のnative Nodeランタイムを利用する。
+    この間接依存まで「全て最新の安定版」とは扱わない。単体で置換して上流の契約を破る更新は行っていない。
+  protobufjs7.6.6: 上流7系依存範囲内で最新(latest-7)。全体最新は8.8.1。
+
+動作確認
+  KokoroTTS、AutoTokenizer、StyleTextToSpeech2Model、AutoProcessor、Wav2Vec2ForCTC、pipelineのimport成功。
+  native ONNX Runtime1.21.0のロードとTensorの2×2配列roundtrip成功。
+  sharp nativeでPNG生成・3×3→6×6リサイズ・エンコード成功。
+  phonemizerでTwo/three/five/sevenの4件の英語音素を生成成功。
+  ここでの検査はライブラリの小さな動作確認であり、モデル推論や制作音声・完成動画の検査ではない。
+
+根拠
+  dependency-upstream-check.json: npm/PyPI公式メタデータのバージョン・公開日時・依存範囲・URL。
+  dependency-audit.json: 採用版と最新安定版、採用判断の一覧。
+  dependency-smoke.mjs / dependency-smoke.json: 主環境の動作確認コードと結果。
+  transformers-v4-incompatibility-probe.mjs / .json: 別候補環境で行った4系入力互換性判定の再現コードと結果。
+
+主な公式参照URL
+  https://pypi.org/pypi/Pillow/json
+  https://registry.npmjs.org/kokoro-js
+  https://registry.npmjs.org/@huggingface%2ftransformers
+  https://registry.npmjs.org/@huggingface%2fjinja
+  https://github.com/huggingface/transformers.js/releases/tag/4.3.2
+  https://github.com/huggingface/transformers.js/releases/tag/3.8.1
+  https://pillow.readthedocs.io/en/stable/releasenotes/index.html

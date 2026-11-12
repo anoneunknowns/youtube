@@ -1,0 +1,4246 @@
+{
+  "schema_version": 1,
+  "kind": "hash-bound-powers-of-two-source-speech-review",
+  "accepted": true,
+  "accepted_at_utc": "2026-11-12T02:00:10.103104+00:00",
+  "source_manifest_sha256": "6aee5bf76d80d65df04908a0a0b0348175951fa6750a0f7bf661edf19584d14c",
+  "inputs": {
+    "manifest": {
+      "path": "output/powers-of-two-counting-001-v001/speech/measurements-selected-v006.json",
+      "sha256": "6aee5bf76d80d65df04908a0a0b0348175951fa6750a0f7bf661edf19584d14c"
+    },
+    "isolated_asr": {
+      "path": "output/powers-of-two-counting-001-v001/speech/selected-asr-v006.json",
+      "sha256": "5e019a66999652dbf87f30a821809cddd65d8e550d8e18e621bf3a8303921ae3"
+    },
+    "isolated_phonemes": {
+      "path": "output/powers-of-two-counting-001-v001/speech/selected-phonemes-v006.json",
+      "sha256": "470cf59948fcb94ab7580c010e5e330f41d481be492ae8e29502fe605161ec3d"
+    },
+    "acoustics": {
+      "path": "output/powers-of-two-counting-001-v001/speech/selected-acoustics-v006.json",
+      "sha256": "2d5cf1350103c012d962c05c87e7015ac2e3b65fcebfc7780cc0afb983c4d713"
+    },
+    "individual_decisions": {
+      "path": "output/powers-of-two-counting-001-v001/speech/individual-source-decisions-v006.json",
+      "sha256": "fa1f7e8f2fe52079f1c979093379fca0147446a2f6631f4f4bb1b46486b0b51c"
+    },
+    "supporting_evidence_00": {
+      "path": "design/powers-of-two-counting-v1/production/audio-qa/group-clips-v001/manifest.json",
+      "sha256": "9a5e76fa2d7712c4a8bee62692c38f954b29e29e13afeee157eac514c085f742"
+    },
+    "supporting_evidence_01": {
+      "path": "design/powers-of-two-counting-v1/production/audio-qa/group-clips-v001/asr.json",
+      "sha256": "3ca07ba0efc08666b7f603dc51c2ae6f6f2fb1c58517458fabd21cce5cb599dc"
+    },
+    "supporting_evidence_02": {
+      "path": "design/powers-of-two-counting-v1/production/audio-qa/group-clips-v001/warning-ctc.json",
+      "sha256": "6d54f4253bb3853f1a1b0e2a463ed6beae18a668b54ed948da83bd562de23af6"
+    },
+    "supporting_evidence_03": {
+      "path": "design/powers-of-two-counting-v1/production/audio-qa/independent-warning-review.json",
+      "sha256": "4a01cb93dd3b7efcbcd3a280fb2ef37c483bd74c5b7e9afe9f9a9bf313ecba69"
+    },
+    "supporting_evidence_04": {
+      "path": "design/powers-of-two-counting-v1/production/audio-qa/independent-warning-review-v002.json",
+      "sha256": "fc85988fe940097cb5a7ab4b5fc049ecced8295934ba7d6267ecb6602a9c5cd7"
+    },
+    "supporting_evidence_05": {
+      "path": "output/powers-of-two-counting-001-v001/speech/source-selection-v006.json",
+      "sha256": "4d2596757a9d68140f24968f5229a7679cb4b744cc909b4f056c30571ba7ca91"
+    },
+    "supporting_evidence_06": {
+      "path": "output/powers-of-two-counting-001-v001/speech/reused-library-gate-v001/acceptance.json",
+      "sha256": "86c4672e0b2f700e9b0a53cacf5d273bb48a4289219e8d6ff74a44d8cc4a148d"
+    },
+    "supporting_evidence_07": {
+      "path": "output/fibonacci-counting-001-v002/speech/fresh-vowel-control.json",
+      "sha256": "3f0f23f8f7246037f71f9b5b3498b5a4580e17374590edb900a596302f7ad42c"
+    },
+    "review_wrapper": {
+      "path": "tools/review_powers_of_two_speech.py",
+      "sha256": "c3018be329e38f6b54bdc3a9f8f4eef3f950479ddbc8e07f32204ad57f2d077f"
+    }
+  },
+  "scope": "Selected isolated source WAVs and their fresh lexical/phoneme/signal evidence. No final master/AAC, whole-video listening or perfect-articulation claim.",
+  "policy": {
+    "isolated_ASR_match_alone_approves_pronunciation": false,
+    "phone_similarity_threshold_approves_pronunciation": false,
+    "individual_hash_bound_decision_required": true,
+    "changed_source_requires_fresh_evidence": true
+  },
+  "summary": {
+    "clips": 78,
+    "numbers": 65,
+    "dialogue": 13,
+    "accepted": 78,
+    "unresolved": 0,
+    "isolated_asr_warnings_reviewed": 18
+  },
+  "unresolved": [],
+  "results": [
+    {
+      "id": "N000",
+      "index": 0,
+      "number": "1",
+      "expected_text": "one",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N000.wav",
+      "source_sha256": "e3ca22e7b81f8994d4d9482fa8cb00aa33eeabfd9fa156135baa90d0aff962cd",
+      "duration_s": 0.48791666666666667,
+      "asr_status": "asr-match",
+      "asr_transcript": "1.",
+      "expected_espeak": "wˈʌn",
+      "recognized_phonemes": "w ʌ n",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 17812,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Both isolated ASR and normalized CTC retain one; this is the seed, not zero or two.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N001",
+      "index": 1,
+      "number": "2",
+      "expected_text": "two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/reused/N001.wav",
+      "source_sha256": "95f737925860efd569349797e361741b274e2df7207de2a3d772cb2a3c60d749",
+      "duration_s": 0.5155833333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "2.",
+      "expected_espeak": "tˈuː",
+      "recognized_phonemes": "ɕ i5",
+      "phoneme_comparison_not_acceptance_score": 0.0,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "tu",
+          "recognized": "ɕi5"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 12952,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "This exact two WAV is previously adopted source95f737925860. Its original hash-bound vowel control gives sustained F2=1400Hz against same-voice three2935Hz, supporting rounded/u/. Fresh short-word CTC /ɕ i5/ is retained as a known decoder failure; the prior adopted source and independent acoustic control, rather than ASR value alone, justify reuse.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N002",
+      "index": 2,
+      "number": "4",
+      "expected_text": "four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/reused/N002.wav",
+      "source_sha256": "00dd0174fd56794142adb8655589f0721d36c9e959391a95152705fbc66639f8",
+      "duration_s": 0.538875,
+      "asr_status": "asr-match",
+      "asr_transcript": "4.",
+      "expected_espeak": "fˈoːɹ",
+      "recognized_phonemes": "f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 18727,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Byte-identical previously adopted four. Fresh selected CTC retains /f ɔːɹ/ and ASR4; original current-clone portable gate verifies source/evidence hashes.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N003",
+      "index": 3,
+      "number": "8",
+      "expected_text": "eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/reused/N003.wav",
+      "source_sha256": "3662c8de41c36c505ff877e4317d9694e8088fef931c63d93cd7077a2c35557e",
+      "duration_s": 0.5117083333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "8.",
+      "expected_espeak": "ˈeɪt",
+      "recognized_phonemes": "eɪ t",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 16478,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Byte-identical previously adopted eight. Fresh selected CTC /eɪt/ and isolated ASR8 agree, with original source gate retained.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N004",
+      "index": 4,
+      "number": "16",
+      "expected_text": "sixteen",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N004.wav",
+      "source_sha256": "787396df2682ce8648a8e69f528c93d89a63aa74aaea7c72140822236a5bbf68",
+      "duration_s": 0.7327916666666666,
+      "asr_status": "asr-match",
+      "asr_transcript": "16.",
+      "expected_espeak": "sˈɪkstiːn",
+      "recognized_phonemes": "s ɪ k s t iː n",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 25654,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Both isolated ASR and normalized CTC retain sixteen, including final/n/.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N005",
+      "index": 5,
+      "number": "32",
+      "expected_text": "thirty-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N005.wav",
+      "source_sha256": "1d342920e7c668620f2fbe3f4f322167a9c460df1e91bee7e758129de2ac1e6f",
+      "duration_s": 0.7382083333333334,
+      "asr_status": "asr-match",
+      "asr_transcript": "32.",
+      "expected_espeak": "θˈɜːɾitˈuː",
+      "recognized_phonemes": "θ ɜː ɾ i t uː",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 17333,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Both isolated ASR and normalized CTC retain thirty-two; the medial American flap is expected.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N006",
+      "index": 6,
+      "number": "64",
+      "expected_text": "sixty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N006.wav",
+      "source_sha256": "833255e289de37e7e1559ea6079ef1801be61b944361a544b03694b408ac0aad",
+      "duration_s": 0.8039166666666666,
+      "asr_status": "asr-match",
+      "asr_transcript": "64.",
+      "expected_espeak": "sˈɪkstifˈoːɹ",
+      "recognized_phonemes": "s s ɪ k s t i f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.9473684210526315,
+      "phoneme_differences": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "s"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 18377,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "CTC divides one initial sustained/s/ into two adjacent/s/tokens; there is no intervening vowel in the tokens, no voiced-prefix screen warning, and the remaining sixty-four phones and ASR64 agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N007",
+      "index": 7,
+      "number": "128",
+      "expected_text": "one hundred twenty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N007.wav",
+      "source_sha256": "528118caa852e92acd0abf05065e53f62021eeaefda605ca86fa017815a33aca",
+      "duration_s": 1.2864166666666668,
+      "asr_status": "asr-match",
+      "asr_transcript": "128.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd twˈɛntiˈeɪt",
+      "recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d t w ɛ n t i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 16850,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Exact128 lexical value and normalized CTC sequence agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N008",
+      "index": 8,
+      "number": "256",
+      "expected_text": "two hundred fifty-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N008.wav",
+      "source_sha256": "f4ba007a166d86874d65db6efef54323a7e2e669ebdad71f31832da522231d0d",
+      "duration_s": 1.3119166666666666,
+      "asr_status": "asr-match",
+      "asr_transcript": "256.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd fˈɪftisˈɪks",
+      "recognized_phonemes": "t uː h ʌ n d ɹ ɪ d f ɪ f t i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 15216,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Exact256 lexical value and normalized CTC sequence agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N009",
+      "index": 9,
+      "number": "512",
+      "expected_text": "five hundred twelve",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N009.wav",
+      "source_sha256": "b8120185d8e5c9e7e6e854499760791ca703e36755525b28ac99db64c696538e",
+      "duration_s": 1.0998333333333334,
+      "asr_status": "asr-match",
+      "asr_transcript": "512.",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd twˈɛlv",
+      "recognized_phonemes": "f aɪ v h ʌ n d ɹ ᵻ d t w ɛ l v",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 17834,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Exact512 lexical value and normalized CTC sequence agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N010",
+      "index": 10,
+      "number": "1024",
+      "expected_text": "one thousand twenty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N010.wav",
+      "source_sha256": "a6aee1f0c6bbf48edb21bd6bdf2173c1a5bd1009eee6efac4d2266aea6a9bc8a",
+      "duration_s": 1.3555,
+      "asr_status": "asr-match",
+      "asr_transcript": "1,024.",
+      "expected_espeak": "wˈʌn θˈaʊzənd twˈɛntifˈoːɹ",
+      "recognized_phonemes": "w ʌ n θ aʊ z ə n d t w ɛ n ɾ i f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.9473684210526315,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 15837,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "twenty uses an American medial flap/t→ɾ/; thousand and final four remain present, and the isolated value is1024.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N011",
+      "index": 11,
+      "number": "2048",
+      "expected_text": "two thousand forty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N011.wav",
+      "source_sha256": "f3633a509ec787a121e5537b8b47b54f5f298ca38052a3cac52d8e5a15ed26a6",
+      "duration_s": 1.2777916666666667,
+      "asr_status": "asr-match",
+      "asr_transcript": "2048.",
+      "expected_espeak": "tˈuː θˈaʊzənd fˈɔːɹɾiˈeɪt",
+      "recognized_phonemes": "t uː θ aʊ z ə n d f ɔːɹ ɾ i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 17832,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Exact2048 lexical value and normalized CTC sequence agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N012",
+      "index": 12,
+      "number": "4096",
+      "expected_text": "four thousand ninety-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N012.wav",
+      "source_sha256": "470e005c0ac3286715a8c26d2239e78929ba3cabd920ce4fe16e5c689ae66b7f",
+      "duration_s": 1.4507083333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "4,096.",
+      "expected_espeak": "fˈoːɹ θˈaʊzənd nˈaɪntisˈɪks",
+      "recognized_phonemes": "f ɔːɹ θ aʊ z ə n d n aɪ n d i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.95,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 16459,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "ninety has a voiced/flapped medial consonant in CTC; the four-thousand/ninety-six sequence and exact4096 recognition remain intact.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N013",
+      "index": 13,
+      "number": "8192",
+      "expected_text": "eight thousand one hundred ninety-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N013.wav",
+      "source_sha256": "bb47ba9272ed6e21324dd134b82dfc6b83efe15d86f38d2e3a8ad853993d9b47",
+      "duration_s": 1.8482916666666667,
+      "asr_status": "asr-match",
+      "asr_transcript": "8,192.",
+      "expected_espeak": "ˈeɪt θˈaʊzənd wˈʌn hˈʌndɹɪd nˈaɪntitˈuː",
+      "recognized_phonemes": "eɪ t θ aʊ z ə n w ʌ n h ʌ n d ɹ ɪ d n aɪ n d i t uː",
+      "phoneme_comparison_not_acceptance_score": 0.9454545454545454,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 16319,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "thousand-final/d/ is not separately decoded before one; ninety has American voicing. The word order/eight thousand one hundred ninety-two/ is retained and ASR8192 is exact.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N014",
+      "index": 14,
+      "number": "16384",
+      "expected_text": "sixteen thousand three hundred eighty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N014.wav",
+      "source_sha256": "500850869baa656be022eb45aa547c7ecb97f9d53d425ad9a9242d457dc694e0",
+      "duration_s": 2.2240416666666665,
+      "asr_status": "asr-match",
+      "asr_transcript": "16,384.",
+      "expected_espeak": "sˈɪkstiːn θˈaʊzənd θɹˈiː hˈʌndɹɪd ˈeɪɾifˈoːɹ",
+      "recognized_phonemes": "s ɪ k s t iː n θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ɪ d eɪ ɾ i f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 19377,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Exact16384 lexical value and normalized CTC sequence agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N015",
+      "index": 15,
+      "number": "32768",
+      "expected_text": "thirty-two thousand seven hundred sixty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N015.wav",
+      "source_sha256": "2e3235a706dfb30f41a0fd318a41809204dc411f437b0d56f2526726132b604b",
+      "duration_s": 2.25675,
+      "asr_status": "asr-match",
+      "asr_transcript": "Thirty-two thousand seven hundred sixty-eight.",
+      "expected_espeak": "θˈɜːɾitˈuː θˈaʊzənd sˈɛvən hˈʌndɹɪd sˈɪkstiˈeɪt",
+      "recognized_phonemes": "θ ɜː ɾ i t uː θ aʊ z ə n d s ɛ v ə n h ʌ n d ɹ ɪ d s ɪ k s t i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 19934,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Exact32768 lexical value and normalized CTC sequence agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N016",
+      "index": 16,
+      "number": "65536",
+      "expected_text": "sixty-five thousand five hundred thirty-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N016.wav",
+      "source_sha256": "70c1a5d7405b382b63e7cec2f636e90ebbb79fd3306e76b0aa2ebc95eb4d18ca",
+      "duration_s": 2.43575,
+      "asr_status": "asr-match",
+      "asr_transcript": "65,536.",
+      "expected_espeak": "sˈɪkstifˈaɪv θˈaʊzənd fˈaɪv hˈʌndɹɪd θˈɜːɾisˈɪks",
+      "recognized_phonemes": "s ɪ k s t i f aɪ v θ aʊ z ə n f aɪ v h ʌ n d ɹ ə d θ ɜː ɾ i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.9577464788732394,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "ə"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 15514,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "thousand-final/d/ is unreleased before five, and hundred has reduced unstressed vowel; digit groups sixty-five/thirty-six remain complete with exact65536 ASR.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N017",
+      "index": 17,
+      "number": "131072",
+      "expected_text": "one hundred thirty-one thousand seventy-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N017.wav",
+      "source_sha256": "d860680c6c6dceb779df74a87398fd0baf9dc15a1d109bded6d5e39f6847eac4",
+      "duration_s": 2.3950833333333335,
+      "asr_status": "asr-match",
+      "asr_transcript": "131,072.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd θˈɜːɾiwˈʌn θˈaʊzənd sˈɛvəntitˈuː",
+      "recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d θ ɜː ɾ i w ʌ n θ aʊ z ə n d s ɛ v ə n t i t uː",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 16574,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Exact131072 lexical value and normalized CTC sequence agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N018",
+      "index": 18,
+      "number": "262144",
+      "expected_text": "two hundred sixty-two thousand one hundred forty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N018.wav",
+      "source_sha256": "24bc8426adacdeb908bc90d9102c3565aadf876d4b83cd4955173497d93ededb",
+      "duration_s": 3.1339166666666665,
+      "asr_status": "asr-match",
+      "asr_transcript": "262,144.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd sˈɪkstitˈuː θˈaʊzənd wˈʌn hˈʌndɹɪd fˈɔːɹɾifˈoːɹ",
+      "recognized_phonemes": "t uː h ʌ n d ɹ ɪ d s ɪ k s t i t uː θ aʊ z ə n d w ʌ n h ʌ n d ɹ ɪ d f ɔːɹ ɾ i f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 18636,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Exact262144 lexical value and normalized CTC sequence agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N019",
+      "index": 19,
+      "number": "524288",
+      "expected_text": "five hundred twenty-four thousand two hundred eighty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N019.wav",
+      "source_sha256": "3227e6895eca03e1fb8ad5331b6f57008690e4a5e070c2123de1a485f67a4a81",
+      "duration_s": 2.8245416666666667,
+      "asr_status": "asr-match",
+      "asr_transcript": "524,288.",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd twˈɛntifˈoːɹ θˈaʊzənd tˈuː hˈʌndɹɪd ˈeɪɾiˈeɪt",
+      "recognized_phonemes": "f aɪ v h ʌ n d ɹ ɪ d t w ɛ n ɾ i f ɔːɹ θ aʊ z ə n d t uː h ʌ n d ɹ ɪ d eɪ ɾ i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9767441860465116,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 19451,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "twenty-four has American/t→ɾ/; all two group labels and full524288 recognition agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N020",
+      "index": 20,
+      "number": "1048576",
+      "expected_text": "one million forty-eight thousand five hundred seventy-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N020.wav",
+      "source_sha256": "56e590fc8cc5bb091119ba4ed1510899ab97c0b38f1ee854fa7c0f8a82cbbcf3",
+      "duration_s": 3.0197083333333334,
+      "asr_status": "asr-match",
+      "asr_transcript": "1,048,576.",
+      "expected_espeak": "wˈʌn mˈɪliən fˈɔːɹɾiˈeɪt θˈaʊzənd fˈaɪv hˈʌndɹɪd sˈɛvəntisˈɪks",
+      "recognized_phonemes": "w ʌ n m ɪ l j ə n f ɔːɹ ɾ i eɪ t θ aʊ z ə n d f aɪ v h ʌ n d ɹ ᵻ d s ɛ v ə n t i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.9782608695652174,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 13729,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "million is decoded /mɪljən/ rather than the G2P vowel sequence/mɪliən/; this is a glide realization. All three isolated numerical groups match.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N021",
+      "index": 21,
+      "number": "2097152",
+      "expected_text": "two million ninety-seven thousand one hundred fifty-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N021.wav",
+      "source_sha256": "13e1480724d36f8e8d192b3fe91afc2625089c352993f10db684c7f33a29f3f3",
+      "duration_s": 2.9891666666666667,
+      "asr_status": "asr-match",
+      "asr_transcript": "2,097,152.",
+      "expected_espeak": "tˈuː mˈɪliən nˈaɪntisˈɛvən θˈaʊzənd wˈʌn hˈʌndɹɪd fˈɪftitˈuː",
+      "recognized_phonemes": "t uː m ɪ l j ə n n aɪ n d i s ɛ v ə n θ aʊ z ə n d w ʌ n h ʌ n d ɹ ᵻ d f ɪ f t i t uː",
+      "phoneme_comparison_not_acceptance_score": 0.9534883720930233,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 16143,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "million glide plus voiced medial consonant in ninety; the two/ninety-seven/one-hundred-fifty-two groups are preserved.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N022",
+      "index": 22,
+      "number": "4194304",
+      "expected_text": "four million one hundred ninety-four thousand three hundred four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N022.wav",
+      "source_sha256": "d50a54dcd775653ae7fe40fe84ea041bed28c07df536765b0ddf40d080fa7385",
+      "duration_s": 3.4134583333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "4,194,304.",
+      "expected_espeak": "fˈoːɹ mˈɪliən wˈʌn hˈʌndɹɪd nˈaɪntifˈoːɹ θˈaʊzənd θɹˈiː hˈʌndɹɪd fˈoːɹ",
+      "recognized_phonemes": "f oːɹ m ɪ l j ə n w ʌ n h ʌ n d ɹ ᵻ d n aɪ n d i f oːɹ θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ᵻ d f oʊ",
+      "phoneme_comparison_not_acceptance_score": 0.9375,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɹ",
+          "recognized": "ʊ"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 19322,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "million glide and medial ninety voicing are ordinary. CTC final four has weaker rhotic label while independent full and group lexical readings retain four, rather than an added word or truncated group.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N023",
+      "index": 23,
+      "number": "8388608",
+      "expected_text": "eight million three hundred eighty-eight thousand six hundred eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N023.wav",
+      "source_sha256": "5d1fc3453d88956eeeb2e0333861dbf803623db064268fc91e2d1a14401c77db",
+      "duration_s": 3.233,
+      "asr_status": "asr-match",
+      "asr_transcript": "8,388,608.",
+      "expected_espeak": "ˈeɪt mˈɪliən θɹˈiː hˈʌndɹɪd ˈeɪɾiˈeɪt θˈaʊzənd sˈɪks hˈʌndɹɪd ˈeɪt",
+      "recognized_phonemes": "eɪ t m ɪ l j ə n θ ɹ iː h ʌ n d ɹ ɪ d eɪ ɾ i eɪ t θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ɪ d eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9787234042553191,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 19460,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Only million glide differs after normalization; all eight/388/608 groups retain their values.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N024",
+      "index": 24,
+      "number": "16777216",
+      "expected_text": "sixteen million seven hundred seventy-seven thousand two hundred sixteen",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/correction-v005/N024-B.wav",
+      "source_sha256": "5e12f0fdb6f59ff14cbf56d3bc037c8efc94f0a7d980993c3fe44f7ba4ec3286",
+      "duration_s": 4.443833333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "16 million, 777,216.",
+      "expected_espeak": "sˈɪkstiːn mˈɪliən sˈɛvən hˈʌndɹɪd sˈɛvəntisˈɛvən θˈaʊzənd tˈuː hˈʌndɹɪd sˈɪkstiːn",
+      "recognized_phonemes": "s ɪ k s t iː n m ɪ l ə n s ɛ v ə n h ʌ n d ɹ d s ɛ v ə n t i s ɛ v ə n θ aʊ z ə n d t uː h n d ɹ ɪ d s ɪ k s t iː n",
+      "phoneme_comparison_not_acceptance_score": 0.9743589743589743,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ʌ",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 21954,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Original candidate was rejected for sixteen/sixty ambiguity. Selected N024-B is a complete new explicit-teen-stress utterance, same voice/dtype/speed. Fresh ASR16777216 and independent CTC/sɪkstiːn mɪlən/ retain the nasal; seventy-seven initial/s/ is present. The independent reviewer accepted this exact new source in warning-review-v002; no earlier failure was rewritten.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N025",
+      "index": 25,
+      "number": "33554432",
+      "expected_text": "thirty-three million five hundred fifty-four thousand four hundred thirty-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N025.wav",
+      "source_sha256": "656fc7cad1f7f443874caf4afdd24fba3f60f5ebe305d2106fe6f8b7d11cd57f",
+      "duration_s": 4.208625,
+      "asr_status": "asr-match",
+      "asr_transcript": "$33,554,432.",
+      "expected_espeak": "θˈɜːɾiθɹˈiː mˈɪliən fˈaɪv hˈʌndɹɪd fˈɪftifˈoːɹ θˈaʊzənd fˈoːɹ hˈʌndɹɪd θˈɜːɾitˈuː",
+      "recognized_phonemes": "θ ɜː ɾ i θ ɹ iː m ɪ l ə n f aɪ v h ʌ n d ɹ ᵻ d f ɪ f t i f oːɹ θ aʊ z ə n d f ɔːɹ h ʌ n d ɹ ə d θ ɜː ɾ i t uː",
+      "phoneme_comparison_not_acceptance_score": 0.9724770642201835,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "ə"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 20911,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Original ASR currency prefix was a transcription-format artifact, not a spoken dollar; normalized exact value33554432 and CTC numbers agree. Unstressed hundred vowel and million glide reductions are retained as ordinary connected speech.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N026",
+      "index": 26,
+      "number": "67108864",
+      "expected_text": "sixty-seven million one hundred eight thousand eight hundred sixty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N026.wav",
+      "source_sha256": "947754b04e0da9b57890b4db74995ce35a451930ff95e7af7ff76ec316d85e5d",
+      "duration_s": 3.9157083333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "67,108,864.",
+      "expected_espeak": "sˈɪkstisˈɛvən mˈɪliən wˈʌn hˈʌndɹɪd ˈeɪt θˈaʊzənd ˈeɪt hˈʌndɹɪd sˈɪkstifˈoːɹ",
+      "recognized_phonemes": "s ɪ k s t i s ɛ v ə n m ɪ l j ə n w ʌ n h ʌ n d ɹ d eɪ t θ aʊ z ə n eɪ t h ʌ n d ɹ ɪ d s ɪ k s t i f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.9636363636363636,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 16376,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "million glide, weak hundred unstressed vowel, and unreleased thousand/d/ occur without word/number changes; full and all group ASR values are exact.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N027",
+      "index": 27,
+      "number": "134217728",
+      "expected_text": "one hundred thirty-four million two hundred seventeen thousand seven hundred twenty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N027.wav",
+      "source_sha256": "1b466281c51b2893698e4fa443950f006905f50f3856448f218f503451d29472",
+      "duration_s": 4.839958333333334,
+      "asr_status": "asr-match",
+      "asr_transcript": "134 million, 217,728.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd θˈɜːɾifˈoːɹ mˈɪliən tˈuː hˈʌndɹɪd sˈɛvəntˌiːn θˈaʊzənd sˈɛvən hˈʌndɹɪd twˈɛntiˈeɪt",
+      "recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d θ ɜː ɾ i f ɔːɹ m ɪ l j ə n t uː h ʌ n d ɹ ɪ d s ɛ v ə n t iː n θ aʊ z ə n d s ɛ v ə n h ʌ n d ɹ ɪ d t w ɛ n t i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9852941176470589,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 17225,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "134 million,217728 is the same exact integer as the authored cardinal; million glide is ordinary and all group reads match.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N028",
+      "index": 28,
+      "number": "268435456",
+      "expected_text": "two hundred sixty-eight million four hundred thirty-five thousand four hundred fifty-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N028.wav",
+      "source_sha256": "07a22ee63b4bcd00293a61376df0bba7490dddd1b9dad73a8ff6fb6e64769677",
+      "duration_s": 4.9896666666666665,
+      "asr_status": "asr-match",
+      "asr_transcript": "268 million, 435,456.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd sˈɪkstiˈeɪt mˈɪliən fˈoːɹ hˈʌndɹɪd θˈɜːɾifˈaɪv θˈaʊzənd fˈoːɹ hˈʌndɹɪd fˈɪftisˈɪks",
+      "recognized_phonemes": "t uː h ʌ n d ɹ ɪ d s ɪ k s t i eɪ t m ɪ l j ə n f ɔːɹ h ʌ n d ɹ ɪ d θ ɜː ɾ i f aɪ v θ aʊ z ə n d f ɔːɹ h ʌ n d ɹ ɪ d f ɪ f t i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.9852941176470589,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 16149,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "268 million,435456 is the same exact integer as the authored cardinal; million glide is ordinary and all group reads match.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N029",
+      "index": 29,
+      "number": "536870912",
+      "expected_text": "five hundred thirty-six million eight hundred seventy thousand nine hundred twelve",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N029.wav",
+      "source_sha256": "3e222b234a2a41ea7db01e427960a4f737e1048b7c0d204e79c93c04f7182de3",
+      "duration_s": 4.625875,
+      "asr_status": "asr-match",
+      "asr_transcript": "536 million, 870,912.",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd θˈɜːɾisˈɪks mˈɪliən ˈeɪt hˈʌndɹɪd sˈɛvənti θˈaʊzənd nˈaɪn hˈʌndɹɪd twˈɛlv",
+      "recognized_phonemes": "f aɪ v h ʌ n d ɹ ɪ d θ ɜː ɾ i s ɪ k s m ɪ l j ə n eɪ t h ʌ n d ɹ d ɛ v ə n d i θ aʊ z ə n d n aɪ n h ʌ n d ɹ ᵻ d t w ɛ l v",
+      "phoneme_comparison_not_acceptance_score": 0.953125,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "s",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 17210,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "CTC weakens hundred vowel and initial/s/ in seventy, while independent complete and group ASR preserve870thousand and all three group values. No added voice, repeat, or truncated final twelve is present.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N030",
+      "index": 30,
+      "number": "1073741824",
+      "expected_text": "one billion seventy-three million seven hundred forty-one thousand eight hundred twenty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N030.wav",
+      "source_sha256": "8bfab4616901a7b02bc842c20135ca9741fea7005d70b81c9cd2e0f5210cb318",
+      "duration_s": 5.108416666666667,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "1,73,741,824.",
+      "expected_espeak": "wˈʌn bˈɪliən sˈɛvəntiθɹˈiː mˈɪliən sˈɛvən hˈʌndɹɪd fˈɔːɹɾiwˈʌn θˈaʊzənd ˈeɪt hˈʌndɹɪd twˈɛntifˈoːɹ",
+      "recognized_phonemes": "w ʌ n b ɪ l j ə n s ɛ v ə n t i θ ɹ i m ɪ l j ə n s s ɛ v ə n h ʌ n d ɹ ᵻ d f oːɹ ɾ i w ʌ n θ aʊ z ə n d eɪ t h ʌ n d ɹ ɪ d t w ɛ n i f oːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.9577464788732394,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "s"
+        },
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 17419,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full ASR drops zero padding in1,73,741,824; all four isolated scale-group ASR checks give1billion/73million/741thousand/824, while CTC retains those same lexical groups. Short/s/token splitting and twenty medial reduction are ordinary, not replacement digits.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N031",
+      "index": 31,
+      "number": "2147483648",
+      "expected_text": "two billion one hundred forty-seven million four hundred eighty-three thousand six hundred forty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N031.wav",
+      "source_sha256": "0538578f3f3e593ecaaa7cac22f82d427a5157f65b36cc477bc0b6d784679957",
+      "duration_s": 5.514125,
+      "asr_status": "asr-match",
+      "asr_transcript": "$2,147,483,648.",
+      "expected_espeak": "tˈuː bˈɪliən wˈʌn hˈʌndɹɪd fˈɔːɹɾisˈɛvən mˈɪliən fˈoːɹ hˈʌndɹɪd ˈeɪɾiθɹˈiː θˈaʊzənd sˈɪks hˈʌndɹɪd fˈɔːɹɾiˈeɪt",
+      "recognized_phonemes": "t uː b ɪ l j ə n w ʌ n h ʌ n d ɹ ɪ d f ɔːɹ ɾ i s ɛ v ə n m ɪ l j ə n f ɔːɹ h ʌ n d ɹ ᵻ d eɪ ɾ i θ ɹ iː θ aʊ z ə n s ɪ k s h ʌ n d ɹ ɪ d f ɔːɹ ɾ i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9673202614379085,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 16740,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Dollar-prefix transcript is normalized only as formatting; lexical wordphones retain two billion/147million/483thousand/648. Million/billion glides and unreleased thousand/d/ do not remove a numeric group.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N032",
+      "index": 32,
+      "number": "4294967296",
+      "expected_text": "four billion two hundred ninety-four million nine hundred sixty-seven thousand two hundred ninety-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N032.wav",
+      "source_sha256": "01ea4c532f0a168cc0901a6f06c5ec64c0fcbe5dfdc9f5c463e618af39e1516e",
+      "duration_s": 6.011541666666667,
+      "asr_status": "asr-match",
+      "asr_transcript": "4,294,967,296.",
+      "expected_espeak": "fˈoːɹ bˈɪliən tˈuː hˈʌndɹɪd nˈaɪntifˈoːɹ mˈɪliən nˈaɪn hˈʌndɹɪd sˈɪkstisˈɛvən θˈaʊzənd tˈuː hˈʌndɹɪd nˈaɪntisˈɪks",
+      "recognized_phonemes": "f ɔːɹ b ɪ l j ə n t uː h ʌ n d ɹ d n aɪ n d i f ɔːɹ m ɪ l j ə n n aɪ n h ʌ n d ɹ ɪ d s ɪ k s t i s ɛ v ə n θ aʊ z ə n d t uː h ʌ n d ɹ ɪ d n aɪ n d i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.9440993788819876,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 19596,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full lexical value is exact. Focused ASR2094million is a decoder misread of294million: focused CTC retains /tu hʌndrəd naɪndi foɹ mɪljən/. No extra thousand word is in the independent phone sequence.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N033",
+      "index": 33,
+      "number": "8589934592",
+      "expected_text": "eight billion five hundred eighty-nine million nine hundred thirty-four thousand five hundred ninety-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N033.wav",
+      "source_sha256": "408b3796ab5f9422b8b4da1fe3da165605e3a95f4d27b202ec31c6af3a5cc78b",
+      "duration_s": 5.812208333333333,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "8,500, 89,934,592.",
+      "expected_espeak": "ˈeɪt bˈɪliən fˈaɪv hˈʌndɹɪd ˈeɪtinˈaɪn mˈɪliən nˈaɪn hˈʌndɹɪd θˈɜːɾifˈoːɹ θˈaʊzənd fˈaɪv hˈʌndɹɪd nˈaɪntitˈuː",
+      "recognized_phonemes": "eɪ t b ɪ l j ə n f aɪ v h ʌ n d ɹ ə d eɪ t i n aɪ n m ɪ l j ə n n aɪ n h ʌ n d ɹ ə d θ ɜː ɾ i f ɔːɹ θ aʊ z ə n d f aɪ v h ʌ n d ɹ ɪ d n aɪ n d i t uː",
+      "phoneme_comparison_not_acceptance_score": 0.9358974358974359,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "ə"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "ə"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 18661,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full ASR8,500,89... is malformed digit formatting; the four isolated group ASR checks retain8billion/589million/934thousand/592. CTC glides, reduced hundred vowels and ninety voicing preserve those words.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N034",
+      "index": 34,
+      "number": "17179869184",
+      "expected_text": "seventeen billion one hundred seventy-nine million eight hundred sixty-nine thousand one hundred eighty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N034.wav",
+      "source_sha256": "0f25eb7f5958ac9fb615aeee8f431594b33e1b22cf63bcaa0103563d6fd9d55e",
+      "duration_s": 6.422041666666667,
+      "asr_status": "asr-match",
+      "asr_transcript": "17 billion, 179,869,184.",
+      "expected_espeak": "sˈɛvəntˌiːn bˈɪliən wˈʌn hˈʌndɹɪd sˈɛvəntinˈaɪn mˈɪliən ˈeɪt hˈʌndɹɪd sˈɪkstinˈaɪn θˈaʊzənd wˈʌn hˈʌndɹɪd ˈeɪɾifˈoːɹ",
+      "recognized_phonemes": "s ɛ v ə n t iː n b ɪ l j ə n w ʌ n h ʌ n d ɹ ᵻ d s ɛ v ə n t i n aɪ n m ɪ l ə n eɪ t h ʌ n d ɹ ᵻ d ɪ k s t i n aɪ n θ aʊ z ə n d w ʌ n h ʌ n d ɹ ᵻ d eɪ ɾ i f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.9761904761904762,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "s",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 23068,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full and each group lexical values are exact after hybrid number normalization. CTC briefly weakens/s/ in sixty-nine at the thousand group; independent group69thousand is retained, and there is no repeated or missing magnitude group.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N035",
+      "index": 35,
+      "number": "34359738368",
+      "expected_text": "thirty-four billion three hundred fifty-nine million seven hundred thirty-eight thousand three hundred sixty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N035.wav",
+      "source_sha256": "83dd00d938157e795ce5937f625a4636a51c9baa4ab5d2bebbf46dd23836f410",
+      "duration_s": 6.221625,
+      "asr_status": "asr-match",
+      "asr_transcript": "$34,359,738,368.",
+      "expected_espeak": "θˈɜːɾifˈoːɹ bˈɪliən θɹˈiː hˈʌndɹɪd fˈɪftinˈaɪn mˈɪliən sˈɛvən hˈʌndɹɪd θˈɜːɾiˈeɪt θˈaʊzənd θɹˈiː hˈʌndɹɪd sˈɪkstiˈeɪt",
+      "recognized_phonemes": "θ ɜː ɾ i f oːɹ b ɪ l j ə n θ ɹ iː h ʌ n d ɹ ɪ d f ɪ f t i n aɪ n m ɪ l j ə n s ɛ v ə n h ʌ n d ɹ d ɜː ɾ i eɪ t θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ɪ d s ɪ k s t i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9634146341463414,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "θ",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 15452,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Focused ASR359 omits the magnitude word; focused CTC retains full/θri hʌndrəd fɪfti naɪn mɪljən/. Full lexical value is exact; weak unstressed hundred and thirty onset labels are connected-speech decoder differences.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N036",
+      "index": 36,
+      "number": "68719476736",
+      "expected_text": "sixty-eight billion seven hundred nineteen million four hundred seventy-six thousand seven hundred thirty-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N036.wav",
+      "source_sha256": "99275f87297bdb077c2302531e0971a8ac491c28b55304f5144e7657ce14bd7f",
+      "duration_s": 6.349125,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "68,700, 19,476,736.",
+      "expected_espeak": "sˈɪkstiˈeɪt bˈɪliən sˈɛvən hˈʌndɹɪd nˈaɪntiːn mˈɪliən fˈoːɹ hˈʌndɹɪd sˈɛvəntisˈɪks θˈaʊzənd sˈɛvən hˈʌndɹɪd θˈɜːɾisˈɪks",
+      "recognized_phonemes": "s ɪ k s t i eɪ t b ɪ l j ə n s ɛ v ə n h ʌ n d ɹ ɪ d n aɪ n t iː n m ɪ l j ə n f oːɹ h ʌ n d ɹ ᵻ d s ɛ v ə n t i s ɪ k s θ aʊ z ə n d s ɛ v ə n h ʌ n d ɹ ɪ d θ ɜː ɾ i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.9772727272727273,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 21907,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full ASR68,700,19... is malformed grouping. Focused ASR700.19million is punctuation splitting; focused CTC retains /sɛvən hʌndrɪd naɪntiːn mɪlən/, explicitly nineteen rather than ninety. Other groups match.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N037",
+      "index": 37,
+      "number": "137438953472",
+      "expected_text": "one hundred thirty-seven billion four hundred thirty-eight million nine hundred fifty-three thousand four hundred seventy-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N037.wav",
+      "source_sha256": "926b57c816105125dbc8979a088190356d67cec6dc215d23cf4f5d71e0edfb0c",
+      "duration_s": 6.754416666666667,
+      "asr_status": "asr-match",
+      "asr_transcript": "137,438,953,472.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd θˈɜːɾisˈɛvən bˈɪliən fˈoːɹ hˈʌndɹɪd θˈɜːɾiˈeɪt mˈɪliən nˈaɪn hˈʌndɹɪd fˈɪftiθɹˈiː θˈaʊzənd fˈoːɹ hˈʌndɹɪd sˈɛvəntitˈuː",
+      "recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d θ ɜː ɾ i s ɛ v ə n b ɪ l j ə n f ɔːɹ h ʌ n d ɹ ɪ d θ ɜː ɾ i eɪ t m ɪ l j ə n n aɪ n h ʌ n d ɹ d f ɪ f t i ɹ iː θ aʊ z ə n d f ɔːɹ h ʌ n d ɹ ɪ d s ɛ v ə n t i t uː",
+      "phoneme_comparison_not_acceptance_score": 0.967391304347826,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "θ",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 23075,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full lexical value and all group values are exact. Hundred vowels and theta in fifty-three are weak in whole-clip CTC, while the numerical word groups remain; these are not grounds for rewriting the recorded phones.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N038",
+      "index": 38,
+      "number": "274877906944",
+      "expected_text": "two hundred seventy-four billion eight hundred seventy-seven million nine hundred six thousand nine hundred forty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N038.wav",
+      "source_sha256": "94717df4eb74e83da7237f6a7cea2e72bd3d97309640a8a7807e8ef72e2f9ef0",
+      "duration_s": 6.846875,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "$274 billion, $877,964,944.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd sˈɛvəntifˈoːɹ bˈɪliən ˈeɪt hˈʌndɹɪd sˈɛvəntisˈɛvən mˈɪliən nˈaɪn hˈʌndɹɪd sˈɪks θˈaʊzənd nˈaɪn hˈʌndɹɪd fˈɔːɹɾifˈoːɹ",
+      "recognized_phonemes": "t uː h ʌ n d ɹ ɪ d s ɛ v ə n t i f ɔːɹ b ɪ l ə n eɪ t h ʌ n d ɹ ɪ d s ɛ v ə n t i s ɛ v ə n m ɪ l j ə n n aɪ n h ʌ n d ɹ ɪ d s ɪ k s θ aʊ z ə n d n aɪ n h ʌ n d ɹ ᵻ d f oːɹ ɾ i f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.983957219251337,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 20431,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole transcript877964944 differs from877906944. The isolated groups correctly give274billion/877million/906thousand/944, and independent CTC retains nine-hundred-six, rather than nine-hundred-sixty-four.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N039",
+      "index": 39,
+      "number": "549755813888",
+      "expected_text": "five hundred forty-nine billion seven hundred fifty-five million eight hundred thirteen thousand eight hundred eighty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N039.wav",
+      "source_sha256": "15c8508a67ddd81ee1faed0ea746ae83c2c24638063834faf725664f54b7998c",
+      "duration_s": 6.955916666666667,
+      "asr_status": "asr-match",
+      "asr_transcript": "549,755,813,888.",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd fˈɔːɹtinˈaɪn bˈɪliən sˈɛvən hˈʌndɹɪd fˈɪftifˈaɪv mˈɪliən ˈeɪt hˈʌndɹɪd θˈɜːtiːn θˈaʊzənd ˈeɪt hˈʌndɹɪd ˈeɪɾiˈeɪt",
+      "recognized_phonemes": "f aɪ v h ʌ n d ɹ ɪ d f oːɹ ɾ i n aɪ n b ɪ l j ə n s ɛ v ə n h ʌ n d ɹ ɪ d f ɪ f t i f aɪ v m ɪ l j ə n eɪ t h ʌ n d ɹ d θ ɜː t iː n θ aʊ z ə n d eɪ t h ʌ n d ɹ ɪ d eɪ ɹ i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9508196721311475,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ɾ",
+          "recognized": "ɹ"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 17550,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Focused ASR549 omits billion; independent focused CTC retains /faɪv hʌndrɪd foɹɾi naɪn bɪljən/. Full lexical value is exact; reduced hundred vowel/last flap are ordinary.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N040",
+      "index": 40,
+      "number": "1099511627776",
+      "expected_text": "one trillion ninety-nine billion five hundred eleven million six hundred twenty-seven thousand seven hundred seventy-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N040.wav",
+      "source_sha256": "6299f4c203784a517003987e77f0cdb6f57828e915f3e305fb16607b01e55c04",
+      "duration_s": 7.412458333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "1 trillion 99 billion, 511, 627,776.",
+      "expected_espeak": "wˈʌn tɹˈɪliən nˈaɪntinˈaɪn bˈɪliən fˈaɪv hˈʌndɹɪd ᵻlˈɛvən mˈɪliən sˈɪks hˈʌndɹɪd twˈɛntisˈɛvən θˈaʊzənd sˈɛvən hˈʌndɹɪd sˈɛvəntisˈɪks",
+      "recognized_phonemes": "w ʌ n t ɹ ɪ l j ə n n aɪ n d i n aɪ b ɪ l j n f aɪ v h ʌ n d ɹ ᵻ d ᵻ l ɛ v ə n m ɪ l j ə n s ɪ k s h ʌ n d ɹ ᵻ d t w ɛ n i s ɛ v ə n θ aʊ z ə n d s ɛ v ə n h ʌ n d ɹ ᵻ d s ɛ v ə n t i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.9447236180904522,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "delete",
+          "expected": "n",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "iə",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 17714,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Focused ASR511 omits million; focused CTC retains /faɪv hʌndrɪd ɪlɛvən mɪljən/. Whole hybrid-scale transcript normalizes exactly, and all other groups agree.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N041",
+      "index": 41,
+      "number": "2199023255552",
+      "expected_text": "two trillion one hundred ninety-nine billion twenty-three million two hundred fifty-five thousand five hundred fifty-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N041.wav",
+      "source_sha256": "14658e7b9c0b4e0dc6a40c747ca052def439f5784e7a1afce2c413cf3d65eca6",
+      "duration_s": 6.837666666666666,
+      "asr_status": "asr-match",
+      "asr_transcript": "2 trillion 199 billion 23,255,552.",
+      "expected_espeak": "tˈuː tɹˈɪliən wˈʌn hˈʌndɹɪd nˈaɪntinˈaɪn bˈɪliən twˈɛntiθɹˈiː mˈɪliən tˈuː hˈʌndɹɪd fˈɪftifˈaɪv θˈaʊzənd fˈaɪv hˈʌndɹɪd fˈɪftitˈuː",
+      "recognized_phonemes": "t uː t ɹ ɪ l j ə n w ʌ n h ʌ n d ɹ ɪ d n aɪ n d i n aɪ n b ɪ l ə n t w ɛ n ɾ i θ ɹ iː m ɪ l j ə n t uː h ʌ n d ɹ ᵻ d f ɪ f t i f aɪ v θ aʊ z ə n d f aɪ v h ʌ n d ɹ ᵻ d f ɪ f t i t uː",
+      "phoneme_comparison_not_acceptance_score": 0.9513513513513514,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 17006,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole hybrid-scale transcript normalizes exactly. CTC ninety voicing/twenty flap and scale glides preserve all199/23/255/552 groups.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N042",
+      "index": 42,
+      "number": "4398046511104",
+      "expected_text": "four trillion three hundred ninety-eight billion forty-six million five hundred eleven thousand one hundred four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N042.wav",
+      "source_sha256": "5a1c6ab7bf5cccb31e09c83120b24c6c399d49dde38bbd4e15307219055828c7",
+      "duration_s": 6.4145,
+      "asr_status": "asr-match",
+      "asr_transcript": "4 trillion 398 billion 46 million 511,104.",
+      "expected_espeak": "fˈoːɹ tɹˈɪliən θɹˈiː hˈʌndɹɪd nˈaɪntiˈeɪt bˈɪliən fˈɔːɹɾisˈɪks mˈɪliən fˈaɪv hˈʌndɹɪd ᵻlˈɛvən θˈaʊzənd wˈʌn hˈʌndɹɪd fˈoːɹ",
+      "recognized_phonemes": "f ɔːɹ t ɹ ɪ l j ə n ɹ iː h n d ɹ ᵻ d n aɪ n d i eɪ t b ɪ l j ə n f oːɹ ɾ i s ɪ k s m ɪ l j ə n f aɪ v h ʌ n d ɹ ᵻ d ᵻ l ɛ v ə n θ aʊ z ə n d w ʌ n h ʌ n d ɹ ᵻ d f oʊ",
+      "phoneme_comparison_not_acceptance_score": 0.9302325581395349,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "θ",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ʌ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɹ",
+          "recognized": "ʊ"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 17622,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full and every group lexical values are exact. CTC weaker theta in three, unstressed hundred vowel and final rhotic reflect reduction/decoder labels; focused groups independently retain398billion/46million/511thousand/104.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N043",
+      "index": 43,
+      "number": "8796093022208",
+      "expected_text": "eight trillion seven hundred ninety-six billion ninety-three million twenty-two thousand two hundred eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N043.wav",
+      "source_sha256": "fcf9ea8fb64eceaf6a2b833e63013e97ce4f0b07f157bbdd606a1ebddedb0050",
+      "duration_s": 5.9665,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "8, 796, 993,22,208.",
+      "expected_espeak": "ˈeɪt tɹˈɪliən sˈɛvən hˈʌndɹɪd nˈaɪntisˈɪks bˈɪliən nˈaɪntiθɹˈiː mˈɪliən twˈɛntitˈuː θˈaʊzənd tˈuː hˈʌndɹɪd ˈeɪt",
+      "recognized_phonemes": "eɪ t t ɹ ɪ l ə n s ɛ v ə n h ʌ n d ɹ ᵻ d n aɪ n d i s ɪ k s b ɪ l j ə n n aɪ n d i θ ɹ iː m ɪ l j ə n t w ɛ n ɾ i t uː θ aʊ z ə n d t uː h ʌ n d ɹ ᵻ d eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9308176100628931,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 18255,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full ASR993/22 grouping is wrong. Focused groups give8trillion/796billion/93million/22thousand/208; focused CTC/eɪt trɪlən/ has no plural/s/, resolving its ASR trillions spelling.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N044",
+      "index": 44,
+      "number": "17592186044416",
+      "expected_text": "seventeen trillion five hundred ninety-two billion one hundred eighty-six million forty-four thousand four hundred sixteen",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N044.wav",
+      "source_sha256": "5cf3f61a1225676955fb2e4ca63be7af6840a6a3c476943ac01184ce60210a74",
+      "duration_s": 7.160208333333333,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "17, 592 billion, 186, 44,416.",
+      "expected_espeak": "sˈɛvəntˌiːn tɹˈɪliən fˈaɪv hˈʌndɹɪd nˈaɪntitˈuː bˈɪliən wˈʌn hˈʌndɹɪd ˈeɪɾisˈɪks mˈɪliən fˈɔːɹɾifˈoːɹ θˈaʊzənd fˈoːɹ hˈʌndɹɪd sˈɪkstiːn",
+      "recognized_phonemes": "s ɛ v ə n t iː n t ɹ ɪ l ə n f aɪ v h ʌ n d ɹ ᵻ d n aɪ n d i t uː b ɪ l j ə n w ʌ n h ʌ n d ɹ ɪ d eɪ ɾ i s ɪ k s m ɪ l j ə n f ɔːɹ ɾ i f ɔːɹ θ aʊ z ə n d f oːɹ h ʌ n d ɹ ə d s ɪ k s t iː n",
+      "phoneme_comparison_not_acceptance_score": 0.9528795811518325,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "ə"
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 18956,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full ASR drops a trillion grouping; isolated groups exactly retain17trillion/592billion/186million/44thousand/416. Whole CTC all scale names remain, with ordinary glides and hundred-vowel reduction.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N045",
+      "index": 45,
+      "number": "35184372088832",
+      "expected_text": "thirty-five trillion one hundred eighty-four billion three hundred seventy-two million eighty-eight thousand eight hundred thirty-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N045.wav",
+      "source_sha256": "8bab1e427b1ac6b5bc7e8b84edc6bedc458a914a5fed6c11261ea6a6ea0d4217",
+      "duration_s": 7.457583333333333,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "$35,184,372,88,832.",
+      "expected_espeak": "θˈɜːɾifˈaɪv tɹˈɪliən wˈʌn hˈʌndɹɪd ˈeɪɾifˈoːɹ bˈɪliən θɹˈiː hˈʌndɹɪd sˈɛvəntitˈuː mˈɪliən ˈeɪɾiˈeɪt θˈaʊzənd ˈeɪt hˈʌndɹɪd θˈɜːɾitˈuː",
+      "recognized_phonemes": "θ ɜː ɾ i f aɪ v t ɹ ɪ l j ə n w ʌ n h ʌ n d ɹ ɪ d eɪ ɾ i f ɔːɹ b ɪ l n θ ɹ iː h ʌ n d ɹ d s ɛ v ə n t i t uː m ɪ l ə n eɪ ɾ i eɪ t θ aʊ z ə n d eɪ t h ʌ n d ɹ ᵻ d θ ɜː ɾ i t uː",
+      "phoneme_comparison_not_acceptance_score": 0.967032967032967,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "iə",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 18486,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full ASR omits zero padding; focused ASR A-38thousand is wrong. Focused CTC/eɪɹi eɪt θaʊzənd/ explicitly supports88thousand. Other isolated groups match, and whole CTC retains them.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N046",
+      "index": 46,
+      "number": "70368744177664",
+      "expected_text": "seventy trillion three hundred sixty-eight billion seven hundred forty-four million one hundred seventy-seven thousand six hundred sixty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N046.wav",
+      "source_sha256": "76dab56445833210fcdeeb8fc2d0f3faa74959ae528d6238874030f51022fbf7",
+      "duration_s": 8.358458333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "70 trillion, 368 billion, 744 million, 177,664.",
+      "expected_espeak": "sˈɛvənti tɹˈɪliən θɹˈiː hˈʌndɹɪd sˈɪkstiˈeɪt bˈɪliən sˈɛvən hˈʌndɹɪd fˈɔːɹɾifˈoːɹ mˈɪliən wˈʌn hˈʌndɹɪd sˈɛvəntisˈɛvən θˈaʊzənd sˈɪks hˈʌndɹɪd sˈɪkstifˈoːɹ",
+      "recognized_phonemes": "s ɛ v ə n t i t ɹ ɪ l j ə n θ ɹ iː h ʌ n d ɹ ɪ d s ɪ k s t i eɪ t b ɪ l n ɛ v ə n h ʌ n d ɹ ᵻ d f oːɹ ɾ i f ɔːɹ m ɪ l j ə n w ʌ n h ʌ n d ɹ ᵻ d s ɛ v ə n t i s ɛ v ə n θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ɪ d s ɪ k s t i f oːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.9688888888888889,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "iə",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "s",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 21255,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full and each isolated group values are exact. Whole CTC reduces scale vowels and a seven onset, but independent group744million is exact; no missing hundreds group or speech-edge defect is observed.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N047",
+      "index": 47,
+      "number": "140737488355328",
+      "expected_text": "one hundred forty trillion seven hundred thirty-seven billion four hundred eighty-eight million three hundred fifty-five thousand three hundred twenty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N047.wav",
+      "source_sha256": "c68cf1b5bd48d7740a290b117a4b89dfa9d3dddda7bfc668a0f042a58eead4f4",
+      "duration_s": 8.714541666666667,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "$140,737,48,358,325,328.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd fˈɔːɹɾi tɹˈɪliən sˈɛvən hˈʌndɹɪd θˈɜːɾisˈɛvən bˈɪliən fˈoːɹ hˈʌndɹɪd ˈeɪɾiˈeɪt mˈɪliən θɹˈiː hˈʌndɹɪd fˈɪftifˈaɪv θˈaʊzənd θɹˈiː hˈʌndɹɪd twˈɛntiˈeɪt",
+      "recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d f oːɹ ɾ i t ɹ ɪ l j ə n s ɛ v ə n h ʌ n d ɹ ᵻ d θ ɜː ɾ i s ɛ v ə n b ɪ l j ə n f ɔːɹ h ʌ n d ɹ ᵻ d eɪ ɾ i eɪ t m ɪ l ə n θ ɹ iː h ʌ n d ɹ ᵻ d f ɪ f t i f aɪ v θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ᵻ d t w ɛ n t i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9785407725321889,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 16031,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Malformed whole transcript adds/transposes digits. All isolated groups exactly retain140trillion/737billion/488million/355thousand/328, and CTC retains their lexical phones with scale glides.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N048",
+      "index": 48,
+      "number": "281474976710656",
+      "expected_text": "two hundred eighty-one trillion four hundred seventy-four billion nine hundred seventy-six million seven hundred ten thousand six hundred fifty-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/correction-v004/N048.wav",
+      "source_sha256": "899e73b2a26cbacd9ab0c30007163fee35134afafd02ff2bae4de7ee81234962",
+      "duration_s": 9.458333333333334,
+      "asr_status": "asr-match",
+      "asr_transcript": "281 trillion, 474 billion, 976 million, 710,656.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd ˈeɪɾiwˈʌn tɹˈɪliən fˈoːɹ hˈʌndɹɪd sˈɛvəntifˈoːɹ bˈɪliən nˈaɪn hˈʌndɹɪd sˈɛvəntisˈɪks mˈɪliən sˈɛvən hˈʌndɹɪd tˈɛn θˈaʊzənd sˈɪks hˈʌndɹɪd fˈɪftisˈɪks",
+      "recognized_phonemes": "t uː h ʌ n d ɹ ᵻ d eɪ ɾ i w ʌ n t ɹ ɪ l ə n f oːɹ h ʌ n d ɹ ᵻ d s ɛ v ə n t i f ɔːɹ b ɪ l j ə n n aɪ n h ʌ n d ɹ ᵻ d s ɛ v ə n t i s ɪ k s m ɪ l j ə n s ɛ v ə n h ʌ n ɹ ᵻ d t ɛ n θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ɪ d f ɪ f t i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.9745762711864406,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 20608,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Original source was rejected for weak/seven/ onset. New full utterance with natural comma phrase boundaries yields exact281474976710656 ASR and complete /sɛvən hʌnɹɪd tɛn θaʊzənd/ CTC. A weak/unreleased hundred/d/ is ordinary; source speed, words and complete utterance are preserved.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N049",
+      "index": 49,
+      "number": "562949953421312",
+      "expected_text": "five hundred sixty-two trillion nine hundred forty-nine billion nine hundred fifty-three million four hundred twenty-one thousand three hundred twelve",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N049.wav",
+      "source_sha256": "a0f7fa88bb861002c2ee6b7d8dac831495894e81527e30e384f6179e39785ab1",
+      "duration_s": 8.985,
+      "asr_status": "asr-match",
+      "asr_transcript": "562 trillion 949 billion 953 million 421,312",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd sˈɪkstitˈuː tɹˈɪliən nˈaɪn hˈʌndɹɪd fˈɔːɹtinˈaɪn bˈɪliən nˈaɪn hˈʌndɹɪd fˈɪftiθɹˈiː mˈɪliən fˈoːɹ hˈʌndɹɪd twˈɛntiwˈʌn θˈaʊzənd θɹˈiː hˈʌndɹɪd twˈɛlv",
+      "recognized_phonemes": "f aɪ v h ʌ n d ɹ ɪ d s ɪ k s t i t uː t ɹ ɪ l j ə n n aɪ n h ʌ n d ɹ ᵻ d f ɔːɹ ɾ i n aɪ n b ɪ l n n aɪ n h n d ɹ ᵻ d f ɪ f t i θ ɹ iː m ɪ l j ə n f ɔːɹ h ʌ n d ɹ ᵻ d t w ɛ n i w ʌ n θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ᵻ d t w ɛ l v",
+      "phoneme_comparison_not_acceptance_score": 0.9568965517241379,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "delete",
+          "expected": "iə",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ʌ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 18422,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full and every isolated group values are exact. Reduced scale vowels and unstressed hundred vowels do not omit a number group; CTC fifty-three and final twelve remain.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N050",
+      "index": 50,
+      "number": "1125899906842624",
+      "expected_text": "one quadrillion one hundred twenty-five trillion eight hundred ninety-nine billion nine hundred six million eight hundred forty-two thousand six hundred twenty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N050.wav",
+      "source_sha256": "419ae884e795926eb94dcb46f8508940da4872eb79f108d02a443bf2fde7bec0",
+      "duration_s": 9.9385,
+      "asr_status": "asr-match",
+      "asr_transcript": "1 quadrillion 125 trillion eight hundred ninety nine billion nine hundred six million eight hundred forty two thousand six hundred twenty four.",
+      "expected_espeak": "wˈʌn kwɑːdɹˈɪliən wˈʌn hˈʌndɹɪd twˈɛntifˈaɪv tɹˈɪliən ˈeɪt hˈʌndɹɪd nˈaɪntinˈaɪn bˈɪliən nˈaɪn hˈʌndɹɪd sˈɪks mˈɪliən ˈeɪt hˈʌndɹɪd fˈɔːɹɾitˈuː θˈaʊzənd sˈɪks hˈʌndɹɪd twˈɛntifˈoːɹ",
+      "recognized_phonemes": "w ʌ n k w ʌ d ɹ ɪ l j ə n w ʌ n h ʌ n d ɹ ᵻ d t w n ɾ i f aɪ v t ɹ ɪ l j ə n eɪ t h ʌ n d ɹ ᵻ d n aɪ n d i n aɪ n b ɪ l j ə n n aɪ n h ʌ n d ɹ ᵻ d s ɪ k s m ɪ l j ə n eɪ t h ʌ n d ɹ ᵻ d f ɔːɹ ɾ i t uː θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ᵻ d t w ɛ n i f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.9384615384615385,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "ɑ",
+          "recognized": "ʌ"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɛ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 21599,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full and every isolated group values are exact, including one quadrillion. CTC quadrillion vowel/scale glides and medial flaps are ordinary; no extra step or repeated number is spoken.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N051",
+      "index": 51,
+      "number": "2251799813685248",
+      "expected_text": "two quadrillion two hundred fifty-one trillion seven hundred ninety-nine billion eight hundred thirteen million six hundred eighty-five thousand two hundred forty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N051.wav",
+      "source_sha256": "f0e4cc44a9a25163b0045ee669336ac67f361527287f839072e4676b0dd7293f",
+      "duration_s": 10.192666666666666,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "2. Quadrillion 251. Trillion 799. Billion 813.000. 685.248.",
+      "expected_espeak": "tˈuː kwɑːdɹˈɪliən tˈuː hˈʌndɹɪd fˈɪftiwˈʌn tɹˈɪliən sˈɛvən hˈʌndɹɪd nˈaɪntinˈaɪn bˈɪliən ˈeɪt hˈʌndɹɪd θˈɜːtiːn mˈɪliən sˈɪks hˈʌndɹɪd ˈeɪɾifˈaɪv θˈaʊzənd tˈuː hˈʌndɹɪd fˈɔːɹɾiˈeɪt",
+      "recognized_phonemes": "t uː k w ɑː d ɹ ɪ l j ə n t uː h ʌ n d ɹ ᵻ d f ɪ f t i w ʌ n t ɹ ɪ l j ə n s ɛ v ə n h ʌ n d ɹ ᵻ d n aɪ n d i n aɪ n b ɪ l j ə n eɪ t h ʌ n d ɹ ᵻ d θ ɜː ɾ iː n m ɪ l j ə n s ɪ k s h ʌ n d ɹ ᵻ d eɪ ɾ i f aɪ v θ aʊ z ə n d t uː h ʌ n d ɹ ᵻ d f ɔːɹ ɾ i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.953125,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 19913,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole ASR uses numeric punctuation and loses scale formatting. All isolated groups except251trillion are exact; its focused CTC explicitly retains /tu hʌndrɪd fɪfti wʌn trɪljən/. Thirteen remains /θɜɾiːn/, not thirty.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N052",
+      "index": 52,
+      "number": "4503599627370496",
+      "expected_text": "four quadrillion five hundred three trillion five hundred ninety-nine billion six hundred twenty-seven million three hundred seventy thousand four hundred ninety-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N052.wav",
+      "source_sha256": "7ec0a9c77e7d4f9070d65fe3c2c880a65dcf86b46dd445a21d7f052327b5df45",
+      "duration_s": 10.094375,
+      "asr_status": "asr-match",
+      "asr_transcript": "4 quadrillion 503 trillion 599 billion 627 million 370,496.",
+      "expected_espeak": "fˈoːɹ kwɑːdɹˈɪliən fˈaɪv hˈʌndɹɪd θɹˈiː tɹˈɪliən fˈaɪv hˈʌndɹɪd nˈaɪntinˈaɪn bˈɪliən sˈɪks hˈʌndɹɪd twˈɛntisˈɛvən mˈɪliən θɹˈiː hˈʌndɹɪd sˈɛvənti θˈaʊzənd fˈoːɹ hˈʌndɹɪd nˈaɪntisˈɪks",
+      "recognized_phonemes": "f ɔːɹ k w ɑː d ɹ ɪ l j ə n f aɪ v h ʌ n d ɹ d θ ɹ iː t ɹ ɪ l j ə n f aɪ v h ʌ n d ɹ ᵻ d n aɪ n d i n aɪ n b ɪ l j ə n s ɪ k s h ʌ n d ɹ ɪ d t w ɛ n ɾ i s ɛ v ə n m ɪ l j ə n θ ɹ iː h ʌ n d ɹ ᵻ d ɛ v ə n d i θ aʊ z ə n d f oːɹ h ʌ n d ɹ ɪ d n aɪ n d i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.9318181818181818,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "s",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 20838,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full lexical value is exact. Focused ASR3998billion is wrong; focused CTC /faɪv hʌndrɪd naɪndi naɪn bɪljən/ explicitly supports599billion. Whole/group phones retain370thousand and496.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N053",
+      "index": 53,
+      "number": "9007199254740992",
+      "expected_text": "nine quadrillion seven trillion one hundred ninety-nine billion two hundred fifty-four million seven hundred forty thousand nine hundred ninety-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N053.wav",
+      "source_sha256": "b8477266055adfa78f65ed78aeb066feaea8b87e1443c96fd1bc98847ea12de8",
+      "duration_s": 8.973583333333334,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "9. Quadrillion 7.1.199. Billion 254.740.992.",
+      "expected_espeak": "nˈaɪn kwɑːdɹˈɪliən sˈɛvən tɹˈɪliən wˈʌn hˈʌndɹɪd nˈaɪntinˈaɪn bˈɪliən tˈuː hˈʌndɹɪd fˈɪftifˈoːɹ mˈɪliən sˈɛvən hˈʌndɹɪd fˈɔːɹɾi θˈaʊzənd nˈaɪn hˈʌndɹɪd nˈaɪntitˈuː",
+      "recognized_phonemes": "n aɪ n k w ɑː d ɹ ɪ l j ə n s ɛ v ə t ɹ ɪ l ə n w ʌ n h ʌ n d ɹ ᵻ d n aɪ n d i n aɪ n b ɪ l j ə n t uː h ʌ n d ɹ ᵻ d f ɪ f t i f oːɹ m ɪ l j ə n s ɛ v ə n h ʌ n d ɹ ᵻ d f ɔːɹ ɾ i θ aʊ z ə n d n aɪ n h ʌ n d ɹ ᵻ d n aɪ n d i t uː",
+      "phoneme_comparison_not_acceptance_score": 0.9487179487179487,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "n",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 18684,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole transcript7.1.199 has formatting errors. All six isolated group ASR checks exactly retain9quadrillion/7trillion/199billion/254million/740thousand/992, while CTC retains descending scale words.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N054",
+      "index": 54,
+      "number": "18014398509481984",
+      "expected_text": "eighteen quadrillion fourteen trillion three hundred ninety-eight billion five hundred nine million four hundred eighty-one thousand nine hundred eighty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N054.wav",
+      "source_sha256": "263a260b67b125822098983d17a409dc3469f890c04f6290d7e33ff25f7086a6",
+      "duration_s": 9.052625,
+      "asr_status": "asr-match",
+      "asr_transcript": "18 quadrillion, 14 trillion, 398 billion, 509, 481,984.",
+      "expected_espeak": "ˈeɪtiːn kwɑːdɹˈɪliən fˈoːɹtiːn tɹˈɪliən θɹˈiː hˈʌndɹɪd nˈaɪntiˈeɪt bˈɪliən fˈaɪv hˈʌndɹɪd nˈaɪn mˈɪliən fˈoːɹ hˈʌndɹɪd ˈeɪɾiwˈʌn θˈaʊzənd nˈaɪn hˈʌndɹɪd ˈeɪɾifˈoːɹ",
+      "recognized_phonemes": "eɪ t iː n k w ɑː d ɹ ɪ l j ə n f oːɹ t iː n t ɹ ɪ l j ə n θ ɹ iː h ʌ n d ɹ ᵻ d n aɪ n d i eɪ t b ɪ l ə n f aɪ v h ʌ n d ɹ ᵻ d n aɪ n m ɪ l j ə n f ɔːɹ h ʌ n d ɹ ᵻ d eɪ ɾ i w ʌ n θ aʊ z ə n d n aɪ n h ʌ n d ɹ ᵻ d eɪ ɾ i f oːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.961038961038961,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 21948,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full lexical value is exact. Focused ASR3998billion is a misread of398billion; focused CTC /θri hʌndrɪd naɪndi eɪt bɪljən/ retains398. Fourteen retains its teen nasal, and all other groups match.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N055",
+      "index": 55,
+      "number": "36028797018963968",
+      "expected_text": "thirty-six quadrillion twenty-eight trillion seven hundred ninety-seven billion eighteen million nine hundred sixty-three thousand nine hundred sixty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N055.wav",
+      "source_sha256": "441e5eb747a336fc02d76fa15de2959514cb10394aeb1a830d7036f932ae84d5",
+      "duration_s": 9.268166666666668,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "36 quadrillion, 28, trillion, 797, billion, 18,963,968.",
+      "expected_espeak": "θˈɜːɾisˈɪks kwɑːdɹˈɪliən twˈɛntiˈeɪt tɹˈɪliən sˈɛvən hˈʌndɹɪd nˈaɪntisˈɛvən bˈɪliən ˈeɪtiːn mˈɪliən nˈaɪn hˈʌndɹɪd sˈɪkstiθɹˈiː θˈaʊzənd nˈaɪn hˈʌndɹɪd sˈɪkstiˈeɪt",
+      "recognized_phonemes": "θ ɜː ɾ i s ɪ k s k w ʌ d ɹ ɪ l j ə n t w ɛ n ɾ i eɪ t t w ɹ ɪ l j n s ɛ v ə n h ʌ n d ɹ ɪ d n aɪ n d i s ɛ v ə n b ɪ l j ə n eɪ t iː n m ɪ l ə n n aɪ n h ʌ n d ɹ ᵻ d s ɪ k s t i θ ɹ iː θ aʊ z ə n d n aɪ n h ʌ n d ɹ ɪ d s ɪ k s t i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9377593360995851,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "ɑ",
+          "recognized": "ʌ"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "w"
+        },
+        {
+          "operation": "replace",
+          "expected": "iə",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 17637,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole ASR28,trillion,797,billion punctuation prevents parser match, but isolated groups retain their exact values. Focused CTC /twɛnɾi eɪt trɪlən/ has no plural ending, resolving trillions formatting.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N056",
+      "index": 56,
+      "number": "72057594037927936",
+      "expected_text": "seventy-two quadrillion fifty-seven trillion five hundred ninety-four billion thirty-seven million nine hundred twenty-seven thousand nine hundred thirty-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N056.wav",
+      "source_sha256": "40defecffb1b41053b40ba8633de62f4b1cf81db2d62824a70187747b4a459d6",
+      "duration_s": 10.017458333333334,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "72, quadrillion 57 trillion 594 billion 37,927,936",
+      "expected_espeak": "sˈɛvəntitˈuː kwɑːdɹˈɪliən fˈɪftisˈɛvən tɹˈɪliən fˈaɪv hˈʌndɹɪd nˈaɪntifˈoːɹ bˈɪliən θˈɜːɾisˈɛvən mˈɪliən nˈaɪn hˈʌndɹɪd twˈɛntisˈɛvən θˈaʊzənd nˈaɪn hˈʌndɹɪd θˈɜːɾisˈɪks",
+      "recognized_phonemes": "s ɛ v ə n t i t uː k w ɑː d ɹ ɪ l ə n f ɪ f t i s ɛ v ə n t ɹ ɪ l j n f aɪ v h ʌ n d ɹ ᵻ d n aɪ n d i f ɔːɹ b ɪ l ə n θ ɜː ɾ i s ɛ v ə n m ɪ l j ə n n n h ʌ n d ɹ ɪ d t w ɛ n ɾ i s ɛ v ə n θ aʊ z ə n n aɪ n h ʌ n d ɹ d θ ɜː ɾ i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.9382716049382716,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "iə",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "aɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 19709,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole numeric-scale punctuation is malformed. Group927thousand ASR92709 is wrong; focused CTC/n aɪ n hʌndrɪd twɛnti sɛvən θaʊzənd/ retains927thousand; a trailing/n/ at the review cut belongs to following nine-hundred source speech. Other groups are exact and source waveform concatenation is independently checked.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N057",
+      "index": 57,
+      "number": "144115188075855872",
+      "expected_text": "one hundred forty-four quadrillion one hundred fifteen trillion one hundred eighty-eight billion seventy-five million eight hundred fifty-five thousand eight hundred seventy-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N057.wav",
+      "source_sha256": "a5574bcfef06134b182e91cf8b701b288f14d5b356a6067da4576b201f90452d",
+      "duration_s": 10.413833333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "144 quadrillion, 115 trillion, 188 billion, 75,855,872.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd fˈɔːɹɾifˈoːɹ kwɑːdɹˈɪliən wˈʌn hˈʌndɹɪd fˈɪftiːn tɹˈɪliən wˈʌn hˈʌndɹɪd ˈeɪɾiˈeɪt bˈɪliən sˈɛvəntifˈaɪv mˈɪliən ˈeɪt hˈʌndɹɪd fˈɪftifˈaɪv θˈaʊzənd ˈeɪt hˈʌndɹɪd sˈɛvəntitˈuː",
+      "recognized_phonemes": "w ʌ n h ʌ n d ɹ ə d f oːɹ ɾ i f ɔːɹ k w ɑː d ɹ ɪ l j ə n w ʌ n h ʌ n d ɹ ᵻ d f ɪ f t iː n t ɹ ɪ l j ə n w ʌ n h ʌ n d ɹ d eɪ ɾ i eɪ t b ɪ l j ə n s ɛ v ə n t i f aɪ v m ɪ l ə n eɪ t h ʌ n d ɹ ᵻ d f ɪ f t i f aɪ v θ aʊ z ə n d eɪ t h ʌ n d ɹ ᵻ d s ɛ v ə n t i t uː",
+      "phoneme_comparison_not_acceptance_score": 0.9629629629629629,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "ə"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 22072,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full and all six group values are exact. American quadrillion vowel, scale glides and reduced unstressed hundred vowels preserve144/115/188/75/855/872.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N058",
+      "index": 58,
+      "number": "288230376151711744",
+      "expected_text": "two hundred eighty-eight quadrillion two hundred thirty trillion three hundred seventy-six billion one hundred fifty-one million seven hundred eleven thousand seven hundred forty-four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N058.wav",
+      "source_sha256": "8b5482d77ec3b9f99f392dac57ca990312bf4e256f1d580ddd4c8520277c7c41",
+      "duration_s": 10.771875,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "288, quadrillion, 230 trillion, 376 billion, 151,711,744.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd ˈeɪɾiˈeɪt kwɑːdɹˈɪliən tˈuː hˈʌndɹɪd θˈɜːɾi tɹˈɪliən θɹˈiː hˈʌndɹɪd sˈɛvəntisˈɪks bˈɪliən wˈʌn hˈʌndɹɪd fˈɪftiwˈʌn mˈɪliən sˈɛvən hˈʌndɹɪd ᵻlˈɛvən θˈaʊzənd sˈɛvən hˈʌndɹɪd fˈɔːɹɾifˈoːɹ",
+      "recognized_phonemes": "t uː h ʌ n d ɹ ᵻ d eɪ ɾ i eɪ t k w ʌ d ɹ ɪ l j n t uː h ʌ n d ɹ ᵻ d θ ɜː ɾ i t ɹ l j ə n θ ɹ iː h ʌ n d ɹ ᵻ d s ɛ v ə n ɾ i s ɪ k s b ɪ l j ə n w ʌ n h ʌ n d ɹ ᵻ d f ɪ f t i w ʌ n m ɪ l j ə n s ɛ v ə n h ʌ n d ɹ ɚ d ᵻ l ɛ v ə n θ aʊ z ə n d s ɛ v ə n h ʌ n d ɹ d f ɔːɹ ɾ i f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.9361702127659575,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "ɑ",
+          "recognized": "ʌ"
+        },
+        {
+          "operation": "replace",
+          "expected": "iə",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "əɹ"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 19511,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full transcript commas around quadrillion are formatting. All six isolated group ASR checks exactly match288/230/376/151/711/744. CTC thousand and final forty-four remain, with ordinary hundred-vowel/rhotic variation.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N059",
+      "index": 59,
+      "number": "576460752303423488",
+      "expected_text": "five hundred seventy-six quadrillion four hundred sixty trillion seven hundred fifty-two billion three hundred three million four hundred twenty-three thousand four hundred eighty-eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N059.wav",
+      "source_sha256": "ca737c373310bf051f6b1cc92a2ace3251579578812e4faacb56e45fcdb0a4b4",
+      "duration_s": 10.70925,
+      "asr_status": "asr-match",
+      "asr_transcript": "576. Quadrillion, 460 trillion, 752 billion, 303,423,488.",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd sˈɛvəntisˈɪks kwɑːdɹˈɪliən fˈoːɹ hˈʌndɹɪd sˈɪksti tɹˈɪliən sˈɛvən hˈʌndɹɪd fˈɪftitˈuː bˈɪliən θɹˈiː hˈʌndɹɪd θɹˈiː mˈɪliən fˈoːɹ hˈʌndɹɪd twˈɛntiθɹˈiː θˈaʊzənd fˈoːɹ hˈʌndɹɪd ˈeɪɾiˈeɪt",
+      "recognized_phonemes": "f aɪ v h ʌ n d ɹ ɪ d s ɛ v ə n t i s ɪ k s k w ʌ d ɹ ɪ l ə n f h ʌ n d ɹ ᵻ d s ɪ k s t i t ɹ ɪ l j ə n ɛ v ə n h ʌ n d ɹ ɪ d f ɪ f t i t uː b ɪ l j ə n θ ɹ iː h ʌ n d ɹ ɪ d θ ɹ iː m ɪ l j ə n f oːɹ h ʌ n d ɹ ᵻ d t w ʌ n t i θ ɹ iː θ aʊ z ə n d f ɔːɹ h ʌ n d ɹ ᵻ d eɪ ɾ i eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.95,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "ɑ",
+          "recognized": "ʌ"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "oɹ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "s",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɛ",
+          "recognized": "ʌ"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 20329,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Full value is exact after punctuation normalization and all six isolated groups are exact. Whole CTC weak four vowel and seven onset are not repeated in the lexical group results; scale word order and final eighty-eight remain.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N060",
+      "index": 60,
+      "number": "1152921504606846976",
+      "expected_text": "one quintillion one hundred fifty-two quadrillion nine hundred twenty-one trillion five hundred four billion six hundred six million eight hundred forty-six thousand nine hundred seventy-six",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N060.wav",
+      "source_sha256": "d5b6b4af7c38c6089de4dbaa4de98dc6c46eb8a07cb439879c3b3ba158f8ddbe",
+      "duration_s": 12.036458333333334,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "1,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,",
+      "expected_espeak": "wˈʌn kwɪntˈɪliən wˈʌn hˈʌndɹɪd fˈɪftitˈuː kwɑːdɹˈɪliən nˈaɪn hˈʌndɹɪd twˈɛntiwˈʌn tɹˈɪliən fˈaɪv hˈʌndɹɪd fˈoːɹ bˈɪliən sˈɪks hˈʌndɹɪd sˈɪks mˈɪliən ˈeɪt hˈʌndɹɪd fˈɔːɹɾisˈɪks θˈaʊzənd nˈaɪn hˈʌndɹɪd sˈɛvəntisˈɪks",
+      "recognized_phonemes": "w ʌ n k w ɪ n t ɪ l ə n w ʌ n h ʌ n d ɹ ᵻ d f ɪ f t i t uː k w ɑː d ɹ ɪ l j ə n n aɪ n h ʌ n d ɹ ᵻ d t w ɛ n i w ʌ n t ɹ l ə n f aɪ v h ʌ n d ɹ ᵻ d f ɔːɹ b ɪ l ə n s ɪ k s h ʌ n d ɹ ɪ d s ɪ k s m ɪ l ə n eɪ t h ʌ n d ɹ ᵻ d f oːɹ ɾ i s ɪ k s θ aʊ z ə n d n aɪ n h ʌ n d ɹ ᵻ d s ɛ v ə n t i s ɪ k s",
+      "phoneme_comparison_not_acceptance_score": 0.9738562091503268,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 21734,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.012916666666666667,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole ASR catastrophically repeats zeros and is rejected as lexical evidence. Six of seven isolated group ASR checks match;606million ASR omits its scale, independently restored by focused CTC/sɪks hʌndrɪd sɪks mɪljən/. Full CTC retains quintillion/quadrillion/trillion/billion/million/thousand in order; independent scoped review confirms all seven source windows reconstruct the unchanged complete WAV and exact value.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N061",
+      "index": 61,
+      "number": "2305843009213693952",
+      "expected_text": "two quintillion three hundred five quadrillion eight hundred forty-three trillion nine billion two hundred thirteen million six hundred ninety-three thousand nine hundred fifty-two",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N061.wav",
+      "source_sha256": "34ef4453df7c8929ca72f8652aed86b25450d6c6ecb8584424e59ffab8615bf8",
+      "duration_s": 10.4715,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "2. Quintillion 305. Quadrillion 843 trillion 9.Billion 213.693.952.",
+      "expected_espeak": "tˈuː kwɪntˈɪliən θɹˈiː hˈʌndɹɪd fˈaɪv kwɑːdɹˈɪliən ˈeɪt hˈʌndɹɪd fˈɔːɹɾiθɹˈiː tɹˈɪliən nˈaɪn bˈɪliən tˈuː hˈʌndɹɪd θˈɜːtiːn mˈɪliən sˈɪks hˈʌndɹɪd nˈaɪntiθɹˈiː θˈaʊzənd nˈaɪn hˈʌndɹɪd fˈɪftitˈuː",
+      "recognized_phonemes": "t uː k w ɪ n t ɪ l j ə n θ ɹ iː h ʌ n d ɹ ɪ d f aɪ v k w ʌ d ɹ ɪ l j ə n eɪ t h ʌ n d ɹ ɪ d f ɔːɹ ɾ i θ ɹ iː t ɹ l j ə n n aɪ n b ɪ l j ə n t uː h ʌ n d ɹ d θ ɜː t iː n m ɪ l ə n s ɪ k s h ʌ n d ɹ ᵻ d n aɪ n d i θ ɹ iː θ aʊ z ə n d n aɪ n h ʌ n d ɹ ᵻ d f ɪ f t i t uː",
+      "phoneme_comparison_not_acceptance_score": 0.9442379182156134,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɑ",
+          "recognized": "ʌ"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 22200,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole ASR punctuation is malformed, but all seven isolated group ASR checks exactly match2quintillion/305quadrillion/843trillion/9billion/213million/693thousand/952. CTC glides and unstressed vowel reduction preserve magnitude order.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N062",
+      "index": 62,
+      "number": "4611686018427387904",
+      "expected_text": "four quintillion six hundred eleven quadrillion six hundred eighty-six trillion eighteen billion four hundred twenty-seven million three hundred eighty-seven thousand nine hundred four",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N062.wav",
+      "source_sha256": "90aec60175ff2abd63390fcf2ad08cfc353e3aefefa690edc189134f690f9c19",
+      "duration_s": 11.1395,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "4, quintillion, 611, quadrillion, 686, trillion, 18,427,387,904.",
+      "expected_espeak": "fˈoːɹ kwɪntˈɪliən sˈɪks hˈʌndɹɪd ᵻlˈɛvən kwɑːdɹˈɪliən sˈɪks hˈʌndɹɪd ˈeɪɾisˈɪks tɹˈɪliən ˈeɪtiːn bˈɪliən fˈoːɹ hˈʌndɹɪd twˈɛntisˈɛvən mˈɪliən θɹˈiː hˈʌndɹɪd ˈeɪɾisˈɛvən θˈaʊzənd nˈaɪn hˈʌndɹɪd fˈoːɹ",
+      "recognized_phonemes": "f ɔːɹ k w ɪ n t ɪ l j ə n s ɪ k h ʌ n d ɹ d ᵻ l ɛ v ə n k w ɑː d ɹ ɪ l j ə n s ɪ k s h ʌ n d ɹ d eɪ ɾ i s ɪ k s t ɹ ɪ l j ə n eɪ t iː n b ɪ l j ə n f oːɹ h ʌ n d ɹ ᵻ d t w ɛ n ɾ i s ɛ v ə n m ɪ l j n θ ɹ iː h ʌ n d ɹ ᵻ d eɪ ɾ i s ɛ v ə n θ aʊ z ə n d n aɪ n h ʌ n d ɹ ᵻ d f ɔːɹ",
+      "phoneme_comparison_not_acceptance_score": 0.9436619718309859,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "s",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "replace",
+          "expected": "iə",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 25021,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole ASR scale commas are formatting. Focused four-quintillion ASR Quintilians is spelling noise; CTC/foɹ kwɪntɪlən/ retains the scale.611quadrillion focused ASR drops its label, while focusedCTC/sɪks hʌndrɪd ɪlɛvən kwɑdrɪlən/ retains it. Other groups match.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N063",
+      "index": 63,
+      "number": "9223372036854775808",
+      "expected_text": "nine quintillion two hundred twenty-three quadrillion three hundred seventy-two trillion thirty-six billion eight hundred fifty-four million seven hundred seventy-five thousand eight hundred eight",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N063.wav",
+      "source_sha256": "137611a78c64b425916a6e6238e168a11a348e48b84b34afe31e764164c81e5a",
+      "duration_s": 11.68575,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "9. quintillion. 223. Quadrillion. 372. Trillion. 36. Billion. 854. 775. 808.",
+      "expected_espeak": "nˈaɪn kwɪntˈɪliən tˈuː hˈʌndɹɪd twˈɛntiθɹˈiː kwɑːdɹˈɪliən θɹˈiː hˈʌndɹɪd sˈɛvəntitˈuː tɹˈɪliən θˈɜːɾisˈɪks bˈɪliən ˈeɪt hˈʌndɹɪd fˈɪftifˈoːɹ mˈɪliən sˈɛvən hˈʌndɹɪd sˈɛvəntifˈaɪv θˈaʊzənd ˈeɪt hˈʌndɹɪd ˈeɪt",
+      "recognized_phonemes": "n aɪ n k w ɪ n ɪ l ə n t uː h ʌ n d ɹ ᵻ d t w ɛ n i θ ɹ iː k w ɑː d ɹ ɪ l j ə n θ ɹ iː h ʌ n d ɹ ᵻ d s ɛ v ə n t i t uː t ɹ ɪ l j ə n θ ɜː ɾ i s ɪ k s b ɪ l ə n eɪ t h ʌ n d ɹ d f ɪ f t i f ɔːɹ m ɪ l j ə n s ɛ v ə n h ʌ n d ɹ ɚ d s ɛ v ə n t i f aɪ v θ aʊ z ə n eɪ t h ʌ n d ɹ d eɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9452054794520548,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "əɹ"
+        },
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 21069,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole transcript drops million/thousand labels, but all seven isolated group ASR checks exactly retain9quintillion/223quadrillion/372trillion/36billion/854million/775thousand/808. CTC reduced unstressed syllables do not remove word groups.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "N064",
+      "index": 64,
+      "number": "18446744073709551616",
+      "expected_text": "eighteen quintillion four hundred forty-six quadrillion seven hundred forty-four trillion seventy-three billion seven hundred nine million five hundred fifty-one thousand six hundred sixteen",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/N064.wav",
+      "source_sha256": "d78eeebea8c151bd57254d39d352f22f968c039ee4990cdc44e8f0d99569dea6",
+      "duration_s": 11.904625,
+      "asr_status": "warning-review-required",
+      "asr_transcript": "18. quintillion 446. Quadrillion 744. Trillion 73. 709. Million 551. 16.",
+      "expected_espeak": "ˈeɪtiːn kwɪntˈɪliən fˈoːɹ hˈʌndɹɪd fˈɔːɹɾisˈɪks kwɑːdɹˈɪliən sˈɛvən hˈʌndɹɪd fˈɔːɹɾifˈoːɹ tɹˈɪliən sˈɛvəntiθɹˈiː bˈɪliən sˈɛvən hˈʌndɹɪd nˈaɪn mˈɪliən fˈaɪv hˈʌndɹɪd fˈɪftiwˈʌn θˈaʊzənd sˈɪks hˈʌndɹɪd sˈɪkstiːn",
+      "recognized_phonemes": "eɪ t iː n k w ɪ n t ɪ l ə n f ɔːɹ h ʌ n d ɹ ᵻ d f oːɹ ɾ i s ɪ k s k w ʌ d ɹ ɪ l j ə n ɛ v ə n h ʌ n d ɹ ᵻ d f oːɹ ɾ i f ɔːɹ t ɹ l j n s ɛ v ə n t i θ ɹ iː b ɪ l j ə n s ɛ v ə n h ʌ n d ɹ ᵻ d n aɪ n m ɪ l j ə n f aɪ v ʌ n d ɹ ᵻ d f ɪ f t i w ʌ n θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ᵻ d s ɪ k s t iː n",
+      "phoneme_comparison_not_acceptance_score": 0.9501661129568106,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ɑ",
+          "recognized": "ʌ"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "s",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "iə",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        },
+        {
+          "operation": "delete",
+          "expected": "h",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "isolated-lexical-ASR-warning",
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 19842,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Whole ASR551.16 and focused ASR660 are rejected transcriptions. Focused terminal CTC/sɪks hʌndrɪd sɪkstiːn/ explicitly retains six-hundred-SIXTEEN with final/n/, not sixty. Focused CTC also retains744trillion and709million including their scale labels. Independent second-agent review confirms all seven windows reconstruct this exact WAV and the20-digit target value; remaining three group ASR checks are exact.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "I001",
+      "index": null,
+      "number": null,
+      "expected_text": "Hi! Let's count the powers of two, and watch one amount turn into two equal copies.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/I001.wav",
+      "source_sha256": "c8fbc3504db3f87d1192a17df136d95ff942f5f3a127ab9cd45cd8a1d9aaddd7",
+      "duration_s": 5.16075,
+      "asr_status": "asr-match",
+      "asr_transcript": "Hi, let's count the powers of 2, and watch one amount turn into 2 equal copies.",
+      "expected_espeak": "hˈaɪ lˈɛts kˈaʊnt ðə pˈaʊɚz ʌv tˈuː ænd wˈɑːtʃ wˈʌn ɐmˈaʊnt tˈɜːn ˌɪntʊ tˈuː ˈiːkwəl kˈɑːpɪz",
+      "recognized_phonemes": "h aɪ l ɛ t s k aʊ n t ð ə p aʊ ɚ z ʌ v t uː æ n w ɑː tʃ w ʌ n ɐ m aʊ n t t ɜː n ɪ n t ə t uː iː k w əl k ɑː p i z",
+      "phoneme_comparison_not_acceptance_score": 0.9572649572649573,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ʊ",
+          "recognized": "ə"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "i"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 16276,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Lexical sentence matches. CTC unstressed and/d/ and into-vowel reduction and copies vowel realization are ordinary connected speech; the powers-of-two and two-equal-copies words remain.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "I002",
+      "index": null,
+      "number": null,
+      "expected_text": "We begin with one. Every new answer will be exactly twice the answer before it.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/I002.wav",
+      "source_sha256": "88e6a75e6dfe89c3739417bbbc9a28adead94c79c6db95b9cea02d8cde4a6b08",
+      "duration_s": 4.409208333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "We begin with one. Every new answer will be exactly twice the answer before it.",
+      "expected_espeak": "wiː bɪɡˈɪn wɪð wˌʌn ˈɛvɹi nˈuː ˈænsɚ wɪl biː ɛɡzˈæktli twˈaɪs ðɪ ˈænsɚ bᵻfˈoːɹ ɪt",
+      "recognized_phonemes": "w iː b ɪ ɡ ɪ n w ɪ ð w ʌ n ɛ v ɹ i n uː æ n s ɚ w ɪ l b iː ɛ ɡ z æ k l i t w aɪ s ð ɪ æ n s ɚ b ə f ɔːɹ ɹ ɪ t",
+      "phoneme_comparison_not_acceptance_score": 0.9642857142857143,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "ə"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "ɹ"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 21363,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Lexical sentence matches; exactly cluster/t/ is unreleased, before vowel is reduced, and linking rhotic precedes it. No semantic word is missing.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "I003",
+      "index": null,
+      "number": null,
+      "expected_text": "Watch the formula work. Then listen as we say each new number, all the way to the sixty-fourth power.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/I003.wav",
+      "source_sha256": "629e10f42e59dcf2f474a833d135e22e1ea449f7e375aa95ec7686ddcbbe51cd",
+      "duration_s": 5.873833333333334,
+      "asr_status": "asr-match",
+      "asr_transcript": "Watch the formula work. Then listen as we say each new number, all the way to the 64th power.",
+      "expected_espeak": "wˈɑːtʃ ðə fˈɔːɹmjʊlə wˈɜːk ðˈɛn lˈɪsən æz wiː sˈeɪ ˈiːtʃ nˈuː nˈʌmbɚ ˈɔːl ðə wˈeɪ tə ðə sˈɪkstifˈoːɹθ pˈaʊɚ",
+      "recognized_phonemes": "w ɑː tʃ ð ə f ɔːɹ m j uː l ə w ɜː k ð ɛ n l ɪ s ə n æ z w iː s eɪ iː tʃ n uː n ʌ m b ɚ ɔː l ð ə w eɪ t ə ð ə s ɪ k s t i f ɔːɹ θ p aʊ ɚ",
+      "phoneme_comparison_not_acceptance_score": 0.9855072463768116,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "ʊ",
+          "recognized": "u"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 22718,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "64th is a written ordinal representation of sixty-fourth; CTC explicitly retains /sɪksti foɹθ/. Formula/each-new-number words remain; formula vowel varies mildly.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "X000",
+      "index": null,
+      "number": null,
+      "expected_text": "Two to the zero power is one. We start with one, before any doubling steps.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/X000.wav",
+      "source_sha256": "4617636bf2c768f882bb95d62aa4fbc11af21d7f92fe3caa16bbd2b5b201a435",
+      "duration_s": 4.519708333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "2 to the 0 power is 1. We start with 1 before any doubling steps.",
+      "expected_espeak": "tˈuː tə ðə zˈiəɹoʊ pˈaʊɚɹ ɪz wˌʌn wiː stˈɑːɹt wɪð wˌʌn bᵻfˌoːɹ ˌɛni dˈʌblɪŋ stˈɛps",
+      "recognized_phonemes": "t uː t ə ð ə z iː ɹ oʊ p aʊ ɚ ɪ z w ʌ n w iː s t ɑːɹ t w ɪ θ w ʌ n b ᵻ f ɔːɹ ɹ ɛ n i d ʌ b l ɪ ŋ s t ɛ p s",
+      "phoneme_comparison_not_acceptance_score": 0.9541284403669725,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "ə",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ɹ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ð",
+          "recognized": "θ"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "ɹ"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 16683,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "CTC retains zero-power/one and before-any-doubling-steps; linking rhotic and voiced/voiceless with are ordinary variation. It does not say zero value.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "X003",
+      "index": null,
+      "number": null,
+      "expected_text": "Each step makes two copies of the last amount. The little number tells how many doubling steps we have taken.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/X003.wav",
+      "source_sha256": "9afdf66b87e284a1e70bba68c8fd3ac466beb0f3e12340962c10c8917e2855f5",
+      "duration_s": 5.866708333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "Each step makes two copies of the last amount. The little number tells how many doubling steps we have taken.",
+      "expected_espeak": "ˈiːtʃ stˈɛp mˌeɪks tˈuː kˈɑːpɪz ʌvðə lˈæst ɐmˈaʊnt ðə lˈɪɾəl nˈʌmbɚ tˈɛlz hˌaʊ mˈɛni dˈʌblɪŋ stˈɛps wiː hæv tˈeɪkən",
+      "recognized_phonemes": "iː tʃ s t ɛ p m eɪ k s t uː k ɑː p i z ʌ v ð ə l æ s t ɐ m aʊ n t ð ə l ɪ ɾ əl n ʌ m b ɚ t ɛ l z h aʊ m ɛ n i d ʌ b l ɪ ŋ s t ɛ p s w iː h ɐ v t eɪ k ə n",
+      "phoneme_comparison_not_acceptance_score": 0.9746835443037974,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "i"
+        },
+        {
+          "operation": "replace",
+          "expected": "æ",
+          "recognized": "ə"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 16286,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "CTC retains two-copies, little-number and doubling-steps; copies vowel/have unstressed vowel vary naturally, while lexical ASR matches the complete sentence.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "X005",
+      "index": null,
+      "number": null,
+      "expected_text": "The amounts will soon be too large to draw as individual paper shapes. From the next answer, labeled groups will stand for whole amounts.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/X005.wav",
+      "source_sha256": "54fb2e4e9270450fd3fd485da25f92eb541e173a1f506eafaa1e409ccd20b3ae",
+      "duration_s": 7.861875,
+      "asr_status": "asr-match",
+      "asr_transcript": "The amounts will soon be too large to draw as individual paper shapes. From the next answer, labeled groups will stand for whole amounts.",
+      "expected_espeak": "ðɪ ɐmˈaʊnts wɪl sˈuːn biː tˈuː lˈɑːɹdʒ tə dɹˈɔː æz ˌɪndᵻvˈɪdʒuːəl pˈeɪpɚ ʃˈeɪps fɹʌmðə nˈɛkst ˈænsɚ lˈeɪbəld ɡɹˈuːps wɪl stˈænd fɔːɹ hˈoʊl ɐmˈaʊnts",
+      "recognized_phonemes": "ð iː ɐ m aʊ n t s w ɪ l s uː n b iː t uː l ɑːɹ dʒ t ə d ɹ ɑːɹ æ z ɪ n d ɪ v ɪ dʒ uː w əl p eɪ p ɚ ʃ eɪ p s f ɹ ʌ m ð ə n ɛ k s t æ n s ɚ l eɪ b əl d ɡ ɹ uː p s w ɪ l s t æ n d f ɜː h oʊ l ɐ m aʊ n t s",
+      "phoneme_comparison_not_acceptance_score": 0.9565217391304348,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "i"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɔ",
+          "recognized": "ɑɹ"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "w"
+        },
+        {
+          "operation": "replace",
+          "expected": "oɹ",
+          "recognized": "ɜ"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 19087,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Both lexical sentence and phoneme word sequence retain individual-paper-shapes and labeled-groups/whole-amounts. draw/for and individual glide vary normally, without deleting explanatory words.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "X010",
+      "index": null,
+      "number": null,
+      "expected_text": "For the first time, our answer is more than one thousand. Keep doubling!",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/X010.wav",
+      "source_sha256": "4907d1887dc3c70f9a1ddb11e0d97f64c3143a264f1d6503fd4422d8a00d0b36",
+      "duration_s": 3.9331666666666667,
+      "asr_status": "asr-match",
+      "asr_transcript": "For the first time, our answer is more than 1,000. Keep doubling.",
+      "expected_espeak": "fɚðə fˈɜːst tˈaɪm ˌaʊɚɹ ˈænsɚɹ ɪz mˈoːɹ ðɐn wˈʌn θˈaʊzənd kˈiːp dˈʌblɪŋ",
+      "recognized_phonemes": "f ɜː ð ə f ɜː s t t aɪ m ɑːɹ ɹ æ n s ɚ ɹ ɪ z m ɔːɹ ð ə n w ʌ n θ aʊ z ə n d k iː p d ʌ b l ɪ ŋ",
+      "phoneme_comparison_not_acceptance_score": 0.9292929292929293,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "əɹ",
+          "recognized": "ɜ"
+        },
+        {
+          "operation": "replace",
+          "expected": "aʊə",
+          "recognized": "ɑ"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 17947,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Lexical sentence matches; our is rhotic/ɑɹ/ and for is reduced. thousand and keep-doubling remain, with terminal acoustic screen clear.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "X020",
+      "index": null,
+      "number": null,
+      "expected_text": "Now our answer is more than one million. The same doubling rule still works.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/X020.wav",
+      "source_sha256": "8d6752890d2bc2a557ac9f47f670e9a430a591ae4898699e7dd9e53b75e028a1",
+      "duration_s": 4.347375,
+      "asr_status": "asr-match",
+      "asr_transcript": "Now our answer is more than 1 million. The same doubling rule still works.",
+      "expected_espeak": "nˈaʊ ˌaʊɚɹ ˈænsɚɹ ɪz mˈoːɹ ðɐn wˈʌn mˈɪliən ðə sˈeɪm dˈʌblɪŋ ɹˈuːl stˈɪl wˈɜːks",
+      "recognized_phonemes": "n aʊ ɑːɹ ɹ æ n s ɚ ɪ z m oːɹ ð ə n w ʌ n m ɪ l j ə n ð ə s eɪ m d ʌ b l ɪ ŋ ɹ uː l s t ɪ l w ɜː k s",
+      "phoneme_comparison_not_acceptance_score": 0.9333333333333333,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "aʊə",
+          "recognized": "ɑ"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɹ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "i",
+          "recognized": "j"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 15698,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Lexical sentence matches; our/linking rhotic and million glide are ordinary. one-million and same-doubling-rule remain.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "X030",
+      "index": null,
+      "number": null,
+      "expected_text": "We have passed one billion. Each new amount still comes from two equal copies.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/X030.wav",
+      "source_sha256": "c03a86a8cf3bfb1e19fa05d15d07ea14f05273fdab721759dd2e4bb135c20a72",
+      "duration_s": 4.53625,
+      "asr_status": "asr-match",
+      "asr_transcript": "We have passed 1 billion. Each new amount still comes from 2 equal copies.",
+      "expected_espeak": "wiː hæv pˈæst wˈʌn bˈɪliən ˈiːtʃ nˈuː ɐmˈaʊnt stˈɪl kˈʌmz fɹʌm tˈuː ˈiːkwəl kˈɑːpɪz",
+      "recognized_phonemes": "w iː h ɐ v p æ s t w ʌ n b ɪ l ə n iː tʃ n uː ɐ m aʊ n t s t ɪ l k ʌ m z f ɹ ʌ m t uː iː k w əl k ɑː p i z",
+      "phoneme_comparison_not_acceptance_score": 0.9523809523809523,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "æ",
+          "recognized": "ə"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "i"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 15592,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Lexical sentence matches. have is unstressed, billion has compressed glide/vowel and copies vowel varies. The two-equal-copies rule remains complete.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "X040",
+      "index": null,
+      "number": null,
+      "expected_text": "This answer is more than one trillion. Watch the little exponent climb one step.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/X040.wav",
+      "source_sha256": "1f5d7c684ea719b1f707a2cefa787ac84bfa33ec7c946980429c24fd92731a44",
+      "duration_s": 4.611125,
+      "asr_status": "asr-match",
+      "asr_transcript": "This answer is more than one trillion. Watch the little exponent climb one step.",
+      "expected_espeak": "ðɪs ˈænsɚɹ ɪz mˈoːɹ ðɐn wˈʌn tɹˈɪliən wˈɑːtʃ ðə lˈɪɾəl ɛkspˈoʊnənt klˈaɪm wˈʌn stˈɛp",
+      "recognized_phonemes": "ð ɪ s æ n s ɚ ɪ z m ɔːɹ ð æ n w ʌ n t ɹ ɪ l ə n w ɑː tʃ ð ə l ɪ ɾ əl l ɛ k s p oʊ n ə n t k l aɪ m w ʌ n s t ɛ p",
+      "phoneme_comparison_not_acceptance_score": 0.957983193277311,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "ɹ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ə",
+          "recognized": "æ"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 14540,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Lexical sentence matches. Linking rhotic and scale glide reductions and sustained/l/ token split before exponent are ordinary; little-exponent/climb-one-step retained.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "X060",
+      "index": null,
+      "number": null,
+      "expected_text": "We have passed one quintillion! Even with so many digits, doubling still means two equal amounts.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/X060.wav",
+      "source_sha256": "793974e57fd67c12820e68d0fed0e84d6a681d2577d144c6ec169b07db39fb07",
+      "duration_s": 5.4995,
+      "asr_status": "asr-match",
+      "asr_transcript": "We have passed one quintillion. Even with so many digits, doubling still means two equal amounts.",
+      "expected_espeak": "wiː hæv pˈæst wˈʌn kwɪntˈɪliən ˈiːvən wɪð sˌoʊ mˈɛni dˈɪdʒɪts dˈʌblɪŋ stˈɪl mˈiːnz tˈuː ˈiːkwəl ɐmˈaʊnts",
+      "recognized_phonemes": "w iː h ɐ v p æ s t w ʌ n k w ɪ n t ɪ l ə n iː v ə n w ɪ ð s oʊ m ɛ n i d ɪ dʒ ɪ t s d ʌ b l ɪ ŋ s t ɪ l m iː n z t uː iː k w əl l ɐ m aʊ n t s",
+      "phoneme_comparison_not_acceptance_score": 0.971830985915493,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "æ",
+          "recognized": "ə"
+        },
+        {
+          "operation": "delete",
+          "expected": "i",
+          "recognized": ""
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 20464,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": true,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Lexical sentence matches; CTC retains quintillion explicitly and two-equal-amounts. Sustained/l/ split before amounts and unstressed have are ordinary, with no missing digits word.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "O001",
+      "index": null,
+      "number": null,
+      "expected_text": "We reached the sixty-fourth power of two! The numbers grew enormously, but each step followed the same simple rule.",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/O001.wav",
+      "source_sha256": "b6476cd86b657a87c88e9d5b38103a0eaaa9b7a67e1f8fd89323c48d40006fc5",
+      "duration_s": 6.585833333333333,
+      "asr_status": "asr-match",
+      "asr_transcript": "We reached the 64th power of 2. The numbers grew enormously, but each step followed the same simple rule.",
+      "expected_espeak": "wiː ɹˈiːtʃt ðə sˈɪkstifˈoːɹθ pˈaʊɚɹ ʌv tˈuː ðə nˈʌmbɚz ɡɹˈuː ɪnˈoːɹməsli bˌʌt ˈiːtʃ stˈɛp fˈɑːloʊd ðə sˈeɪm sˈɪmpəl ɹˈuːl",
+      "recognized_phonemes": "w iː ɹ iː tʃ t ð ə s ɪ k s t i f ɔːɹ θ p aʊ ɹ ʌ v t uː ð ə n ʌ m b ɚ z ɡ ɹ uː ɪ n ɔːɹ m ə s l i b ʌ t iː tʃ s t ɛ p f ɑː l oʊ d ð ə s eɪ m s ɪ m p əl ɹ uː l",
+      "phoneme_comparison_not_acceptance_score": 0.9875,
+      "phoneme_differences": [
+        {
+          "operation": "delete",
+          "expected": "əɹ",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 17250,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "64th and2 are digit spellings of the same spoken ordinal/cardinal. Independent CTC explicitly retains sixty-fourth/power-of-two and same-simple-rule, with linking rhotic variation only.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    },
+    {
+      "id": "O002",
+      "index": null,
+      "number": null,
+      "expected_text": "Start with one, then double again and again. See you next time!",
+      "source_path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/O002.wav",
+      "source_sha256": "b1525b44bbaa37c0d80ee2c8c4a3b911bb6480cf0e547961dcb777a4a3ebb7a9",
+      "duration_s": 3.3779583333333334,
+      "asr_status": "asr-match",
+      "asr_transcript": "Start with one, then double again and again. See you next time.",
+      "expected_espeak": "stˈɑːɹt wɪð wˌʌn ðˈɛn dˈʌbəl ɐɡˈɛn ænd ɐɡˈɛn sˈiː juː nˈɛkst tˈaɪm",
+      "recognized_phonemes": "s t ɑːɹ t w ɪ θ w ʌ n ð ɛ n d ʌ b əl l ə ɡ ɛ n æ n d ə ɡ ɛ n s iː j uː n ɛ k s t aɪ m",
+      "phoneme_comparison_not_acceptance_score": 0.9534883720930233,
+      "phoneme_differences": [
+        {
+          "operation": "replace",
+          "expected": "ð",
+          "recognized": "θ"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        },
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "flags_reviewed": [
+        "CTC-phone-differences-to-review"
+      ],
+      "waveform": {
+        "peak_pcm16": 20133,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.015,
+        "tail_margin_at_minus50db_s": 0.015
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "exact-source-reviewed-with-independent-lexical-phone-waveform-and-case-specific-evidence",
+      "notes": [
+        "Lexical sentence matches; with voicing, linking/l/ and unreleased next/t/ are ordinary; double-again-and-again and see-you-next-time remain. Terminal/source edges show no clipping.",
+        "All source edge, clipping, initial-fricative and targeted terminal-tail screens are clear. This is agent evidence review, not human whole-video listening or a claim of perfect articulation. Raw warnings are preserved."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    }
+  ],
+  "limitations": "ASR and CTC are fallible; decisions distinguish lexical transcription and ordinary phonetic variation from material speech defects. Automated and agent review evidence does not assert human listening."
+}

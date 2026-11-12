@@ -1,0 +1,2597 @@
+{
+  "schema_version": 1,
+  "kind": "independent-triangular-isolated-asr",
+  "source_manifest": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/measurements-selected-v003.json",
+  "source_manifest_sha256": "36dc19296d6bced9cd0a4beb6acfa8730d65db2fb6e728d10974af12f5b49df8",
+  "model": {
+    "model_id": "Xenova/whisper-tiny.en",
+    "revision": "79fb389fc764e7c395bd330e9531d9d32ada7049",
+    "files": [
+      {
+        "path": "config.json",
+        "bytes": 2202,
+        "sha256": "37a1073be00d19118c06557896c7c148598f4d8277edc0f5bc07c9f5554839f1"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 1590,
+        "sha256": "132c95ba9db45f4498f2eab3fea7c1d6a174005010f8f6b7d20cfd5e9795996b"
+      },
+      {
+        "path": "onnx/decoder_model_merged_quantized.onnx",
+        "bytes": 30727382,
+        "sha256": "dbb2e063b7fbc41d9803b9698f93ecb035c50cbb3fb87b56cb131e4a5eb99059"
+      },
+      {
+        "path": "onnx/encoder_model_quantized.onnx",
+        "bytes": 10124913,
+        "sha256": "8cc3c6f8563d1b3fbd2c5af9f64c2bed8b020bc593c402d1ef53b9f08fbf1b90"
+      },
+      {
+        "path": "preprocessor_config.json",
+        "bytes": 339,
+        "sha256": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 2128494,
+        "sha256": "c6ee8f089220a5b1188f6426456772572671c6141ae007eecb83c6a8349f5deb"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 835,
+        "sha256": "e082c1ad251541bf277967a703252cddd4bb37a71a43737e03d050c22ec08238"
+      }
+    ],
+    "dtype": "q8",
+    "runtime": "@huggingface/transformers@3.8.1"
+  },
+  "method": {
+    "sampling_rate": 16000,
+    "recognizer_only_edge_padding_s": 0.15,
+    "expected_text_used_as_prompt": false,
+    "neighboring_number_context_used": false,
+    "dialogue_comparison": "Case/punctuation, explicitly listed contractions, F-index spelling and cardinal word/digit normalization. Missing operators or lexical words remain warnings."
+  },
+  "pronunciation_approved": false,
+  "limitations": "An isolated lexical match cannot prove articulation. Independent CTC and acoustic review are required; this is not a full-listening record.",
+  "selection_method": "Exact source SHA join of fresh isolated inference reports; only unchanged WAVs retain initial inference. Every replacement has fresh isolated inference.",
+  "results": [
+    {
+      "id": "N000",
+      "index": 0,
+      "role": "number",
+      "number": 0,
+      "expected_text": "zero",
+      "recognized_text": "Zero.",
+      "interpreted_number": 0,
+      "expected_normalized": "0",
+      "recognized_normalized": "0",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N000.wav",
+      "source_sha256": "05819d82a70f5a2415d48ba2a170cc178613356f3a67eaf6a64cdb357ca5c2e7",
+      "duration_s": 0.5792916666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N001",
+      "index": 1,
+      "role": "number",
+      "number": 1,
+      "expected_text": "one",
+      "recognized_text": "1.",
+      "interpreted_number": 1,
+      "expected_normalized": "1",
+      "recognized_normalized": "1",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N001.wav",
+      "source_sha256": "58d4ab64f6a90c84474791bfcf868b29f875a971ab633afc3627732f7af1c389",
+      "duration_s": 0.47583333333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N002",
+      "index": 2,
+      "role": "number",
+      "number": 3,
+      "expected_text": "three",
+      "recognized_text": "3",
+      "interpreted_number": 3,
+      "expected_normalized": "3",
+      "recognized_normalized": "3",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N002.wav",
+      "source_sha256": "180dd58d3b34c9d10d2db9bb644f587dfa925cb722b97d387f376a05030c6c52",
+      "duration_s": 0.5572916666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N003",
+      "index": 3,
+      "role": "number",
+      "number": 6,
+      "expected_text": "six",
+      "recognized_text": "6.",
+      "interpreted_number": 6,
+      "expected_normalized": "6",
+      "recognized_normalized": "6",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N003.wav",
+      "source_sha256": "0d5dd58d2a3cf2463badbb000ea8d685d0d9cdf494f5fe1bf5c9c08333fa8dfa",
+      "duration_s": 0.44,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N004",
+      "index": 4,
+      "role": "number",
+      "number": 10,
+      "expected_text": "ten",
+      "recognized_text": "10.",
+      "interpreted_number": 10,
+      "expected_normalized": "10",
+      "recognized_normalized": "10",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N004.wav",
+      "source_sha256": "eafac5f936d732cb3f3083ab338a7c74e13e024c8529434b397ecde5eb9e69f1",
+      "duration_s": 0.50025,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N005",
+      "index": 5,
+      "role": "number",
+      "number": 15,
+      "expected_text": "fifteen",
+      "recognized_text": "15.",
+      "interpreted_number": 15,
+      "expected_normalized": "15",
+      "recognized_normalized": "15",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N005.wav",
+      "source_sha256": "9cf49979d0dff52ecc58ebb8bf77dd2a238e5b98c10ee93e68a94fd75ed6865e",
+      "duration_s": 0.7014583333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N006",
+      "index": 6,
+      "role": "number",
+      "number": 21,
+      "expected_text": "twenty-one",
+      "recognized_text": "21.",
+      "interpreted_number": 21,
+      "expected_normalized": "21",
+      "recognized_normalized": "21",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N006.wav",
+      "source_sha256": "ec3d294974f0829c62252a9d0d126e2cccc03a3ec066673d81cdf7a6165ce232",
+      "duration_s": 0.6803333333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N007",
+      "index": 7,
+      "role": "number",
+      "number": 28,
+      "expected_text": "twenty-eight",
+      "recognized_text": "28.",
+      "interpreted_number": 28,
+      "expected_normalized": "28",
+      "recognized_normalized": "28",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N007.wav",
+      "source_sha256": "6177db50caca0190847a539c2d46aa1e0063da7d61b6dc2c6e0628e86541b117",
+      "duration_s": 0.7531666666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N008",
+      "index": 8,
+      "role": "number",
+      "number": 36,
+      "expected_text": "thirty-six",
+      "recognized_text": "36.",
+      "interpreted_number": 36,
+      "expected_normalized": "36",
+      "recognized_normalized": "36",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N008.wav",
+      "source_sha256": "3bca50a0a79128d73c98dcffae0d89107354674bd6c9382564d75eac672b1bee",
+      "duration_s": 0.8174583333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N009",
+      "index": 9,
+      "role": "number",
+      "number": 45,
+      "expected_text": "forty-five",
+      "recognized_text": "45.",
+      "interpreted_number": 45,
+      "expected_normalized": "45",
+      "recognized_normalized": "45",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N009.wav",
+      "source_sha256": "ab150557d525af8fef33af4afe5abe09af8a486f748d863fd048e805e324271b",
+      "duration_s": 0.8745833333333334,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N010",
+      "index": 10,
+      "role": "number",
+      "number": 55,
+      "expected_text": "fifty-five",
+      "recognized_text": "55.",
+      "interpreted_number": 55,
+      "expected_normalized": "55",
+      "recognized_normalized": "55",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N010.wav",
+      "source_sha256": "eeef1abc9fe9cc846022a56f939728552924537e180c8042b6f38a4ba3e5108e",
+      "duration_s": 0.8919583333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N011",
+      "index": null,
+      "role": "number",
+      "number": 66,
+      "expected_text": "sixty-six",
+      "recognized_text": "66.",
+      "interpreted_number": 66,
+      "expected_normalized": "66",
+      "recognized_normalized": "66",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/corrections-v005/N011.wav",
+      "source_sha256": "16d0c2e9ba4bbb9dbe2d53eec90098ab415b8071c12e0c519999921a79143855",
+      "duration_s": 0.9006666666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/corrections-v005/asr.json",
+        "sha256": "e55cc4bfe76c72b789378e8cde0ecc3d1cb610dc64972127e4dba6d171b2227d"
+      }
+    },
+    {
+      "id": "N012",
+      "index": 12,
+      "role": "number",
+      "number": 78,
+      "expected_text": "seventy-eight",
+      "recognized_text": "78.",
+      "interpreted_number": 78,
+      "expected_normalized": "78",
+      "recognized_normalized": "78",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N012.wav",
+      "source_sha256": "16ee0a3e03e7ea687d5743df9c10ee6e63317d3b7c9d8c231ce41c1a0dd16981",
+      "duration_s": 0.89925,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N013",
+      "index": null,
+      "role": "number",
+      "number": 91,
+      "expected_text": "ninety-one",
+      "recognized_text": "91.",
+      "interpreted_number": 91,
+      "expected_normalized": "91",
+      "recognized_normalized": "91",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/corrections-v007/N013.wav",
+      "source_sha256": "6332634749d8a0c4b74eac5190cfa537514147eb30cf53fef7039d1311110d0d",
+      "duration_s": 0.7765833333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/corrections-v007/asr.json",
+        "sha256": "f9b5387dc03de613b1989ad5c680540c7ecc0a9439a85f3c847bff64121952ea"
+      }
+    },
+    {
+      "id": "N014",
+      "index": 14,
+      "role": "number",
+      "number": 105,
+      "expected_text": "one hundred five",
+      "recognized_text": "105.",
+      "interpreted_number": 105,
+      "expected_normalized": "105",
+      "recognized_normalized": "105",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N014.wav",
+      "source_sha256": "6325b874d2aad87c590182212ef8b36313274be9c1ca8e379967825a3603639a",
+      "duration_s": 1.1534583333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N015",
+      "index": 15,
+      "role": "number",
+      "number": 120,
+      "expected_text": "one hundred twenty",
+      "recognized_text": "120.",
+      "interpreted_number": 120,
+      "expected_normalized": "120",
+      "recognized_normalized": "120",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N015.wav",
+      "source_sha256": "c31649a387a629e9c13e9ba2f7967c7a9b98acf2a11f98a71d4515513a3e6e35",
+      "duration_s": 1.1756666666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N016",
+      "index": 16,
+      "role": "number",
+      "number": 136,
+      "expected_text": "one hundred thirty-six",
+      "recognized_text": "136.",
+      "interpreted_number": 136,
+      "expected_normalized": "136",
+      "recognized_normalized": "136",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N016.wav",
+      "source_sha256": "66e7e53de51bf64bdaedf685a86d18e8b8e7135803adfccec4db4fa53542f846",
+      "duration_s": 1.4261666666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N017",
+      "index": 17,
+      "role": "number",
+      "number": 153,
+      "expected_text": "one hundred fifty-three",
+      "recognized_text": "153.",
+      "interpreted_number": 153,
+      "expected_normalized": "153",
+      "recognized_normalized": "153",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N017.wav",
+      "source_sha256": "8bd47de0e4620f294e131bc76cb8cb312815634146013b17399d441b8d6396d4",
+      "duration_s": 1.3555416666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N018",
+      "index": 18,
+      "role": "number",
+      "number": 171,
+      "expected_text": "one hundred seventy-one",
+      "recognized_text": "171.",
+      "interpreted_number": 171,
+      "expected_normalized": "171",
+      "recognized_normalized": "171",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N018.wav",
+      "source_sha256": "69948cc25c4b793a44da8ad7e11ffeacd7351536d7c135abdf50df6d45e63b51",
+      "duration_s": 1.422,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N019",
+      "index": 19,
+      "role": "number",
+      "number": 190,
+      "expected_text": "one hundred ninety",
+      "recognized_text": "190.",
+      "interpreted_number": 190,
+      "expected_normalized": "190",
+      "recognized_normalized": "190",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N019.wav",
+      "source_sha256": "d6955212b01821b377311afbac236d6f5867edbc80b92fed400362247b88c929",
+      "duration_s": 1.2107916666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N020",
+      "index": 20,
+      "role": "number",
+      "number": 210,
+      "expected_text": "two hundred ten",
+      "recognized_text": "210.",
+      "interpreted_number": 210,
+      "expected_normalized": "210",
+      "recognized_normalized": "210",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N020.wav",
+      "source_sha256": "2ba2a4a4a002bc1c2efb2f6052db79c970fcf31d2b423c4ba401821f6acd3304",
+      "duration_s": 1.00575,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N021",
+      "index": 21,
+      "role": "number",
+      "number": 231,
+      "expected_text": "two hundred thirty-one",
+      "recognized_text": "231.",
+      "interpreted_number": 231,
+      "expected_normalized": "231",
+      "recognized_normalized": "231",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N021.wav",
+      "source_sha256": "b9c62e3165f121b6810463fd6708960f165fe7f291f4f7bb96cf816c230c14b2",
+      "duration_s": 1.2142083333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N022",
+      "index": 22,
+      "role": "number",
+      "number": 253,
+      "expected_text": "two hundred fifty-three",
+      "recognized_text": "253.",
+      "interpreted_number": 253,
+      "expected_normalized": "253",
+      "recognized_normalized": "253",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N022.wav",
+      "source_sha256": "0662dc2d68bb04aab8e7bb144d004cf16507b3328e501f9fa007aca82b4cd586",
+      "duration_s": 1.2794166666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N023",
+      "index": 23,
+      "role": "number",
+      "number": 276,
+      "expected_text": "two hundred seventy-six",
+      "recognized_text": "276.",
+      "interpreted_number": 276,
+      "expected_normalized": "276",
+      "recognized_normalized": "276",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N023.wav",
+      "source_sha256": "5789e3c8a9e5e1b64a9e6977a76b97522a11b6dda54f87a0236df08c1761115c",
+      "duration_s": 1.4764166666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N024",
+      "index": 24,
+      "role": "number",
+      "number": 300,
+      "expected_text": "three hundred",
+      "recognized_text": "300.",
+      "interpreted_number": 300,
+      "expected_normalized": "300",
+      "recognized_normalized": "300",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N024.wav",
+      "source_sha256": "adf5e30ea03c42536cb2d9cbd5aa536a1d91864bf0495e269681300d41231c99",
+      "duration_s": 0.8435833333333334,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N025",
+      "index": 25,
+      "role": "number",
+      "number": 325,
+      "expected_text": "three hundred twenty-five",
+      "recognized_text": "325.",
+      "interpreted_number": 325,
+      "expected_normalized": "325",
+      "recognized_normalized": "325",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N025.wav",
+      "source_sha256": "7b598a4343f651bd3abf62451bf343a9dbbfe5a15c20f350c0ba91284338fc3e",
+      "duration_s": 1.297875,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N026",
+      "index": 26,
+      "role": "number",
+      "number": 351,
+      "expected_text": "three hundred fifty-one",
+      "recognized_text": "351.",
+      "interpreted_number": 351,
+      "expected_normalized": "351",
+      "recognized_normalized": "351",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N026.wav",
+      "source_sha256": "d84a6152c768ff7d8c3d541dc7f32f1e418543340a863ffbb8ac791a094b6672",
+      "duration_s": 1.3207916666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N027",
+      "index": 27,
+      "role": "number",
+      "number": 378,
+      "expected_text": "three hundred seventy-eight",
+      "recognized_text": "378.",
+      "interpreted_number": 378,
+      "expected_normalized": "378",
+      "recognized_normalized": "378",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N027.wav",
+      "source_sha256": "e29e88f8429cd9c834df0b1b81aaeaaac913d248eab842cb04e263a160af560b",
+      "duration_s": 1.4142083333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N028",
+      "index": 28,
+      "role": "number",
+      "number": 406,
+      "expected_text": "four hundred six",
+      "recognized_text": "406.",
+      "interpreted_number": 406,
+      "expected_normalized": "406",
+      "recognized_normalized": "406",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N028.wav",
+      "source_sha256": "26ba2a152da64da3983ab90a8f43c0db5a0e0d6bb8eee8fc7db3da3c218ae14b",
+      "duration_s": 1.09625,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N029",
+      "index": 29,
+      "role": "number",
+      "number": 435,
+      "expected_text": "four hundred thirty-five",
+      "recognized_text": "435.",
+      "interpreted_number": 435,
+      "expected_normalized": "435",
+      "recognized_normalized": "435",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N029.wav",
+      "source_sha256": "3a69dbaf81b28138b72eefcca917fb9fc9ed581d04babcbfb63d949fa69b6f85",
+      "duration_s": 1.4700416666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N030",
+      "index": 30,
+      "role": "number",
+      "number": 465,
+      "expected_text": "four hundred sixty-five",
+      "recognized_text": "465.",
+      "interpreted_number": 465,
+      "expected_normalized": "465",
+      "recognized_normalized": "465",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N030.wav",
+      "source_sha256": "5b3ce080a03e8ec6e45ff6d6fce48fea1dcb013ae14c2a5bf51bf8cc66aa4142",
+      "duration_s": 1.426375,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N031",
+      "index": 31,
+      "role": "number",
+      "number": 496,
+      "expected_text": "four hundred ninety-six",
+      "recognized_text": "496.",
+      "interpreted_number": 496,
+      "expected_normalized": "496",
+      "recognized_normalized": "496",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N031.wav",
+      "source_sha256": "2525efe553cecff62ebe4b015293eaf1707ba7c2b60bbcc2ee8017390a055eb6",
+      "duration_s": 1.3807083333333334,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N032",
+      "index": 32,
+      "role": "number",
+      "number": 528,
+      "expected_text": "five hundred twenty-eight",
+      "recognized_text": "528",
+      "interpreted_number": 528,
+      "expected_normalized": "528",
+      "recognized_normalized": "528",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N032.wav",
+      "source_sha256": "f77165be88759fe27a29704d6ff23ea81763ad83a58753af9910929b6756e856",
+      "duration_s": 1.3168333333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N033",
+      "index": 33,
+      "role": "number",
+      "number": 561,
+      "expected_text": "five hundred sixty-one",
+      "recognized_text": "561.",
+      "interpreted_number": 561,
+      "expected_normalized": "561",
+      "recognized_normalized": "561",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N033.wav",
+      "source_sha256": "3250c6a4c52c77b9f7785f5b7c566d7eb2aa4932decec03b3d178b3408b835a9",
+      "duration_s": 1.316,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N034",
+      "index": 34,
+      "role": "number",
+      "number": 595,
+      "expected_text": "five hundred ninety-five",
+      "recognized_text": "595.",
+      "interpreted_number": 595,
+      "expected_normalized": "595",
+      "recognized_normalized": "595",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N034.wav",
+      "source_sha256": "c1dd6e913c3ab8388cb6ca1e2bdbbdf508e2161baec43d71714e610c35b03fbf",
+      "duration_s": 1.4585,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N035",
+      "index": 35,
+      "role": "number",
+      "number": 630,
+      "expected_text": "six hundred thirty",
+      "recognized_text": "630.",
+      "interpreted_number": 630,
+      "expected_normalized": "630",
+      "recognized_normalized": "630",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N035.wav",
+      "source_sha256": "567fedec63f5d1bc8f877830fd765f3dd08858d84e9840d1a0e800bbd37dcfa0",
+      "duration_s": 1.147125,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N036",
+      "index": 36,
+      "role": "number",
+      "number": 666,
+      "expected_text": "six hundred sixty-six",
+      "recognized_text": "666.",
+      "interpreted_number": 666,
+      "expected_normalized": "666",
+      "recognized_normalized": "666",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N036.wav",
+      "source_sha256": "a6c4842147e7a08ffe29d87cc878a247717b43f352f0b1b13dab25e55de86604",
+      "duration_s": 1.4247916666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N037",
+      "index": 37,
+      "role": "number",
+      "number": 703,
+      "expected_text": "seven hundred three",
+      "recognized_text": "703.",
+      "interpreted_number": 703,
+      "expected_normalized": "703",
+      "recognized_normalized": "703",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N037.wav",
+      "source_sha256": "8ec5ceaf611a67ca319cae65188b9470bd347756514cef81f8c3529736f2d810",
+      "duration_s": 1.1940416666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N038",
+      "index": 38,
+      "role": "number",
+      "number": 741,
+      "expected_text": "seven hundred forty-one",
+      "recognized_text": "741.",
+      "interpreted_number": 741,
+      "expected_normalized": "741",
+      "recognized_normalized": "741",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N038.wav",
+      "source_sha256": "88d08faad0fd6de3faba8a8d963a1cd61f5d897ffb4e3a3bac4ee399c78bc174",
+      "duration_s": 1.4042916666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N039",
+      "index": 39,
+      "role": "number",
+      "number": 780,
+      "expected_text": "seven hundred eighty",
+      "recognized_text": "780.",
+      "interpreted_number": 780,
+      "expected_normalized": "780",
+      "recognized_normalized": "780",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N039.wav",
+      "source_sha256": "cc6aa2b69d213cbfaa47a9d0bf4262659cffae34b78252e941ee53e53a742311",
+      "duration_s": 1.2209166666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N040",
+      "index": 40,
+      "role": "number",
+      "number": 820,
+      "expected_text": "eight hundred twenty",
+      "recognized_text": "820.",
+      "interpreted_number": 820,
+      "expected_normalized": "820",
+      "recognized_normalized": "820",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N040.wav",
+      "source_sha256": "32319ec55d36987f61256b83c43c4a85ec64ecc3e306b46db7a6bdd46c10764b",
+      "duration_s": 1.10025,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N041",
+      "index": 41,
+      "role": "number",
+      "number": 861,
+      "expected_text": "eight hundred sixty-one",
+      "recognized_text": "861.",
+      "interpreted_number": 861,
+      "expected_normalized": "861",
+      "recognized_normalized": "861",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N041.wav",
+      "source_sha256": "c67351fca7888f835a6c94f8e0954c1696bb588b3cb055f8a8495c0525a73b0e",
+      "duration_s": 1.2192916666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N042",
+      "index": 42,
+      "role": "number",
+      "number": 903,
+      "expected_text": "nine hundred three",
+      "recognized_text": "903.",
+      "interpreted_number": 903,
+      "expected_normalized": "903",
+      "recognized_normalized": "903",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N042.wav",
+      "source_sha256": "50186aa6dc6960fbea63b62b8bb1fbe3da32dadd0e8ace315614932fce8473d4",
+      "duration_s": 1.13725,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N043",
+      "index": 43,
+      "role": "number",
+      "number": 946,
+      "expected_text": "nine hundred forty-six",
+      "recognized_text": "946.",
+      "interpreted_number": 946,
+      "expected_normalized": "946",
+      "recognized_normalized": "946",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N043.wav",
+      "source_sha256": "04f200f6809eebbfe5acdf7d138b604cb264a70e2a8034b3f31454c5f290af4f",
+      "duration_s": 1.447625,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N044",
+      "index": 44,
+      "role": "number",
+      "number": 990,
+      "expected_text": "nine hundred ninety",
+      "recognized_text": "990.",
+      "interpreted_number": 990,
+      "expected_normalized": "990",
+      "recognized_normalized": "990",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N044.wav",
+      "source_sha256": "1a8c357b10637228d0510e1f33987a4cf5c8ef431b4829bb7c3d701cb9000085",
+      "duration_s": 1.2554583333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N045",
+      "index": 45,
+      "role": "number",
+      "number": 1035,
+      "expected_text": "one thousand thirty-five",
+      "recognized_text": "1,035.",
+      "interpreted_number": 1035,
+      "expected_normalized": "1035",
+      "recognized_normalized": "1035",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N045.wav",
+      "source_sha256": "091836100a566771b1a02dca3aa8904e8bf6c9495f004208ebdd851bd6983960",
+      "duration_s": 1.4477916666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N046",
+      "index": 46,
+      "role": "number",
+      "number": 1081,
+      "expected_text": "one thousand eighty-one",
+      "recognized_text": "1,081.",
+      "interpreted_number": 1081,
+      "expected_normalized": "1081",
+      "recognized_normalized": "1081",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N046.wav",
+      "source_sha256": "bb04995739ae66831c1a12b73ab5c366ac6d7d8d18afdda642001d56cce7e388",
+      "duration_s": 1.2542916666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N047",
+      "index": 47,
+      "role": "number",
+      "number": 1128,
+      "expected_text": "one thousand one hundred twenty-eight",
+      "recognized_text": "1,128.",
+      "interpreted_number": 1128,
+      "expected_normalized": "1128",
+      "recognized_normalized": "1128",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N047.wav",
+      "source_sha256": "ca1425c7882923f1e18471f773adf745b07a5af7a3cf07f9d9649242a980fa41",
+      "duration_s": 1.863375,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N048",
+      "index": null,
+      "role": "number",
+      "number": 1176,
+      "expected_text": "one thousand one hundred seventy-six",
+      "recognized_text": "1,176.",
+      "interpreted_number": 1176,
+      "expected_normalized": "1176",
+      "recognized_normalized": "1176",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/corrections-v003/N048.wav",
+      "source_sha256": "d773def66ad322002026f2ebd9349f5cab6e14f6f51e657b77213b30e980b5bf",
+      "duration_s": 2.003458333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/corrections-v003/asr.json",
+        "sha256": "950a024fdf412dc347b44f425e46790a459055c77a3d3205e39a44ed00efd745"
+      }
+    },
+    {
+      "id": "N049",
+      "index": 49,
+      "role": "number",
+      "number": 1225,
+      "expected_text": "one thousand two hundred twenty-five",
+      "recognized_text": "1,225.",
+      "interpreted_number": 1225,
+      "expected_normalized": "1225",
+      "recognized_normalized": "1225",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/reused/N049.wav",
+      "source_sha256": "99a5fcf9a3e49e22f0d5f1c90efa664111a268b5deed14ad44d2b36766ecd873",
+      "duration_s": 1.8984166666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N050",
+      "index": 50,
+      "role": "number",
+      "number": 1275,
+      "expected_text": "one thousand two hundred seventy-five",
+      "recognized_text": "1,275.",
+      "interpreted_number": 1275,
+      "expected_normalized": "1275",
+      "recognized_normalized": "1275",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N050.wav",
+      "source_sha256": "4115e83e063bdb7e175a0a7f87db267fbfb4c26b940a6eed3df6373a364a35b6",
+      "duration_s": 2.197125,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N051",
+      "index": null,
+      "role": "number",
+      "number": 1326,
+      "expected_text": "one thousand three hundred twenty-six",
+      "recognized_text": "1,326.",
+      "interpreted_number": 1326,
+      "expected_normalized": "1326",
+      "recognized_normalized": "1326",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/corrections-v002/N051.wav",
+      "source_sha256": "5aa2db1635f597171b715660289ccc34d37641d954ffaff0009c294d0174d810",
+      "duration_s": 1.98525,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/corrections-v002/asr.json",
+        "sha256": "f4e1d34151b4df5bfbd5f36e5217987095b8793e433692e09cbbd9cd34a7910a"
+      }
+    },
+    {
+      "id": "N052",
+      "index": 52,
+      "role": "number",
+      "number": 1378,
+      "expected_text": "one thousand three hundred seventy-eight",
+      "recognized_text": "1,378.",
+      "interpreted_number": 1378,
+      "expected_normalized": "1378",
+      "recognized_normalized": "1378",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N052.wav",
+      "source_sha256": "a0b51316f6d613b670c76dbfe210782b5339039e6732b5851b425ec67c1c302d",
+      "duration_s": 2.1931666666666665,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N053",
+      "index": 53,
+      "role": "number",
+      "number": 1431,
+      "expected_text": "one thousand four hundred thirty-one",
+      "recognized_text": "1,431.",
+      "interpreted_number": 1431,
+      "expected_normalized": "1431",
+      "recognized_normalized": "1431",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N053.wav",
+      "source_sha256": "cb9d51914d1f78a71d033f8d07271d47573bc12d19dc93c1b5d86fa0e015a983",
+      "duration_s": 1.947375,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N054",
+      "index": 54,
+      "role": "number",
+      "number": 1485,
+      "expected_text": "one thousand four hundred eighty-five",
+      "recognized_text": "1,485.",
+      "interpreted_number": 1485,
+      "expected_normalized": "1485",
+      "recognized_normalized": "1485",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N054.wav",
+      "source_sha256": "d3a10faa9848f4d9d6dfaa228ea9d67864c170d357def7781f4313a1d910ef99",
+      "duration_s": 2.0285416666666665,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N055",
+      "index": 55,
+      "role": "number",
+      "number": 1540,
+      "expected_text": "one thousand five hundred forty",
+      "recognized_text": "1,540.",
+      "interpreted_number": 1540,
+      "expected_normalized": "1540",
+      "recognized_normalized": "1540",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N055.wav",
+      "source_sha256": "64bd2a7b916beb9d61a3aef141d83c813ee4a9ac801fefdf9aeeec88b3bfdc3b",
+      "duration_s": 1.8009583333333334,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N056",
+      "index": 56,
+      "role": "number",
+      "number": 1596,
+      "expected_text": "one thousand five hundred ninety-six",
+      "recognized_text": "1,596.",
+      "interpreted_number": 1596,
+      "expected_normalized": "1596",
+      "recognized_normalized": "1596",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N056.wav",
+      "source_sha256": "b31096c6b323e55720c0f526cd231a94c678fb51666afd4d87e7ad6bf798a6ba",
+      "duration_s": 2.0465833333333334,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N057",
+      "index": 57,
+      "role": "number",
+      "number": 1653,
+      "expected_text": "one thousand six hundred fifty-three",
+      "recognized_text": "1,653.",
+      "interpreted_number": 1653,
+      "expected_normalized": "1653",
+      "recognized_normalized": "1653",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N057.wav",
+      "source_sha256": "2dd83c20e809069d73331769a0e25f50e9700945cc81fc04479f593a8867d004",
+      "duration_s": 1.9979583333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N058",
+      "index": 58,
+      "role": "number",
+      "number": 1711,
+      "expected_text": "one thousand seven hundred eleven",
+      "recognized_text": "1,711.",
+      "interpreted_number": 1711,
+      "expected_normalized": "1711",
+      "recognized_normalized": "1711",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N058.wav",
+      "source_sha256": "f58fe9d46a45e7d9ca08ee6e0076077f2571b1aca6b2e76640e7ccd083070e0b",
+      "duration_s": 2.0120416666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N059",
+      "index": 59,
+      "role": "number",
+      "number": 1770,
+      "expected_text": "one thousand seven hundred seventy",
+      "recognized_text": "1,770.",
+      "interpreted_number": 1770,
+      "expected_normalized": "1770",
+      "recognized_normalized": "1770",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N059.wav",
+      "source_sha256": "94b834e9045e8e9b177b54664cd4bcd805aa57c3485ead210d31cb48ba0ec292",
+      "duration_s": 2.1006666666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "N060",
+      "index": 60,
+      "role": "number",
+      "number": 1830,
+      "expected_text": "one thousand eight hundred thirty",
+      "recognized_text": "1,830.",
+      "interpreted_number": 1830,
+      "expected_normalized": "1830",
+      "recognized_normalized": "1830",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/N060.wav",
+      "source_sha256": "fd85b0f3bcc9eef49f1acfe85831bdde26f992b14b7b160c220f2430e25a00af",
+      "duration_s": 1.7760833333333332,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "I01",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Hi! Let's count triangular numbers, and watch a little triangle turn into a working number pattern.",
+      "recognized_text": "Hi, let's count triangular numbers and watch a little triangle turn into a working number pattern.",
+      "interpreted_number": null,
+      "expected_normalized": "hi let us count triangular numbers and watch a little triangle turn into a working number pattern",
+      "recognized_normalized": "hi let us count triangular numbers and watch a little triangle turn into a working number pattern",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/I01.wav",
+      "source_sha256": "5e097a1a16c8b9fa73efba6b6399bda5fe2e6909d9def442f06e55bf5c0a7995",
+      "duration_s": 5.9070833333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "I02",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "The small letter n tells us how many rows to use. The big answer tells us how many dots belong to one triangle.",
+      "recognized_text": "The small letter \"N\" tells us how many rows to use. The big answer tells us how many dots belong to one triangle.",
+      "interpreted_number": null,
+      "expected_normalized": "the small letter n tells us how many rows to use the big answer tells us how many dots belong to 1 triangle",
+      "recognized_normalized": "the small letter n tells us how many rows to use the big answer tells us how many dots belong to 1 triangle",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/I02.wav",
+      "source_sha256": "ac8c105f63a893f16ce860553734ec0d90e1214a29f985d58ee1ca279e7d5669",
+      "duration_s": 7.023958333333334,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "I03",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Make two matching triangles, fit them into a rectangle, then choose one of the two equal groups. Watch the formula move!",
+      "recognized_text": "Make two matching triangles, fit them into a rectangle, then choose one of the two equal groups. Watch the formula move.",
+      "interpreted_number": null,
+      "expected_normalized": "make 2 matching triangles fit them into a rectangle then choose 1 of the 2 equal groups watch the formula move",
+      "recognized_normalized": "make 2 matching triangles fit them into a rectangle then choose 1 of the 2 equal groups watch the formula move",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/I03.wav",
+      "source_sha256": "b237800ffc42aa37aca0d6dafb1444a8fa6369a0cff2d908203bd0cda77da926",
+      "duration_s": 7.268875,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E001",
+      "index": 1,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "one times two, divided by two, equals",
+      "recognized_text": "1 times 2 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "1 times 2 divided by 2 equals",
+      "recognized_normalized": "1 times 2 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E001.wav",
+      "source_sha256": "f210a08bf048c08135e476e366d98f47b9bbd0eb79160a4b2a5c182c927d3482",
+      "duration_s": 2.6336666666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E002",
+      "index": 2,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "two times three, divided by two, equals",
+      "recognized_text": "2 times 3 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "2 times 3 divided by 2 equals",
+      "recognized_normalized": "2 times 3 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E002.wav",
+      "source_sha256": "f41e079bd872efa8c28089b991be0bfe0ea179bee97c08133db43cc352ce355b",
+      "duration_s": 2.6009583333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E003",
+      "index": 3,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "three times four, divided by two, equals",
+      "recognized_text": "3 times 4 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "3 times 4 divided by 2 equals",
+      "recognized_normalized": "3 times 4 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E003.wav",
+      "source_sha256": "9b8c6bc97f60d836c668b62d24c4b0fd43e0ce840953c5235c5e25584004b7fc",
+      "duration_s": 2.6113333333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E004",
+      "index": 4,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "four times five, divided by two, equals",
+      "recognized_text": "4 times 5 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "4 times 5 divided by 2 equals",
+      "recognized_normalized": "4 times 5 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E004.wav",
+      "source_sha256": "070655cc6a35b545ad40dc5096fb2c07138c39616ec6481a2b5d6c0ccfde54e3",
+      "duration_s": 2.65525,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "X004a",
+      "index": 4,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Look again. One, two, three, and four dots make the rows. Turn a matching copy around and slide it into the spaces.",
+      "recognized_text": "Look again, 1, 2, 3 and 4 dots make the rose. Turn a matching copy around and slide it into the spaces.",
+      "interpreted_number": null,
+      "expected_normalized": "look again 1 2 3 and 4 dots make the rows turn a matching copy around and slide it into the spaces",
+      "recognized_normalized": "look again 1 2 3 and 4 dots make the rose turn a matching copy around and slide it into the spaces",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/X004a.wav",
+      "source_sha256": "a58be17dbf79ec0ea132dc93e5ed846bdce3033323489494d53b574f2526853f",
+      "duration_s": 7.3605833333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "X004b",
+      "index": 4,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Together they make four rows of five. Dividing by two means choosing one of these two equal triangles, with every dot kept whole.",
+      "recognized_text": "Together they make four rows of five. Dividing by two means choosing one of these two equal triangles with every dot kept hole.",
+      "interpreted_number": null,
+      "expected_normalized": "together they make 4 rows of 5 dividing by 2 means choosing 1 of these 2 equal triangles with every dot kept whole",
+      "recognized_normalized": "together they make 4 rows of 5 dividing by 2 means choosing 1 of these 2 equal triangles with every dot kept hole",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/X004b.wav",
+      "source_sha256": "7956f3a13a3dc1738a8459b7690f47f83de8ebc536cb5d4fac71541c6dd21e0d",
+      "duration_s": 7.9775833333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E005",
+      "index": 5,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "five times six, divided by two, equals",
+      "recognized_text": "5 times 6 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "5 times 6 divided by 2 equals",
+      "recognized_normalized": "5 times 6 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E005.wav",
+      "source_sha256": "15799585da50dbd387871edd86db0593dc48ea3e24c73ce8ffd21288a80a92f3",
+      "duration_s": 2.6865833333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "X005",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "A new row joins the bottom. This row has five dots, so the triangle grows by five. The row number and the total are different.",
+      "recognized_text": "A new row joins the bottom. This row has five dots, so the triangle grows by five the row number, and the total are different.",
+      "interpreted_number": null,
+      "expected_normalized": "a new row joins the bottom this row has 5 dots so the triangle grows by 5 the row number and the total are different",
+      "recognized_normalized": "a new row joins the bottom this row has 5 dots so the triangle grows by 5 the row number and the total are different",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/corrections-v002/X005.wav",
+      "source_sha256": "cefe397553910fea31e98f8862bc9e5612f46e9f897855f130c5a257d992a039",
+      "duration_s": 7.621125,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/corrections-v002/asr.json",
+        "sha256": "f4e1d34151b4df5bfbd5f36e5217987095b8793e433692e09cbbd9cd34a7910a"
+      }
+    },
+    {
+      "id": "E006",
+      "index": 6,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "six times seven, divided by two, equals",
+      "recognized_text": "6 times 7 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "6 times 7 divided by 2 equals",
+      "recognized_normalized": "6 times 7 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E006.wav",
+      "source_sha256": "b3fa3a1e7bb85d2cc2b5063355ee4a1ad57f186987f11a9146edf42b52568447",
+      "duration_s": 2.7307916666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E007",
+      "index": 7,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "seven times eight, divided by two, equals",
+      "recognized_text": "7 times 8 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "7 times 8 divided by 2 equals",
+      "recognized_normalized": "7 times 8 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E007.wav",
+      "source_sha256": "2939dad51f27c3d2ceb0505c1d34b1d46d290939c0deb62a26b35d055895cf21",
+      "duration_s": 2.7100416666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E008",
+      "index": 8,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "eight times nine, divided by two, equals",
+      "recognized_text": "8 times 9 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "8 times 9 divided by 2 equals",
+      "recognized_normalized": "8 times 9 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E008.wav",
+      "source_sha256": "393739705a58025ac5504d4b69e6251cd950108c16c2ceac93b36610db422d50",
+      "duration_s": 2.6594166666666665,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E009",
+      "index": 9,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "nine times ten, divided by two, equals",
+      "recognized_text": "9 times 10 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "9 times 10 divided by 2 equals",
+      "recognized_normalized": "9 times 10 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E009.wav",
+      "source_sha256": "8c2139f22aff788f70bc88b866aa028d45cad64560e06a0c89cc9e0e61866afa",
+      "duration_s": 2.749125,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E010",
+      "index": 10,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "ten times eleven, divided by two, equals",
+      "recognized_text": "10 times 11 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "10 times 11 divided by 2 equals",
+      "recognized_normalized": "10 times 11 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E010.wav",
+      "source_sha256": "0197e8f4bc7d99402997e75dc1fcc0b8ae0815b1f1d3b328b4a038e8813267a5",
+      "duration_s": 2.7999583333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "X010",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "The dots will look smaller as more rows fit on screen. Every dot still counts as one. Watch the row labels and the formula.",
+      "recognized_text": "The dots will look smaller as more rows fit on screen, every dot still counts, as one watch the row labels and the formula.",
+      "interpreted_number": null,
+      "expected_normalized": "the dots will look smaller as more rows fit on screen every dot still counts as 1 watch the row labels and the formula",
+      "recognized_normalized": "the dots will look smaller as more rows fit on screen every dot still counts as 1 watch the row labels and the formula",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/corrections-v002/X010.wav",
+      "source_sha256": "f76fb828e8334f8f1cda1a7c67ca729c98fb80eb03008fc10b28f78333232d10",
+      "duration_s": 7.339166666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/corrections-v002/asr.json",
+        "sha256": "f4e1d34151b4df5bfbd5f36e5217987095b8793e433692e09cbbd9cd34a7910a"
+      }
+    },
+    {
+      "id": "E011",
+      "index": 11,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "eleven times twelve, divided by two, equals",
+      "recognized_text": "11 times 12 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "11 times 12 divided by 2 equals",
+      "recognized_normalized": "11 times 12 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E011.wav",
+      "source_sha256": "b131699496463107df95cf2c27953015f8d48ba37ede01f5f2adfa3ae513c174",
+      "duration_s": 2.897125,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E012",
+      "index": 12,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twelve times thirteen, divided by two, equals",
+      "recognized_text": "12 times 13 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "12 times 13 divided by 2 equals",
+      "recognized_normalized": "12 times 13 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E012.wav",
+      "source_sha256": "34e86e33df69d94efefe9bf20d87a6073dd05b88ab4de2a3af5bb0f7bc26e383",
+      "duration_s": 2.897625,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E013",
+      "index": 13,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirteen times fourteen, divided by two, equals",
+      "recognized_text": "13 times 14 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "13 times 14 divided by 2 equals",
+      "recognized_normalized": "13 times 14 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E013.wav",
+      "source_sha256": "0fad139eefa55237375f45f03c4a77498009797470ee67e03f3381790fefe5a6",
+      "duration_s": 3.034708333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E014",
+      "index": 14,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fourteen times fifteen, divided by two, equals",
+      "recognized_text": "14 times 15 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "14 times 15 divided by 2 equals",
+      "recognized_normalized": "14 times 15 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E014.wav",
+      "source_sha256": "1348178598990c2700027b411a7573d29790179834f9b6cf0112e2a2dffbf58b",
+      "duration_s": 3.0317083333333334,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "X014",
+      "index": 14,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Our answer now has three digits. The rule stays the same: two matching triangles, one rectangle, and one of its two equal groups.",
+      "recognized_text": "Our answer now has three digits. The rule stays the same, two matching triangles, one rectangle, and one of its two equal groups.",
+      "interpreted_number": null,
+      "expected_normalized": "our answer now has 3 digits the rule stays the same 2 matching triangles 1 rectangle and 1 of its 2 equal groups",
+      "recognized_normalized": "our answer now has 3 digits the rule stays the same 2 matching triangles 1 rectangle and 1 of its 2 equal groups",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/X014.wav",
+      "source_sha256": "1c149ec923059d75134abda3c6b0946cc0c1f55c19aa94d46c430eccddd7fc70",
+      "duration_s": 7.989833333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E015",
+      "index": 15,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifteen times sixteen, divided by two, equals",
+      "recognized_text": "15 times 16 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "15 times 16 divided by 2 equals",
+      "recognized_normalized": "15 times 16 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E015.wav",
+      "source_sha256": "1940ad3843acfa2dae369c2fae8e7296fdc5ad6ee26cd61ede0c182c411c5840",
+      "duration_s": 2.961333333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E016",
+      "index": 16,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "sixteen times seventeen, divided by two, equals",
+      "recognized_text": "16 times 17 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "16 times 17 divided by 2 equals",
+      "recognized_normalized": "16 times 17 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E016.wav",
+      "source_sha256": "605bc4b131a23812cd0160a2bd5ee64127bba1e8b5600221630aa9d9da127b06",
+      "duration_s": 3.234375,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E017",
+      "index": 17,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "seventeen times eighteen, divided by two, equals",
+      "recognized_text": "17 times 18 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "17 times 18 divided by 2 equals",
+      "recognized_normalized": "17 times 18 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E017.wav",
+      "source_sha256": "6482349207d2fe1f53969136e95fdf8daf3733f16478401b9d82523ad07e1881",
+      "duration_s": 3.138541666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E018",
+      "index": 18,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "eighteen times nineteen, divided by two, equals",
+      "recognized_text": "18 times 19 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "18 times 19 divided by 2 equals",
+      "recognized_normalized": "18 times 19 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E018.wav",
+      "source_sha256": "c1d341099e5cbebf4b91836b7009e7775cd0a0e8d63c5ced6bcfd7409f51315a",
+      "duration_s": 3.0067916666666665,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E019",
+      "index": 19,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "nineteen times twenty, divided by two, equals",
+      "recognized_text": "19 times 20 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "19 times 20 divided by 2 equals",
+      "recognized_normalized": "19 times 20 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E019.wav",
+      "source_sha256": "c80a20404140a212d761efe3bc4f99ae23e5102ebeae7f5b6a56813c992f3701",
+      "duration_s": 2.9812083333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E020",
+      "index": 20,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty times twenty-one, divided by two, equals",
+      "recognized_text": "20 times 21 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "20 times 21 divided by 2 equals",
+      "recognized_normalized": "20 times 21 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E020.wav",
+      "source_sha256": "967d4a7bdeed5f4693d1c7a3f8e1d7ec55447adeab2e44041ece6f0d04919c53",
+      "duration_s": 2.9956666666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E021",
+      "index": 21,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-one times twenty-two, divided by two, equals",
+      "recognized_text": "21 times 22 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "21 times 22 divided by 2 equals",
+      "recognized_normalized": "21 times 22 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E021.wav",
+      "source_sha256": "46ec637c5c2f7ee2a24d1fe33d6c0cacf353aa0ae852cd0d2054ae40f44b59f6",
+      "duration_s": 3.322125,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E022",
+      "index": 22,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-two times twenty-three, divided by two, equals",
+      "recognized_text": "22 times 23 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "22 times 23 divided by 2 equals",
+      "recognized_normalized": "22 times 23 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E022.wav",
+      "source_sha256": "1909722815451d1998a60f9a5b042993b74aad8743eb6e7bc852283d952d3f03",
+      "duration_s": 3.270625,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E023",
+      "index": 23,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-three times twenty-four, divided by two, equals",
+      "recognized_text": "23 times 24, divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "23 times 24 divided by 2 equals",
+      "recognized_normalized": "23 times 24 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E023.wav",
+      "source_sha256": "8ef0dbb7938754477ed820d229927be53ab8df3639abdb61dfc11754b1e0c411",
+      "duration_s": 3.2755833333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E024",
+      "index": 24,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-four times twenty-five, divided by two, equals",
+      "recognized_text": "24 times 25 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "24 times 25 divided by 2 equals",
+      "recognized_normalized": "24 times 25 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E024.wav",
+      "source_sha256": "11793bfc2597d8806a5f0cda755e9438b689a282101cf3b6d9c0583b83a61d8c",
+      "duration_s": 3.2944583333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E025",
+      "index": 25,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-five times twenty-six, divided by two, equals",
+      "recognized_text": "25 times 26 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "25 times 26 divided by 2 equals",
+      "recognized_normalized": "25 times 26 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E025.wav",
+      "source_sha256": "8d28b3ede08fda9ebcd7bae8d7ea7ec141ace88d0082daa848c1104b5a4c76b6",
+      "duration_s": 3.41125,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E026",
+      "index": 26,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-six times twenty-seven, divided by two, equals",
+      "recognized_text": "26 times 27 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "26 times 27 divided by 2 equals",
+      "recognized_normalized": "26 times 27 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E026.wav",
+      "source_sha256": "cbc21971c9526f4c313aacfd8f2c656ec330893c89cd65b21e2a6313216a071c",
+      "duration_s": 3.4383333333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E027",
+      "index": 27,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-seven times twenty-eight, divided by two, equals",
+      "recognized_text": "27 times 28 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "27 times 28 divided by 2 equals",
+      "recognized_normalized": "27 times 28 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E027.wav",
+      "source_sha256": "1dd4696266ad89200a82a1e1c2a0ddb762cb21cac5d16e627c20606a41b37b0a",
+      "duration_s": 3.3678333333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E028",
+      "index": 28,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-eight times twenty-nine, divided by two, equals",
+      "recognized_text": "28 times 29 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "28 times 29 divided by 2 equals",
+      "recognized_normalized": "28 times 29 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E028.wav",
+      "source_sha256": "dd227d5db334f9d0e5a836e4281c1bbca7008da870f1750c558e53b949252819",
+      "duration_s": 3.3212083333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E029",
+      "index": 29,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "twenty-nine times thirty, divided by two, equals",
+      "recognized_text": "29 times 30, divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "29 times 30 divided by 2 equals",
+      "recognized_normalized": "29 times 30 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E029.wav",
+      "source_sha256": "1d03b58b3605a10fdbaec88912b63e51dbe1d05a5b617e4ba4811c043cd82864",
+      "duration_s": 3.0271666666666666,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E030",
+      "index": 30,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty times thirty-one, divided by two, equals",
+      "recognized_text": "Thirty times thirty one, divided by two, equals.",
+      "interpreted_number": null,
+      "expected_normalized": "30 times 31 divided by 2 equals",
+      "recognized_normalized": "30 times 31 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E030.wav",
+      "source_sha256": "92a3d837999cecb363abda851c80e1b9529e4d1d60b6e885bcf49e8af916a9ab",
+      "duration_s": 2.981375,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E031",
+      "index": 31,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-one times thirty-two, divided by two, equals",
+      "recognized_text": "Thirty-one times thirty-two, divided by two, equals.",
+      "interpreted_number": null,
+      "expected_normalized": "31 times 32 divided by 2 equals",
+      "recognized_normalized": "31 times 32 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E031.wav",
+      "source_sha256": "344cd2e996245358bd208a177693dabf6376ed32bcb23275acf84b0ac6221b68",
+      "duration_s": 3.352,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E032",
+      "index": 32,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-two times thirty-three, divided by two, equals",
+      "recognized_text": "32 times 33 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "32 times 33 divided by 2 equals",
+      "recognized_normalized": "32 times 33 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E032.wav",
+      "source_sha256": "a0d8ba77f642b5ccfc511fd64763c403cba77a6daa41f27328a88ed1e0460ed2",
+      "duration_s": 3.258625,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E033",
+      "index": 33,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-three times thirty-four, divided by two, equals",
+      "recognized_text": "33 times 34 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "33 times 34 divided by 2 equals",
+      "recognized_normalized": "33 times 34 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E033.wav",
+      "source_sha256": "3bce9f9c70c6841913a3877da76584496340efdf0466aff543933a94154695c0",
+      "duration_s": 3.2354583333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E034",
+      "index": 34,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-four times thirty-five, divided by two, equals",
+      "recognized_text": "Thirty-four times thirty-five divided by two equals.",
+      "interpreted_number": null,
+      "expected_normalized": "34 times 35 divided by 2 equals",
+      "recognized_normalized": "34 times 35 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E034.wav",
+      "source_sha256": "12866ebbf3da1e056ed6d5c8a37b172824bd4f354dabd65aa311f9876fd15c73",
+      "duration_s": 3.386791666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E035",
+      "index": 35,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-five times thirty-six, divided by two, equals",
+      "recognized_text": "35 times 36 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "35 times 36 divided by 2 equals",
+      "recognized_normalized": "35 times 36 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E035.wav",
+      "source_sha256": "07a77c7416c2c3ed010844a0d545b1bf2f9057b05ffa3a0a8a51831506adfcc4",
+      "duration_s": 3.3550416666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E036",
+      "index": 36,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-six times thirty-seven, divided by two, equals",
+      "recognized_text": "36 times 37 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "36 times 37 divided by 2 equals",
+      "recognized_normalized": "36 times 37 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E036.wav",
+      "source_sha256": "0196efa2d6b46b504de3bd304336317fedc7a942a67352a9db65b1ed2068f108",
+      "duration_s": 3.41375,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E037",
+      "index": 37,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-seven times thirty-eight, divided by two, equals",
+      "recognized_text": "37 times 38 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "37 times 38 divided by 2 equals",
+      "recognized_normalized": "37 times 38 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E037.wav",
+      "source_sha256": "45c82549e53f8870f699a13dd73aef0eafdc3c924d3cce9eb24ba5f4d4db7852",
+      "duration_s": 3.3769583333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E038",
+      "index": 38,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-eight times thirty-nine, divided by two, equals",
+      "recognized_text": "38 times 39 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "38 times 39 divided by 2 equals",
+      "recognized_normalized": "38 times 39 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E038.wav",
+      "source_sha256": "782b6694fe702828b085101213a751f5d8eac56b65fa2752265dad8b124a8cb0",
+      "duration_s": 3.3077916666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E039",
+      "index": 39,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "thirty-nine times forty, divided by two, equals",
+      "recognized_text": "39 times 40 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "39 times 40 divided by 2 equals",
+      "recognized_normalized": "39 times 40 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E039.wav",
+      "source_sha256": "290502bcdcda7b81967146f353adab84b06de6247cd3dad8b80eca4bf36fe373",
+      "duration_s": 3.03325,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E040",
+      "index": 40,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty times forty-one, divided by two, equals",
+      "recognized_text": "40 times 41 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "40 times 41 divided by 2 equals",
+      "recognized_normalized": "40 times 41 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E040.wav",
+      "source_sha256": "2e57960e9836365d4a10a074f7f3279bdc074ffbdb9f20358ca3111a9b050fa9",
+      "duration_s": 3.03325,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E041",
+      "index": 41,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty-one times forty-two, divided by two, equals",
+      "recognized_text": "41 times 42 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "41 times 42 divided by 2 equals",
+      "recognized_normalized": "41 times 42 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E041.wav",
+      "source_sha256": "ef919f8daa7eb5206740ba7593b6737894844254ccbe6bfec167d46e09fd4a73",
+      "duration_s": 3.3577916666666665,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E042",
+      "index": 42,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty-two times forty-three, divided by two, equals",
+      "recognized_text": "42 times 43 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "42 times 43 divided by 2 equals",
+      "recognized_normalized": "42 times 43 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E042.wav",
+      "source_sha256": "235b8ddae870ad21ecb7f3b657a5046da096083441ab9c99bdb5d41b9dc8ef04",
+      "duration_s": 3.2815833333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E043",
+      "index": 43,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty-three times forty-four, divided by two, equals",
+      "recognized_text": "43 times 44 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "43 times 44 divided by 2 equals",
+      "recognized_normalized": "43 times 44 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E043.wav",
+      "source_sha256": "12135b9dbafd5177a5d1a79f62edc3f53c19b0bd367c85556993c677c50b9972",
+      "duration_s": 3.35925,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E044",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty-four times forty-five, divided by two, equals",
+      "recognized_text": "44 times 45 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "44 times 45 divided by 2 equals",
+      "recognized_normalized": "44 times 45 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/corrections-v002/E044.wav",
+      "source_sha256": "7ece0493fff0335aa549497a34aff1a2ea576b673b36c449fd6e73399bdcd354",
+      "duration_s": 3.3345,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/corrections-v002/asr.json",
+        "sha256": "f4e1d34151b4df5bfbd5f36e5217987095b8793e433692e09cbbd9cd34a7910a"
+      }
+    },
+    {
+      "id": "E045",
+      "index": 45,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty-five times forty-six, divided by two, equals",
+      "recognized_text": "45 times 46 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "45 times 46 divided by 2 equals",
+      "recognized_normalized": "45 times 46 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E045.wav",
+      "source_sha256": "3610b952e91101f0f394ed442bea05673b5ee0534b4b6983861776ca607b08ba",
+      "duration_s": 3.41225,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "X045",
+      "index": 45,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "We have passed one thousand! The triangle before this one was still below it. The next row brought us across that mark.",
+      "recognized_text": "We have passed 1000. The triangle before this one was still below it. The next row brought us across that mark.",
+      "interpreted_number": null,
+      "expected_normalized": "we have passed 1000 the triangle before this 1 was still below it the next row brought us across that mark",
+      "recognized_normalized": "we have passed 1000 the triangle before this 1 was still below it the next row brought us across that mark",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/X045.wav",
+      "source_sha256": "5384d1cc8842d1d8bf65b7a444176234df2fcdd08d2baf8c7069f7685928c76f",
+      "duration_s": 6.903625,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E046",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty-six times forty-seven, divided by two, equals",
+      "recognized_text": "46 times 47 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "46 times 47 divided by 2 equals",
+      "recognized_normalized": "46 times 47 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/corrections-v002/E046.wav",
+      "source_sha256": "1f559d40497191acff052636f420e74ff766044735c6caa8cd4431f4d3a518ce",
+      "duration_s": 3.3970416666666665,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/corrections-v002/asr.json",
+        "sha256": "f4e1d34151b4df5bfbd5f36e5217987095b8793e433692e09cbbd9cd34a7910a"
+      }
+    },
+    {
+      "id": "E047",
+      "index": 47,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty-seven times forty-eight, divided by two, equals",
+      "recognized_text": "47 times 48 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "47 times 48 divided by 2 equals",
+      "recognized_normalized": "47 times 48 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E047.wav",
+      "source_sha256": "a79b1c68ee3a77b0e5c349d37676b55c48990f98a21bd4787f4ae6c07335b540",
+      "duration_s": 3.3817083333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E048",
+      "index": 48,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty-eight times forty-nine, divided by two, equals",
+      "recognized_text": "48 times 49 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "48 times 49 divided by 2 equals",
+      "recognized_normalized": "48 times 49 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E048.wav",
+      "source_sha256": "74ee616e279034914d6bcfe8615baebda785287996f77b595515987701dee354",
+      "duration_s": 3.2827916666666668,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E049",
+      "index": 49,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "forty-nine times fifty, divided by two, equals",
+      "recognized_text": "49 times 50 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "49 times 50 divided by 2 equals",
+      "recognized_normalized": "49 times 50 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E049.wav",
+      "source_sha256": "a913a5ab76e29304d31c6a00ede933c8c167f6e3d1ca4e93f95c6c1a9d1f9a38",
+      "duration_s": 3.231708333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E050",
+      "index": 50,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty times fifty-one, divided by two, equals",
+      "recognized_text": "50 times 51 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "50 times 51 divided by 2 equals",
+      "recognized_normalized": "50 times 51 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E050.wav",
+      "source_sha256": "3bb55169f2f4462f45d9328dc7a943f27bd6ce28c35d17a3644428aa5fb39d51",
+      "duration_s": 2.9814583333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E051",
+      "index": 51,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty-one times fifty-two, divided by two, equals",
+      "recognized_text": "51 times 52 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "51 times 52 divided by 2 equals",
+      "recognized_normalized": "51 times 52 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E051.wav",
+      "source_sha256": "22bb4f8fe4646c1e8bd3de8f4e4a5c4f309a18d1b934f5f9f23a86fe7ede7ded",
+      "duration_s": 3.3373333333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E052",
+      "index": 52,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty-two times fifty-three, divided by two, equals",
+      "recognized_text": "52 times 53 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "52 times 53 divided by 2 equals",
+      "recognized_normalized": "52 times 53 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E052.wav",
+      "source_sha256": "b9447891d401c6b6dc915e8668cc6286e49d98b876458f72066f3c5e56a8a134",
+      "duration_s": 3.281458333333333,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E053",
+      "index": 53,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty-three times fifty-four, divided by two, equals",
+      "recognized_text": "53 times 54 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "53 times 54 divided by 2 equals",
+      "recognized_normalized": "53 times 54 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E053.wav",
+      "source_sha256": "054ca691000f926ac329f9e9c75ab963e36cec33f703742819586b3a77aef8ae",
+      "duration_s": 3.314625,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E054",
+      "index": 54,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty-four times fifty-five, divided by two, equals",
+      "recognized_text": "54 times 55 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "54 times 55 divided by 2 equals",
+      "recognized_normalized": "54 times 55 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E054.wav",
+      "source_sha256": "6d23750a853f10ef985de6efc1bd66d403db91ff62b910db39c625bb50de5dd9",
+      "duration_s": 3.3113333333333332,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E055",
+      "index": 55,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty-five times fifty-six, divided by two, equals",
+      "recognized_text": "55 times 56 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "55 times 56 divided by 2 equals",
+      "recognized_normalized": "55 times 56 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E055.wav",
+      "source_sha256": "25eada60ffc7874495e5184c140572c5c50277cdcda60009b6f3f3a75e32fc79",
+      "duration_s": 3.4146666666666667,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E056",
+      "index": 56,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty-six times fifty-seven, divided by two, equals",
+      "recognized_text": "56 times 57 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "56 times 57 divided by 2 equals",
+      "recognized_normalized": "56 times 57 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E056.wav",
+      "source_sha256": "dbea6c1b1d91921d4d9454b4435c1cb2e1bec5d80b2e7762e55ed18c1738a1be",
+      "duration_s": 3.4255,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E057",
+      "index": 57,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty-seven times fifty-eight, divided by two, equals",
+      "recognized_text": "57 times 58 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "57 times 58 divided by 2 equals",
+      "recognized_normalized": "57 times 58 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E057.wav",
+      "source_sha256": "9cb8464667a2cf4787727f7102c813b947cbbe1b1f82c36128ee2ee352b5d9d4",
+      "duration_s": 3.4287083333333332,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E058",
+      "index": 58,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty-eight times fifty-nine, divided by two, equals",
+      "recognized_text": "58 times 59 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "58 times 59 divided by 2 equals",
+      "recognized_normalized": "58 times 59 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E058.wav",
+      "source_sha256": "1292623cc6f786800fb1f29b03bafddf00a50713022fd63d454429d642a50fd3",
+      "duration_s": 3.2805833333333334,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E059",
+      "index": 59,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "fifty-nine times sixty, divided by two, equals",
+      "recognized_text": "59 times 60 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "59 times 60 divided by 2 equals",
+      "recognized_normalized": "59 times 60 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E059.wav",
+      "source_sha256": "1b117695eacfdd7604a503342caa270f0b649f9ba43d7106d8cc22426a7ee53e",
+      "duration_s": 3.1555833333333334,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "E060",
+      "index": 60,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "sixty times sixty-one, divided by two, equals",
+      "recognized_text": "60 times 61 divided by 2 equals.",
+      "interpreted_number": null,
+      "expected_normalized": "60 times 61 divided by 2 equals",
+      "recognized_normalized": "60 times 61 divided by 2 equals",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/E060.wav",
+      "source_sha256": "1395dc181f4c5e26422381bc95585312ada1295f92764b0badb469f12e35ac25",
+      "duration_s": 3.1047083333333334,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "O01",
+      "index": null,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Sixty rows, the same rule all the way. Each new row added the next whole number. These are triangular numbers! Thanks for counting with us. See you next time!",
+      "recognized_text": "60 rows the same rule all the way. Each new row added the next whole number. These are triangular numbers. Thanks for counting with us. See you next time.",
+      "interpreted_number": null,
+      "expected_normalized": "60 rows the same rule all the way each new row added the next whole number these are triangular numbers thanks for counting with us see you next time",
+      "recognized_normalized": "60 rows the same rule all the way each new row added the next whole number these are triangular numbers thanks for counting with us see you next time",
+      "status": "asr-match",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/O01.wav",
+      "source_sha256": "0f83ee4adf69052607b932973c3d2921d58bfa3b173f11f0e946221560f07089",
+      "duration_s": 9.867375,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "id": "X004a",
+      "index": 4,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Look again. One, two, three, and four dots make the rows. Turn a matching copy around and slide it into the spaces.",
+      "recognized_text": "Look again, 1, 2, 3 and 4 dots make the rose. Turn a matching copy around and slide it into the spaces.",
+      "interpreted_number": null,
+      "expected_normalized": "look again 1 2 3 and 4 dots make the rows turn a matching copy around and slide it into the spaces",
+      "recognized_normalized": "look again 1 2 3 and 4 dots make the rose turn a matching copy around and slide it into the spaces",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/X004a.wav",
+      "source_sha256": "a58be17dbf79ec0ea132dc93e5ed846bdce3033323489494d53b574f2526853f",
+      "duration_s": 7.3605833333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    },
+    {
+      "id": "X004b",
+      "index": 4,
+      "role": "dialogue",
+      "number": null,
+      "expected_text": "Together they make four rows of five. Dividing by two means choosing one of these two equal triangles, with every dot kept whole.",
+      "recognized_text": "Together they make four rows of five. Dividing by two means choosing one of these two equal triangles with every dot kept hole.",
+      "interpreted_number": null,
+      "expected_normalized": "together they make 4 rows of 5 dividing by 2 means choosing 1 of these 2 equal triangles with every dot kept whole",
+      "recognized_normalized": "together they make 4 rows of 5 dividing by 2 means choosing 1 of these 2 equal triangles with every dot kept hole",
+      "status": "warning-review-required",
+      "source_path": "/Users/support/codex/youtube/output/triangular-counting-001-v001/speech/candidates-v001/X004b.wav",
+      "source_sha256": "7956f3a13a3dc1738a8459b7690f47f83de8ebc536cb5d4fac71541c6dd21e0d",
+      "duration_s": 7.9775833333333335,
+      "source_report": {
+        "path": "output/triangular-counting-001-v001/speech/fresh-asr.json",
+        "sha256": "b3dc22e02866d102281205cf904051079f24c165e16cb1808cd7df1db5bee96a"
+      }
+    }
+  ],
+  "summary": {
+    "clips": 131,
+    "numbers": 61,
+    "dialogue": 70,
+    "asr_matches": 129,
+    "warnings": 2
+  }
+}

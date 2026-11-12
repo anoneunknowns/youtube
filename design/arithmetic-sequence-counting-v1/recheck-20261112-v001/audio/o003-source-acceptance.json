@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "kind": "arithmetic-recheck-O003-specific-source-acceptance",
+  "accepted": true,
+  "passed": true,
+  "unresolved": [],
+  "padded_source": {
+    "path": "output/arithmetic-sequence-counting-001-v001/recheck-20261112-v001/audio/o003-candidates-v001/O003-selected-padded.wav",
+    "sha256": "4b7a5825d7118ef1a72494a38fb0f76f8d99a1885e911ffbf5b44fdbddf1a9f0"
+  },
+  "source": {
+    "path": "output/arithmetic-sequence-counting-001-v001/recheck-20261112-v001/audio/o003-candidates-v001/O003-selected-padded.wav",
+    "sha256": "4b7a5825d7118ef1a72494a38fb0f76f8d99a1885e911ffbf5b44fdbddf1a9f0"
+  },
+  "source_ctc": {
+    "path": "design/arithmetic-sequence-counting-v1/recheck-20261112-v001/audio/o003-selected-ctc.json",
+    "sha256": "dcd499a50f55cf66081c7be61a1f24beee59b99c662389515ad4f3e679b5e929"
+  },
+  "padding_record": {
+    "path": "output/arithmetic-sequence-counting-001-v001/recheck-20261112-v001/audio/o003-candidates-v001/selected-padding-record.json",
+    "sha256": "00fc27b347efde1eca0d28254d7b5beca09af5ac043024f83d83beac26658db6"
+  },
+  "expected_text": "You watched the formula work. Great counting! See you next time.",
+  "voice": {
+    "voice_id": "af_heart",
+    "generation_speed": 0.98,
+    "dtype": "fp32",
+    "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+    "sample_rate": 24000,
+    "channels": 1
+  },
+  "sample_frames_24k": 88528,
+  "duration_s": 3.6886666666666668,
+  "evidence": {
+    "o003-selected-tiny-asr": {
+      "path": "design/arithmetic-sequence-counting-v1/recheck-20261112-v001/audio/o003-selected-tiny-asr.json",
+      "sha256": "7b7ed40d7724b99f25009879bb206353231e9902af698b343ea9a55360d1ee28"
+    },
+    "o003-selected-base-asr": {
+      "path": "design/arithmetic-sequence-counting-v1/recheck-20261112-v001/audio/o003-selected-base-asr.json",
+      "sha256": "29a9edf9e53a1bf46b95c6581865cba9beee0953f0fa20afda2339dffac341bc"
+    },
+    "o003-selected-ctc": {
+      "path": "design/arithmetic-sequence-counting-v1/recheck-20261112-v001/audio/o003-selected-ctc.json",
+      "sha256": "dcd499a50f55cf66081c7be61a1f24beee59b99c662389515ad4f3e679b5e929"
+    },
+    "o003-roundtrip-tiny-asr": {
+      "path": "design/arithmetic-sequence-counting-v1/recheck-20261112-v001/audio/o003-roundtrip-tiny-asr.json",
+      "sha256": "240a82fef10eacc8dee08097ab829628772c2b45dfe29e26a9301209c67c3718"
+    },
+    "o003-roundtrip-base-asr": {
+      "path": "design/arithmetic-sequence-counting-v1/recheck-20261112-v001/audio/o003-roundtrip-base-asr.json",
+      "sha256": "cda91d33fe184cf4e6efe0efc5c350fcfd109f38de982bd3306870fcc325a3d2"
+    }
+  },
+  "ctc_guard_controls": {
+    "path": "output/arithmetic-sequence-counting-001-v001/recheck-20261112-v001/audio/o003-selected-roundtrip/ctc-guard-controls.json",
+    "sha256": "f5224cfb8caf6615867d73696a00bf8cef87bc7f7396ef85e6545e3c5a9e17f1"
+  },
+  "codec_roundtrip": {
+    "path": "output/arithmetic-sequence-counting-001-v001/recheck-20261112-v001/audio/o003-selected-roundtrip/roundtrip-record.json",
+    "sha256": "e961cd653ac5bdf9aca66b5abfffc4835bed517c6da8ac4fc0f2c6e3c0f29bd8"
+  },
+  "results": [
+    {
+      "id": "O003",
+      "accepted": true,
+      "source_sha256": "4b7a5825d7118ef1a72494a38fb0f76f8d99a1885e911ffbf5b44fdbddf1a9f0",
+      "failures": [],
+      "decision": "Both unprompted independent lexical ASR models transcribe watched correctly on exact padded source and newly encoded AAC. Independent CTC gives explicit t after affricate before the in all4 recognizer-only guards on source and AAC. Original words,voice,speed retained; source duration matches original slot by528 trailing zero samples."
+    }
+  ],
+  "pronunciation_evidence": {
+    "source_t_token": {
+      "token": "t",
+      "start_s": 0.51,
+      "end_s": 0.535,
+      "probability": 0.8479429226924978
+    },
+    "four_guards_s": [
+      0,
+      0.06,
+      0.15,
+      0.3
+    ],
+    "source_and_AAC_t_cluster_found": 8,
+    "source_and_AAC_controls_total": 8,
+    "old_source_t_to_the_gap_s": 0.015,
+    "new_source_t_to_the_gap_s": 0.035,
+    "note": "Approximate20ms CTC labels show only20ms larger stop-to-the gap, with original word sequence intact. Punctuation changes overall timing naturally; no time stretching was applied."
+  },
+  "limitations": [
+    "Automated/agent source acceptance, no human listening claimed.",
+    "This is source-specific evidence plus isolated AAC stress test, not acceptance of a future full MP4.",
+    "Final full AAC must be decoded and checked after source replacement."
+  ],
+  "human_listening_performed": false
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "isolated-phoneme-asr",
+  "source_manifest_sha256": "a8183a1c4724656bc8b946c7ce7b23d77ad3a044d5dfc046b9fe38d5a1a23c26",
+  "model": {
+    "id": "onnx-community/wav2vec2-lv-60-espeak-cv-ft-ONNX",
+    "revision": "c69750f5043e5e1f8a71ab95dd3b98338c280c92",
+    "dtype": "q8",
+    "sha256": "3d1479b5c70836645a4310902479f7f7e8bbc8c16c58745d918804f4f6f9d120",
+    "license": "Apache-2.0"
+  },
+  "method": "Independent 16 kHz CTC phoneme recognition, no expected text or neighbor-number prompt; eSpeak expected labels are computed only after inference. Approximate 20ms timestamps. Automated evidence, not proof of perfect pronunciation.",
+  "results": [
+    {
+      "role": "number",
+      "number": 2,
+      "id": "N001",
+      "expected_text": "Two.",
+      "expected_espeak": "tˈuː",
+      "source_path": "/Users/support/codex/youtube/output/geometric-sequence-counting-001-v001/audio-build/encoded-aac-v001/two-diagnostic-v001/N001-context.wav",
+      "source_sha256": "59d57b307774614d185fe5dea76c3bb9f4c001f82241a1f3f4c7943c2dfc1a45",
+      "duration_s": 0.34,
+      "recognized_phonemes": "t uː",
+      "tokens": [
+        {
+          "token": "t",
+          "start_s": 0.04,
+          "end_s": 0.065,
+          "probability": 0.45245174562214746
+        },
+        {
+          "token": "uː",
+          "start_s": 0.12,
+          "end_s": 0.145,
+          "probability": 0.1977921502817325
+        }
+      ]
+    }
+  ]
+}

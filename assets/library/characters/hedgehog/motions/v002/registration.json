@@ -1,0 +1,1721 @@
+{
+  "schema_version": 2,
+  "kind": "generated-character-multisheet-key-pose-stock",
+  "character_id": "hedgehog",
+  "version": "v002",
+  "created_at_utc": "2026-11-11T14:20:05.108992+00:00",
+  "status": "stocked-and-assistant-reviewed",
+  "production_asset": false,
+  "source_pixels_modified": false,
+  "neutral_original_modified": false,
+  "canonical_neutral": {
+    "path": "assets/library/characters/hedgehog/sources/v003/neutral.png",
+    "sha256": "746fc698df5a9afd31f6bea5a399baf134cd0e263e6729499a3e17c49f5ec87a",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      211,
+      127,
+      1026,
+      1166
+    ],
+    "anchor_px": [
+      611,
+      1166
+    ],
+    "reference_height_px": 1039,
+    "coordinate_space": "original source PNG canvas; subtract image_region origin when loading a cropped neutral",
+    "source_manifest": "assets/library/characters/hedgehog/sources/v003/source-manifest.json",
+    "source_manifest_sha256": "0231a6d97b3b3972a9cba4411048db8c117b3bdfe661fb45f079ef71b42fc3d2"
+  },
+  "sheets": [
+    {
+      "id": "reactions",
+      "details": {
+        "sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+        "size_px": [
+          1254,
+          1254
+        ],
+        "visible_bbox_px": [
+          79,
+          28,
+          1180,
+          1221
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_alpha8_margins_px": [
+          79,
+          28,
+          74,
+          33
+        ],
+        "rgba_pixel_sha256": "7005820303d25fce22bbef0cdc7ee25ccddbb26452987802afa663ff513ebc94"
+      },
+      "reference_height_px": 358,
+      "calibration": {
+        "method": "visible standing head-to-foot baseline on planted reference pose",
+        "reference_pose": "neutral",
+        "notes": "One measured upright reference height 358px used for all nine poses, including crouch and airborne frames. No per-pose scaling."
+      },
+      "generation_input": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions-input.json",
+      "generation_input_sha256": "2349269e9ff08a3afa848d982f5939d35b80df6d2e0565d88bdaf73816bbf9a8",
+      "generation_prompt": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions-prompt.txt",
+      "generation_prompt_sha256": "1086a028fc845f0164835b53a2a14b1dde0df511506c446c74cd00e3c0828cf6",
+      "generation_references": [
+        {
+          "role": "canonical identity and style reference",
+          "path": "assets/library/characters/hedgehog/sources/v003/neutral.png",
+          "sha256": "746fc698df5a9afd31f6bea5a399baf134cd0e263e6729499a3e17c49f5ec87a",
+          "supplied_to_tool": true
+        }
+      ],
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b"
+    },
+    {
+      "id": "actions",
+      "details": {
+        "sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502",
+        "size_px": [
+          1254,
+          1254
+        ],
+        "visible_bbox_px": [
+          73,
+          8,
+          1179,
+          1221
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_alpha8_margins_px": [
+          73,
+          8,
+          75,
+          33
+        ],
+        "rgba_pixel_sha256": "add81746e8daaac097e25c9723562b2aa025cf518bede98eb258e61b70e099e2"
+      },
+      "reference_height_px": 374,
+      "calibration": {
+        "method": "visible standing head-to-foot baseline on planted reference pose",
+        "reference_pose": "wave_rest",
+        "notes": "One measured upright reference height 374px used for all nine poses, including crouch and airborne frames. No per-pose scaling."
+      },
+      "generation_input": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions-input.json",
+      "generation_input_sha256": "d6027d3c15e1507603a192759b249047bc1d4e71d5aee9ca54da6961b5568def",
+      "generation_prompt": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions-prompt.txt",
+      "generation_prompt_sha256": "9a9c6fe88e9440b6b1e6e509e0b6117275caf29e19a10ba5038a248c361af282",
+      "generation_references": [
+        {
+          "role": "edit target for transparent background extraction",
+          "path": "assets/library/characters/hedgehog/motions/v002/source-sheets/candidates/actions-alpha-haze.png",
+          "sha256": "77900e5f2df1e3c59cc4dfe36e665763647e7e8eb8e4d44f0ff02c1aee1755ce",
+          "supplied_to_tool": true
+        },
+        {
+          "role": "canonical identity ancestry reference; parent candidate generated directly from this original",
+          "path": "assets/library/characters/hedgehog/sources/v003/neutral.png",
+          "sha256": "746fc698df5a9afd31f6bea5a399baf134cd0e263e6729499a3e17c49f5ec87a",
+          "supplied_to_tool": false
+        }
+      ],
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502"
+    },
+    {
+      "id": "postures",
+      "details": {
+        "sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6",
+        "size_px": [
+          1254,
+          1254
+        ],
+        "visible_bbox_px": [
+          112,
+          103,
+          1146,
+          1161
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_alpha8_margins_px": [
+          112,
+          103,
+          108,
+          93
+        ],
+        "rgba_pixel_sha256": "2e40a186bcf719af7ba24eaf3fa1338024ea0caff93d9cf876266541028f0f7d"
+      },
+      "reference_height_px": 270.0,
+      "calibration": {
+        "method": "standing-equivalent calibration from canonical-shaped head size, checked against upright nod_down pose",
+        "reference_pose": "seated_neutral",
+        "notes": "Regenerated at deliberately smaller common scale for wide transparent gutters. Head/face+mantle span about75% of reaction scale; standing358px *0.75419 =270px proxy. Same270 used for all nine postures; do not enlarge each seated bbox."
+      },
+      "generation_input": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures-input.json",
+      "generation_input_sha256": "c2b361e68510ac64b10809ed33c1c302ee70ddb1c968ada863f08f72bcdfd875",
+      "generation_prompt": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures-prompt.txt",
+      "generation_prompt_sha256": "5b53a443dae951a1e92caccf7d37a7acc2fc38d60678dec4e8bb5cbeee4ece60",
+      "generation_references": [
+        {
+          "role": "canonical identity and style reference",
+          "path": "assets/library/characters/hedgehog/sources/v003/neutral.png",
+          "sha256": "746fc698df5a9afd31f6bea5a399baf134cd0e263e6729499a3e17c49f5ec87a",
+          "supplied_to_tool": true
+        },
+        {
+          "role": "generated consistency reference",
+          "path": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+          "sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+          "supplied_to_tool": true
+        }
+      ],
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6"
+    }
+  ],
+  "scale_policy": "Each source sheet has one calibrated standing reference height shared by its nine poses. Never fit each posture to its bbox.",
+  "frames": [
+    {
+      "id": "neutral",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        85,
+        28,
+        364,
+        386
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        85,
+        28,
+        54,
+        32
+      ],
+      "rgba_pixel_sha256": "b0af600dcc875b5ddf62a4aa3c8f53bd853022f9f45c46bfbeb9dd79824664f8",
+      "body_bbox_px": [
+        85,
+        28,
+        364,
+        386
+      ],
+      "anchor_px": [
+        222.5,
+        386
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 358,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+      "sheet_id": "reactions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [85, 368, 364, 386]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/neutral.png",
+      "sha256": "17a6e2882adbc947555d910ff5ae620905c597fb3797bb992ed8f84bd56b843a",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "blink",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        59,
+        28,
+        338,
+        386
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        59,
+        28,
+        80,
+        32
+      ],
+      "rgba_pixel_sha256": "76fc9ec7debed1657223a493d11e97f0fd747586594673874b5475bdaf04bb8e",
+      "body_bbox_px": [
+        59,
+        28,
+        338,
+        386
+      ],
+      "anchor_px": [
+        196.5,
+        386
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 358,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+      "sheet_id": "reactions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [59, 368, 338, 386]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/blink.png",
+      "sha256": "a1d2dfd7ba2b00bf5b36930a5ef97bae55cd4bf5b50ab9e0dfe8551bbe8ef03e",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "tap_down",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        48,
+        54,
+        335,
+        386
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        48,
+        54,
+        83,
+        32
+      ],
+      "rgba_pixel_sha256": "8d3acd828479fb5fb49f78434c438cd9ed62be43199df076fadf67f8cab98c89",
+      "body_bbox_px": [
+        48,
+        54,
+        335,
+        386
+      ],
+      "anchor_px": [
+        192.0,
+        386
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 358,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+      "sheet_id": "reactions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [48, 368, 335, 386]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/tap_down.png",
+      "sha256": "8a433ffebd52518b363f66fc8442698d0d7b00d52f4bbd3d1ec94648374623c4",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "tap_pop",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        83,
+        17,
+        365,
+        353
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        83,
+        17,
+        53,
+        65
+      ],
+      "rgba_pixel_sha256": "1d0fb69c5c92e127030d4a060cc443a515e668e006d8aa066216b0abaa6ce6b5",
+      "body_bbox_px": [
+        83,
+        17,
+        365,
+        353
+      ],
+      "anchor_px": [
+        223.5,
+        386
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 358,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+      "sheet_id": "reactions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "inferred-ground-plane",
+      "support_notes": "Ground plane inherited from same-sheet planted neutral/wave_rest; subject contains baked-in airborne lift and no second root jump is appropriate.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [83, 335, 365, 353]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/tap_pop.png",
+      "sha256": "b0d8fbb31c1c2ac4bc8630c18960a59f9108658644a799b9983a3c2d73b912dc",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        64,
+        23,
+        350,
+        381
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        64,
+        23,
+        68,
+        37
+      ],
+      "rgba_pixel_sha256": "a17051fd9d2d1748f0939b725037396a2026163c56f95d9b9ac49241234e03fb",
+      "body_bbox_px": [
+        64,
+        23,
+        350,
+        381
+      ],
+      "anchor_px": [
+        204.0,
+        381
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 358,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+      "sheet_id": "reactions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [64, 363, 350, 381]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/think.png",
+      "sha256": "65af84dc4df831b845a6fe1989ec823707ed968c823a71fa85cf68f7345fc89c",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        47,
+        24,
+        337,
+        379
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        47,
+        24,
+        81,
+        39
+      ],
+      "rgba_pixel_sha256": "3885eda53e731e80a99b64f41b43c5179510f0496993783156c081dadc12359d",
+      "body_bbox_px": [
+        47,
+        24,
+        337,
+        379
+      ],
+      "anchor_px": [
+        195.0,
+        379
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 358,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+      "sheet_id": "reactions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [47, 361, 337, 379]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/aha.png",
+      "sha256": "ec3f692ffffb77651070fedb4f00cf505ae90749c4462ec89b972ac5ed61a6d8",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "oops",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        79,
+        21,
+        370,
+        381
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        79,
+        21,
+        48,
+        37
+      ],
+      "rgba_pixel_sha256": "043a1a4c21aac7ab7a975ed29333f583ad3a8b12020c122a7bee795b3e4e070c",
+      "body_bbox_px": [
+        79,
+        21,
+        370,
+        381
+      ],
+      "anchor_px": [
+        227.5,
+        381
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 358,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+      "sheet_id": "reactions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [79, 363, 370, 381]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/oops.png",
+      "sha256": "91bc58c818cbfd2dac5e5c45ec0ebdd986c79427c69b61cbc976fbcdb846c6dc",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "retry",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        58,
+        20,
+        350,
+        385
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        58,
+        20,
+        68,
+        33
+      ],
+      "rgba_pixel_sha256": "70b039d5647d4cb1f5bac402e98522cc27bc92be0271205ae1319ee3ac1562e4",
+      "body_bbox_px": [
+        58,
+        20,
+        350,
+        385
+      ],
+      "anchor_px": [
+        202.0,
+        385
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 358,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+      "sheet_id": "reactions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [58, 367, 350, 385]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/retry.png",
+      "sha256": "57662173abc7769c0dc96a60e65db2f1f758e2470c5a7d4c94fe5c344f276b06",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "signature",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        50,
+        28,
+        344,
+        385
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        50,
+        28,
+        74,
+        33
+      ],
+      "rgba_pixel_sha256": "88885f0d710a38bf4b614b3d47674b4b1ca5b0143848b6d2cc7e19366ef86578",
+      "body_bbox_px": [
+        50,
+        28,
+        344,
+        385
+      ],
+      "anchor_px": [
+        193.5,
+        385
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 358,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "c533ac3f5c78fab177250c893ed6519da5faf3aa15f55bce3547d42b4eb4e67b",
+      "sheet_id": "reactions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [50, 367, 344, 385]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/signature.png",
+      "sha256": "5e7b1d522c5c951eefb3b1e8ea7f0364a18759da98e8d2b1966c94d1cef1538e",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "success_ready",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        79,
+        53,
+        370,
+        388
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        79,
+        53,
+        48,
+        30
+      ],
+      "rgba_pixel_sha256": "609ca40c710b98ed217158cc5e86e450ff33fe9120729a27823a2b7554d3db20",
+      "body_bbox_px": [
+        79,
+        53,
+        370,
+        388
+      ],
+      "anchor_px": [
+        224.0,
+        388
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 374,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502",
+      "sheet_id": "actions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [79, 370, 370, 388]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/success_ready.png",
+      "sha256": "fb25938dbca6e48d93b51f3d1ea3db05d27c7852337cfb1afecc78e98b11211d",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "success_air",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        60,
+        8,
+        352,
+        344
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        60,
+        8,
+        66,
+        74
+      ],
+      "rgba_pixel_sha256": "4a992b83e660750216b342db440bcd603a4b293ce78387feed1a391e5ae2b47c",
+      "body_bbox_px": [
+        60,
+        8,
+        352,
+        344
+      ],
+      "anchor_px": [
+        206.5,
+        385
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 374,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502",
+      "sheet_id": "actions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "inferred-ground-plane",
+      "support_notes": "Ground plane inherited from same-sheet planted neutral/wave_rest; subject contains baked-in airborne lift and no second root jump is appropriate.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [60, 326, 352, 344]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/success_air.png",
+      "sha256": "95531691e3c1f809938edf4452a14826449832fb741b597ff313ce444127b9c6",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "success_land",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        46,
+        56,
+        338,
+        388
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        46,
+        56,
+        80,
+        30
+      ],
+      "rgba_pixel_sha256": "94816ca4afe255a27f0d07be2711769077a0f7ec3f7617d05e56dc66b4f8b6e2",
+      "body_bbox_px": [
+        46,
+        56,
+        338,
+        388
+      ],
+      "anchor_px": [
+        189.0,
+        388
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 374,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502",
+      "sheet_id": "actions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [46, 370, 338, 388]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/success_land.png",
+      "sha256": "ab6b744f753ce26262dbfa565a7a2499d8fa46cb51c1432ed43594b0bebc9d9a",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "cheer",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        80,
+        13,
+        368,
+        375
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        80,
+        13,
+        50,
+        43
+      ],
+      "rgba_pixel_sha256": "0ea9d41018b5866763da89cd09a9b29832c8bd7bf5d206db510a24b0a8ee60d0",
+      "body_bbox_px": [
+        80,
+        13,
+        368,
+        375
+      ],
+      "anchor_px": [
+        226.5,
+        375
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 374,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502",
+      "sheet_id": "actions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [80, 357, 368, 375]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/cheer.png",
+      "sha256": "a314bea1dba962eb1eb1d28f62cea845c847d26f813bdf3db12d902216754e7c",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "clap_open",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        62,
+        11,
+        352,
+        375
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        62,
+        11,
+        66,
+        43
+      ],
+      "rgba_pixel_sha256": "ff0045709b3c2fa789cbab5596d97483e5668fbfd50b33e7544ffca31e4b6231",
+      "body_bbox_px": [
+        62,
+        11,
+        352,
+        375
+      ],
+      "anchor_px": [
+        208.5,
+        375
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 374,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502",
+      "sheet_id": "actions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [62, 357, 352, 375]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/clap_open.png",
+      "sha256": "5a46b70e08511b4b841da38fe9bfbe65f3647b1e91bb9ea1fde4a5f19cee342f",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "wave_low",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        43,
+        18,
+        341,
+        379
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        43,
+        18,
+        77,
+        39
+      ],
+      "rgba_pixel_sha256": "e4078beacb88eb8e9f1de153450274798c49bd4fed88ae3eee5c1fc3d4d5ab1c",
+      "body_bbox_px": [
+        43,
+        18,
+        341,
+        379
+      ],
+      "anchor_px": [
+        191.5,
+        379
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 374,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502",
+      "sheet_id": "actions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [43, 361, 341, 379]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/wave_low.png",
+      "sha256": "4e2c946fc4934c0c0db67dff4f364dd634b22ade39258c4c8ef8c4b39c1cfd4f",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "wave_high_in",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        73,
+        9,
+        372,
+        385
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        73,
+        9,
+        46,
+        33
+      ],
+      "rgba_pixel_sha256": "ff2f388db3a475b1736fb50b18bea66da2f513a43e14ec3e551d716d49b4298f",
+      "body_bbox_px": [
+        73,
+        9,
+        372,
+        385
+      ],
+      "anchor_px": [
+        225.5,
+        385
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 374,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502",
+      "sheet_id": "actions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [73, 367, 372, 385]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/wave_high_in.png",
+      "sha256": "dd5316cba2901f1a3fde2f654b8735b07f74c6f84eb3b81b09e90c6a9186cbda",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "wave_high_out",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        52,
+        6,
+        354,
+        385
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        52,
+        6,
+        64,
+        33
+      ],
+      "rgba_pixel_sha256": "95edaa65e1705094c753a28aa061531d81d04a5c84cc66e3d06ce1b719496afb",
+      "body_bbox_px": [
+        52,
+        6,
+        354,
+        385
+      ],
+      "anchor_px": [
+        205.5,
+        385
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 374,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502",
+      "sheet_id": "actions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [52, 367, 354, 385]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/wave_high_out.png",
+      "sha256": "7f5c76c4f3269de1f862d69cced00ef09ba1c6fa8bd8ec389db9433b9b287082",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "wave_rest",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        40,
+        11,
+        343,
+        385
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        40,
+        11,
+        75,
+        33
+      ],
+      "rgba_pixel_sha256": "0fad42a17e2e990e1a20d7e964a490c81c0a7b17850e52b6bd8be1466afd992c",
+      "body_bbox_px": [
+        40,
+        11,
+        343,
+        385
+      ],
+      "anchor_px": [
+        190.0,
+        385
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 374,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "fa1db9086530d5ff9cd1694146a69a67bbeed28fe117f4bddca895e63b283502",
+      "sheet_id": "actions",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [40, 367, 343, 385]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/wave_rest.png",
+      "sha256": "a4379f0d3411649f16c92d7d143a1c0832a88d61824869bd7956f7a88a417afc",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "half_seated",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        114,
+        104,
+        327,
+        353
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        114,
+        104,
+        91,
+        65
+      ],
+      "rgba_pixel_sha256": "82dcc33d6a9b09b294c1b638be96088126164576bfde29bb388adf57179c7d62",
+      "body_bbox_px": [
+        114,
+        104,
+        327,
+        353
+      ],
+      "anchor_px": [
+        220.0,
+        353
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 270.0,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6",
+      "sheet_id": "postures",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [114, 335, 327, 353]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/half_seated.png",
+      "sha256": "d15a0a8a034987da56b18edb389cc905d8a5ce074012dd45ba7d68f19c5101c2",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "seated_neutral",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        102,
+        103,
+        316,
+        356
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        102,
+        103,
+        102,
+        62
+      ],
+      "rgba_pixel_sha256": "cb3cc2dcd5e28c4e1fc1944f6b9a95d948f0f7eb3e231d71d71bd9e1a5619a19",
+      "body_bbox_px": [
+        102,
+        103,
+        316,
+        356
+      ],
+      "anchor_px": [
+        210.0,
+        356
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 270.0,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6",
+      "sheet_id": "postures",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [102, 338, 316, 356]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/seated_neutral.png",
+      "sha256": "817a54ca0bf784227e2dfbe4db441620de45836d3978ec289443de0a234b9b00",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "seated_stretch_half",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        88,
+        103,
+        306,
+        355
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        88,
+        103,
+        112,
+        63
+      ],
+      "rgba_pixel_sha256": "28bf3680f48561642ef57d218a70b2eb47e0bfd2cbc514ff09ace6a20a8326ff",
+      "body_bbox_px": [
+        88,
+        103,
+        306,
+        355
+      ],
+      "anchor_px": [
+        197.5,
+        355
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 270.0,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6",
+      "sheet_id": "postures",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [88, 337, 306, 355]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/seated_stretch_half.png",
+      "sha256": "57d2a278c90169a70ff201bb92660f7d2860a45647f611aeb3645d31ee8df616",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "seated_stretch",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        114,
+        81,
+        330,
+        328
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        114,
+        81,
+        88,
+        90
+      ],
+      "rgba_pixel_sha256": "74f797f2e372a0a7306544f5d2ef9c66ad69bea1c1100d32cdf836e5a5526d32",
+      "body_bbox_px": [
+        114,
+        81,
+        330,
+        328
+      ],
+      "anchor_px": [
+        224.0,
+        328
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 270.0,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6",
+      "sheet_id": "postures",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [114, 310, 330, 328]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/seated_stretch.png",
+      "sha256": "d88a4bdd6835f709b95dbe741fddf45013ca003f42f0eb8b5a45d56877900f84",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "seated_nap",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        101,
+        88,
+        320,
+        328
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        101,
+        88,
+        98,
+        90
+      ],
+      "rgba_pixel_sha256": "cff51e16a027459cbc070d228fd796da18e7a5ddb3b0bf176c72b210a8e3650b",
+      "body_bbox_px": [
+        101,
+        88,
+        320,
+        328
+      ],
+      "anchor_px": [
+        211.5,
+        328
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 270.0,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6",
+      "sheet_id": "postures",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [101, 310, 320, 328]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/seated_nap.png",
+      "sha256": "a7ee8d4752a96b0c5bbf5cc32437367d20dffcd6b109e418e44fe64fa2ee65ed",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "seated_look_up",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        89,
+        84,
+        310,
+        327
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        89,
+        84,
+        108,
+        91
+      ],
+      "rgba_pixel_sha256": "827c5a8b2b11ba78f2ef796d996ba6ab6f5a0f625119afcbc2af239d4bfe669f",
+      "body_bbox_px": [
+        89,
+        84,
+        310,
+        327
+      ],
+      "anchor_px": [
+        199.0,
+        327
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 270.0,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6",
+      "sheet_id": "postures",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [89, 309, 310, 327]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/seated_look_up.png",
+      "sha256": "a59b87627d0192d199692b4471771d987663cc2c853892321120b812c5de5248",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "seated_look_board",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        112,
+        71,
+        333,
+        323
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        112,
+        71,
+        85,
+        95
+      ],
+      "rgba_pixel_sha256": "155a513ec20073585a3fdb7f8405dd294902c615ed83c0fe4512987a0385db62",
+      "body_bbox_px": [
+        112,
+        71,
+        333,
+        323
+      ],
+      "anchor_px": [
+        221.0,
+        323
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 270.0,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6",
+      "sheet_id": "postures",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [112, 305, 333, 323]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/seated_look_board.png",
+      "sha256": "b0ffa606ac48ca764b6aa8fd42aea1d652448de66a3498f62f840f6417f770d1",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "stand_half",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        99,
+        64,
+        318,
+        324
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        99,
+        64,
+        100,
+        94
+      ],
+      "rgba_pixel_sha256": "6c99660f569c47d0ad6236d9596b031f4daeb02e7096ec5579939aea6491fb39",
+      "body_bbox_px": [
+        99,
+        64,
+        318,
+        324
+      ],
+      "anchor_px": [
+        210.0,
+        324
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 270.0,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6",
+      "sheet_id": "postures",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [99, 306, 318, 324]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/stand_half.png",
+      "sha256": "2cfe665b62e6dad5d12afd54b080f379c7657b893843efda96d35436eb206d17",
+      "exact_cell_pixel_match": true
+    },
+    {
+      "id": "nod_down",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "size_px": [
+        418,
+        418
+      ],
+      "visible_bbox_px": [
+        92,
+        58,
+        307,
+        325
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "visible_alpha8_margins_px": [
+        92,
+        58,
+        111,
+        93
+      ],
+      "rgba_pixel_sha256": "20f17499fbfab6bc31c1830d7d224c1d39e2a7423e6584b021a99d6f34a1878f",
+      "body_bbox_px": [
+        92,
+        58,
+        307,
+        325
+      ],
+      "anchor_px": [
+        201.5,
+        325
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 270.0,
+      "source_sheet": "assets/library/characters/hedgehog/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "e2ec0e250bc909828b1251303134988f04a68ddf7f71f77c13e61c7c751210b6",
+      "sheet_id": "postures",
+      "review": "Visually reviewed complete subject, required state, canonical identity/colors, no extra props or cell cropping.",
+      "support_kind": "anatomical-support",
+      "support_notes": "Visible feet or seated contact at alpha>=8; support is anatomical, not transparent canvas center.",
+      "measurement_notes": [
+        "Support contact-band ROI xyxy [92, 307, 307, 325]",
+        "Body bounds are alpha>=8 full visible animal; common standing-equivalent reference is calibrated once for the sheet."
+      ],
+      "path": "assets/library/characters/hedgehog/motions/v002/nod_down.png",
+      "sha256": "b18ed3c217866cbcdd4e0f6e73d9734c80936d1b9b2af518ede54ae26f6b127a",
+      "exact_cell_pixel_match": true
+    }
+  ],
+  "review": {
+    "identity": "Canonical hedgehog v003 preserved: cream oval face, glossy brown eyes, scalloped brown quill mantle with V marks, pink ears.",
+    "style": "Warm brown contours and watercolor/paper texture matched own canonical, no uniform repainting or vector substitution.",
+    "alpha": "RGBA originals preserved; all9 cells in all3 current sheets pass alpha>=8 positive margin>=2px, with real transparent gutters. Rejected hedgehog haze/stray-alpha sheets retained in candidates.",
+    "motion": "All27 named distinct key poses reviewed, including reaction states, four wave stages, planted/air/landing, clap pair, sitting and rise intermediates, seated stretch half/full, nap and gaze. GIFs remain discrete key-pose previews; smooth episode motion not certified."
+  },
+  "preview": {
+    "preview": "assets/library/characters/hedgehog/motions/v002/pose-review.png",
+    "motion_preview": "assets/library/characters/hedgehog/motions/v002/key-pose-preview.gif",
+    "alignment_report": "assets/library/characters/hedgehog/motions/v002/alignment-report.json"
+  },
+  "pixel_processing": "Lossless exact cell crops only. No repainting, alpha cleanup, contour edits or source rescaling."
+}

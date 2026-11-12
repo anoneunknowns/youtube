@@ -1,0 +1,149 @@
+リュカ数 本制作v001 — 固定入力からの再出力手順
+2026-11-12 JST
+
+この手順の対象
+  案内する媒体：output/lucas-counting-001-v001/render/full-v002/
+  paspla-studio-lucas-numbers-L0-to-L40-1080p.mp4
+  SHA-256：89e88930300aa1878e0a94f33029706c3e3787aaf7db3f9af3638ff5d16ad84d
+  映像539.533333秒（8:59.533）、16186frames、1920×1080、30fps。
+  H.264 High / yuv420p / BT.709三タグ / TV範囲、AAC LC / 48kHz / 2ch。
+  L0=2,L1=1,L(n)=L(n-2)+L(n-1), n>=2。
+  L0〜L40=228826127、41項39加算、全104発話。時計塔とミーアキャット。
+  最終採用・検査範囲の正本：
+    design/lucas-counting-v1/production-run-v001.json
+    design/lucas-counting-v1/production-review-v001.txt
+    design/lucas-counting-v1/production-v001/qa/final-acceptance-v001.json
+
+実行前
+  以下はリポジトリのルートから実行する。
+  本PCは.venv/bin/pythonと.venv/bin/ffmpeg、.venv/bin/ffprobeを使う。
+  別環境はdocs/SETUP.mdで準備済みのPython/FFmpeg/FFprobeへ読み替える。
+  必要ならbuilder/QA/binderへ--ffmpeg/--ffprobeを明示する。
+  例の*-newが既にある場合は別名へ変える。renderer/QAの--out-dirは未存在にする。
+  採用動画、原画、旧render、音声、過去QAを出力先に指定しない。
+  手順を記載したことは、別PCでの再現や人による全編視聴を実施した証拠ではない。
+
+固定入力
+  正式timeline：output/lucas-counting-001-v001/audio-build/timeline.json
+    SHA f9871c1c77bc16dc76401aa5a917dae23b5fee07b85a9cc5aa936441c8854eba
+  校正済みmaster：output/lucas-counting-001-v001/audio-build/master.wav
+    SHA 3ae2c15db74f2afcead846bbee59508a2df8a88793da58916e31bf393539481b
+    539.504625秒、48kHz、2ch、24bit。追加ゲインや再度の音量正規化を加えない。
+  描画入力の実体コピーとSHA：
+    design/lucas-counting-v1/production-v001/input-snapshots/render-v002/manifest.json
+  actor原画・共通縮尺・足支点：
+    assets/library/characters/meerkat/generation-batches/lucas-production-20261112-01a1ce1d/registration.json
+  背景：
+    design/lucas-counting-v1/generation-batches/lucas-preproduction-20261112-01a1ce1d/source/clocktower-clean-plate.png
+  採用フォント：
+    assets/library/render-sources/counting-garden/v001/MPLUSRounded1c-Black.ttf
+  数学真値：design/lucas-counting-v1/math/lucas-truth.json
+  原本はGit LFSのポインタだけでなく画像/音声の実体を取得する。
+  元のコードが改訂されている場合は凍結SHAと対応する版で再現する。
+  スナップショットを深い保存先から直接実行するとROOT解決が変わるため、
+  適切な別チェックアウトの元のtools等の配置で使用し、現行作業領域へ無断で上書きしない。
+
+1. 任意の原寸代表確認
+
+.venv/bin/python tools/render_lucas_video.py frames --timeline output/lucas-counting-001-v001/audio-build/timeline.json --out-dir output/lucas-reproduction-new/native --times 26.066667,58.333333,142.033333,500
+
+  これはnative描画の確認。完成MP4/AACの合格ではない。
+  previewは音声なしの抜粋を作る補助コマンド。
+  --allow-planned/--neutral-placeholderによる計画表示を本番の代わりにしない。
+
+2. 本編再出力
+
+.venv/bin/python tools/render_lucas_video.py render --timeline output/lucas-counting-001-v001/audio-build/timeline.json --out-dir output/lucas-reproduction-new/render
+
+  出力：output/lucas-reproduction-new/render/paspla-studio-lucas-numbers-L0-to-L40-1080p.mp4
+  frame-state.jsonl.gz / native-state-components.json.gz / render-manifest.jsonも残す。
+  rendererはmaster_path、次にaudio_pathを参照し、両方がない固定timelineでは
+  output/lucas-counting-001-v001/audio-build/master.wavを読む。
+  masterからAACを毎回再エンコードする実装で、採用済みAACのコピーではない。
+
+3. 字幕・章・タイトル・概要を動画と同じ新規フォルダへ保存
+
+.venv/bin/python - <<'PY'
+from pathlib import Path
+import shutil
+source = Path('output/lucas-counting-001-v001/audio-build')
+dest = Path('output/lucas-reproduction-new/render')
+for name in ['subtitles.srt', 'english-captions.srt', 'chapters.txt', 'youtube-title.txt', 'youtube-description.txt', 'upload-details.txt']:
+    target = dest / name
+    if target.exists():
+        raise FileExistsError(target)
+    shutil.copy2(source / name, target)
+    assert (source / name).read_bytes() == target.read_bytes()
+PY
+
+  元の台詞・時刻を維持する再出力の手順。
+  新しいtimelineへ変えた場合は対応するbuilderで納品テキストも作り直す。
+  旧テキストを内容/時刻の異なる動画へコピーしない。
+
+4. 新しい完成MP4に対する独立検査
+
+.venv/bin/python tools/verify_lucas_video.py --video output/lucas-reproduction-new/render/paspla-studio-lucas-numbers-L0-to-L40-1080p.mp4 --timeline output/lucas-counting-001-v001/audio-build/timeline.json --master output/lucas-counting-001-v001/audio-build/master.wav --out-dir design/lucas-counting-v1/reproduction-new-qa --self-test
+.venv/bin/python tools/verify_lucas_progress.py --video output/lucas-reproduction-new/render/paspla-studio-lucas-numbers-L0-to-L40-1080p.mp4 --timeline output/lucas-counting-001-v001/audio-build/timeline.json --out-dir design/lucas-counting-v1/reproduction-new-progress-qa
+
+  --phase allが全範囲。plan/technical/audio/visual単独の合格は完成品全体の合格ではない。
+  全41値/39式、字形と各桁、全38受渡し、19→20の表示移行、実個数/carry/履歴、
+  読了進捗、字幕、実AAC/左右音声/無音/同期を新しい動画から確認する。
+  native0.5pxとデコード後原寸1pxの配置判定を分ける。
+  値を測るmaskへ経路・親枠・背景を含めず、後描画による字形上書きも検査する。
+  最終MP4の原寸・全画面・動作抜粋で、輪郭、手や顔の二重像、意図しない身体の跳ね、
+  ちらつき、切れ、長い区間の演出も確認し、技術合格とは別に記録する。
+
+5. 新しい最終AACの認識継承可否を判定
+
+.venv/bin/python design/lucas-counting-v1/production-v001/audio/bind_final_aac.py --video output/lucas-reproduction-new/render/paspla-studio-lucas-numbers-L0-to-L40-1080p.mp4 --out output/lucas-reproduction-new/final-video-binding.json
+
+  未使用の--outファイルを使う。採用事前AACは
+  output/lucas-counting-001-v001/audio-build/aac-preflight-v001.m4a、採用ゲートは
+  output/lucas-counting-001-v001/speech/aac-preflight-v001/preflight-acceptance.json。
+  全パケットの内容/サイズ/PTS/DTS/duration/priming、stream条件、デコード後の
+  左右PCMが完全一致した場合だけ、全104cueの事前AAC認識・語頭末確認を継承できる。
+  新しい対象動画に対するbindingが必要で、full-v002の既存bindingだけを流用しない。
+  不一致の場合は新AACの新規ASR/CTC、語頭/語末、音量/true peak、左右音声、
+  予定外の音や無音、同期を監査して新しい採否を残す。
+  波形一致検査やbindingを、新たな認識または人による全編試聴と記録しない。
+  同じ入力でもFFmpeg等の版で動画bytes/SHAやAACが変わり得るため、
+  SHAの一致だけで新動画の表示・時刻・音声を検査済みにはしない。
+
+任意：採用PCM群からmaster/timelineを再構築する場合
+  通常の再出力では不要。モデルからTTSを生成し直す工程とも区別する。
+  固定の個別採用音源・ゲート・CTCを明示する。今回はcodec-corrections未使用。
+
+.venv/bin/python tools/build_lucas_episode.py --speech-manifest output/lucas-counting-001-v001/speech/measurements-selected-v003.json --speech-gate output/lucas-counting-001-v001/speech/speech-acceptance.json --phonemes output/lucas-counting-001-v001/speech/isolated-phonemes-selected-v003.json --ffmpeg .venv/bin/ffmpeg --out-dir output/lucas-rebuild-new
+
+  新masterを描画するなら、rendererが読むパスも新masterへ明示する。
+  builderのmaster_audio.pathだけを変更してもrendererの入力は切り替わらない。
+  元timelineを上書きせず、描画用の派生JSONを作る例：
+
+.venv/bin/python - <<'PY'
+from pathlib import Path
+import json
+source = Path('output/lucas-rebuild-new/timeline.json')
+plan = json.loads(source.read_text())
+plan['master_path'] = 'output/lucas-rebuild-new/master.wav'
+with source.with_name('timeline-render.json').open('x', encoding='utf-8') as stream:
+    json.dump(plan, stream, ensure_ascii=False, indent=2)
+    stream.write('\n')
+PY
+
+  このtimeline-render.jsonと未使用のrender先で再描画し、検査の--timeline/--masterも
+  それぞれ新しいものへそろえる。新しい字幕等はlucas-rebuild-newから使う。
+  新master/AACの採否を新出力へ束ね直し、元の合格を無条件には継承しない。
+
+履歴・演出・保存
+  full-v001は経路/案内線等による字形上書きの不採用履歴として保全。
+  render-v001の凍結コード、修正前native/実MP4、負の対照、旧QAも残す。
+  full-v002は経路と全カード背景を字形より先に描画し、種の添字案内線を数値外へ回す。
+  最終合成後、元字形alpha>=128の実画素が描画直後のRGBを保つ検査を追加した。
+  同じ表示尺度の通常カウント/受渡しでactorの位置/身体高を維持する。
+  演出の判断はrenderer/acting-long-interval-review.json/.txtを参照。
+  本作の静かな観察と25演技窓を採用し、現行Fibonacci v004の細かな視線追従/頷きと
+  同じ応答性を達成したとは記録しない。窓数や静止秒数を一律条件にしない。
+  今回の自動全編解析、原寸/動作抜粋の確認、新規認識と同一AACによる継承を分け、
+  未実施の人による本編全時間の連続視聴/試聴を実施扱いにしない。
+  採用先の変更は新しい制作記録・最終QA・参照画像・素材管理の全体検査をそろえて行う。
+  この手順の実行だけで共通カタログの採用先を自動変更しない。

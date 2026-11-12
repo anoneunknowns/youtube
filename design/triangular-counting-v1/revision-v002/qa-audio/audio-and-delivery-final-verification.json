@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "kind": "triangular-v002-final-audio-subtitles-and-delivery-verification",
+  "status": "pass",
+  "video": {
+    "path": "output/triangular-counting-001-v002/paspla-studio-triangular-numbers-0-to-1830-1080p-bt709.mp4",
+    "sha256": "db48a46013d770c87ec85e4d2733827a3f6dfd3882fa453a968692e0672a9e92"
+  },
+  "timeline": {
+    "path": "output/triangular-counting-001-v002/timeline.json",
+    "sha256": "c0533218beaa2c8d180b98f4e0fa91d09dbe3ed3e40dba8c6ada5a216b3075a4"
+  },
+  "immutable_source_master": {
+    "path": "output/triangular-counting-001-v001/audio-build/v002/master.wav",
+    "sha256": "ba7b9e6637a6f380a4b204e1a11bbfd8d0def2b9c05c8b089952996d97ea645e"
+  },
+  "new_measurements": {
+    "final_MP4_waveform_source_gain_lag": true,
+    "final_MP4_silence_intervals": true,
+    "final_MP4_level_probe": true,
+    "all3_delivered_SRT_contents_and_timestamps": true,
+    "video_stream_metadata": true,
+    "new_ASR_inferences": 0,
+    "new_CTC_inferences": 0
+  },
+  "inherited_recognition": {
+    "baseline_fresh_recheck": {
+      "path": "design/triangular-counting-v1/recheck-20261112/audio/audio-recheck.json",
+      "sha256": "981fe84b4c1c5790ba5ee142174959be308aee9af768c4ad56746d538d74dfe4"
+    },
+    "basis": "ExactAAC payload/PTS/DTS/duration/size/side-data, codecprofile/sample rate/channels/timebase/start/duration/initialpadding/extradatahash identity. Audio-only assessment inherited; obsolete v001 visual findings are not adopted for v002.",
+    "ASR_main_channel_utterances": 262,
+    "CTC_main_channel_utterances": 262,
+    "additional_CTC_diagnostics": 24,
+    "raw_homophone_spelling_mismatches": 4,
+    "unresolved_audio_findings": 0
+  },
+  "summary": {
+    "audio_packets_identical": 22569,
+    "AAC_initial_padding_samples": 1024,
+    "timebase": "1/48000",
+    "audio_start_pts": 0,
+    "audio_duration_ts": 23108800,
+    "video_frames": 14443,
+    "video_duration_s": 481.43333333333334,
+    "PCM_timeline_duration_s": 481.4257083333333,
+    "voice_cues": 131,
+    "source_waveforms_checked_per_track": 131,
+    "channels": 2,
+    "minimum_final_AAC_original_source_correlation": 0.9975819795861465,
+    "AAC_lag_range_samples": [
+      0,
+      0
+    ],
+    "silence_intervals_per_track": 132,
+    "maximum_final_silent_interior_peak_pcm16": 1,
+    "master_silent_interior_peak_pcm16": 0,
+    "integrated_lufs": -16.65,
+    "true_peak_dbtp": -2.02,
+    "SRT_files": 3,
+    "SRT_cues": 393,
+    "SRT_time_endpoints": 786,
+    "terms": 61,
+    "expressions": 60,
+    "range": [
+      0,
+      1830
+    ],
+    "normal_two_second_boundaries": 55,
+    "REPLAY_boundaries": 5,
+    "chapters": 6,
+    "minimum_chapter_duration_s": 17.433333333333337,
+    "delivery_files": 7,
+    "unresolved_audio_or_delivery_findings": 0
+  },
+  "evidence": {
+    "AAC_identity": {
+      "path": "design/triangular-counting-v1/revision-v002/qa-audio/AAC-identity-and-inherited-recognition.json",
+      "sha256": "3290c5b8c00ed7f7a42ace60a663e95fb5043c7761e06423c04fe9dded520b64"
+    },
+    "new_waveform_silence_subtitle_audit": {
+      "path": "design/triangular-counting-v1/revision-v002/qa-audio/new-final-waveform-silence-subtitles/verification.json",
+      "sha256": "2663b62a6f92af7ee0cfef72c699dd38ee0cbde41201ad62de71bfbb81b66668"
+    },
+    "new_level_probe": {
+      "path": "design/triangular-counting-v1/revision-v002/qa-audio/new-final-level.log",
+      "sha256": "c1f144eeffc163155ff0b5fb2b08eb1ee66f3c1365d434199b04de7e631ccf20"
+    },
+    "new_delivery_content_check": {
+      "path": "design/triangular-counting-v1/revision-v002/qa-audio/delivery-content-review.json",
+      "sha256": "9c9ac0cce48f176a3e7d3efde2af76d697cd92decfa53df154dcd9ea32e6da4b"
+    },
+    "delivery_byte_copy_and_compatibility": {
+      "path": "design/triangular-counting-v1/revision-v002/qa-audio/delivery-preflight.json",
+      "sha256": "9f070624176ec01623f45f2b33e5f483b5984789cdc87bd722baef92b0da2690"
+    },
+    "versioned_verifier_copies": {
+      "path": "design/triangular-counting-v1/revision-v002/qa-audio/audio-check-tools.json",
+      "sha256": "4b4483b36898a448bb1cdedbd6ad70f674b2d9f17cb497a76bfb0a65f2c8c136"
+    }
+  },
+  "media_probe": {
+    "width": 1920,
+    "height": 1080,
+    "color_space": "bt709",
+    "color_transfer": "bt709",
+    "color_primaries": "bt709",
+    "avg_frame_rate": "30/1",
+    "start_pts": 0,
+    "start_time": "0.000000",
+    "duration": "481.433333",
+    "nb_frames": "14443"
+  },
+  "scope_limits": [
+    "Recent fresh ASR/CTC are inherited through exactAAC identity; no newmodel inference was run for v002. New waveform/quiet/levels and SRT checks were run against the actualv002 MP4.",
+    "Human continuous full-length listening/viewing was not performed. Corrected row-label pixels and N053gesture belong to independent visual QA.",
+    "Loudnorm input_i/input_tp are measurements to a null sink; no audio gain/filter was written to the media."
+  ],
+  "old_originals_prior_QA_or_shared_catalogs_modified": false
+}

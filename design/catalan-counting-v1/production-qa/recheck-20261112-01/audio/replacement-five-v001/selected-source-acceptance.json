@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "kind": "hash-bound-catalan-speech-review",
+  "accepted": true,
+  "accepted_at_utc": "2026-11-12T03:20:11.746744+00:00",
+  "source_manifest_sha256": "d4993ccd053d613402cb32da017172db7e6cd623dd2984adc574eec7b37f2eed",
+  "inputs": {
+    "manifest": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/selected-source-measurements.json",
+      "sha256": "d4993ccd053d613402cb32da017172db7e6cd623dd2984adc574eec7b37f2eed"
+    },
+    "isolated_asr": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/selected-source-asr.json",
+      "sha256": "21a0f1730d2882713be995c82ce7eee7d19252d2f3c5a6eff53baf37f0a0d6ea"
+    },
+    "isolated_phonemes": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/selected-source-phonemes.json",
+      "sha256": "f65aac697709e703fd896a1df7e3541f48405dfc0789306c5ace5c571d34dbbd"
+    },
+    "acoustics": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/selected-source-acoustics.json",
+      "sha256": "521948de5caa97635d472735aa7837cb0bb698d8d3e5957ad5254114059edd35"
+    },
+    "individual_decisions": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/selected-source-decisions.json",
+      "sha256": "fa54ab7cfa283e364ae82beb2d453e48aae8746ee6c3cb6258d0488fd6fbdf69"
+    },
+    "supporting_evidence_00": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/generated/takes.json",
+      "sha256": "eb7e7b69bcf71ee6571f08e72706b759492ae64ff552c1beb30f10f35a7dac7a"
+    },
+    "supporting_evidence_01": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/generated/fresh-asr.json",
+      "sha256": "722cfd967b7b76082bd0eb71bf28dec90df4c996040f488457e97ac086a2015c"
+    },
+    "supporting_evidence_02": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/generated/fresh-phonemes.json",
+      "sha256": "eb123264489fbc6ce807362811e6b62b82c5793cae18159db38ee7e97e94b328"
+    },
+    "supporting_evidence_03": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/extracted-first-five.wav.json",
+      "sha256": "5fbdf4300fdfe8236c33d42adaca331c6e1094a8cafb067c7a4dcc728a3d1fe1"
+    },
+    "supporting_evidence_04": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/preserved-old.json",
+      "sha256": "b3ea84f0913721e9e873831d5f4948f9a0330593cf888d13d0f793ea34a03526"
+    },
+    "supporting_evidence_05": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/period-comparison.json",
+      "sha256": "50cf3eaa8e785c3ccc255648d5865a82d1908861d45eb70e17d883183a844db1"
+    },
+    "supporting_evidence_06": {
+      "path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/five-comparison.json",
+      "sha256": "db4a8b549f92ecde793529e7ccabda742b17a908ab8c9706ef663a1a9cc7d007"
+    }
+  },
+  "scope": "Selected isolated source WAVs and their fresh lexical/phoneme/signal evidence. No final master/AAC, whole-video listening or perfect-articulation claim.",
+  "policy": {
+    "isolated_ASR_match_alone_approves_pronunciation": false,
+    "phone_similarity_threshold_approves_pronunciation": false,
+    "individual_hash_bound_decision_required": true,
+    "changed_source_requires_fresh_evidence": true
+  },
+  "summary": {
+    "clips": 1,
+    "numbers": 1,
+    "dialogue": 0,
+    "accepted": 1,
+    "unresolved": 0,
+    "isolated_asr_warnings_reviewed": 0
+  },
+  "unresolved": [],
+  "results": [
+    {
+      "id": "N003",
+      "index": 3,
+      "number": "5",
+      "expected_text": "five",
+      "source_path": "design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/N003-selected-source.wav",
+      "source_sha256": "e8b75bed3dee8e527252792c586c63c094645f5ce14863626be62f432a582c02",
+      "duration_s": 0.6005416666666666,
+      "asr_status": "asr-match",
+      "asr_transcript": "5",
+      "expected_espeak": "fˈaɪv",
+      "recognized_phonemes": "f aɪ v",
+      "phoneme_comparison_not_acceptance_score": 1.0,
+      "phoneme_differences": [],
+      "flags_reviewed": [],
+      "waveform": {
+        "peak_pcm16": 17321,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.03,
+        "tail_margin_at_minus50db_s": 0.090625
+      },
+      "terminal_target": false,
+      "accepted": true,
+      "decision": "accepted-fresh-contextual-five-with-quiet-v-ending",
+      "notes": [
+        "Fresh candidate uses exactly the established af_heart/0.98/fp32 voice profile. Generated complete context and original raw candidate remain preserved.",
+        "Full context ASR and independent CTC retain the first five before the next sentence. The extracted and cue-padded source itself freshly gives isolated ASR5 and CTC/f aI v/ with no trailing z/s label.",
+        "The cut0..0.51s includes the whole initial f/v utterance and completes before We at0.56s; last -50dBFS activity before extraction is0.494875s, leaving a quiet extraction guard. The series word-extraction tool adds2ms edge fades and15ms silence pads; an extra1453 zeros retain the exact original14413-sample cue. No speed change or terminal-voicing cutoff.",
+        "The old isolated/period versions retain a strong terminal high-frequency burst, around20dB above the same-voice terminal-five reference; the contextual-start candidate has a quieter natural v ending. This is adopted as removal of unwanted terminal hiss, without asserting that the old lexical word was definitively fives.",
+        "No human full-listening claim. The current model session does not support direct audio-input audition; decisions use independent lexical/phonetic recognition, waveform, timing and spectral evidence."
+      ],
+      "human_listening_claim": false,
+      "failures": []
+    }
+  ],
+  "limitations": "ASR and CTC are fallible; decisions distinguish lexical transcription and ordinary phonetic variation from material speech defects. Automated and agent review evidence does not assert human listening.",
+  "integer_policy": "Exact decimal-string values through quadrillions; ASR BigInt comparison; no Number rounding",
+  "passed": true
+}

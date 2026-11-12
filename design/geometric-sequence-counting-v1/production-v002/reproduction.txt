@@ -1,0 +1,15 @@
+等比数列 完成版v002の再出力（未使用の出力先へ）
+
+固定採用音源を使う再現であり、TTSの再生成ではありません。
+タイムライン: output/geometric-sequence-counting-001-v002/audio-build/timeline-v004.json
+音声gate: output/geometric-sequence-counting-001-v002/audio-build/speech-acceptance-final.json
+採用AAC: output/geometric-sequence-counting-001-v002/audio-build/encoded-aac-v002-256k/accepted-aac.m4a
+採用AAC SHA256: 3cc1f26981102e4480f8e9d0e2c0953d3e7f37d6ccb4b0cb38177643631ebce2
+
+.venv/bin/python tools/render_geometric_video.py --timeline output/geometric-sequence-counting-001-v002/audio-build/timeline-v004.json --out-dir output/reproduced-geometric-v002-picture
+.venv/bin/python tools/finalize_geometric_video.py --render-manifest output/reproduced-geometric-v002-picture/render-manifest.json --accepted-aac output/geometric-sequence-counting-001-v002/audio-build/encoded-aac-v002-256k/accepted-aac.m4a --aac-sha256 3cc1f26981102e4480f8e9d0e2c0953d3e7f37d6ccb4b0cb38177643631ebce2 --aac-qa output/geometric-sequence-counting-001-v002/audio-build/encoded-aac-v002-256k/acceptance.json --output output/reproduced-geometric-v002-delivery/paspla-studio-geometric-sequence-2-times-3-1080p.mp4 --qa-dir output/reproduced-geometric-v002-finalization
+.venv/bin/python tools/export_geometric_delivery.py --timeline output/geometric-sequence-counting-001-v002/audio-build/timeline-v004.json --out-dir output/reproduced-geometric-v002-publishing
+
+音源は既に音量校正済みです。追加gain/時間伸縮/limiterを適用せず、受入済みAACをstream copyします。新しい符号化や異なるtimelineへ無条件で流用しません。
+新映像を検査するときはverify_geometric_video.pyと関連補足へ新パス/新出力フォルダを渡し、既存QAを再実行と記載しません。実際のv002検査の集約はproduction-qa/v002/final-verification.json、素材/音声/時刻/検査の凍結receiptはproduction-run-v002.jsonです。
+v001のD016明瞭さに関する旧承認は、今回の修正・負対照によりその範囲を更新しています。旧MP4・旧WAV・当時のgate/QAは履歴として残します。

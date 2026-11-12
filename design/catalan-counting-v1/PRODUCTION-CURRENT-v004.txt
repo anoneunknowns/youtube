@@ -1,0 +1,16 @@
+カタラン数カウント 採用完成版と再現入口（2026-11-12）
+
+採用動画: output/catalan-counting-001-v007/paspla-studio-catalan-numbers-c0-to-c30-1080p.mp4
+1920×1080 / 30fps /18481frames /616.033333秒、C0=1〜C30=3,814,986,502,092,304の31値。
+T000aの語境界同期に加え、1 PAIRの単数2箇所とALL 31の空白を校正済み。数学・発話・字幕・全時刻は維持。
+採用判定と検査: production-run-v004.json / production-review-v004.txt / production-closeout-v004.json。
+過去のv001/v002記録とv006以前のMP4/原本は保全。現在は上記v007を選ぶ。
+
+再出力（既存物を上書きせず、未使用の出力先を指定）
+.venv/bin/python tools/render_catalan_video_v007.py --timeline design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/adopted-v002/timeline.json --audio design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/adopted-v002/master.wav --accepted-aac design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/adopted-v002/accepted-candidate-aac.m4a --background assets/library/worlds/ribbon-courtyard/backgrounds/v001/ribbon-courtyard-background.png --character-registration assets/library/characters/tora/generation-batches/catalan-production-20261112-01a1cd57/runtime/registration.json --out-dir output/catalan-reproduction-new
+.venv/bin/python tools/prepare_catalan_delivery_v003.py --timeline design/catalan-counting-v1/production-qa/recheck-20261112-01/audio/replacement-five-v001/adopted-v002/timeline.json --out-dir output/catalan-reproduction-new
+プレビューもこの実測timelineに--preview-onlyを加えて作る。v007は実音声の語境界を使う専用renderer。
+timing-revisions/intro-word-timing-v001.jsonとその左右CTC根拠を固定入力として保持する。採用音声gateはAACと同階層のencoded-aac-acceptance.json。
+rendererはanimation_v003と既存登録原画を使用。新規TTS/画像生成、旧sourceの書換えは不要。
+MP4色管理はBT709/TVを明示し、採用AACはcopy。別環境ではMP4 bytesが変わる可能性があるため、表示・音声・時刻・形式を再検査する。
+公開用テキストは新helperが元builderから生成し、all 31の空白を整える。字幕の内容/時刻は変えない。

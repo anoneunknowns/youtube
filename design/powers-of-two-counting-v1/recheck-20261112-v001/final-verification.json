@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "kind": "completed-powers-of-two-v004-content-picture-audio-recheck",
+  "created_at_utc": "2026-11-12T04:01:41.767483+00:00",
+  "passed": true,
+  "errors": [],
+  "unresolved": 0,
+  "video": {
+    "path": "output/powers-of-two-counting-001-v001/video/v004-audio-reencoded/paspla-studio-powers-of-two-1-to-18446744073709551616-1080p.mp4",
+    "sha256": "ff0375d857354285fa9aebbe08f3f95072fd7f8ce9ed97947e0b3c0ada602e61",
+    "bytes": 67800401
+  },
+  "timeline": {
+    "path": "output/powers-of-two-counting-001-v001/audio-build/codec-v003/timeline.json",
+    "sha256": "7584bff038ca9e42951f09e5f0e61b44af1b5ceec3dd8d7453228d67a6ab735c",
+    "bytes": 521552
+  },
+  "master": {
+    "path": "output/powers-of-two-counting-001-v001/audio-build/master.wav",
+    "sha256": "fc0564b0d474fcae762272cc243ce4facd19aebd38859cb6afdccae4778a5b52",
+    "bytes": 162755682
+  },
+  "accepted_aac": {
+    "path": "output/powers-of-two-counting-001-v001/audio-build/codec-v003/accepted-aac.m4a",
+    "sha256": "6e3cbac811194a930b9523eb0a8546f3932199e695db9770d126f244a5218e3b",
+    "bytes": 10690677
+  },
+  "finding_and_fix": {
+    "old_v003_audio_failed": true,
+    "primary_defect": "N029 left-channel AAC transient at170.437354167s absent from PCM",
+    "corrected_by": "original unmodified PCM master encoded with auto-MS, ISoff, PNSoff; N029 unnecessary additional-3.5dB workaround removed",
+    "old_media_and_reports_preserved": true,
+    "new_tts": 0,
+    "new_images": 0
+  },
+  "content": {
+    "all_65_powers_correct": true,
+    "range": "2^0=1 through2^64=18,446,744,073,709,551,616",
+    "doublings": 64,
+    "independent_checks": 3731,
+    "mismatches": 0,
+    "captions": 78,
+    "narrative_cues": 13,
+    "spoken_number_cues": 65
+  },
+  "picture": {
+    "fresh_parent_decoded_frames": 16954,
+    "native_digit_observations": 108100,
+    "native_alignment_observations": 38052,
+    "all_axes_within_px": 1,
+    "actor_windows_reviewed": 24,
+    "all_corrected_decoded_frames_identical_to_fresh_parent": 16954,
+    "all_corrected_H264_packets_identical": 16954,
+    "picture_reencoded": false,
+    "fade_samples": 58,
+    "five_picture_negative_controls_rejected": true
+  },
+  "audio": {
+    "new_wholecue_ASR": 156,
+    "new_wholecue_CTC": 156,
+    "new_group_ASR": 430,
+    "new_focused_group_CTC": 82,
+    "raw_full_ASR_warnings_reviewed": {
+      "left": 17,
+      "right": 18
+    },
+    "both_channels_accepted_cues": 78,
+    "unresolved": 0,
+    "silent_intervals": 79,
+    "all78_local_transient_screen_with_individual_X030_resolution": true,
+    "maximum_channel_residual_pcm16": 1136,
+    "maximum_stereo_difference_pcm16": 68,
+    "old_maximum_channel_residual_pcm16": 25347,
+    "old_maximum_stereo_difference_pcm16": 28666,
+    "actual_levels": {
+      "integrated_lufs": -16.81,
+      "true_peak_dbtp": -2.02,
+      "lra_lu": 6.4
+    },
+    "accepted_AAC_packets_and_PCM_identical_in_corrected_MP4": true
+  },
+  "technical": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 16954,
+    "video_duration_s": 565.133333,
+    "audio_duration_s": 565.123542,
+    "format": "H264 yuv420p BT709 limited; AAC48k stereo",
+    "actual_loudness": {
+      "integrated_lufs": -16.81,
+      "true_peak_dbtp": -2.02,
+      "lra_lu": 6.4
+    }
+  },
+  "evidence": {
+    "mathematics": {
+      "path": "design/powers-of-two-counting-v1/recheck-20261112-v001/math/audit-results.json",
+      "sha256": "9adeee39627a09537997f27166a17f1bcdd792381371e1d0eff2d6124a70b702",
+      "bytes": 5254
+    },
+    "fresh_visual": {
+      "path": "design/powers-of-two-counting-v1/recheck-20261112-v001/video/visual-review.json",
+      "sha256": "f9eba826b81d2090a1b9d297dde2f01612427f9955b897718e81ce2f97b6a1ab",
+      "bytes": 15405
+    },
+    "fresh_visual_details": {
+      "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/automated/verification.json",
+      "sha256": "61f5290d2363f9fc7940daa74addc6bbac335cb99bfdc30baa4a10751e788b86",
+      "bytes": 17175
+    },
+    "picture_and_audio_identity": {
+      "path": "output/powers-of-two-counting-001-v001/video/v004-audio-reencoded/render-manifest-v004.json",
+      "sha256": "f70cdd4fb36c7c83b489534b87ec5122c6c39780666141f80135624747f3b9b6",
+      "bytes": 5803
+    },
+    "new_audio_review": {
+      "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/audio-correction-v001/candidate-review.json",
+      "sha256": "ce9cdee5de6913b759de21abf9c4763a95433d269fb854c8aee63ae611109c9a",
+      "bytes": 3622
+    },
+    "new_audio_binding_validation": {
+      "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/audio-correction-v001/final-binding-validation.json",
+      "sha256": "adfd06fd51d37356a6ecf3a7589f741bf433b9bfb7a7c3a0a4f1088c7d53dee5",
+      "bytes": 358
+    },
+    "codec_correction": {
+      "path": "output/powers-of-two-counting-001-v001/audio-build/codec-v003/correction.json",
+      "sha256": "eb0f641ae688c39ddefaf5726506b0db3cce57d5b6f9ff646b587dd15daf53c9",
+      "bytes": 3903
+    },
+    "root_local_candidate": {
+      "path": "design/powers-of-two-counting-v1/recheck-20261112-v001/root-n029-candidate-check-v002.json",
+      "sha256": "aeea5f31ecde09dff009c89ac568d3b8029d6c2081e43ef0e3216242574f8f89",
+      "bytes": 1875
+    },
+    "old_pass_supersession": {
+      "path": "design/powers-of-two-counting-v1/recheck-20261112-v001/audio-pass-supersession.json",
+      "sha256": "9a07a31aee9dd26a74c88d101a8f3d924c87312cc64cd441be98e8d099e22545",
+      "bytes": 1860
+    },
+    "root_native_parent_review": {
+      "path": "design/powers-of-two-counting-v1/recheck-20261112-v001/root-native-and-delivery-review.json",
+      "sha256": "dd4b9e149e7e1af1e526920169d2dc00d75a4e9ca7a519e6cb295704b228b6ca",
+      "bytes": 11880
+    }
+  },
+  "direct_source_receipt_observations_checked": 34,
+  "unique_paths_rehashed": 36,
+  "root_actual_new_MP4_image": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/root-visual/v004-final-count.png",
+    "sha256": "506fc5bfbc63751bb56f2f940beaae44e02f995a47f0a4d5a7306dadc82f77ff",
+    "bytes": 2523881
+  },
+  "scope_limitations": [
+    "Fresh full-program automatic decoding/recognition/signal analysis, assistant native image/action-strip and individual evidence review.",
+    "Corrected picture and audio inheritance use exact H264/frame and accepted AAC/PCM identity.",
+    "Not a human9min25sec continuous audiovisual viewing/listening record."
+  ]
+}

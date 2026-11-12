@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "QA-helper-revision-final-audio-timeline-binding",
+  "created_at_utc": "2026-11-12T03:50:02.563237+00:00",
+  "previous_helper": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/remux-audio-v004.py",
+    "sha256": "5b6108fe8eb2d8e8245a7d671e802d8d0c9ef3032e23f4e8ab0ef5ea1b09af05"
+  },
+  "previous_helper_snapshot": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/helper-revisions/remux-audio-v004-v001-before-final-timeline.py",
+    "sha256": "5b6108fe8eb2d8e8245a7d671e802d8d0c9ef3032e23f4e8ab0ef5ea1b09af05"
+  },
+  "current_helper": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/remux-audio-v004-v002.py",
+    "sha256": "87604f0019070583c9960bff9c885239668b29b24977faa5ab21359757eef9c7"
+  },
+  "preserved_preparation": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/remux-v004-preparation/preparation.json",
+    "sha256": "d787da697d385fdb5c525b59ba85d4a7ecfdf0fd0420474a22e512a7447de940"
+  },
+  "prior_staging_record": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/helper-revisions/v002-revision.json",
+    "sha256": "dc193b65ed50670daa048a7c6f5847e6f74484012407db1f884e4889d9ebddd9"
+  },
+  "prior_staging_helper_snapshot": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/helper-revisions/remux-audio-v004-v002-before-cli-validation.py",
+    "sha256": "333a10adca03b53e10ac81087c3406280d28b4b438615d3f65f8b02ee1a99f8a"
+  },
+  "prior_staging_contract_checks": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/video/helper-revisions/v002-contract-verification.json",
+    "sha256": "7e5bb172e071dd57d83387409352914716d69a1396658fd5b343c88e22d63642"
+  },
+  "staging_correction": "CLI --help caught duplicate --proof-dir registration before any media action. Removed duplicate; old staging helper and records preserved. CLI and contract checks repeated on final helper.",
+  "changes": [
+    "Required --final-timeline remux argument",
+    "Compare immutable voice/math/seconds/samples/frames/visual contracts; allow N029 gain and top-level master/AAC/codec metadata changes",
+    "Verify new master WAV hash; bind final timeline/master to manifest plus compatibility proof",
+    "Preserve old helper/preparation and bind current helper with revision lineage"
+  ],
+  "media_remux_executed": false
+}

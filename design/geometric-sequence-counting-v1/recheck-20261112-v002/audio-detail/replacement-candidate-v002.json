@@ -1,0 +1,61 @@
+{
+  "kind": "unadopted-D016-one-word-candidate-with-explicit-source-lineage",
+  "status": "candidate-not-adopted",
+  "authorization": "Root requested a reviewable complete-line or provenance-tracked word replacement candidate after focused D016 vowel investigation. No production files changed.",
+  "path": "/Users/support/codex/youtube/design/geometric-sequence-counting-v1/recheck-20261112-v002/audio-detail/clips/D016-word-replacement-candidate-v002.wav",
+  "sha256": "0b5ee47e429095e7bb1c8846b710a56334d6e2c3d6d395aa6990b0a42f2d0161",
+  "spoken_text": "Two, six, eighteen, fifty-four.",
+  "duration_s": 1.91025,
+  "sample_frames_24k": 45846,
+  "duration_change_s": 0.08,
+  "old_D016": {
+    "path": "output/geometric-sequence-counting-001-v001/audio-build/candidates-v001/D016.wav",
+    "sha256": "0ff69f773975612e6a5e37154bc700741240a090dd08f4dd54a346f9585a52bb",
+    "samples24k": 43926,
+    "mix_gain_db": -3.5856300772057015
+  },
+  "replacement_N002": {
+    "path": "output/geometric-sequence-counting-001-v001/audio-build/six-context-v006/N002-context.wav",
+    "sha256": "cba84acd61852d2afbec3a8fe28747448770f9d088f3bb4c34070d20297b74f7",
+    "samples24k": 10560,
+    "adopted_mix_gain_db": -0.1435704333120471
+  },
+  "operation": {
+    "remove_original_D016_samples24k": [
+      7920,
+      16560
+    ],
+    "remove_original_D016_interval_s": [
+      0.33,
+      0.69
+    ],
+    "insert_all_selected_N002_samples24k": [
+      0,
+      10560
+    ],
+    "constant_gain_applied_to_N002_in_candidate_db": 3.4420596438936544,
+    "why_gain": "Retain the current adopted N002 output level after candidate receives old D016 per-cue mix gain. No time stretch/compression/limiter.",
+    "prefix_suffix_kept_sample_exact_except_2ms_join_fades": true,
+    "crossfade_or_fade_added": "2ms linear fade-out on retained prefix ending at0.33s;2ms fade-in on retained suffix from0.69s; replacement N002 already has reviewed edges",
+    "candidate_required_mix_gain_db_for_same_adopted_output": -3.5856300772057015
+  },
+  "boundaries": [
+    {
+      "sample24k": 7920,
+      "left_pcm16": 0,
+      "right_pcm16": 0,
+      "jump_pcm16": 0,
+      "ten_ms_rms_dbfs": -32.63087848981522
+    },
+    {
+      "sample24k": 18480,
+      "left_pcm16": 0,
+      "right_pcm16": 0,
+      "jump_pcm16": 0,
+      "ten_ms_rms_dbfs": -51.79584434598021
+    }
+  ],
+  "peak_pcm16": 16096,
+  "clipped_samples": 0,
+  "not_yet_approved": "Fresh candidate lexical/phoneme/local seam checks are separate. Candidate is not inserted into production source gate/timeline/master/AAC/video."
+}

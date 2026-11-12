@@ -19,3 +19,8 @@
 *.otf filter=lfs diff=lfs merge=lfs -text
 *.woff filter=lfs diff=lfs merge=lfs -text
 *.woff2 filter=lfs diff=lfs merge=lfs -text
+
+# Large production inspection records exceed GitHub's regular blob limit.
+design/square-counting-v1/production-motion/native-layout-draft-*.json filter=lfs diff=lfs merge=lfs -text
+output/triangular-counting-001-v*/native-states.json filter=lfs diff=lfs merge=lfs -text
+*.jsonl.gz filter=lfs diff=lfs merge=lfs -text

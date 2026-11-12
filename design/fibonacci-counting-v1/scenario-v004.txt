@@ -1,0 +1,1493 @@
+Num-Num Numbers — フィボナッチ v004 現行脚本・動作対応
+状態：完成v004実媒体の独立gate合格。ユーザー承認とは区別する。
+全104English本文・実測発話時刻と教材はv003から不変。音声測定正本はoutput/fibonacci-counting-001-v002/audio-build、視覚親はoutput/fibonacci-counting-001-v003/timeline.json。
+F0=0、F1=1、整数n>=2でFn=F(n-2)+F(n-1)。F0..F40の41項・39加算。F1/F2の二つの1を保持。
+v004は猫の登録原画・cue由来仕草だけを改訂。旧16姿＋新6姿、400px身体基準・足(1655,990)、hold表示。
+動作時刻は30fps整数frameの半開区間[start,end)。声の時刻は原音24kHz実測秒で、丸めず保持する。
+入力a/bの視線は同じupper-left原画を共用し、別々の水平眼位を描いたとは扱わない。
+
+今回の採用対象はproduction-v002。T018の腕を戻す3か所へpresent_halfを3framesずつ挟み、計9actorframesのみを初回v004から変更。旧初回媒体/QA/scheduleは保全。
+
+I01 | 0.800000000–5.013541667s | intro
+EN: Hi! Let's count Fibonacci numbers, and watch each new number take shape.
+教材: 雲海と郵便局の全画面。タイトル、初期値0/F0と1/F1の小カード。シャム猫は準備姿勢と前脚in/outで2往復し通常姿へ戻る。画面の拡大移動は行わない。
+発話中の猫:
+  frame 24–27 / 0.800–0.900s: 通常姿勢 (neutral)
+  frame 27–30 / 0.900–1.000s: 通常姿勢 (neutral)
+  frame 30–36 / 1.000–1.200s: 手振りの準備 (wave_prepare)
+  frame 36–42 / 1.200–1.400s: 前脚を内側へ (wave_in)
+  frame 42–49 / 1.400–1.633s: 前脚を外側へ (wave_out)
+  frame 49–56 / 1.633–1.867s: 前脚を内側へ (wave_in)
+  frame 56–63 / 1.867–2.100s: 前脚を外側へ (wave_out)
+  frame 63–69 / 2.100–2.300s: 前脚を内側へ (wave_in)
+  frame 69–75 / 2.300–2.500s: 手振りの準備 (wave_prepare)
+  frame 75–81 / 2.500–2.700s: 通常姿勢 (neutral)
+  frame 81–151 / 2.700–5.033s: 通常姿勢 (neutral)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 151–169 / 5.033–5.633s: 通常姿勢 (neutral)
+
+I02 | 5.613541667–9.144708333s | intro
+EN: We start with zero and one. These are our two starting values.
+教材: START WITH TWO SEEDS。左右の独立カードに0／F0 · FIRST TERMと1／F1 · SECOND TERMを表示。導入であり本カウントの進捗は増やさない。
+発話中の猫:
+  frame 169–188 / 5.633–6.267s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 188–206 / 6.267–6.867s: 教材提示の中間姿勢 (present_half)
+  frame 206–245 / 6.867–8.167s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 245–275 / 8.167–9.167s: 左下の結果を注視 (watch_lower_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 275–276 / 9.167–9.200s: 左下の結果を注視 (watch_lower_left)
+  frame 276–289 / 9.200–9.633s: 通常姿勢 (neutral)
+  frame 289–293 / 9.633–9.767s: 基準の左視線 (watch_left)
+
+I03 | 9.744708333–14.660208333s | intro
+EN: To make the next number, add the previous two. Then use the newest pair, and do it again.
+教材: 一般式Fn=F(n−2)+F(n−1)、n≥2、初期条件F0=0/F1=1。直前二項の加算規則を説明。
+発話中の猫:
+  frame 293–312 / 9.767–10.400s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 312–323 / 10.400–10.767s: 教材提示の中間姿勢 (present_half)
+  frame 323–356 / 10.767–11.867s: 教材を示す (present_full)
+  frame 356–365 / 11.867–12.167s: 教材提示の中間姿勢 (present_half)
+  frame 365–402 / 12.167–13.400s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 402–440 / 13.400–14.667s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 440–441 / 14.667–14.700s: 基準の左視線 (watch_left)
+  frame 441–458 / 14.700–15.267s: 基準の左視線 (watch_left)
+
+I04 | 15.260208333–21.345500000s | intro
+EN: The small labels tell us each number's place. We start at F zero, so F two is the third entry.
+教材: F0/F1/F2と値0/1/1、1番目/2番目/3番目を別の領域で対応付ける。添字と値を混同しない。
+発話中の猫:
+  frame 458–488 / 15.267–16.267s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 488–509 / 16.267–16.967s: 教材提示の中間姿勢 (present_half)
+  frame 509–539 / 16.967–17.967s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 539–569 / 17.967–18.967s: 左下の結果を注視 (watch_lower_left)
+  frame 569–589 / 18.967–19.633s: 教材提示の中間姿勢 (present_half)
+  frame 589–641 / 19.633–21.367s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 641–642 / 21.367–21.400s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 642–659 / 21.400–21.967s: 基準の左視線 (watch_left)
+
+I05 | 21.945500000–27.359041667s | intro
+EN: The older value sits on the left. The newer value sits beside it. Their labels move with them.
+教材: 三列OLDER/NEWER/NEWの入力例。入力値とF添字を表示し、直前の二値を強調する。
+発話中の猫:
+  frame 659–692 / 21.967–23.067s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 692–710 / 23.067–23.667s: 教材提示の中間姿勢 (present_half)
+  frame 710–740 / 23.667–24.667s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 740–761 / 24.667–25.367s: 基準の左視線 (watch_left)
+  frame 761–821 / 25.367–27.367s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 821–822 / 27.367–27.400s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 822–839 / 27.400–27.967s: 基準の左視線 (watch_left)
+
+I06 | 27.959041667–33.888958333s | intro
+EN: Listen for plus and equals. The answer appears when we say its name, and becomes our newest value.
+教材: 同じ入力例で演算子＋/＝と出力の順を説明。未確定の答えを表示せず、英語の読みと結果はN発話の0.12秒前に同時表示する。
+発話中の猫:
+  frame 839–856 / 27.967–28.533s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 856–877 / 28.533–29.233s: 教材提示の中間姿勢 (present_half)
+  frame 877–902 / 29.233–30.067s: 基準の左視線 (watch_left)
+  frame 902–950 / 30.067–31.667s: 左下の結果を注視 (watch_lower_left)
+  frame 950–971 / 31.667–32.367s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 971–1017 / 32.367–33.900s: 左下の結果を注視 (watch_lower_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 1017–1018 / 33.900–33.933s: 左下の結果を注視 (watch_lower_left)
+  frame 1018–1035 / 33.933–34.500s: 基準の左視線 (watch_left)
+
+I07 | 34.488958333–42.462375000s | intro
+EN: Number windows show values, not piles of things. A window marked one thousand stands for that value, not one thousand objects.
+教材: 1,000という数値窓を例示し、物体1000個の絵ではなく値の記号であると説明。
+発話中の猫:
+  frame 1035–1056 / 34.500–35.200s: 左下の結果を注視 (watch_lower_left)
+  frame 1056–1073 / 35.200–35.767s: 教材提示の中間姿勢 (present_half)
+  frame 1073–1101 / 35.767–36.700s: 教材を示す (present_full)
+  frame 1101–1110 / 36.700–37.000s: 教材提示の中間姿勢 (present_half)
+  frame 1110–1125 / 37.000–37.500s: 基準の左視線 (watch_left)
+  frame 1125–1127 / 37.500–37.567s: 半閉眼 (blink_half)
+  frame 1127–1130 / 37.567–37.667s: 短い閉眼 (blink_closed)
+  frame 1130–1132 / 37.667–37.733s: 半閉眼 (blink_half)
+  frame 1132–1173 / 37.733–39.100s: 基準の左視線 (watch_left)
+  frame 1173–1221 / 39.100–40.700s: 左下の結果を注視 (watch_lower_left)
+  frame 1221–1274 / 40.700–42.467s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 1274–1275 / 42.467–42.500s: 基準の左視線 (watch_left)
+  frame 1275–1289 / 42.500–42.967s: 基準の左視線 (watch_left)
+  frame 1289–1292 / 42.967–43.067s: 通常姿勢 (neutral)
+
+I08 | 43.062375000–49.763041667s | intro
+EN: We'll keep adding until the sequence first passes one hundred million. The numbers grow, but the rule stays the same.
+教材: 目標100,000,000だけを表示し、終点102,334,155を導入で先出ししない。
+発話中の猫:
+  frame 1292–1346 / 43.067–44.867s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 1346–1364 / 44.867–45.467s: 教材提示の中間姿勢 (present_half)
+  frame 1364–1427 / 45.467–47.567s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 1427–1493 / 47.567–49.767s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 1493–1494 / 49.767–49.800s: 基準の左視線 (watch_left)
+  frame 1494–1508 / 49.800–50.267s: 通常姿勢 (neutral)
+  frame 1508–1511 / 50.267–50.367s: 左下の結果を注視 (watch_lower_left)
+
+N000 | 50.363041667–50.942333333s | count
+EN: zero
+教材: F0=0を英語読みと同時に確定し、TERM 1 OF 41 / INDEX n=0を表示。初期値のため二項加算は作らない。
+発話中の猫:
+  frame 1511–1529 / 50.367–50.967s: 左下の結果を注視 (watch_lower_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 1529–1585 / 50.967–52.833s: 左下の結果を注視 (watch_lower_left)
+  frame 1585–1589 / 52.833–52.967s: 左下の結果を注視 (watch_lower_left)
+
+N001 | 52.942333333–53.430250000s | count
+EN: one
+教材: F1=1を英語読みと同時に確定し、TERM 2 OF 41 / INDEX n=1を表示。初期値のため二項加算は作らない。
+発話中の猫:
+  frame 1589–1603 / 52.967–53.433s: 左下の結果を注視 (watch_lower_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 1603–1604 / 53.433–53.467s: 左下の結果を注視 (watch_lower_left)
+  frame 1604–1607 / 53.467–53.567s: 小頷きの中間姿勢 (nod_mid)
+  frame 1607–1610 / 53.567–53.667s: 小頷きの低い姿勢 (nod_down)
+  frame 1610–1612 / 53.667–53.733s: 小頷きの中間姿勢 (nod_mid)
+  frame 1612–1663 / 53.733–55.433s: 左下の結果を注視 (watch_lower_left)
+
+E002 | 55.430250000–56.906375000s | formula_prefix
+EN: zero plus one equals
+教材: F0=0とF1=1を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 1663–1677 / 55.433–55.900s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 1677–1685 / 55.900–56.167s: 基準の左視線 (watch_left)
+  frame 1685–1708 / 56.167–56.933s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 1708–1709 / 56.933–56.967s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 1709–1712 / 56.967–57.067s: 左下の結果を注視 (watch_lower_left)
+
+N002 | 57.066375000–57.554291667s | count
+EN: one
+教材: F2=1を英語読みと同時に確定し、TERM 3 OF 41 / INDEX n=2を表示。次の受渡しではF1=1とF2=1を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 1712–1727 / 57.067–57.567s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-002 / frame 2129–2189 / 70.967–72.967s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 1727–1728 / 57.567–57.600s: 左下の結果を注視 (watch_lower_left)
+  frame 1728–1742 / 57.600–58.067s: 基準の左視線 (watch_left)
+  frame 1742–1745 / 58.067–58.167s: 左上の式・ラベルを注視 (watch_upper_left)
+
+T002a | 58.154291667–63.650500000s | explanation
+EN: There are two ones in a row. One is a starting value; the next was made by adding zero and one.
+教材: REPLAY。F1=1とF2=1を別の項として、0+1=1と二つの1の説明を表示。本カウント進捗は増やさない。
+発話中の猫:
+  frame 1745–1769 / 58.167–58.967s: 短く考える (think)
+  frame 1769–1799 / 58.967–59.967s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 1799–1820 / 59.967–60.667s: 教材提示の中間姿勢 (present_half)
+  frame 1820–1835 / 60.667–61.167s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 1835–1865 / 61.167–62.167s: 教材を示す (present_full)
+  frame 1865–1874 / 62.167–62.467s: 教材提示の中間姿勢 (present_half)
+  frame 1874–1904 / 62.467–63.467s: 左下の結果を注視 (watch_lower_left)
+  frame 1904–1910 / 63.467–63.667s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 1910–1928 / 63.667–64.267s: 基準の左視線 (watch_left)
+
+T002b | 64.250500000–70.365916667s | explanation
+EN: They have the same value, but different places. Keep both entries, because each belongs to the sequence.
+教材: 同じ値と異なる位置を比較。二つの1とF添字は別々に保持する。
+発話中の猫:
+  frame 1928–1937 / 64.267–64.567s: 基準の左視線 (watch_left)
+  frame 1937–1964 / 64.567–65.467s: 教材提示の中間姿勢 (present_half)
+  frame 1964–2000 / 65.467–66.667s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2000–2027 / 66.667–67.567s: 教材を示す (present_full)
+  frame 2027–2039 / 67.567–67.967s: 教材提示の中間姿勢 (present_half)
+  frame 2039–2069 / 67.967–68.967s: 左下の結果を注視 (watch_lower_left)
+  frame 2069–2111 / 68.967–70.367s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2111–2113 / 70.367–70.433s: 基準の左視線 (watch_left)
+  frame 2113–2115 / 70.433–70.500s: 半閉眼 (blink_half)
+  frame 2115–2118 / 70.500–70.600s: 短い閉眼 (blink_closed)
+  frame 2118–2120 / 70.600–70.667s: 半閉眼 (blink_half)
+  frame 2120–2129 / 70.667–70.967s: 基準の左視線 (watch_left)
+  frame 2129–2134 / 70.967–71.133s: 左下の結果を注視 (watch_lower_left)
+  frame 2134–2150 / 71.133–71.667s: 基準の左視線 (watch_left)
+  frame 2150–2189 / 71.667–72.967s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E003 | 72.965916667–74.301041667s | formula_prefix
+EN: one plus one equals
+教材: F1=1とF2=1を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 2189–2199 / 72.967–73.300s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2199–2211 / 73.300–73.700s: 基準の左視線 (watch_left)
+  frame 2211–2230 / 73.700–74.333s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2230–2231 / 74.333–74.367s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2231–2234 / 74.367–74.467s: 左下の結果を注視 (watch_lower_left)
+
+N003 | 74.461041667–74.976625000s | count
+EN: two
+教材: F3=2を英語読みと同時に確定し、TERM 4 OF 41 / INDEX n=3を表示。次の受渡しではF2=1とF3=2を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 2234–2250 / 74.467–75.000s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-003 / frame 2251–2260 / 75.033–75.333s
+  pair-follow-003 / frame 2260–2310 / 75.333–77.000s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2250–2251 / 75.000–75.033s: 左下の結果を注視 (watch_lower_left)
+  frame 2251–2254 / 75.033–75.133s: 小頷きの中間姿勢 (nod_mid)
+  frame 2254–2257 / 75.133–75.233s: 小頷きの低い姿勢 (nod_down)
+  frame 2257–2259 / 75.233–75.300s: 小頷きの中間姿勢 (nod_mid)
+  frame 2259–2260 / 75.300–75.333s: 左下の結果を注視 (watch_lower_left)
+  frame 2260–2265 / 75.333–75.500s: 左下の結果を注視 (watch_lower_left)
+  frame 2265–2281 / 75.500–76.033s: 基準の左視線 (watch_left)
+  frame 2281–2310 / 76.033–77.000s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E004 | 76.976625000–78.249333333s | formula_prefix
+EN: one plus two equals
+教材: F2=1とF3=2を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 2310–2319 / 77.000–77.300s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2319–2330 / 77.300–77.667s: 基準の左視線 (watch_left)
+  frame 2330–2348 / 77.667–78.267s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2348–2349 / 78.267–78.300s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2349–2353 / 78.300–78.433s: 左下の結果を注視 (watch_lower_left)
+
+N004 | 78.409333333–78.966625000s | count
+EN: three
+教材: F4=3を英語読みと同時に確定し、TERM 5 OF 41 / INDEX n=4を表示。次の受渡しではF3=2とF4=3を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 2353–2369 / 78.433–78.967s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-004 / frame 2370–2429 / 79.000–80.967s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2369–2370 / 78.967–79.000s: 左下の結果を注視 (watch_lower_left)
+  frame 2370–2384 / 79.000–79.467s: 左下の結果を注視 (watch_lower_left)
+  frame 2384–2401 / 79.467–80.033s: 基準の左視線 (watch_left)
+  frame 2401–2429 / 80.033–80.967s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E005 | 80.966625000–82.335125000s | formula_prefix
+EN: two plus three equals
+教材: F3=2とF4=3を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 2429–2440 / 80.967–81.333s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2440–2451 / 81.333–81.700s: 基準の左視線 (watch_left)
+  frame 2451–2471 / 81.700–82.367s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2471–2472 / 82.367–82.400s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2472–2475 / 82.400–82.500s: 左下の結果を注視 (watch_lower_left)
+
+N005 | 82.495125000–83.095666667s | count
+EN: five
+教材: F5=5を英語読みと同時に確定し、TERM 6 OF 41 / INDEX n=5を表示。次の受渡しではF4=3とF5=5を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 2475–2493 / 82.500–83.100s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-005 / frame 2494–2503 / 83.133–83.433s
+  pair-follow-005 / frame 2503–2553 / 83.433–85.100s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2493–2494 / 83.100–83.133s: 左下の結果を注視 (watch_lower_left)
+  frame 2494–2497 / 83.133–83.233s: 小頷きの中間姿勢 (nod_mid)
+  frame 2497–2500 / 83.233–83.333s: 小頷きの低い姿勢 (nod_down)
+  frame 2500–2502 / 83.333–83.400s: 小頷きの中間姿勢 (nod_mid)
+  frame 2502–2503 / 83.400–83.433s: 左下の結果を注視 (watch_lower_left)
+  frame 2503–2508 / 83.433–83.600s: 左下の結果を注視 (watch_lower_left)
+  frame 2508–2525 / 83.600–84.167s: 基準の左視線 (watch_left)
+  frame 2525–2553 / 84.167–85.100s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E006 | 85.095666667–86.507125000s | formula_prefix
+EN: three plus five equals
+教材: F4=3とF5=5を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 2553–2564 / 85.100–85.467s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2564–2571 / 85.467–85.700s: 基準の左視線 (watch_left)
+  frame 2571–2596 / 85.700–86.533s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2596–2597 / 86.533–86.567s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2597–2601 / 86.567–86.700s: 左下の結果を注視 (watch_lower_left)
+
+N006 | 86.667125000–87.178833333s | count
+EN: eight
+教材: F6=8を英語読みと同時に確定し、TERM 7 OF 41 / INDEX n=6を表示。次の受渡しではF5=5とF6=8を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 2601–2616 / 86.700–87.200s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-006 / frame 2617–2676 / 87.233–89.200s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2616–2617 / 87.200–87.233s: 左下の結果を注視 (watch_lower_left)
+  frame 2617–2631 / 87.233–87.700s: 左下の結果を注視 (watch_lower_left)
+  frame 2631–2647 / 87.700–88.233s: 基準の左視線 (watch_left)
+  frame 2647–2676 / 88.233–89.200s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E007 | 89.178833333–90.629708333s | formula_prefix
+EN: five plus eight equals
+教材: F5=5とF6=8を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 2676–2687 / 89.200–89.567s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2687–2699 / 89.567–89.967s: 基準の左視線 (watch_left)
+  frame 2699–2719 / 89.967–90.633s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2719–2721 / 90.633–90.700s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2721–2724 / 90.700–90.800s: 左下の結果を注視 (watch_lower_left)
+
+N007 | 90.789708333–91.480625000s | count
+EN: thirteen
+教材: F7=13を英語読みと同時に確定し、TERM 8 OF 41 / INDEX n=7を表示。次の受渡しではF6=8とF7=13を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 2724–2745 / 90.800–91.500s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-007 / frame 2746–2805 / 91.533–93.500s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2745–2746 / 91.500–91.533s: 左下の結果を注視 (watch_lower_left)
+  frame 2746–2760 / 91.533–92.000s: 左下の結果を注視 (watch_lower_left)
+  frame 2760–2776 / 92.000–92.533s: 基準の左視線 (watch_left)
+  frame 2776–2805 / 92.533–93.500s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E008 | 93.480625000–94.962166667s | formula_prefix
+EN: eight plus thirteen equals
+教材: F6=8とF7=13を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 2805–2813 / 93.500–93.767s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2813–2820 / 93.767–94.000s: 基準の左視線 (watch_left)
+  frame 2820–2849 / 94.000–94.967s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2849–2851 / 94.967–95.033s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2851–2854 / 95.033–95.133s: 左下の結果を注視 (watch_lower_left)
+
+N008 | 95.122166667–95.837958333s | count
+EN: twenty-one
+教材: F8=21を英語読みと同時に確定し、TERM 9 OF 41 / INDEX n=8を表示。次の受渡しではF7=13とF8=21を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 2854–2876 / 95.133–95.867s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-008 / frame 3380–3440 / 112.667–114.667s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 2876–2877 / 95.867–95.900s: 左下の結果を注視 (watch_lower_left)
+  frame 2877–2890 / 95.900–96.333s: 基準の左視線 (watch_left)
+  frame 2890–2894 / 96.333–96.467s: 左上の式・ラベルを注視 (watch_upper_left)
+
+T008a | 96.437958333–103.998083333s | explanation
+EN: Let's look inside that addition. In the ones column, eight plus three makes eleven: one stays here, and one ten moves left.
+教材: 縦の位取りREPLAYで8+13=21を一の位から再生。8+3=11、一に1を記入し、繰上がり1を十の位へ渡す。
+発話中の猫:
+  frame 2894–2903 / 96.467–96.767s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2903–2921 / 96.767–97.367s: 教材提示の中間姿勢 (present_half)
+  frame 2921–2957 / 97.367–98.567s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 2957–2969 / 98.567–98.967s: 教材提示の中間姿勢 (present_half)
+  frame 2969–3005 / 98.967–100.167s: 教材を示す (present_full)
+  frame 3005–3023 / 100.167–100.767s: 教材提示の中間姿勢 (present_half)
+  frame 3023–3049 / 100.767–101.633s: 左下の結果を注視 (watch_lower_left)
+  frame 3049–3090 / 101.633–103.000s: 基準の左視線 (watch_left)
+  frame 3090–3108 / 103.000–103.600s: 教材提示の中間姿勢 (present_half)
+  frame 3108–3120 / 103.600–104.000s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 3120–3138 / 104.000–104.600s: 左上の式・ラベルを注視 (watch_upper_left)
+
+T008b | 104.598083333–112.037000000s | explanation
+EN: That carried ten joins the ten already there. The columns now show two tens and one one. Then the newest pair moves on.
+教材: 十の位0+1+1=2。計算→数字記入→列完了を示し、完了後に確定21を表示する。
+発話中の猫:
+  frame 3138–3156 / 104.600–105.200s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 3156–3165 / 105.200–105.500s: 教材提示の中間姿勢 (present_half)
+  frame 3165–3180 / 105.500–106.000s: 教材を示す (present_full)
+  frame 3180–3203 / 106.000–106.767s: 教材提示の中間姿勢 (present_half)
+  frame 3203–3261 / 106.767–108.700s: 左下の結果を注視 (watch_lower_left)
+  frame 3261–3284 / 108.700–109.467s: 教材を示す (present_full)
+  frame 3284–3294 / 109.467–109.800s: 教材提示の中間姿勢 (present_half)
+  frame 3294–3313 / 109.800–110.433s: 左下の結果を注視 (watch_lower_left)
+  frame 3313–3362 / 110.433–112.067s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 3362–3363 / 112.067–112.100s: 基準の左視線 (watch_left)
+  frame 3363–3365 / 112.100–112.167s: 半閉眼 (blink_half)
+  frame 3365–3368 / 112.167–112.267s: 短い閉眼 (blink_closed)
+  frame 3368–3370 / 112.267–112.333s: 半閉眼 (blink_half)
+  frame 3370–3380 / 112.333–112.667s: 基準の左視線 (watch_left)
+  frame 3380–3384 / 112.667–112.800s: 左下の結果を注視 (watch_lower_left)
+  frame 3384–3401 / 112.800–113.367s: 基準の左視線 (watch_left)
+  frame 3401–3440 / 113.367–114.667s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E009 | 114.637000000–116.462541667s | formula_prefix
+EN: thirteen plus twenty-one equals
+教材: F7=13とF8=21を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 3440–3455 / 114.667–115.167s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 3455–3462 / 115.167–115.400s: 基準の左視線 (watch_left)
+  frame 3462–3494 / 115.400–116.467s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 3494–3496 / 116.467–116.533s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 3496–3499 / 116.533–116.633s: 左下の結果を注視 (watch_lower_left)
+
+N009 | 116.622541667–117.340958333s | count
+EN: thirty-four
+教材: F9=34を英語読みと同時に確定し、TERM 10 OF 41 / INDEX n=9を表示。次の受渡しではF8=21とF9=34を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 3499–3521 / 116.633–117.367s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-009 / frame 3522–3531 / 117.400–117.700s
+  pair-follow-009 / frame 3531–3581 / 117.700–119.367s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 3521–3522 / 117.367–117.400s: 左下の結果を注視 (watch_lower_left)
+  frame 3522–3525 / 117.400–117.500s: 小頷きの中間姿勢 (nod_mid)
+  frame 3525–3528 / 117.500–117.600s: 小頷きの低い姿勢 (nod_down)
+  frame 3528–3530 / 117.600–117.667s: 小頷きの中間姿勢 (nod_mid)
+  frame 3530–3531 / 117.667–117.700s: 左下の結果を注視 (watch_lower_left)
+  frame 3531–3536 / 117.700–117.867s: 左下の結果を注視 (watch_lower_left)
+  frame 3536–3552 / 117.867–118.400s: 基準の左視線 (watch_left)
+  frame 3552–3581 / 118.400–119.367s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E010 | 119.340958333–121.436500000s | formula_prefix
+EN: twenty-one plus thirty-four equals
+教材: F8=21とF9=34を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 3581–3602 / 119.367–120.067s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 3602–3613 / 120.067–120.433s: 基準の左視線 (watch_left)
+  frame 3613–3644 / 120.433–121.467s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 3644–3645 / 121.467–121.500s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 3645–3648 / 121.500–121.600s: 左下の結果を注視 (watch_lower_left)
+
+N010 | 121.596500000–122.451666667s | count
+EN: fifty-five
+教材: F10=55を英語読みと同時に確定し、TERM 11 OF 41 / INDEX n=10を表示。次の受渡しではF9=34とF10=55を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 3648–3674 / 121.600–122.467s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-010 / frame 3675–3734 / 122.500–124.467s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 3674–3675 / 122.467–122.500s: 左下の結果を注視 (watch_lower_left)
+  frame 3675–3689 / 122.500–122.967s: 左下の結果を注視 (watch_lower_left)
+  frame 3689–3706 / 122.967–123.533s: 基準の左視線 (watch_left)
+  frame 3706–3734 / 123.533–124.467s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E011 | 124.451666667–126.445708333s | formula_prefix
+EN: thirty-four plus fifty-five equals
+教材: F9=34とF10=55を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 3734–3754 / 124.467–125.133s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 3754–3760 / 125.133–125.333s: 基準の左視線 (watch_left)
+  frame 3760–3794 / 125.333–126.467s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 3794–3795 / 126.467–126.500s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 3795–3799 / 126.500–126.633s: 左下の結果を注視 (watch_lower_left)
+
+N011 | 126.605708333–127.374000000s | count
+EN: eighty-nine
+教材: F11=89を英語読みと同時に確定し、TERM 12 OF 41 / INDEX n=11を表示。次の受渡しではF10=55とF11=89を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 3799–3822 / 126.633–127.400s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-011 / frame 3823–3832 / 127.433–127.733s
+  pair-follow-011 / frame 3832–3882 / 127.733–129.400s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 3822–3823 / 127.400–127.433s: 左下の結果を注視 (watch_lower_left)
+  frame 3823–3826 / 127.433–127.533s: 小頷きの中間姿勢 (nod_mid)
+  frame 3826–3829 / 127.533–127.633s: 小頷きの低い姿勢 (nod_down)
+  frame 3829–3831 / 127.633–127.700s: 小頷きの中間姿勢 (nod_mid)
+  frame 3831–3832 / 127.700–127.733s: 左下の結果を注視 (watch_lower_left)
+  frame 3832–3837 / 127.733–127.900s: 左下の結果を注視 (watch_lower_left)
+  frame 3837–3853 / 127.900–128.433s: 基準の左視線 (watch_left)
+  frame 3853–3882 / 128.433–129.400s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E012 | 129.374000000–131.374333333s | formula_prefix
+EN: fifty-five plus eighty-nine equals
+教材: F10=55とF11=89を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 3882–3902 / 129.400–130.067s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 3902–3913 / 130.067–130.433s: 基準の左視線 (watch_left)
+  frame 3913–3942 / 130.433–131.400s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 3942–3943 / 131.400–131.433s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 3943–3947 / 131.433–131.567s: 左下の結果を注視 (watch_lower_left)
+
+N012 | 131.534333333–132.871208333s | count
+EN: one hundred forty-four
+教材: F12=144を英語読みと同時に確定し、TERM 13 OF 41 / INDEX n=12を表示。次の受渡しではF11=89とF12=144を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 3947–3987 / 131.567–132.900s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-012 / frame 3988–4047 / 132.933–134.900s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 3987–3988 / 132.900–132.933s: 左下の結果を注視 (watch_lower_left)
+  frame 3988–4002 / 132.933–133.400s: 左下の結果を注視 (watch_lower_left)
+  frame 4002–4018 / 133.400–133.933s: 基準の左視線 (watch_left)
+  frame 4018–4047 / 133.933–134.900s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E013 | 134.871208333–137.587833333s | formula_prefix
+EN: eighty-nine plus one hundred forty-four equals
+教材: F11=89とF12=144を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 4047–4071 / 134.900–135.700s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4071–4078 / 135.700–135.933s: 基準の左視線 (watch_left)
+  frame 4078–4128 / 135.933–137.600s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 4128–4129 / 137.600–137.633s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4129–4133 / 137.633–137.767s: 左下の結果を注視 (watch_lower_left)
+
+N013 | 137.747833333–139.025291667s | count
+EN: two hundred thirty-three
+教材: F13=233を英語読みと同時に確定し、TERM 14 OF 41 / INDEX n=13を表示。次の受渡しではF12=144とF13=233を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 4133–4171 / 137.767–139.033s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-013 / frame 4617–4677 / 153.900–155.900s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 4171–4172 / 139.033–139.067s: 左下の結果を注視 (watch_lower_left)
+  frame 4172–4186 / 139.067–139.533s: 基準の左視線 (watch_left)
+  frame 4186–4189 / 139.533–139.633s: 左上の式・ラベルを注視 (watch_upper_left)
+
+T013a | 139.625291667–145.619041667s | explanation
+EN: Here the ones make thirteen. Write three and carry one ten. The tens, including that carry, also make thirteen.
+教材: 縦式89+144。9+4=13で一に3を書いて十へ1、8+4+1=13で十に3を書いて百へ1を渡す。
+発話中の猫:
+  frame 4189–4199 / 139.633–139.967s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4199–4215 / 139.967–140.500s: 教材提示の中間姿勢 (present_half)
+  frame 4215–4229 / 140.500–140.967s: 教材を示す (present_full)
+  frame 4229–4238 / 140.967–141.267s: 教材提示の中間姿勢 (present_half)
+  frame 4238–4264 / 141.267–142.133s: 左下の結果を注視 (watch_lower_left)
+  frame 4264–4290 / 142.133–143.000s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4290–4307 / 143.000–143.567s: 教材提示の中間姿勢 (present_half)
+  frame 4307–4325 / 143.567–144.167s: 教材を示す (present_full)
+  frame 4325–4338 / 144.167–144.600s: 教材提示の中間姿勢 (present_half)
+  frame 4338–4354 / 144.600–145.133s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4354–4369 / 145.133–145.633s: 左下の結果を注視 (watch_lower_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 4369–4387 / 145.633–146.233s: 左下の結果を注視 (watch_lower_left)
+
+T013b | 146.219041667–153.273041667s | explanation
+EN: Write three tens, and carry one hundred. That hundred joins the hundred already there. Every column keeps its own place.
+教材: 百の位0+1+1=2。繰上がりは隣列へだけ移し、最後の列はCOLUMN COMPLETE、完了後233。
+発話中の猫:
+  frame 4387–4404 / 146.233–146.800s: 教材提示の中間姿勢 (present_half)
+  frame 4404–4422 / 146.800–147.400s: 教材を示す (present_full)
+  frame 4422–4442 / 147.400–148.067s: 教材提示の中間姿勢 (present_half)
+  frame 4442–4470 / 148.067–149.000s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4470–4489 / 149.000–149.633s: 教材提示の中間姿勢 (present_half)
+  frame 4489–4516 / 149.633–150.533s: 教材を示す (present_full)
+  frame 4516–4527 / 150.533–150.900s: 教材提示の中間姿勢 (present_half)
+  frame 4527–4555 / 150.900–151.833s: 左下の結果を注視 (watch_lower_left)
+  frame 4555–4599 / 151.833–153.300s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 4599–4600 / 153.300–153.333s: 基準の左視線 (watch_left)
+  frame 4600–4602 / 153.333–153.400s: 半閉眼 (blink_half)
+  frame 4602–4605 / 153.400–153.500s: 短い閉眼 (blink_closed)
+  frame 4605–4607 / 153.500–153.567s: 半閉眼 (blink_half)
+  frame 4607–4617 / 153.567–153.900s: 基準の左視線 (watch_left)
+  frame 4617–4621 / 153.900–154.033s: 左下の結果を注視 (watch_lower_left)
+  frame 4621–4638 / 154.033–154.600s: 基準の左視線 (watch_left)
+  frame 4638–4677 / 154.600–155.900s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E014 | 155.873041667–159.140875000s | formula_prefix
+EN: one hundred forty-four plus two hundred thirty-three equals
+教材: F12=144とF13=233を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 4677–4716 / 155.900–157.200s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4716–4727 / 157.200–157.567s: 基準の左視線 (watch_left)
+  frame 4727–4775 / 157.567–159.167s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 4775–4776 / 159.167–159.200s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4776–4780 / 159.200–159.333s: 左下の結果を注視 (watch_lower_left)
+
+N014 | 159.300875000–160.794958333s | count
+EN: three hundred seventy-seven
+教材: F14=377を英語読みと同時に確定し、TERM 15 OF 41 / INDEX n=14を表示。次の受渡しではF13=233とF14=377を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 4780–4824 / 159.333–160.800s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-014 / frame 4825–4834 / 160.833–161.133s
+  pair-follow-014 / frame 4834–4884 / 161.133–162.800s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 4824–4825 / 160.800–160.833s: 左下の結果を注視 (watch_lower_left)
+  frame 4825–4828 / 160.833–160.933s: 小頷きの中間姿勢 (nod_mid)
+  frame 4828–4831 / 160.933–161.033s: 小頷きの低い姿勢 (nod_down)
+  frame 4831–4833 / 161.033–161.100s: 小頷きの中間姿勢 (nod_mid)
+  frame 4833–4834 / 161.100–161.133s: 左下の結果を注視 (watch_lower_left)
+  frame 4834–4839 / 161.133–161.300s: 左下の結果を注視 (watch_lower_left)
+  frame 4839–4856 / 161.300–161.867s: 基準の左視線 (watch_left)
+  frame 4856–4884 / 161.867–162.800s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E015 | 162.794958333–166.367333333s | formula_prefix
+EN: two hundred thirty-three plus three hundred seventy-seven equals
+教材: F13=233とF14=377を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 4884–4904 / 162.800–163.467s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4904–4906 / 163.467–163.533s: 半閉眼 (blink_half)
+  frame 4906–4909 / 163.533–163.633s: 短い閉眼 (blink_closed)
+  frame 4909–4911 / 163.633–163.700s: 半閉眼 (blink_half)
+  frame 4911–4928 / 163.700–164.267s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4928–4935 / 164.267–164.500s: 基準の左視線 (watch_left)
+  frame 4935–4992 / 164.500–166.400s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 4992–4993 / 166.400–166.433s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 4993–4996 / 166.433–166.533s: 左下の結果を注視 (watch_lower_left)
+
+N015 | 166.527333333–167.591375000s | count
+EN: six hundred ten
+教材: F15=610を英語読みと同時に確定し、TERM 16 OF 41 / INDEX n=15を表示。次の受渡しではF14=377とF15=610を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 4996–5028 / 166.533–167.600s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-015 / frame 5029–5088 / 167.633–169.600s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 5028–5029 / 167.600–167.633s: 左下の結果を注視 (watch_lower_left)
+  frame 5029–5043 / 167.633–168.100s: 左下の結果を注視 (watch_lower_left)
+  frame 5043–5060 / 168.100–168.667s: 基準の左視線 (watch_left)
+  frame 5060–5088 / 168.667–169.600s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E016 | 169.591375000–172.920666667s | formula_prefix
+EN: three hundred seventy-seven plus six hundred ten equals
+教材: F14=377とF15=610を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 5088–5140 / 169.600–171.333s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 5140–5148 / 171.333–171.600s: 基準の左視線 (watch_left)
+  frame 5148–5188 / 171.600–172.933s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 5188–5189 / 172.933–172.967s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 5189–5193 / 172.967–173.100s: 左下の結果を注視 (watch_lower_left)
+
+N016 | 173.080666667–174.575875000s | count
+EN: nine hundred eighty-seven
+教材: F16=987を英語読みと同時に確定し、TERM 17 OF 41 / INDEX n=16を表示。次の受渡しではF15=610とF16=987を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 5193–5238 / 173.100–174.600s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-016 / frame 5239–5248 / 174.633–174.933s
+  pair-follow-016 / frame 5248–5298 / 174.933–176.600s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 5238–5239 / 174.600–174.633s: 左下の結果を注視 (watch_lower_left)
+  frame 5239–5242 / 174.633–174.733s: 小頷きの中間姿勢 (nod_mid)
+  frame 5242–5245 / 174.733–174.833s: 小頷きの低い姿勢 (nod_down)
+  frame 5245–5247 / 174.833–174.900s: 小頷きの中間姿勢 (nod_mid)
+  frame 5247–5248 / 174.900–174.933s: 左下の結果を注視 (watch_lower_left)
+  frame 5248–5253 / 174.933–175.100s: 左下の結果を注視 (watch_lower_left)
+  frame 5253–5269 / 175.100–175.633s: 基準の左視線 (watch_left)
+  frame 5269–5298 / 175.633–176.600s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E017 | 176.575875000–179.908958333s | formula_prefix
+EN: six hundred ten plus nine hundred eighty-seven equals
+教材: F15=610とF16=987を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 5298–5331 / 176.600–177.700s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 5331–5343 / 177.700–178.100s: 基準の左視線 (watch_left)
+  frame 5343–5398 / 178.100–179.933s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 5398–5399 / 179.933–179.967s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 5399–5403 / 179.967–180.100s: 左下の結果を注視 (watch_lower_left)
+
+N017 | 180.068958333–182.369125000s | count
+EN: one thousand five hundred ninety-seven
+教材: F17=1,597を英語読みと同時に確定し、TERM 18 OF 41 / INDEX n=17を表示。次の受渡しではF16=987とF17=1,597を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 5403–5472 / 180.100–182.400s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  first-thousand / frame 5473–5494 / 182.433–183.133s
+  pair-follow-017 / frame 5494–5532 / 183.133–184.400s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 5472–5473 / 182.400–182.433s: 左下の結果を注視 (watch_lower_left)
+  frame 5473–5477 / 182.433–182.567s: 気付きの準備 (notice_prepare)
+  frame 5477–5485 / 182.567–182.833s: 小さな気付き (notice_full)
+  frame 5485–5489 / 182.833–182.967s: 気付きの準備 (notice_prepare)
+  frame 5489–5494 / 182.967–183.133s: 左下の結果を注視 (watch_lower_left)
+  frame 5494–5503 / 183.133–183.433s: 基準の左視線 (watch_left)
+  frame 5503–5532 / 183.433–184.400s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E018 | 184.369125000–188.922625000s | formula_prefix
+EN: nine hundred eighty-seven plus one thousand five hundred ninety-seven equals
+教材: F16=987とF17=1,597を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 5532–5585 / 184.400–186.167s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 5585–5592 / 186.167–186.400s: 基準の左視線 (watch_left)
+  frame 5592–5668 / 186.400–188.933s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 5668–5669 / 188.933–188.967s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 5669–5673 / 188.967–189.100s: 左下の結果を注視 (watch_lower_left)
+
+N018 | 189.082625000–191.074833333s | count
+EN: two thousand five hundred eighty-four
+教材: F18=2,584を英語読みと同時に確定し、TERM 19 OF 41 / INDEX n=18を表示。次の受渡しではF17=1,597とF18=2,584を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 5673–5733 / 189.100–191.100s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-018 / frame 6263–6323 / 208.767–210.767s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 5733–5734 / 191.100–191.133s: 左下の結果を注視 (watch_lower_left)
+  frame 5734–5747 / 191.133–191.567s: 基準の左視線 (watch_left)
+  frame 5747–5751 / 191.567–191.700s: 左上の式・ラベルを注視 (watch_upper_left)
+
+T018a | 191.674833333–198.706916667s | explanation
+EN: Now the values reach into the thousands. Start at the ones and follow each carry to the next column, one place at a time.
+教材: 987+1,597=2,584の縦式REPLAYへ切り替える。入力を右揃えして一/十/百/千を整列し、各列の未確定結果は?で保持する。横三列の数式を同時には保持しない。
+発話中の猫:
+  frame 5751–5784 / 191.700–192.800s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 5784–5811 / 192.800–193.700s: 教材提示の中間姿勢 (present_half)
+  frame 5811–5838 / 193.700–194.600s: 教材を示す (present_full)
+  frame 5838–5850 / 194.600–195.000s: 教材提示の中間姿勢 (present_half)
+  frame 5850–5880 / 195.000–196.000s: 左下の結果を注視 (watch_lower_left)
+  frame 5880–5913 / 196.000–197.100s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 5913–5962 / 197.100–198.733s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 5962–5980 / 198.733–199.333s: 基準の左視線 (watch_left)
+
+T018b | 199.306916667–208.150416667s | explanation
+EN: Seven plus seven makes fourteen. Next come eighteen tens, then fifteen hundreds. Each carry moves one column left; it never skips a place.
+教材: 縦式を一の位から連続再生。7+7=14、8+9+1=18、9+5+1=15、0+1+1=2。数字と繰上がりを分け、完了後2,584。
+発話中の猫:
+  frame 5980–6021 / 199.333–200.700s: 教材提示の中間姿勢 (present_half)
+  frame 6021–6037 / 200.700–201.233s: 教材を示す (present_full)
+  frame 6037–6040 / 201.233–201.333s: 教材提示の中間姿勢 (present_half)
+  frame 6040–6066 / 201.333–202.200s: 左下の結果を注視 (watch_lower_left)
+  frame 6066–6077 / 202.200–202.567s: 教材提示の中間姿勢 (present_half)
+  frame 6077–6095 / 202.567–203.167s: 教材を示す (present_full)
+  frame 6095–6098 / 203.167–203.267s: 教材提示の中間姿勢 (present_half)
+  frame 6098–6102 / 203.267–203.400s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 6102–6112 / 203.400–203.733s: 教材提示の中間姿勢 (present_half)
+  frame 6112–6125 / 203.733–204.167s: 教材を示す (present_full)
+  frame 6125–6128 / 204.167–204.267s: 教材提示の中間姿勢 (present_half)
+  frame 6128–6145 / 204.267–204.833s: 左下の結果を注視 (watch_lower_left)
+  frame 6145–6180 / 204.833–206.000s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 6180–6208 / 206.000–206.933s: 教材提示の中間姿勢 (present_half)
+  frame 6208–6245 / 206.933–208.167s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 6245–6247 / 208.167–208.233s: 基準の左視線 (watch_left)
+  frame 6247–6249 / 208.233–208.300s: 半閉眼 (blink_half)
+  frame 6249–6252 / 208.300–208.400s: 短い閉眼 (blink_closed)
+  frame 6252–6254 / 208.400–208.467s: 半閉眼 (blink_half)
+  frame 6254–6263 / 208.467–208.767s: 基準の左視線 (watch_left)
+  frame 6263–6268 / 208.767–208.933s: 左下の結果を注視 (watch_lower_left)
+  frame 6268–6284 / 208.933–209.467s: 基準の左視線 (watch_left)
+  frame 6284–6323 / 209.467–210.767s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E019 | 210.750416667–215.785875000s | formula_prefix
+EN: one thousand five hundred ninety-seven plus two thousand five hundred eighty-four equals
+教材: F17=1,597とF18=2,584を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 6323–6388 / 210.767–212.933s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 6388–6400 / 212.933–213.333s: 基準の左視線 (watch_left)
+  frame 6400–6474 / 213.333–215.800s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 6474–6475 / 215.800–215.833s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 6475–6479 / 215.833–215.967s: 左下の結果を注視 (watch_lower_left)
+
+N019 | 215.945875000–217.806250000s | count
+EN: four thousand one hundred eighty-one
+教材: F19=4,181を英語読みと同時に確定し、TERM 20 OF 41 / INDEX n=19を表示。次の受渡しではF18=2,584とF19=4,181を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 6479–6535 / 215.967–217.833s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-019 / frame 6536–6545 / 217.867–218.167s
+  pair-follow-019 / frame 6545–6595 / 218.167–219.833s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 6535–6536 / 217.833–217.867s: 左下の結果を注視 (watch_lower_left)
+  frame 6536–6539 / 217.867–217.967s: 小頷きの中間姿勢 (nod_mid)
+  frame 6539–6542 / 217.967–218.067s: 小頷きの低い姿勢 (nod_down)
+  frame 6542–6544 / 218.067–218.133s: 小頷きの中間姿勢 (nod_mid)
+  frame 6544–6545 / 218.133–218.167s: 左下の結果を注視 (watch_lower_left)
+  frame 6545–6550 / 218.167–218.333s: 左下の結果を注視 (watch_lower_left)
+  frame 6550–6566 / 218.333–218.867s: 基準の左視線 (watch_left)
+  frame 6566–6595 / 218.867–219.833s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E020 | 219.806250000–224.629833333s | formula_prefix
+EN: two thousand five hundred eighty-four plus four thousand one hundred eighty-one equals
+教材: F18=2,584とF19=4,181を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 6595–6657 / 219.833–221.900s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 6657–6668 / 221.900–222.267s: 基準の左視線 (watch_left)
+  frame 6668–6739 / 222.267–224.633s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 6739–6741 / 224.633–224.700s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 6741–6744 / 224.700–224.800s: 左下の結果を注視 (watch_lower_left)
+
+N020 | 224.789833333–227.055250000s | count
+EN: six thousand seven hundred sixty-five
+教材: F20=6,765を英語読みと同時に確定し、TERM 21 OF 41 / INDEX n=20を表示。次の受渡しではF19=4,181とF20=6,765を添字と共に次の入力へ移す。v003では移動中の二つのコピー数値を88pxから47pxへなめらかに縮め、到着後も47pxを保つ。主結果と読みの大きさは保つ。
+発話中の猫:
+  frame 6744–6812 / 224.800–227.067s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-020 / frame 6813–6872 / 227.100–229.067s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 6812–6813 / 227.067–227.100s: 左下の結果を注視 (watch_lower_left)
+  frame 6813–6827 / 227.100–227.567s: 左下の結果を注視 (watch_lower_left)
+  frame 6827–6844 / 227.567–228.133s: 基準の左視線 (watch_left)
+  frame 6844–6872 / 228.133–229.067s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E021 | 229.055250000–234.151458333s | formula_prefix
+EN: four thousand one hundred eighty-one plus six thousand seven hundred sixty-five equals
+教材: F19=4,181とF20=6,765を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。先行F20の移動コピーは移動中に88→47pxへ縮んで到着済みなので、この次式のF19/F20入力も47pxで連続させる。到着後の1フレーム縮小は行わない。
+発話中の猫:
+  frame 6872–6903 / 229.067–230.100s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 6903–6905 / 230.100–230.167s: 半閉眼 (blink_half)
+  frame 6905–6908 / 230.167–230.267s: 短い閉眼 (blink_closed)
+  frame 6908–6910 / 230.267–230.333s: 半閉眼 (blink_half)
+  frame 6910–6939 / 230.333–231.300s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 6939–6947 / 231.300–231.567s: 基準の左視線 (watch_left)
+  frame 6947–7025 / 231.567–234.167s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 7025–7026 / 234.167–234.200s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 7026–7030 / 234.200–234.333s: 左下の結果を注視 (watch_lower_left)
+
+N021 | 234.311458333–236.367708333s | count
+EN: ten thousand nine hundred forty-six
+教材: F21=10,946を英語読みと同時に確定し、TERM 22 OF 41 / INDEX n=21を表示。次の受渡しではF20=6,765とF21=10,946を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 7030–7092 / 234.333–236.400s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-021 / frame 7093–7152 / 236.433–238.400s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 7092–7093 / 236.400–236.433s: 左下の結果を注視 (watch_lower_left)
+  frame 7093–7107 / 236.433–236.900s: 左下の結果を注視 (watch_lower_left)
+  frame 7107–7123 / 236.900–237.433s: 基準の左視線 (watch_left)
+  frame 7123–7152 / 237.433–238.400s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E022 | 238.367708333–243.773458333s | formula_prefix
+EN: six thousand seven hundred sixty-five plus ten thousand nine hundred forty-six equals
+教材: F20=6,765とF21=10,946を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 7152–7234 / 238.400–241.133s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 7234–7241 / 241.133–241.367s: 基準の左視線 (watch_left)
+  frame 7241–7314 / 241.367–243.800s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 7314–7315 / 243.800–243.833s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 7315–7319 / 243.833–243.967s: 左下の結果を注視 (watch_lower_left)
+
+N022 | 243.933458333–246.229125000s | count
+EN: seventeen thousand seven hundred eleven
+教材: F22=17,711を英語読みと同時に確定し、TERM 23 OF 41 / INDEX n=22を表示。次の受渡しではF21=10,946とF22=17,711を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 7319–7387 / 243.967–246.233s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-022 / frame 7388–7397 / 246.267–246.567s
+  pair-follow-022 / frame 7397–7447 / 246.567–248.233s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 7387–7388 / 246.233–246.267s: 左下の結果を注視 (watch_lower_left)
+  frame 7388–7391 / 246.267–246.367s: 小頷きの中間姿勢 (nod_mid)
+  frame 7391–7394 / 246.367–246.467s: 小頷きの低い姿勢 (nod_down)
+  frame 7394–7396 / 246.467–246.533s: 小頷きの中間姿勢 (nod_mid)
+  frame 7396–7397 / 246.533–246.567s: 左下の結果を注視 (watch_lower_left)
+  frame 7397–7402 / 246.567–246.733s: 左下の結果を注視 (watch_lower_left)
+  frame 7402–7419 / 246.733–247.300s: 基準の左視線 (watch_left)
+  frame 7419–7447 / 247.300–248.233s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E023 | 248.229125000–253.532166667s | formula_prefix
+EN: ten thousand nine hundred forty-six plus seventeen thousand seven hundred eleven equals
+教材: F21=10,946とF22=17,711を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 7447–7522 / 248.233–250.733s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 7522–7530 / 250.733–251.000s: 基準の左視線 (watch_left)
+  frame 7530–7606 / 251.000–253.533s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 7606–7608 / 253.533–253.600s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 7608–7611 / 253.600–253.700s: 左下の結果を注視 (watch_lower_left)
+
+N023 | 253.692166667–256.047041667s | count
+EN: twenty-eight thousand six hundred fifty-seven
+教材: F23=28,657を英語読みと同時に確定し、TERM 24 OF 41 / INDEX n=23を表示。次の受渡しではF22=17,711とF23=28,657を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 7611–7682 / 253.700–256.067s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-023 / frame 7683–7742 / 256.100–258.067s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 7682–7683 / 256.067–256.100s: 左下の結果を注視 (watch_lower_left)
+  frame 7683–7697 / 256.100–256.567s: 左下の結果を注視 (watch_lower_left)
+  frame 7697–7713 / 256.567–257.100s: 基準の左視線 (watch_left)
+  frame 7713–7742 / 257.100–258.067s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E024 | 258.047041667–263.827791667s | formula_prefix
+EN: seventeen thousand seven hundred eleven plus twenty-eight thousand six hundred fifty-seven equals
+教材: F22=17,711とF23=28,657を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 7742–7821 / 258.067–260.700s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 7821–7829 / 260.700–260.967s: 基準の左視線 (watch_left)
+  frame 7829–7915 / 260.967–263.833s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 7915–7917 / 263.833–263.900s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 7917–7920 / 263.900–264.000s: 左下の結果を注視 (watch_lower_left)
+
+N024 | 263.987791667–266.593041667s | count
+EN: forty-six thousand three hundred sixty-eight
+教材: F24=46,368を英語読みと同時に確定し、TERM 25 OF 41 / INDEX n=24を表示。次の受渡しではF23=28,657とF24=46,368を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 7920–7998 / 264.000–266.600s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-024 / frame 7999–8008 / 266.633–266.933s
+  pair-follow-024 / frame 8008–8058 / 266.933–268.600s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 7998–7999 / 266.600–266.633s: 左下の結果を注視 (watch_lower_left)
+  frame 7999–8002 / 266.633–266.733s: 小頷きの中間姿勢 (nod_mid)
+  frame 8002–8005 / 266.733–266.833s: 小頷きの低い姿勢 (nod_down)
+  frame 8005–8007 / 266.833–266.900s: 小頷きの中間姿勢 (nod_mid)
+  frame 8007–8008 / 266.900–266.933s: 左下の結果を注視 (watch_lower_left)
+  frame 8008–8013 / 266.933–267.100s: 左下の結果を注視 (watch_lower_left)
+  frame 8013–8030 / 267.100–267.667s: 基準の左視線 (watch_left)
+  frame 8030–8058 / 267.667–268.600s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E025 | 268.593041667–274.470416667s | formula_prefix
+EN: twenty-eight thousand six hundred fifty-seven plus forty-six thousand three hundred sixty-eight equals
+教材: F23=28,657とF24=46,368を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 8058–8096 / 268.600–269.867s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 8096–8098 / 269.867–269.933s: 半閉眼 (blink_half)
+  frame 8098–8101 / 269.933–270.033s: 短い閉眼 (blink_closed)
+  frame 8101–8103 / 270.033–270.100s: 半閉眼 (blink_half)
+  frame 8103–8140 / 270.100–271.333s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 8140–8148 / 271.333–271.600s: 基準の左視線 (watch_left)
+  frame 8148–8235 / 271.600–274.500s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 8235–8236 / 274.500–274.533s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 8236–8239 / 274.533–274.633s: 左下の結果を注視 (watch_lower_left)
+
+N025 | 274.630416667–276.453375000s | count
+EN: seventy-five thousand twenty-five
+教材: F25=75,025を英語読みと同時に確定し、TERM 26 OF 41 / INDEX n=25を表示。次の受渡しではF24=46,368とF25=75,025を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 8239–8294 / 274.633–276.467s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-025 / frame 8295–8354 / 276.500–278.467s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 8294–8295 / 276.467–276.500s: 左下の結果を注視 (watch_lower_left)
+  frame 8295–8309 / 276.500–276.967s: 左下の結果を注視 (watch_lower_left)
+  frame 8309–8326 / 276.967–277.533s: 基準の左視線 (watch_left)
+  frame 8326–8354 / 277.533–278.467s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E026 | 278.453375000–283.734500000s | formula_prefix
+EN: forty-six thousand three hundred sixty-eight plus seventy-five thousand twenty-five equals
+教材: F24=46,368とF25=75,025を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 8354–8433 / 278.467–281.100s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 8433–8440 / 281.100–281.333s: 基準の左視線 (watch_left)
+  frame 8440–8513 / 281.333–283.767s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 8513–8514 / 283.767–283.800s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 8514–8517 / 283.800–283.900s: 左下の結果を注視 (watch_lower_left)
+
+N026 | 283.894500000–286.733000000s | count
+EN: one hundred twenty-one thousand three hundred ninety-three
+教材: F26=121,393を英語読みと同時に確定し、TERM 27 OF 41 / INDEX n=26を表示。次の受渡しではF25=75,025とF26=121,393を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 8517–8602 / 283.900–286.733s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  first-hundred-thousand / frame 8603–8615 / 286.767–287.167s
+  pair-follow-026 / frame 9090–9150 / 303.000–305.000s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 8602–8603 / 286.733–286.767s: 左下の結果を注視 (watch_lower_left)
+  frame 8603–8606 / 286.767–286.867s: 気付きの準備 (notice_prepare)
+  frame 8606–8610 / 286.867–287.000s: 小さな気付き (notice_full)
+  frame 8610–8613 / 287.000–287.100s: 気付きの準備 (notice_prepare)
+  frame 8613–8615 / 287.100–287.167s: 左下の結果を注視 (watch_lower_left)
+  frame 8615–8617 / 287.167–287.233s: 基準の左視線 (watch_left)
+  frame 8617–8620 / 287.233–287.333s: 左上の式・ラベルを注視 (watch_upper_left)
+
+T026a | 287.333000000–294.673291667s | explanation
+EN: The commas help us read groups of three digits. They are separators, not extra digits, and they do not change the addition.
+教材: 縦に配置した46,368+75,025=121,393を表示し、THOUSANDS/ONESのグループとコンマを示す。説明中の全体式/寄りへの往復やカメラズームは行わない。
+発話中の猫:
+  frame 8620–8629 / 287.333–287.633s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 8629–8644 / 287.633–288.133s: 教材提示の中間姿勢 (present_half)
+  frame 8644–8674 / 288.133–289.133s: 教材を示す (present_full)
+  frame 8674–8686 / 289.133–289.533s: 教材提示の中間姿勢 (present_half)
+  frame 8686–8725 / 289.533–290.833s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 8725–8746 / 290.833–291.533s: 教材提示の中間姿勢 (present_half)
+  frame 8746–8782 / 291.533–292.733s: 基準の左視線 (watch_left)
+  frame 8782–8841 / 292.733–294.700s: 左下の結果を注視 (watch_lower_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 8841–8859 / 294.700–295.300s: 左下の結果を注視 (watch_lower_left)
+
+T026b | 295.273291667–302.393416667s | explanation
+EN: Keep the ones columns lined up on the right. Even with larger numbers, each column still adds the same kind of units.
+教材: 同じ縦配置を保持し、一の位の列が右で一致すること、コンマが桁の数字ではないことを表示。
+発話中の猫:
+  frame 8859–8889 / 295.300–296.300s: 教材提示の中間姿勢 (present_half)
+  frame 8889–8913 / 296.300–297.100s: 教材を示す (present_full)
+  frame 8913–8925 / 297.100–297.500s: 教材提示の中間姿勢 (present_half)
+  frame 8925–8964 / 297.500–298.800s: 左下の結果を注視 (watch_lower_left)
+  frame 8964–8994 / 298.800–299.800s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 8994–9072 / 299.800–302.400s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 9072–9074 / 302.400–302.467s: 基準の左視線 (watch_left)
+  frame 9074–9076 / 302.467–302.533s: 半閉眼 (blink_half)
+  frame 9076–9079 / 302.533–302.633s: 短い閉眼 (blink_closed)
+  frame 9079–9081 / 302.633–302.700s: 半閉眼 (blink_half)
+  frame 9081–9090 / 302.700–303.000s: 基準の左視線 (watch_left)
+  frame 9090–9095 / 303.000–303.167s: 左下の結果を注視 (watch_lower_left)
+  frame 9095–9111 / 303.167–303.700s: 基準の左視線 (watch_left)
+  frame 9111–9150 / 303.700–305.000s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E027 | 304.993416667–310.938541667s | formula_prefix
+EN: seventy-five thousand twenty-five plus one hundred twenty-one thousand three hundred ninety-three equals
+教材: F25=75,025とF26=121,393を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 9150–9217 / 305.000–307.233s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 9217–9225 / 307.233–307.500s: 基準の左視線 (watch_left)
+  frame 9225–9329 / 307.500–310.967s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 9329–9330 / 310.967–311.000s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 9330–9333 / 311.000–311.100s: 左下の結果を注視 (watch_lower_left)
+
+N027 | 311.098541667–313.750291667s | count
+EN: one hundred ninety-six thousand four hundred eighteen
+教材: F27=196,418を英語読みと同時に確定し、TERM 28 OF 41 / INDEX n=27を表示。次の受渡しではF26=121,393とF27=196,418を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 9333–9413 / 311.100–313.767s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-027 / frame 9414–9423 / 313.800–314.100s
+  pair-follow-027 / frame 9423–9473 / 314.100–315.767s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 9413–9414 / 313.767–313.800s: 左下の結果を注視 (watch_lower_left)
+  frame 9414–9417 / 313.800–313.900s: 小頷きの中間姿勢 (nod_mid)
+  frame 9417–9420 / 313.900–314.000s: 小頷きの低い姿勢 (nod_down)
+  frame 9420–9422 / 314.000–314.067s: 小頷きの中間姿勢 (nod_mid)
+  frame 9422–9423 / 314.067–314.100s: 左下の結果を注視 (watch_lower_left)
+  frame 9423–9428 / 314.100–314.267s: 左下の結果を注視 (watch_lower_left)
+  frame 9428–9445 / 314.267–314.833s: 基準の左視線 (watch_left)
+  frame 9445–9473 / 314.833–315.767s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E028 | 315.750291667–322.549125000s | formula_prefix
+EN: one hundred twenty-one thousand three hundred ninety-three plus one hundred ninety-six thousand four hundred eighteen equals
+教材: F26=121,393とF27=196,418を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 9473–9570 / 315.767–319.000s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 9570–9581 / 319.000–319.367s: 基準の左視線 (watch_left)
+  frame 9581–9677 / 319.367–322.567s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 9677–9678 / 322.567–322.600s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 9678–9682 / 322.600–322.733s: 左下の結果を注視 (watch_lower_left)
+
+N028 | 322.709125000–325.421041667s | count
+EN: three hundred seventeen thousand eight hundred eleven
+教材: F28=317,811を英語読みと同時に確定し、TERM 29 OF 41 / INDEX n=28を表示。次の受渡しではF27=196,418とF28=317,811を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 9682–9763 / 322.733–325.433s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-028 / frame 9764–9823 / 325.467–327.433s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 9763–9764 / 325.433–325.467s: 左下の結果を注視 (watch_lower_left)
+  frame 9764–9778 / 325.467–325.933s: 左下の結果を注視 (watch_lower_left)
+  frame 9778–9795 / 325.933–326.500s: 基準の左視線 (watch_left)
+  frame 9795–9823 / 326.500–327.433s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E029 | 327.421041667–333.951166667s | formula_prefix
+EN: one hundred ninety-six thousand four hundred eighteen plus three hundred seventeen thousand eight hundred eleven equals
+教材: F27=196,418とF28=317,811を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 9823–9864 / 327.433–328.800s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 9864–9866 / 328.800–328.867s: 半閉眼 (blink_half)
+  frame 9866–9869 / 328.867–328.967s: 短い閉眼 (blink_closed)
+  frame 9869–9871 / 328.967–329.033s: 半閉眼 (blink_half)
+  frame 9871–9912 / 329.033–330.400s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 9912–9919 / 330.400–330.633s: 基準の左視線 (watch_left)
+  frame 9919–10019 / 330.633–333.967s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 10019–10020 / 333.967–334.000s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 10020–10024 / 334.000–334.133s: 左下の結果を注視 (watch_lower_left)
+
+N029 | 334.111166667–336.866875000s | count
+EN: five hundred fourteen thousand two hundred twenty-nine
+教材: F29=514,229を英語読みと同時に確定し、TERM 30 OF 41 / INDEX n=29を表示。次の受渡しではF28=317,811とF29=514,229を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 10024–10107 / 334.133–336.900s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-029 / frame 10108–10117 / 336.933–337.233s
+  pair-follow-029 / frame 10117–10167 / 337.233–338.900s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 10107–10108 / 336.900–336.933s: 左下の結果を注視 (watch_lower_left)
+  frame 10108–10111 / 336.933–337.033s: 小頷きの中間姿勢 (nod_mid)
+  frame 10111–10114 / 337.033–337.133s: 小頷きの低い姿勢 (nod_down)
+  frame 10114–10116 / 337.133–337.200s: 小頷きの中間姿勢 (nod_mid)
+  frame 10116–10117 / 337.200–337.233s: 左下の結果を注視 (watch_lower_left)
+  frame 10117–10122 / 337.233–337.400s: 左下の結果を注視 (watch_lower_left)
+  frame 10122–10138 / 337.400–337.933s: 基準の左視線 (watch_left)
+  frame 10138–10167 / 337.933–338.900s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E030 | 338.866875000–345.738916667s | formula_prefix
+EN: three hundred seventeen thousand eight hundred eleven plus five hundred fourteen thousand two hundred twenty-nine equals
+教材: F28=317,811とF29=514,229を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 10167–10260 / 338.900–342.000s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 10260–10267 / 342.000–342.233s: 基準の左視線 (watch_left)
+  frame 10267–10373 / 342.233–345.767s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 10373–10374 / 345.767–345.800s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 10374–10377 / 345.800–345.900s: 左下の結果を注視 (watch_lower_left)
+
+N030 | 345.898916667–347.869125000s | count
+EN: eight hundred thirty-two thousand forty
+教材: F30=832,040を英語読みと同時に確定し、TERM 31 OF 41 / INDEX n=30を表示。次の受渡しではF29=514,229とF30=832,040を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 10377–10437 / 345.900–347.900s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-030 / frame 10438–10497 / 347.933–349.900s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 10437–10438 / 347.900–347.933s: 左下の結果を注視 (watch_lower_left)
+  frame 10438–10452 / 347.933–348.400s: 左下の結果を注視 (watch_lower_left)
+  frame 10452–10468 / 348.400–348.933s: 基準の左視線 (watch_left)
+  frame 10468–10497 / 348.933–349.900s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E031 | 349.869125000–355.772750000s | formula_prefix
+EN: five hundred fourteen thousand two hundred twenty-nine plus eight hundred thirty-two thousand forty equals
+教材: F29=514,229とF30=832,040を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 10497–10585 / 349.900–352.833s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 10585–10597 / 352.833–353.233s: 基準の左視線 (watch_left)
+  frame 10597–10674 / 353.233–355.800s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 10674–10675 / 355.800–355.833s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 10675–10678 / 355.833–355.933s: 左下の結果を注視 (watch_lower_left)
+
+N031 | 355.932750000–359.610125000s | count
+EN: one million three hundred forty-six thousand two hundred sixty-nine
+教材: F31=1,346,269を英語読みと同時に確定し、TERM 32 OF 41 / INDEX n=31を表示。次の受渡しではF30=832,040とF31=1,346,269を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 10678–10789 / 355.933–359.633s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  million-notice / frame 10790–10818 / 359.667–360.600s
+  pair-follow-031 / frame 10818–10849 / 360.600–361.633s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 10789–10790 / 359.633–359.667s: 左下の結果を注視 (watch_lower_left)
+  frame 10790–10794 / 359.667–359.800s: 基準の左視線 (watch_left)
+  frame 10794–10798 / 359.800–359.933s: 気付きの準備 (notice_prepare)
+  frame 10798–10810 / 359.933–360.333s: 小さな気付き (notice_full)
+  frame 10810–10814 / 360.333–360.467s: 気付きの準備 (notice_prepare)
+  frame 10814–10818 / 360.467–360.600s: 基準の左視線 (watch_left)
+  frame 10818–10824 / 360.600–360.800s: 基準の左視線 (watch_left)
+  frame 10824–10849 / 360.800–361.633s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E032 | 361.610125000–368.451541667s | formula_prefix
+EN: eight hundred thirty-two thousand forty plus one million three hundred forty-six thousand two hundred sixty-nine equals
+教材: F30=832,040とF31=1,346,269を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 10849–10917 / 361.633–363.900s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 10917–10925 / 363.900–364.167s: 基準の左視線 (watch_left)
+  frame 10925–11054 / 364.167–368.467s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 11054–11055 / 368.467–368.500s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 11055–11059 / 368.500–368.633s: 左下の結果を注視 (watch_lower_left)
+
+N032 | 368.611541667–371.841791667s | count
+EN: two million one hundred seventy-eight thousand three hundred nine
+教材: F32=2,178,309を英語読みと同時に確定し、TERM 33 OF 41 / INDEX n=32を表示。次の受渡しではF31=1,346,269とF32=2,178,309を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 11059–11156 / 368.633–371.867s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-032 / frame 11157–11166 / 371.900–372.200s
+  pair-follow-032 / frame 11166–11216 / 372.200–373.867s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 11156–11157 / 371.867–371.900s: 左下の結果を注視 (watch_lower_left)
+  frame 11157–11160 / 371.900–372.000s: 小頷きの中間姿勢 (nod_mid)
+  frame 11160–11163 / 372.000–372.100s: 小頷きの低い姿勢 (nod_down)
+  frame 11163–11165 / 372.100–372.167s: 小頷きの中間姿勢 (nod_mid)
+  frame 11165–11166 / 372.167–372.200s: 左下の結果を注視 (watch_lower_left)
+  frame 11166–11171 / 372.200–372.367s: 左下の結果を注視 (watch_lower_left)
+  frame 11171–11187 / 372.367–372.900s: 基準の左視線 (watch_left)
+  frame 11187–11216 / 372.900–373.867s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E033 | 373.841791667–382.171125000s | formula_prefix
+EN: one million three hundred forty-six thousand two hundred sixty-nine plus two million one hundred seventy-eight thousand three hundred nine equals
+教材: F31=1,346,269とF32=2,178,309を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 11216–11272 / 373.867–375.733s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 11272–11274 / 375.733–375.800s: 半閉眼 (blink_half)
+  frame 11274–11277 / 375.800–375.900s: 短い閉眼 (blink_closed)
+  frame 11277–11279 / 375.900–375.967s: 半閉眼 (blink_half)
+  frame 11279–11338 / 375.967–377.933s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 11338–11346 / 377.933–378.200s: 基準の左視線 (watch_left)
+  frame 11346–11466 / 378.200–382.200s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 11466–11467 / 382.200–382.233s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 11467–11470 / 382.233–382.333s: 左下の結果を注視 (watch_lower_left)
+
+N033 | 382.331125000–386.411083333s | count
+EN: three million five hundred twenty-four thousand five hundred seventy-eight
+教材: F33=3,524,578を英語読みと同時に確定し、TERM 34 OF 41 / INDEX n=33を表示。次の受渡しではF32=2,178,309とF33=3,524,578を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 11470–11593 / 382.333–386.433s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-033 / frame 11594–11653 / 386.467–388.433s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 11593–11594 / 386.433–386.467s: 左下の結果を注視 (watch_lower_left)
+  frame 11594–11608 / 386.467–386.933s: 左下の結果を注視 (watch_lower_left)
+  frame 11608–11624 / 386.933–387.467s: 基準の左視線 (watch_left)
+  frame 11624–11653 / 387.467–388.433s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E034 | 388.411083333–397.062583333s | formula_prefix
+EN: two million one hundred seventy-eight thousand three hundred nine plus three million five hundred twenty-four thousand five hundred seventy-eight equals
+教材: F32=2,178,309とF33=3,524,578を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 11653–11764 / 388.433–392.133s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 11764–11771 / 392.133–392.367s: 基準の左視線 (watch_left)
+  frame 11771–11912 / 392.367–397.067s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 11912–11914 / 397.067–397.133s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 11914–11917 / 397.133–397.233s: 左下の結果を注視 (watch_lower_left)
+
+N034 | 397.222583333–400.938000000s | count
+EN: five million seven hundred two thousand eight hundred eighty-seven
+教材: F34=5,702,887を英語読みと同時に確定し、TERM 35 OF 41 / INDEX n=34を表示。次の受渡しではF33=3,524,578とF34=5,702,887を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 11917–12029 / 397.233–400.967s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-034 / frame 12030–12039 / 401.000–401.300s
+  pair-follow-034 / frame 12039–12089 / 401.300–402.967s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 12029–12030 / 400.967–401.000s: 左下の結果を注視 (watch_lower_left)
+  frame 12030–12033 / 401.000–401.100s: 小頷きの中間姿勢 (nod_mid)
+  frame 12033–12036 / 401.100–401.200s: 小頷きの低い姿勢 (nod_down)
+  frame 12036–12038 / 401.200–401.267s: 小頷きの中間姿勢 (nod_mid)
+  frame 12038–12039 / 401.267–401.300s: 左下の結果を注視 (watch_lower_left)
+  frame 12039–12044 / 401.300–401.467s: 左下の結果を注視 (watch_lower_left)
+  frame 12044–12060 / 401.467–402.000s: 基準の左視線 (watch_left)
+  frame 12060–12089 / 402.000–402.967s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E035 | 402.938000000–411.994916667s | formula_prefix
+EN: three million five hundred twenty-four thousand five hundred seventy-eight plus five million seven hundred two thousand eight hundred eighty-seven equals
+教材: F33=3,524,578とF34=5,702,887を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 12089–12224 / 402.967–407.467s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 12224–12231 / 407.467–407.700s: 基準の左視線 (watch_left)
+  frame 12231–12360 / 407.700–412.000s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 12360–12362 / 412.000–412.067s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 12362–12365 / 412.067–412.167s: 左下の結果を注視 (watch_lower_left)
+
+N035 | 412.154916667–416.138666667s | count
+EN: nine million two hundred twenty-seven thousand four hundred sixty-five
+教材: F35=9,227,465を英語読みと同時に確定し、TERM 36 OF 41 / INDEX n=35を表示。次の受渡しではF34=5,702,887とF35=9,227,465を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 12365–12485 / 412.167–416.167s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-035 / frame 12486–12545 / 416.200–418.167s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 12485–12486 / 416.167–416.200s: 左下の結果を注視 (watch_lower_left)
+  frame 12486–12500 / 416.200–416.667s: 左下の結果を注視 (watch_lower_left)
+  frame 12500–12516 / 416.667–417.200s: 基準の左視線 (watch_left)
+  frame 12516–12545 / 417.200–418.167s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E036 | 418.138666667–426.882375000s | formula_prefix
+EN: five million seven hundred two thousand eight hundred eighty-seven plus nine million two hundred twenty-seven thousand four hundred sixty-five equals
+教材: F34=5,702,887とF35=9,227,465を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 12545–12665 / 418.167–422.167s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 12665–12673 / 422.167–422.433s: 基準の左視線 (watch_left)
+  frame 12673–12807 / 422.433–426.900s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 12807–12808 / 426.900–426.933s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 12808–12812 / 426.933–427.067s: 左下の結果を注視 (watch_lower_left)
+
+N036 | 427.042375000–430.786541667s | count
+EN: fourteen million nine hundred thirty thousand three hundred fifty-two
+教材: F36=14,930,352を英語読みと同時に確定し、TERM 37 OF 41 / INDEX n=36を表示。次の受渡しではF35=9,227,465とF36=14,930,352を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 12812–12924 / 427.067–430.800s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  first-ten-million / frame 12925–12946 / 430.833–431.533s
+  pair-follow-036 / frame 12946–12984 / 431.533–432.800s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 12924–12925 / 430.800–430.833s: 左下の結果を注視 (watch_lower_left)
+  frame 12925–12929 / 430.833–430.967s: 気付きの準備 (notice_prepare)
+  frame 12929–12937 / 430.967–431.233s: 小さな気付き (notice_full)
+  frame 12937–12941 / 431.233–431.367s: 気付きの準備 (notice_prepare)
+  frame 12941–12946 / 431.367–431.533s: 左下の結果を注視 (watch_lower_left)
+  frame 12946–12956 / 431.533–431.867s: 基準の左視線 (watch_left)
+  frame 12956–12984 / 431.867–432.800s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E037 | 432.786541667–441.584416667s | formula_prefix
+EN: nine million two hundred twenty-seven thousand four hundred sixty-five plus fourteen million nine hundred thirty thousand three hundred fifty-two equals
+教材: F35=9,227,465とF36=14,930,352を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 12984–13043 / 432.800–434.767s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 13043–13045 / 434.767–434.833s: 半閉眼 (blink_half)
+  frame 13045–13048 / 434.833–434.933s: 短い閉眼 (blink_closed)
+  frame 13048–13050 / 434.933–435.000s: 半閉眼 (blink_half)
+  frame 13050–13112 / 435.000–437.067s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 13112–13120 / 437.067–437.333s: 基準の左視線 (watch_left)
+  frame 13120–13248 / 437.333–441.600s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 13248–13249 / 441.600–441.633s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 13249–13253 / 441.633–441.767s: 左下の結果を注視 (watch_lower_left)
+
+N037 | 441.744416667–445.965125000s | count
+EN: twenty-four million one hundred fifty-seven thousand eight hundred seventeen
+教材: F37=24,157,817を英語読みと同時に確定し、TERM 38 OF 41 / INDEX n=37を表示。次の受渡しではF36=14,930,352とF37=24,157,817を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 13253–13379 / 441.767–445.967s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-037 / frame 13380–13389 / 446.000–446.300s
+  pair-follow-037 / frame 13389–13439 / 446.300–447.967s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 13379–13380 / 445.967–446.000s: 左下の結果を注視 (watch_lower_left)
+  frame 13380–13383 / 446.000–446.100s: 小頷きの中間姿勢 (nod_mid)
+  frame 13383–13386 / 446.100–446.200s: 小頷きの低い姿勢 (nod_down)
+  frame 13386–13388 / 446.200–446.267s: 小頷きの中間姿勢 (nod_mid)
+  frame 13388–13389 / 446.267–446.300s: 左下の結果を注視 (watch_lower_left)
+  frame 13389–13394 / 446.300–446.467s: 左下の結果を注視 (watch_lower_left)
+  frame 13394–13411 / 446.467–447.033s: 基準の左視線 (watch_left)
+  frame 13411–13439 / 447.033–447.967s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E038 | 447.965125000–457.193333333s | formula_prefix
+EN: fourteen million nine hundred thirty thousand three hundred fifty-two plus twenty-four million one hundred fifty-seven thousand eight hundred seventeen equals
+教材: F36=14,930,352とF37=24,157,817を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 13439–13571 / 447.967–452.367s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 13571–13579 / 452.367–452.633s: 基準の左視線 (watch_left)
+  frame 13579–13716 / 452.633–457.200s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 13716–13717 / 457.200–457.233s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 13717–13721 / 457.233–457.367s: 左下の結果を注視 (watch_lower_left)
+
+N038 | 457.353333333–460.456541667s | count
+EN: thirty-nine million eighty-eight thousand one hundred sixty-nine
+教材: F38=39,088,169を英語読みと同時に確定し、TERM 39 OF 41 / INDEX n=38を表示。次の受渡しではF37=24,157,817とF38=39,088,169を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 13721–13814 / 457.367–460.467s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  pair-follow-038 / frame 13815–13874 / 460.500–462.467s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 13814–13815 / 460.467–460.500s: 左下の結果を注視 (watch_lower_left)
+  frame 13815–13829 / 460.500–460.967s: 左下の結果を注視 (watch_lower_left)
+  frame 13829–13846 / 460.967–461.533s: 基準の左視線 (watch_left)
+  frame 13846–13874 / 461.533–462.467s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E039 | 462.456541667–471.217125000s | formula_prefix
+EN: twenty-four million one hundred fifty-seven thousand eight hundred seventeen plus thirty-nine million eighty-eight thousand one hundred sixty-nine equals
+教材: F37=24,157,817とF38=39,088,169を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 13874–14013 / 462.467–467.100s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 14013–14020 / 467.100–467.333s: 基準の左視線 (watch_left)
+  frame 14020–14137 / 467.333–471.233s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 14137–14138 / 471.233–471.267s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 14138–14142 / 471.267–471.400s: 左下の結果を注視 (watch_lower_left)
+
+N039 | 471.377125000–475.456458333s | count
+EN: sixty-three million two hundred forty-five thousand nine hundred eighty-six
+教材: F39=63,245,986を英語読みと同時に確定し、TERM 40 OF 41 / INDEX n=39を表示。次の受渡しではF38=39,088,169とF39=63,245,986を添字と共に次の入力へ移す。
+発話中の猫:
+  frame 14142–14264 / 471.400–475.467s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  acknowledge-039 / frame 14265–14274 / 475.500–475.800s
+  pair-follow-039 / frame 14763–14823 / 492.100–494.100s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 14264–14265 / 475.467–475.500s: 左下の結果を注視 (watch_lower_left)
+  frame 14265–14268 / 475.500–475.600s: 小頷きの中間姿勢 (nod_mid)
+  frame 14268–14271 / 475.600–475.700s: 小頷きの低い姿勢 (nod_down)
+  frame 14271–14273 / 475.700–475.767s: 小頷きの中間姿勢 (nod_mid)
+  frame 14273–14274 / 475.767–475.800s: 左下の結果を注視 (watch_lower_left)
+  frame 14274–14279 / 475.800–475.967s: 基準の左視線 (watch_left)
+  frame 14279–14282 / 475.967–476.067s: 左上の式・ラベルを注視 (watch_upper_left)
+
+T039a | 476.056458333–482.915000000s | explanation
+EN: We have reached the final pair for this journey. Both values are below one hundred million. Their sum will cross that mark.
+教材: 最後の入力ペアF38=39,088,169とF39=63,245,986を示す。出力は未確定で?、最終値はまだ表示しない。
+発話中の猫:
+  frame 14282–14327 / 476.067–477.567s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 14327–14342 / 477.567–478.067s: 教材提示の中間姿勢 (present_half)
+  frame 14342–14366 / 478.067–478.867s: 教材を示す (present_full)
+  frame 14366–14384 / 478.867–479.467s: 教材提示の中間姿勢 (present_half)
+  frame 14384–14444 / 479.467–481.467s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 14444–14488 / 481.467–482.933s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 14488–14506 / 482.933–483.533s: 基準の左視線 (watch_left)
+
+T039b | 483.515000000–491.499208333s | explanation
+EN: Watch the labels as the two values enter the formula. It is the same addition we used at the start, with more place-value columns.
+教材: REPLAY · THE FINAL PAIRを保持。F添字と入力値を確認し、F40を作る次の通常式へつなぐ。
+発話中の猫:
+  frame 14506–14536 / 483.533–484.533s: 教材提示の中間姿勢 (present_half)
+  frame 14536–14584 / 484.533–486.133s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 14584–14617 / 486.133–487.233s: 教材を示す (present_full)
+  frame 14617–14650 / 487.233–488.333s: 教材提示の中間姿勢 (present_half)
+  frame 14650–14686 / 488.333–489.533s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 14686–14745 / 489.533–491.500s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 14745–14747 / 491.500–491.567s: 基準の左視線 (watch_left)
+  frame 14747–14749 / 491.567–491.633s: 半閉眼 (blink_half)
+  frame 14749–14752 / 491.633–491.733s: 短い閉眼 (blink_closed)
+  frame 14752–14754 / 491.733–491.800s: 半閉眼 (blink_half)
+  frame 14754–14763 / 491.800–492.100s: 基準の左視線 (watch_left)
+  frame 14763–14768 / 492.100–492.267s: 左下の結果を注視 (watch_lower_left)
+  frame 14768–14784 / 492.267–492.800s: 基準の左視線 (watch_left)
+  frame 14784–14823 / 492.800–494.100s: 左上の式・ラベルを注視 (watch_upper_left)
+
+E040 | 494.099208333–502.861291667s | formula_prefix
+EN: thirty-nine million eighty-eight thousand one hundred sixty-nine plus sixty-three million two hundred forty-five thousand nine hundred eighty-six equals
+教材: F38=39,088,169とF39=63,245,986を三列の入力として表示し、＋/＝を強調。出力は未確定の?で、結果英語欄も未表示。
+発話中の猫:
+  frame 14823–14875 / 494.100–495.833s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 14875–14877 / 495.833–495.900s: 半閉眼 (blink_half)
+  frame 14877–14880 / 495.900–496.000s: 短い閉眼 (blink_closed)
+  frame 14880–14882 / 496.000–496.067s: 半閉眼 (blink_half)
+  frame 14882–14934 / 496.067–497.800s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 14934–14943 / 497.800–498.100s: 基準の左視線 (watch_left)
+  frame 14943–15086 / 498.100–502.867s: 左上の式・ラベルを注視 (watch_upper_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 15086–15088 / 502.867–502.933s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 15088–15091 / 502.933–503.033s: 左下の結果を注視 (watch_lower_left)
+
+N040 | 503.021291667–507.614500000s | count
+EN: one hundred two million three hundred thirty-four thousand one hundred fifty-five
+教材: F40=102,334,155を英語読みと同時に確定し、TERM 41 OF 41 / INDEX n=40を表示。
+発話中の猫:
+  frame 15091–15229 / 503.033–507.633s: 左下の結果を注視 (watch_lower_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  first-hundred-million / frame 15230–15242 / 507.667–508.067s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 15229–15230 / 507.633–507.667s: 左下の結果を注視 (watch_lower_left)
+  frame 15230–15233 / 507.667–507.767s: 気付きの準備 (notice_prepare)
+  frame 15233–15237 / 507.767–507.900s: 小さな気付き (notice_full)
+  frame 15237–15240 / 507.900–508.000s: 気付きの準備 (notice_prepare)
+  frame 15240–15242 / 508.000–508.067s: 左下の結果を注視 (watch_lower_left)
+  frame 15242–15243 / 508.067–508.100s: 基準の左視線 (watch_left)
+  frame 15243–15247 / 508.100–508.233s: 通常姿勢 (neutral)
+
+O01 | 508.214500000–516.085125000s | outro
+EN: We've counted forty-one entries, from F zero through F forty. Two starting values, then thirty-nine additions brought us here.
+教材: 固定画面の全41項履歴、TWO SEEDS.39 ADDITIONS.41 TERMS.と二つの1の注記。終端後の独立motion windowで1.2秒だけ閉眼笑顔を示し開眼へ戻す。
+発話中の猫:
+  frame 15247–15283 / 508.233–509.433s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 15283–15316 / 509.433–510.533s: 教材提示の中間姿勢 (present_half)
+  frame 15316–15367 / 510.533–512.233s: 左下の結果を注視 (watch_lower_left)
+  frame 15367–15418 / 512.233–513.933s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 15418–15483 / 513.933–516.100s: 基準の左視線 (watch_left)
+このcueの読了後に結び付く動作（説明後まで待つhandoffを含む）:
+  completion-smile / frame 15486–15532 / 516.200–517.733s
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 15483–15484 / 516.100–516.133s: 基準の左視線 (watch_left)
+  frame 15484–15486 / 516.133–516.200s: 通常姿勢 (neutral)
+  frame 15486–15490 / 516.200–516.333s: 通常姿勢 (neutral)
+  frame 15490–15501 / 516.333–516.700s: 短い閉眼笑顔 (delighted)
+
+O02 | 516.685125000–523.368875000s | outro
+EN: The newest number is just past one hundred million. We stop here today, but the rule can keep making more numbers.
+教材: F40=102,334,155、初めて1億超という説明、一般式を表示する。F38/F39の具体値はこの画面へ併記せず、直前のT039/E040で示した。
+発話中の猫:
+  frame 15501–15526 / 516.700–517.533s: 短い閉眼笑顔 (delighted)
+  frame 15526–15532 / 517.533–517.733s: 通常姿勢 (neutral)
+  frame 15532–15574 / 517.733–519.133s: 左下の結果を注視 (watch_lower_left)
+  frame 15574–15616 / 519.133–520.533s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 15616–15702 / 520.533–523.400s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 15702–15703 / 523.400–523.433s: 基準の左視線 (watch_left)
+  frame 15703–15720 / 523.433–524.000s: 通常姿勢 (neutral)
+
+O03 | 523.968875000–531.816125000s | outro
+EN: Remember the motion: take the previous two, add them, keep the newest pair, and repeat. Every new entry has a place in the chain.
+教材: 全41項の履歴へ固定画面で切り替える。二つの1を保持し、均等なカード間隔は項の順であり値の比例距離ではない。式と履歴の同時表示やカメラの引きは行わない。
+発話中の猫:
+  frame 15720–15762 / 524.000–525.400s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 15762–15786 / 525.400–526.200s: 教材提示の中間姿勢 (present_half)
+  frame 15786–15825 / 526.200–527.500s: 左上の式・ラベルを注視 (watch_upper_left)
+  frame 15825–15873 / 527.500–529.100s: 左下の結果を注視 (watch_lower_left)
+  frame 15873–15955 / 529.100–531.833s: 基準の左視線 (watch_left)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 15955–15956 / 531.833–531.867s: 基準の左視線 (watch_left)
+  frame 15956–15973 / 531.867–532.433s: 通常姿勢 (neutral)
+
+O04 | 532.416125000–534.780000000s | outro
+EN: Thanks for counting with me. See you next time!
+教材: 最終値と一般式を示す終幕。猫は開眼の手振りを2往復しneutralへ戻り、末尾2秒で全画面をクリーム色へフェードする。閉眼笑顔の保持は行わない。
+発話中の猫:
+  frame 15973–15976 / 532.433–532.533s: 通常姿勢 (neutral)
+  frame 15976–15979 / 532.533–532.633s: 通常姿勢 (neutral)
+  frame 15979–15985 / 532.633–532.833s: 手振りの準備 (wave_prepare)
+  frame 15985–15991 / 532.833–533.033s: 前脚を内側へ (wave_in)
+  frame 15991–15998 / 533.033–533.267s: 前脚を外側へ (wave_out)
+  frame 15998–16005 / 533.267–533.500s: 前脚を内側へ (wave_in)
+  frame 16005–16012 / 533.500–533.733s: 前脚を外側へ (wave_out)
+  frame 16012–16018 / 533.733–533.933s: 前脚を内側へ (wave_in)
+  frame 16018–16024 / 533.933–534.133s: 手振りの準備 (wave_prepare)
+  frame 16024–16030 / 534.133–534.333s: 通常姿勢 (neutral)
+  frame 16030–16044 / 534.333–534.800s: 通常姿勢 (neutral)
+読了から次発話までの猫（最後のcueは動画終端まで）:
+  frame 16044–16104 / 534.800–536.800s: 通常姿勢 (neutral)
+

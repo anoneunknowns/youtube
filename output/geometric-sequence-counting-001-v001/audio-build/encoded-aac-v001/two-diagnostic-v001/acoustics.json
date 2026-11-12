@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "kind": "fibonacci-source-onset-waveform-and-terminal-screen",
+  "source_manifest_sha256": "a8183a1c4724656bc8b946c7ce7b23d77ad3a044d5dfc046b9fe38d5a1a23c26",
+  "source_phonemes_sha256": "6db757d402b9669db9b66b54bef0e32ba4f0e7af163a1e7d0013ad754d38ac6e",
+  "onset_waveform": {
+    "schema_version": 1,
+    "kind": "prime-source-waveform-acoustic-screen",
+    "source_manifest_sha256": "a8183a1c4724656bc8b946c7ce7b23d77ad3a044d5dfc046b9fe38d5a1a23c26",
+    "method": {
+      "onset": "20ms windows/10ms hop in first280ms; unvoiced frication high2kHz>=.35,periodicity<.35,RMS>-45dBFS; preceding voiced windows require lowband>=.60,periodicity>=.60,RMS>-45dBFS.",
+      "edge": "Activity threshold104/32768 (~-50dBFS), exact endpoint samples, clipping samples.",
+      "limitation": "Heuristic source screening, not a listening claim or independent pronunciation approval. Speech onset/tail CTC and per-case review are separate."
+    },
+    "summary": {
+      "clips": 1,
+      "fricative_initial_targets": 0,
+      "voiced_prefix_warnings": 0,
+      "fricative_unresolved": 0,
+      "clipped_samples": 0
+    },
+    "warning_ids": [],
+    "results": [
+      {
+        "id": "N001",
+        "source_path": "/Users/support/codex/youtube/output/geometric-sequence-counting-001-v001/audio-build/encoded-aac-v001/two-diagnostic-v001/N001-context.wav",
+        "source_sha256": "59d57b307774614d185fe5dea76c3bb9f4c001f82241a1f3f4c7943c2dfc1a45",
+        "duration_s": 0.34,
+        "samples": 8160,
+        "sample_rate": 24000,
+        "peak_pcm16": 10639,
+        "rms_dbfs": -19.096232966394755,
+        "clipped_samples": 0,
+        "first_sample": 0,
+        "last_sample": 0,
+        "head_margin_at_minus50db_s": 0.03,
+        "tail_margin_at_minus50db_s": 0.015458333333333333,
+        "initial_expected_phone": "t",
+        "fricative_screen_applies": false,
+        "first_unvoiced_frication_s": null,
+        "voiced_prefix_before_frication_ms": 0,
+        "voiced_prefix_warning": false,
+        "initial_fricative_not_resolved": false,
+        "head_frames": []
+      }
+    ],
+    "pronunciation_approved": false
+  },
+  "terminal_method": {
+    "window_ms": 32,
+    "hop_ms": 10,
+    "analyzed_final_s": 0.42,
+    "terminal_noise_search_final_s": 0.3,
+    "end_guard_s": 0.015,
+    "voiced_min_frames": 3,
+    "voiced_run_must_reach_final_s": 0.18,
+    "voiced_rule": "RMS >= -40 dBFS, under-1kHz power >= 0.60, normalized periodicity >= 0.50",
+    "s_noise_rule": "4kHz-up power >= 0.55, centroid >= 3500Hz, periodicity < 0.35, RMS > -45dBFS",
+    "sh_noise_rule": "2kHz-up power >= 0.55, centroid >= 2000Hz, periodicity < 0.35, RMS > -45dBFS",
+    "other_noise_rule": "2kHz-up power >= 0.35, centroid >= 1700Hz, periodicity < 0.35, RMS > -45dBFS",
+    "periodicity": "Maximum normalized autocorrelation, 100-400 Hz; computed only for low-band power >= 0.5 and RMS >= -48dBFS",
+    "important_limit": "Heuristic screening only. Stop releases, creaky voice and recording conditions can cause false results. Absence of this pattern is not pronunciation approval. Review phoneme ASR and listen separately."
+  },
+  "terminal_results": [
+    {
+      "id": "N001",
+      "source_sha256": "59d57b307774614d185fe5dea76c3bb9f4c001f82241a1f3f4c7943c2dfc1a45",
+      "expected_espeak": "tˈuː",
+      "terminal_phoneme": "ː",
+      "target_voiceless_terminal": false
+    }
+  ],
+  "summary": {
+    "clips": 1,
+    "fricative_initial_targets": 0,
+    "voiced_prefix_warnings": 0,
+    "fricative_unresolved": 0,
+    "clipped_samples": 0,
+    "terminal_targets": 0,
+    "terminal_suspicious": 0
+  },
+  "terminal_warning_ids": [],
+  "pronunciation_approved": false,
+  "limitations": "Heuristic signal evidence requires individual ASR/CTC review; no source modification or full listening is claimed."
+}

@@ -1,0 +1,3342 @@
+{
+  "schema_version": 1,
+  "kind": "fresh-final-aac-recognition-and-agent-review",
+  "accepted": true,
+  "source_video_sha256": "90c0fc51fb12969e314bd2a894df30e55849735e88793e83973a6669b0ff2dc4",
+  "scope": "All143 actual final-AAC excerpts, new unconstrained lexical ASR and independent multilingual CTC; listed warnings/differences reviewed with original individual pronunciation acceptance, guarded recognition and separate local encoded-waveform observations.",
+  "method": "Agent examined every listed transcript, phone sequence and source-vs-AAC phone edit. Expected text was not a recognition prompt. No context recognition is used to erase a source pronunciation warning. Existing source gates remain unchanged.",
+  "inputs": {
+    "final_aac_manifest": {
+      "path": "design/collatz-counting-v1/production-qa/v001/final-aac-recognition-v001/clips/final-aac-manifest.json",
+      "sha256": "c382876e6afdc64b299d458aa088c51e2baec55229479422cb13ae009afc0739"
+    },
+    "asr": {
+      "path": "design/collatz-counting-v1/production-qa/v001/final-aac-recognition-v001/asr.json",
+      "sha256": "bd9a8028e43152936c9451692b85d0d2270dd3069b7414354ab4ea998d4803ca"
+    },
+    "phonemes": {
+      "path": "design/collatz-counting-v1/production-qa/v001/final-aac-recognition-v001/phonemes.json",
+      "sha256": "3e024281330a8483e6286e74cabb1b4d83a6a1a71ae96fa28fa5c7322a2c8b95"
+    },
+    "local_waveforms": {
+      "path": "design/collatz-counting-v1/production-qa/v001/final-aac-recognition-v001/local-waveform-review.json",
+      "sha256": "9ff0c6786a68bb40446b93484b94c22bb78c9493206763272b8c3396162e8427"
+    },
+    "guard_mapping": {
+      "path": "design/collatz-counting-v1/production-qa/v001/final-aac-recognition-v001/ctc-boundary-diagnostics-v001/mapping.json",
+      "sha256": "32917d85b590e986a14799be485fd75e47644c069a6ce4c8373d2438ac900888"
+    },
+    "guard_ctc": {
+      "path": "design/collatz-counting-v1/production-qa/v001/final-aac-recognition-v001/ctc-boundary-diagnostics-v001/phonemes.json",
+      "sha256": "959c0652cad32c1cedfeb1cd0a57105e5601a5efbce93fbfa30861f3fd4ce956"
+    },
+    "original_source_gate": {
+      "path": "output/collatz-counting-001-v001/speech/speech-acceptance.json",
+      "sha256": "9ae1a73c0fee67acc457a557f7a36817ab5ee9e503c0cc8e0c052db79a57d7c3"
+    },
+    "original_source_ctc": {
+      "path": "output/collatz-counting-001-v001/speech/phonemes-selected-v002.json",
+      "sha256": "45e45829378c52093c0f9aa54fe497db016769184c94c75941b6a6080ca32eff"
+    },
+    "review_script": {
+      "path": "design/collatz-counting-v1/production-qa/v001/final-aac-recognition-v001/build_final_recognition_review.py",
+      "sha256": "d7dce1daf5a43998fe4a3e338671184f738ed837fc92e3af1df2cf224ca50f3c"
+    }
+  },
+  "summary": {
+    "clips": 143,
+    "asr_matches": 138,
+    "raw_lexical_warnings": 5,
+    "lexical_warnings_individually_reviewed": 5,
+    "source_phone_sequences_exact": 109,
+    "source_phone_sequences_different_and_reviewed": 34,
+    "recognizer_only_guard_clips": 30,
+    "local_waveform_events": 143,
+    "unresolved": 0
+  },
+  "unresolved": [],
+  "limitations": [
+    "Automated models are not infallible. Two has an explicitly retained multilingual CTC warning; its original pronunciation acceptance is inherited through encoded acoustic preservation and independent lexical evidence.",
+    "No human full-episode listening or perfect-pronunciation guarantee is claimed.",
+    "Full-track master/final AAC channel gains, guarded silence and synchronization have separate verification outputs."
+  ],
+  "results": [
+    {
+      "id": "C7_000",
+      "expected_text": "seven",
+      "actual_aac_excerpt_sha256": "c75fa0d2a2cd2b3f4c8a71ead3518cfdf3c2829632981b68acb46805fa4671f3",
+      "accepted_original_source_sha256": "52b0a52579c424493f9af0958785f8f3a7a1d1efae20e2682a768543238ee78b",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "7.",
+      "expected_espeak": "sˈɛvən",
+      "accepted_source_recognized_phonemes": "s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "s ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_001",
+      "expected_text": "twenty-two",
+      "actual_aac_excerpt_sha256": "0704a3cfe2f8527aa608bf135bc6aad7d1ad7ae0e7027663d35ee84b9c8b9667",
+      "accepted_original_source_sha256": "26bbd0364ba84a4bdc2705e76cc67f53c4ecb109933b085fa9e4b15494963351",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "22.",
+      "expected_espeak": "twˈɛntitˈuː",
+      "accepted_source_recognized_phonemes": "t w ɛ n t i t uː",
+      "fresh_final_aac_recognized_phonemes": "t w ɛ n t i t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_002",
+      "expected_text": "eleven",
+      "actual_aac_excerpt_sha256": "17d8b83abd0815b9c365cccd6017fdf0bf243654e2a7bcc2e964cb5dc7ccc0be",
+      "accepted_original_source_sha256": "9e0f3e1aeb9d993712acaf2761a209222cd2ec7afd971af1f35bdf0c2ddadd78",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "11.",
+      "expected_espeak": "ᵻlˈɛvən",
+      "accepted_source_recognized_phonemes": "ɪ l ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "ɪ l ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_003",
+      "expected_text": "thirty-four",
+      "actual_aac_excerpt_sha256": "56ea0613b04f3332a45a0343d068c65faf7b4d308fe673fe0096d97a5cca979d",
+      "accepted_original_source_sha256": "103b78706f08719b1adcac45982e6d3ab6bd5234a4fb92d900df5315a409dbbd",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "34.",
+      "expected_espeak": "θˈɜːɾifˈoːɹ",
+      "accepted_source_recognized_phonemes": "θ ɜː ɾ i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "θ ɜː ɾ i f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_004",
+      "expected_text": "seventeen",
+      "actual_aac_excerpt_sha256": "c824bb99ccddb00a2ab182017f1dcdd78ff839a85a9642dc2bd2f07fb257c728",
+      "accepted_original_source_sha256": "e94344c8a955c7060b6dec7e3f789f3179eefba64a83255e1a0d1a57f7cce28b",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "17.",
+      "expected_espeak": "sˈɛvəntˌiːn",
+      "accepted_source_recognized_phonemes": "s ɛ v ə n t iː n",
+      "fresh_final_aac_recognized_phonemes": "s ɛ v ə n t iː n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_005",
+      "expected_text": "fifty-two",
+      "actual_aac_excerpt_sha256": "4e0016a783fcc58cb58c4588ae9210641cfb753633dfa0bb03b70e6158caf765",
+      "accepted_original_source_sha256": "30ad576a53cc66dc4ddb4575a861216acff1077115315d6870cc700fb8f52094",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "52.",
+      "expected_espeak": "fˈɪftitˈuː",
+      "accepted_source_recognized_phonemes": "f ɪ f t i t uː",
+      "fresh_final_aac_recognized_phonemes": "f ɪ f t i t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_006",
+      "expected_text": "twenty-six",
+      "actual_aac_excerpt_sha256": "2ec4474860946da5f01b4be1a6c05f97b3293e6c2a4718d0c5fa2b147affec21",
+      "accepted_original_source_sha256": "95db66d4a314af032e541cbbcd190701791424eaed4cf1c61b8f7498e11f575b",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "26.",
+      "expected_espeak": "twˈɛntisˈɪks",
+      "accepted_source_recognized_phonemes": "t w ɛ n t i s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "t w ɛ n i s ɪ k s",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "delete",
+          "accepted_source_tokens": [
+            "t"
+          ],
+          "final_aac_tokens": []
+        }
+      ],
+      "guard_diagnostics": [
+        "C7_006-pad120",
+        "C7_006-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The short /t/ in twenty-six is segmented differently by CTC; lexical26 and the complete accepted-source/local waveform agree. This is an American-English consonant-cluster/flap segmentation variation."
+      ]
+    },
+    {
+      "id": "C7_007",
+      "expected_text": "thirteen",
+      "actual_aac_excerpt_sha256": "9ea44eddd3e00ffee764f9c115f912597682476809f08f9456da1d134d111c25",
+      "accepted_original_source_sha256": "1b79e514a03d598b9a048cf646bfc50bd282585a1b8a555e762c12fba464efe2",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "13.",
+      "expected_espeak": "θˈɜːtiːn",
+      "accepted_source_recognized_phonemes": "θ ɜː t iː n",
+      "fresh_final_aac_recognized_phonemes": "θ ɜː t iː n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_008",
+      "expected_text": "forty",
+      "actual_aac_excerpt_sha256": "6960357c59f5c9739d39cd265691c1f669ea5f450014dffd9fde56b8252224a8",
+      "accepted_original_source_sha256": "adf8af52de00af8bce0aef6d4d223ccb27cf48b649a0897a8b1811769d470cca",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "40.",
+      "expected_espeak": "fˈɔːɹɾi",
+      "accepted_source_recognized_phonemes": "f ɔːɹ ɾ i",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ ɾ i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_009",
+      "expected_text": "twenty",
+      "actual_aac_excerpt_sha256": "23eae054fb9a3959f1a0203b19c9549a14f1341d005fac1bdc499c992a174649",
+      "accepted_original_source_sha256": "b3766348c71b950db94b0a95856333f74e364b01218b2d9e5c16e8e8d36b72a6",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "20.",
+      "expected_espeak": "twˈɛnti",
+      "accepted_source_recognized_phonemes": "t w ɛ n t i",
+      "fresh_final_aac_recognized_phonemes": "t w ɛ n t i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_010",
+      "expected_text": "ten",
+      "actual_aac_excerpt_sha256": "dfea10149a20197ea64a9643d966f69f17d47ac8f80f485795475f03cb77f465",
+      "accepted_original_source_sha256": "eafac5f936d732cb3f3083ab338a7c74e13e024c8529434b397ecde5eb9e69f1",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "10.",
+      "expected_espeak": "tˈɛn",
+      "accepted_source_recognized_phonemes": "t ɛ n",
+      "fresh_final_aac_recognized_phonemes": "t ɛ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_011",
+      "expected_text": "five",
+      "actual_aac_excerpt_sha256": "42a35152ba001162adc2a2b85d2b09f87f927c30f2cdb8587c2f5ad6c1f0346f",
+      "accepted_original_source_sha256": "37331077a222bbbd4f94344e7b6e2a1df3542de932a74d4bd56da4fc21371c80",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "5.",
+      "expected_espeak": "fˈaɪv",
+      "accepted_source_recognized_phonemes": "f aɪ v",
+      "fresh_final_aac_recognized_phonemes": "f aɪ v z",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "insert",
+          "accepted_source_tokens": [],
+          "final_aac_tokens": [
+            "z"
+          ]
+        }
+      ],
+      "guard_diagnostics": [
+        "C7_011-pad120",
+        "C7_011-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "CTC appends z while lexical ASR says five. The z token at excerpt0.600–0.625s lies inside the accepted source final-fricative region (voice offset0.08s, source duration0.600542s), not after the utterance. Last180ms correlation0.9999754 and local windows preserve that accepted source; no extra syllable or new post-source sound is present."
+      ]
+    },
+    {
+      "id": "C7_012",
+      "expected_text": "sixteen",
+      "actual_aac_excerpt_sha256": "87dca7c6f0de8ba43da828e3a320bd6b86f97a94e6f644294bac5e86fdebd166",
+      "accepted_original_source_sha256": "9567e524aed0f661ee5d89004a93523cd2006bb7818c62aa49591cde0286e5b8",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "16.",
+      "expected_espeak": "sˈɪkstiːn",
+      "accepted_source_recognized_phonemes": "s ɪ k s t iː n",
+      "fresh_final_aac_recognized_phonemes": "s ɪ k s t iː n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_013",
+      "expected_text": "eight",
+      "actual_aac_excerpt_sha256": "0d1fd9cba70959dcec2f5f2a1be9c5756b9aa7d390d565b392065338812b875d",
+      "accepted_original_source_sha256": "3662c8de41c36c505ff877e4317d9694e8088fef931c63d93cd7077a2c35557e",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "8",
+      "expected_espeak": "ˈeɪt",
+      "accepted_source_recognized_phonemes": "eɪ t",
+      "fresh_final_aac_recognized_phonemes": "eɪ t",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_014",
+      "expected_text": "four",
+      "actual_aac_excerpt_sha256": "8e4c6ca55dfd5977a2fb430851179618c86280b9922a0c35af8bf2b0b6a0c63d",
+      "accepted_original_source_sha256": "00dd0174fd56794142adb8655589f0721d36c9e959391a95152705fbc66639f8",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "4.",
+      "expected_espeak": "fˈoːɹ",
+      "accepted_source_recognized_phonemes": "f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C7_015",
+      "expected_text": "two",
+      "actual_aac_excerpt_sha256": "3a28b7c5f6ae3a254340aa913a2c44b1895779573c01f1c3eafbf225bb0cf723",
+      "accepted_original_source_sha256": "95f737925860efd569349797e361741b274e2df7207de2a3d772cb2a3c60d749",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "2",
+      "expected_espeak": "tˈuː",
+      "accepted_source_recognized_phonemes": "ɕ i5",
+      "fresh_final_aac_recognized_phonemes": "tɕh i5",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɕ"
+          ],
+          "final_aac_tokens": [
+            "tɕh"
+          ]
+        }
+      ],
+      "guard_diagnostics": [
+        "C7_015-pad120",
+        "C7_015-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The multilingual phone CTC has low-confidence non-English onset/vowel tokens on isolated two, also present on the original source. Padding changes those tokens rather than producing a stable alternative word. Unprompted lexical ASR recognizes two; both edge and local waveforms preserve the individually accepted source at correlation>=0.9999668. This is retained as a model warning, not silently counted as CTC agreement."
+      ]
+    },
+    {
+      "id": "C7_016",
+      "expected_text": "one",
+      "actual_aac_excerpt_sha256": "9bb33f27931c900fb6855642ce1eb5368a734abbdc8a9ed4063928437ca8df88",
+      "accepted_original_source_sha256": "58d4ab64f6a90c84474791bfcf868b29f875a971ab633afc3627732f7af1c389",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1.",
+      "expected_espeak": "wˈʌn",
+      "accepted_source_recognized_phonemes": "w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_000",
+      "expected_text": "twenty-seven",
+      "actual_aac_excerpt_sha256": "837a9a15d4f75f6667d9cd681a5b91ec4a7a66d3ebd2eea29821504ab38a6ac9",
+      "accepted_original_source_sha256": "2f52d3fb58de0937621cf16d0260a8514ac36657780406355828ee830ff6262d",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "27.",
+      "expected_espeak": "twˈɛntisˈɛvən",
+      "accepted_source_recognized_phonemes": "t w ɛ n t i s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "t w ɛ n t i s ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_001",
+      "expected_text": "eighty-two",
+      "actual_aac_excerpt_sha256": "c7f9e6a3b592df707c534c6078f226649f96604cb6dbcc19ccedc931b5608e65",
+      "accepted_original_source_sha256": "764627471d6b8ab0e2480316bb0e8cc39d9205716f35f97eb3347ddd2766ec33",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "82.",
+      "expected_espeak": "ˈeɪɾitˈuː",
+      "accepted_source_recognized_phonemes": "eɪ ɾ i t uː",
+      "fresh_final_aac_recognized_phonemes": "eɪ ɹ iː t uː",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɾ",
+            "i"
+          ],
+          "final_aac_tokens": [
+            "ɹ",
+            "iː"
+          ]
+        }
+      ],
+      "guard_diagnostics": [
+        "C27_001-pad120",
+        "C27_001-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Eighty-two has an American flap/rhotic-vowel CTC variant; the two ending and complete lexical82 remain. No change to the accepted spoken take is indicated by local waveform comparison."
+      ]
+    },
+    {
+      "id": "C27_002",
+      "expected_text": "forty-one",
+      "actual_aac_excerpt_sha256": "a08a2f8a88157bc147f16d7b7aaac2343c4e9cca037fff002401d47f9a736f73",
+      "accepted_original_source_sha256": "f821ea71dfc8d2801d3f6567b7b63ace0f031bb7653c093b9a964ff12aca20c5",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "41.",
+      "expected_espeak": "fˈɔːɹɾiwˌʌn",
+      "accepted_source_recognized_phonemes": "f ɔːɹ ɾ i w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ ɾ i w ʌ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_003",
+      "expected_text": "one hundred twenty-four",
+      "actual_aac_excerpt_sha256": "d4c0f9b70b939c9e69f93757da4818fd920efeefabadad4f84d669b77e7fd8d4",
+      "accepted_original_source_sha256": "fd39a0efdaf4f2b1a3eca733f2b256c18c05fc56c51c456590f49a00b7dffec3",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "124.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd twˈɛntifˈoːɹ",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d t w ɛ n t i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d t w ɛ n t i f ɔːɹ",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɪ"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_004",
+      "expected_text": "sixty-two",
+      "actual_aac_excerpt_sha256": "5d273d930d940569dad32bb69222f322fc012dc13663f9a9b94c1418fdc0eb33",
+      "accepted_original_source_sha256": "9a0aa42a15aeaf21428b3dc9b101a73e1189e4dee5e877b637ca40f539f024f4",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "62.",
+      "expected_espeak": "sˈɪkstitˈuː",
+      "accepted_source_recognized_phonemes": "s ɪ k s t i t uː",
+      "fresh_final_aac_recognized_phonemes": "s ɪ k s t i t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_005",
+      "expected_text": "thirty-one",
+      "actual_aac_excerpt_sha256": "49c9cd54691634daa4c75b0bc5e070d1e49604b204fe2c051258497b15966653",
+      "accepted_original_source_sha256": "f7d6b9581155e8befe68a50b32ffa61dc371e4894520ff6e5718fd3d15423045",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "31.",
+      "expected_espeak": "θˈɜːɾiwˌʌn",
+      "accepted_source_recognized_phonemes": "θ ɜː ɾ i w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "θ ɜː ɾ i w ʌ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_006",
+      "expected_text": "ninety-four",
+      "actual_aac_excerpt_sha256": "245095393d57362f0e6cc61ac51b71e22b7dd9d94a0b0c2c83e636a6636299e9",
+      "accepted_original_source_sha256": "566ebccdb5fb2bd98797a6bfd7f4561f7f27355c48eed304badc67500abf0c55",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "94.",
+      "expected_espeak": "nˈaɪntifˈoːɹ",
+      "accepted_source_recognized_phonemes": "n aɪ n d i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "n aɪ n d i f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_007",
+      "expected_text": "forty-seven",
+      "actual_aac_excerpt_sha256": "32e1fd015f42045a95170e03d9f77b3b42239eb12f907b7127dcdd47e0891f71",
+      "accepted_original_source_sha256": "6be5b84119379c577816156ee2f89cac3984926bc9f16a21913a1aeb20f3bb97",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "47.",
+      "expected_espeak": "fˈɔːɹɾisˈɛvən",
+      "accepted_source_recognized_phonemes": "f ɔːɹ ɾ i s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ ɾ i s ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_008",
+      "expected_text": "one hundred forty-two",
+      "actual_aac_excerpt_sha256": "6da20ab007b020bd3ac25b73196045a3b07574b0716e226741f55f58b150ad16",
+      "accepted_original_source_sha256": "7d2eb905d09e76d87c4de2ce3afb25846cd0c7c85b8454660deb215cdd80e1db",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "142.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd fˈɔːɹɾitˈuː",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d f ɔːɹ ɾ i t uː",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d f ɔːɹ ɾ i t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_009",
+      "expected_text": "seventy-one",
+      "actual_aac_excerpt_sha256": "ec9c60250f641c6d28ac603c6fb21bdd8361ee796acb9cd8722bb84ce98c5c6a",
+      "accepted_original_source_sha256": "0f30093b5883cabd594f03e68f30aa52a390b4a0229ebf9e2adedc6bad5c726e",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "71.",
+      "expected_espeak": "sˈɛvəntiwˌʌn",
+      "accepted_source_recognized_phonemes": "s ɛ v ə n t i w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "s ɛ v ə n t i w ʌ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_010",
+      "expected_text": "two hundred fourteen",
+      "actual_aac_excerpt_sha256": "beab0afff16dd69488ef11fd5da2ca8ce7f72a2a7871ac1a9b325a49aded4d4f",
+      "accepted_original_source_sha256": "90b49ef460636a4fbeaa5c3b3e7063d1da64f92ed334758e061196052811ba7c",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "214.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd fˈoːɹtiːn",
+      "accepted_source_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d f ɔːɹ t iː n",
+      "fresh_final_aac_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d f oːɹ t iː n",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɔːɹ"
+          ],
+          "final_aac_tokens": [
+            "oːɹ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_011",
+      "expected_text": "one hundred seven",
+      "actual_aac_excerpt_sha256": "0b3ad4546526c6d9ff4e9c13bfe5315df0dac218c329f67f1c99c1d2ff09f3f5",
+      "accepted_original_source_sha256": "084e1b213e9a4004822a65e8aa031037f872f13e4e31691bc987f541f67f7693",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "107.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd sˈɛvən",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d s ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_012",
+      "expected_text": "three hundred twenty-two",
+      "actual_aac_excerpt_sha256": "43c10cdc8e710c92002da497a027b329a86fee9e15f452919305c5bb5ca1ff46",
+      "accepted_original_source_sha256": "537c45c7def71d1427cd726e358d488b917bdfa3112b0fe659dad031e426e67b",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "322.",
+      "expected_espeak": "θɹˈiː hˈʌndɹɪd twˈɛntitˈuː",
+      "accepted_source_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ə d t w ɛ n ɾ i t uː",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ᵻ d t w ɛ n t ɾ i t uː",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ə"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        },
+        {
+          "operation": "insert",
+          "accepted_source_tokens": [],
+          "final_aac_tokens": [
+            "t"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_013",
+      "expected_text": "one hundred sixty-one",
+      "actual_aac_excerpt_sha256": "62f0d511dc0ff6cf416b7fec0effe465037e0786e258aeaa024218dd17f7d75a",
+      "accepted_original_source_sha256": "3226e7a764e149f464ac677cbdfbe009d241ddf4d2d70d55353e2529f5720ead",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "161.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd sˈɪkstiwˌʌn",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d s ɪ k s t i w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d s ɪ k s t i w ʌ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_014",
+      "expected_text": "four hundred eighty-four",
+      "actual_aac_excerpt_sha256": "ab64e1302c68b6bc8a00820cf8761f051909cb1253efc08d3e7e045cdd93c1e2",
+      "accepted_original_source_sha256": "ed6835234ce99c198344ba4255abd4bdc4dcf666cc13fc2a25e4587eb7acca8c",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "484.",
+      "expected_espeak": "fˈoːɹ hˈʌndɹɪd ˈeɪɾifˈoːɹ",
+      "accepted_source_recognized_phonemes": "f ɔːɹ h ʌ n d ɹ ɪ d eɪ ɾ i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ ɹ h ʌ n d ɹ ᵻ d eɪ ɾ i f oːɹ",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "insert",
+          "accepted_source_tokens": [],
+          "final_aac_tokens": [
+            "ɹ"
+          ]
+        },
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɪ"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        },
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɔːɹ"
+          ],
+          "final_aac_tokens": [
+            "oːɹ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_015",
+      "expected_text": "two hundred forty-two",
+      "actual_aac_excerpt_sha256": "03c48c5067bb07811c3aa842267eb21d2bfec09298ae5e402d2d3f87c22e3873",
+      "accepted_original_source_sha256": "c0a6ce78fa11699c8140b1af96d9b04d2ef8e6623d545b0f4fac5e02b26fcce9",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "242.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd fˈɔːɹɾitˈuː",
+      "accepted_source_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d f ɔːɹ ɾ i t uː",
+      "fresh_final_aac_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d f ɔːɹ ɾ i t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_016",
+      "expected_text": "one hundred twenty-one",
+      "actual_aac_excerpt_sha256": "3a0a8108db253166772fab507a1ea3742c472af174d0397a927b459b8b7bd436",
+      "accepted_original_source_sha256": "b75572c5bc1f70d1f8613c284badbc761f0cea74e740482db9fa14e6516f487e",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "121.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd twˈɛntiwˌʌn",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d t w ɛ n ɾ i w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d t w ɛ n ɾ i w ʌ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_017",
+      "expected_text": "three hundred sixty-four",
+      "actual_aac_excerpt_sha256": "48a12771c3475dce623b2decb2e63bdbb5f920d1ba6f0a7afe0ea964b59588c8",
+      "accepted_original_source_sha256": "1e7a190e0db17101b8f8424b9da0a15a7d880b34fc14e46acd23617bfd92e5fd",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "364.",
+      "expected_espeak": "θɹˈiː hˈʌndɹɪd sˈɪkstifˈoːɹ",
+      "accepted_source_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d s ɪ k s t i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d s ɪ k s t i f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_018",
+      "expected_text": "one hundred eighty-two",
+      "actual_aac_excerpt_sha256": "acc542f857218d8c65c95896f5082e01ecad70043adc53ddd6dd0e5e0b732478",
+      "accepted_original_source_sha256": "485092abe0f3319b98e847c6786e92ba3ff5887be203b4ec42533e90275dadce",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "182.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd ˈeɪɾitˈuː",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d eɪ ɹ i t uː",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d eɪ ɹ i t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_019",
+      "expected_text": "ninety-one",
+      "actual_aac_excerpt_sha256": "fe60953ac094c751e9425d6f81b281ab86c7f0ceb79c4565a4c4c79a0b0e5f6d",
+      "accepted_original_source_sha256": "508837e87c5a613465d91cfd483642d5d28c89a708f7b4521fca3718e373bd5d",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "91.",
+      "expected_espeak": "nˈaɪntiwˌʌn",
+      "accepted_source_recognized_phonemes": "n aɪ n d i w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "n aɪ n d i w ʌ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_020",
+      "expected_text": "two hundred seventy-four",
+      "actual_aac_excerpt_sha256": "6a39bfa2a3b56823a26008eac4976102967d8a8ef5c61f6d20e7b2c5102af813",
+      "accepted_original_source_sha256": "d9091423245e7b6056ea8688142cf07a026cc1dc519c40183de2f0451e020637",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "274.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd sˈɛvəntifˈoːɹ",
+      "accepted_source_recognized_phonemes": "t uː h ʌ n d ɹ ᵻ d s ɛ v ə n t i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "t uː h ʌ n d ɹ ᵻ d s ɛ v ə n t i f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_021",
+      "expected_text": "one hundred thirty-seven",
+      "actual_aac_excerpt_sha256": "950152d3740f08ba64d31c482d49eb0535c62f9420ea39ca48928a7500f897cf",
+      "accepted_original_source_sha256": "900fe29f34e0e1b02917fcb108f54c169b842ad9363f8efc098628138e28b85d",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "137.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd θˈɜːɾisˈɛvən",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d θ ɜː ɾ i s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d θ ɜː ɾ i s ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_022",
+      "expected_text": "four hundred twelve",
+      "actual_aac_excerpt_sha256": "e8c9d961f056d4512a2ab5018cbf248f979d390953c44cde18bf48c11f738eba",
+      "accepted_original_source_sha256": "0562bd020bc91b1be109e5787d471211a8e0bb7ea0dbfde7d8fb521395f26b24",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "412.",
+      "expected_espeak": "fˈoːɹ hˈʌndɹɪd twˈɛlv",
+      "accepted_source_recognized_phonemes": "f ɔːɹ h ʌ n d ɹ ɪ d t w ɛ l v",
+      "fresh_final_aac_recognized_phonemes": "f oːɹ h ʌ n d ɹ ᵻ d t w ɛ l v",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɔːɹ"
+          ],
+          "final_aac_tokens": [
+            "oːɹ"
+          ]
+        },
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɪ"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_023",
+      "expected_text": "two hundred six",
+      "actual_aac_excerpt_sha256": "7c5394b59efd1f98bbfcabe9a7bab4a797ce50fb9b233ab9a73681d0b34d962c",
+      "accepted_original_source_sha256": "c2adea81d4f560e0fc7e2459dcbd8060a11713b42740e1d4bf3de202badae331",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "206.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd sˈɪks",
+      "accepted_source_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d s ɪ k s",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_024",
+      "expected_text": "one hundred three",
+      "actual_aac_excerpt_sha256": "05978e70d8558431f300cdcd914c8048d3d35cff187c773a2923d45355c4734d",
+      "accepted_original_source_sha256": "ae3396351555b2d724802000e032964f9d405305c548a099d8254dc34362c766",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "103.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd θɹˈiː",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d θ ɹ iː",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d θ ɹ iː",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɪ"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_025",
+      "expected_text": "three hundred ten",
+      "actual_aac_excerpt_sha256": "7db35c8889d097d6602a0ca75ffa5c47b80fd4b7508e86d342671f57fa7830e4",
+      "accepted_original_source_sha256": "1e4025fe88d3652d41990459ef541f832e7c417ab5e63422c14b7dd7b181e822",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "310.",
+      "expected_espeak": "θɹˈiː hˈʌndɹɪd tˈɛn",
+      "accepted_source_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d t ɛ n",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d t ɛ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_026",
+      "expected_text": "one hundred fifty-five",
+      "actual_aac_excerpt_sha256": "1d1f01260ea8bc6217d828afd9dcca3fab784f21322499c851750cbd36a53cc7",
+      "accepted_original_source_sha256": "ff820ab47442a3b031fb1f9d3b2bef65e7c0b5124f2852461e0ad2faa28f9cde",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "155.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd fˈɪftifˈaɪv",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d f ɪ f t i f aɪ v",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d f ɪ f t i f aɪ v",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_027",
+      "expected_text": "four hundred sixty-six",
+      "actual_aac_excerpt_sha256": "2131824e0985d2c9a80ea9912f9152d156f653cb362ce039e66d0b2383bd6d75",
+      "accepted_original_source_sha256": "4a7d788de65eca5a096a35b3f2ef8a35621c1e44f0407c3a5f2fecc1d12e0af9",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "466.",
+      "expected_espeak": "fˈoːɹ hˈʌndɹɪd sˈɪkstisˈɪks",
+      "accepted_source_recognized_phonemes": "f ɔːɹ h ʌ n d ɹ ɪ d s ɪ k s t i s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ h ʌ n d ɹ ɪ d s ɪ k s t i s ɪ k s",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_028",
+      "expected_text": "two hundred thirty-three",
+      "actual_aac_excerpt_sha256": "3e97e1efd67d083f796d228f73c3c02c0c18ebe38f643f19f6bdb9de1b797979",
+      "accepted_original_source_sha256": "084230d65c9efafc6b4f34a95c3e5359cab324d6f3f617670e4e9c5c5e3cda9b",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "233.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd θˈɜːɾiθɹˈiː",
+      "accepted_source_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d θ ɜː ɾ i θ ɹ iː",
+      "fresh_final_aac_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d θ ɜː ɾ i θ ɹ iː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_029",
+      "expected_text": "seven hundred",
+      "actual_aac_excerpt_sha256": "cc0e60c770f65e8835b219ed6702483c2c57a3bf97ea03b7acdf440be122a68f",
+      "accepted_original_source_sha256": "878979c01fd08de3ce318902edbc40366dfa14f1f39a0963824992e5dc430e69",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "700.",
+      "expected_espeak": "sˈɛvən hˈʌndɹɪd",
+      "accepted_source_recognized_phonemes": "s ɛ v ə n h ʌ n d ɹ ɪ d",
+      "fresh_final_aac_recognized_phonemes": "s ɛ v ə n h ʌ n d ɹ ɪ d",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_030",
+      "expected_text": "three hundred fifty",
+      "actual_aac_excerpt_sha256": "47d15aa81d3bdbd77633b419b131430a267fc2d38c02abcd45f8d768351d9086",
+      "accepted_original_source_sha256": "890611282952e35f934c7a40e750eefb7391e3e18bbf152e63cc96c65d35aa64",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "350.",
+      "expected_espeak": "θɹˈiː hˈʌndɹɪd fˈɪfti",
+      "accepted_source_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d f ɪ f t i",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d f ɪ f t i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_031",
+      "expected_text": "one hundred seventy-five",
+      "actual_aac_excerpt_sha256": "7a1a759eefd5fd5ef32b95f518b70c92bf46626734dd5e8a02b531d4e3c0bbea",
+      "accepted_original_source_sha256": "37b2a02fb54467f5430df3cff2c8808b49029c4d45f64e859c4f506434ff575d",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "175.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd sˈɛvəntifˈaɪv",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d s ɛ v ə n t i f aɪ v",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d s ɛ v ə n t i f aɪ v",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_032",
+      "expected_text": "five hundred twenty-six",
+      "actual_aac_excerpt_sha256": "d952407946b10e9bec8ad760ca8c4c62f202fea9fd1c51d715553f7c060c6c14",
+      "accepted_original_source_sha256": "f353db567d67a711a12af8bd68c28de8b3130d73867b54c699beee46bce2c4e4",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "526",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd twˈɛntisˈɪks",
+      "accepted_source_recognized_phonemes": "f aɪ v h ə n d ɹ ᵻ d t w ɛ n i s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "f aɪ v h ʌ n d ɹ ᵻ d t w ɛ n i s ɪ k s",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ə"
+          ],
+          "final_aac_tokens": [
+            "ʌ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_033",
+      "expected_text": "two hundred sixty-three",
+      "actual_aac_excerpt_sha256": "55ce44da23b2d4f0dfe846351c4d8cc9f0ae4fbf11b446567a17f2b992a530d8",
+      "accepted_original_source_sha256": "010908986adc41c5153f558356e2736daddfb685cfd6730864cd38e504dc77c5",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "263.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd sˈɪkstiθɹˈiː",
+      "accepted_source_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d s ɪ k s t i θ ɹ iː",
+      "fresh_final_aac_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d s ɪ k s t i θ ɹ iː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_034",
+      "expected_text": "seven hundred ninety",
+      "actual_aac_excerpt_sha256": "3dfc2ca3bcaa4580b36d25ab6bbf34b2daed103c1c418c6b74c8149b067a3e18",
+      "accepted_original_source_sha256": "df3d62802bf7aa8edf4cd64e21e7f13363a4ca09ada4129a59bda7f9642b7abb",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "790.",
+      "expected_espeak": "sˈɛvən hˈʌndɹɪd nˈaɪnti",
+      "accepted_source_recognized_phonemes": "s ɛ v ə n h ʌ n d ɹ ɪ d n aɪ n d i",
+      "fresh_final_aac_recognized_phonemes": "s ɛ v ə n h ʌ n d ɹ ɪ d n aɪ n d i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_035",
+      "expected_text": "three hundred ninety-five",
+      "actual_aac_excerpt_sha256": "73587df7fce9eb49a4b502c723b7e3ca64cb867ec0a340c7b7f0fcdf3597a582",
+      "accepted_original_source_sha256": "c7a085538c5a2b3b44205b4abfc7be0f4cde1cee7b9fbc12a8bdb9743b7cf922",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "395.",
+      "expected_espeak": "θɹˈiː hˈʌndɹɪd nˈaɪntifˈaɪv",
+      "accepted_source_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d n aɪ n d i f aɪ v",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d n aɪ n d i f aɪ v",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_036",
+      "expected_text": "one thousand one hundred eighty-six",
+      "actual_aac_excerpt_sha256": "c9e3accde1fd789789604f3a3b64b181ea9f308e5bf7339d021f3c629baca18f",
+      "accepted_original_source_sha256": "75cb7d21a75f1aba228eb21a9847b49c885596865f525083701ada41cefc5823",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,186.",
+      "expected_espeak": "wˈʌn θˈaʊzənd wˈʌn hˈʌndɹɪd ˈeɪɾisˈɪks",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n w ʌ n h ʌ n d ɹ ɪ d eɪ ɾ i s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n w ʌ n h ʌ n d ɹ ɪ d eɪ ɾ i s ɪ k s",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_037",
+      "expected_text": "five hundred ninety-three",
+      "actual_aac_excerpt_sha256": "ef74e926e25bf008a985094f2dbbd3b4bda52da9f754d282c0bf89305c32d07f",
+      "accepted_original_source_sha256": "72cd61720b3f6a5e42635bfe306b48604c643dafd3a272c3cddb64628c28e2cf",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "593.",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd nˈaɪntiθɹˈiː",
+      "accepted_source_recognized_phonemes": "f aɪ v h ʌ n d ɹ ɪ d n aɪ n d i θ ɹ i",
+      "fresh_final_aac_recognized_phonemes": "f aɪ v h ʌ n d ɹ ᵻ d n aɪ n d i θ ɹ i",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɪ"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_038",
+      "expected_text": "one thousand seven hundred eighty",
+      "actual_aac_excerpt_sha256": "dc78ea02faa23ace789ee5549aa06dde01c5516a52203dee4e6f57c7b96673cb",
+      "accepted_original_source_sha256": "1762685e308622dbccd6de93abbdf6ca5d9522b2e66ea77d017443ffa6aea2fb",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,780.",
+      "expected_espeak": "wˈʌn θˈaʊzənd sˈɛvən hˈʌndɹɪd ˈeɪɾi",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n s ɛ v ə n h ʌ n d ɹ ᵻ d eɪ ɾ i",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n s ɛ v ə n h ʌ n d ɹ ᵻ d eɪ ɾ i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_039",
+      "expected_text": "eight hundred ninety",
+      "actual_aac_excerpt_sha256": "14fa42446a12418c5b7c4af99f48d9be0a4b076046b1584d771f29397477ea30",
+      "accepted_original_source_sha256": "9afe33f5c104c36b3479129ee4f9d84b36981cbb6b801dc25fafd44c96c301a3",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "890.",
+      "expected_espeak": "ˈeɪt hˈʌndɹɪd nˈaɪnti",
+      "accepted_source_recognized_phonemes": "eɪ t h ʌ n d ɹ ɪ d n aɪ n d i",
+      "fresh_final_aac_recognized_phonemes": "eɪ t h ʌ n d ɹ ɪ d n aɪ n d i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_040",
+      "expected_text": "four hundred forty-five",
+      "actual_aac_excerpt_sha256": "bc3dd73e5a83db6931c65d5adff89a829c701881d8125c7e1e72ec6e58d50c68",
+      "accepted_original_source_sha256": "7ffc80b881bc112b0d28f287269946a539f6e554c62b92030600635594255e23",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "445.",
+      "expected_espeak": "fˈoːɹ hˈʌndɹɪd fˈɔːɹɾifˈaɪv",
+      "accepted_source_recognized_phonemes": "f oːɹ h ʌ n d ɹ ᵻ d f ɔːɹ ɾ i f aɪ v",
+      "fresh_final_aac_recognized_phonemes": "f oːɹ ɹ h ʌ n d ɹ ᵻ d f ɔːɹ ɾ i f aɪ v",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "insert",
+          "accepted_source_tokens": [],
+          "final_aac_tokens": [
+            "ɹ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_041",
+      "expected_text": "one thousand three hundred thirty-six",
+      "actual_aac_excerpt_sha256": "ebeb6c031d6410a7ffc46f7637f43b67354ce1eb6d2391c9eaa3d8e0fa87b0a2",
+      "accepted_original_source_sha256": "526cbcf4df8bd100cde00ba8e4384604c23ae0b1b6b2677ebc0274bb23b12d12",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,336.",
+      "expected_espeak": "wˈʌn θˈaʊzənd θɹˈiː hˈʌndɹɪd θˈɜːɾisˈɪks",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ɪ d θ ɜː ɾ i s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ɪ d θ ɜː ɾ i s ɪ k s",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_042",
+      "expected_text": "six hundred sixty-eight",
+      "actual_aac_excerpt_sha256": "fdb4d86c977153d94ef8a74fe22e5ba16e782b4bd2ec77d96a8b4d488053f119",
+      "accepted_original_source_sha256": "d092a9c8a06484ef0e90648e12d740a6cffb54f6f093df5d9e8ff8a9f02578ac",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "668.",
+      "expected_espeak": "sˈɪks hˈʌndɹɪd sˈɪkstiˈeɪt",
+      "accepted_source_recognized_phonemes": "s ɪ k s h ʌ n d ɹ ɪ d s ɪ k s t i eɪ t",
+      "fresh_final_aac_recognized_phonemes": "s ɪ k s h ʌ n d ɹ ɪ d s ɪ k s t i eɪ t",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_043",
+      "expected_text": "three hundred thirty-four",
+      "actual_aac_excerpt_sha256": "789ed9354458e572e2891671316584eaf72f1b04b04b9030e831451bdee33752",
+      "accepted_original_source_sha256": "0745b056f5f3537c6aace2cb74aaabfbfc1a7f78992010c47fb7ced39899ec5c",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "334.",
+      "expected_espeak": "θɹˈiː hˈʌndɹɪd θˈɜːɾifˈoːɹ",
+      "accepted_source_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ə d θ ɜː ɾ i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ə d θ ɜː ɾ i f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_044",
+      "expected_text": "one hundred sixty-seven",
+      "actual_aac_excerpt_sha256": "35e185df666f5eab70f5ea5bb39834e07584799f6974e0236c79433e80e54970",
+      "accepted_original_source_sha256": "e16a159b8b573d372f910acfe7354e86e06b8a6c021b9f1d56784ce4e287c0b7",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "167.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd sˈɪkstisˈɛvən",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d s ɪ k s t i s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d s ɪ k s t i s ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_045",
+      "expected_text": "five hundred two",
+      "actual_aac_excerpt_sha256": "0b9f194501d91be46a4d13c32cf27c6c1eaf9278884c360dbf87857ab66989cf",
+      "accepted_original_source_sha256": "1155450c0045763f91f17804912a3014d3bb83c38df38c5a618542473f2f0f29",
+      "fresh_asr_status": "warning-review-required",
+      "fresh_asr_transcript": "500 2.",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd tˈuː",
+      "accepted_source_recognized_phonemes": "f aɪ v h ʌ n d ɹ ᵻ d t uː",
+      "fresh_final_aac_recognized_phonemes": "f aɪ v h ʌ n d ɹ ᵻ d t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [
+        "C27_045-pad120",
+        "C27_045-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The lexical recognizer splits502 as500 2. Fresh unprompted CTC and both guard runs contain five hundred two in order. No source or encoded local waveform omission exists.",
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_046",
+      "expected_text": "two hundred fifty-one",
+      "actual_aac_excerpt_sha256": "1408d86f8d07571777c151cb49227b516763931b9bbd405afe8d1c09f84c8a68",
+      "accepted_original_source_sha256": "9d2cbe651b8790fc00e0e85ceb2141a9ae0667ac909556d6dc25a22ad3d138dc",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "251.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd fˈɪftiwˌʌn",
+      "accepted_source_recognized_phonemes": "t uː h ʌ n d ɹ ᵻ d f ɪ f t i w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d f ɪ f t i w ʌ n",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ᵻ"
+          ],
+          "final_aac_tokens": [
+            "ɪ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_047",
+      "expected_text": "seven hundred fifty-four",
+      "actual_aac_excerpt_sha256": "d28d83cf3362fa3a556c41e8c86d1d7a89f435038d797c1e20056403683202d5",
+      "accepted_original_source_sha256": "1aba5ff7584a246955d3fa21922c596f03caf3e1f9d28b0558277612c20dc50a",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "754.",
+      "expected_espeak": "sˈɛvən hˈʌndɹɪd fˈɪftifˈoːɹ",
+      "accepted_source_recognized_phonemes": "s ɛ v ə n h ʌ n d ɹ ᵻ d f ɪ f t i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "s ɛ v ə n h ʌ n d ɹ ᵻ d f ɪ f t i f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_048",
+      "expected_text": "three hundred seventy-seven",
+      "actual_aac_excerpt_sha256": "65fa8b89b8bf9a1b3320e347df51b5d92db180210f6891b2dcf70d01eb70ef3f",
+      "accepted_original_source_sha256": "06f069bae495515c39205a96ec6eaa7159e851a7b0c387dc5b016e642a3d1161",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "377.",
+      "expected_espeak": "θɹˈiː hˈʌndɹɪd sˈɛvəntisˈɛvən",
+      "accepted_source_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d s ɛ v ə n t i s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ᵻ d s ɛ v ə n t i s ɛ v ə n",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɪ"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_049",
+      "expected_text": "one thousand one hundred thirty-two",
+      "actual_aac_excerpt_sha256": "55ca825feb3c4104e1590a27d44061487ac52abe451d886c49303cd836e232f1",
+      "accepted_original_source_sha256": "5c055fffe2c8e5ee7175482856c7f12522db19166528599848ed0449cd835daf",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,132.",
+      "expected_espeak": "wˈʌn θˈaʊzənd wˈʌn hˈʌndɹɪd θˈɜːɾitˈuː",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n w ʌ n h ʌ n d ɹ ɪ d θ ɜː ɾ i t uː",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n w ʌ n h ʌ n d ɹ ɪ d θ ɜː ɾ i t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_050",
+      "expected_text": "five hundred sixty-six",
+      "actual_aac_excerpt_sha256": "f239335f4acebea31ceec486a4d303e16c3cf559522e8d72d3e008cdc38dfc85",
+      "accepted_original_source_sha256": "371fa466cd381d60b54375ce9abf2fb7375c6120f9cc0c183c6a7502427bc67e",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "566.",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd sˈɪkstisˈɪks",
+      "accepted_source_recognized_phonemes": "f aɪ v h ʌ n d ɹ ə d s ɪ k s t i s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "f aɪ v h ʌ n d ɹ ɪ d s ɪ k s t i s ɪ k s",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ə"
+          ],
+          "final_aac_tokens": [
+            "ɪ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_051",
+      "expected_text": "two hundred eighty-three",
+      "actual_aac_excerpt_sha256": "ef7381cf1cf023fcff20160868d8d29c544e029b43e425a1ac7453959115f757",
+      "accepted_original_source_sha256": "6cb895324835b16e12e18858a33189d7af49bb175f259486d322009518766dac",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "283.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd ˈeɪɾiθɹˈiː",
+      "accepted_source_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d eɪ ɾ i θ ɹ iː",
+      "fresh_final_aac_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d eɪ ɾ i θ ɹ iː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_052",
+      "expected_text": "eight hundred fifty",
+      "actual_aac_excerpt_sha256": "4730af48e5a283f7721d3de378af0d0d1a55ea62d1ea89b4d48f1c52f0681d43",
+      "accepted_original_source_sha256": "dc74b650737f07dcffc3c32353e83bb9f388be624e0d095aac81a3124f9101fd",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "850.",
+      "expected_espeak": "ˈeɪt hˈʌndɹɪd fˈɪfti",
+      "accepted_source_recognized_phonemes": "eɪ t h ʌ n d ɹ ɪ d f ɪ f t i",
+      "fresh_final_aac_recognized_phonemes": "eɪ t h ʌ n d ɹ ɪ d f ɪ f t i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_053",
+      "expected_text": "four hundred twenty-five",
+      "actual_aac_excerpt_sha256": "832061b5389e8a3619ca1bfc5cde55cad8137086b548cc94fdbe883efa75d7ee",
+      "accepted_original_source_sha256": "709f8a229194ee1f16c358c6266015b18e5f02441e550da29063d159557740a5",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "425.",
+      "expected_espeak": "fˈoːɹ hˈʌndɹɪd twˈɛntifˈaɪv",
+      "accepted_source_recognized_phonemes": "f ɔːɹ h ʌ n d ɹ ᵻ d t w ɛ n i f aɪ v",
+      "fresh_final_aac_recognized_phonemes": "f oːɹ h ʌ n d ɹ ᵻ d t w ɛ n i f aɪ v",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɔːɹ"
+          ],
+          "final_aac_tokens": [
+            "oːɹ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_054",
+      "expected_text": "one thousand two hundred seventy-six",
+      "actual_aac_excerpt_sha256": "a0fbdb1ee083e048283859e6e26da373fa002e0a9034b914df00052f1d4f4d57",
+      "accepted_original_source_sha256": "6c8669c41cee04fa809812e53e4f1c00ba193914128c8be283e92fb3a2a11755",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,276.",
+      "expected_espeak": "wˈʌn θˈaʊzənd tˈuː hˈʌndɹɪd sˈɛvəntisˈɪks",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n d t uː h ʌ n d ɹ ᵻ d s ɛ v ə n ɾ i s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n d t uː h ʌ n d ɹ ɪ d s ɛ v ə n ɾ i s ɪ k s",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ᵻ"
+          ],
+          "final_aac_tokens": [
+            "ɪ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_055",
+      "expected_text": "six hundred thirty-eight",
+      "actual_aac_excerpt_sha256": "1cca02cd2f8d667b1398b59e2ea188e7004c959d1aa40605c6400b2dcf409786",
+      "accepted_original_source_sha256": "c54c1e6d57eb32b696efc135823e287536a0874a6e31b12d8ea764e07eeb77bf",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "638.",
+      "expected_espeak": "sˈɪks hˈʌndɹɪd θˈɜːɾiˈeɪt",
+      "accepted_source_recognized_phonemes": "s ɪ k s h ʌ n d ɹ ɪ d θ ɜː ɾ i eɪ t",
+      "fresh_final_aac_recognized_phonemes": "s ɪ k s h ʌ n d ɹ ɪ d θ ɜː ɾ i eɪ t",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_056",
+      "expected_text": "three hundred nineteen",
+      "actual_aac_excerpt_sha256": "1f5826b25d73111436363286ae80a9b816c2849e0eb8a5e69c5b7a0de04e8939",
+      "accepted_original_source_sha256": "7afc572b122badd7a674bacb37b9293b8637c88672eb659907c15234fb9efb85",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "319.",
+      "expected_espeak": "θɹˈiː hˈʌndɹɪd nˈaɪntiːn",
+      "accepted_source_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d n aɪ n t iː n",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d n aɪ n t iː n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_057",
+      "expected_text": "nine hundred fifty-eight",
+      "actual_aac_excerpt_sha256": "1f67de956718d751c023c3ac59c44d4479f97cd99c7921653ec6d852ceabff85",
+      "accepted_original_source_sha256": "0df2157962b7d9d3ac6bd27cd008d972d0b7d48673f0c2c8830215738b192918",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "958.",
+      "expected_espeak": "nˈaɪn hˈʌndɹɪd fˈɪftiˈeɪt",
+      "accepted_source_recognized_phonemes": "n aɪ n h ʌ n d ɹ ɪ d f ɪ f t i eɪ t",
+      "fresh_final_aac_recognized_phonemes": "n aɪ n h ʌ n d ɹ ᵻ d f ɪ f t i eɪ t",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɪ"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_058",
+      "expected_text": "four hundred seventy-nine",
+      "actual_aac_excerpt_sha256": "4e8f1fd23514e09c663e02733d2c080ba7201eef22253d9ec132b1f5f1eb46f9",
+      "accepted_original_source_sha256": "9a187ce1aa2485cf3c3bc3d58ef37b612d895cafe2a7d7759a3260d656d9ef6e",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "479.",
+      "expected_espeak": "fˈoːɹ hˈʌndɹɪd sˈɛvəntinˈaɪn",
+      "accepted_source_recognized_phonemes": "f ɔːɹ h ʌ n d ɹ ᵻ d s ɛ v ə n t i n aɪ n",
+      "fresh_final_aac_recognized_phonemes": "f oːɹ h ʌ n d ɹ ᵻ d s ɛ v ə n t i n aɪ n",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɔːɹ"
+          ],
+          "final_aac_tokens": [
+            "oːɹ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_059",
+      "expected_text": "one thousand four hundred thirty-eight",
+      "actual_aac_excerpt_sha256": "9006aef852050c14bd9c177c3e00e29588f426ac0f097f25e9acbc100039108b",
+      "accepted_original_source_sha256": "a3e6cf9228b3e178d0887b58ca9e75b9c2d0498b12fda4f1fce116b570999a73",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,438.",
+      "expected_espeak": "wˈʌn θˈaʊzənd fˈoːɹ hˈʌndɹɪd θˈɜːɾiˈeɪt",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n d f ɔːɹ h ʌ n d ɹ ɪ d θ ɜː ɾ i eɪ t",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n d f ɔːɹ h ʌ n d ɹ ɪ d θ ɜː ɾ i eɪ t",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_060",
+      "expected_text": "seven hundred nineteen",
+      "actual_aac_excerpt_sha256": "b6408c1dd87900a01306471db36661d1dc20e4fa6df5b12303d5284a0ea9a026",
+      "accepted_original_source_sha256": "4f4a91106488e07c5c616e479dc71057c86724b43c09647d01e58a00aa9e4f91",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "719",
+      "expected_espeak": "sˈɛvən hˈʌndɹɪd nˈaɪntiːn",
+      "accepted_source_recognized_phonemes": "s ɛ v ə n h ʌ n d ɹ ɪ d n aɪ n t iː n",
+      "fresh_final_aac_recognized_phonemes": "s ɛ v ə n h ʌ n d ɹ ɪ d n aɪ n t iː n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_061",
+      "expected_text": "two thousand one hundred fifty-eight",
+      "actual_aac_excerpt_sha256": "50541acd874ca14e8bdc629b59f275a3d81337e4175483e5a5d8847c53424074",
+      "accepted_original_source_sha256": "5e2cca9607eaa46fcb382c70ee251272425f2280f452392400760812c061ccad",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "2,158.",
+      "expected_espeak": "tˈuː θˈaʊzənd wˈʌn hˈʌndɹɪd fˈɪftiˈeɪt",
+      "accepted_source_recognized_phonemes": "t uː θ aʊ z ə n w ʌ n h ʌ n d ɹ ɪ d f ɪ f t i eɪ t",
+      "fresh_final_aac_recognized_phonemes": "t uː θ aʊ z ə n w ʌ n h ʌ n d ɹ ɪ d f ɪ f t i eɪ t",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_062",
+      "expected_text": "one thousand seventy-nine",
+      "actual_aac_excerpt_sha256": "d63a7e9c1bc7b35110b12ca7209937306041ad9b7b43adefaabacd0f43cb13ca",
+      "accepted_original_source_sha256": "4585b9febe81daefa1bb4fd8af1171cdd63ba20165fbdcac540bc3989843fca0",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,079.",
+      "expected_espeak": "wˈʌn θˈaʊzənd sˈɛvəntinˈaɪn",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n d s ɛ v ə n t i n aɪ n",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n d s ɛ v ə n t i n aɪ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_063",
+      "expected_text": "three thousand two hundred thirty-eight",
+      "actual_aac_excerpt_sha256": "b8beec17f253ffa681af8b98bb61b72fefe765bdbc8676fe2b87b32df63d7dc0",
+      "accepted_original_source_sha256": "5e218a5d9054fc6f86472e7bd32728c0de4616390fbdb71e65050064f24649b4",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "3,238.",
+      "expected_espeak": "θɹˈiː θˈaʊzənd tˈuː hˈʌndɹɪd θˈɜːɾiˈeɪt",
+      "accepted_source_recognized_phonemes": "ɹ iː θ aʊ z ə n d t uː h ʌ n d ɹ ɪ d θ ɜː ɾ i eɪ t",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː θ aʊ z ə n d t uː h ʌ n d ɹ ɪ d θ ɜː ɾ i eɪ t",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "insert",
+          "accepted_source_tokens": [],
+          "final_aac_tokens": [
+            "θ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [
+        "C27_063-pad120",
+        "C27_063-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The encoded CTC additionally resolves the initial theta of three, which the source run omitted. This improves the expected onset coverage and does not add a word or syllable."
+      ]
+    },
+    {
+      "id": "C27_064",
+      "expected_text": "one thousand six hundred nineteen",
+      "actual_aac_excerpt_sha256": "5e38a6b30a9c3a734fe3778a1e6b0bfa69ee99e4e72354ee9054f9d2cd47c843",
+      "accepted_original_source_sha256": "a452ae6dd6b9430a43386e52e09efc22e72032ce75525261145a6d3a0b16a42a",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,619.",
+      "expected_espeak": "wˈʌn θˈaʊzənd sˈɪks hˈʌndɹɪd nˈaɪntiːn",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ɪ d n aɪ n t iː n",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ɪ d n aɪ n t iː n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_065",
+      "expected_text": "four thousand eight hundred fifty-eight",
+      "actual_aac_excerpt_sha256": "fc082b2a0a5887627af0d716390c67ceb86b1b93611ac156ccde7cc59a1d63f4",
+      "accepted_original_source_sha256": "3bc6d8d74e1d5b16a81e9ce1da79fff7b11e36f5fdce1058cf12edf4eed13186",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "4,858.",
+      "expected_espeak": "fˈoːɹ θˈaʊzənd ˈeɪt hˈʌndɹɪd fˈɪftiˈeɪt",
+      "accepted_source_recognized_phonemes": "f ɔːɹ θ aʊ z ə n eɪ t h ʌ n d ɹ ɪ d f ɪ f t i eɪ t",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ θ aʊ z ə n eɪ t h ʌ n d ɹ ɪ d f ɪ f t i eɪ t",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_066",
+      "expected_text": "two thousand four hundred twenty-nine",
+      "actual_aac_excerpt_sha256": "f44e8860d446cc0435ccd95d5f08be4ba08e1dc78c32a2a1408483abd0520f6d",
+      "accepted_original_source_sha256": "e882faf36dfceaf6ff1e75cb3a191a9e6f943c690b6e477432b093481fe98bbe",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "2,429.",
+      "expected_espeak": "tˈuː θˈaʊzənd fˈoːɹ hˈʌndɹɪd twˈɛntinˈaɪn",
+      "accepted_source_recognized_phonemes": "t uː θ aʊ z ə n d f ɔːɹ h ʌ n d ɹ ɪ d t w ɛ n t i n aɪ n",
+      "fresh_final_aac_recognized_phonemes": "t uː θ aʊ z ə n d f oːɹ h ʌ n d ɹ ɪ d t w ɛ n t i n aɪ n",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɔːɹ"
+          ],
+          "final_aac_tokens": [
+            "oːɹ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_067",
+      "expected_text": "seven thousand two hundred eighty-eight",
+      "actual_aac_excerpt_sha256": "56c6335fd7ae4292da9efcb5ce191824332572e818e30f7f987eaa7d702651fc",
+      "accepted_original_source_sha256": "68d08a75ff41af238390b565716cd005bd3af1f7635b214fb508f39c2586bd0b",
+      "fresh_asr_status": "warning-review-required",
+      "fresh_asr_transcript": "7,28",
+      "expected_espeak": "sˈɛvən θˈaʊzənd tˈuː hˈʌndɹɪd ˈeɪɾiˈeɪt",
+      "accepted_source_recognized_phonemes": "s ɛ v ə n θ aʊ z ə n d t uː h ʌ n d ɹ ɪ d eɪ ɹ i eɪ t",
+      "fresh_final_aac_recognized_phonemes": "s ɛ v ə n θ aʊ z ə n d t uː h ʌ n d ɹ ɪ d eɪ ɹ i eɪ t",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [
+        "C27_067-pad120",
+        "C27_067-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The lexical recognizer prints7,28. CTC retains seven thousand two hundred eighty-eight, including final eight; both guarded runs confirm the same words. All local waveform windows match the accepted full take.",
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_068",
+      "expected_text": "three thousand six hundred forty-four",
+      "actual_aac_excerpt_sha256": "65c432ab616dd1bac2744bc10c8342d2642b062add475d3ce7bb2f5f28d40935",
+      "accepted_original_source_sha256": "0662a4d3af13aeeb3d3a1fd519dfae562e4973bbce06c687002b39e4659f6b35",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "3,644.",
+      "expected_espeak": "θɹˈiː θˈaʊzənd sˈɪks hˈʌndɹɪd fˈɔːɹɾifˈoːɹ",
+      "accepted_source_recognized_phonemes": "θ ɹ iː θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ɪ d f ɔːɹ ɾ i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ɪ d f ɔːɹ ɾ i f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_069",
+      "expected_text": "one thousand eight hundred twenty-two",
+      "actual_aac_excerpt_sha256": "4e6babf0829b51c713c23c9740a5b5dea55506aa5d0927e7d7dd45ddf67a9fe7",
+      "accepted_original_source_sha256": "5651b896f8d50840564540e1c7bb78b8881b1b2cff1ee0dc3e07660984a2f9b5",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,822.",
+      "expected_espeak": "wˈʌn θˈaʊzənd ˈeɪt hˈʌndɹɪd twˈɛntitˈuː",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n d eɪ t h ʌ n d ɹ ɪ d t w ɛ n ɾ i t uː",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n d eɪ t h ʌ n d ɹ ɪ d t w ɛ n ɾ i t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_070",
+      "expected_text": "nine hundred eleven",
+      "actual_aac_excerpt_sha256": "9976ce56e7adfedf5510265c981420512bbb1a14c8f2664a8055fbc775fe209e",
+      "accepted_original_source_sha256": "1ff2f3199409ae154919bda94273e32add42ad61195a9f029d0ae5d10e36b8b9",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "911.",
+      "expected_espeak": "nˈaɪn hˈʌndɹɪd ᵻlˈɛvən",
+      "accepted_source_recognized_phonemes": "n aɪ n h ʌ n d ɹ ᵻ d ᵻ l ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "n aɪ n h ʌ n d ɹ ᵻ d ᵻ l ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_071",
+      "expected_text": "two thousand seven hundred thirty-four",
+      "actual_aac_excerpt_sha256": "204a3d56f80b205f9e0adfb3a4db044ad950cd6b1de061016b11d07c6c5d19ca",
+      "accepted_original_source_sha256": "239c4a77ce27b790823faa2bec5dc107b1ef3153e23684e5b004d71dd56eaf07",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "2,734.",
+      "expected_espeak": "tˈuː θˈaʊzənd sˈɛvən hˈʌndɹɪd θˈɜːɾifˈoːɹ",
+      "accepted_source_recognized_phonemes": "t uː θ aʊ z ə n d s ɛ v ə n h ʌ n d ɹ ɪ d θ ɜː ɾ i f oːɹ",
+      "fresh_final_aac_recognized_phonemes": "t uː θ aʊ z ə n d s ɛ v ə n h ʌ n d ɹ ɪ d θ ɜː ɾ i f oːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_072",
+      "expected_text": "one thousand three hundred sixty-seven",
+      "actual_aac_excerpt_sha256": "95ecda248cfcc391aaa71fc1346781fd41c3a36c67e18f63504634634e47c1fe",
+      "accepted_original_source_sha256": "9f57a22f4cc9217711671c1954e0a7e883f17b1c7842cb8625cf63e21c250df4",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,367.",
+      "expected_espeak": "wˈʌn θˈaʊzənd θɹˈiː hˈʌndɹɪd sˈɪkstisˈɛvən",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ɪ d s ɪ k s t i s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ɪ d s ɪ k s t i s ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_073",
+      "expected_text": "four thousand one hundred two",
+      "actual_aac_excerpt_sha256": "f6a4d0565f9cfef03ef90cb9370cd6d207991fb3d7e9d86972bb7f1da5e299d2",
+      "accepted_original_source_sha256": "6017000f7d2943e78fc8e77bca2e35269897b1aec7e54c2899fa84441ea8c319",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "4,102.",
+      "expected_espeak": "fˈoːɹ θˈaʊzənd wˈʌn hˈʌndɹɪd tˈuː",
+      "accepted_source_recognized_phonemes": "f oːɹ θ aʊ z ə n w ʌ n h ʌ n d ɹ ɪ d t uː",
+      "fresh_final_aac_recognized_phonemes": "f oːɹ θ aʊ z ə d w ʌ n h ʌ n d ɹ ɪ d t uː",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "n"
+          ],
+          "final_aac_tokens": [
+            "d"
+          ]
+        }
+      ],
+      "guard_diagnostics": [
+        "C27_073-pad120",
+        "C27_073-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "CTC changes the reduced thousand final consonant between n/d in the unguarded run; both padded runs recover the source n, followed by one hundred two. Lexical4102 and local source-waveform evidence remain intact."
+      ]
+    },
+    {
+      "id": "C27_074",
+      "expected_text": "two thousand fifty-one",
+      "actual_aac_excerpt_sha256": "0ef56b81490886cf9d380050437809f9c0a53cf5bb4094059524478ba4270a36",
+      "accepted_original_source_sha256": "e5ea2859efd5a4a1958cb7db1e7fe9bb08758b9a660fdacdabfb8cc192d27973",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "2,051.",
+      "expected_espeak": "tˈuː θˈaʊzənd fˈɪftiwˌʌn",
+      "accepted_source_recognized_phonemes": "t uː θ aʊ z ə n d f ɪ f t i w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "t uː θ aʊ z ə n d f ɪ f t i w ʌ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_075",
+      "expected_text": "six thousand one hundred fifty-four",
+      "actual_aac_excerpt_sha256": "96991bb407a171e3b93f00ee1633390ed33a16c3ee43825f1c3f4a6e0082af69",
+      "accepted_original_source_sha256": "40fe5c57bb94c124587b5872953ca2d7fbc76ad1aed0e44eb4c2db44a09a3afa",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "6,154.",
+      "expected_espeak": "sˈɪks θˈaʊzənd wˈʌn hˈʌndɹɪd fˈɪftifˈoːɹ",
+      "accepted_source_recognized_phonemes": "s ɪ k s θ aʊ z ə n d w ʌ n h ʌ n d ɹ ɪ d f ɪ f t i f oʊ",
+      "fresh_final_aac_recognized_phonemes": "s ɪ k s θ aʊ z ə n d w ʌ n h ʌ n d ɹ ɪ d f ɪ f t i f oʊ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_076",
+      "expected_text": "three thousand seventy-seven",
+      "actual_aac_excerpt_sha256": "a6b8fc54a23df05eadc78b894f4d2268d0ac7fff46476e07e41c604492aec679",
+      "accepted_original_source_sha256": "ba5f295b55c3310d3f2bd622112283eec07b341f17bada566fcf8245c01bb7fe",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "3,077.",
+      "expected_espeak": "θɹˈiː θˈaʊzənd sˈɛvəntisˈɛvən",
+      "accepted_source_recognized_phonemes": "θ ɹ iː θ aʊ z ə n d s ɛ v ə n t i s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː θ aʊ z ə n d s ɛ v ə n t i s ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_077",
+      "expected_text": "nine thousand two hundred thirty-two",
+      "actual_aac_excerpt_sha256": "3c7ca8034822f1e0c9bde087093d92effdc97fe7f05f44a3bf2ade160898d626",
+      "accepted_original_source_sha256": "d054ed4d27414e2331dfec97b6fa51d5d2c299e3836cf3c7567e0e1bf44a743e",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "9,232.",
+      "expected_espeak": "nˈaɪn θˈaʊzənd tˈuː hˈʌndɹɪd θˈɜːɾitˈuː",
+      "accepted_source_recognized_phonemes": "n aɪ n θ aʊ z ə n d t uː h ʌ n d ɹ ɪ d θ ɜː ɾ i t uː",
+      "fresh_final_aac_recognized_phonemes": "n aɪ n θ aʊ z ə n d t uː h ʌ n d ɹ ɪ d θ ɜː ɾ i t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_078",
+      "expected_text": "four thousand six hundred sixteen",
+      "actual_aac_excerpt_sha256": "20627dd4aa67e7ac1adee71c77640ffb32126ca7e0e1896b92e7c00e64d75550",
+      "accepted_original_source_sha256": "8992bc04463a4994393fe880a34faf9fde544914c3af983c8b64caed36f6a7ae",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "4,616.",
+      "expected_espeak": "fˈoːɹ θˈaʊzənd sˈɪks hˈʌndɹɪd sˈɪkstiːn",
+      "accepted_source_recognized_phonemes": "f ɔːɹ θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ɪ d s ɪ k s t iː n",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ θ aʊ z ə n d s ɪ k s h ʌ n d ɹ ɪ d s ɪ k s t iː n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_079",
+      "expected_text": "two thousand three hundred eight",
+      "actual_aac_excerpt_sha256": "70420099b6b1b250acb22b4b9e078860170fe729bc734eff8665257f4adcaa04",
+      "accepted_original_source_sha256": "e818f4803b7f57148ef156c17c313d377e0a4f82feeb83059315b0ccedd89052",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "2,308.",
+      "expected_espeak": "tˈuː θˈaʊzənd θɹˈiː hˈʌndɹɪd ˈeɪt",
+      "accepted_source_recognized_phonemes": "t uː θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ɪ d eɪ t",
+      "fresh_final_aac_recognized_phonemes": "t uː θ aʊ z ə n d θ ɹ iː h ʌ n d ɹ ɪ d eɪ t",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_080",
+      "expected_text": "one thousand one hundred fifty-four",
+      "actual_aac_excerpt_sha256": "160c7d445108fd8e3571603216722f98d59902ccd59b2ba5ef382669da5bd035",
+      "accepted_original_source_sha256": "933d32db0eeb47f9ef0643546a9b849259736d1a389704526166b2dc0df8a917",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,154.",
+      "expected_espeak": "wˈʌn θˈaʊzənd wˈʌn hˈʌndɹɪd fˈɪftifˈoːɹ",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n d w ʌ n h ʌ n d ɹ ɪ d f ɪ f t i f oʊ",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n d w ʌ n h ʌ n d ɹ ɪ d f ɪ f t i f oːɹ",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "oʊ"
+          ],
+          "final_aac_tokens": [
+            "oːɹ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [
+        "C27_080-pad120",
+        "C27_080-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "CTC labels the final four vowel as oʊ versus rhotic oːɹ; the lexical1154 and acoustic full-take/edge evidence preserve the same accepted word. No truncation is present."
+      ]
+    },
+    {
+      "id": "C27_081",
+      "expected_text": "five hundred seventy-seven",
+      "actual_aac_excerpt_sha256": "7faa2276504b38cdafbe3e519baf1893eae2b8a1c40084bf155a52b0c7670012",
+      "accepted_original_source_sha256": "48c734715084d377b4516674cfd50c0e38007ebebc9650147563b2a4f24b952c",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "577.",
+      "expected_espeak": "fˈaɪv hˈʌndɹɪd sˈɛvəntisˈɛvən",
+      "accepted_source_recognized_phonemes": "f aɪ v h ʌ n d ɹ ɪ d s ɛ v ə n t i s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "f aɪ v h ʌ n d ɹ ᵻ d s ɛ v ə n t i s ɛ v ə n",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɪ"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_082",
+      "expected_text": "one thousand seven hundred thirty-two",
+      "actual_aac_excerpt_sha256": "ecd2245ce57b829445887042c3f8a6afff95bbc5204c520d2cc2f5575b4d5d89",
+      "accepted_original_source_sha256": "69d6bec7ff1320524040cce8f3caa4e964e84c562b76c4e949d58534f3e1c5cb",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1,732.",
+      "expected_espeak": "wˈʌn θˈaʊzənd sˈɛvən hˈʌndɹɪd θˈɜːɾitˈuː",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n d s ɛ v ə n h ʌ n d ɹ ɪ d θ ɜː ɾ i t uː",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n d s ɛ v ə n h ʌ n d ɹ ᵻ d θ ɜː ɾ i t uː",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɪ"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_083",
+      "expected_text": "eight hundred sixty-six",
+      "actual_aac_excerpt_sha256": "4e6ab6599debb5065c69f5633f6db78ae72049279a5d01c21d9514d4cbbba488",
+      "accepted_original_source_sha256": "e6281159c7c088affe63691da88b884fd930b1d972c613d7247542d6f6a3aace",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "866.",
+      "expected_espeak": "ˈeɪt hˈʌndɹɪd sˈɪkstisˈɪks",
+      "accepted_source_recognized_phonemes": "eɪ t h ʌ n d ɹ ɪ d s ɪ k s t i s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "eɪ t h ʌ n d ɹ ɪ d s ɪ k s t i s ɪ k s",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_084",
+      "expected_text": "four hundred thirty-three",
+      "actual_aac_excerpt_sha256": "3df7712777bf458c2693c9f3f9269fc20112b8fbc99d57e52704a932d23f8b1b",
+      "accepted_original_source_sha256": "5ba5204afaf46545ffed3176d1129f076ac022851d8b980c799d5db20c004d66",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "433.",
+      "expected_espeak": "fˈoːɹ hˈʌndɹɪd θˈɜːɾiθɹˈiː",
+      "accepted_source_recognized_phonemes": "f ɔːɹ h ʌ n d ɹ ə d θ ɜː ɾ i θ ɹ iː",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ ɹ h ʌ n d ɹ ə d θ ɜː ɾ i θ ɹ iː",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "insert",
+          "accepted_source_tokens": [],
+          "final_aac_tokens": [
+            "ɹ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_085",
+      "expected_text": "one thousand three hundred",
+      "actual_aac_excerpt_sha256": "6531a6c01213ac61d31108096e970569f43c8eff152d2baf24f8e404538484ca",
+      "accepted_original_source_sha256": "dece57262be28d568a80bc34c68c30a7ffeef5997d101ab3348b6ee7e735d392",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1300.",
+      "expected_espeak": "wˈʌn θˈaʊzənd θɹˈiː hˈʌndɹɪd",
+      "accepted_source_recognized_phonemes": "w ʌ n θ aʊ z ə n d ɹ iː h ʌ n d ɹ ɪ d",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n θ aʊ z ə n d ɹ iː h ʌ n d ɹ ɪ d",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_086",
+      "expected_text": "six hundred fifty",
+      "actual_aac_excerpt_sha256": "be08b539c65794f9f786fe88185ae933aa9c0f3b9bf45d6335fb5bee113f33f1",
+      "accepted_original_source_sha256": "696198447f7bb986377374dc61034d12b683693559425e0adfe1642ed078614e",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "650.",
+      "expected_espeak": "sˈɪks hˈʌndɹɪd fˈɪfti",
+      "accepted_source_recognized_phonemes": "s ɪ k s h ʌ n d ɹ ɪ d f ɪ f t i",
+      "fresh_final_aac_recognized_phonemes": "s ɪ k s h ʌ n d ɹ ɪ d f ɪ f t i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_087",
+      "expected_text": "three hundred twenty-five",
+      "actual_aac_excerpt_sha256": "ebb806a6cfc085d3afdaa163e1965fd169c6971c80704c3e56a5f6084743b844",
+      "accepted_original_source_sha256": "7b598a4343f651bd3abf62451bf343a9dbbfe5a15c20f350c0ba91284338fc3e",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "325.",
+      "expected_espeak": "θɹˈiː hˈʌndɹɪd twˈɛntifˈaɪv",
+      "accepted_source_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d t w ɛ n i f aɪ v",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː h ʌ n d ɹ ɪ d t w ɛ n i f aɪ v",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_088",
+      "expected_text": "nine hundred seventy-six",
+      "actual_aac_excerpt_sha256": "adae6250b4d73b30ceff83c8e7f30e6ff98ebcc079527d2e6896f6b443d9e101",
+      "accepted_original_source_sha256": "0e6510b50e7443389349423a7cb0fac78db4e658765121c483bedec06bc25cc3",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "976",
+      "expected_espeak": "nˈaɪn hˈʌndɹɪd sˈɛvəntisˈɪks",
+      "accepted_source_recognized_phonemes": "n aɪ n h ʌ n d ɹ ᵻ d s ɛ v ə n t i s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "n aɪ n h ʌ n d ɹ ᵻ d s ɛ v ə n t i s ɪ k s",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_089",
+      "expected_text": "four hundred eighty-eight",
+      "actual_aac_excerpt_sha256": "cb0c96fb49d2835ea410d567851add90f3df48fca6504dd66fd43c95c6d92bd2",
+      "accepted_original_source_sha256": "985912383503fd9e1001625c03787a8649ebaabf76f6d75a1f7851daf524a585",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "488.",
+      "expected_espeak": "fˈoːɹ hˈʌndɹɪd ˈeɪɾiˈeɪt",
+      "accepted_source_recognized_phonemes": "f oːɹ h ʌ n d ɹ ᵻ d eɪ r i eɪ t",
+      "fresh_final_aac_recognized_phonemes": "f oːɹ h ʌ n d ɹ ᵻ d eɪ ɹ i eɪ t",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "r"
+          ],
+          "final_aac_tokens": [
+            "ɹ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_090",
+      "expected_text": "two hundred forty-four",
+      "actual_aac_excerpt_sha256": "56e65c95af47decf9628e6837a70e273d52c7420fd5627c27505e6538ea85268",
+      "accepted_original_source_sha256": "d7653d4c6ed755f9ab10aedc75e464b89202ab1ffbde29b5b773e935d1cbf23c",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "244.",
+      "expected_espeak": "tˈuː hˈʌndɹɪd fˈɔːɹɾifˈoːɹ",
+      "accepted_source_recognized_phonemes": "t uː h ʌ n d ɹ ᵻ d f ɔːɹ ɾ i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "t uː h ʌ n d ɹ ɪ d f ɔːɹ ɾ i f ɔːɹ",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ᵻ"
+          ],
+          "final_aac_tokens": [
+            "ɪ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_091",
+      "expected_text": "one hundred twenty-two",
+      "actual_aac_excerpt_sha256": "ebd27b38f9da70fb2bf3c55dfb8a84fa16d29eb7c60fc5312d221887a5c89575",
+      "accepted_original_source_sha256": "1f921b87d9676f44dda9c6ff9f26344d3a8cc378defc32c8200d7c7249e57c11",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "122.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd twˈɛntitˈuː",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d t w ɛ n ɾ i t uː",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d t w ɛ n t ɾ i t uː",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɪ"
+          ],
+          "final_aac_tokens": [
+            "ᵻ"
+          ]
+        },
+        {
+          "operation": "insert",
+          "accepted_source_tokens": [],
+          "final_aac_tokens": [
+            "t"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "C27_092",
+      "expected_text": "sixty-one",
+      "actual_aac_excerpt_sha256": "0fb2e86b7e8bc0e042295f1d1618514e244fa22e49f2de00a584961a1236e278",
+      "accepted_original_source_sha256": "4c1434b1bd6803de7baa67b6862353ab7f99b45bd0bd1aade516654bc5f48f59",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "61.",
+      "expected_espeak": "sˈɪkstiwˌʌn",
+      "accepted_source_recognized_phonemes": "s ɪ k s t i w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "s ɪ k s t i w ʌ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_093",
+      "expected_text": "one hundred eighty-four",
+      "actual_aac_excerpt_sha256": "73319cea30d568f67e37c3176793f314e53f9c418db24e696b2dfcb759a65b97",
+      "accepted_original_source_sha256": "27e78c29f475187ece0edfe4ee7547a7c2e38237db8a44a7ee1c5146ea99c0c8",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "184.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd ˈeɪɾifˈoːɹ",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d eɪ ɾ i f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ᵻ d eɪ ɾ i f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_094",
+      "expected_text": "ninety-two",
+      "actual_aac_excerpt_sha256": "28b05c526a5e79236ed3dbe01ddc76e6f22f06977df088fd2403abd4db5c1a82",
+      "accepted_original_source_sha256": "142befd462a8996e0f589c868ae286daee611028f17a0d50ef088cc204b85844",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "92.",
+      "expected_espeak": "nˈaɪntitˈuː",
+      "accepted_source_recognized_phonemes": "n aɪ n d i t uː",
+      "fresh_final_aac_recognized_phonemes": "n aɪ n d i t uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_095",
+      "expected_text": "forty-six",
+      "actual_aac_excerpt_sha256": "d8f434bfa9f202019a4de409c3cd0a62df82d5afb874bcf6e2a23e22ce6dae8e",
+      "accepted_original_source_sha256": "b4abe1eca1c64d410261a6975b9902bd15196af533a805a3a88d97d045a4995e",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "46.",
+      "expected_espeak": "fˈɔːɹɾisˈɪks",
+      "accepted_source_recognized_phonemes": "f ɔːɹ ɾ i s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ ɾ i s ɪ k s",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_096",
+      "expected_text": "twenty-three",
+      "actual_aac_excerpt_sha256": "5bdabef54bdaf5309a0426644736c547e7ce8039cad14b22f0ca527594215d3f",
+      "accepted_original_source_sha256": "6a86ce816acb0afbfab774f58a1fb2f18c6a4e24be396db79a0d31dbd02912d5",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "23.",
+      "expected_espeak": "twˈɛntiθɹˈiː",
+      "accepted_source_recognized_phonemes": "t w ɛ n t i θ ɹ iː",
+      "fresh_final_aac_recognized_phonemes": "t w ɛ n t i θ ɹ iː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_097",
+      "expected_text": "seventy",
+      "actual_aac_excerpt_sha256": "591650f794bdf3c244ab41643e7ead13a0776bf02a6e7a0590ac7543ec8ffa7c",
+      "accepted_original_source_sha256": "f6d079eaa2ca9b9b27a19ced8e77eae5a0a37f3c6a13248637046daa46a1c284",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "70.",
+      "expected_espeak": "sˈɛvənti",
+      "accepted_source_recognized_phonemes": "s ɛ v ə n t i",
+      "fresh_final_aac_recognized_phonemes": "s ɛ v ə n t i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_098",
+      "expected_text": "thirty-five",
+      "actual_aac_excerpt_sha256": "7a47924f92b900e62cd54b7d89be8d2d82fbbd76a0de93e14cc1a4a7e46027f1",
+      "accepted_original_source_sha256": "2795d2cd2ad008e27d70be2165e7d8c08449c6264217d0375b32e063f900c394",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "35.",
+      "expected_espeak": "θˈɜːɾifˈaɪv",
+      "accepted_source_recognized_phonemes": "θ ɜː ɾ i f aɪ v",
+      "fresh_final_aac_recognized_phonemes": "θ ɜː ɾ i f aɪ v",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_099",
+      "expected_text": "one hundred six",
+      "actual_aac_excerpt_sha256": "2a3cffc9864c5f14cbb32144bbfbfac871becce966a0105b3b66d711be5a6e95",
+      "accepted_original_source_sha256": "ede3166ac2c4c3788c0f5920d0bd4e9b49e3bddb9669ebc35d5fd62e3a2c76a8",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "106.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd sˈɪks",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d s ɪ k s",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d s ɪ k s",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_100",
+      "expected_text": "fifty-three",
+      "actual_aac_excerpt_sha256": "feef1ada4cdaab46fef44a4204c7477df79e5c9505a0a2c9e14ba0ef5b9bfbf3",
+      "accepted_original_source_sha256": "4d31fa035170f8425dd3bd0a098c50ab606de86c96b32a4b660e92e9d8510a47",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "53.",
+      "expected_espeak": "fˈɪftiθɹˈiː",
+      "accepted_source_recognized_phonemes": "f ɪ f t i θ ɹ iː",
+      "fresh_final_aac_recognized_phonemes": "f ɪ f t i θ ɹ iː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_101",
+      "expected_text": "one hundred sixty",
+      "actual_aac_excerpt_sha256": "4340c46af7b80cec6ccdf6178f4500daa9bff518ecfc0960dd49d0458783b69b",
+      "accepted_original_source_sha256": "b63faf1dc93879c47503153edfcd56d45dd1a342117e1a85d4f1eaff38ddc7a0",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "160.",
+      "expected_espeak": "wˈʌn hˈʌndɹɪd sˈɪksti",
+      "accepted_source_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d s ɪ k s t i",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n h ʌ n d ɹ ɪ d s ɪ k s t i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_102",
+      "expected_text": "eighty",
+      "actual_aac_excerpt_sha256": "2b9db30e7b348260d96aa1b4c5a242900ab9bba9bcbf364bfa898d7b33f5d117",
+      "accepted_original_source_sha256": "4865b04fd3f2e11d355b9b9341c1722cdf3a8da90f490de6e7b57cf354c6de3f",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "80.",
+      "expected_espeak": "ˈeɪɾi",
+      "accepted_source_recognized_phonemes": "eɪ ɾ i",
+      "fresh_final_aac_recognized_phonemes": "eɪ ɾ i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_103",
+      "expected_text": "forty",
+      "actual_aac_excerpt_sha256": "f9dd20246662eb06b5d8c6ee6b018aa8f5bdaa22bf228e0a6619566b6ff68651",
+      "accepted_original_source_sha256": "adf8af52de00af8bce0aef6d4d223ccb27cf48b649a0897a8b1811769d470cca",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "40.",
+      "expected_espeak": "fˈɔːɹɾi",
+      "accepted_source_recognized_phonemes": "f ɔːɹ ɾ i",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ ɾ i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_104",
+      "expected_text": "twenty",
+      "actual_aac_excerpt_sha256": "433647bfa6f16dddde8150ef83b049c7eede3234f6d447d05501c029a6405932",
+      "accepted_original_source_sha256": "b3766348c71b950db94b0a95856333f74e364b01218b2d9e5c16e8e8d36b72a6",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "20.",
+      "expected_espeak": "twˈɛnti",
+      "accepted_source_recognized_phonemes": "t w ɛ n t i",
+      "fresh_final_aac_recognized_phonemes": "t w ɛ n t i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_105",
+      "expected_text": "ten",
+      "actual_aac_excerpt_sha256": "a5f90171e05baefd9a319331e6a856872c5d4e3097293b8c3eba940d4adbbaa1",
+      "accepted_original_source_sha256": "eafac5f936d732cb3f3083ab338a7c74e13e024c8529434b397ecde5eb9e69f1",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "10.",
+      "expected_espeak": "tˈɛn",
+      "accepted_source_recognized_phonemes": "t ɛ n",
+      "fresh_final_aac_recognized_phonemes": "t ɛ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_106",
+      "expected_text": "five",
+      "actual_aac_excerpt_sha256": "c748b5c591bc2354020736ff9f688f923c4f02ab1bcab6d77fbc2c3d4b489ee3",
+      "accepted_original_source_sha256": "37331077a222bbbd4f94344e7b6e2a1df3542de932a74d4bd56da4fc21371c80",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "5.",
+      "expected_espeak": "fˈaɪv",
+      "accepted_source_recognized_phonemes": "f aɪ v",
+      "fresh_final_aac_recognized_phonemes": "f aɪ v z",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "insert",
+          "accepted_source_tokens": [],
+          "final_aac_tokens": [
+            "z"
+          ]
+        }
+      ],
+      "guard_diagnostics": [
+        "C27_106-pad120",
+        "C27_106-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Same accepted five source as C7_011. The repeated final-v/z CTC split occupies the existing source fricative; last180ms correlation0.9999745 and all audible local windows preserve the source. Lexical ASR says five, with no inserted word."
+      ]
+    },
+    {
+      "id": "C27_107",
+      "expected_text": "sixteen",
+      "actual_aac_excerpt_sha256": "99b759f212b48e2926fd9fbe149c07ea643944b6e30624a31dcbffcc54aeb011",
+      "accepted_original_source_sha256": "9567e524aed0f661ee5d89004a93523cd2006bb7818c62aa49591cde0286e5b8",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "16.",
+      "expected_espeak": "sˈɪkstiːn",
+      "accepted_source_recognized_phonemes": "s ɪ k s t iː n",
+      "fresh_final_aac_recognized_phonemes": "s ɪ k s t iː n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_108",
+      "expected_text": "eight",
+      "actual_aac_excerpt_sha256": "d2946a4c0850ce856db39194e8504d8bc607b1077607285c659d58f73441a027",
+      "accepted_original_source_sha256": "3662c8de41c36c505ff877e4317d9694e8088fef931c63d93cd7077a2c35557e",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "8",
+      "expected_espeak": "ˈeɪt",
+      "accepted_source_recognized_phonemes": "eɪ t",
+      "fresh_final_aac_recognized_phonemes": "eɪ t",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_109",
+      "expected_text": "four",
+      "actual_aac_excerpt_sha256": "8da05875eb788ee8814a1a004dc9cd9704a701cb63fc07059639dac7292e9b97",
+      "accepted_original_source_sha256": "00dd0174fd56794142adb8655589f0721d36c9e959391a95152705fbc66639f8",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "4.",
+      "expected_espeak": "fˈoːɹ",
+      "accepted_source_recognized_phonemes": "f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "C27_110",
+      "expected_text": "two",
+      "actual_aac_excerpt_sha256": "bd932f0b42fcc55a9a760c77ff0a5c65ea3d76e12be9d55dfb2245140b3c6fe6",
+      "accepted_original_source_sha256": "95f737925860efd569349797e361741b274e2df7207de2a3d772cb2a3c60d749",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "2",
+      "expected_espeak": "tˈuː",
+      "accepted_source_recognized_phonemes": "ɕ i5",
+      "fresh_final_aac_recognized_phonemes": "tɕh i5",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɕ"
+          ],
+          "final_aac_tokens": [
+            "tɕh"
+          ]
+        }
+      ],
+      "guard_diagnostics": [
+        "C27_110-pad120",
+        "C27_110-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Same accepted two source as C7_015. CTC remains unstable under guards; lexical ASR recognizes two, all local waveform windows correlate>=0.9999454 and no onset/tail content is cut. Original source pronunciation approval is inherited with the explicit model limitation."
+      ]
+    },
+    {
+      "id": "C27_111",
+      "expected_text": "one",
+      "actual_aac_excerpt_sha256": "fcad8f030370fe9c8423bc501e88bb1bf2d32d9dda9f38d4ebb699f5089bcc2b",
+      "accepted_original_source_sha256": "58d4ab64f6a90c84474791bfcf868b29f875a971ab633afc3627732f7af1c389",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "1.",
+      "expected_espeak": "wˈʌn",
+      "accepted_source_recognized_phonemes": "w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "w ʌ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "I01",
+      "expected_text": "Hi! Follow the Collatz sequence through our number waterworks.",
+      "actual_aac_excerpt_sha256": "6ebce5b7ff02c7c16ec8fb2639236af9babfeecbe12e2efa704b6cc2c67c2063",
+      "accepted_original_source_sha256": "52bda73e012b6d19b47a873505f1c801c2d1abccfea0dde419123105248a23c8",
+      "fresh_asr_status": "warning-review-required",
+      "fresh_asr_transcript": "Hi, follow the collat sequence through our number waterworks.",
+      "expected_espeak": "hˈaɪ fˈɑːloʊ ðə kəlˈæts sˈiːkwəns θɹuː ˌaʊɚ nˈʌmbɚ wˈɔːɾɚwˌɜːks",
+      "accepted_source_recognized_phonemes": "h aɪ f ɑː l oʊ ð ə k ə l æ t s iː k w ə n s θ ɹ uː ɑːɹ n ʌ m b ɚ w ɑː ɾ ɚ w ɜː k s",
+      "fresh_final_aac_recognized_phonemes": "h aɪ f ɑː l oʊ ð ə k ə l æ t s iː k w ə n s θ ɹ uː ɑːɹ n ʌ m b ɚ w ɑː ɾ ɚ w ɜː k s",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [
+        "I01-pad120",
+        "I01-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Collatz is rendered collat by tiny lexical ASR; the source has the same proper-name ambiguity. The fresh CTC and accepted-source word sequence preserve the complete sentence.",
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "I02",
+      "expected_text": "Start with a positive whole number. These two rules make the next number.",
+      "actual_aac_excerpt_sha256": "7ac369a728e8a03bc6d546dce98181527d9a99f54f1c1cfa6b3619092f43443a",
+      "accepted_original_source_sha256": "4ceb70eb3f9d1f173edc7bf70553767f0e84a8bd110cc88382889f0a203ebf3b",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "Start with a positive whole number. These two rules make the next number.",
+      "expected_espeak": "stˈɑːɹt wɪð ɐ pˈɑːzᵻtˌɪv hˈoʊl nˈʌmbɚ ðiːz tˈuː ɹˈuːlz mˌeɪk ðə nˈɛkst nˈʌmbɚ",
+      "accepted_source_recognized_phonemes": "s t ɑːɹ t w ɪ ð ɐ p ɑː z ɪ ɾ ɪ v h oʊ l n ʌ m b ɚ ð iː z t uː ɹ uː l z m eɪ k ð ə n ɛ k s t n ʌ m b ɚ",
+      "fresh_final_aac_recognized_phonemes": "s t ɑːɹ t w ɪ ð ɐ p ɑː z ɪ ɾ ɪ v h oʊ l n ʌ m b ɚ ð iː z t uː ɹ uː l z m eɪ k ð ə n ɛ k s t n ʌ m b ɚ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "I03",
+      "expected_text": "Even? Divide by two. Eight divided by two is four.",
+      "actual_aac_excerpt_sha256": "3dcaf4260191d0d453a83dd034c981ae7f5fd9cba35963a647f53bf939a23895",
+      "accepted_original_source_sha256": "c20aab7789cd2980175407403f20b329d97be1865d98ca89f6046340429b53e7",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "Even divide by 2. 8 divided by 2 is 4.",
+      "expected_espeak": "ˈiːvən dᵻvˈaɪd baɪ tˈuː ˈeɪt dᵻvˈaɪdᵻd baɪ tˈuː ɪz fˈoːɹ",
+      "accepted_source_recognized_phonemes": "iː v ə n d ᵻ v aɪ d b aɪ t uː eɪ t d ᵻ v aɪ d ᵻ d b aɪ t uː æ z f ɔːɹ",
+      "fresh_final_aac_recognized_phonemes": "iː v ə n d ᵻ v aɪ d b aɪ t uː eɪ t d ᵻ v aɪ d ᵻ d b aɪ t uː æ z f ɔːɹ",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "I04",
+      "expected_text": "Odd? Multiply by three, then add one. Five times three, plus one, is sixteen.",
+      "actual_aac_excerpt_sha256": "6cd16dda48174b570176002cbc7a711f2bb48729cb3cb951bd5640d442210c5f",
+      "accepted_original_source_sha256": "cd9b5d364801de985ed77f84d5311afde12236d8eeb36f9be0db467cccc74181",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "Odd, multiply by 3 then add 1. 5 times 3 plus 1 is 16.",
+      "expected_espeak": "ˈɑːd mˌʌltɪplˈaɪ baɪ θɹˈiː ðˈɛn ˈæd wˌʌn fˈaɪv tˈaɪmz θɹˈiː plˈʌs wˌʌn ɪz sˈɪkstiːn",
+      "accepted_source_recognized_phonemes": "ɑː d m ʌ l t ɪ p l aɪ b aɪ θ ɹ iː ð ɛ n æ d w ʌ n f aɪ v t aɪ m z θ ɹ i p l ʌ s w ʌ n ɪ z s ɪ k s t iː n",
+      "fresh_final_aac_recognized_phonemes": "ɑː d m ʌ l t ɪ p l aɪ b aɪ θ ɹ iː ð ɛ n æ d w ʌ n f aɪ v t aɪ m z θ ɹ i p l ʌ s w ʌ n ɪ z s ɪ k s t iː n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "I05",
+      "expected_text": "These mirrors show number values, not amounts of water. Three copies mean three times the value.",
+      "actual_aac_excerpt_sha256": "e8da398265cc7c21f1b354fa83d6fc7503bdf4945564ab5c2f04d32ddf3fbae8",
+      "accepted_original_source_sha256": "e79dd1d447c7e28a6ba85792059554281734d8b973c196ff78561747c70a4aca",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "These mirrors show number values, not amounts of water. Three copies mean three times the value.",
+      "expected_espeak": "ðiːz mˈɪɹɚz ʃˈoʊ nˈʌmbɚ vˈæljuːz nˌɑːt ɐmˈaʊnts ʌv wˈɔːɾɚ θɹˈiː kˈɑːpɪz mˈiːn θɹˈiː tˈaɪmz ðə vˈæljuː",
+      "accepted_source_recognized_phonemes": "ð iː z m ɪ ɹ ɚ z ʃ oʊ n ʌ m b ɚ v æ l j uː z n ɑː t ɐ m aʊ n t s ʌ v w ɑː ɾ ɚ θ ɹ iː k ɑː p i z m iː n ɹ iː t aɪ m z ð ə v æ l j uː",
+      "fresh_final_aac_recognized_phonemes": "ð iː z m ɪ ɹ ɚ z ʃ oʊ n ʌ m b ɚ v æ l j uː z n ɑː t ɐ m aʊ n t s ʌ v w ɑː ɾ ɚ θ ɹ iː k ɑː p i z m iː n ɹ iː t aɪ m z ð ə v æ l j uː",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "I06",
+      "expected_text": "Let's start with seven, and stop when we reach one.",
+      "actual_aac_excerpt_sha256": "db47142730860385849ae60820028d81328c94518809435a02507a62e734513f",
+      "accepted_original_source_sha256": "f6af944fa661a93e61cc229c4965026fcf7ab69c92857e612d25312b482ba802",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "Let's start with 7 and stop when we reach 1.",
+      "expected_espeak": "lˈɛts stˈɑːɹt wɪð sˈɛvən ænd stˈɑːp wɛn wiː ɹˈiːtʃ wˌʌn",
+      "accepted_source_recognized_phonemes": "l ɛ t s t ɑːɹ t w ɪ ð s ɛ v ə n æ n d s t ɑː p w ɛ n w iː ɹ iː tʃ w ʌ n",
+      "fresh_final_aac_recognized_phonemes": "l ɛ t s t t w ɪ ð s ɛ v ə n æ n d s t ɑː p w ɛ n w iː ɹ iː tʃ w ʌ n",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "delete",
+          "accepted_source_tokens": [
+            "ɑːɹ"
+          ],
+          "final_aac_tokens": []
+        }
+      ],
+      "guard_diagnostics": [
+        "I06-pad120",
+        "I06-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "One raw CTC run omits the start vowel. The120ms recognizer-only guard restores start as s-t-ɑːɹ-t; lexical ASR has the whole sentence. All80ms audible local windows match the accepted source (minimum correlation0.999311), so the omitted phone is a boundary-sensitive recognizer result, not a cut in the movie."
+      ]
+    },
+    {
+      "id": "B01",
+      "expected_text": "Seven reached one in sixteen steps. Now start a new trip at twenty-seven.",
+      "actual_aac_excerpt_sha256": "632d467f836e3dac66df433407fad368bcd09c84fdaedd50af9a90d020ea5255",
+      "accepted_original_source_sha256": "018d76a2f35c833e2579f5c006e5c409af045f9c2894edab531f41ecbbe5a8dc",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "7 reached 1 in 16 steps. Now start a new trip at 27.",
+      "expected_espeak": "sˈɛvən ɹˈiːtʃt wˈʌn ɪn sˈɪkstiːn stˈɛps nˈaʊ stˈɑːɹt ɐ nˈuː tɹˈɪp æt twˈɛntisˈɛvən",
+      "accepted_source_recognized_phonemes": "s ɛ v ə n ɹ iː tʃ t w ʌ n ɪ n s ɪ k s t iː n s t ɛ p s n aʊ s t ɑːɹ ɾ ɐ n uː t ɹ ɪ p æ t t w ɛ n i s ɛ v ə n",
+      "fresh_final_aac_recognized_phonemes": "s ɛ v ə n ɹ iː tʃ t w ʌ n ɪ n s ɪ k s t iː n s t ɛ p s n aʊ s t ɑːɹ ɾ ɐ n uː t ɹ ɪ p æ t t w ɛ n i s ɛ v ə n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "T27_001",
+      "expected_text": "Three twenty-sevens make eighty-one. Add one: eighty-two. Eighty-one belongs inside the calculation; it is not a sequence entry.",
+      "actual_aac_excerpt_sha256": "a452d2b3ef66159586c5054a6f18aef1513f7798adb7ef71d8657eda260b8a77",
+      "accepted_original_source_sha256": "a711c843677c81c33dd2668186e6ec78720cad34a982b6012e281d699fb3eec5",
+      "fresh_asr_status": "warning-review-required",
+      "fresh_asr_transcript": "3/27 make 81. Add 1/82. 81 belongs inside the calculation. It is not a sequence entry.",
+      "expected_espeak": "θɹˈiː twˈɛntisˈɛvənz mˌeɪk ˈeɪɾiwˌʌn ˈæd wˌʌn ˈeɪɾitˈuː ˈeɪɾiwˈʌn bᵻlˈɔŋz ɪnsˈaɪd ðə kˌælkjʊlˈeɪʃən ɪɾ ɪz nˌɑːɾə sˈiːkwəns ˈɛntɹi",
+      "accepted_source_recognized_phonemes": "θ ɹ iː t w ɛ n i s ɛ v ə n z m eɪ k eɪ ɾ i w ʌ n æ d w ʌ n eɪ ɾ i t uː eɪ ɾ i w ʌ n b ᵻ l ɑː ŋ z ɪ n s aɪ d ð ə k aʊ l k j uː l eɪ ʃ ə n ɪ ɾ ɪ z n ɑː ɾ ɐ s iː k w ə n s ɛ n t ɹ i",
+      "fresh_final_aac_recognized_phonemes": "θ ɹ iː t w ɛ n i s ɛ v ə n z m eɪ k eɪ ɾ i w ʌ n æ d w ʌ n eɪ ɾ i t uː eɪ ɾ i w ʌ n b ᵻ l ɑː ŋ z ɪ n s aɪ d ð ə k aʊ l k j uː l eɪ ʃ ə n ɪ ɾ ɪ z n ɑː ɾ ɐ s iː k w ə n s ɛ n t ɹ i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [
+        "T27_001-pad120",
+        "T27_001-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Tiny ASR writes three twenty-sevens as3/27 and Add one: eighty-two as Add1/82. The independent phone stream retains three, the twenty-seven copies, eighty-one, add one and eighty-two; these are wording/number-format warnings rather than missing math words.",
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "T27_036",
+      "expected_text": "Four digits! The same rule still works. Three equal copies, then one extra.",
+      "actual_aac_excerpt_sha256": "3af788b58803841a345d6d7de24553a4476832100c08bbf3e64ec1b841447903",
+      "accepted_original_source_sha256": "0b6b5d16ac9a040318b2d925911ee0ab3730009888116f5157888b60aca4e8aa",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "Four digits, the same rule still works. Three equal copies, then one extra.",
+      "expected_espeak": "fˈoːɹ dˈɪdʒɪts ðə sˈeɪm ɹˈuːl stˈɪl wˈɜːks θɹˈiː ˈiːkwəl kˈɑːpɪz ðˈɛn wˈʌn ˈɛkstɹə",
+      "accepted_source_recognized_phonemes": "f ɔːɹ d ɪ dʒ ɪ t s ð ə s eɪ m ɹ uː l s t ɪ l w ɜː k s θ ɹ iː iː k w əl k ɑː p i z ð ɛ n w ʌ n ɛ k s t ɹ ə",
+      "fresh_final_aac_recognized_phonemes": "f oːɹ d ɪ dʒ ɪ t s ð ə s eɪ m ɹ uː l s t ɪ l w ɜː k s θ ɹ iː iː k w əl k ɑː p i z ð ɛ n w ʌ n ɛ k s t ɹ ə",
+      "source_vs_aac_phone_differences": [
+        {
+          "operation": "replace",
+          "accepted_source_tokens": [
+            "ɔːɹ"
+          ],
+          "final_aac_tokens": [
+            "oːɹ"
+          ]
+        }
+      ],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Reviewed CTC differences are reduced-vowel/rhotic labels or consonant segmentation within the same lexical words. The fresh lexical reading, previously individually accepted source and every audible local waveform window agree; no extra word, new vowel nucleus, repetition or cut is evidenced."
+      ]
+    },
+    {
+      "id": "T27_077",
+      "expected_text": "The highest value on this trip! Now watch the even rule bring it down.",
+      "actual_aac_excerpt_sha256": "6661bf477c76cc69639872ab507c7eb3e7603bfd66a1a1882cc90006180fbbf9",
+      "accepted_original_source_sha256": "90dd804a3f2b4448790927b0e23a4df3f28988d55e7bdac979d8b9ac2fd0c1de",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "The highest value on this trip. Now watch the even rule bring it down.",
+      "expected_espeak": "ðə hˈaɪɪst vˈæljuː ˌɔn ðɪs tɹˈɪp nˈaʊ wˈɑːtʃ ðɪ ˈiːvən ɹˈuːl bɹˈɪŋ ɪt dˈaʊn",
+      "accepted_source_recognized_phonemes": "ð ə h aɪ ɪ s t v æ l j uː ɔ n ð ɪ s t ɹ ɪ p n aʊ w ɑː tʃ ð ɪ iː v ə n ɹ uː l b ɹ ɪ ŋ ɪ t d aʊ n",
+      "fresh_final_aac_recognized_phonemes": "ð ə h aɪ ɪ s t v æ l j uː ɔ n ð ɪ s t ɹ ɪ p n aʊ w ɑː tʃ ð ɪ iː v ə n ɹ uː l b ɹ ɪ ŋ ɪ t d aʊ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "T27_103",
+      "expected_text": "A familiar ending! Follow every step again. The same value always uses the same rule.",
+      "actual_aac_excerpt_sha256": "7fdf90febb513401fdcc3a4093e68261292401537d19efa794b9755961e2a25a",
+      "accepted_original_source_sha256": "faa98c85f11ded27fc4238347383070e62dca5923db8aa150644c4330e7a3c85",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "A familiar ending, follow every step again. The same value always uses the same rule.",
+      "expected_espeak": "ɐ fəmˈɪlɪɹ ˈɛndɪŋ fˈɑːloʊ ˈɛvɹi stˈɛp ɐɡˈɛn ðə sˈeɪm vˈæljuː ˈɔːlweɪz jˈuːsᵻz ðə sˈeɪm ɹˈuːl",
+      "accepted_source_recognized_phonemes": "ɐ f ə m ɪ l j ɚ ɹ ɛ n d ɪ ŋ f ɑː l oʊ ɛ v ɹ i s t ɛ p ɐ ɡ ɛ n ð ə s eɪ m v æ l j uː ɔː l w eɪ z j uː z ᵻ z ð ə s eɪ m ɹ uː l",
+      "fresh_final_aac_recognized_phonemes": "ɐ f ə m ɪ l j ɚ ɹ ɛ n d ɪ ŋ f ɑː l oʊ ɛ v ɹ i s t ɛ p ɐ ɡ ɛ n ð ə s eɪ m v æ l j uː ɔː l w eɪ z j uː z ᵻ z ð ə s eɪ m ɹ uː l",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "O01",
+      "expected_text": "Both trips reached one. If we continued, one would go to four, then two, then one again.",
+      "actual_aac_excerpt_sha256": "159b0d8653dfe54f521e3fd854115ec75e62b83d6e6b34dbecbc986b7b8de2db",
+      "accepted_original_source_sha256": "1ffa5fd3f1ffafaf88b68fc784ffdd5e94a6889f9b90d58e8b809504355102eb",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "Both trips reached one. If we continued, one would go to four, then two, then one again.",
+      "expected_espeak": "bˈoʊθ tɹˈɪps ɹˈiːtʃt wˌʌn ɪf wiː kəntˈɪnjuːd wˈʌn wʊd ɡˌoʊ tə fˈoːɹ ðˈɛn tˈuː ðˈɛn wˈʌn ɐɡˈɛn",
+      "accepted_source_recognized_phonemes": "b oʊ θ t ɹ ɪ p s ɹ iː tʃ t w a n ɪ f w iː k ə n t ɪ n j uː d w ʌ n w ə d ɡ oʊ t ə f ɔːɹ ð ɛ n t uː ð ɛ n w ʌ n ɐ ɡ ɛ n",
+      "fresh_final_aac_recognized_phonemes": "b oʊ θ t ɹ ɪ p s ɹ iː tʃ t w a n ɪ f w iː k ə n t ɪ n j uː d w ʌ n w ə d ɡ oʊ t ə f ɔːɹ ð ɛ n t uː ð ɛ n w ʌ n ɐ ɡ ɛ n",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "O02",
+      "expected_text": "Does every positive whole number reach one? That is the Collatz conjecture. It has not been proved for all numbers.",
+      "actual_aac_excerpt_sha256": "1d042c2709171781a10bfd25b255dd78778f7822b6af435553ca3561dd9a823f",
+      "accepted_original_source_sha256": "9f520cb1ae85fe6f8ed271589aced05ac1fd621e19053e686a2a33c2c4b36eed",
+      "fresh_asr_status": "warning-review-required",
+      "fresh_asr_transcript": "Does every positive whole number reach one? That is the colats conjecture. It has not been proved for all numbers.",
+      "expected_espeak": "dˈʌz ˈɛvɹi pˈɑːzᵻtˌɪv hˈoʊl nˈʌmbɚ ɹˈiːtʃ wˌʌn ðæt ɪz ðə kəlˈæts kəndʒˈɛktʃɚ ɪt həznɑːt bˌɪn pɹˈuːvd fɔːɹ ˈɔːl nˈʌmbɚz",
+      "accepted_source_recognized_phonemes": "d ʌ z ɛ v ɹ i p ɑː z ɪ ɾ ɪ v h oʊ l n ʌ m b ɚ ɹ iː tʃ w ʌ n ð æ t ɪ z ð ə k ə l æ t s k ə n dʒ ɛ k ʃ ɚ ɪ d h ɐ z n ɑː t b ɪ n p ɹ uː v d f ɜː ɹ ɔː l n ʌ m b ɚ z",
+      "fresh_final_aac_recognized_phonemes": "d ʌ z ɛ v ɹ i p ɑː z ɪ ɾ ɪ v h oʊ l n ʌ m b ɚ ɹ iː tʃ w ʌ n ð æ t ɪ z ð ə k ə l æ t s k ə n dʒ ɛ k ʃ ɚ ɪ d h ɐ z n ɑː t b ɪ n p ɹ uː v d f ɜː ɹ ɔː l n ʌ m b ɚ z",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [
+        "O02-pad120",
+        "O02-pad220"
+      ],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "Tiny ASR writes colats for Collatz. Positive whole number, one, conjecture and not proved for all numbers remain intact, and CTC/source comparison preserves the sentence.",
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    },
+    {
+      "id": "O03",
+      "expected_text": "Two rules, and a surprising journey. Thanks for counting with me!",
+      "actual_aac_excerpt_sha256": "77a3e78d4e50804e788f4b3f6f99c154b82c3997c3e249c01954564f73a5ce73",
+      "accepted_original_source_sha256": "41ef8b57e0d2361702301437c378e73f248e8ff386995668aa4ca184dcccaf13",
+      "fresh_asr_status": "asr-match",
+      "fresh_asr_transcript": "Two rules and a surprising journey. Thanks for counting with me.",
+      "expected_espeak": "tˈuː ɹˈuːlz ænd ɐ sɚpɹˈaɪzɪŋ dʒˈɜːni θˈæŋks fɔːɹ kˈaʊntɪŋ wɪð mˌiː",
+      "accepted_source_recognized_phonemes": "t uː ɹ uː l z æ n d ɐ s ɚ p ɹ aɪ z ɪ ŋ dʒ ɜː n i θ æ ŋ k s f ɚ k aʊ n t ɪ ŋ w ɪ ð m i",
+      "fresh_final_aac_recognized_phonemes": "t uː ɹ uː l z æ n d ɐ s ɚ p ɹ aɪ z ɪ ŋ dʒ ɜː n i θ æ ŋ k s f ɚ k aʊ n t ɪ ŋ w ɪ ð m i",
+      "source_vs_aac_phone_differences": [],
+      "guard_diagnostics": [],
+      "local_waveform_passed": true,
+      "decision": "accepted-with-explicit-recognizer-limits",
+      "accepted": true,
+      "unresolved": [],
+      "notes": [
+        "The fresh final-AAC phone sequence exactly matches the separately decoded accepted-source phone sequence. The source review and local encoded waveform evidence are also bound to this cue."
+      ]
+    }
+  ]
+}

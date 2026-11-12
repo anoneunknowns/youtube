@@ -1,0 +1,650 @@
+Num-Num Numbers — Powers of 2 制作脚本 v002
+音声短burst修正・同一映像の新AAC差替え。旧v001脚本は保全。
+対象MP4: output/powers-of-two-counting-001-v001/video/v004-audio-reencoded/paspla-studio-powers-of-two-1-to-18446744073709551616-1080p.mp4
+MP4 SHA-256: ff0375d857354285fa9aebbe08f3f95072fd7f8ce9ed97947e0b3c0ada602e61
+出力: 1920×1080 / 30fps / 16,954frames / 565.133333秒。
+2^0=1から2^64=18,446,744,073,709,551,616まで65項、64回の倍増。
+全78キューの語句・値・発話サンプル境界と全映像フレームは旧版と同じ。
+0乗は倍増0回。32までは実単位、64からはラベル付きの群。通常56境界2秒、説明8境界。
+結果表示はceil((N.start_s−0.12)*30)、進捗はceil(N.end_s*30)。説明と終幕はX/O001音声開始ceil。
+現在の音源・補正・採否は旧脚本の音声要約ではなく、以下の新規根拠を使う。
+timeline: output/powers-of-two-counting-001-v001/audio-build/codec-v003/timeline.json / SHA 7584bff038ca9e42951f09e5f0e61b44af1b5ceec3dd8d7453228d67a6ab735c
+master: output/powers-of-two-counting-001-v001/audio-build/master.wav / SHA fc0564b0d474fcae762272cc243ce4facd19aebd38859cb6afdccae4778a5b52
+accepted AAC: output/powers-of-two-counting-001-v001/audio-build/codec-v003/accepted-aac.m4a / SHA 6e3cbac811194a930b9523eb0a8546f3932199e695db9770d126f244a5218e3b
+correction: output/powers-of-two-counting-001-v001/audio-build/codec-v003/correction.json
+new audio review: output/powers-of-two-counting-001-v001/recheck-20261112-v001/audio-correction-v001/candidate-review.json
+picture identity/remux: output/powers-of-two-counting-001-v001/video/v004-audio-reencoded/render-manifest-v004.json
+final verification: design/powers-of-two-counting-v1/recheck-20261112-v001/final-verification.json
+元キュー記載: design/powers-of-two-counting-v1/production/scenario-v001.txt / SHA 9ebc208ac5b5f5f8c18b8b504626bb737cd567ab38a66103c3fdf06a28ac1e1e
+新規TTS生成・速度変更・時刻変更・新画像生成は本修正に含めない。
+人による全編連続視聴・試聴の記録ではない。
+
+全78キュー: 以下の秒は採用PCMの実測。フレームは0始まり、区間末尾は含まない。
+シーンの語りを変えるキューと、読後の動作キューを分けて記す。操作は声のない通常2秒内に進む。
+
+I001 | intro | 00:00:00.800–00:00:05.961 | 0.800000–5.960750s
+EN: Hi! Let's count the powers of two, and watch one amount turn into two equal copies.
+PCM24k: [19200, 143058)
+画面: 劇場の全景、中央の指数付き2、1から始める規則。最終20桁値はまだ提示しない。
+演技 welcome: frame28..88 (0.933333–2.966667s)。片翼を上げ二度の短い挨拶、途中姿勢を通って通常姿へ戻る。
+  状態順: gesture_rest → gesture_low → gesture_mid → gesture_high → gesture_mid → gesture_high → gesture_mid → gesture_low → gesture_rest → neutral
+
+I002 | intro | 00:00:06.261–00:00:10.670 | 6.260750–10.669958s
+EN: We begin with one. Every new answer will be exactly twice the answer before it.
+PCM24k: [150258, 256079)
+画面: 劇場の全景、中央の指数付き2、1から始める規則。最終20桁値はまだ提示しない。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+I003 | intro | 00:00:10.970–00:00:16.844 | 10.969958–16.843792s
+EN: Watch the formula work. Then listen as we say each new number, all the way to the sixty-fourth power.
+PCM24k: [263279, 404251)
+画面: 劇場の全景、中央の指数付き2、1から始める規則。最終20桁値はまだ提示しない。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N000 | count | 00:00:17.444–00:00:17.932 | 17.443792–17.931708s
+EN: one
+PCM24k: [418651, 430361)
+数学・画面: 2^0=1。紙のひし形1個と値1。倍増操作は行わない。
+同期: 結果と全文読みをframe520で同時確定。音声中は保持。進捗はframe538以後に1/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+X000 | explanation | 00:00:18.232–00:00:22.751 | 18.231708–22.751417s
+EN: Two to the zero power is one. We start with one, before any doubling steps.
+PCM24k: [437561, 546034)
+説明画面: frame547から。2^0=1のseedを保ち、倍増0回を説明。1項目の完了進捗を保持。 新しい数として再カウントしない。
+演技 guide-000: frame553..624 (18.433333–20.833333s)。奥側の片翼で規則・指数を案内し、途中姿勢を通って戻る。
+  状態順: neutral → gesture_rest → gesture_low → gesture_mid → gesture_high → gesture_mid → gesture_low → gesture_rest → neutral
+
+N001 | count | 00:00:24.751–00:00:25.267 | 24.751417–25.267000s
+EN: two
+PCM24k: [594034, 606408)
+数学・画面: 2^1=2。1×2=2。旧群と新群を各1個の実紙片で描く。
+倍増動作: frame683からframe739の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe739で同時確定。音声中は保持。進捗はframe759以後に2/65へ。
+音源選定: 既存採用2のaf_heart/.98/fp32をbyte同一再利用。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N002 | count | 00:00:27.267–00:00:27.806 | 27.267000–27.805875s
+EN: four
+PCM24k: [654408, 667341)
+数学・画面: 2^2=4。2×2=4。旧群と新群を各2個の実紙片で描く。
+倍増動作: frame759からframe815の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe815で同時確定。音声中は保持。進捗はframe835以後に3/65へ。
+音源選定: 既存採用4のaf_heart/.98/fp32をbyte同一再利用。
+演技 blink-002: frame832..846 (27.733333–28.233333s)。安定した数の読みの間に短く一度閉眼し、開眼へ戻る。
+  状態順: neutral → blink_closed → neutral
+
+N003 | count | 00:00:29.806–00:00:30.318 | 29.805875–30.317583s
+EN: eight
+PCM24k: [715341, 727622)
+数学・画面: 2^3=8。4×2=8。旧群と新群を各4個の実紙片で描く。
+倍増動作: frame835からframe891の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe891で同時確定。音声中は保持。進捗はframe910以後に4/65へ。
+音源選定: 既存採用8のaf_heart/.98/fp32をbyte同一再利用。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+X003 | explanation | 00:00:30.618–00:00:36.484 | 30.617583–36.484292s
+EN: Each step makes two copies of the last amount. The little number tells how many doubling steps we have taken.
+PCM24k: [734822, 875623)
+説明画面: frame919から。指数3へ寄り、1→2→4→8と正確な3本の×2矢印を示す。 新しい数として再カウントしない。
+演技 guide-003: frame925..996 (30.833333–33.233333s)。奥側の片翼で規則・指数を案内し、途中姿勢を通って戻る。
+  状態順: neutral → gesture_rest → gesture_low → gesture_mid → gesture_high → gesture_mid → gesture_low → gesture_rest → neutral
+
+N004 | count | 00:00:38.484–00:00:39.217 | 38.484292–39.217083s
+EN: sixteen
+PCM24k: [923623, 941210)
+数学・画面: 2^4=16。8×2=16。旧群と新群を各8個の実紙片で描く。
+倍増動作: frame1095からframe1151の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe1151で同時確定。音声中は保持。進捗はframe1177以後に5/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N005 | count | 00:00:41.217–00:00:41.955 | 41.217083–41.955292s
+EN: thirty-two
+PCM24k: [989210, 1006927)
+数学・画面: 2^5=32。16×2=32。旧群と新群を各16個の実紙片で描く。
+倍増動作: frame1177からframe1233の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe1233で同時確定。音声中は保持。進捗はframe1259以後に6/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+X005 | explanation | 00:00:42.255–00:00:50.117 | 42.255292–50.117167s
+EN: The amounts will soon be too large to draw as individual paper shapes. From the next answer, labeled groups will stand for whole amounts.
+PCM24k: [1014127, 1202812)
+説明画面: frame1268から。実個数32の紙片と値32の群を比較し、次から全体量を群で表すことを説明。64の結果をここで先取りしない。 新しい数として再カウントしない。
+演技 wonder-005: frame1273..1350 (42.433333–45.033333s)。奥側の片翼だけを半開き→開き→半開きと動かし、通常姿へ戻る。
+  状態順: neutral → gesture_rest → gesture_low → open_half → open_full → open_half → gesture_low → gesture_rest → neutral
+
+N006 | count | 00:00:52.117–00:00:52.921 | 52.117167–52.921083s
+EN: sixty-four
+PCM24k: [1250812, 1270106)
+数学・画面: 2^6=64。32×2=64。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame1504からframe1560の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe1560で同時確定。音声中は保持。進捗はframe1588以後に7/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N007 | count | 00:00:54.921–00:00:56.208 | 54.921083–56.207500s
+EN: one hundred twenty-eight
+PCM24k: [1318106, 1348980)
+数学・画面: 2^7=128。64×2=128。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame1588からframe1645の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe1645で同時確定。音声中は保持。進捗はframe1687以後に8/65へ。
+演技 small-cue-007: frame1688..1730 (56.266667–57.700000s)。読み終わりの後、次のコピーに小さい片翼の合図を添えて通常姿へ戻る。
+  状態順: gesture_rest → gesture_low → gesture_mid → gesture_low → gesture_rest → neutral
+
+N008 | count | 00:00:58.208–00:00:59.519 | 58.207500–59.519417s
+EN: two hundred fifty-six
+PCM24k: [1396980, 1428466)
+数学・画面: 2^8=256。128×2=256。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame1687からframe1743の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe1743で同時確定。音声中は保持。進捗はframe1786以後に9/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N009 | count | 00:01:01.519–00:01:02.619 | 61.519417–62.619250s
+EN: five hundred twelve
+PCM24k: [1476466, 1502862)
+数学・画面: 2^9=512。256×2=512。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame1786からframe1842の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe1842で同時確定。音声中は保持。進捗はframe1879以後に10/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N010 | count | 00:01:04.619–00:01:05.975 | 64.619250–65.974750s
+EN: one thousand twenty-four
+PCM24k: [1550862, 1583394)
+数学・画面: 2^10=1,024。512×2=1,024。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame1879からframe1935の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe1935で同時確定。音声中は保持。進捗はframe1980以後に11/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+X010 | explanation | 00:01:06.275–00:01:10.208 | 66.274750–70.207917s
+EN: For the first time, our answer is more than one thousand. Keep doubling!
+PCM24k: [1590594, 1684990)
+説明画面: frame1989から。512→1,024で初めて1,000を超えた結果を保持。1,000は独立項ではない。 新しい数として再カウントしない。
+演技 wonder-010: frame1993..2070 (66.433333–69.033333s)。奥側の片翼だけを半開き→開き→半開きと動かし、通常姿へ戻る。
+  状態順: neutral → gesture_rest → gesture_low → open_half → open_full → open_half → gesture_low → gesture_rest → neutral
+
+N011 | count | 00:01:12.208–00:01:13.486 | 72.207917–73.485708s
+EN: two thousand forty-eight
+PCM24k: [1732990, 1763657)
+数学・画面: 2^11=2,048。1,024×2=2,048。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame2107からframe2163の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe2163で同時確定。音声中は保持。進捗はframe2205以後に12/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N012 | count | 00:01:15.486–00:01:16.936 | 75.485708–76.936417s
+EN: four thousand ninety-six
+PCM24k: [1811657, 1846474)
+数学・画面: 2^12=4,096。2,048×2=4,096。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame2205からframe2261の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe2261で同時確定。音声中は保持。進捗はframe2309以後に13/65へ。
+演技 blink-012: frame2279..2293 (75.966667–76.466667s)。安定した数の読みの間に短く一度閉眼し、開眼へ戻る。
+  状態順: neutral → blink_closed → neutral
+
+N013 | count | 00:01:18.936–00:01:20.785 | 78.936417–80.784708s
+EN: eight thousand one hundred ninety-two
+PCM24k: [1894474, 1938833)
+数学・画面: 2^13=8,192。4,096×2=8,192。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame2309からframe2365の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe2365で同時確定。音声中は保持。進捗はframe2424以後に14/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N014 | count | 00:01:22.785–00:01:25.009 | 82.784708–85.008750s
+EN: sixteen thousand three hundred eighty-four
+PCM24k: [1986833, 2040210)
+数学・画面: 2^14=16,384。8,192×2=16,384。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame2424からframe2480の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe2480で同時確定。音声中は保持。進捗はframe2551以後に15/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N015 | count | 00:01:27.009–00:01:29.266 | 87.008750–89.265500s
+EN: thirty-two thousand seven hundred sixty-eight
+PCM24k: [2088210, 2142372)
+数学・画面: 2^15=32,768。16,384×2=32,768。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame2551からframe2607の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe2607で同時確定。音声中は保持。進捗はframe2678以後に16/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N016 | count | 00:01:31.266–00:01:33.701 | 91.265500–93.701250s
+EN: sixty-five thousand five hundred thirty-six
+PCM24k: [2190372, 2248830)
+数学・画面: 2^16=65,536。32,768×2=65,536。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame2678からframe2735の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe2735で同時確定。音声中は保持。進捗はframe2812以後に17/65へ。
+演技 small-cue-016: frame2812..2854 (93.733333–95.166667s)。読み終わりの後、次のコピーに小さい片翼の合図を添えて通常姿へ戻る。
+  状態順: gesture_rest → gesture_low → gesture_mid → gesture_low → gesture_rest → neutral
+
+N017 | count | 00:01:35.701–00:01:38.096 | 95.701250–98.096333s
+EN: one hundred thirty-one thousand seventy-two
+PCM24k: [2296830, 2354312)
+数学・画面: 2^17=131,072。65,536×2=131,072。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame2812からframe2868の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe2868で同時確定。音声中は保持。進捗はframe2943以後に18/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N018 | count | 00:01:40.096–00:01:43.230 | 100.096333–103.230250s
+EN: two hundred sixty-two thousand one hundred forty-four
+PCM24k: [2402312, 2477526)
+数学・画面: 2^18=262,144。131,072×2=262,144。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame2943からframe3000の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe3000で同時確定。音声中は保持。進捗はframe3097以後に19/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N019 | count | 00:01:45.230–00:01:48.055 | 105.230250–108.054792s
+EN: five hundred twenty-four thousand two hundred eighty-eight
+PCM24k: [2525526, 2593315)
+数学・画面: 2^19=524,288。262,144×2=524,288。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame3097からframe3154の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe3154で同時確定。音声中は保持。進捗はframe3242以後に20/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N020 | count | 00:01:50.055–00:01:53.074 | 110.054792–113.074500s
+EN: one million forty-eight thousand five hundred seventy-six
+PCM24k: [2641315, 2713788)
+数学・画面: 2^20=1,048,576。524,288×2=1,048,576。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame3242からframe3299の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe3299で同時確定。音声中は保持。進捗はframe3393以後に21/65へ。
+演技 quiet-rest-020: frame3311..3377 (110.366667–112.600000s)。静かに低い接地姿勢へ移り、読中に休み、途中姿勢を経て通常姿へ戻る。
+  状態順: rest_half → rest_low → rest_half → gesture_rest → neutral
+
+X020 | explanation | 00:01:53.374–00:01:57.722 | 113.374500–117.721875s
+EN: Now our answer is more than one million. The same doubling rule still works.
+PCM24k: [2720988, 2825325)
+説明画面: frame3402から。524,288→1,048,576で初めてmillionを超えた結果を保持。 新しい数として再カウントしない。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N021 | count | 00:01:59.722–00:02:02.711 | 119.721875–122.711042s
+EN: two million ninety-seven thousand one hundred fifty-two
+PCM24k: [2873325, 2945065)
+数学・画面: 2^21=2,097,152。1,048,576×2=2,097,152。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame3532からframe3589の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe3589で同時確定。音声中は保持。進捗はframe3682以後に22/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N022 | count | 00:02:04.711–00:02:08.125 | 124.711042–128.124500s
+EN: four million one hundred ninety-four thousand three hundred four
+PCM24k: [2993065, 3074988)
+数学・画面: 2^22=4,194,304。2,097,152×2=4,194,304。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame3682からframe3738の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe3738で同時確定。音声中は保持。進捗はframe3844以後に23/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N023 | count | 00:02:10.125–00:02:13.358 | 130.124500–133.357500s
+EN: eight million three hundred eighty-eight thousand six hundred eight
+PCM24k: [3122988, 3200580)
+数学・画面: 2^23=8,388,608。4,194,304×2=8,388,608。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame3844からframe3901の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe3901で同時確定。音声中は保持。進捗はframe4001以後に24/65へ。
+演技 blink-023: frame3918..3932 (130.600000–131.100000s)。安定した数の読みの間に短く一度閉眼し、開眼へ戻る。
+  状態順: neutral → blink_closed → neutral
+
+N024 | count | 00:02:15.358–00:02:19.801 | 135.357500–139.801333s
+EN: sixteen million seven hundred seventy-seven thousand two hundred sixteen
+PCM24k: [3248580, 3355232)
+数学・画面: 2^24=16,777,216。8,388,608×2=16,777,216。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame4001からframe4058の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe4058で同時確定。音声中は保持。進捗はframe4195以後に25/65へ。
+音源選定: correction-v005/N024-B.wav。明瞭なsixteenの鼻音・teen stressを採用。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N025 | count | 00:02:21.801–00:02:26.010 | 141.801333–146.009958s
+EN: thirty-three million five hundred fifty-four thousand four hundred thirty-two
+PCM24k: [3403232, 3504239)
+数学・画面: 2^25=33,554,432。16,777,216×2=33,554,432。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame4195からframe4251の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe4251で同時確定。音声中は保持。進捗はframe4381以後に26/65へ。
+演技 small-cue-025: frame4382..4424 (146.066667–147.500000s)。読み終わりの後、次のコピーに小さい片翼の合図を添えて通常姿へ戻る。
+  状態順: gesture_rest → gesture_low → gesture_mid → gesture_low → gesture_rest → neutral
+
+N026 | count | 00:02:28.010–00:02:31.926 | 148.009958–151.925667s
+EN: sixty-seven million one hundred eight thousand eight hundred sixty-four
+PCM24k: [3552239, 3646216)
+数学・画面: 2^26=67,108,864。33,554,432×2=67,108,864。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame4381からframe4437の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe4437で同時確定。音声中は保持。進捗はframe4558以後に27/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N027 | count | 00:02:33.926–00:02:38.766 | 153.925667–158.765625s
+EN: one hundred thirty-four million two hundred seventeen thousand seven hundred twenty-eight
+PCM24k: [3694216, 3810375)
+数学・画面: 2^27=134,217,728。67,108,864×2=134,217,728。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame4558からframe4615の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe4615で同時確定。音声中は保持。進捗はframe4763以後に28/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N028 | count | 00:02:40.766–00:02:45.755 | 160.765625–165.755292s
+EN: two hundred sixty-eight million four hundred thirty-five thousand four hundred fifty-six
+PCM24k: [3858375, 3978127)
+数学・画面: 2^28=268,435,456。134,217,728×2=268,435,456。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame4763からframe4820の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe4820で同時確定。音声中は保持。進捗はframe4973以後に29/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N029 | count | 00:02:47.755–00:02:52.381 | 167.755292–172.381167s
+EN: five hundred thirty-six million eight hundred seventy thousand nine hundred twelve
+PCM24k: [4026127, 4137148)
+数学・画面: 2^29=536,870,912。268,435,456×2=536,870,912。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame4973からframe5030の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe5030で同時確定。音声中は保持。進捗はframe5172以後に30/65へ。
+現行AAC補正: 旧v003のN029−3.5dBを機械的に継承しない。本版の採用masterと新correctionの実測・採否を参照。語句と時計は同じ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N030 | count | 00:02:54.381–00:02:59.490 | 174.381167–179.489583s
+EN: one billion seventy-three million seven hundred forty-one thousand eight hundred twenty-four
+PCM24k: [4185148, 4307750)
+数学・画面: 2^30=1,073,741,824。536,870,912×2=1,073,741,824。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame5172からframe5228の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe5228で同時確定。音声中は保持。進捗はframe5385以後に31/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+X030 | explanation | 00:02:59.790–00:03:04.326 | 179.789583–184.325833s
+EN: We have passed one billion. Each new amount still comes from two equal copies.
+PCM24k: [4314950, 4423820)
+説明画面: frame5394から。536,870,912→1,073,741,824で初めてbillionを超えた結果を保持。 新しい数として再カウントしない。
+演技 wonder-030: frame5399..5476 (179.966667–182.566667s)。奥側の片翼だけを半開き→開き→半開きと動かし、通常姿へ戻る。
+  状態順: neutral → gesture_rest → gesture_low → open_half → open_full → open_half → gesture_low → gesture_rest → neutral
+
+N031 | count | 00:03:06.326–00:03:11.840 | 186.325833–191.839958s
+EN: two billion one hundred forty-seven million four hundred eighty-three thousand six hundred forty-eight
+PCM24k: [4471820, 4604159)
+数学・画面: 2^31=2,147,483,648。1,073,741,824×2=2,147,483,648。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame5530からframe5587の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe5587で同時確定。音声中は保持。進捗はframe5756以後に32/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N032 | count | 00:03:13.840–00:03:19.852 | 193.839958–199.851500s
+EN: four billion two hundred ninety-four million nine hundred sixty-seven thousand two hundred ninety-six
+PCM24k: [4652159, 4796436)
+数学・画面: 2^32=4,294,967,296。2,147,483,648×2=4,294,967,296。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame5756からframe5812の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe5812で同時確定。音声中は保持。進捗はframe5996以後に33/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N033 | count | 00:03:21.852–00:03:27.664 | 201.851500–207.663708s
+EN: eight billion five hundred eighty-nine million nine hundred thirty-four thousand five hundred ninety-two
+PCM24k: [4844436, 4983929)
+数学・画面: 2^33=8,589,934,592。4,294,967,296×2=8,589,934,592。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame5996からframe6052の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe6052で同時確定。音声中は保持。進捗はframe6230以後に34/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N034 | count | 00:03:29.664–00:03:36.086 | 209.663708–216.085750s
+EN: seventeen billion one hundred seventy-nine million eight hundred sixty-nine thousand one hundred eighty-four
+PCM24k: [5031929, 5186058)
+数学・画面: 2^34=17,179,869,184。8,589,934,592×2=17,179,869,184。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame6230からframe6287の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe6287で同時確定。音声中は保持。進捗はframe6483以後に35/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N035 | count | 00:03:38.086–00:03:44.307 | 218.085750–224.307375s
+EN: thirty-four billion three hundred fifty-nine million seven hundred thirty-eight thousand three hundred sixty-eight
+PCM24k: [5234058, 5383377)
+数学・画面: 2^35=34,359,738,368。17,179,869,184×2=34,359,738,368。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame6483からframe6539の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe6539で同時確定。音声中は保持。進捗はframe6730以後に36/65へ。
+演技 blink-035: frame6557..6571 (218.566667–219.066667s)。安定した数の読みの間に短く一度閉眼し、開眼へ戻る。
+  状態順: neutral → blink_closed → neutral
+
+N036 | count | 00:03:46.307–00:03:52.656 | 226.307375–232.656500s
+EN: sixty-eight billion seven hundred nineteen million four hundred seventy-six thousand seven hundred thirty-six
+PCM24k: [5431377, 5583756)
+数学・画面: 2^36=68,719,476,736。34,359,738,368×2=68,719,476,736。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame6730からframe6786の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe6786で同時確定。音声中は保持。進捗はframe6980以後に37/65へ。
+演技 small-cue-036: frame6981..7023 (232.700000–234.133333s)。読み終わりの後、次のコピーに小さい片翼の合図を添えて通常姿へ戻る。
+  状態順: gesture_rest → gesture_low → gesture_mid → gesture_low → gesture_rest → neutral
+
+N037 | count | 00:03:54.656–00:04:01.411 | 234.656500–241.410917s
+EN: one hundred thirty-seven billion four hundred thirty-eight million nine hundred fifty-three thousand four hundred seventy-two
+PCM24k: [5631756, 5793862)
+数学・画面: 2^37=137,438,953,472。68,719,476,736×2=137,438,953,472。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame6980からframe7037の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe7037で同時確定。音声中は保持。進捗はframe7243以後に38/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N038 | count | 00:04:03.411–00:04:10.258 | 243.410917–250.257792s
+EN: two hundred seventy-four billion eight hundred seventy-seven million nine hundred six thousand nine hundred forty-four
+PCM24k: [5841862, 6006187)
+数学・画面: 2^38=274,877,906,944。137,438,953,472×2=274,877,906,944。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame7243からframe7299の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe7299で同時確定。音声中は保持。進捗はframe7508以後に39/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N039 | count | 00:04:12.258–00:04:19.214 | 252.257792–259.213708s
+EN: five hundred forty-nine billion seven hundred fifty-five million eight hundred thirteen thousand eight hundred eighty-eight
+PCM24k: [6054187, 6221129)
+数学・画面: 2^39=549,755,813,888。274,877,906,944×2=549,755,813,888。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame7508からframe7565の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe7565で同時確定。音声中は保持。進捗はframe7777以後に40/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N040 | count | 00:04:21.214–00:04:28.626 | 261.213708–268.626167s
+EN: one trillion ninety-nine billion five hundred eleven million six hundred twenty-seven thousand seven hundred seventy-six
+PCM24k: [6269129, 6447028)
+数学・画面: 2^40=1,099,511,627,776。549,755,813,888×2=1,099,511,627,776。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame7777からframe7833の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe7833で同時確定。音声中は保持。進捗はframe8059以後に41/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+X040 | explanation | 00:04:28.926–00:04:33.537 | 268.926167–273.537292s
+EN: This answer is more than one trillion. Watch the little exponent climb one step.
+PCM24k: [6454228, 6564895)
+説明画面: frame8068から。549,755,813,888→1,099,511,627,776で初めてtrillionを超え、指数39→40を対応させる。 新しい数として再カウントしない。
+演技 guide-040: frame8074..8145 (269.133333–271.533333s)。奥側の片翼で規則・指数を案内し、途中姿勢を通って戻る。
+  状態順: neutral → gesture_rest → gesture_low → gesture_mid → gesture_high → gesture_mid → gesture_low → gesture_rest → neutral
+
+N041 | count | 00:04:35.537–00:04:42.375 | 275.537292–282.374958s
+EN: two trillion one hundred ninety-nine billion twenty-three million two hundred fifty-five thousand five hundred fifty-two
+PCM24k: [6612895, 6776999)
+数学・画面: 2^41=2,199,023,255,552。1,099,511,627,776×2=2,199,023,255,552。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame8207からframe8263の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe8263で同時確定。音声中は保持。進捗はframe8472以後に42/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N042 | count | 00:04:44.375–00:04:50.789 | 284.374958–290.789458s
+EN: four trillion three hundred ninety-eight billion forty-six million five hundred eleven thousand one hundred four
+PCM24k: [6824999, 6978947)
+数学・画面: 2^42=4,398,046,511,104。2,199,023,255,552×2=4,398,046,511,104。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame8472からframe8528の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe8528で同時確定。音声中は保持。進捗はframe8724以後に43/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N043 | count | 00:04:52.789–00:04:58.756 | 292.789458–298.755958s
+EN: eight trillion seven hundred ninety-six billion ninety-three million twenty-two thousand two hundred eight
+PCM24k: [7026947, 7170143)
+数学・画面: 2^43=8,796,093,022,208。4,398,046,511,104×2=8,796,093,022,208。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame8724からframe8781の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe8781で同時確定。音声中は保持。進捗はframe8963以後に44/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N044 | count | 00:05:00.756–00:05:07.916 | 300.755958–307.916167s
+EN: seventeen trillion five hundred ninety-two billion one hundred eighty-six million forty-four thousand four hundred sixteen
+PCM24k: [7218143, 7389988)
+数学・画面: 2^44=17,592,186,044,416。8,796,093,022,208×2=17,592,186,044,416。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame8963からframe9020の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe9020で同時確定。音声中は保持。進捗はframe9238以後に45/65へ。
+演技 quiet-rest-044: frame9032..9222 (301.066667–307.433333s)。静かに低い接地姿勢へ移り、読中に休み、途中姿勢を経て通常姿へ戻る。
+  状態順: rest_half → rest_low → rest_half → gesture_rest → neutral
+
+N045 | count | 00:05:09.916–00:05:17.374 | 309.916167–317.373750s
+EN: thirty-five trillion one hundred eighty-four billion three hundred seventy-two million eighty-eight thousand eight hundred thirty-two
+PCM24k: [7437988, 7616970)
+数学・画面: 2^45=35,184,372,088,832。17,592,186,044,416×2=35,184,372,088,832。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame9238からframe9294の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe9294で同時確定。音声中は保持。進捗はframe9522以後に46/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N046 | count | 00:05:19.374–00:05:27.732 | 319.373750–327.732208s
+EN: seventy trillion three hundred sixty-eight billion seven hundred forty-four million one hundred seventy-seven thousand six hundred sixty-four
+PCM24k: [7664970, 7865573)
+数学・画面: 2^46=70,368,744,177,664。35,184,372,088,832×2=70,368,744,177,664。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame9522からframe9578の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe9578で同時確定。音声中は保持。進捗はframe9832以後に47/65へ。
+演技 blink-046: frame9595..9609 (319.833333–320.333333s)。安定した数の読みの間に短く一度閉眼し、開眼へ戻る。
+  状態順: neutral → blink_closed → neutral
+
+N047 | count | 00:05:29.732–00:05:38.447 | 329.732208–338.446750s
+EN: one hundred forty trillion seven hundred thirty-seven billion four hundred eighty-eight million three hundred fifty-five thousand three hundred twenty-eight
+PCM24k: [7913573, 8122722)
+数学・画面: 2^47=140,737,488,355,328。70,368,744,177,664×2=140,737,488,355,328。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame9832からframe9889の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe9889で同時確定。音声中は保持。進捗はframe10154以後に48/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N048 | count | 00:05:40.447–00:05:49.905 | 340.446750–349.905083s
+EN: two hundred eighty-one trillion four hundred seventy-four billion nine hundred seventy-six million seven hundred ten thousand six hundred fifty-six
+PCM24k: [8170722, 8397722)
+数学・画面: 2^48=281,474,976,710,656。140,737,488,355,328×2=281,474,976,710,656。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame10154からframe10210の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe10210で同時確定。音声中は保持。進捗はframe10498以後に49/65へ。
+音源選定: correction-v004/N048.wav。自然な位取り句でsevenの語頭を保持。
+演技 small-cue-048: frame10499..10541 (349.966667–351.400000s)。読み終わりの後、次のコピーに小さい片翼の合図を添えて通常姿へ戻る。
+  状態順: gesture_rest → gesture_low → gesture_mid → gesture_low → gesture_rest → neutral
+
+N049 | count | 00:05:51.905–00:06:00.890 | 351.905083–360.890083s
+EN: five hundred sixty-two trillion nine hundred forty-nine billion nine hundred fifty-three million four hundred twenty-one thousand three hundred twelve
+PCM24k: [8445722, 8661362)
+数学・画面: 2^49=562,949,953,421,312。281,474,976,710,656×2=562,949,953,421,312。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame10498からframe10554の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe10554で同時確定。音声中は保持。進捗はframe10827以後に50/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N050 | count | 00:06:02.890–00:06:12.829 | 362.890083–372.828583s
+EN: one quadrillion one hundred twenty-five trillion eight hundred ninety-nine billion nine hundred six million eight hundred forty-two thousand six hundred twenty-four
+PCM24k: [8709362, 8947886)
+数学・画面: 2^50=1,125,899,906,842,624。562,949,953,421,312×2=1,125,899,906,842,624。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame10827からframe10884の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe10884で同時確定。音声中は保持。進捗はframe11185以後に51/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N051 | count | 00:06:14.829–00:06:25.021 | 374.828583–385.021250s
+EN: two quadrillion two hundred fifty-one trillion seven hundred ninety-nine billion eight hundred thirteen million six hundred eighty-five thousand two hundred forty-eight
+PCM24k: [8995886, 9240510)
+数学・画面: 2^51=2,251,799,813,685,248。1,125,899,906,842,624×2=2,251,799,813,685,248。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame11185からframe11242の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe11242で同時確定。音声中は保持。進捗はframe11551以後に52/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N052 | count | 00:06:27.021–00:06:37.116 | 387.021250–397.115625s
+EN: four quadrillion five hundred three trillion five hundred ninety-nine billion six hundred twenty-seven million three hundred seventy thousand four hundred ninety-six
+PCM24k: [9288510, 9530775)
+数学・画面: 2^52=4,503,599,627,370,496。2,251,799,813,685,248×2=4,503,599,627,370,496。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame11551からframe11608の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe11608で同時確定。音声中は保持。進捗はframe11914以後に53/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N053 | count | 00:06:39.116–00:06:48.089 | 399.115625–408.089208s
+EN: nine quadrillion seven trillion one hundred ninety-nine billion two hundred fifty-four million seven hundred forty thousand nine hundred ninety-two
+PCM24k: [9578775, 9794141)
+数学・画面: 2^53=9,007,199,254,740,992。4,503,599,627,370,496×2=9,007,199,254,740,992。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame11914からframe11970の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe11970で同時確定。音声中は保持。進捗はframe12243以後に54/65へ。
+演技 quiet-rest-053: frame11983..12197 (399.433333–406.600000s)。静かに低い接地姿勢へ移り、読中に休み、途中姿勢を経て通常姿へ戻る。
+  状態順: rest_half → rest_low → rest_half → gesture_rest → neutral
+
+N054 | count | 00:06:50.089–00:06:59.142 | 410.089208–419.141833s
+EN: eighteen quadrillion fourteen trillion three hundred ninety-eight billion five hundred nine million four hundred eighty-one thousand nine hundred eighty-four
+PCM24k: [9842141, 10059404)
+数学・画面: 2^54=18,014,398,509,481,984。9,007,199,254,740,992×2=18,014,398,509,481,984。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame12243からframe12300の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe12300で同時確定。音声中は保持。進捗はframe12575以後に55/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N055 | count | 00:07:01.142–00:07:10.410 | 421.141833–430.410000s
+EN: thirty-six quadrillion twenty-eight trillion seven hundred ninety-seven billion eighteen million nine hundred sixty-three thousand nine hundred sixty-eight
+PCM24k: [10107404, 10329840)
+数学・画面: 2^55=36,028,797,018,963,968。18,014,398,509,481,984×2=36,028,797,018,963,968。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame12575からframe12631の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe12631で同時確定。音声中は保持。進捗はframe12913以後に56/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N056 | count | 00:07:12.410–00:07:22.427 | 432.410000–442.427458s
+EN: seventy-two quadrillion fifty-seven trillion five hundred ninety-four billion thirty-seven million nine hundred twenty-seven thousand nine hundred thirty-six
+PCM24k: [10377840, 10618259)
+数学・画面: 2^56=72,057,594,037,927,936。36,028,797,018,963,968×2=72,057,594,037,927,936。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame12913からframe12969の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe12969で同時確定。音声中は保持。進捗はframe13273以後に57/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N057 | count | 00:07:24.427–00:07:34.841 | 444.427458–454.841292s
+EN: one hundred forty-four quadrillion one hundred fifteen trillion one hundred eighty-eight billion seventy-five million eight hundred fifty-five thousand eight hundred seventy-two
+PCM24k: [10666259, 10916191)
+数学・画面: 2^57=144,115,188,075,855,872。72,057,594,037,927,936×2=144,115,188,075,855,872。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame13273からframe13330の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe13330で同時確定。音声中は保持。進捗はframe13646以後に58/65へ。
+演技 small-cue-057: frame13647..13689 (454.900000–456.333333s)。読み終わりの後、次のコピーに小さい片翼の合図を添えて通常姿へ戻る。
+  状態順: gesture_rest → gesture_low → gesture_mid → gesture_low → gesture_rest → neutral
+
+N058 | count | 00:07:36.841–00:07:47.613 | 456.841292–467.613167s
+EN: two hundred eighty-eight quadrillion two hundred thirty trillion three hundred seventy-six billion one hundred fifty-one million seven hundred eleven thousand seven hundred forty-four
+PCM24k: [10964191, 11222716)
+数学・画面: 2^58=288,230,376,151,711,744。144,115,188,075,855,872×2=288,230,376,151,711,744。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame13646からframe13702の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe13702で同時確定。音声中は保持。進捗はframe14029以後に59/65へ。
+演技 blink-058: frame13719..13733 (457.300000–457.800000s)。安定した数の読みの間に短く一度閉眼し、開眼へ戻る。
+  状態順: neutral → blink_closed → neutral
+
+N059 | count | 00:07:49.613–00:08:00.322 | 469.613167–480.322417s
+EN: five hundred seventy-six quadrillion four hundred sixty trillion seven hundred fifty-two billion three hundred three million four hundred twenty-three thousand four hundred eighty-eight
+PCM24k: [11270716, 11527738)
+数学・画面: 2^59=576,460,752,303,423,488。288,230,376,151,711,744×2=576,460,752,303,423,488。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame14029からframe14085の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe14085で同時確定。音声中は保持。進捗はframe14410以後に60/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N060 | count | 00:08:02.322–00:08:14.359 | 482.322417–494.358875s
+EN: one quintillion one hundred fifty-two quadrillion nine hundred twenty-one trillion five hundred four billion six hundred six million eight hundred forty-six thousand nine hundred seventy-six
+PCM24k: [11575738, 11864613)
+数学・画面: 2^60=1,152,921,504,606,846,976。576,460,752,303,423,488×2=1,152,921,504,606,846,976。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame14410からframe14467の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe14467で同時確定。音声中は保持。進捗はframe14831以後に61/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+X060 | explanation | 00:08:14.659–00:08:20.158 | 494.658875–500.158375s
+EN: We have passed one quintillion! Even with so many digits, doubling still means two equal amounts.
+PCM24k: [11871813, 12003801)
+説明画面: frame14840から。576,460,752,303,423,488→1,152,921,504,606,846,976で初めてquintillionを超えた結果を保持。 新しい数として再カウントしない。
+演技 wonder-060: frame14845..14922 (494.833333–497.433333s)。奥側の片翼だけを半開き→開き→半開きと動かし、通常姿へ戻る。
+  状態順: neutral → gesture_rest → gesture_low → open_half → open_full → open_half → gesture_low → gesture_rest → neutral
+
+N061 | count | 00:08:22.158–00:08:32.630 | 502.158375–512.629875s
+EN: two quintillion three hundred five quadrillion eight hundred forty-three trillion nine billion two hundred thirteen million six hundred ninety-three thousand nine hundred fifty-two
+PCM24k: [12051801, 12303117)
+数学・画面: 2^61=2,305,843,009,213,693,952。1,152,921,504,606,846,976×2=2,305,843,009,213,693,952。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame15005からframe15062の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe15062で同時確定。音声中は保持。進捗はframe15379以後に62/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N062 | count | 00:08:34.630–00:08:45.769 | 514.629875–525.769375s
+EN: four quintillion six hundred eleven quadrillion six hundred eighty-six trillion eighteen billion four hundred twenty-seven million three hundred eighty-seven thousand nine hundred four
+PCM24k: [12351117, 12618465)
+数学・画面: 2^62=4,611,686,018,427,387,904。2,305,843,009,213,693,952×2=4,611,686,018,427,387,904。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame15379からframe15436の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe15436で同時確定。音声中は保持。進捗はframe15774以後に63/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N063 | count | 00:08:47.769–00:08:59.455 | 527.769375–539.455125s
+EN: nine quintillion two hundred twenty-three quadrillion three hundred seventy-two trillion thirty-six billion eight hundred fifty-four million seven hundred seventy-five thousand eight hundred eight
+PCM24k: [12666465, 12946923)
+数学・画面: 2^63=9,223,372,036,854,775,808。4,611,686,018,427,387,904×2=9,223,372,036,854,775,808。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame15774からframe15830の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe15830で同時確定。音声中は保持。進捗はframe16184以後に64/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+N064 | count | 00:09:01.455–00:09:13.360 | 541.455125–553.359750s
+EN: eighteen quintillion four hundred forty-six quadrillion seven hundred forty-four trillion seventy-three billion seven hundred nine million five hundred fifty-one thousand six hundred sixteen
+PCM24k: [12994923, 13280634)
+数学・画面: 2^64=18,446,744,073,709,551,616。9,223,372,036,854,775,808×2=18,446,744,073,709,551,616。旧群と新群はそれぞれ前値全体を表すラベル付きの群。実個数の紙片ではない。
+倍増動作: frame16184からframe16241の前まで。前値と同量のコピーを分離し、結果へ合流。
+同期: 結果と全文読みをframe16241で同時確定。音声中は保持。進捗はframe16601以後に65/65へ。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+O001 | outro | 00:09:13.660–00:09:20.246 | 553.659750–560.245583s
+EN: We reached the sixty-fourth power of two! The numbers grew enormously, but each step followed the same simple rule.
+PCM24k: [13287834, 13445894)
+終幕画面: frame16610から一般式と「1 2 4 8 16 32 …」、65terms/64doublings/startingat1を整理。抜粋は省略記号付き。
+演技: 場面の足支点・尺度で通常姿を保持し、教材と数の読みに注意を集める。
+
+O002 | outro | 00:09:20.546–00:09:23.924 | 560.545583–563.923542s
+EN: Start with one, then double again and again. See you next time!
+PCM24k: [13453094, 13534165)
+終幕画面: frame16610から一般式と「1 2 4 8 16 32 …」、65terms/64doublings/startingat1を整理。抜粋は省略記号付き。
+演技 farewell: frame16820..16880 (560.666667–562.700000s)。片翼の二度の短い終わりの挨拶、通常姿へ戻る。
+  状態順: gesture_rest → gesture_low → gesture_mid → gesture_high → gesture_mid → gesture_high → gesture_mid → gesture_low → gesture_rest → neutral

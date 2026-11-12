@@ -1,0 +1,2229 @@
+{
+  "schema_version": 1,
+  "measurement_status": "measured",
+  "adoption_status": "selected-sources-require-new-exact-hash-bound-gate",
+  "voice": {
+    "provider": "local-kokoro",
+    "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+    "library": "kokoro-js@1.2.1",
+    "voice_id": "af_heart",
+    "dtype": "fp32",
+    "generation_speed": 0.98,
+    "sample_rate": 24000,
+    "channels": 1
+  },
+  "source_script": {
+    "path": "design/powers-of-two-counting-v1/sequence.json",
+    "sha256": "57c7093a1971d9a80e443e41f7ffb749b715880fa78bb1c04ddbd76d7fec9fc1"
+  },
+  "candidate_takes": {
+    "path": "output/powers-of-two-counting-001-v001/speech/candidates-v001/takes.json",
+    "sha256": "3dde0897c0b27f3a5ff621eb5ebe6825bab9fc59aba7b5e2114e05edb47cfdeb"
+  },
+  "measurement_method": "Actual accepted-or-candidate PCM frame count divided by 24000; no speech retiming.",
+  "numbers": [
+    {
+      "id": "N000",
+      "text": "one",
+      "path": "candidates-v001/N000.wav",
+      "duration_s": 0.48791666666666667,
+      "sha256": "e3ca22e7b81f8994d4d9482fa8cb00aa33eeabfd9fa156135baa90d0aff962cd",
+      "trim": {
+        "raw_duration_s": 1.3,
+        "leading_s": 0.381125,
+        "trailing_s": 0.43095833333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 0,
+      "insert_after": null,
+      "spoken_text": "one",
+      "sample_frames_24k": 11710,
+      "number": "1",
+      "value": "1"
+    },
+    {
+      "id": "N001",
+      "text": "two",
+      "path": "reused/N001.wav",
+      "duration_s": 0.5155833333333333,
+      "sha256": "95f737925860efd569349797e361741b274e2df7207de2a3d772cb2a3c60d749",
+      "trim": {
+        "raw_duration_s": 1.35,
+        "leading_s": 0.38116666666666665,
+        "trailing_s": 0.45325,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "byte-identical-previously-adopted-source-reuse-no-new-generation"
+      },
+      "kind": "count",
+      "index": 1,
+      "insert_after": null,
+      "spoken_text": "two",
+      "sample_frames_24k": 12374,
+      "number": "2",
+      "value": "2",
+      "origin": {
+        "kind": "byte-identical-adopted-library-reuse",
+        "path": "assets/library/audio/speech/kokoro-af-heart/v002/clips/number-002-95f737925860.wav",
+        "sha256": "95f737925860efd569349797e361741b274e2df7207de2a3d772cb2a3c60d749",
+        "original_gate_path": "assets/library/audio/speech/kokoro-af-heart/v002/speech-acceptance.json",
+        "original_gate_sha256": "0a82508d38899ff57b8e70c118a009e3adec00d16eeb9cc47f280b1a42bde4d6"
+      }
+    },
+    {
+      "id": "N002",
+      "text": "four",
+      "path": "reused/N002.wav",
+      "duration_s": 0.538875,
+      "sha256": "00dd0174fd56794142adb8655589f0721d36c9e959391a95152705fbc66639f8",
+      "trim": {
+        "raw_duration_s": 1.35,
+        "leading_s": 0.35029166666666667,
+        "trailing_s": 0.4608333333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "byte-identical-previously-adopted-source-reuse-no-new-generation"
+      },
+      "kind": "count",
+      "index": 2,
+      "insert_after": null,
+      "spoken_text": "four",
+      "sample_frames_24k": 12933,
+      "number": "4",
+      "value": "4",
+      "origin": {
+        "kind": "byte-identical-adopted-library-reuse",
+        "path": "assets/library/audio/speech/kokoro-af-heart/v002/clips/number-004-00dd0174fd56.wav",
+        "sha256": "00dd0174fd56794142adb8655589f0721d36c9e959391a95152705fbc66639f8",
+        "original_gate_path": "assets/library/audio/speech/kokoro-af-heart/v002/speech-acceptance.json",
+        "original_gate_sha256": "0a82508d38899ff57b8e70c118a009e3adec00d16eeb9cc47f280b1a42bde4d6"
+      }
+    },
+    {
+      "id": "N003",
+      "text": "eight",
+      "path": "reused/N003.wav",
+      "duration_s": 0.5117083333333333,
+      "sha256": "3662c8de41c36c505ff877e4317d9694e8088fef931c63d93cd7077a2c35557e",
+      "trim": {
+        "raw_duration_s": 1.275,
+        "leading_s": 0.3727083333333333,
+        "trailing_s": 0.39058333333333334,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "byte-identical-previously-adopted-source-reuse-no-new-generation"
+      },
+      "kind": "count",
+      "index": 3,
+      "insert_after": null,
+      "spoken_text": "eight",
+      "sample_frames_24k": 12281,
+      "number": "8",
+      "value": "8",
+      "origin": {
+        "kind": "byte-identical-adopted-library-reuse",
+        "path": "assets/library/audio/speech/kokoro-af-heart/v002/clips/number-008-3662c8de41c3.wav",
+        "sha256": "3662c8de41c36c505ff877e4317d9694e8088fef931c63d93cd7077a2c35557e",
+        "original_gate_path": "assets/library/audio/speech/kokoro-af-heart/v002/speech-acceptance.json",
+        "original_gate_sha256": "0a82508d38899ff57b8e70c118a009e3adec00d16eeb9cc47f280b1a42bde4d6"
+      }
+    },
+    {
+      "id": "N004",
+      "text": "sixteen",
+      "path": "candidates-v001/N004.wav",
+      "duration_s": 0.7327916666666666,
+      "sha256": "787396df2682ce8648a8e69f528c93d89a63aa74aaea7c72140822236a5bbf68",
+      "trim": {
+        "raw_duration_s": 1.575,
+        "leading_s": 0.364625,
+        "trailing_s": 0.47758333333333336,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 4,
+      "insert_after": null,
+      "spoken_text": "sixteen",
+      "sample_frames_24k": 17587,
+      "number": "16",
+      "value": "16"
+    },
+    {
+      "id": "N005",
+      "text": "thirty-two",
+      "path": "candidates-v001/N005.wav",
+      "duration_s": 0.7382083333333334,
+      "sha256": "1d342920e7c668620f2fbe3f4f322167a9c460df1e91bee7e758129de2ac1e6f",
+      "trim": {
+        "raw_duration_s": 1.55,
+        "leading_s": 0.3521666666666667,
+        "trailing_s": 0.459625,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 5,
+      "insert_after": null,
+      "spoken_text": "thirty-two",
+      "sample_frames_24k": 17717,
+      "number": "32",
+      "value": "32"
+    },
+    {
+      "id": "N006",
+      "text": "sixty-four",
+      "path": "candidates-v001/N006.wav",
+      "duration_s": 0.8039166666666666,
+      "sha256": "833255e289de37e7e1559ea6079ef1801be61b944361a544b03694b408ac0aad",
+      "trim": {
+        "raw_duration_s": 1.575,
+        "leading_s": 0.34479166666666666,
+        "trailing_s": 0.4262916666666667,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 6,
+      "insert_after": null,
+      "spoken_text": "sixty-four",
+      "sample_frames_24k": 19294,
+      "number": "64",
+      "value": "64"
+    },
+    {
+      "id": "N007",
+      "text": "one hundred twenty-eight",
+      "path": "candidates-v001/N007.wav",
+      "duration_s": 1.2864166666666668,
+      "sha256": "528118caa852e92acd0abf05065e53f62021eeaefda605ca86fa017815a33aca",
+      "trim": {
+        "raw_duration_s": 1.95,
+        "leading_s": 0.2969583333333333,
+        "trailing_s": 0.366625,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 7,
+      "insert_after": null,
+      "spoken_text": "one hundred twenty-eight",
+      "sample_frames_24k": 30874,
+      "number": "128",
+      "value": "128"
+    },
+    {
+      "id": "N008",
+      "text": "two hundred fifty-six",
+      "path": "candidates-v001/N008.wav",
+      "duration_s": 1.3119166666666666,
+      "sha256": "f4ba007a166d86874d65db6efef54323a7e2e669ebdad71f31832da522231d0d",
+      "trim": {
+        "raw_duration_s": 1.975,
+        "leading_s": 0.3075833333333333,
+        "trailing_s": 0.3555,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 8,
+      "insert_after": null,
+      "spoken_text": "two hundred fifty-six",
+      "sample_frames_24k": 31486,
+      "number": "256",
+      "value": "256"
+    },
+    {
+      "id": "N009",
+      "text": "five hundred twelve",
+      "path": "candidates-v001/N009.wav",
+      "duration_s": 1.0998333333333334,
+      "sha256": "b8120185d8e5c9e7e6e854499760791ca703e36755525b28ac99db64c696538e",
+      "trim": {
+        "raw_duration_s": 1.725,
+        "leading_s": 0.25829166666666664,
+        "trailing_s": 0.366875,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 9,
+      "insert_after": null,
+      "spoken_text": "five hundred twelve",
+      "sample_frames_24k": 26396,
+      "number": "512",
+      "value": "512"
+    },
+    {
+      "id": "N010",
+      "text": "one thousand twenty-four",
+      "path": "candidates-v001/N010.wav",
+      "duration_s": 1.3555,
+      "sha256": "a6aee1f0c6bbf48edb21bd6bdf2173c1a5bd1009eee6efac4d2266aea6a9bc8a",
+      "trim": {
+        "raw_duration_s": 2.075,
+        "leading_s": 0.307375,
+        "trailing_s": 0.412125,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 10,
+      "insert_after": null,
+      "spoken_text": "one thousand twenty-four",
+      "sample_frames_24k": 32532,
+      "number": "1024",
+      "value": "1024"
+    },
+    {
+      "id": "N011",
+      "text": "two thousand forty-eight",
+      "path": "candidates-v001/N011.wav",
+      "duration_s": 1.2777916666666667,
+      "sha256": "f3633a509ec787a121e5537b8b47b54f5f298ca38052a3cac52d8e5a15ed26a6",
+      "trim": {
+        "raw_duration_s": 1.95,
+        "leading_s": 0.30533333333333335,
+        "trailing_s": 0.366875,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 11,
+      "insert_after": null,
+      "spoken_text": "two thousand forty-eight",
+      "sample_frames_24k": 30667,
+      "number": "2048",
+      "value": "2048"
+    },
+    {
+      "id": "N012",
+      "text": "four thousand ninety-six",
+      "path": "candidates-v001/N012.wav",
+      "duration_s": 1.4507083333333333,
+      "sha256": "470e005c0ac3286715a8c26d2239e78929ba3cabd920ce4fe16e5c689ae66b7f",
+      "trim": {
+        "raw_duration_s": 2.1,
+        "leading_s": 0.28241666666666665,
+        "trailing_s": 0.366875,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 12,
+      "insert_after": null,
+      "spoken_text": "four thousand ninety-six",
+      "sample_frames_24k": 34817,
+      "number": "4096",
+      "value": "4096"
+    },
+    {
+      "id": "N013",
+      "text": "eight thousand one hundred ninety-two",
+      "path": "candidates-v001/N013.wav",
+      "duration_s": 1.8482916666666667,
+      "sha256": "bb47ba9272ed6e21324dd134b82dfc6b83efe15d86f38d2e3a8ad853993d9b47",
+      "trim": {
+        "raw_duration_s": 2.6,
+        "leading_s": 0.3097916666666667,
+        "trailing_s": 0.4419166666666667,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 13,
+      "insert_after": null,
+      "spoken_text": "eight thousand one hundred ninety-two",
+      "sample_frames_24k": 44359,
+      "number": "8192",
+      "value": "8192"
+    },
+    {
+      "id": "N014",
+      "text": "sixteen thousand three hundred eighty-four",
+      "path": "candidates-v001/N014.wav",
+      "duration_s": 2.2240416666666665,
+      "sha256": "500850869baa656be022eb45aa547c7ecb97f9d53d425ad9a9242d457dc694e0",
+      "trim": {
+        "raw_duration_s": 2.95,
+        "leading_s": 0.274375,
+        "trailing_s": 0.45158333333333334,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 14,
+      "insert_after": null,
+      "spoken_text": "sixteen thousand three hundred eighty-four",
+      "sample_frames_24k": 53377,
+      "number": "16384",
+      "value": "16384"
+    },
+    {
+      "id": "N015",
+      "text": "thirty-two thousand seven hundred sixty-eight",
+      "path": "candidates-v001/N015.wav",
+      "duration_s": 2.25675,
+      "sha256": "2e3235a706dfb30f41a0fd318a41809204dc411f437b0d56f2526726132b604b",
+      "trim": {
+        "raw_duration_s": 3,
+        "leading_s": 0.32629166666666665,
+        "trailing_s": 0.4169583333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 15,
+      "insert_after": null,
+      "spoken_text": "thirty-two thousand seven hundred sixty-eight",
+      "sample_frames_24k": 54162,
+      "number": "32768",
+      "value": "32768"
+    },
+    {
+      "id": "N016",
+      "text": "sixty-five thousand five hundred thirty-six",
+      "path": "candidates-v001/N016.wav",
+      "duration_s": 2.43575,
+      "sha256": "70c1a5d7405b382b63e7cec2f636e90ebbb79fd3306e76b0aa2ebc95eb4d18ca",
+      "trim": {
+        "raw_duration_s": 3.125,
+        "leading_s": 0.284,
+        "trailing_s": 0.40525,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 16,
+      "insert_after": null,
+      "spoken_text": "sixty-five thousand five hundred thirty-six",
+      "sample_frames_24k": 58458,
+      "number": "65536",
+      "value": "65536"
+    },
+    {
+      "id": "N017",
+      "text": "one hundred thirty-one thousand seventy-two",
+      "path": "candidates-v001/N017.wav",
+      "duration_s": 2.3950833333333335,
+      "sha256": "d860680c6c6dceb779df74a87398fd0baf9dc15a1d109bded6d5e39f6847eac4",
+      "trim": {
+        "raw_duration_s": 3.15,
+        "leading_s": 0.32545833333333335,
+        "trailing_s": 0.42945833333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 17,
+      "insert_after": null,
+      "spoken_text": "one hundred thirty-one thousand seventy-two",
+      "sample_frames_24k": 57482,
+      "number": "131072",
+      "value": "131072"
+    },
+    {
+      "id": "N018",
+      "text": "two hundred sixty-two thousand one hundred forty-four",
+      "path": "candidates-v001/N018.wav",
+      "duration_s": 3.1339166666666665,
+      "sha256": "24bc8426adacdeb908bc90d9102c3565aadf876d4b83cd4955173497d93ededb",
+      "trim": {
+        "raw_duration_s": 3.875,
+        "leading_s": 0.29041666666666666,
+        "trailing_s": 0.45066666666666666,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 18,
+      "insert_after": null,
+      "spoken_text": "two hundred sixty-two thousand one hundred forty-four",
+      "sample_frames_24k": 75214,
+      "number": "262144",
+      "value": "262144"
+    },
+    {
+      "id": "N019",
+      "text": "five hundred twenty-four thousand two hundred eighty-eight",
+      "path": "candidates-v001/N019.wav",
+      "duration_s": 2.8245416666666667,
+      "sha256": "3227e6895eca03e1fb8ad5331b6f57008690e4a5e070c2123de1a485f67a4a81",
+      "trim": {
+        "raw_duration_s": 3.525,
+        "leading_s": 0.2871666666666667,
+        "trailing_s": 0.41329166666666667,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 19,
+      "insert_after": null,
+      "spoken_text": "five hundred twenty-four thousand two hundred eighty-eight",
+      "sample_frames_24k": 67789,
+      "number": "524288",
+      "value": "524288"
+    },
+    {
+      "id": "N020",
+      "text": "one million forty-eight thousand five hundred seventy-six",
+      "path": "candidates-v001/N020.wav",
+      "duration_s": 3.0197083333333334,
+      "sha256": "56e590fc8cc5bb091119ba4ed1510899ab97c0b38f1ee854fa7c0f8a82cbbcf3",
+      "trim": {
+        "raw_duration_s": 3.75,
+        "leading_s": 0.3227083333333333,
+        "trailing_s": 0.40758333333333335,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 20,
+      "insert_after": null,
+      "spoken_text": "one million forty-eight thousand five hundred seventy-six",
+      "sample_frames_24k": 72473,
+      "number": "1048576",
+      "value": "1048576"
+    },
+    {
+      "id": "N021",
+      "text": "two million ninety-seven thousand one hundred fifty-two",
+      "path": "candidates-v001/N021.wav",
+      "duration_s": 2.9891666666666667,
+      "sha256": "13e1480724d36f8e8d192b3fe91afc2625089c352993f10db684c7f33a29f3f3",
+      "trim": {
+        "raw_duration_s": 3.75,
+        "leading_s": 0.3082083333333333,
+        "trailing_s": 0.452625,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 21,
+      "insert_after": null,
+      "spoken_text": "two million ninety-seven thousand one hundred fifty-two",
+      "sample_frames_24k": 71740,
+      "number": "2097152",
+      "value": "2097152"
+    },
+    {
+      "id": "N022",
+      "text": "four million one hundred ninety-four thousand three hundred four",
+      "path": "candidates-v001/N022.wav",
+      "duration_s": 3.4134583333333333,
+      "sha256": "d50a54dcd775653ae7fe40fe84ea041bed28c07df536765b0ddf40d080fa7385",
+      "trim": {
+        "raw_duration_s": 4.125,
+        "leading_s": 0.273625,
+        "trailing_s": 0.4379166666666667,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 22,
+      "insert_after": null,
+      "spoken_text": "four million one hundred ninety-four thousand three hundred four",
+      "sample_frames_24k": 81923,
+      "number": "4194304",
+      "value": "4194304"
+    },
+    {
+      "id": "N023",
+      "text": "eight million three hundred eighty-eight thousand six hundred eight",
+      "path": "candidates-v001/N023.wav",
+      "duration_s": 3.233,
+      "sha256": "5d1fc3453d88956eeeb2e0333861dbf803623db064268fc91e2d1a14401c77db",
+      "trim": {
+        "raw_duration_s": 3.95,
+        "leading_s": 0.3144166666666667,
+        "trailing_s": 0.40258333333333335,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 23,
+      "insert_after": null,
+      "spoken_text": "eight million three hundred eighty-eight thousand six hundred eight",
+      "sample_frames_24k": 77592,
+      "number": "8388608",
+      "value": "8388608"
+    },
+    {
+      "id": "N024",
+      "text": "sixteen million seven hundred seventy-seven thousand two hundred sixteen",
+      "path": "candidates-v001/N024.wav",
+      "duration_s": 3.971375,
+      "sha256": "3a5c2404c47a881ab60ddeba852878ae8b4b3a2e8dd793fd3720266ef824f284",
+      "trim": {
+        "raw_duration_s": 4.725,
+        "leading_s": 0.2846666666666667,
+        "trailing_s": 0.4689583333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 24,
+      "insert_after": null,
+      "spoken_text": "sixteen million seven hundred seventy-seven thousand two hundred sixteen",
+      "sample_frames_24k": 95313,
+      "number": "16777216",
+      "value": "16777216"
+    },
+    {
+      "id": "N025",
+      "text": "thirty-three million five hundred fifty-four thousand four hundred thirty-two",
+      "path": "candidates-v001/N025.wav",
+      "duration_s": 4.208625,
+      "sha256": "656fc7cad1f7f443874caf4afdd24fba3f60f5ebe305d2106fe6f8b7d11cd57f",
+      "trim": {
+        "raw_duration_s": 4.95,
+        "leading_s": 0.287125,
+        "trailing_s": 0.45425,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 25,
+      "insert_after": null,
+      "spoken_text": "thirty-three million five hundred fifty-four thousand four hundred thirty-two",
+      "sample_frames_24k": 101007,
+      "number": "33554432",
+      "value": "33554432"
+    },
+    {
+      "id": "N026",
+      "text": "sixty-seven million one hundred eight thousand eight hundred sixty-four",
+      "path": "candidates-v001/N026.wav",
+      "duration_s": 3.9157083333333333,
+      "sha256": "947754b04e0da9b57890b4db74995ce35a451930ff95e7af7ff76ec316d85e5d",
+      "trim": {
+        "raw_duration_s": 4.65,
+        "leading_s": 0.274375,
+        "trailing_s": 0.45991666666666664,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 26,
+      "insert_after": null,
+      "spoken_text": "sixty-seven million one hundred eight thousand eight hundred sixty-four",
+      "sample_frames_24k": 93977,
+      "number": "67108864",
+      "value": "67108864"
+    },
+    {
+      "id": "N027",
+      "text": "one hundred thirty-four million two hundred seventeen thousand seven hundred twenty-eight",
+      "path": "candidates-v001/N027.wav",
+      "duration_s": 4.839958333333334,
+      "sha256": "1b466281c51b2893698e4fa443950f006905f50f3856448f218f503451d29472",
+      "trim": {
+        "raw_duration_s": 5.6,
+        "leading_s": 0.31604166666666667,
+        "trailing_s": 0.444,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 27,
+      "insert_after": null,
+      "spoken_text": "one hundred thirty-four million two hundred seventeen thousand seven hundred twenty-eight",
+      "sample_frames_24k": 116159,
+      "number": "134217728",
+      "value": "134217728"
+    },
+    {
+      "id": "N028",
+      "text": "two hundred sixty-eight million four hundred thirty-five thousand four hundred fifty-six",
+      "path": "candidates-v001/N028.wav",
+      "duration_s": 4.9896666666666665,
+      "sha256": "07a22ee63b4bcd00293a61376df0bba7490dddd1b9dad73a8ff6fb6e64769677",
+      "trim": {
+        "raw_duration_s": 5.7,
+        "leading_s": 0.2934583333333333,
+        "trailing_s": 0.416875,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 28,
+      "insert_after": null,
+      "spoken_text": "two hundred sixty-eight million four hundred thirty-five thousand four hundred fifty-six",
+      "sample_frames_24k": 119752,
+      "number": "268435456",
+      "value": "268435456"
+    },
+    {
+      "id": "N029",
+      "text": "five hundred thirty-six million eight hundred seventy thousand nine hundred twelve",
+      "path": "candidates-v001/N029.wav",
+      "duration_s": 4.625875,
+      "sha256": "3e222b234a2a41ea7db01e427960a4f737e1048b7c0d204e79c93c04f7182de3",
+      "trim": {
+        "raw_duration_s": 5.325,
+        "leading_s": 0.26216666666666666,
+        "trailing_s": 0.43695833333333334,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 29,
+      "insert_after": null,
+      "spoken_text": "five hundred thirty-six million eight hundred seventy thousand nine hundred twelve",
+      "sample_frames_24k": 111021,
+      "number": "536870912",
+      "value": "536870912"
+    },
+    {
+      "id": "N030",
+      "text": "one billion seventy-three million seven hundred forty-one thousand eight hundred twenty-four",
+      "path": "candidates-v001/N030.wav",
+      "duration_s": 5.108416666666667,
+      "sha256": "8bfab4616901a7b02bc842c20135ca9741fea7005d70b81c9cd2e0f5210cb318",
+      "trim": {
+        "raw_duration_s": 5.9,
+        "leading_s": 0.31595833333333334,
+        "trailing_s": 0.475625,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 30,
+      "insert_after": null,
+      "spoken_text": "one billion seventy-three million seven hundred forty-one thousand eight hundred twenty-four",
+      "sample_frames_24k": 122602,
+      "number": "1073741824",
+      "value": "1073741824"
+    },
+    {
+      "id": "N031",
+      "text": "two billion one hundred forty-seven million four hundred eighty-three thousand six hundred forty-eight",
+      "path": "candidates-v001/N031.wav",
+      "duration_s": 5.514125,
+      "sha256": "0538578f3f3e593ecaaa7cac22f82d427a5157f65b36cc477bc0b6d784679957",
+      "trim": {
+        "raw_duration_s": 6.25,
+        "leading_s": 0.28479166666666667,
+        "trailing_s": 0.45108333333333334,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 31,
+      "insert_after": null,
+      "spoken_text": "two billion one hundred forty-seven million four hundred eighty-three thousand six hundred forty-eight",
+      "sample_frames_24k": 132339,
+      "number": "2147483648",
+      "value": "2147483648"
+    },
+    {
+      "id": "N032",
+      "text": "four billion two hundred ninety-four million nine hundred sixty-seven thousand two hundred ninety-six",
+      "path": "candidates-v001/N032.wav",
+      "duration_s": 6.011541666666667,
+      "sha256": "01ea4c532f0a168cc0901a6f06c5ec64c0fcbe5dfdc9f5c463e618af39e1516e",
+      "trim": {
+        "raw_duration_s": 6.725,
+        "leading_s": 0.2774583333333333,
+        "trailing_s": 0.436,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 32,
+      "insert_after": null,
+      "spoken_text": "four billion two hundred ninety-four million nine hundred sixty-seven thousand two hundred ninety-six",
+      "sample_frames_24k": 144277,
+      "number": "4294967296",
+      "value": "4294967296"
+    },
+    {
+      "id": "N033",
+      "text": "eight billion five hundred eighty-nine million nine hundred thirty-four thousand five hundred ninety-two",
+      "path": "candidates-v001/N033.wav",
+      "duration_s": 5.812208333333333,
+      "sha256": "408b3796ab5f9422b8b4da1fe3da165605e3a95f4d27b202ec31c6af3a5cc78b",
+      "trim": {
+        "raw_duration_s": 6.575,
+        "leading_s": 0.3085,
+        "trailing_s": 0.45429166666666665,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 33,
+      "insert_after": null,
+      "spoken_text": "eight billion five hundred eighty-nine million nine hundred thirty-four thousand five hundred ninety-two",
+      "sample_frames_24k": 139493,
+      "number": "8589934592",
+      "value": "8589934592"
+    },
+    {
+      "id": "N034",
+      "text": "seventeen billion one hundred seventy-nine million eight hundred sixty-nine thousand one hundred eighty-four",
+      "path": "candidates-v001/N034.wav",
+      "duration_s": 6.422041666666667,
+      "sha256": "0f25eb7f5958ac9fb615aeee8f431594b33e1b22cf63bcaa0103563d6fd9d55e",
+      "trim": {
+        "raw_duration_s": 7.2,
+        "leading_s": 0.27208333333333334,
+        "trailing_s": 0.505875,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 34,
+      "insert_after": null,
+      "spoken_text": "seventeen billion one hundred seventy-nine million eight hundred sixty-nine thousand one hundred eighty-four",
+      "sample_frames_24k": 154129,
+      "number": "17179869184",
+      "value": "17179869184"
+    },
+    {
+      "id": "N035",
+      "text": "thirty-four billion three hundred fifty-nine million seven hundred thirty-eight thousand three hundred sixty-eight",
+      "path": "candidates-v001/N035.wav",
+      "duration_s": 6.221625,
+      "sha256": "83dd00d938157e795ce5937f625a4636a51c9baa4ab5d2bebbf46dd23836f410",
+      "trim": {
+        "raw_duration_s": 6.95,
+        "leading_s": 0.2871666666666667,
+        "trailing_s": 0.4412083333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 35,
+      "insert_after": null,
+      "spoken_text": "thirty-four billion three hundred fifty-nine million seven hundred thirty-eight thousand three hundred sixty-eight",
+      "sample_frames_24k": 149319,
+      "number": "34359738368",
+      "value": "34359738368"
+    },
+    {
+      "id": "N036",
+      "text": "sixty-eight billion seven hundred nineteen million four hundred seventy-six thousand seven hundred thirty-six",
+      "path": "candidates-v001/N036.wav",
+      "duration_s": 6.349125,
+      "sha256": "99275f87297bdb077c2302531e0971a8ac491c28b55304f5144e7657ce14bd7f",
+      "trim": {
+        "raw_duration_s": 7.075,
+        "leading_s": 0.27529166666666666,
+        "trailing_s": 0.45058333333333334,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 36,
+      "insert_after": null,
+      "spoken_text": "sixty-eight billion seven hundred nineteen million four hundred seventy-six thousand seven hundred thirty-six",
+      "sample_frames_24k": 152379,
+      "number": "68719476736",
+      "value": "68719476736"
+    },
+    {
+      "id": "N037",
+      "text": "one hundred thirty-seven billion four hundred thirty-eight million nine hundred fifty-three thousand four hundred seventy-two",
+      "path": "candidates-v001/N037.wav",
+      "duration_s": 6.754416666666667,
+      "sha256": "926b57c816105125dbc8979a088190356d67cec6dc215d23cf4f5d71e0edfb0c",
+      "trim": {
+        "raw_duration_s": 7.525,
+        "leading_s": 0.31625,
+        "trailing_s": 0.4543333333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 37,
+      "insert_after": null,
+      "spoken_text": "one hundred thirty-seven billion four hundred thirty-eight million nine hundred fifty-three thousand four hundred seventy-two",
+      "sample_frames_24k": 162106,
+      "number": "137438953472",
+      "value": "137438953472"
+    },
+    {
+      "id": "N038",
+      "text": "two hundred seventy-four billion eight hundred seventy-seven million nine hundred six thousand nine hundred forty-four",
+      "path": "candidates-v001/N038.wav",
+      "duration_s": 6.846875,
+      "sha256": "94717df4eb74e83da7237f6a7cea2e72bd3d97309640a8a7807e8ef72e2f9ef0",
+      "trim": {
+        "raw_duration_s": 7.65,
+        "leading_s": 0.286,
+        "trailing_s": 0.517125,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 38,
+      "insert_after": null,
+      "spoken_text": "two hundred seventy-four billion eight hundred seventy-seven million nine hundred six thousand nine hundred forty-four",
+      "sample_frames_24k": 164325,
+      "number": "274877906944",
+      "value": "274877906944"
+    },
+    {
+      "id": "N039",
+      "text": "five hundred forty-nine billion seven hundred fifty-five million eight hundred thirteen thousand eight hundred eighty-eight",
+      "path": "candidates-v001/N039.wav",
+      "duration_s": 6.955916666666667,
+      "sha256": "15c8508a67ddd81ee1faed0ea746ae83c2c24638063834faf725664f54b7998c",
+      "trim": {
+        "raw_duration_s": 7.675,
+        "leading_s": 0.2654166666666667,
+        "trailing_s": 0.45366666666666666,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 39,
+      "insert_after": null,
+      "spoken_text": "five hundred forty-nine billion seven hundred fifty-five million eight hundred thirteen thousand eight hundred eighty-eight",
+      "sample_frames_24k": 166942,
+      "number": "549755813888",
+      "value": "549755813888"
+    },
+    {
+      "id": "N040",
+      "text": "one trillion ninety-nine billion five hundred eleven million six hundred twenty-seven thousand seven hundred seventy-six",
+      "path": "candidates-v001/N040.wav",
+      "duration_s": 7.412458333333333,
+      "sha256": "6299f4c203784a517003987e77f0cdb6f57828e915f3e305fb16607b01e55c04",
+      "trim": {
+        "raw_duration_s": 8.175,
+        "leading_s": 0.31416666666666665,
+        "trailing_s": 0.448375,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 40,
+      "insert_after": null,
+      "spoken_text": "one trillion ninety-nine billion five hundred eleven million six hundred twenty-seven thousand seven hundred seventy-six",
+      "sample_frames_24k": 177899,
+      "number": "1099511627776",
+      "value": "1099511627776"
+    },
+    {
+      "id": "N041",
+      "text": "two trillion one hundred ninety-nine billion twenty-three million two hundred fifty-five thousand five hundred fifty-two",
+      "path": "candidates-v001/N041.wav",
+      "duration_s": 6.837666666666666,
+      "sha256": "14658e7b9c0b4e0dc6a40c747ca052def439f5784e7a1afce2c413cf3d65eca6",
+      "trim": {
+        "raw_duration_s": 7.6,
+        "leading_s": 0.2831666666666667,
+        "trailing_s": 0.4791666666666667,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 41,
+      "insert_after": null,
+      "spoken_text": "two trillion one hundred ninety-nine billion twenty-three million two hundred fifty-five thousand five hundred fifty-two",
+      "sample_frames_24k": 164104,
+      "number": "2199023255552",
+      "value": "2199023255552"
+    },
+    {
+      "id": "N042",
+      "text": "four trillion three hundred ninety-eight billion forty-six million five hundred eleven thousand one hundred four",
+      "path": "candidates-v001/N042.wav",
+      "duration_s": 6.4145,
+      "sha256": "5a1c6ab7bf5cccb31e09c83120b24c6c399d49dde38bbd4e15307219055828c7",
+      "trim": {
+        "raw_duration_s": 7.175,
+        "leading_s": 0.27466666666666667,
+        "trailing_s": 0.48583333333333334,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 42,
+      "insert_after": null,
+      "spoken_text": "four trillion three hundred ninety-eight billion forty-six million five hundred eleven thousand one hundred four",
+      "sample_frames_24k": 153948,
+      "number": "4398046511104",
+      "value": "4398046511104"
+    },
+    {
+      "id": "N043",
+      "text": "eight trillion seven hundred ninety-six billion ninety-three million twenty-two thousand two hundred eight",
+      "path": "candidates-v001/N043.wav",
+      "duration_s": 5.9665,
+      "sha256": "fcf9ea8fb64eceaf6a2b833e63013e97ce4f0b07f157bbdd606a1ebddedb0050",
+      "trim": {
+        "raw_duration_s": 6.775,
+        "leading_s": 0.324375,
+        "trailing_s": 0.484125,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 43,
+      "insert_after": null,
+      "spoken_text": "eight trillion seven hundred ninety-six billion ninety-three million twenty-two thousand two hundred eight",
+      "sample_frames_24k": 143196,
+      "number": "8796093022208",
+      "value": "8796093022208"
+    },
+    {
+      "id": "N044",
+      "text": "seventeen trillion five hundred ninety-two billion one hundred eighty-six million forty-four thousand four hundred sixteen",
+      "path": "candidates-v001/N044.wav",
+      "duration_s": 7.160208333333333,
+      "sha256": "5cf3f61a1225676955fb2e4ca63be7af6840a6a3c476943ac01184ce60210a74",
+      "trim": {
+        "raw_duration_s": 7.95,
+        "leading_s": 0.27529166666666666,
+        "trailing_s": 0.5145,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 44,
+      "insert_after": null,
+      "spoken_text": "seventeen trillion five hundred ninety-two billion one hundred eighty-six million forty-four thousand four hundred sixteen",
+      "sample_frames_24k": 171845,
+      "number": "17592186044416",
+      "value": "17592186044416"
+    },
+    {
+      "id": "N045",
+      "text": "thirty-five trillion one hundred eighty-four billion three hundred seventy-two million eighty-eight thousand eight hundred thirty-two",
+      "path": "candidates-v001/N045.wav",
+      "duration_s": 7.457583333333333,
+      "sha256": "8bab1e427b1ac6b5bc7e8b84edc6bedc458a914a5fed6c11261ea6a6ea0d4217",
+      "trim": {
+        "raw_duration_s": 8.175,
+        "leading_s": 0.27466666666666667,
+        "trailing_s": 0.44275,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 45,
+      "insert_after": null,
+      "spoken_text": "thirty-five trillion one hundred eighty-four billion three hundred seventy-two million eighty-eight thousand eight hundred thirty-two",
+      "sample_frames_24k": 178982,
+      "number": "35184372088832",
+      "value": "35184372088832"
+    },
+    {
+      "id": "N046",
+      "text": "seventy trillion three hundred sixty-eight billion seven hundred forty-four million one hundred seventy-seven thousand six hundred sixty-four",
+      "path": "candidates-v001/N046.wav",
+      "duration_s": 8.358458333333333,
+      "sha256": "76dab56445833210fcdeeb8fc2d0f3faa74959ae528d6238874030f51022fbf7",
+      "trim": {
+        "raw_duration_s": 9.15,
+        "leading_s": 0.27529166666666666,
+        "trailing_s": 0.51625,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 46,
+      "insert_after": null,
+      "spoken_text": "seventy trillion three hundred sixty-eight billion seven hundred forty-four million one hundred seventy-seven thousand six hundred sixty-four",
+      "sample_frames_24k": 200603,
+      "number": "70368744177664",
+      "value": "70368744177664"
+    },
+    {
+      "id": "N047",
+      "text": "one hundred forty trillion seven hundred thirty-seven billion four hundred eighty-eight million three hundred fifty-five thousand three hundred twenty-eight",
+      "path": "candidates-v001/N047.wav",
+      "duration_s": 8.714541666666667,
+      "sha256": "c68cf1b5bd48d7740a290b117a4b89dfa9d3dddda7bfc668a0f042a58eead4f4",
+      "trim": {
+        "raw_duration_s": 9.5,
+        "leading_s": 0.322125,
+        "trailing_s": 0.4633333333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 47,
+      "insert_after": null,
+      "spoken_text": "one hundred forty trillion seven hundred thirty-seven billion four hundred eighty-eight million three hundred fifty-five thousand three hundred twenty-eight",
+      "sample_frames_24k": 209149,
+      "number": "140737488355328",
+      "value": "140737488355328"
+    },
+    {
+      "id": "N048",
+      "text": "two hundred eighty-one trillion four hundred seventy-four billion nine hundred seventy-six million seven hundred ten thousand six hundred fifty-six",
+      "path": "correction-v004/N048.wav",
+      "duration_s": 9.458333333333334,
+      "sha256": "899e73b2a26cbacd9ab0c30007163fee35134afafd02ff2bae4de7ee81234962",
+      "trim": {
+        "raw_duration_s": 10.2,
+        "leading_s": 0.28570833333333334,
+        "trailing_s": 0.45595833333333335,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate",
+        "text": "two hundred eighty-one trillion, four hundred seventy-four billion, nine hundred seventy-six million, seven hundred ten thousand, six hundred fifty-six"
+      },
+      "kind": "count",
+      "index": 48,
+      "insert_after": null,
+      "spoken_text": "two hundred eighty-one trillion four hundred seventy-four billion nine hundred seventy-six million seven hundred ten thousand six hundred fifty-six",
+      "sample_frames_24k": 227000,
+      "number": "281474976710656",
+      "value": "281474976710656",
+      "origin": {
+        "kind": "new-full-utterance-take-natural-comma-group-phrasing",
+        "previous_unselected_source_sha256": "36e48acdfb20cf3eccdec67be366d4bfc416ca30cecd91dd83e4efe2bbd55f11",
+        "generation_text": "two hundred eighty-one trillion, four hundred seventy-four billion, nine hundred seventy-six million, seven hundred ten thousand, six hundred fifty-six",
+        "spoken_words_unchanged": true,
+        "voice_speed_unchanged": true
+      }
+    },
+    {
+      "id": "N049",
+      "text": "five hundred sixty-two trillion nine hundred forty-nine billion nine hundred fifty-three million four hundred twenty-one thousand three hundred twelve",
+      "path": "candidates-v001/N049.wav",
+      "duration_s": 8.985,
+      "sha256": "a0f7fa88bb861002c2ee6b7d8dac831495894e81527e30e384f6179e39785ab1",
+      "trim": {
+        "raw_duration_s": 9.75,
+        "leading_s": 0.25766666666666665,
+        "trailing_s": 0.5073333333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 49,
+      "insert_after": null,
+      "spoken_text": "five hundred sixty-two trillion nine hundred forty-nine billion nine hundred fifty-three million four hundred twenty-one thousand three hundred twelve",
+      "sample_frames_24k": 215640,
+      "number": "562949953421312",
+      "value": "562949953421312"
+    },
+    {
+      "id": "N050",
+      "text": "one quadrillion one hundred twenty-five trillion eight hundred ninety-nine billion nine hundred six million eight hundred forty-two thousand six hundred twenty-four",
+      "path": "candidates-v001/N050.wav",
+      "duration_s": 9.9385,
+      "sha256": "419ae884e795926eb94dcb46f8508940da4872eb79f108d02a443bf2fde7bec0",
+      "trim": {
+        "raw_duration_s": 10.775,
+        "leading_s": 0.3006666666666667,
+        "trailing_s": 0.5358333333333334,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 50,
+      "insert_after": null,
+      "spoken_text": "one quadrillion one hundred twenty-five trillion eight hundred ninety-nine billion nine hundred six million eight hundred forty-two thousand six hundred twenty-four",
+      "sample_frames_24k": 238524,
+      "number": "1125899906842624",
+      "value": "1125899906842624"
+    },
+    {
+      "id": "N051",
+      "text": "two quadrillion two hundred fifty-one trillion seven hundred ninety-nine billion eight hundred thirteen million six hundred eighty-five thousand two hundred forty-eight",
+      "path": "candidates-v001/N051.wav",
+      "duration_s": 10.192666666666666,
+      "sha256": "f0e4cc44a9a25163b0045ee669336ac67f361527287f839072e4676b0dd7293f",
+      "trim": {
+        "raw_duration_s": 10.95,
+        "leading_s": 0.29820833333333335,
+        "trailing_s": 0.459125,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 51,
+      "insert_after": null,
+      "spoken_text": "two quadrillion two hundred fifty-one trillion seven hundred ninety-nine billion eight hundred thirteen million six hundred eighty-five thousand two hundred forty-eight",
+      "sample_frames_24k": 244624,
+      "number": "2251799813685248",
+      "value": "2251799813685248"
+    },
+    {
+      "id": "N052",
+      "text": "four quadrillion five hundred three trillion five hundred ninety-nine billion six hundred twenty-seven million three hundred seventy thousand four hundred ninety-six",
+      "path": "candidates-v001/N052.wav",
+      "duration_s": 10.094375,
+      "sha256": "7ec0a9c77e7d4f9070d65fe3c2c880a65dcf86b46dd445a21d7f052327b5df45",
+      "trim": {
+        "raw_duration_s": 10.825,
+        "leading_s": 0.27466666666666667,
+        "trailing_s": 0.45595833333333335,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 52,
+      "insert_after": null,
+      "spoken_text": "four quadrillion five hundred three trillion five hundred ninety-nine billion six hundred twenty-seven million three hundred seventy thousand four hundred ninety-six",
+      "sample_frames_24k": 242265,
+      "number": "4503599627370496",
+      "value": "4503599627370496"
+    },
+    {
+      "id": "N053",
+      "text": "nine quadrillion seven trillion one hundred ninety-nine billion two hundred fifty-four million seven hundred forty thousand nine hundred ninety-two",
+      "path": "candidates-v001/N053.wav",
+      "duration_s": 8.973583333333334,
+      "sha256": "b8477266055adfa78f65ed78aeb066feaea8b87e1443c96fd1bc98847ea12de8",
+      "trim": {
+        "raw_duration_s": 9.75,
+        "leading_s": 0.32208333333333333,
+        "trailing_s": 0.4543333333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 53,
+      "insert_after": null,
+      "spoken_text": "nine quadrillion seven trillion one hundred ninety-nine billion two hundred fifty-four million seven hundred forty thousand nine hundred ninety-two",
+      "sample_frames_24k": 215366,
+      "number": "9007199254740992",
+      "value": "9007199254740992"
+    },
+    {
+      "id": "N054",
+      "text": "eighteen quadrillion fourteen trillion three hundred ninety-eight billion five hundred nine million four hundred eighty-one thousand nine hundred eighty-four",
+      "path": "candidates-v001/N054.wav",
+      "duration_s": 9.052625,
+      "sha256": "263a260b67b125822098983d17a409dc3469f890c04f6290d7e33ff25f7086a6",
+      "trim": {
+        "raw_duration_s": 9.9,
+        "leading_s": 0.31154166666666666,
+        "trailing_s": 0.5358333333333334,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 54,
+      "insert_after": null,
+      "spoken_text": "eighteen quadrillion fourteen trillion three hundred ninety-eight billion five hundred nine million four hundred eighty-one thousand nine hundred eighty-four",
+      "sample_frames_24k": 217263,
+      "number": "18014398509481984",
+      "value": "18014398509481984"
+    },
+    {
+      "id": "N055",
+      "text": "thirty-six quadrillion twenty-eight trillion seven hundred ninety-seven billion eighteen million nine hundred sixty-three thousand nine hundred sixty-eight",
+      "path": "candidates-v001/N055.wav",
+      "duration_s": 9.268166666666668,
+      "sha256": "441e5eb747a336fc02d76fa15de2959514cb10394aeb1a830d7036f932ae84d5",
+      "trim": {
+        "raw_duration_s": 10.025,
+        "leading_s": 0.29041666666666666,
+        "trailing_s": 0.46641666666666665,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 55,
+      "insert_after": null,
+      "spoken_text": "thirty-six quadrillion twenty-eight trillion seven hundred ninety-seven billion eighteen million nine hundred sixty-three thousand nine hundred sixty-eight",
+      "sample_frames_24k": 222436,
+      "number": "36028797018963968",
+      "value": "36028797018963968"
+    },
+    {
+      "id": "N056",
+      "text": "seventy-two quadrillion fifty-seven trillion five hundred ninety-four billion thirty-seven million nine hundred twenty-seven thousand nine hundred thirty-six",
+      "path": "candidates-v001/N056.wav",
+      "duration_s": 10.017458333333334,
+      "sha256": "40defecffb1b41053b40ba8633de62f4b1cf81db2d62824a70187747b4a459d6",
+      "trim": {
+        "raw_duration_s": 10.75,
+        "leading_s": 0.27308333333333334,
+        "trailing_s": 0.45945833333333336,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 56,
+      "insert_after": null,
+      "spoken_text": "seventy-two quadrillion fifty-seven trillion five hundred ninety-four billion thirty-seven million nine hundred twenty-seven thousand nine hundred thirty-six",
+      "sample_frames_24k": 240419,
+      "number": "72057594037927936",
+      "value": "72057594037927936"
+    },
+    {
+      "id": "N057",
+      "text": "one hundred forty-four quadrillion one hundred fifteen trillion one hundred eighty-eight billion seventy-five million eight hundred fifty-five thousand eight hundred seventy-two",
+      "path": "candidates-v001/N057.wav",
+      "duration_s": 10.413833333333333,
+      "sha256": "a5574bcfef06134b182e91cf8b701b288f14d5b356a6067da4576b201f90452d",
+      "trim": {
+        "raw_duration_s": 11.2,
+        "leading_s": 0.30695833333333333,
+        "trailing_s": 0.47920833333333335,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 57,
+      "insert_after": null,
+      "spoken_text": "one hundred forty-four quadrillion one hundred fifteen trillion one hundred eighty-eight billion seventy-five million eight hundred fifty-five thousand eight hundred seventy-two",
+      "sample_frames_24k": 249932,
+      "number": "144115188075855872",
+      "value": "144115188075855872"
+    },
+    {
+      "id": "N058",
+      "text": "two hundred eighty-eight quadrillion two hundred thirty trillion three hundred seventy-six billion one hundred fifty-one million seven hundred eleven thousand seven hundred forty-four",
+      "path": "candidates-v001/N058.wav",
+      "duration_s": 10.771875,
+      "sha256": "8b5482d77ec3b9f99f392dac57ca990312bf4e256f1d580ddd4c8520277c7c41",
+      "trim": {
+        "raw_duration_s": 11.6,
+        "leading_s": 0.286875,
+        "trailing_s": 0.54125,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 58,
+      "insert_after": null,
+      "spoken_text": "two hundred eighty-eight quadrillion two hundred thirty trillion three hundred seventy-six billion one hundred fifty-one million seven hundred eleven thousand seven hundred forty-four",
+      "sample_frames_24k": 258525,
+      "number": "288230376151711744",
+      "value": "288230376151711744"
+    },
+    {
+      "id": "N059",
+      "text": "five hundred seventy-six quadrillion four hundred sixty trillion seven hundred fifty-two billion three hundred three million four hundred twenty-three thousand four hundred eighty-eight",
+      "path": "candidates-v001/N059.wav",
+      "duration_s": 10.70925,
+      "sha256": "ca737c373310bf051f6b1cc92a2ace3251579578812e4faacb56e45fcdb0a4b4",
+      "trim": {
+        "raw_duration_s": 11.475,
+        "leading_s": 0.2743333333333333,
+        "trailing_s": 0.49141666666666667,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 59,
+      "insert_after": null,
+      "spoken_text": "five hundred seventy-six quadrillion four hundred sixty trillion seven hundred fifty-two billion three hundred three million four hundred twenty-three thousand four hundred eighty-eight",
+      "sample_frames_24k": 257022,
+      "number": "576460752303423488",
+      "value": "576460752303423488"
+    },
+    {
+      "id": "N060",
+      "text": "one quintillion one hundred fifty-two quadrillion nine hundred twenty-one trillion five hundred four billion six hundred six million eight hundred forty-six thousand nine hundred seventy-six",
+      "path": "candidates-v001/N060.wav",
+      "duration_s": 12.036458333333334,
+      "sha256": "d5b6b4af7c38c6089de4dbaa4de98dc6c46eb8a07cb439879c3b3ba158f8ddbe",
+      "trim": {
+        "raw_duration_s": 12.85,
+        "leading_s": 0.303125,
+        "trailing_s": 0.5104166666666666,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 60,
+      "insert_after": null,
+      "spoken_text": "one quintillion one hundred fifty-two quadrillion nine hundred twenty-one trillion five hundred four billion six hundred six million eight hundred forty-six thousand nine hundred seventy-six",
+      "sample_frames_24k": 288875,
+      "number": "1152921504606846976",
+      "value": "1152921504606846976"
+    },
+    {
+      "id": "N061",
+      "text": "two quintillion three hundred five quadrillion eight hundred forty-three trillion nine billion two hundred thirteen million six hundred ninety-three thousand nine hundred fifty-two",
+      "path": "candidates-v001/N061.wav",
+      "duration_s": 10.4715,
+      "sha256": "34ef4453df7c8929ca72f8652aed86b25450d6c6ecb8584424e59ffab8615bf8",
+      "trim": {
+        "raw_duration_s": 11.25,
+        "leading_s": 0.28008333333333335,
+        "trailing_s": 0.4984166666666667,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 61,
+      "insert_after": null,
+      "spoken_text": "two quintillion three hundred five quadrillion eight hundred forty-three trillion nine billion two hundred thirteen million six hundred ninety-three thousand nine hundred fifty-two",
+      "sample_frames_24k": 251316,
+      "number": "2305843009213693952",
+      "value": "2305843009213693952"
+    },
+    {
+      "id": "N062",
+      "text": "four quintillion six hundred eleven quadrillion six hundred eighty-six trillion eighteen billion four hundred twenty-seven million three hundred eighty-seven thousand nine hundred four",
+      "path": "candidates-v001/N062.wav",
+      "duration_s": 11.1395,
+      "sha256": "90aec60175ff2abd63390fcf2ad08cfc353e3aefefa690edc189134f690f9c19",
+      "trim": {
+        "raw_duration_s": 11.95,
+        "leading_s": 0.27466666666666667,
+        "trailing_s": 0.5358333333333334,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 62,
+      "insert_after": null,
+      "spoken_text": "four quintillion six hundred eleven quadrillion six hundred eighty-six trillion eighteen billion four hundred twenty-seven million three hundred eighty-seven thousand nine hundred four",
+      "sample_frames_24k": 267348,
+      "number": "4611686018427387904",
+      "value": "4611686018427387904"
+    },
+    {
+      "id": "N063",
+      "text": "nine quintillion two hundred twenty-three quadrillion three hundred seventy-two trillion thirty-six billion eight hundred fifty-four million seven hundred seventy-five thousand eight hundred eight",
+      "path": "candidates-v001/N063.wav",
+      "duration_s": 11.68575,
+      "sha256": "137611a78c64b425916a6e6238e168a11a348e48b84b34afe31e764164c81e5a",
+      "trim": {
+        "raw_duration_s": 12.525,
+        "leading_s": 0.31054166666666666,
+        "trailing_s": 0.5287083333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 63,
+      "insert_after": null,
+      "spoken_text": "nine quintillion two hundred twenty-three quadrillion three hundred seventy-two trillion thirty-six billion eight hundred fifty-four million seven hundred seventy-five thousand eight hundred eight",
+      "sample_frames_24k": 280458,
+      "number": "9223372036854775808",
+      "value": "9223372036854775808"
+    },
+    {
+      "id": "N064",
+      "text": "eighteen quintillion four hundred forty-six quadrillion seven hundred forty-four trillion seventy-three billion seven hundred nine million five hundred fifty-one thousand six hundred sixteen",
+      "path": "candidates-v001/N064.wav",
+      "duration_s": 11.904625,
+      "sha256": "d78eeebea8c151bd57254d39d352f22f968c039ee4990cdc44e8f0d99569dea6",
+      "trim": {
+        "raw_duration_s": 12.725,
+        "leading_s": 0.31125,
+        "trailing_s": 0.509125,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "count",
+      "index": 64,
+      "insert_after": null,
+      "spoken_text": "eighteen quintillion four hundred forty-six quadrillion seven hundred forty-four trillion seventy-three billion seven hundred nine million five hundred fifty-one thousand six hundred sixteen",
+      "sample_frames_24k": 285711,
+      "number": "18446744073709551616",
+      "value": "18446744073709551616"
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "I001",
+      "text": "Hi! Let's count the powers of two, and watch one amount turn into two equal copies.",
+      "path": "candidates-v001/I001.wav",
+      "duration_s": 5.16075,
+      "sha256": "c8fbc3504db3f87d1192a17df136d95ff942f5f3a127ab9cd45cd8a1d9aaddd7",
+      "trim": {
+        "raw_duration_s": 5.9,
+        "leading_s": 0.2886666666666667,
+        "trailing_s": 0.45058333333333334,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "intro",
+      "index": null,
+      "insert_after": null,
+      "spoken_text": "Hi! Let's count the powers of two, and watch one amount turn into two equal copies.",
+      "sample_frames_24k": 123858
+    },
+    {
+      "id": "I002",
+      "text": "We begin with one. Every new answer will be exactly twice the answer before it.",
+      "path": "candidates-v001/I002.wav",
+      "duration_s": 4.409208333333333,
+      "sha256": "88e6a75e6dfe89c3739417bbbc9a28adead94c79c6db95b9cea02d8cde4a6b08",
+      "trim": {
+        "raw_duration_s": 5.175,
+        "leading_s": 0.3130833333333333,
+        "trailing_s": 0.4527083333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "intro",
+      "index": null,
+      "insert_after": null,
+      "spoken_text": "We begin with one. Every new answer will be exactly twice the answer before it.",
+      "sample_frames_24k": 105821
+    },
+    {
+      "id": "I003",
+      "text": "Watch the formula work. Then listen as we say each new number, all the way to the sixty-fourth power.",
+      "path": "candidates-v001/I003.wav",
+      "duration_s": 5.873833333333334,
+      "sha256": "629e10f42e59dcf2f474a833d135e22e1ea449f7e375aa95ec7686ddcbbe51cd",
+      "trim": {
+        "raw_duration_s": 6.625,
+        "leading_s": 0.29029166666666667,
+        "trailing_s": 0.460875,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "intro",
+      "index": null,
+      "insert_after": null,
+      "spoken_text": "Watch the formula work. Then listen as we say each new number, all the way to the sixty-fourth power.",
+      "sample_frames_24k": 140972
+    },
+    {
+      "id": "X000",
+      "text": "Two to the zero power is one. We start with one, before any doubling steps.",
+      "path": "candidates-v001/X000.wav",
+      "duration_s": 4.519708333333333,
+      "sha256": "4617636bf2c768f882bb95d62aa4fbc11af21d7f92fe3caa16bbd2b5b201a435",
+      "trim": {
+        "raw_duration_s": 5.225,
+        "leading_s": 0.302125,
+        "trailing_s": 0.4031666666666667,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "explanation",
+      "index": null,
+      "insert_after": 0,
+      "spoken_text": "Two to the zero power is one. We start with one, before any doubling steps.",
+      "sample_frames_24k": 108473
+    },
+    {
+      "id": "X003",
+      "text": "Each step makes two copies of the last amount. The little number tells how many doubling steps we have taken.",
+      "path": "candidates-v001/X003.wav",
+      "duration_s": 5.866708333333333,
+      "sha256": "9afdf66b87e284a1e70bba68c8fd3ac466beb0f3e12340962c10c8917e2855f5",
+      "trim": {
+        "raw_duration_s": 6.625,
+        "leading_s": 0.2985,
+        "trailing_s": 0.45979166666666665,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "explanation",
+      "index": null,
+      "insert_after": 3,
+      "spoken_text": "Each step makes two copies of the last amount. The little number tells how many doubling steps we have taken.",
+      "sample_frames_24k": 140801
+    },
+    {
+      "id": "X005",
+      "text": "The amounts will soon be too large to draw as individual paper shapes. From the next answer, labeled groups will stand for whole amounts.",
+      "path": "candidates-v001/X005.wav",
+      "duration_s": 7.861875,
+      "sha256": "54fb2e4e9270450fd3fd485da25f92eb541e173a1f506eafaa1e409ccd20b3ae",
+      "trim": {
+        "raw_duration_s": 8.6,
+        "leading_s": 0.29683333333333334,
+        "trailing_s": 0.4412916666666667,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "explanation",
+      "index": null,
+      "insert_after": 5,
+      "spoken_text": "The amounts will soon be too large to draw as individual paper shapes. From the next answer, labeled groups will stand for whole amounts.",
+      "sample_frames_24k": 188685
+    },
+    {
+      "id": "X010",
+      "text": "For the first time, our answer is more than one thousand. Keep doubling!",
+      "path": "candidates-v001/X010.wav",
+      "duration_s": 3.9331666666666667,
+      "sha256": "4907d1887dc3c70f9a1ddb11e0d97f64c3143a264f1d6503fd4422d8a00d0b36",
+      "trim": {
+        "raw_duration_s": 4.675,
+        "leading_s": 0.27491666666666664,
+        "trailing_s": 0.46691666666666665,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "explanation",
+      "index": null,
+      "insert_after": 10,
+      "spoken_text": "For the first time, our answer is more than one thousand. Keep doubling!",
+      "sample_frames_24k": 94396
+    },
+    {
+      "id": "X020",
+      "text": "Now our answer is more than one million. The same doubling rule still works.",
+      "path": "candidates-v001/X020.wav",
+      "duration_s": 4.347375,
+      "sha256": "8d6752890d2bc2a557ac9f47f670e9a430a591ae4898699e7dd9e53b75e028a1",
+      "trim": {
+        "raw_duration_s": 5.075,
+        "leading_s": 0.322125,
+        "trailing_s": 0.4055,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "explanation",
+      "index": null,
+      "insert_after": 20,
+      "spoken_text": "Now our answer is more than one million. The same doubling rule still works.",
+      "sample_frames_24k": 104337
+    },
+    {
+      "id": "X030",
+      "text": "We have passed one billion. Each new amount still comes from two equal copies.",
+      "path": "candidates-v001/X030.wav",
+      "duration_s": 4.53625,
+      "sha256": "c03a86a8cf3bfb1e19fa05d15d07ea14f05273fdab721759dd2e4bb135c20a72",
+      "trim": {
+        "raw_duration_s": 5.275,
+        "leading_s": 0.3105833333333333,
+        "trailing_s": 0.42816666666666664,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "explanation",
+      "index": null,
+      "insert_after": 30,
+      "spoken_text": "We have passed one billion. Each new amount still comes from two equal copies.",
+      "sample_frames_24k": 108870
+    },
+    {
+      "id": "X040",
+      "text": "This answer is more than one trillion. Watch the little exponent climb one step.",
+      "path": "candidates-v001/X040.wav",
+      "duration_s": 4.611125,
+      "sha256": "1f5d7c684ea719b1f707a2cefa787ac84bfa33ec7c946980429c24fd92731a44",
+      "trim": {
+        "raw_duration_s": 5.35,
+        "leading_s": 0.3094166666666667,
+        "trailing_s": 0.42945833333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "explanation",
+      "index": null,
+      "insert_after": 40,
+      "spoken_text": "This answer is more than one trillion. Watch the little exponent climb one step.",
+      "sample_frames_24k": 110667
+    },
+    {
+      "id": "X060",
+      "text": "We have passed one quintillion! Even with so many digits, doubling still means two equal amounts.",
+      "path": "candidates-v001/X060.wav",
+      "duration_s": 5.4995,
+      "sha256": "793974e57fd67c12820e68d0fed0e84d6a681d2577d144c6ec169b07db39fb07",
+      "trim": {
+        "raw_duration_s": 6.25,
+        "leading_s": 0.3145,
+        "trailing_s": 0.436,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "explanation",
+      "index": null,
+      "insert_after": 60,
+      "spoken_text": "We have passed one quintillion! Even with so many digits, doubling still means two equal amounts.",
+      "sample_frames_24k": 131988
+    },
+    {
+      "id": "O001",
+      "text": "We reached the sixty-fourth power of two! The numbers grew enormously, but each step followed the same simple rule.",
+      "path": "candidates-v001/O001.wav",
+      "duration_s": 6.585833333333333,
+      "sha256": "b6476cd86b657a87c88e9d5b38103a0eaaa9b7a67e1f8fd89323c48d40006fc5",
+      "trim": {
+        "raw_duration_s": 7.35,
+        "leading_s": 0.2853333333333333,
+        "trailing_s": 0.47883333333333333,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "outro",
+      "index": null,
+      "insert_after": 64,
+      "spoken_text": "We reached the sixty-fourth power of two! The numbers grew enormously, but each step followed the same simple rule.",
+      "sample_frames_24k": 158060
+    },
+    {
+      "id": "O002",
+      "text": "Start with one, then double again and again. See you next time!",
+      "path": "candidates-v001/O002.wav",
+      "duration_s": 3.3779583333333334,
+      "sha256": "b1525b44bbaa37c0d80ee2c8c4a3b911bb6480cf0e547961dcb777a4a3ebb7a9",
+      "trim": {
+        "raw_duration_s": 4.075,
+        "leading_s": 0.2502916666666667,
+        "trailing_s": 0.44675,
+        "peak_normalization_gain": 1
+      },
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "kind": "outro",
+      "index": null,
+      "insert_after": 64,
+      "spoken_text": "Start with one, then double again and again. See you next time!",
+      "sample_frames_24k": 81071
+    }
+  ],
+  "selection": {
+    "new_cues": 75,
+    "adopted_reused_cues": [
+      "N001",
+      "N002",
+      "N003"
+    ],
+    "prior_candidates_preserved": true,
+    "retaken_new_cues": [
+      "N048"
+    ],
+    "initial_new_cues_selected": 74
+  },
+  "selection_revision": "v004"
+}

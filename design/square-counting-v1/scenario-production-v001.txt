@@ -1,0 +1,1195 @@
+Num-Num Numbers — Square Numbers
+平方数の数列 / 本制作シナリオ v001
+2026-11-12（日本時間）
+
+正本と状態
+  これは採用音声と正式実測timelineに束縛した本制作の脚本。企画段階のenglish-script.txtは改変しない。
+  音声正本: output/square-counting-001-v001/audio-build/timeline.json
+  timeline SHA-256: e16eb991e9aff9e7250662be63c04e6cce98597de4d7659f75eff0ffe29f1509
+  master SHA-256: c0c53bdb80a72728396e1ebccf92c1345a017a0db9fc78b18f6ee4ce9acaca72
+  最終MP4のpath・SHA・採用版・最終素材使用数はproduction-run-v001.json参照。本書では未確定値を補わない。
+  本書の時刻はWAV実PCMを24kHz整数サンプルで配置した値。表示用のmm:ss.mmmは丸め、秒値は元の精度を併記する。
+
+固定する仕様
+  0²=0から100²=10,000まで、n=0..100の101項・101乗算。0を含める。
+  全215発話: 導入7、式前半101、結果101、説明5、終幕1。
+  各項はE「n times n equals」→N「結果」を一度読む。指数2をn×2とは説明しない。
+  実PCM合計S=423.652333333秒。S+223.16=646.812333333秒（10分46.812秒）。
+  映像目標は1080p/16:9/30fps、19,405frame=646.833333秒。末尾のフレーム境界差は無音padのみ。
+  BGM、環境音、効果音なし。Kokoro af_heart/fp32/speed0.98。
+  通常96境界: N読み終わり→次E開始2.00秒。説明4境界:0.4秒＋T実測発話＋2秒。
+  E終端→N開始0.16秒、結果確定はN開始0.12秒前。進捗はN終端後に一度だけ更新。
+  T100は最後の結果後0.6秒、T100終端→O01は0.4秒。尺のための速度・間隔変更はしない。
+
+物語と構図
+  昼の凍った湖。淡い氷面の中央へ正方形を重ね、同じnが横と縦へ移って面を満たす。
+  背景は固定で追加ズームしない。全景・中央教材・L字・面積分割・ブロックと拡大凡例へ教材の焦点を変える。
+  入力の数値は字形をモーフせず、実際の因数字形の位置とbearingを考慮した起点から二辺へ複製する。
+  通常は下部右から案内し、導入/終幕は下部中央、10,000の説明は下部左。左右交代だけを構図の変化にしない。
+
+場面の役割（以下は発話の実測範囲）
+  intro: 00:00.600–00:22.712 / I01→I07
+    一般式と二つの等しい入力を紹介。下部中央で片手の挨拶。
+  empty: 00:23.512–00:29.650 / E000→T000
+    0×0=0を読み、単位マスなしの空配列を明示。
+  small-grid: 00:31.650–00:46.089 / E001→N004
+    n行×n列の実マスを生成。4×4では16単位。
+  look-ahead-L: 00:46.489–00:55.664 / T004→T004
+    4×4の16を保持し、行4・列4・角1の9を予告。25は次N005まで数値確定しない。
+  unit-grid-to100: 00:57.664–01:31.727 / E005→T010
+    実マスを継続し、10×10=100。図モードの変更を説明。
+  schematic-early: 01:33.727–03:29.608 / E011→N032
+    SCHEMATICと辺長nを表示。少数の飾りをn²個の単位として扱わない。
+  threshold-replay: 03:30.008–03:36.125 / T032→T032
+    31²=961<1000<32²=1024。30+2の二辺を900+60+60+4へ分解。
+  schematic-late: 03:38.125–10:18.828 / E033→N099
+    全項を省かず同じ生成規則で数える。意味に沿った視線・案内・片腕の肩開きを既存の間へ。
+  last-generated-value: 10:20.828–10:24.073 / E100→N100
+    100×100=10000を生成し、一度だけ結果を読む。通常図はSCHEMATIC。
+  grouped-hundreds: 10:24.673–10:33.927 / T100→T100
+    100個の100単位ブロックへ。拡大凡例は既存1ブロックの詳細で、総数へ加算しない。
+  outro: 10:34.327–10:45.612 / O01→O01
+    一般式と省略記号つき抜粋列へ戻り、片手の挨拶を通常姿へ戻す。
+
+数量とモード
+  0は空配列でマス0個、0の数字は表示。1²..10²はn行×n列の実単位マス。
+  11²..100²の通常カウントはSCHEMATIC。図の見かけの大きさを全項共通の物理尺度にはしない。
+  T004は16+行4+列4+角1を予告。進捗5/101を維持し、25の数字はN005まで先出ししない。
+  T032は31²=961<1000<32²=1024、(30+2)²=900+60+60+4の正しい面積比で復習。進捗33/101。
+  T100は10行×10列の親100ブロック、各100単位。全体の辺100単位。
+  拡大見本の100単位は既存親1個の詳細で、101個目のブロックや追加数量にはしない。
+  終幕は0²..10²と98²..100²の抜粋を省略記号で結ぶ。抜粋を101項の全一覧とは呼ばない。
+
+演技と素材数の扱い
+  通常姿の顔・胴・尾・足を土台に、片手挨拶・案内・視線を局所登録で動かし、通常姿へ戻す。
+  n25/52/78の読み終わり後に片腕を上向きへ開いて肩をほぐす。両手の伸長、全身の伸び、跳躍とは呼ばない。
+  元の両腕原画は保全し、右腕と尾をcanonical側で守ったregistration-v002の派生を使う予定。
+  企画の新4姿、本制作の4生成シート/16原画、登録派生状態、実際の最終使用状態数を混同しない。
+  最終使用原画数・使用source数・使用pose状態数は現在未確定。本書の生成在庫数を本編使用数とはしない。
+  身体基準1078pxと登録足支点を保ち、ポーズごとのbbox fitや全身クロスフェードをしない。
+  目立つ仕草は既存の通常2秒内へ置き、音声cueや間を延長しない。
+
+演技窓（現行の実測cueに基づく設計。最終使用はproduction-run参照）
+  opening-greeting / I01: 00:00.700–00:02.433 (21..72f) / 片手の導入挨拶と通常姿への復帰
+  notice-007 / N007: 01:09.167–01:10.567 (2075..2116f) / 教材への視線往復
+  show-dimensions-012 / N012: 01:42.167–01:43.533 (3065..3105f) / 片手で二辺を案内して戻る
+  notice-018 / N018: 02:13.833–02:15.233 (4015..4056f) / 教材への視線往復
+  shoulder-stretch-025 / N025: 02:51.333–02:52.833 (5140..5184f) / 片腕の肩開きと復帰
+  show-dimensions-035 / N035: 03:53.900–03:55.267 (7017..7057f) / 片手で二辺を案内して戻る
+  notice-043 / N043: 04:41.967–04:43.367 (8459..8500f) / 教材への視線往復
+  shoulder-stretch-052 / N052: 05:33.500–05:35.000 (10005..10049f) / 片腕の肩開きと復帰
+  show-dimensions-058 / N058: 06:09.167–06:10.533 (11075..11115f) / 片手で二辺を案内して戻る
+  notice-066 / N066: 06:57.233–06:58.633 (12517..12558f) / 教材への視線往復
+  shoulder-stretch-078 / N078: 08:12.300–08:13.800 (14769..14813f) / 片腕の肩開きと復帰
+  show-dimensions-082 / N082: 08:35.733–08:37.100 (15472..15512f) / 片手で二辺を案内して戻る
+  notice-088 / N088: 09:12.933–09:14.333 (16588..16629f) / 教材への視線往復
+  show-dimensions-096 / N096: 10:00.767–10:02.133 (18023..18063f) / 片手で二辺を案内して戻る
+  closing-greeting / O01: 10:34.433–10:36.167 (19033..19084f) / 片手の終幕挨拶と通常姿への復帰
+
+構図切替のdip
+  全画面をクリームへ短く落とし、完全不透明の時点で構図/キャラ表示尺度を切り替える。全身同士のdissolveは使わない。
+  半幅5frame、実際に色が乗る9frame。11箇所とも実測215発話の無音間に入る設計で、発話交差0。
+  以下は計算上の予定であり、最終decodeのfade/音声同期合格は別QAで確認する。
+  cut f695 / opaque 00:23.167; 色の付く範囲00:23.033–00:23.333; 直前発話終00:22.712 / 次発話開始00:23.512
+  cut f783 / opaque 00:26.100; 色の付く範囲00:25.967–00:26.267; 直前発話終00:25.877 / 次発話開始00:26.277
+  cut f939 / opaque 00:31.300; 色の付く範囲00:31.167–00:31.467; 直前発話終00:29.650 / 次発話開始00:31.650
+  cut f1389 / opaque 00:46.300; 色の付く範囲00:46.167–00:46.467; 直前発話終00:46.089 / 次発話開始00:46.489
+  cut f1720 / opaque 00:57.333; 色の付く範囲00:57.200–00:57.500; 直前発話終00:55.664 / 次発話開始00:57.664
+  cut f2472 / opaque 01:22.400; 色の付く範囲01:22.267–01:22.567; 直前発話終01:22.176 / 次発話開始01:22.576
+  cut f2802 / opaque 01:33.400; 色の付く範囲01:33.267–01:33.567; 直前発話終01:31.727 / 次発話開始01:33.727
+  cut f6295 / opaque 03:29.833; 色の付く範囲03:29.700–03:30.000; 直前発話終03:29.608 / 次発話開始03:30.008
+  cut f6534 / opaque 03:37.800; 色の付く範囲03:37.667–03:37.967; 直前発話終03:36.125 / 次発話開始03:38.125
+  cut f18735 / opaque 10:24.500; 色の付く範囲10:24.367–10:24.667; 直前発話終10:24.073 / 次発話開始10:24.673
+  cut f19024 / opaque 10:34.133; 色の付く範囲10:34.000–10:34.300; 直前発話終10:33.927 / 次発話開始10:34.327
+
+過去9作との差と統一感
+  decimal: 青空の庭 → 冬の内陸湖と氷面の面積生成。花・庭・空の変化による数の演出を再利用しない。
+  binary: 夕暮れのランタン庭 → 昼の雪と氷。点灯を二進桁のオン/オフとして使わず、縦横から平方を作る。
+  octal: オーロラの庭 → オーロラ・夜空を使わず、氷面上の正方形を正対で読む。
+  hexadecimal: 月明かりの天文台テラス → 望遠鏡・観測ドーム・星を置かず、二つの同値入力と面積へ焦点を移す。
+  four-base: 灯台の海辺 → 海・灯台・波でなく、凍った内陸湖。四基数パネルの固定構図を流用しない。
+  even: 木のおもちゃ工房 → 二個一組の製造・搬送でなく、同じ数が二辺を決める。
+  odd: 山のケーブルカー駅 → 同じレッサーパンダでも、切符・余り1・固定右端420px構図を再利用しない。
+  prime: 日差しのモザイク博物館 → 約数の選別・展示でなく、二辺から全マスを生成。タイル数を素数の進捗と混同しない。
+  fibonacci: 雲上の風の郵便局 → 直前二項の受渡しでなく、同じnを二つの辺へ複製する。
+  水彩/紙目・暖かい茶の輪郭、丸い書体、クリーム下地と青緑文字、穏やかな自然英語は維持。
+  比較根拠はreview/past-episode-comparison.txt。保存済みMP4由来資料や限定した動作確認であり、過去9作を今回人が全編新規視聴した記録ではない。
+
+検査と残す限界
+  数学・原音・実測timeline・字幕IDは正本へ束縛。配置は可視字形/実マス群を水平・垂直で別々に確認する。
+  native各0.5px、最終decode各1px。0/100、全桁境界、全図モード、コピーの出発/途中/到着、空・切れ・遮蔽を含む。
+  因数字形copyのbearing起点修正後は最終描画で再検査し、旧QAを新しい完成品の合格へ読み替えない。
+  音声は全215の独立ASR/CTC・語頭語末・個別判断を実施。最終AACの新認識はv001動画SHAへ束縛済み。
+  新版へのAAC継承はpacket内容/時刻同一を別記録で確認した場合だけ。新認識の再実行とは呼ばない。
+  人による完成MP4全編連続試聴・全編視聴を実施した記録ではない。完成媒体の検査範囲と採用はproduction-run参照。
+
+全215発話の実測cue表
+  英語本文は正式timelineから転記。原本english-script.txtは保持。各IDは字幕IDと同じ。
+
+I01 [intro]  00:00.600–00:02.211
+  start_s=0.600000000000; end_s=2.210583333333; duration_s=1.610583333333; PCM24k=14400..53053
+Hi! Let's make square numbers.
+
+I02 [intro]  00:02.511–00:05.625
+  start_s=2.510583333333; end_s=5.625416666667; duration_s=3.114833333333; PCM24k=60254..135009
+Choose a number. Use that same number across and down.
+
+I03 [intro]  00:05.925–00:09.266
+  start_s=5.925416666667; end_s=9.265916666667; duration_s=3.340500000000; PCM24k=142210..222381
+The little two means squared. It means a number times itself.
+
+I04 [intro]  00:09.566–00:13.222
+  start_s=9.565916666667; end_s=13.222000000000; duration_s=3.656083333333; PCM24k=229582..317327
+Watch the numbers move into the formula, and watch a square take shape.
+
+I05 [intro]  00:13.522–00:16.978
+  start_s=13.522000000000; end_s=16.978291666667; duration_s=3.456291666667; PCM24k=324528..407478
+We will start with zero and go all the way to one hundred squared.
+
+I06 [intro]  00:17.278–00:20.340
+  start_s=17.278291666667; end_s=20.340000000000; duration_s=3.061708333333; PCM24k=414679..488159
+Each time, the two matching numbers make one new result.
+
+I07 [intro]  00:20.640–00:22.712
+  start_s=20.640000000000; end_s=22.712125000000; duration_s=2.072125000000; PCM24k=495360..545090
+Ready? Let's see what each formula makes.
+
+E000 [formula_prefix] / n=0, value=0  00:23.512–00:25.137
+  start_s=23.512125000000; end_s=25.137416666667; duration_s=1.625291666667; PCM24k=564291..603297
+zero times zero equals
+  式の連動: times=23.892125000000s / 第2因数=24.237125000000s / equals=24.652125000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N000 [count] / n=0, value=0  00:25.297–00:25.877
+  start_s=25.297416666667; end_s=25.876708333333; duration_s=0.579291666667; PCM24k=607138..621040
+zero
+  結果確定=25.177416666667s (00:25.177); 読み終わり25.876708333333s後に進捗1/101へ。
+
+T000 [explanation] / n=0, value=0  00:26.277–00:29.650
+  start_s=26.276708333333; end_s=29.649875000000; duration_s=3.373166666667; PCM24k=630641..711596
+For zero, the square is empty. There are no tiles to fill it.
+  説明中は進捗1/101を保持。追加カウントにしない。
+
+E001 [formula_prefix] / n=1, value=1  00:31.650–00:33.079
+  start_s=31.649875000000; end_s=33.079083333333; duration_s=1.429208333333; PCM24k=759597..793897
+one times one equals
+  式の連動: times=31.909875000000s / 第2因数=32.234875000000s / equals=32.569875000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N001 [count] / n=1, value=1  00:33.239–00:33.715
+  start_s=33.239083333333; end_s=33.714916666667; duration_s=0.475833333333; PCM24k=797738..809157
+one
+  結果確定=33.119083333333s (00:33.119); 読み終わり33.714916666667s後に進捗2/101へ。
+
+E002 [formula_prefix] / n=2, value=4  00:35.715–00:36.968
+  start_s=35.714916666667; end_s=36.967791666667; duration_s=1.252875000000; PCM24k=857158..887226
+two times two equals
+  式の連動: times=35.894916666667s / 第2因数=36.219916666667s / equals=36.474916666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N002 [count] / n=2, value=4  00:37.128–00:37.667
+  start_s=37.127791666667; end_s=37.666666666667; duration_s=0.538875000000; PCM24k=891067..903999
+four
+  結果確定=37.007791666667s (00:37.008); 読み終わり37.666666666667s後に進捗3/101へ。
+
+E003 [formula_prefix] / n=3, value=9  00:39.667–00:41.030
+  start_s=39.666666666667; end_s=41.029750000000; duration_s=1.363083333333; PCM24k=952000..984713
+three times three equals
+  式の連動: times=39.906666666667s / 第2因数=40.231666666667s / equals=40.526666666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N003 [count] / n=3, value=9  00:41.190–00:41.734
+  start_s=41.189750000000; end_s=41.733958333333; duration_s=0.544208333333; PCM24k=988554..1001614
+nine
+  結果確定=41.069750000000s (00:41.070); 読み終わり41.733958333333s後に進捗4/101へ。
+
+E004 [formula_prefix] / n=4, value=16  00:43.734–00:45.192
+  start_s=43.733958333333; end_s=45.191500000000; duration_s=1.457541666667; PCM24k=1049615..1084595
+four times four equals
+  式の連動: times=44.053958333333s / 第2因数=44.378958333333s / equals=44.713958333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N004 [count] / n=4, value=16  00:45.352–00:46.089
+  start_s=45.351500000000; end_s=46.088541666667; duration_s=0.737041666667; PCM24k=1088436..1106124
+sixteen
+  結果確定=45.231500000000s (00:45.232); 読み終わり46.088541666667s後に進捗5/101へ。
+
+T004 [explanation] / n=4, value=16  00:46.489–00:55.664
+  start_s=46.488541666667; end_s=55.664083333333; duration_s=9.175541666667; PCM24k=1115725..1335937
+To grow this square, add one row of four, one column of four, and one corner. Four plus four plus one makes nine new tiles. Watch the next square.
+  説明中は進捗5/101を保持。追加カウントにしない。
+
+E005 [formula_prefix] / n=5, value=25  00:57.664–00:59.195
+  start_s=57.664083333333; end_s=59.194875000000; duration_s=1.530791666667; PCM24k=1383938..1420676
+five times five equals
+  式の連動: times=58.004083333333s / 第2因数=58.329083333333s / equals=58.704083333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N005 [count] / n=5, value=25  00:59.355–01:00.204
+  start_s=59.354875000000; end_s=60.203666666667; duration_s=0.848791666667; PCM24k=1424517..1444887
+twenty-five
+  結果確定=59.234875000000s (00:59.235); 読み終わり60.203666666667s後に進捗6/101へ。
+
+E006 [formula_prefix] / n=6, value=36  01:02.204–01:03.680
+  start_s=62.203666666667; end_s=63.680500000000; duration_s=1.476833333333; PCM24k=1492888..1528331
+six times six equals
+  式の連動: times=62.523666666667s / 第2因数=62.848666666667s / equals=63.183666666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N006 [count] / n=6, value=36  01:03.840–01:04.410
+  start_s=63.840500000000; end_s=64.410500000000; duration_s=0.570000000000; PCM24k=1532172..1545851
+thirty-six
+  結果確定=63.720500000000s (01:03.720); 読み終わり64.410500000000s後に進捗7/101へ。
+
+E007 [formula_prefix] / n=7, value=49  01:06.410–01:08.042
+  start_s=66.410500000000; end_s=68.041916666667; duration_s=1.631416666667; PCM24k=1593852..1633005
+seven times seven equals
+  式の連動: times=66.790500000000s / 第2因数=67.135500000000s / equals=67.550500000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N007 [count] / n=7, value=49  01:08.202–01:09.049
+  start_s=68.201916666667; end_s=69.049291666667; duration_s=0.847375000000; PCM24k=1636846..1657182
+forty-nine
+  結果確定=68.081916666667s (01:08.082); 読み終わり69.049291666667s後に進捗8/101へ。
+
+E008 [formula_prefix] / n=8, value=64  01:11.049–01:12.444
+  start_s=71.049291666667; end_s=72.443708333333; duration_s=1.394416666667; PCM24k=1705183..1738648
+eight times eight equals
+  式の連動: times=71.269291666667s / 第2因数=71.594291666667s / equals=71.929291666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N008 [count] / n=8, value=64  01:12.604–01:13.436
+  start_s=72.603708333333; end_s=73.436125000000; duration_s=0.832416666667; PCM24k=1742489..1762466
+sixty-four
+  結果確定=72.483708333333s (01:12.484); 読み終わり73.436125000000s後に進捗9/101へ。
+
+E009 [formula_prefix] / n=9, value=81  01:15.436–01:16.956
+  start_s=75.436125000000; end_s=76.956333333333; duration_s=1.520208333333; PCM24k=1810467..1846951
+nine times nine equals
+  式の連動: times=75.756125000000s / 第2因数=76.081125000000s / equals=76.476125000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N009 [count] / n=9, value=81  01:17.116–01:17.804
+  start_s=77.116333333333; end_s=77.803750000000; duration_s=0.687416666667; PCM24k=1850792..1867289
+eighty-one
+  結果確定=76.996333333333s (01:16.996); 読み終わり77.803750000000s後に進捗10/101へ。
+
+E010 [formula_prefix] / n=10, value=100  01:19.804–01:21.201
+  start_s=79.803750000000; end_s=81.201375000000; duration_s=1.397625000000; PCM24k=1915290..1948832
+ten times ten equals
+  式の連動: times=80.063750000000s / 第2因数=80.388750000000s / equals=80.723750000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N010 [count] / n=10, value=100  01:21.361–01:22.176
+  start_s=81.361375000000; end_s=82.176375000000; duration_s=0.815000000000; PCM24k=1952673..1972232
+one hundred
+  結果確定=81.241375000000s (01:21.241); 読み終わり82.176375000000s後に進捗11/101へ。
+
+T010 [explanation] / n=10, value=100  01:22.576–01:31.727
+  start_s=82.576375000000; end_s=91.727166666667; duration_s=9.150791666667; PCM24k=1981833..2201451
+This ten-by-ten square has one hundred tiles. From here, the picture is a diagram. Its side labels and the formula show the exact numbers.
+  説明中は進捗11/101を保持。追加カウントにしない。
+
+E011 [formula_prefix] / n=11, value=121  01:33.727–01:35.513
+  start_s=93.727166666667; end_s=95.513166666667; duration_s=1.786000000000; PCM24k=2249452..2292315
+eleven times eleven equals
+  式の連動: times=94.147166666667s / 第2因数=94.492166666667s / equals=95.007166666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N011 [count] / n=11, value=121  01:35.673–01:36.984
+  start_s=95.673166666667; end_s=96.984208333333; duration_s=1.311041666667; PCM24k=2296156..2327620
+one hundred twenty-one
+  結果確定=95.553166666667s (01:35.553); 読み終わり96.984208333333s後に進捗12/101へ。
+
+E012 [formula_prefix] / n=12, value=144  01:38.984–01:40.507
+  start_s=98.984208333333; end_s=100.507208333333; duration_s=1.523000000000; PCM24k=2375621..2412172
+twelve times twelve equals
+  式の連動: times=99.304208333333s / 第2因数=99.629208333333s / equals=100.024208333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N012 [count] / n=12, value=144  01:40.667–01:42.040
+  start_s=100.667208333333; end_s=102.040458333333; duration_s=1.373250000000; PCM24k=2416013..2448970
+one hundred forty-four
+  結果確定=100.547208333333s (01:40.547); 読み終わり102.040458333333s後に進捗13/101へ。
+
+E013 [formula_prefix] / n=13, value=169  01:44.040–01:45.772
+  start_s=104.040458333333; end_s=105.772208333333; duration_s=1.731750000000; PCM24k=2496971..2538532
+thirteen times thirteen equals
+  式の連動: times=104.480458333333s / 第2因数=104.805458333333s / equals=105.300458333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N013 [count] / n=13, value=169  01:45.932–01:47.331
+  start_s=105.932208333333; end_s=107.330750000000; duration_s=1.398541666667; PCM24k=2542373..2575937
+one hundred sixty-nine
+  結果確定=105.812208333333s (01:45.812); 読み終わり107.330750000000s後に進捗14/101へ。
+
+E014 [formula_prefix] / n=14, value=196  01:49.331–01:51.127
+  start_s=109.330750000000; end_s=111.126583333333; duration_s=1.795833333333; PCM24k=2623938..2667037
+fourteen times fourteen equals
+  式の連動: times=109.810750000000s / 第2因数=110.135750000000s / equals=110.650750000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N014 [count] / n=14, value=196  01:51.287–01:52.734
+  start_s=111.286583333333; end_s=112.733750000000; duration_s=1.447166666667; PCM24k=2670878..2705609
+one hundred ninety-six
+  結果確定=111.166583333333s (01:51.167); 読み終わり112.733750000000s後に進捗15/101へ。
+
+E015 [formula_prefix] / n=15, value=225  01:54.734–01:56.390
+  start_s=114.733750000000; end_s=116.389958333333; duration_s=1.656208333333; PCM24k=2753610..2793358
+fifteen times fifteen equals
+  式の連動: times=115.093750000000s / 第2因数=115.418750000000s / equals=115.913750000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N015 [count] / n=15, value=225  01:56.550–01:57.879
+  start_s=116.549958333333; end_s=117.879083333333; duration_s=1.329125000000; PCM24k=2797199..2829097
+two hundred twenty-five
+  結果確定=116.429958333333s (01:56.430); 読み終わり117.879083333333s後に進捗16/101へ。
+
+E016 [formula_prefix] / n=16, value=256  01:59.879–02:01.618
+  start_s=119.879083333333; end_s=121.618250000000; duration_s=1.739166666667; PCM24k=2877098..2918837
+sixteen times sixteen equals
+  式の連動: times=120.339083333333s / 第2因数=120.664083333333s / equals=121.159083333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N016 [count] / n=16, value=256  02:01.778–02:03.134
+  start_s=121.778250000000; end_s=123.134000000000; duration_s=1.355750000000; PCM24k=2922678..2955215
+two hundred fifty-six
+  結果確定=121.658250000000s (02:01.658); 読み終わり123.134000000000s後に進捗17/101へ。
+
+E017 [formula_prefix] / n=17, value=289  02:05.134–02:06.998
+  start_s=125.134000000000; end_s=126.997666666667; duration_s=1.863666666667; PCM24k=3003216..3047943
+seventeen times seventeen equals
+  式の連動: times=125.594000000000s / 第2因数=125.959000000000s / equals=126.514000000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N017 [count] / n=17, value=289  02:07.158–02:08.480
+  start_s=127.157666666667; end_s=128.479583333333; duration_s=1.321916666667; PCM24k=3051784..3083509
+two hundred eighty-nine
+  結果確定=127.037666666667s (02:07.038); 読み終わり128.479583333333s後に進捗18/101へ。
+
+E018 [formula_prefix] / n=18, value=324  02:10.480–02:12.156
+  start_s=130.479583333333; end_s=132.155875000000; duration_s=1.676291666667; PCM24k=3131510..3171740
+eighteen times eighteen equals
+  式の連動: times=130.859583333333s / 第2因数=131.184583333333s / equals=131.679583333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N018 [count] / n=18, value=324  02:12.316–02:13.705
+  start_s=132.315875000000; end_s=133.704708333333; duration_s=1.388833333333; PCM24k=3175581..3208912
+three hundred twenty-four
+  結果確定=132.195875000000s (02:12.196); 読み終わり133.704708333333s後に進捗19/101へ。
+
+E019 [formula_prefix] / n=19, value=361  02:15.705–02:17.480
+  start_s=135.704708333333; end_s=137.480250000000; duration_s=1.775541666667; PCM24k=3256913..3299525
+nineteen times nineteen equals
+  式の連動: times=136.164708333333s / 第2因数=136.489708333333s / equals=137.004708333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N019 [count] / n=19, value=361  02:17.640–02:18.886
+  start_s=137.640250000000; end_s=138.885916666667; duration_s=1.245666666667; PCM24k=3303366..3333261
+three hundred sixty-one
+  結果確定=137.520250000000s (02:17.520); 読み終わり138.885916666667s後に進捗20/101へ。
+
+E020 [formula_prefix] / n=20, value=400  02:20.886–02:22.383
+  start_s=140.885916666667; end_s=142.383375000000; duration_s=1.497458333333; PCM24k=3381262..3417200
+twenty times twenty equals
+  式の連動: times=141.185916666667s / 第2因数=141.510916666667s / equals=141.905916666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N020 [count] / n=20, value=400  02:22.543–02:23.324
+  start_s=142.543375000000; end_s=143.324333333333; duration_s=0.780958333333; PCM24k=3421041..3439783
+four hundred
+  結果確定=142.423375000000s (02:22.423); 読み終わり143.324333333333s後に進捗21/101へ。
+
+E021 [formula_prefix] / n=21, value=441  02:25.324–02:27.386
+  start_s=145.324333333333; end_s=147.385791666667; duration_s=2.061458333333; PCM24k=3487784..3537258
+twenty-one times twenty-one equals
+  式の連動: times=145.944333333333s / 第2因数=146.269333333333s / equals=146.904333333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N021 [count] / n=21, value=441  02:27.546–02:28.879
+  start_s=147.545791666667; end_s=148.879000000000; duration_s=1.333208333333; PCM24k=3541099..3573095
+four hundred forty-one
+  結果確定=147.425791666667s (02:27.426); 読み終わり148.879000000000s後に進捗22/101へ。
+
+E022 [formula_prefix] / n=22, value=484  02:30.879–02:32.788
+  start_s=150.879000000000; end_s=152.787833333333; duration_s=1.908833333333; PCM24k=3621096..3666907
+twenty-two times twenty-two equals
+  式の連動: times=151.359000000000s / 第2因数=151.704000000000s / equals=152.319000000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N022 [count] / n=22, value=484  02:32.948–02:34.319
+  start_s=152.947833333333; end_s=154.318583333333; duration_s=1.370750000000; PCM24k=3670748..3703645
+four hundred eighty-four
+  結果確定=152.827833333333s (02:32.828); 読み終わり154.318583333333s後に進捗23/101へ。
+
+E023 [formula_prefix] / n=23, value=529  02:36.319–02:38.388
+  start_s=156.318583333333; end_s=158.388041666667; duration_s=2.069458333333; PCM24k=3751646..3801312
+twenty-three times twenty-three equals
+  式の連動: times=156.798583333333s / 第2因数=157.223583333333s / equals=157.898583333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N023 [count] / n=23, value=529  02:38.548–02:39.918
+  start_s=158.548041666667; end_s=159.918166666667; duration_s=1.370125000000; PCM24k=3805153..3838035
+five hundred twenty-nine
+  結果確定=158.428041666667s (02:38.428); 読み終わり159.918166666667s後に進捗24/101へ。
+
+E024 [formula_prefix] / n=24, value=576  02:41.918–02:44.012
+  start_s=161.918166666667; end_s=164.012208333333; duration_s=2.094041666667; PCM24k=3886036..3936292
+twenty-four times twenty-four equals
+  式の連動: times=162.578166666667s / 第2因数=162.903166666667s / equals=163.518166666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N024 [count] / n=24, value=576  02:44.172–02:45.665
+  start_s=164.172208333333; end_s=165.665333333333; duration_s=1.493125000000; PCM24k=3940133..3975967
+five hundred seventy-six
+  結果確定=164.052208333333s (02:44.052); 読み終わり165.665333333333s後に進捗25/101へ。
+
+E025 [formula_prefix] / n=25, value=625  02:47.665–02:49.752
+  start_s=167.665333333333; end_s=169.751541666667; duration_s=2.086208333333; PCM24k=4023968..4074036
+twenty-five times twenty-five equals
+  式の連動: times=168.265333333333s / 第2因数=168.590333333333s / equals=169.265333333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N025 [count] / n=25, value=625  02:49.912–02:51.252
+  start_s=169.911541666667; end_s=171.252250000000; duration_s=1.340708333333; PCM24k=4077877..4110053
+six hundred twenty-five
+  結果確定=169.791541666667s (02:49.792); 読み終わり171.252250000000s後に進捗26/101へ。
+
+E026 [formula_prefix] / n=26, value=676  02:53.252–02:55.327
+  start_s=173.252250000000; end_s=175.327125000000; duration_s=2.074875000000; PCM24k=4158054..4207850
+twenty-six times twenty-six equals
+  式の連動: times=173.832250000000s / 第2因数=174.177250000000s / equals=174.852250000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N026 [count] / n=26, value=676  02:55.487–02:56.970
+  start_s=175.487125000000; end_s=176.969541666667; duration_s=1.482416666667; PCM24k=4211691..4247268
+six hundred seventy-six
+  結果確定=175.367125000000s (02:55.367); 読み終わり176.969541666667s後に進捗27/101へ。
+
+E027 [formula_prefix] / n=27, value=729  02:58.970–03:01.240
+  start_s=178.969541666667; end_s=181.239875000000; duration_s=2.270333333333; PCM24k=4295269..4349756
+twenty-seven times twenty-seven equals
+  式の連動: times=179.589541666667s / 第2因数=180.034541666667s / equals=180.769541666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N027 [count] / n=27, value=729  03:01.400–03:02.854
+  start_s=181.399875000000; end_s=182.854041666667; duration_s=1.454166666667; PCM24k=4353597..4388496
+seven hundred twenty-nine
+  結果確定=181.279875000000s (03:01.280); 読み終わり182.854041666667s後に進捗28/101へ。
+
+E028 [formula_prefix] / n=28, value=784  03:04.854–03:06.794
+  start_s=184.854041666667; end_s=186.794125000000; duration_s=1.940083333333; PCM24k=4436497..4483058
+twenty-eight times twenty-eight equals
+  式の連動: times=185.294041666667s / 第2因数=185.679041666667s / equals=186.294041666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N028 [count] / n=28, value=784  03:06.954–03:08.390
+  start_s=186.954125000000; end_s=188.389791666667; duration_s=1.435666666667; PCM24k=4486899..4521354
+seven hundred eighty-four
+  結果確定=186.834125000000s (03:06.834); 読み終わり188.389791666667s後に進捗29/101へ。
+
+E029 [formula_prefix] / n=29, value=841  03:10.390–03:12.576
+  start_s=190.389791666667; end_s=192.576458333333; duration_s=2.186666666667; PCM24k=4569355..4621834
+twenty-nine times twenty-nine equals
+  式の連動: times=190.909791666667s / 第2因数=191.334791666667s / equals=192.089791666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N029 [count] / n=29, value=841  03:12.736–03:13.967
+  start_s=192.736458333333; end_s=193.966958333333; duration_s=1.230500000000; PCM24k=4625675..4655206
+eight hundred forty-one
+  結果確定=192.616458333333s (03:12.616); 読み終わり193.966958333333s後に進捗30/101へ。
+
+E030 [formula_prefix] / n=30, value=900  03:15.967–03:17.565
+  start_s=195.966958333333; end_s=197.564708333333; duration_s=1.597750000000; PCM24k=4703207..4741552
+thirty times thirty equals
+  式の連動: times=196.306958333333s / 第2因数=196.631958333333s / equals=197.066958333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N030 [count] / n=30, value=900  03:17.725–03:18.579
+  start_s=197.724708333333; end_s=198.579125000000; duration_s=0.854416666667; PCM24k=4745393..4765898
+nine hundred
+  結果確定=197.604708333333s (03:17.605); 読み終わり198.579125000000s後に進捗31/101へ。
+
+E031 [formula_prefix] / n=31, value=961  03:20.579–03:22.659
+  start_s=200.579125000000; end_s=202.659458333333; duration_s=2.080333333333; PCM24k=4813899..4863826
+thirty-one times thirty-one equals
+  式の連動: times=201.159125000000s / 第2因数=201.504125000000s / equals=202.179125000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N031 [count] / n=31, value=961  03:22.819–03:24.186
+  start_s=202.819458333333; end_s=204.185583333333; duration_s=1.366125000000; PCM24k=4867667..4900453
+nine hundred sixty-one
+  結果確定=202.699458333333s (03:22.699); 読み終わり204.185583333333s後に進捗32/101へ。
+
+E032 [formula_prefix] / n=32, value=1024  03:26.186–03:28.092
+  start_s=206.185583333333; end_s=208.092083333333; duration_s=1.906500000000; PCM24k=4948454..4994209
+thirty-two times thirty-two equals
+  式の連動: times=206.645583333333s / 第2因数=206.970583333333s / equals=207.605583333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N032 [count] / n=32, value=1024  03:28.252–03:29.608
+  start_s=208.252083333333; end_s=209.607583333333; duration_s=1.355500000000; PCM24k=4998050..5030581
+one thousand twenty-four
+  結果確定=208.132083333333s (03:28.132); 読み終わり209.607583333333s後に進捗33/101へ。
+
+T032 [explanation] / n=32, value=1024  03:30.008–03:36.125
+  start_s=210.007583333333; end_s=216.124625000000; duration_s=6.117041666667; PCM24k=5040182..5186990
+Our square numbers have passed one thousand. Thirty-one squared is below it; thirty-two squared is above it.
+  説明中は進捗33/101を保持。追加カウントにしない。
+
+E033 [formula_prefix] / n=33, value=1089  03:38.125–03:39.996
+  start_s=218.124625000000; end_s=219.995791666667; duration_s=1.871166666667; PCM24k=5234991..5279898
+thirty-three times thirty-three equals
+  式の連動: times=218.584625000000s / 第2因数=218.909625000000s / equals=219.504625000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N033 [count] / n=33, value=1089  03:40.156–03:41.501
+  start_s=220.155791666667; end_s=221.500625000000; duration_s=1.344833333333; PCM24k=5283739..5316014
+one thousand eighty-nine
+  結果確定=220.035791666667s (03:40.036); 読み終わり221.500625000000s後に進捗34/101へ。
+
+E034 [formula_prefix] / n=34, value=1156  03:43.501–03:45.516
+  start_s=223.500625000000; end_s=225.515875000000; duration_s=2.015250000000; PCM24k=5364015..5412380
+thirty-four times thirty-four equals
+  式の連動: times=224.040625000000s / 第2因数=224.365625000000s / equals=225.020625000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N034 [count] / n=34, value=1156  03:45.676–03:47.629
+  start_s=225.675875000000; end_s=227.628875000000; duration_s=1.953000000000; PCM24k=5416221..5463092
+one thousand one hundred fifty-six
+  結果確定=225.555875000000s (03:45.556); 読み終わり227.628875000000s後に進捗35/101へ。
+
+E035 [formula_prefix] / n=35, value=1225  03:49.629–03:51.712
+  start_s=229.628875000000; end_s=231.712333333333; duration_s=2.083458333333; PCM24k=5511093..5561095
+thirty-five times thirty-five equals
+  式の連動: times=230.208875000000s / 第2因数=230.533875000000s / equals=231.228875000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N035 [count] / n=35, value=1225  03:51.872–03:53.771
+  start_s=231.872333333333; end_s=233.770750000000; duration_s=1.898416666667; PCM24k=5564936..5610497
+one thousand two hundred twenty-five
+  結果確定=231.752333333333s (03:51.752); 読み終わり233.770750000000s後に進捗36/101へ。
+
+E036 [formula_prefix] / n=36, value=1296  03:55.771–03:57.719
+  start_s=235.770750000000; end_s=237.719208333333; duration_s=1.948458333333; PCM24k=5658498..5705260
+thirty-six times thirty-six equals
+  式の連動: times=236.310750000000s / 第2因数=236.635750000000s / equals=237.250750000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N036 [count] / n=36, value=1296  03:57.879–03:59.829
+  start_s=237.879208333333; end_s=239.829291666667; duration_s=1.950083333333; PCM24k=5709101..5755902
+one thousand two hundred ninety-six
+  結果確定=237.759208333333s (03:57.759); 読み終わり239.829291666667s後に進捗37/101へ。
+
+E037 [formula_prefix] / n=37, value=1369  04:01.829–04:04.014
+  start_s=241.829291666667; end_s=244.014041666667; duration_s=2.184750000000; PCM24k=5803903..5856336
+thirty-seven times thirty-seven equals
+  式の連動: times=242.409291666667s / 第2因数=242.754291666667s / equals=243.529291666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N037 [count] / n=37, value=1369  04:04.174–04:06.088
+  start_s=244.174041666667; end_s=246.088083333333; duration_s=1.914041666667; PCM24k=5860177..5906113
+one thousand three hundred sixty-nine
+  結果確定=244.054041666667s (04:04.054); 読み終わり246.088083333333s後に進捗38/101へ。
+
+E038 [formula_prefix] / n=38, value=1444  04:08.088–04:10.019
+  start_s=248.088083333333; end_s=250.019000000000; duration_s=1.930916666667; PCM24k=5954114..6000455
+thirty-eight times thirty-eight equals
+  式の連動: times=248.648083333333s / 第2因数=248.973083333333s / equals=249.528083333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N038 [count] / n=38, value=1444  04:10.179–04:12.146
+  start_s=250.179000000000; end_s=252.146083333333; duration_s=1.967083333333; PCM24k=6004296..6051505
+one thousand four hundred forty-four
+  結果確定=250.059000000000s (04:10.059); 読み終わり252.146083333333s後に進捗39/101へ。
+
+E039 [formula_prefix] / n=39, value=1521  04:14.146–04:16.263
+  start_s=254.146083333333; end_s=256.262875000000; duration_s=2.116791666667; PCM24k=6099506..6150308
+thirty-nine times thirty-nine equals
+  式の連動: times=254.726083333333s / 第2因数=255.051083333333s / equals=255.766083333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N039 [count] / n=39, value=1521  04:16.423–04:18.365
+  start_s=256.422875000000; end_s=258.365250000000; duration_s=1.942375000000; PCM24k=6154149..6200765
+one thousand five hundred twenty-one
+  結果確定=256.302875000000s (04:16.303); 読み終わり258.365250000000s後に進捗40/101へ。
+
+E040 [formula_prefix] / n=40, value=1600  04:20.365–04:21.900
+  start_s=260.365250000000; end_s=261.899666666667; duration_s=1.534416666667; PCM24k=6248766..6285591
+forty times forty equals
+  式の連動: times=260.725250000000s / 第2因数=261.050250000000s / equals=261.405250000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N040 [count] / n=40, value=1600  04:22.060–04:23.349
+  start_s=262.059666666667; end_s=263.349250000000; duration_s=1.289583333333; PCM24k=6289432..6320381
+one thousand six hundred
+  結果確定=261.939666666667s (04:21.940); 読み終わり263.349250000000s後に進捗41/101へ。
+
+E041 [formula_prefix] / n=41, value=1681  04:25.349–04:27.438
+  start_s=265.349250000000; end_s=267.438250000000; duration_s=2.089000000000; PCM24k=6368382..6418517
+forty-one times forty-one equals
+  式の連動: times=265.929250000000s / 第2因数=266.274250000000s / equals=266.949250000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N041 [count] / n=41, value=1681  04:27.598–04:29.489
+  start_s=267.598250000000; end_s=269.488541666667; duration_s=1.890291666667; PCM24k=6422358..6467724
+one thousand six hundred eighty-one
+  結果確定=267.478250000000s (04:27.478); 読み終わり269.488541666667s後に進捗42/101へ。
+
+E042 [formula_prefix] / n=42, value=1764  04:31.489–04:33.475
+  start_s=271.488541666667; end_s=273.475083333333; duration_s=1.986541666667; PCM24k=6515725..6563401
+forty-two times forty-two equals
+  式の連動: times=272.008541666667s / 第2因数=272.373541666667s / equals=272.988541666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N042 [count] / n=42, value=1764  04:33.635–04:35.720
+  start_s=273.635083333333; end_s=275.719750000000; duration_s=2.084666666667; PCM24k=6567242..6617273
+one thousand seven hundred sixty-four
+  結果確定=273.515083333333s (04:33.515); 読み終わり275.719750000000s後に進捗43/101へ。
+
+E043 [formula_prefix] / n=43, value=1849  04:37.720–04:39.667
+  start_s=277.719750000000; end_s=279.667458333333; duration_s=1.947708333333; PCM24k=6665274..6712018
+forty-three times forty-three equals
+  式の連動: times=278.259750000000s / 第2因数=278.584750000000s / equals=279.199750000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N043 [count] / n=43, value=1849  04:39.827–04:41.850
+  start_s=279.827458333333; end_s=281.850166666667; duration_s=2.022708333333; PCM24k=6715859..6764403
+one thousand eight hundred forty-nine
+  結果確定=279.707458333333s (04:39.707); 読み終わり281.850166666667s後に進捗44/101へ。
+
+E044 [formula_prefix] / n=44, value=1936  04:43.850–04:45.906
+  start_s=283.850166666667; end_s=285.905666666667; duration_s=2.055500000000; PCM24k=6812404..6861735
+forty-four times forty-four equals
+  式の連動: times=284.450166666667s / 第2因数=284.775166666667s / equals=285.430166666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N044 [count] / n=44, value=1936  04:46.066–04:48.036
+  start_s=286.065666666667; end_s=288.036208333333; duration_s=1.970541666667; PCM24k=6865576..6912868
+one thousand nine hundred thirty-six
+  結果確定=285.945666666667s (04:45.946); 読み終わり288.036208333333s後に進捗45/101へ。
+
+E045 [formula_prefix] / n=45, value=2025  04:50.036–04:52.167
+  start_s=290.036208333333; end_s=292.166708333333; duration_s=2.130500000000; PCM24k=6960869..7012000
+forty-five times forty-five equals
+  式の連動: times=290.656208333333s / 第2因数=290.981208333333s / equals=291.696208333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N045 [count] / n=45, value=2025  04:52.327–04:53.662
+  start_s=292.326708333333; end_s=293.662375000000; duration_s=1.335666666667; PCM24k=7015841..7047896
+two thousand twenty-five
+  結果確定=292.206708333333s (04:52.207); 読み終わり293.662375000000s後に進捗46/101へ。
+
+E046 [formula_prefix] / n=46, value=2116  04:55.662–04:57.725
+  start_s=295.662375000000; end_s=297.724583333333; duration_s=2.062208333333; PCM24k=7095897..7145389
+forty-six times forty-six equals
+  式の連動: times=296.242375000000s / 第2因数=296.567375000000s / equals=297.262375000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N046 [count] / n=46, value=2116  04:57.885–04:59.546
+  start_s=297.884583333333; end_s=299.545583333333; duration_s=1.661000000000; PCM24k=7149230..7189093
+two thousand one hundred sixteen
+  結果確定=297.764583333333s (04:57.765); 読み終わり299.545583333333s後に進捗47/101へ。
+
+E047 [formula_prefix] / n=47, value=2209  05:01.546–05:03.945
+  start_s=301.545583333333; end_s=303.945041666667; duration_s=2.399458333333; PCM24k=7237094..7294680
+forty-seven times forty-seven equals
+  式の連動: times=302.185583333333s / 第2因数=302.610583333333s / equals=303.465583333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N047 [count] / n=47, value=2209  05:04.105–05:05.628
+  start_s=304.105041666667; end_s=305.628166666667; duration_s=1.523125000000; PCM24k=7298521..7335075
+two thousand two hundred nine
+  結果確定=303.985041666667s (05:03.985); 読み終わり305.628166666667s後に進捗48/101へ。
+
+E048 [formula_prefix] / n=48, value=2304  05:07.628–05:09.479
+  start_s=307.628166666667; end_s=309.478666666667; duration_s=1.850500000000; PCM24k=7383076..7427487
+forty-eight times forty-eight equals
+  式の連動: times=308.088166666667s / 第2因数=308.453166666667s / equals=309.008166666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N048 [count] / n=48, value=2304  05:09.639–05:11.232
+  start_s=309.638666666667; end_s=311.232000000000; duration_s=1.593333333333; PCM24k=7431328..7469567
+two thousand three hundred four
+  結果確定=309.518666666667s (05:09.519); 読み終わり311.232000000000s後に進捗49/101へ。
+
+E049 [formula_prefix] / n=49, value=2401  05:13.232–05:15.303
+  start_s=313.232000000000; end_s=315.302833333333; duration_s=2.070833333333; PCM24k=7517568..7567267
+forty-nine times forty-nine equals
+  式の連動: times=313.812000000000s / 第2因数=314.177000000000s / equals=314.832000000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N049 [count] / n=49, value=2401  05:15.463–05:17.022
+  start_s=315.462833333333; end_s=317.021583333333; duration_s=1.558750000000; PCM24k=7571108..7608517
+two thousand four hundred one
+  結果確定=315.342833333333s (05:15.343); 読み終わり317.021583333333s後に進捗50/101へ。
+
+E050 [formula_prefix] / n=50, value=2500  05:19.022–05:20.553
+  start_s=319.021583333333; end_s=320.552583333333; duration_s=1.531000000000; PCM24k=7656518..7693261
+fifty times fifty equals
+  式の連動: times=319.361583333333s / 第2因数=319.686583333333s / equals=320.061583333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N050 [count] / n=50, value=2500  05:20.713–05:22.059
+  start_s=320.712583333333; end_s=322.058625000000; duration_s=1.346041666667; PCM24k=7697102..7729406
+two thousand five hundred
+  結果確定=320.592583333333s (05:20.593); 読み終わり322.058625000000s後に進捗51/101へ。
+
+E051 [formula_prefix] / n=51, value=2601  05:24.059–05:26.009
+  start_s=324.058625000000; end_s=326.009125000000; duration_s=1.950500000000; PCM24k=7777407..7824218
+fifty-one times fifty-one equals
+  式の連動: times=324.598625000000s / 第2因数=324.923625000000s / equals=325.538625000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N051 [count] / n=51, value=2601  05:26.169–05:27.657
+  start_s=326.169125000000; end_s=327.657208333333; duration_s=1.488083333333; PCM24k=7828059..7863772
+two thousand six hundred one
+  結果確定=326.049125000000s (05:26.049); 読み終わり327.657208333333s後に進捗52/101へ。
+
+E052 [formula_prefix] / n=52, value=2704  05:29.657–05:31.581
+  start_s=329.657208333333; end_s=331.580625000000; duration_s=1.923416666667; PCM24k=7911773..7957934
+fifty-two times fifty-two equals
+  式の連動: times=330.197208333333s / 第2因数=330.522208333333s / equals=331.097208333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N052 [count] / n=52, value=2704  05:31.741–05:33.403
+  start_s=331.740625000000; end_s=333.402541666667; duration_s=1.661916666667; PCM24k=7961775..8001660
+two thousand seven hundred four
+  結果確定=331.620625000000s (05:31.621); 読み終わり333.402541666667s後に進捗53/101へ。
+
+E053 [formula_prefix] / n=53, value=2809  05:35.403–05:37.304
+  start_s=335.402541666667; end_s=337.303916666667; duration_s=1.901375000000; PCM24k=8049661..8095293
+fifty-three times fifty-three equals
+  式の連動: times=335.922541666667s / 第2因数=336.247541666667s / equals=336.822541666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N053 [count] / n=53, value=2809  05:37.464–05:38.961
+  start_s=337.463916666667; end_s=338.960833333333; duration_s=1.496916666667; PCM24k=8099134..8135059
+two thousand eight hundred nine
+  結果確定=337.343916666667s (05:37.344); 読み終わり338.960833333333s後に進捗54/101へ。
+
+E054 [formula_prefix] / n=54, value=2916  05:40.961–05:42.960
+  start_s=340.960833333333; end_s=342.960166666667; duration_s=1.999333333333; PCM24k=8183060..8231043
+fifty-four times fifty-four equals
+  式の連動: times=341.520833333333s / 第2因数=341.845833333333s / equals=342.480833333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N054 [count] / n=54, value=2916  05:43.120–05:44.855
+  start_s=343.120166666667; end_s=344.855166666667; duration_s=1.735000000000; PCM24k=8234884..8276523
+two thousand nine hundred sixteen
+  結果確定=343.000166666667s (05:43.000); 読み終わり344.855166666667s後に進捗55/101へ。
+
+E055 [formula_prefix] / n=55, value=3025  05:46.855–05:48.927
+  start_s=346.855166666667; end_s=348.927375000000; duration_s=2.072208333333; PCM24k=8324524..8374256
+fifty-five times fifty-five equals
+  式の連動: times=347.455166666667s / 第2因数=347.800166666667s / equals=348.455166666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N055 [count] / n=55, value=3025  05:49.087–05:50.446
+  start_s=349.087375000000; end_s=350.445958333333; duration_s=1.358583333333; PCM24k=8378097..8410702
+three thousand twenty-five
+  結果確定=348.967375000000s (05:48.967); 読み終わり350.445958333333s後に進捗56/101へ。
+
+E056 [formula_prefix] / n=56, value=3136  05:52.446–05:54.504
+  start_s=352.445958333333; end_s=354.503625000000; duration_s=2.057666666667; PCM24k=8458703..8508086
+fifty-six times fifty-six equals
+  式の連動: times=353.045958333333s / 第2因数=353.370958333333s / equals=354.045958333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N056 [count] / n=56, value=3136  05:54.664–05:56.596
+  start_s=354.663625000000; end_s=356.596458333333; duration_s=1.932833333333; PCM24k=8511927..8558314
+three thousand one hundred thirty-six
+  結果確定=354.543625000000s (05:54.544); 読み終わり356.596458333333s後に進捗57/101へ。
+
+E057 [formula_prefix] / n=57, value=3249  05:58.596–06:00.882
+  start_s=358.596458333333; end_s=360.882291666667; duration_s=2.285833333333; PCM24k=8606315..8661174
+fifty-seven times fifty-seven equals
+  式の連動: times=359.216458333333s / 第2因数=359.621458333333s / equals=360.416458333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N057 [count] / n=57, value=3249  06:01.042–06:02.982
+  start_s=361.042291666667; end_s=362.982333333333; duration_s=1.940041666667; PCM24k=8665015..8711575
+three thousand two hundred forty-nine
+  結果確定=360.922291666667s (06:00.922); 読み終わり362.982333333333s後に進捗58/101へ。
+
+E058 [formula_prefix] / n=58, value=3364  06:04.982–06:06.932
+  start_s=364.982333333333; end_s=366.932166666667; duration_s=1.949833333333; PCM24k=8759576..8806371
+fifty-eight times fifty-eight equals
+  式の連動: times=365.442333333333s / 第2因数=365.827333333333s / equals=366.462333333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N058 [count] / n=58, value=3364  06:07.092–06:09.058
+  start_s=367.092166666667; end_s=369.057708333333; duration_s=1.965541666667; PCM24k=8810212..8857384
+three thousand three hundred sixty-four
+  結果確定=366.972166666667s (06:06.972); 読み終わり369.057708333333s後に進捗59/101へ。
+
+E059 [formula_prefix] / n=59, value=3481  06:11.058–06:13.083
+  start_s=371.057708333333; end_s=373.083208333333; duration_s=2.025500000000; PCM24k=8905385..8953996
+fifty-nine times fifty-nine equals
+  式の連動: times=371.637708333333s / 第2因数=371.962708333333s / equals=372.597708333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N059 [count] / n=59, value=3481  06:13.243–06:15.115
+  start_s=373.243208333333; end_s=375.114875000000; duration_s=1.871666666667; PCM24k=8957837..9002756
+three thousand four hundred eighty-one
+  結果確定=373.123208333333s (06:13.123); 読み終わり375.114875000000s後に進捗60/101へ。
+
+E060 [formula_prefix] / n=60, value=3600  06:17.115–06:18.779
+  start_s=377.114875000000; end_s=378.778958333333; duration_s=1.664083333333; PCM24k=9050757..9090694
+sixty times sixty equals
+  式の連動: times=377.534875000000s / 第2因数=377.859875000000s / equals=378.294875000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N060 [count] / n=60, value=3600  06:18.939–06:20.322
+  start_s=378.938958333333; end_s=380.322125000000; duration_s=1.383166666667; PCM24k=9094535..9127730
+three thousand six hundred
+  結果確定=378.818958333333s (06:18.819); 読み終わり380.322125000000s後に進捗61/101へ。
+
+E061 [formula_prefix] / n=61, value=3721  06:22.322–06:24.456
+  start_s=382.322125000000; end_s=384.456333333333; duration_s=2.134208333333; PCM24k=9175731..9226951
+sixty-one times sixty-one equals
+  式の連動: times=382.942125000000s / 第2因数=383.287125000000s / equals=383.982125000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N061 [count] / n=61, value=3721  06:24.616–06:26.623
+  start_s=384.616333333333; end_s=386.622625000000; duration_s=2.006291666667; PCM24k=9230792..9278942
+three thousand seven hundred twenty-one
+  結果確定=384.496333333333s (06:24.496); 読み終わり386.622625000000s後に進捗62/101へ。
+
+E062 [formula_prefix] / n=62, value=3844  06:28.623–06:30.609
+  start_s=388.622625000000; end_s=390.609458333333; duration_s=1.986833333333; PCM24k=9326943..9374626
+sixty-two times sixty-two equals
+  式の連動: times=389.202625000000s / 第2因数=389.547625000000s / equals=390.142625000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N062 [count] / n=62, value=3844  06:30.769–06:32.682
+  start_s=390.769458333333; end_s=392.681583333333; duration_s=1.912125000000; PCM24k=9378467..9424357
+three thousand eight hundred forty-four
+  結果確定=390.649458333333s (06:30.649); 読み終わり392.681583333333s後に進捗63/101へ。
+
+E063 [formula_prefix] / n=63, value=3969  06:34.682–06:36.754
+  start_s=394.681583333333; end_s=396.753791666667; duration_s=2.072208333333; PCM24k=9472358..9522090
+sixty-three times sixty-three equals
+  式の連動: times=395.281583333333s / 第2因数=395.606583333333s / equals=396.301583333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N063 [count] / n=63, value=3969  06:36.914–06:38.775
+  start_s=396.913791666667; end_s=398.775458333333; duration_s=1.861666666667; PCM24k=9525931..9570610
+three thousand nine hundred sixty-nine
+  結果確定=396.793791666667s (06:36.794); 読み終わり398.775458333333s後に進捗64/101へ。
+
+E064 [formula_prefix] / n=64, value=4096  06:40.775–06:42.890
+  start_s=400.775458333333; end_s=402.889583333333; duration_s=2.114125000000; PCM24k=9618611..9669349
+sixty-four times sixty-four equals
+  式の連動: times=401.395458333333s / 第2因数=401.720458333333s / equals=402.415458333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N064 [count] / n=64, value=4096  06:43.050–06:44.500
+  start_s=403.049583333333; end_s=404.500291666667; duration_s=1.450708333333; PCM24k=9673190..9708006
+four thousand ninety-six
+  結果確定=402.929583333333s (06:42.930); 読み終わり404.500291666667s後に進捗65/101へ。
+
+E065 [formula_prefix] / n=65, value=4225  06:46.500–06:48.713
+  start_s=406.500291666667; end_s=408.712958333333; duration_s=2.212666666667; PCM24k=9756007..9809110
+sixty-five times sixty-five equals
+  式の連動: times=407.160291666667s / 第2因数=407.505291666667s / equals=408.240291666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N065 [count] / n=65, value=4225  06:48.873–06:50.772
+  start_s=408.872958333333; end_s=410.771666666667; duration_s=1.898708333333; PCM24k=9812951..9858519
+four thousand two hundred twenty-five
+  結果確定=408.752958333333s (06:48.753); 読み終わり410.771666666667s後に進捗66/101へ。
+
+E066 [formula_prefix] / n=66, value=4356  06:52.772–06:54.931
+  start_s=412.771666666667; end_s=414.931291666667; duration_s=2.159625000000; PCM24k=9906520..9958350
+sixty-six times sixty-six equals
+  式の連動: times=413.451666666667s / 第2因数=413.796666666667s / equals=414.471666666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N066 [count] / n=66, value=4356  06:55.091–06:57.114
+  start_s=415.091291666667; end_s=417.114000000000; duration_s=2.022708333333; PCM24k=9962191..10010735
+four thousand three hundred fifty-six
+  結果確定=414.971291666667s (06:54.971); 読み終わり417.114000000000s後に進捗67/101へ。
+
+E067 [formula_prefix] / n=67, value=4489  06:59.114–07:01.445
+  start_s=419.114000000000; end_s=421.444583333333; duration_s=2.330583333333; PCM24k=10058736..10114669
+sixty-seven times sixty-seven equals
+  式の連動: times=419.834000000000s / 第2因数=420.179000000000s / equals=420.974000000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N067 [count] / n=67, value=4489  07:01.605–07:03.467
+  start_s=421.604583333333; end_s=423.467458333333; duration_s=1.862875000000; PCM24k=10118510..10163218
+four thousand four hundred eighty-nine
+  結果確定=421.484583333333s (07:01.485); 読み終わり423.467458333333s後に進捗68/101へ。
+
+E068 [formula_prefix] / n=68, value=4624  07:05.467–07:07.388
+  start_s=425.467458333333; end_s=427.388166666667; duration_s=1.920708333333; PCM24k=10211219..10257315
+sixty-eight times sixty-eight equals
+  式の連動: times=425.967458333333s / 第2因数=426.292458333333s / equals=426.927458333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N068 [count] / n=68, value=4624  07:07.548–07:09.537
+  start_s=427.548166666667; end_s=429.537250000000; duration_s=1.989083333333; PCM24k=10261156..10308893
+four thousand six hundred twenty-four
+  結果確定=427.428166666667s (07:07.428); 読み終わり429.537250000000s後に進捗69/101へ。
+
+E069 [formula_prefix] / n=69, value=4761  07:11.537–07:13.875
+  start_s=431.537250000000; end_s=433.874541666667; duration_s=2.337291666667; PCM24k=10356894..10412988
+sixty-nine times sixty-nine equals
+  式の連動: times=432.157250000000s / 第2因数=432.542250000000s / equals=433.417250000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N069 [count] / n=69, value=4761  07:14.035–07:16.022
+  start_s=434.034541666667; end_s=436.021958333333; duration_s=1.987416666667; PCM24k=10416829..10464526
+four thousand seven hundred sixty-one
+  結果確定=433.914541666667s (07:13.915); 読み終わり436.021958333333s後に進捗70/101へ。
+
+E070 [formula_prefix] / n=70, value=4900  07:18.022–07:19.662
+  start_s=438.021958333333; end_s=439.662416666667; duration_s=1.640458333333; PCM24k=10512527..10551897
+seventy times seventy equals
+  式の連動: times=438.441958333333s / 第2因数=438.786958333333s / equals=439.181958333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N070 [count] / n=70, value=4900  07:19.822–07:21.212
+  start_s=439.822416666667; end_s=441.212000000000; duration_s=1.389583333333; PCM24k=10555738..10589087
+four thousand nine hundred
+  結果確定=439.702416666667s (07:19.702); 読み終わり441.212000000000s後に進捗71/101へ。
+
+E071 [formula_prefix] / n=71, value=5041  07:23.212–07:25.521
+  start_s=443.212000000000; end_s=445.520875000000; duration_s=2.308875000000; PCM24k=10637088..10692500
+seventy-one times seventy-one equals
+  式の連動: times=443.932000000000s / 第2因数=444.297000000000s / equals=445.052000000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N071 [count] / n=71, value=5041  07:25.681–07:27.033
+  start_s=445.680875000000; end_s=447.032833333333; duration_s=1.351958333333; PCM24k=10696341..10728787
+five thousand forty-one
+  結果確定=445.560875000000s (07:25.561); 読み終わり447.032833333333s後に進捗72/101へ。
+
+E072 [formula_prefix] / n=72, value=5184  07:29.033–07:31.254
+  start_s=449.032833333333; end_s=451.253833333333; duration_s=2.221000000000; PCM24k=10776788..10830091
+seventy-two times seventy-two equals
+  式の連動: times=449.712833333333s / 第2因数=450.077833333333s / equals=450.792833333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N072 [count] / n=72, value=5184  07:31.414–07:33.427
+  start_s=451.413833333333; end_s=453.426833333333; duration_s=2.013000000000; PCM24k=10833932..10882243
+five thousand one hundred eighty-four
+  結果確定=451.293833333333s (07:31.294); 読み終わり453.426833333333s後に進捗73/101へ。
+
+E073 [formula_prefix] / n=73, value=5329  07:35.427–07:37.790
+  start_s=455.426833333333; end_s=457.790500000000; duration_s=2.363666666667; PCM24k=10930244..10986971
+seventy-three times seventy-three equals
+  式の連動: times=456.266833333333s / 第2因数=456.611833333333s / equals=457.326833333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N073 [count] / n=73, value=5329  07:37.950–07:39.870
+  start_s=457.950500000000; end_s=459.870083333333; duration_s=1.919583333333; PCM24k=10990812..11036881
+five thousand three hundred twenty-nine
+  結果確定=457.830500000000s (07:37.830); 読み終わり459.870083333333s後に進捗74/101へ。
+
+E074 [formula_prefix] / n=74, value=5476  07:41.870–07:44.106
+  start_s=461.870083333333; end_s=464.105708333333; duration_s=2.235625000000; PCM24k=11084882..11138536
+seventy-four times seventy-four equals
+  式の連動: times=462.570083333333s / 第2因数=462.915083333333s / equals=463.630083333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N074 [count] / n=74, value=5476  07:44.266–07:46.388
+  start_s=464.265708333333; end_s=466.388333333333; duration_s=2.122625000000; PCM24k=11142377..11193319
+five thousand four hundred seventy-six
+  結果確定=464.145708333333s (07:44.146); 読み終わり466.388333333333s後に進捗75/101へ。
+
+E075 [formula_prefix] / n=75, value=5625  07:48.388–07:50.928
+  start_s=468.388333333333; end_s=470.928083333333; duration_s=2.539750000000; PCM24k=11241320..11302273
+seventy-five times seventy-five equals
+  式の連動: times=469.068333333333s / 第2因数=469.493333333333s / equals=470.468333333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N075 [count] / n=75, value=5625  07:51.088–07:53.129
+  start_s=471.088083333333; end_s=473.128833333333; duration_s=2.040750000000; PCM24k=11306114..11355091
+five thousand six hundred twenty-five
+  結果確定=470.968083333333s (07:50.968); 読み終わり473.128833333333s後に進捗76/101へ。
+
+E076 [formula_prefix] / n=76, value=5776  07:55.129–07:57.456
+  start_s=475.128833333333; end_s=477.455750000000; duration_s=2.326916666667; PCM24k=11403092..11458937
+seventy-six times seventy-six equals
+  式の連動: times=475.868833333333s / 第2因数=476.193833333333s / equals=477.008833333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N076 [count] / n=76, value=5776  07:57.616–07:59.802
+  start_s=477.615750000000; end_s=479.801958333333; duration_s=2.186208333333; PCM24k=11462778..11515246
+five thousand seven hundred seventy-six
+  結果確定=477.495750000000s (07:57.496); 読み終わり479.801958333333s後に進捗77/101へ。
+
+E077 [formula_prefix] / n=77, value=5929  08:01.802–08:04.251
+  start_s=481.801958333333; end_s=484.250833333333; duration_s=2.448875000000; PCM24k=11563247..11622019
+seventy-seven times seventy-seven equals
+  式の連動: times=482.621958333333s / 第2因数=483.006958333333s / equals=483.801958333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N077 [count] / n=77, value=5929  08:04.411–08:06.344
+  start_s=484.410833333333; end_s=486.343791666667; duration_s=1.932958333333; PCM24k=11625860..11672250
+five thousand nine hundred twenty-nine
+  結果確定=484.290833333333s (08:04.291); 読み終わり486.343791666667s後に進捗78/101へ。
+
+E078 [formula_prefix] / n=78, value=6084  08:08.344–08:10.649
+  start_s=488.343791666667; end_s=490.649291666667; duration_s=2.305500000000; PCM24k=11720251..11775582
+seventy-eight times seventy-eight equals
+  式の連動: times=488.963791666667s / 第2因数=489.368791666667s / equals=490.183791666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N078 [count] / n=78, value=6084  08:10.809–08:12.204
+  start_s=490.809291666667; end_s=492.204291666667; duration_s=1.395000000000; PCM24k=11779423..11812902
+six thousand eighty-four
+  結果確定=490.689291666667s (08:10.689); 読み終わり492.204291666667s後に進捗79/101へ。
+
+E079 [formula_prefix] / n=79, value=6241  08:14.204–08:16.487
+  start_s=494.204291666667; end_s=496.486625000000; duration_s=2.282333333333; PCM24k=11860903..11915678
+seventy-nine times seventy-nine equals
+  式の連動: times=494.924291666667s / 第2因数=495.269291666667s / equals=496.024291666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N079 [count] / n=79, value=6241  08:16.647–08:18.444
+  start_s=496.646625000000; end_s=498.444250000000; duration_s=1.797625000000; PCM24k=11919519..11962661
+six thousand two hundred forty-one
+  結果確定=496.526625000000s (08:16.527); 読み終わり498.444250000000s後に進捗80/101へ。
+
+E080 [formula_prefix] / n=80, value=6400  08:20.444–08:22.005
+  start_s=500.444250000000; end_s=502.005125000000; duration_s=1.560875000000; PCM24k=12010662..12048122
+eighty times eighty equals
+  式の連動: times=500.764250000000s / 第2因数=501.089250000000s / equals=501.504250000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N080 [count] / n=80, value=6400  08:22.165–08:23.488
+  start_s=502.165125000000; end_s=503.487625000000; duration_s=1.322500000000; PCM24k=12051963..12083702
+six thousand four hundred
+  結果確定=502.045125000000s (08:22.045); 読み終わり503.487625000000s後に進捗81/101へ。
+
+E081 [formula_prefix] / n=81, value=6561  08:25.488–08:27.513
+  start_s=505.487625000000; end_s=507.512916666667; duration_s=2.025291666667; PCM24k=12131703..12180309
+eighty-one times eighty-one equals
+  式の連動: times=506.027625000000s / 第2因数=506.352625000000s / equals=507.007625000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N081 [count] / n=81, value=6561  08:27.673–08:29.596
+  start_s=507.672916666667; end_s=509.596125000000; duration_s=1.923208333333; PCM24k=12184150..12230306
+six thousand five hundred sixty-one
+  結果確定=507.552916666667s (08:27.553); 読み終わり509.596125000000s後に進捗82/101へ。
+
+E082 [formula_prefix] / n=82, value=6724  08:31.596–08:33.426
+  start_s=511.596125000000; end_s=513.425666666667; duration_s=1.829541666667; PCM24k=12278307..12322215
+eighty-two times eighty-two equals
+  式の連動: times=512.056125000000s / 第2因数=512.381125000000s / equals=512.936125000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N082 [count] / n=82, value=6724  08:33.586–08:35.614
+  start_s=513.585666666667; end_s=515.614166666667; duration_s=2.028500000000; PCM24k=12326056..12374739
+six thousand seven hundred twenty-four
+  結果確定=513.465666666667s (08:33.466); 読み終わり515.614166666667s後に進捗83/101へ。
+
+E083 [formula_prefix] / n=83, value=6889  08:37.614–08:39.515
+  start_s=517.614166666667; end_s=519.515375000000; duration_s=1.901208333333; PCM24k=12422740..12468368
+eighty-three times eighty-three equals
+  式の連動: times=518.114166666667s / 第2因数=518.419166666667s / equals=519.014166666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N083 [count] / n=83, value=6889  08:39.675–08:41.624
+  start_s=519.675375000000; end_s=521.623958333333; duration_s=1.948583333333; PCM24k=12472209..12518974
+six thousand eight hundred eighty-nine
+  結果確定=519.555375000000s (08:39.555); 読み終わり521.623958333333s後に進捗84/101へ。
+
+E084 [formula_prefix] / n=84, value=7056  08:43.624–08:45.640
+  start_s=523.623958333333; end_s=525.640375000000; duration_s=2.016416666667; PCM24k=12566975..12615368
+eighty-four times eighty-four equals
+  式の連動: times=524.183958333333s / 第2因数=524.508958333333s / equals=525.143958333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N084 [count] / n=84, value=7056  08:45.800–08:47.334
+  start_s=525.800375000000; end_s=527.334500000000; duration_s=1.534125000000; PCM24k=12619209..12656027
+seven thousand fifty-six
+  結果確定=525.680375000000s (08:45.680); 読み終わり527.334500000000s後に進捗85/101へ。
+
+E085 [formula_prefix] / n=85, value=7225  08:49.334–08:51.416
+  start_s=529.334500000000; end_s=531.416166666667; duration_s=2.081666666667; PCM24k=12704028..12753987
+eighty-five times eighty-five equals
+  式の連動: times=529.894500000000s / 第2因数=530.219500000000s / equals=530.934500000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N085 [count] / n=85, value=7225  08:51.576–08:53.657
+  start_s=531.576166666667; end_s=533.656833333333; duration_s=2.080666666667; PCM24k=12757828..12807763
+seven thousand two hundred twenty-five
+  結果確定=531.456166666667s (08:51.456); 読み終わり533.656833333333s後に進捗86/101へ。
+
+E086 [formula_prefix] / n=86, value=7396  08:55.657–08:57.602
+  start_s=535.656833333333; end_s=537.602041666667; duration_s=1.945208333333; PCM24k=12855764..12902448
+eighty-six times eighty-six equals
+  式の連動: times=536.176833333333s / 第2因数=536.501833333333s / equals=537.136833333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N086 [count] / n=86, value=7396  08:57.762–08:59.971
+  start_s=537.762041666667; end_s=539.971083333333; duration_s=2.209041666667; PCM24k=12906289..12959305
+seven thousand three hundred ninety-six
+  結果確定=537.642041666667s (08:57.642); 読み終わり539.971083333333s後に進捗87/101へ。
+
+E087 [formula_prefix] / n=87, value=7569  09:01.971–09:04.275
+  start_s=541.971083333333; end_s=544.275125000000; duration_s=2.304041666667; PCM24k=13007306..13062602
+eighty-seven times eighty-seven equals
+  式の連動: times=542.531083333333s / 第2因数=542.936083333333s / equals=543.791083333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N087 [count] / n=87, value=7569  09:04.435–09:06.533
+  start_s=544.435125000000; end_s=546.533291666667; duration_s=2.098166666667; PCM24k=13066443..13116798
+seven thousand five hundred sixty-nine
+  結果確定=544.315125000000s (09:04.315); 読み終わり546.533291666667s後に進捗88/101へ。
+
+E088 [formula_prefix] / n=88, value=7744  09:08.533–09:10.343
+  start_s=548.533291666667; end_s=550.343375000000; duration_s=1.810083333333; PCM24k=13164799..13208240
+eighty-eight times eighty-eight equals
+  式の連動: times=548.973291666667s / 第2因数=549.298291666667s / equals=549.853291666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N088 [count] / n=88, value=7744  09:10.503–09:12.803
+  start_s=550.503375000000; end_s=552.802833333333; duration_s=2.299458333333; PCM24k=13212081..13267267
+seven thousand seven hundred forty-four
+  結果確定=550.383375000000s (09:10.383); 読み終わり552.802833333333s後に進捗89/101へ。
+
+E089 [formula_prefix] / n=89, value=7921  09:14.803–09:16.917
+  start_s=554.802833333333; end_s=556.917125000000; duration_s=2.114291666667; PCM24k=13315268..13366010
+eighty-nine times eighty-nine equals
+  式の連動: times=555.402833333333s / 第2因数=555.727833333333s / equals=556.422833333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N089 [count] / n=89, value=7921  09:17.077–09:19.182
+  start_s=557.077125000000; end_s=559.181500000000; duration_s=2.104375000000; PCM24k=13369851..13420355
+seven thousand nine hundred twenty-one
+  結果確定=556.957125000000s (09:16.957); 読み終わり559.181500000000s後に進捗90/101へ。
+
+E090 [formula_prefix] / n=90, value=8100  09:21.182–09:22.794
+  start_s=561.181500000000; end_s=562.793875000000; duration_s=1.612375000000; PCM24k=13468356..13507052
+ninety times ninety equals
+  式の連動: times=561.521500000000s / 第2因数=561.866500000000s / equals=562.281500000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N090 [count] / n=90, value=8100  09:22.954–09:24.216
+  start_s=562.953875000000; end_s=564.216083333333; duration_s=1.262208333333; PCM24k=13510893..13541185
+eight thousand one hundred
+  結果確定=562.833875000000s (09:22.834); 読み終わり564.216083333333s後に進捗91/101へ。
+
+E091 [formula_prefix] / n=91, value=8281  09:26.216–09:28.324
+  start_s=566.216083333333; end_s=568.323541666667; duration_s=2.107458333333; PCM24k=13589186..13639764
+ninety-one times ninety-one equals
+  式の連動: times=566.816083333333s / 第2因数=567.141083333333s / equals=567.816083333333s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N091 [count] / n=91, value=8281  09:28.484–09:30.200
+  start_s=568.483541666667; end_s=570.200166666667; duration_s=1.716625000000; PCM24k=13643605..13684803
+eight thousand two hundred eighty-one
+  結果確定=568.363541666667s (09:28.364); 読み終わり570.200166666667s後に進捗92/101へ。
+
+E092 [formula_prefix] / n=92, value=8464  09:32.200–09:34.250
+  start_s=572.200166666667; end_s=574.249791666667; duration_s=2.049625000000; PCM24k=13732804..13781994
+ninety-two times ninety-two equals
+  式の連動: times=572.740166666667s / 第2因数=573.085166666667s / equals=573.760166666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N092 [count] / n=92, value=8464  09:34.410–09:36.303
+  start_s=574.409791666667; end_s=576.303125000000; duration_s=1.893333333333; PCM24k=13785835..13831274
+eight thousand four hundred sixty-four
+  結果確定=574.289791666667s (09:34.290); 読み終わり576.303125000000s後に進捗93/101へ。
+
+E093 [formula_prefix] / n=93, value=8649  09:38.303–09:40.419
+  start_s=578.303125000000; end_s=580.419250000000; duration_s=2.116125000000; PCM24k=13879275..13930061
+ninety-three times ninety-three equals
+  式の連動: times=578.883125000000s / 第2因数=579.208125000000s / equals=579.943125000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N093 [count] / n=93, value=8649  09:40.579–09:42.575
+  start_s=580.579250000000; end_s=582.575416666667; duration_s=1.996166666667; PCM24k=13933902..13981809
+eight thousand six hundred forty-nine
+  結果確定=580.459250000000s (09:40.459); 読み終わり582.575416666667s後に進捗94/101へ。
+
+E094 [formula_prefix] / n=94, value=8836  09:44.575–09:46.742
+  start_s=584.575416666667; end_s=586.741541666667; duration_s=2.166125000000; PCM24k=14029810..14081796
+ninety-four times ninety-four equals
+  式の連動: times=585.175416666667s / 第2因数=585.500416666667s / equals=586.255416666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N094 [count] / n=94, value=8836  09:46.902–09:48.766
+  start_s=586.901541666667; end_s=588.766375000000; duration_s=1.864833333333; PCM24k=14085637..14130392
+eight thousand eight hundred thirty-six
+  結果確定=586.781541666667s (09:46.782); 読み終わり588.766375000000s後に進捗95/101へ。
+
+E095 [formula_prefix] / n=95, value=9025  09:50.766–09:53.002
+  start_s=590.766375000000; end_s=593.002208333333; duration_s=2.235833333333; PCM24k=14178393..14232052
+ninety-five times ninety-five equals
+  式の連動: times=591.446375000000s / 第2因数=591.771375000000s / equals=592.526375000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N095 [count] / n=95, value=9025  09:53.162–09:54.616
+  start_s=593.162208333333; end_s=594.615625000000; duration_s=1.453416666667; PCM24k=14235893..14270774
+nine thousand twenty-five
+  結果確定=593.042208333333s (09:53.042); 読み終わり594.615625000000s後に進捗96/101へ。
+
+E096 [formula_prefix] / n=96, value=9216  09:56.616–09:58.766
+  start_s=596.615625000000; end_s=598.766166666667; duration_s=2.150541666667; PCM24k=14318775..14370387
+ninety-six times ninety-six equals
+  式の連動: times=597.275625000000s / 第2因数=597.600625000000s / equals=598.295625000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N096 [count] / n=96, value=9216  09:58.926–10:00.654
+  start_s=598.926166666667; end_s=600.653916666667; duration_s=1.727750000000; PCM24k=14374228..14415693
+nine thousand two hundred sixteen
+  結果確定=598.806166666667s (09:58.806); 読み終わり600.653916666667s後に進捗97/101へ。
+
+E097 [formula_prefix] / n=97, value=9409  10:02.654–10:05.216
+  start_s=602.653916666667; end_s=605.216333333333; duration_s=2.562416666667; PCM24k=14463694..14525191
+ninety-seven times ninety-seven equals
+  式の連動: times=603.333916666667s / 第2因数=603.738916666667s / equals=604.733916666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N097 [count] / n=97, value=9409  10:05.376–10:07.011
+  start_s=605.376333333333; end_s=607.010916666667; duration_s=1.634583333333; PCM24k=14529032..14568261
+nine thousand four hundred nine
+  結果確定=605.256333333333s (10:05.256); 読み終わり607.010916666667s後に進捗98/101へ。
+
+E098 [formula_prefix] / n=98, value=9604  10:09.011–10:11.004
+  start_s=609.010916666667; end_s=611.004416666667; duration_s=1.993500000000; PCM24k=14616262..14664105
+ninety-eight times ninety-eight equals
+  式の連動: times=609.510916666667s / 第2因数=609.835916666667s / equals=610.510916666667s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N098 [count] / n=98, value=9604  10:11.164–10:12.824
+  start_s=611.164416666667; end_s=612.824375000000; duration_s=1.659958333333; PCM24k=14667946..14707784
+nine thousand six hundred four
+  結果確定=611.044416666667s (10:11.044); 読み終わり612.824375000000s後に進捗99/101へ。
+
+E099 [formula_prefix] / n=99, value=9801  10:14.824–10:17.060
+  start_s=614.824375000000; end_s=617.060083333333; duration_s=2.235708333333; PCM24k=14755785..14809441
+ninety-nine times ninety-nine equals
+  式の連動: times=615.464375000000s / 第2因数=615.809375000000s / equals=616.584375000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N099 [count] / n=99, value=9801  10:17.220–10:18.828
+  start_s=617.220083333333; end_s=618.827500000000; duration_s=1.607416666667; PCM24k=14813282..14851859
+nine thousand eight hundred one
+  結果確定=617.100083333333s (10:17.100); 読み終わり618.827500000000s後に進捗100/101へ。
+
+E100 [formula_prefix] / n=100, value=10000  10:20.828–10:23.091
+  start_s=620.827500000000; end_s=623.091291666667; duration_s=2.263791666667; PCM24k=14899860..14954190
+one hundred times one hundred equals
+  式の連動: times=621.407500000000s / 第2因数=621.832500000000s / equals=622.607500000000s; independent CTC times/equals token sequences; approximate20ms timestamps
+
+N100 [count] / n=100, value=10000  10:23.251–10:24.073
+  start_s=623.251291666667; end_s=624.073458333333; duration_s=0.822166666667; PCM24k=14958031..14977762
+ten thousand
+  結果確定=623.131291666667s (10:23.131); 読み終わり624.073458333333s後に進捗101/101へ。
+
+T100 [explanation] / n=100, value=10000  10:24.673–10:33.927
+  start_s=624.673458333333; end_s=633.927250000000; duration_s=9.253791666667; PCM24k=14992163..15214253
+Now there are ten rows of ten blocks. Each block stands for a ten-by-ten square of one hundred tiles. One hundred blocks make ten thousand tiles.
+  説明中は進捗101/101を保持。追加カウントにしない。
+
+O01 [outro]  10:34.327–10:45.612
+  start_s=634.327250000000; end_s=645.612333333333; duration_s=11.285083333333; PCM24k=15223854..15494695
+We used each whole number from zero to one hundred, and multiplied it by itself. Those are square numbers! Different numbers, the same rule. Thanks for counting with us. See you next time!
+

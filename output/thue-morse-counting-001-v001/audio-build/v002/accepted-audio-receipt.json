@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "kind": "thue-morse-adopted-encoded-audio-acceptance",
+  "accepted": true,
+  "scope": "This immutable AAC, all283 actual AAC isolated utterances and independent whole-audio channel/silence/loudness QA. Final MP4 must copy AAC packets and verify packet bytes/PTS/DTS/duration/decoder initialization.",
+  "audio": {
+    "path": "output/thue-morse-counting-001-v001/audio-build/v002/accepted-audio.m4a",
+    "sha256": "99c5cef820fbb9abe1413722070b8c606faa3c43a130022724fa562dc068f59b"
+  },
+  "timeline": {
+    "path": "output/thue-morse-counting-001-v001/audio-build/v002/timeline.json",
+    "sha256": "612e282454e8574d69c195eb457502cea1c8bdf0f67b358237c950757aff937f"
+  },
+  "master": {
+    "path": "output/thue-morse-counting-001-v001/audio-build/v002/master.wav",
+    "sha256": "141b1f5dddff99682ca064f66fad4ad6751136b89cd63711d31c3ea0a25d9817"
+  },
+  "source_speech_gate": {
+    "path": "output/thue-morse-counting-001-v001/speech/speech-acceptance-v003.json",
+    "sha256": "2dda973b9152ac27f623649d1faf8f621ccb8796ac9ae42a8e5451e4bb28ce55"
+  },
+  "final_aac_speech_gate": {
+    "path": "output/thue-morse-counting-001-v001/audio-build/v002/final-aac-extraction-v001/speech-acceptance.json",
+    "sha256": "6c6b6ef76b95f3071d2c8b05002ab289d28bfa8a18ecc9af7575967221504bb2"
+  },
+  "waveform_silence_loudness": {
+    "path": "design/thue-morse-counting-v1/production-v001/qa/accepted-aac-v001/verification.json",
+    "sha256": "573f214ee0a55db1f4f99b9589f7f147aab86f3ee53ee696e242cf9306c91927"
+  },
+  "builder": {
+    "path": "tools/build_thue_morse_audio.py",
+    "sha256": "9f4791e9e7345a4215d9cf3d8e1aaaf782dbbb8f7e222df9a813dad196ba91f0"
+  },
+  "duration_s": 747.6333333333333,
+  "duration_frames": 22429,
+  "speech_events": 283,
+  "counted_terms": 256,
+  "normal_two_second_boundaries": 251,
+  "measured_loudness": {
+    "passed": true,
+    "integrated_lufs": -16.02,
+    "true_peak_dbtp": -3.3,
+    "raw": {
+      "input_i": "-16.02",
+      "input_tp": "-3.30",
+      "input_lra": "4.60",
+      "input_thresh": "-26.78",
+      "output_i": "-14.45",
+      "output_tp": "-1.00",
+      "output_lra": "3.10",
+      "output_thresh": "-25.23",
+      "normalization_type": "dynamic",
+      "target_offset": "-1.55"
+    },
+    "scope": "input_i/input_tp measured from encoded AAC, not filter output"
+  },
+  "encoder": {
+    "codec": "AAC-LC",
+    "target_bitrate": "192k",
+    "sample_rate": 48000,
+    "channels": 2
+  },
+  "source_signal_processing": "Only one constant gain per utterance, common scalar, resampling24kmono→48kstereo and PCM24 quantization; no time stretch, limiter, compression, source overwrite or changed silent gaps.",
+  "raw_warnings_preserved": true,
+  "human_full_listening_claim": false,
+  "bgm": false,
+  "sound_effects": []
+}

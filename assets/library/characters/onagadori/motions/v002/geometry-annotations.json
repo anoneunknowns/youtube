@@ -1,0 +1,1380 @@
+{
+  "id": "onagadori",
+  "version": "v002",
+  "review": {
+    "identity": "Compared with selected canonical original: Little Bird yellow watercolor body, dot eye, short orange beak and brown outline; Onagadori white feathered body, red crest/wattle, orange beak/feet and long layered ivory tail preserved.",
+    "style": "All 27 complete cells reviewed in light/dark source composites plus individual neutral/wave_rest/seated calibration cells. Watercolor fill and contour preserve canonical family. No source pixels or alpha edited locally.",
+    "alpha": "All 27 original RGBA exact cells pass alpha8 bounds and transparent-margin checks, including accepted background-edit sheets. Alpha128 used only for anatomy, not for source cleanup. Long Onagadori tail pixels are retained fully.",
+    "motion": "All 27 key poses reviewed: blink, tap crouch/pop, cognitive/emotional reactions, wing clap/wave variants, celebration ready/air/land, seated transition/stretch/nap/look/stand and limited nod. Onagadori seated gaze turn is subtle. These are discrete key poses; actual episode timing, tail clearance and continuous animation need scene review."
+  },
+  "sheets": [
+    {
+      "id": "reactions",
+      "source_sheet": "assets/library/characters/onagadori/motions/v002/source-sheets/reactions.png",
+      "source_sheet_sha256": "2b9a92912af999d17b6083f08994a578fe5ddf9199a1a87485389e9b376dbb7b",
+      "prompt_path": "assets/library/characters/onagadori/motions/v002/source-sheets/reactions-prompt.txt",
+      "generation_input_path": "assets/library/characters/onagadori/motions/v002/source-sheets/reactions-input.json",
+      "reference_height_px": 237.0,
+      "calibration": {
+        "method": "alpha128-neutral-body-height-and-skull-width-transfer",
+        "reference_pose": "neutral",
+        "notes": "One standing-equivalent reference per sheet, shared by all nine poses. Neutral head/crest top to anatomical foot support is measured; actions/postures transferred by manually selected skull cross section above beak, excluding crest, wing and tail. This is scale calibration; no anatomical head pivot is inferred as measured.",
+        "neutral_standing_reference_height_px": 237,
+        "neutral_head_width_px": 58,
+        "sheet_to_reactions_head_width_ratio": 1.0,
+        "numeric_evidence": {
+          "reference_pose": "neutral",
+          "head_width_px": 58,
+          "head_scanline_y_px": 86,
+          "head_scanline_x_span_px": [
+            81,
+            139
+          ],
+          "alpha_threshold": 128,
+          "anatomical_scope": "Skull cross section above beak; crest excluded for Onagadori, wing/tail/body excluded for both birds."
+        }
+      },
+      "frames": [
+        {
+          "id": "neutral",
+          "index": 0,
+          "body_bbox_px": [
+            63,
+            34,
+            265,
+            272
+          ],
+          "anchor_px": [
+            134.5,
+            271
+          ],
+          "tail_bbox_px": [
+            160,
+            89,
+            554,
+            268
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                247,
+                185,
+                272
+              ],
+              "measured_support_bbox_px": [
+                93,
+                247,
+                176,
+                271
+              ],
+              "visible_bbox_alpha8": [
+                63,
+                34,
+                554,
+                272
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "blink",
+          "index": 1,
+          "body_bbox_px": [
+            62,
+            35,
+            265,
+            272
+          ],
+          "anchor_px": [
+            134.5,
+            271
+          ],
+          "tail_bbox_px": [
+            160,
+            89,
+            554,
+            268
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                247,
+                185,
+                272
+              ],
+              "measured_support_bbox_px": [
+                93,
+                247,
+                176,
+                271
+              ],
+              "visible_bbox_alpha8": [
+                62,
+                35,
+                554,
+                272
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "tap_down",
+          "index": 2,
+          "body_bbox_px": [
+            59,
+            68,
+            265,
+            271
+          ],
+          "anchor_px": [
+            136.0,
+            270
+          ],
+          "tail_bbox_px": [
+            160,
+            107,
+            555,
+            268
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                246,
+                185,
+                271
+              ],
+              "measured_support_bbox_px": [
+                95,
+                246,
+                177,
+                270
+              ],
+              "visible_bbox_alpha8": [
+                59,
+                68,
+                555,
+                271
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "tap_pop",
+          "index": 3,
+          "body_bbox_px": [
+            61,
+            12,
+            265,
+            253
+          ],
+          "anchor_px": [
+            131.5,
+            268
+          ],
+          "tail_bbox_px": [
+            160,
+            76,
+            554,
+            250
+          ],
+          "support_kind": "inferred-ground-plane",
+          "support_notes": "Ground plane inferred from grounded think in same source sheet row; substantive airborne foot bottom is 252px, 16px above inferred ground. No airborne ground contact claimed; long tail excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                228,
+                185,
+                253
+              ],
+              "measured_support_bbox_px": [
+                95,
+                228,
+                168,
+                252
+              ],
+              "visible_bbox_alpha8": [
+                61,
+                12,
+                554,
+                253
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            },
+            {
+              "inferred_from_grounded_pose": "think",
+              "ground_y_px": 268,
+              "actual_airborne_foot_bottom_px": 252,
+              "source_lift_px": 16
+            }
+          ]
+        },
+        {
+          "id": "think",
+          "index": 4,
+          "body_bbox_px": [
+            43,
+            25,
+            265,
+            268
+          ],
+          "anchor_px": [
+            135.0,
+            268
+          ],
+          "tail_bbox_px": [
+            160,
+            50,
+            554,
+            265
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                244,
+                185,
+                269
+              ],
+              "measured_support_bbox_px": [
+                93,
+                244,
+                177,
+                268
+              ],
+              "visible_bbox_alpha8": [
+                43,
+                25,
+                554,
+                268
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "aha",
+          "index": 5,
+          "body_bbox_px": [
+            28,
+            22,
+            265,
+            268
+          ],
+          "anchor_px": [
+            135.0,
+            267
+          ],
+          "tail_bbox_px": [
+            160,
+            50,
+            555,
+            266
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                243,
+                185,
+                268
+              ],
+              "measured_support_bbox_px": [
+                93,
+                243,
+                177,
+                267
+              ],
+              "visible_bbox_alpha8": [
+                28,
+                22,
+                555,
+                268
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "oops",
+          "index": 6,
+          "body_bbox_px": [
+            38,
+            25,
+            265,
+            266
+          ],
+          "anchor_px": [
+            135.0,
+            265
+          ],
+          "tail_bbox_px": [
+            160,
+            86,
+            554,
+            267
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                241,
+                185,
+                266
+              ],
+              "measured_support_bbox_px": [
+                94,
+                241,
+                176,
+                265
+              ],
+              "visible_bbox_alpha8": [
+                38,
+                25,
+                554,
+                267
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "retry",
+          "index": 7,
+          "body_bbox_px": [
+            47,
+            34,
+            265,
+            268
+          ],
+          "anchor_px": [
+            134.5,
+            268
+          ],
+          "tail_bbox_px": [
+            160,
+            88,
+            554,
+            266
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                244,
+                185,
+                269
+              ],
+              "measured_support_bbox_px": [
+                92,
+                244,
+                177,
+                268
+              ],
+              "visible_bbox_alpha8": [
+                47,
+                34,
+                554,
+                268
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "signature",
+          "index": 8,
+          "body_bbox_px": [
+            54,
+            28,
+            265,
+            269
+          ],
+          "anchor_px": [
+            128.5,
+            268
+          ],
+          "tail_bbox_px": [
+            160,
+            57,
+            553,
+            268
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                244,
+                185,
+                269
+              ],
+              "measured_support_bbox_px": [
+                94,
+                244,
+                163,
+                268
+              ],
+              "visible_bbox_alpha8": [
+                54,
+                28,
+                553,
+                269
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "actions",
+      "source_sheet": "assets/library/characters/onagadori/motions/v002/source-sheets/actions.png",
+      "source_sheet_sha256": "53da1e71543a4a0bfc2644bbcd9bd0db140dc783a74de29382f4638091057e94",
+      "prompt_path": "assets/library/characters/onagadori/motions/v002/source-sheets/actions-prompt.txt",
+      "generation_input_path": "assets/library/characters/onagadori/motions/v002/source-sheets/actions-input.json",
+      "reference_height_px": 257.43103448275866,
+      "calibration": {
+        "method": "alpha128-neutral-body-height-and-skull-width-transfer",
+        "reference_pose": "wave_rest",
+        "notes": "One standing-equivalent reference per sheet, shared by all nine poses. Neutral head/crest top to anatomical foot support is measured; actions/postures transferred by manually selected skull cross section above beak, excluding crest, wing and tail. This is scale calibration; no anatomical head pivot is inferred as measured.",
+        "neutral_standing_reference_height_px": 237,
+        "neutral_head_width_px": 58,
+        "sheet_to_reactions_head_width_ratio": 1.0862068965517242,
+        "numeric_evidence": {
+          "reference_pose": "wave_rest",
+          "head_width_px": 63,
+          "head_scanline_y_px": 85,
+          "head_scanline_x_span_px": [
+            85,
+            148
+          ],
+          "alpha_threshold": 128,
+          "anatomical_scope": "Skull cross section above beak; crest excluded for Onagadori, wing/tail/body excluded for both birds."
+        }
+      },
+      "frames": [
+        {
+          "id": "success_ready",
+          "index": 0,
+          "body_bbox_px": [
+            62,
+            73,
+            265,
+            272
+          ],
+          "anchor_px": [
+            143.5,
+            271
+          ],
+          "tail_bbox_px": [
+            160,
+            104,
+            559,
+            272
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                247,
+                185,
+                272
+              ],
+              "measured_support_bbox_px": [
+                102,
+                247,
+                185,
+                271
+              ],
+              "visible_bbox_alpha8": [
+                62,
+                73,
+                559,
+                272
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "success_air",
+          "index": 1,
+          "body_bbox_px": [
+            25,
+            25,
+            265,
+            247
+          ],
+          "anchor_px": [
+            139.0,
+            271
+          ],
+          "tail_bbox_px": [
+            160,
+            50,
+            559,
+            272
+          ],
+          "support_kind": "inferred-ground-plane",
+          "support_notes": "Ground plane inferred from grounded success_ready in same source sheet; substantive airborne foot bottom is 246px, 25px above inferred ground. No airborne ground contact claimed; long tail excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                222,
+                185,
+                247
+              ],
+              "measured_support_bbox_px": [
+                102,
+                222,
+                176,
+                246
+              ],
+              "visible_bbox_alpha8": [
+                25,
+                25,
+                559,
+                272
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            },
+            {
+              "inferred_from_grounded_pose": "success_ready",
+              "ground_y_px": 271,
+              "actual_airborne_foot_bottom_px": 246,
+              "source_lift_px": 25
+            }
+          ]
+        },
+        {
+          "id": "success_land",
+          "index": 2,
+          "body_bbox_px": [
+            50,
+            85,
+            265,
+            272
+          ],
+          "anchor_px": [
+            130.0,
+            271
+          ],
+          "tail_bbox_px": [
+            160,
+            104,
+            559,
+            272
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                247,
+                185,
+                272
+              ],
+              "measured_support_bbox_px": [
+                75,
+                247,
+                185,
+                271
+              ],
+              "visible_bbox_alpha8": [
+                50,
+                85,
+                559,
+                272
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "cheer",
+          "index": 3,
+          "body_bbox_px": [
+            58,
+            31,
+            265,
+            270
+          ],
+          "anchor_px": [
+            129.0,
+            269
+          ],
+          "tail_bbox_px": [
+            160,
+            50,
+            559,
+            271
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                245,
+                185,
+                270
+              ],
+              "measured_support_bbox_px": [
+                87,
+                245,
+                171,
+                269
+              ],
+              "visible_bbox_alpha8": [
+                58,
+                31,
+                559,
+                271
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "clap_open",
+          "index": 4,
+          "body_bbox_px": [
+            26,
+            30,
+            265,
+            270
+          ],
+          "anchor_px": [
+            129.5,
+            269
+          ],
+          "tail_bbox_px": [
+            160,
+            50,
+            559,
+            271
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                245,
+                185,
+                270
+              ],
+              "measured_support_bbox_px": [
+                87,
+                245,
+                172,
+                269
+              ],
+              "visible_bbox_alpha8": [
+                26,
+                30,
+                559,
+                271
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "wave_low",
+          "index": 5,
+          "body_bbox_px": [
+            24,
+            31,
+            265,
+            270
+          ],
+          "anchor_px": [
+            129.0,
+            269
+          ],
+          "tail_bbox_px": [
+            160,
+            51,
+            559,
+            271
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                245,
+                185,
+                270
+              ],
+              "measured_support_bbox_px": [
+                87,
+                245,
+                171,
+                269
+              ],
+              "visible_bbox_alpha8": [
+                24,
+                31,
+                559,
+                271
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "wave_high_in",
+          "index": 6,
+          "body_bbox_px": [
+            62,
+            33,
+            265,
+            272
+          ],
+          "anchor_px": [
+            129.5,
+            270
+          ],
+          "tail_bbox_px": [
+            160,
+            51,
+            559,
+            273
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                246,
+                185,
+                271
+              ],
+              "measured_support_bbox_px": [
+                87,
+                246,
+                172,
+                270
+              ],
+              "visible_bbox_alpha8": [
+                62,
+                33,
+                559,
+                273
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "wave_high_out",
+          "index": 7,
+          "body_bbox_px": [
+            21,
+            33,
+            265,
+            272
+          ],
+          "anchor_px": [
+            129.0,
+            270
+          ],
+          "tail_bbox_px": [
+            160,
+            52,
+            559,
+            273
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                246,
+                185,
+                271
+              ],
+              "measured_support_bbox_px": [
+                87,
+                246,
+                171,
+                270
+              ],
+              "visible_bbox_alpha8": [
+                21,
+                33,
+                559,
+                273
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "wave_rest",
+          "index": 8,
+          "body_bbox_px": [
+            67,
+            33,
+            265,
+            271
+          ],
+          "anchor_px": [
+            129.0,
+            270
+          ],
+          "tail_bbox_px": [
+            160,
+            53,
+            559,
+            273
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                246,
+                185,
+                271
+              ],
+              "measured_support_bbox_px": [
+                87,
+                246,
+                171,
+                270
+              ],
+              "visible_bbox_alpha8": [
+                67,
+                33,
+                559,
+                273
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "postures",
+      "source_sheet": "assets/library/characters/onagadori/motions/v002/source-sheets/postures.png",
+      "source_sheet_sha256": "8ad0542bbd60fae82f566a3cfb37b65baf1fce4b9e076689f378b860a36041ac",
+      "prompt_path": "assets/library/characters/onagadori/motions/v002/source-sheets/postures-revision-prompt.txt",
+      "generation_input_path": "assets/library/characters/onagadori/motions/v002/source-sheets/postures-input.json",
+      "reference_height_px": 261.51724137931035,
+      "calibration": {
+        "method": "alpha128-neutral-body-height-and-skull-width-transfer",
+        "reference_pose": "seated_neutral",
+        "notes": "One standing-equivalent reference per sheet, shared by all nine poses. Neutral head/crest top to anatomical foot support is measured; actions/postures transferred by manually selected skull cross section above beak, excluding crest, wing and tail. This is scale calibration; no anatomical head pivot is inferred as measured.",
+        "neutral_standing_reference_height_px": 237,
+        "neutral_head_width_px": 58,
+        "sheet_to_reactions_head_width_ratio": 1.103448275862069,
+        "numeric_evidence": {
+          "reference_pose": "seated_neutral",
+          "head_width_px": 64,
+          "head_scanline_y_px": 121,
+          "head_scanline_x_span_px": [
+            66,
+            130
+          ],
+          "alpha_threshold": 128,
+          "anatomical_scope": "Skull cross section above beak; crest excluded for Onagadori, wing/tail/body excluded for both birds."
+        }
+      },
+      "frames": [
+        {
+          "id": "half_seated",
+          "index": 0,
+          "body_bbox_px": [
+            51,
+            47,
+            265,
+            276
+          ],
+          "anchor_px": [
+            136.5,
+            275
+          ],
+          "tail_bbox_px": [
+            160,
+            107,
+            567,
+            281
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                251,
+                185,
+                276
+              ],
+              "measured_support_bbox_px": [
+                96,
+                251,
+                177,
+                275
+              ],
+              "visible_bbox_alpha8": [
+                51,
+                47,
+                567,
+                281
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "seated_neutral",
+          "index": 1,
+          "body_bbox_px": [
+            51,
+            68,
+            265,
+            280
+          ],
+          "anchor_px": [
+            151.5,
+            279
+          ],
+          "tail_bbox_px": [
+            160,
+            114,
+            566,
+            282
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Anatomical belly/foot support measured inside reviewed body ROI; long tail tip excluded. Tail may extend below this support.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                55,
+                267,
+                232,
+                280
+              ],
+              "measured_support_bbox_px": [
+                87,
+                267,
+                216,
+                279
+              ],
+              "visible_bbox_alpha8": [
+                51,
+                68,
+                566,
+                282
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "seated_stretch_half",
+          "index": 2,
+          "body_bbox_px": [
+            10,
+            63,
+            265,
+            278
+          ],
+          "anchor_px": [
+            144.0,
+            277
+          ],
+          "tail_bbox_px": [
+            160,
+            113,
+            567,
+            282
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Anatomical belly/foot support measured inside reviewed body ROI; long tail tip excluded. Tail may extend below this support.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                55,
+                265,
+                232,
+                278
+              ],
+              "measured_support_bbox_px": [
+                74,
+                265,
+                214,
+                277
+              ],
+              "visible_bbox_alpha8": [
+                10,
+                63,
+                567,
+                282
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "seated_stretch",
+          "index": 3,
+          "body_bbox_px": [
+            15,
+            40,
+            265,
+            264
+          ],
+          "anchor_px": [
+            160.0,
+            263
+          ],
+          "tail_bbox_px": [
+            160,
+            58,
+            567,
+            270
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Anatomical belly/foot support measured inside reviewed body ROI; long tail tip excluded. Tail may extend below this support.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                55,
+                251,
+                232,
+                264
+              ],
+              "measured_support_bbox_px": [
+                93,
+                251,
+                227,
+                263
+              ],
+              "visible_bbox_alpha8": [
+                15,
+                40,
+                567,
+                270
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "seated_nap",
+          "index": 4,
+          "body_bbox_px": [
+            32,
+            67,
+            265,
+            266
+          ],
+          "anchor_px": [
+            152.5,
+            265
+          ],
+          "tail_bbox_px": [
+            160,
+            107,
+            567,
+            270
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Anatomical belly/foot support measured inside reviewed body ROI; long tail tip excluded. Tail may extend below this support.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                55,
+                253,
+                232,
+                266
+              ],
+              "measured_support_bbox_px": [
+                85,
+                253,
+                220,
+                265
+              ],
+              "visible_bbox_alpha8": [
+                32,
+                67,
+                567,
+                270
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "seated_look_up",
+          "index": 5,
+          "body_bbox_px": [
+            51,
+            51,
+            265,
+            265
+          ],
+          "anchor_px": [
+            148.0,
+            264
+          ],
+          "tail_bbox_px": [
+            160,
+            64,
+            567,
+            270
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Anatomical belly/foot support measured inside reviewed body ROI; long tail tip excluded. Tail may extend below this support.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                55,
+                252,
+                232,
+                265
+              ],
+              "measured_support_bbox_px": [
+                77,
+                252,
+                219,
+                264
+              ],
+              "visible_bbox_alpha8": [
+                51,
+                51,
+                567,
+                270
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "seated_look_board",
+          "index": 6,
+          "body_bbox_px": [
+            49,
+            63,
+            265,
+            270
+          ],
+          "anchor_px": [
+            154.0,
+            269
+          ],
+          "tail_bbox_px": [
+            160,
+            109,
+            568,
+            276
+          ],
+          "support_kind": "seated-anatomical-support",
+          "support_notes": "Anatomical belly/foot support measured inside reviewed body ROI; long tail tip excluded. Tail may extend below this support.",
+          "review": "Seated side-looking pose reviewed; Onagadori head turn is subtle. Intended board orientation must be checked in actual scene.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                55,
+                257,
+                232,
+                270
+              ],
+              "measured_support_bbox_px": [
+                86,
+                257,
+                222,
+                269
+              ],
+              "visible_bbox_alpha8": [
+                49,
+                63,
+                568,
+                276
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "stand_half",
+          "index": 7,
+          "body_bbox_px": [
+            52,
+            43,
+            265,
+            276
+          ],
+          "anchor_px": [
+            128.0,
+            275
+          ],
+          "tail_bbox_px": [
+            160,
+            90,
+            567,
+            274
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Complete key pose reviewed in light/dark composites; source alpha and pixels retained.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                251,
+                185,
+                276
+              ],
+              "measured_support_bbox_px": [
+                82,
+                251,
+                174,
+                275
+              ],
+              "visible_bbox_alpha8": [
+                52,
+                43,
+                567,
+                276
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        },
+        {
+          "id": "nod_down",
+          "index": 8,
+          "body_bbox_px": [
+            32,
+            40,
+            265,
+            277
+          ],
+          "anchor_px": [
+            137.5,
+            276
+          ],
+          "tail_bbox_px": [
+            160,
+            81,
+            567,
+            275
+          ],
+          "support_kind": "anatomical-support",
+          "support_notes": "Anatomical orange foot/pad support measured from alpha128 in reviewed lower body ROI; tail endpoint excluded.",
+          "review": "Head lowered/eyes downward for Little Bird; Onagadori has a subdued lowered/closed-eye standing pose. Nod amplitude limited; full continuous nod is not certified.",
+          "measurement_notes": [
+            {
+              "alpha_threshold": 128,
+              "support_roi_px": [
+                75,
+                252,
+                185,
+                277
+              ],
+              "measured_support_bbox_px": [
+                91,
+                252,
+                184,
+                276
+              ],
+              "visible_bbox_alpha8": [
+                32,
+                40,
+                567,
+                277
+              ],
+              "body_tail_boxes_overlap_at_feather_roots": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

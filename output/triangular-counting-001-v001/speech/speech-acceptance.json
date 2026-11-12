@@ -1,0 +1,2851 @@
+{
+  "schema_version": 1,
+  "kind": "hash-bound-triangular-speech-acceptance",
+  "accepted": true,
+  "source_manifest_sha256": "7353c088f30e8bbd4e86fa4675bc62db1c893ad05170aeb3f37531854b590ea8",
+  "inputs": {
+    "manifest": {
+      "path": "output/triangular-counting-001-v001/speech/measurements-selected-v002.json",
+      "sha256": "7353c088f30e8bbd4e86fa4675bc62db1c893ad05170aeb3f37531854b590ea8"
+    },
+    "isolated_asr": {
+      "path": "output/triangular-counting-001-v001/speech/asr-selected-v002.json",
+      "sha256": "6895b428acb5559e64710e0a816fb603289de1080a446d060fcd92d4c0a27bf1"
+    },
+    "independent_ctc": {
+      "path": "output/triangular-counting-001-v001/speech/phonemes-selected-v002.json",
+      "sha256": "439584c000f26ab7fb3c7344791c7b4b6e6ba65cb1a3b5c1e06ae8f7e5ef6674"
+    },
+    "waveform_and_tails": {
+      "path": "output/triangular-counting-001-v001/speech/acoustics-selected-v002.json",
+      "sha256": "75a1ba4e04a1405c723f0c41836f496c289944534d19ba6b0ec7488003b67c0c"
+    },
+    "source_selection": {
+      "path": "output/triangular-counting-001-v001/speech/source-selection-v002.json",
+      "sha256": "8085fcda50d099a204654d9e3dc9d64a733c3b37733523ea54369ee7fe8f63a0"
+    },
+    "prior_reuse_receipt": {
+      "path": "output/triangular-counting-001-v001/speech/source-reuse-record.json",
+      "sha256": "18786b818bd5ba1676b39ad0d6ba602128d90acb6d91b3bc812986897a1b6c5f"
+    },
+    "boundary_guard_source_mapping": {
+      "path": "output/triangular-counting-001-v001/speech/ctc-boundary-guards-v001/manifest.json",
+      "sha256": "5d9d8241443c14da9383e7350d435e1449e71b9b6acdb919810a00b74dd952de"
+    },
+    "boundary_guard_ctc": {
+      "path": "output/triangular-counting-001-v001/speech/ctc-boundary-guards-v001/phonemes.json",
+      "sha256": "0e4ea8203891c75a671a69be81d718e46972af887d7aa728a8ac2f09db2145c8"
+    },
+    "new_N011_context_extraction": {
+      "path": "output/triangular-counting-001-v001/speech/corrections-v005/extraction.json",
+      "sha256": "4bdb59603898fef74ed5651926075b659f7d9e74caa125c3ee5b46b4800414c9"
+    },
+    "individual_decisions": {
+      "path": "output/triangular-counting-001-v001/speech/individual-source-decisions.json",
+      "sha256": "3a97624ab1c2db82e39fac9f023c90ab8a6cfc71bf4673c252052b60653541a5"
+    }
+  },
+  "summary": {
+    "clips": 131,
+    "numbers": 61,
+    "dialogue": 70,
+    "accepted": 131,
+    "unresolved": 0,
+    "raw_asr_matches": 129,
+    "documented_exact_homophone_spelling_resolutions": 2,
+    "source_specific_dental_fricative_false_flag_resolutions": 1,
+    "replaced_sources": 7,
+    "retained_prior_accepted_byte_identical": 25
+  },
+  "policy": {
+    "isolated_asr_match_alone_approves_pronunciation": false,
+    "changed_source_requires_fresh_independent_ctc_and_asr": true,
+    "unresolved_warning_can_pass": false,
+    "human_listening_claim": false
+  },
+  "unresolved": [],
+  "results": [
+    {
+      "id": "N000",
+      "source_sha256": "05819d82a70f5a2415d48ba2a170cc178613356f3a67eaf6a64cdb357ca5c2e7",
+      "expected_text": "zero",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: Zero.",
+        "The zero vowel/rhotic sequence is preserved; the G2P schwa before the American r is not separately decoded. No additional syllable.",
+        "Waveform peak=17760/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "ə",
+          "recognized": ""
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N001",
+      "source_sha256": "58d4ab64f6a90c84474791bfcf868b29f875a971ab633afc3627732f7af1c389",
+      "expected_text": "one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=16808/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N002",
+      "source_sha256": "180dd58d3b34c9d10d2db9bb644f587dfa925cb722b97d387f376a05030c6c52",
+      "expected_text": "three",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 3",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=15337/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N003",
+      "source_sha256": "0d5dd58d2a3cf2463badbb000ea8d685d0d9cdf494f5fe1bf5c9c08333fa8dfa",
+      "expected_text": "six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 6.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=10835/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N004",
+      "source_sha256": "eafac5f936d732cb3f3083ab338a7c74e13e024c8529434b397ecde5eb9e69f1",
+      "expected_text": "ten",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 10.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=16652/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N005",
+      "source_sha256": "9cf49979d0dff52ecc58ebb8bf77dd2a238e5b98c10ee93e68a94fd75ed6865e",
+      "expected_text": "fifteen",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 15.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20830/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N006",
+      "source_sha256": "ec3d294974f0829c62252a9d0d126e2cccc03a3ec066673d81cdf7a6165ce232",
+      "expected_text": "twenty-one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 21.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=17613/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N007",
+      "source_sha256": "6177db50caca0190847a539c2d46aa1e0063da7d61b6dc2c6e0628e86541b117",
+      "expected_text": "twenty-eight",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 28.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19159/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N008",
+      "source_sha256": "3bca50a0a79128d73c98dcffae0d89107354674bd6c9382564d75eac672b1bee",
+      "expected_text": "thirty-six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 36.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=15879/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False.",
+        "Dental theta onset is independently decoded in raw and guarded CTC. Source20ms frames0.07/0.08s have periodicity.44/.27 and2k-up power.28/.27; the first voiced vowel starts0.09s. Thus no vowel precedes theta. The generic fricative screen misses this lower-energy dental because2k-up threshold.35 is tuned more strongly for s/f. Its200ms voiced-prefix total counts the intended vowel AFTER theta; this is a documented source-specific false flag, not ignored or unresolved."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": true,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N009",
+      "source_sha256": "ab150557d525af8fef33af4afe5abe09af8a486f748d863fd048e805e324271b",
+      "expected_text": "forty-five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 45.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20082/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N010",
+      "source_sha256": "eeef1abc9fe9cc846022a56f939728552924537e180c8042b6f38a4ba3e5108e",
+      "expected_text": "fifty-five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 55.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=21303/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N011",
+      "source_sha256": "16d0c2e9ba4bbb9dbe2d53eec90098ab415b8071c12e0c519999921a79143855",
+      "expected_text": "sixty-six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 66.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=11367/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False.",
+        "Fresh contextual take excerpt replaces rejected initial-vowel candidates. Retained target s begins before the vowel; fresh ASR66, exact CTC s-ih-k-s-t-ee-s-ih-k-s, onset voiced-prefix0ms and terminal-tail suspicious false. Original context and exact sample extraction receipt preserved."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N012",
+      "source_sha256": "16ee0a3e03e7ea687d5743df9c10ee6e63317d3b7c9d8c231ce41c1a0dd16981",
+      "expected_text": "seventy-eight",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 78.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=18442/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N013",
+      "source_sha256": "508837e87c5a613465d91cfd483642d5d28c89a708f7b4521fca3718e373bd5d",
+      "expected_text": "ninety-one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 91.",
+        "Ninety-one retains both numeral components; the medial t is decoded as American flap/d.",
+        "Waveform peak=14380/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N014",
+      "source_sha256": "6325b874d2aad87c590182212ef8b36313274be9c1ca8e379967825a3603639a",
+      "expected_text": "one hundred five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 105.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=18574/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N015",
+      "source_sha256": "c31649a387a629e9c13e9ba2f7967c7a9b98acf2a11f98a71d4515513a3e6e35",
+      "expected_text": "one hundred twenty",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 120.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=17974/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N016",
+      "source_sha256": "66e7e53de51bf64bdaedf685a86d18e8b8e7135803adfccec4db4fa53542f846",
+      "expected_text": "one hundred thirty-six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 136.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=17496/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N017",
+      "source_sha256": "8bd47de0e4620f294e131bc76cb8cb312815634146013b17399d441b8d6396d4",
+      "expected_text": "one hundred fifty-three",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 153.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=18611/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N018",
+      "source_sha256": "69948cc25c4b793a44da8ad7e11ffeacd7351536d7c135abdf50df6d45e63b51",
+      "expected_text": "one hundred seventy-one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 171.",
+        "Hundred vowel uses the broad a versus G2P wedge label; one hundred seventy-one components remain present.",
+        "Waveform peak=16534/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "ʌ",
+          "recognized": "a"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N019",
+      "source_sha256": "d6955212b01821b377311afbac236d6f5867edbc80b92fed400362247b88c929",
+      "expected_text": "one hundred ninety",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 190.",
+        "Ninety retains the usual American intervocalic flap/d realization.",
+        "Waveform peak=17516/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N020",
+      "source_sha256": "2ba2a4a4a002bc1c2efb2f6052db79c970fcf31d2b423c4ba401821f6acd3304",
+      "expected_text": "two hundred ten",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 210.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=13764/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N021",
+      "source_sha256": "b9c62e3165f121b6810463fd6708960f165fe7f291f4f7bb96cf816c230c14b2",
+      "expected_text": "two hundred thirty-one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 231.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=17179/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N022",
+      "source_sha256": "0662dc2d68bb04aab8e7bb144d004cf16507b3328e501f9fa007aca82b4cd586",
+      "expected_text": "two hundred fifty-three",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 253.",
+        "Hundred has a reduced weak vowel in the dr cluster; two hundred fifty-three words remain intact.",
+        "Waveform peak=17301/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "ɪ",
+          "recognized": ""
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N023",
+      "source_sha256": "5789e3c8a9e5e1b64a9e6977a76b97522a11b6dda54f87a0236df08c1761115c",
+      "expected_text": "two hundred seventy-six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 276.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19126/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N024",
+      "source_sha256": "adf5e30ea03c42536cb2d9cbd5aa536a1d91864bf0495e269681300d41231c99",
+      "expected_text": "three hundred",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 300.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=13514/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N025",
+      "source_sha256": "7b598a4343f651bd3abf62451bf343a9dbbfe5a15c20f350c0ba91284338fc3e",
+      "expected_text": "three hundred twenty-five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 325.",
+        "Twenty-five has the usual American medial-t reduction; complete three hundred and final five are supported.",
+        "Waveform peak=16873/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N026",
+      "source_sha256": "d84a6152c768ff7d8c3d541dc7f32f1e418543340a863ffbb8ac791a094b6672",
+      "expected_text": "three hundred fifty-one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 351.",
+        "Hundred vowel is labelled a versus wedge; three hundred fifty-one components remain intact.",
+        "Waveform peak=13630/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "ʌ",
+          "recognized": "a"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N027",
+      "source_sha256": "e29e88f8429cd9c834df0b1b81aaeaaac913d248eab842cb04e263a160af560b",
+      "expected_text": "three hundred seventy-eight",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 378.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=17364/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N028",
+      "source_sha256": "26ba2a152da64da3983ab90a8f43c0db5a0e0d6bb8eee8fc7db3da3c218ae14b",
+      "expected_text": "four hundred six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 406.",
+        "Four vowel o versus open-o labels; four hundred six units and scale remain supported.",
+        "Waveform peak=17188/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N029",
+      "source_sha256": "3a69dbaf81b28138b72eefcca917fb9fc9ed581d04babcbfb63d949fa69b6f85",
+      "expected_text": "four hundred thirty-five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 435.",
+        "The adjacent r labels after four contain no intervening vowel or new word. Four hundred thirty-five and the final five are retained.",
+        "Waveform peak=18103/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "ɹ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N030",
+      "source_sha256": "5b3ce080a03e8ec6e45ff6d6fce48fea1dcb013ae14c2a5bf51bf8cc66aa4142",
+      "expected_text": "four hundred sixty-five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 465.",
+        "Four vowel o versus open-o labels; four hundred sixty-five components remain intact.",
+        "Waveform peak=16251/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N031",
+      "source_sha256": "2525efe553cecff62ebe4b015293eaf1707ba7c2b60bbcc2ee8017390a055eb6",
+      "expected_text": "four hundred ninety-six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 496.",
+        "Four vowel label variation plus an American flap in ninety-one. All four hundred ninety-one components retained.",
+        "Waveform peak=17414/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N032",
+      "source_sha256": "f77165be88759fe27a29704d6ff23ea81763ad83a58753af9910929b6756e856",
+      "expected_text": "five hundred twenty-eight",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 528",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19325/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N033",
+      "source_sha256": "3250c6a4c52c77b9f7785f5b7c566d7eb2aa4932decec03b3d178b3408b835a9",
+      "expected_text": "five hundred sixty-one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 561.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19642/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N034",
+      "source_sha256": "c1dd6e913c3ab8388cb6ca1e2bdbbdf508e2161baec43d71714e610c35b03fbf",
+      "expected_text": "five hundred ninety-five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 595.",
+        "Ninety-five medial t is decoded d, a normal American flap.",
+        "Waveform peak=17208/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N035",
+      "source_sha256": "567fedec63f5d1bc8f877830fd765f3dd08858d84e9840d1a0e800bbd37dcfa0",
+      "expected_text": "six hundred thirty",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 630.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20156/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N036",
+      "source_sha256": "a6c4842147e7a08ffe29d87cc878a247717b43f352f0b1b13dab25e55de86604",
+      "expected_text": "six hundred sixty-six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 666.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=17995/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N037",
+      "source_sha256": "8ec5ceaf611a67ca319cae65188b9470bd347756514cef81f8c3529736f2d810",
+      "expected_text": "seven hundred three",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 703.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=16425/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N038",
+      "source_sha256": "88d08faad0fd6de3faba8a8d963a1cd61f5d897ffb4e3a3bac4ee399c78bc174",
+      "expected_text": "seven hundred forty-one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 741.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=14406/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N039",
+      "source_sha256": "cc6aa2b69d213cbfaa47a9d0bf4262659cffae34b78252e941ee53e53a742311",
+      "expected_text": "seven hundred eighty",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 780.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=16819/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N040",
+      "source_sha256": "32319ec55d36987f61256b83c43c4a85ec64ecc3e306b46db7a6bdd46c10764b",
+      "expected_text": "eight hundred twenty",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 820.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=14131/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N041",
+      "source_sha256": "c67351fca7888f835a6c94f8e0954c1696bb588b3cb055f8a8495c0525a73b0e",
+      "expected_text": "eight hundred sixty-one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 861.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=15938/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N042",
+      "source_sha256": "50186aa6dc6960fbea63b62b8bb1fbe3da32dadd0e8ace315614932fce8473d4",
+      "expected_text": "nine hundred three",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 903.",
+        "Hundred weak vowel is schwa versus G2P short-i; nine hundred three components retained.",
+        "Waveform peak=14341/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "ɪ",
+          "recognized": "ə"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N043",
+      "source_sha256": "04f200f6809eebbfe5acdf7d138b604cb264a70e2a8034b3f31454c5f290af4f",
+      "expected_text": "nine hundred forty-six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 946.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=13417/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N044",
+      "source_sha256": "1a8c357b10637228d0510e1f33987a4cf5c8ef431b4829bb7c3d701cb9000085",
+      "expected_text": "nine hundred ninety",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 990.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=12456/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N045",
+      "source_sha256": "091836100a566771b1a02dca3aa8904e8bf6c9495f004208ebdd851bd6983960",
+      "expected_text": "one thousand thirty-five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,035.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=16653/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N046",
+      "source_sha256": "bb04995739ae66831c1a12b73ab5c366ac6d7d8d18afdda642001d56cce7e388",
+      "expected_text": "one thousand eighty-one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,081.",
+        "Thousand loses its weak nasal in the nd cluster before eighty; the theta+au+z scale syllable, eighty and one are all independently decoded.",
+        "Waveform peak=16110/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "n",
+          "recognized": ""
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N047",
+      "source_sha256": "ca1425c7882923f1e18471f773adf745b07a5af7a3cf07f9d9649242a980fa41",
+      "expected_text": "one thousand one hundred twenty-eight",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,128.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=17326/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N048",
+      "source_sha256": "d773def66ad322002026f2ebd9349f5cab6e14f6f51e657b77213b30e980b5bf",
+      "expected_text": "one thousand one hundred seventy-six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,176.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=17142/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False.",
+        "Fresh selected complete take has exact normalized CTC phone coverage, resolving the rejected original weak factor or intrusive r label."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N049",
+      "source_sha256": "99a5fcf9a3e49e22f0d5f1c90efa664111a268b5deed14ad44d2b36766ecd873",
+      "expected_text": "one thousand two hundred twenty-five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,225.",
+        "Twenty-five medial t is decoded as American flap. One thousand two hundred and final five are intact.",
+        "Waveform peak=15709/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N050",
+      "source_sha256": "4115e83e063bdb7e175a0a7f87db267fbfb4c26b940a6eed3df6373a364a35b6",
+      "expected_text": "one thousand two hundred seventy-five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,275.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=16050/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N051",
+      "source_sha256": "5aa2db1635f597171b715660289ccc34d37641d954ffaff0009c294d0174d810",
+      "expected_text": "one thousand three hundred twenty-six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,326.",
+        "Fresh take restores initial theta of THREE, absent in rejected original. Twenty-six now has only the usual American medial-t reduction; thousand, three hundred and six retained.",
+        "Waveform peak=14974/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N052",
+      "source_sha256": "a0b51316f6d613b670c76dbfe210782b5339039e6732b5851b425ec67c1c302d",
+      "expected_text": "one thousand three hundred seventy-eight",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,378.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=15207/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N053",
+      "source_sha256": "cb9d51914d1f78a71d033f8d07271d47573bc12d19dc93c1b5d86fa0e015a983",
+      "expected_text": "one thousand four hundred thirty-one",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,431.",
+        "Hundred vowel label a versus wedge; all one thousand four hundred thirty-one components retained.",
+        "Waveform peak=20235/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "ʌ",
+          "recognized": "a"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N054",
+      "source_sha256": "d3a10faa9848f4d9d6dfaa228ea9d67864c170d357def7781f4313a1d910ef99",
+      "expected_text": "one thousand four hundred eighty-five",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,485.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=16829/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N055",
+      "source_sha256": "64bd2a7b916beb9d61a3aef141d83c813ee4a9ac801fefdf9aeeec88b3bfdc3b",
+      "expected_text": "one thousand five hundred forty",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,540.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=17413/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N056",
+      "source_sha256": "b31096c6b323e55720c0f526cd231a94c678fb51666afd4d87e7ad6bf798a6ba",
+      "expected_text": "one thousand five hundred ninety-six",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,596.",
+        "Thousand final d is reduced before five; ninety-six medial t is decoded d. Thousand scale and five hundred ninety-six components retained.",
+        "Waveform peak=15115/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "d"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N057",
+      "source_sha256": "2dd83c20e809069d73331769a0e25f50e9700945cc81fc04479f593a8867d004",
+      "expected_text": "one thousand six hundred fifty-three",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,653.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19711/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N058",
+      "source_sha256": "f58fe9d46a45e7d9ca08ee6e0076077f2571b1aca6b2e76640e7ccd083070e0b",
+      "expected_text": "one thousand seven hundred eleven",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,711.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=13644/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N059",
+      "source_sha256": "94b834e9045e8e9b177b54664cd4bcd805aa57c3485ead210d31cb48ba0ec292",
+      "expected_text": "one thousand seven hundred seventy",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,770.",
+        "Seventy medial t is decoded American flap; one thousand seven hundred seventy components retained.",
+        "Waveform peak=15571/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "N060",
+      "source_sha256": "fd85b0f3bcc9eef49f1acfe85831bdde26f992b14b7b160c220f2430e25a00af",
+      "expected_text": "one thousand eight hundred thirty",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1,830.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19491/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "I01",
+      "source_sha256": "5e097a1a16c8b9fa73efba6b6399bda5fe2e6909d9def442f06e55bf5c0a7995",
+      "expected_text": "Hi! Let's count triangular numbers, and watch a little triangle turn into a working number pattern.",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: Hi, let's count triangular numbers and watch a little triangle turn into a working number pattern.",
+        "Triangular unstressed-u label and little American flap vary; all sentence words retained by isolated ASR and CTC.",
+        "Waveform peak=15018/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "ʊ",
+          "recognized": "u"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "I02",
+      "source_sha256": "ac8c105f63a893f16ce860553734ec0d90e1214a29f985d58ee1ca279e7d5669",
+      "expected_text": "The small letter n tells us how many rows to use. The big answer tells us how many dots belong to one triangle.",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: The small letter \"N\" tells us how many rows to use. The big answer tells us how many dots belong to one triangle.",
+        "Recognizer-only200ms edge guard restores initial THE theta-dh label. Letter r is coalesced rather than duplicated; belong vowel follows broad American ah. No extra word or missing initial determiner.",
+        "Waveform peak=17243/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "ð",
+          "recognized": ""
+        },
+        {
+          "operation": "delete",
+          "expected": "ɹ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ɔ",
+          "recognized": "ɑ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "I03",
+      "source_sha256": "b237800ffc42aa37aca0d6dafb1444a8fa6369a0cff2d908203bd0cda77da926",
+      "expected_text": "Make two matching triangles, fit them into a rectangle, then choose one of the two equal groups. Watch the formula move!",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: Make two matching triangles, fit them into a rectangle, then choose one of the two equal groups. Watch the formula move.",
+        "Both triangular unstressed-u labels vary in length; the two-copy/rectangle/one-of-two-group words are retained.",
+        "Waveform peak=17919/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "ʊ",
+          "recognized": "u"
+        },
+        {
+          "operation": "replace",
+          "expected": "ʊ",
+          "recognized": "u"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E001",
+      "source_sha256": "f210a08bf048c08135e476e366d98f47b9bbd0eb79160a4b2a5c182c927d3482",
+      "expected_text": "one times two, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 1 times 2 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20511/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E002",
+      "source_sha256": "f41e079bd872efa8c28089b991be0bfe0ea179bee97c08133db43cc352ce355b",
+      "expected_text": "two times three, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 2 times 3 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20663/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E003",
+      "source_sha256": "9b8c6bc97f60d836c668b62d24c4b0fd43e0ce840953c5235c5e25584004b7fc",
+      "expected_text": "three times four, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 3 times 4 divided by 2 equals.",
+        "The FOUR part uses G2P o versus CTC open-o. Both adjacent whole-number factors and times/divided/by/two/equals are retained.",
+        "Waveform peak=19774/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E004",
+      "source_sha256": "070655cc6a35b545ad40dc5096fb2c07138c39616ec6481a2b5d6c0ccfde54e3",
+      "expected_text": "four times five, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 4 times 5 divided by 2 equals.",
+        "The FOUR part uses G2P o versus CTC open-o. Both adjacent whole-number factors and times/divided/by/two/equals are retained.",
+        "Waveform peak=18589/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "X004a",
+      "source_sha256": "a58be17dbf79ec0ea132dc93e5ed846bdce3033323489494d53b574f2526853f",
+      "expected_text": "Look again. One, two, three, and four dots make the rows. Turn a matching copy around and slide it into the spaces.",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: Look again, 1, 2, 3 and 4 dots make the rose. Turn a matching copy around and slide it into the spaces.",
+        "ASR rows/rose is an exact spoken homophone. Both raw and guarded CTC retain row-z. Turn rhotic-vowel and into weak-vowel labels vary; all one/two/three/four, copy and spaces words are retained.",
+        "Waveform peak=19059/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "əɹ",
+          "recognized": "ɐ"
+        },
+        {
+          "operation": "replace",
+          "expected": "ʊ",
+          "recognized": "ə"
+        }
+      ],
+      "raw_lexical_status": "warning-review-required",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "X004b",
+      "source_sha256": "7956f3a13a3dc1738a8459b7690f47f83de8ebc536cb5d4fac71541c6dd21e0d",
+      "expected_text": "Together they make four rows of five. Dividing by two means choosing one of these two equal triangles, with every dot kept whole.",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: Together they make four rows of five. Dividing by two means choosing one of these two equal triangles with every dot kept hole.",
+        "ASR whole/hole is an exact spoken homophone: independent CTC ends kept h-ou-l. Four vowel differs only o/open-o. Two equal triangles and whole-dot instruction retained.",
+        "Waveform peak=27852/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "warning-review-required",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E005",
+      "source_sha256": "15799585da50dbd387871edd86db0593dc48ea3e24c73ce8ffd21288a80a92f3",
+      "expected_text": "five times six, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 5 times 6 divided by 2 equals.",
+        "Adjacent times+six/six+seven s labels are repeated without an intervening vowel, and equals has repeated lateral labels. No added syllable or operator; both factors and division retained.",
+        "Waveform peak=18174/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "s"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "X005",
+      "source_sha256": "cefe397553910fea31e98f8862bc9e5612f46e9f897855f130c5a257d992a039",
+      "expected_text": "A new row joins the bottom. This row has five dots, so the triangle grows by five. The row number and the total are different.",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: A new row joins the bottom. This row has five dots, so the triangle grows by five the row number, and the total are different.",
+        "Fresh take restores joins diphthong oi (rejected original decoded ou). Has weak vowel and and final d reduction are ordinary unstressed/cluster variants; the adjacent l labels in total are not a new syllable. Five added dots are retained.",
+        "Waveform peak=20276/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "ɔ",
+          "recognized": "o"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɐ",
+          "recognized": "æ"
+        },
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E006",
+      "source_sha256": "b3fa3a1e7bb85d2cc2b5063355ee4a1ad57f186987f11a9146edf42b52568447",
+      "expected_text": "six times seven, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 6 times 7 divided by 2 equals.",
+        "Adjacent times+six/six+seven s labels are repeated without an intervening vowel, and equals has repeated lateral labels. No added syllable or operator; both factors and division retained.",
+        "Waveform peak=19442/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "s"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E007",
+      "source_sha256": "2939dad51f27c3d2ceb0505c1d34b1d46d290939c0deb62a26b35d055895cf21",
+      "expected_text": "seven times eight, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 7 times 8 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=18556/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E008",
+      "source_sha256": "393739705a58025ac5504d4b69e6251cd950108c16c2ceac93b36610db422d50",
+      "expected_text": "eight times nine, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 8 times 9 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19992/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E009",
+      "source_sha256": "8c2139f22aff788f70bc88b866aa028d45cad64560e06a0c89cc9e0e61866afa",
+      "expected_text": "nine times ten, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 9 times 10 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=19584/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E010",
+      "source_sha256": "0197e8f4bc7d99402997e75dc1fcc0b8ae0815b1f1d3b328b4a038e8813267a5",
+      "expected_text": "ten times eleven, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 10 times 11 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19776/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "X010",
+      "source_sha256": "f76fb828e8334f8f1cda1a7c67ca729c98fb80eb03008fc10b28f78333232d10",
+      "expected_text": "The dots will look smaller as more rows fit on screen. Every dot still counts as one. Watch the row labels and the formula.",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: The dots will look smaller as more rows fit on screen, every dot still counts, as one watch the row labels and the formula.",
+        "Fresh take restores LOOK short-u, absent in rejected original. Will+look share a single continuous l; remaining smaller/more/formula vowel and fit-on flap differences retain all words.",
+        "Waveform peak=23343/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "l",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "ɔ",
+          "recognized": "ɑ"
+        },
+        {
+          "operation": "delete",
+          "expected": "ɹ",
+          "recognized": ""
+        },
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        },
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɔ",
+          "recognized": "o"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E011",
+      "source_sha256": "b131699496463107df95cf2c27953015f8d48ba37ede01f5f2adfa3ae513c174",
+      "expected_text": "eleven times twelve, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 11 times 12 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20431/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E012",
+      "source_sha256": "34e86e33df69d94efefe9bf20d87a6073dd05b88ab4de2a3af5bb0f7bc26e383",
+      "expected_text": "twelve times thirteen, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 12 times 13 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19291/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E013",
+      "source_sha256": "0fad139eefa55237375f45f03c4a77498009797470ee67e03f3381790fefe5a6",
+      "expected_text": "thirteen times fourteen, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 13 times 14 divided by 2 equals.",
+        "The FOUR part uses G2P o versus CTC open-o. Both adjacent whole-number factors and times/divided/by/two/equals are retained.",
+        "Waveform peak=20767/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E014",
+      "source_sha256": "1348178598990c2700027b411a7573d29790179834f9b6cf0112e2a2dffbf58b",
+      "expected_text": "fourteen times fifteen, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 14 times 15 divided by 2 equals.",
+        "The FOUR part uses G2P o versus CTC open-o. Both adjacent whole-number factors and times/divided/by/two/equals are retained.",
+        "Waveform peak=21875/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "X014",
+      "source_sha256": "1c149ec923059d75134abda3c6b0946cc0c1f55c19aa94d46c430eccddd7fc70",
+      "expected_text": "Our answer now has three digits. The rule stays the same: two matching triangles, one rectangle, and one of its two equal groups.",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: Our answer now has three digits. The rule stays the same, two matching triangles, one rectangle, and one of its two equal groups.",
+        "Our is the common reduced American ar rather than G2P au-er. Has weak vowel and and final d reduction retain all instructions and two-group proof.",
+        "Waveform peak=19421/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "aʊə",
+          "recognized": "ɑ"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɐ",
+          "recognized": "æ"
+        },
+        {
+          "operation": "delete",
+          "expected": "d",
+          "recognized": ""
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E015",
+      "source_sha256": "1940ad3843acfa2dae369c2fae8e7296fdc5ad6ee26cd61ede0c182c411c5840",
+      "expected_text": "fifteen times sixteen, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 15 times 16 divided by 2 equals.",
+        "Times-final z coalesces with the following sixteen s in the CTC labels; the time-z operator syllable and sixteen factor remain, plus all division words. Equals lateral may repeat.",
+        "Waveform peak=21992/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "z",
+          "recognized": ""
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E016",
+      "source_sha256": "605bc4b131a23812cd0160a2bd5ee64127bba1e8b5600221630aa9d9da127b06",
+      "expected_text": "sixteen times seventeen, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 16 times 17 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=20566/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E017",
+      "source_sha256": "6482349207d2fe1f53969136e95fdf8daf3733f16478401b9d82523ad07e1881",
+      "expected_text": "seventeen times eighteen, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 17 times 18 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=20318/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E018",
+      "source_sha256": "c1d341099e5cbebf4b91836b7009e7775cd0a0e8d63c5ced6bcfd7409f51315a",
+      "expected_text": "eighteen times nineteen, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 18 times 19 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=21901/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E019",
+      "source_sha256": "c80a20404140a212d761efe3bc4f99ae23e5102ebeae7f5b6a56813c992f3701",
+      "expected_text": "nineteen times twenty, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 19 times 20 divided by 2 equals.",
+        "An American medial-t flap appears in the tens factor; equals may have repeated lateral labels. Both complete factors and every operator are retained.",
+        "Waveform peak=21605/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E020",
+      "source_sha256": "967d4a7bdeed5f4693d1c7a3f8e1d7ec55447adeab2e44041ece6f0d04919c53",
+      "expected_text": "twenty times twenty-one, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 20 times 21 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=22324/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E021",
+      "source_sha256": "46ec637c5c2f7ee2a24d1fe33d6c0cacf353aa0ae852cd0d2054ae40f44b59f6",
+      "expected_text": "twenty-one times twenty-two, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 21 times 22 divided by 2 equals.",
+        "An American medial-t flap appears in the tens factor; equals may have repeated lateral labels. Both complete factors and every operator are retained.",
+        "Waveform peak=22392/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E022",
+      "source_sha256": "1909722815451d1998a60f9a5b042993b74aad8743eb6e7bc852283d952d3f03",
+      "expected_text": "twenty-two times twenty-three, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 22 times 23 divided by 2 equals.",
+        "Twenty factor medial t is reduced as ordinary American twenty; both complete factors and all operators remain.",
+        "Waveform peak=22895/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E023",
+      "source_sha256": "8ef0dbb7938754477ed820d229927be53ab8df3639abdb61dfc11754b1e0c411",
+      "expected_text": "twenty-three times twenty-four, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 23 times 24, divided by 2 equals.",
+        "Four vowel o/open-o label and repeated equals lateral only; both factors and all operators remain.",
+        "Waveform peak=22519/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E024",
+      "source_sha256": "11793bfc2597d8806a5f0cda755e9438b689a282101cf3b6d9c0583b83a61d8c",
+      "expected_text": "twenty-four times twenty-five, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 24 times 25 divided by 2 equals.",
+        "Four vowel label and American twenty medial-t reduction; both complete factors and all operators remain.",
+        "Waveform peak=20410/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        },
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E025",
+      "source_sha256": "8d28b3ede08fda9ebcd7bae8d7ea7ec141ace88d0082daa848c1104b5a4c76b6",
+      "expected_text": "twenty-five times twenty-six, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 25 times 26 divided by 2 equals.",
+        "American twenty medial-t reduction and repeated equals lateral only; factors twenty-five/twenty-six and division retained.",
+        "Waveform peak=19255/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        },
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E026",
+      "source_sha256": "cbc21971c9526f4c313aacfd8f2c656ec330893c89cd65b21e2a6313216a071c",
+      "expected_text": "twenty-six times twenty-seven, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 26 times 27 divided by 2 equals.",
+        "American twenty medial-t flap/reduction in factors, not deletion of a word or quantity; all operators retained.",
+        "Waveform peak=21045/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        },
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E027",
+      "source_sha256": "1dd4696266ad89200a82a1e1c2a0ddb762cb21cac5d16e627c20606a41b37b0a",
+      "expected_text": "twenty-seven times twenty-eight, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 27 times 28 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20646/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E028",
+      "source_sha256": "dd227d5db334f9d0e5a836e4281c1bbca7008da870f1750c558e53b949252819",
+      "expected_text": "twenty-eight times twenty-nine, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 28 times 29 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20213/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E029",
+      "source_sha256": "1d03b58b3605a10fdbaec88912b63e51dbe1d05a5b617e4ba4811c043cd82864",
+      "expected_text": "twenty-nine times thirty, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 29 times 30, divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=19253/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E030",
+      "source_sha256": "92a3d837999cecb363abda851c80e1b9529e4d1d60b6e885bcf49e8af916a9ab",
+      "expected_text": "thirty times thirty-one, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: Thirty times thirty one, divided by two, equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19090/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E031",
+      "source_sha256": "344cd2e996245358bd208a177693dabf6376ed32bcb23275acf84b0ac6221b68",
+      "expected_text": "thirty-one times thirty-two, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: Thirty-one times thirty-two, divided by two, equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20609/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E032",
+      "source_sha256": "a0d8ba77f642b5ccfc511fd64763c403cba77a6daa41f27328a88ed1e0460ed2",
+      "expected_text": "thirty-two times thirty-three, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 32 times 33 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=21332/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E033",
+      "source_sha256": "3bce9f9c70c6841913a3877da76584496340efdf0466aff543933a94154695c0",
+      "expected_text": "thirty-three times thirty-four, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 33 times 34 divided by 2 equals.",
+        "The FOUR part uses G2P o versus CTC open-o. Both adjacent whole-number factors and times/divided/by/two/equals are retained.",
+        "Waveform peak=21803/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E034",
+      "source_sha256": "12866ebbf3da1e056ed6d5c8a37b172824bd4f354dabd65aa311f9876fd15c73",
+      "expected_text": "thirty-four times thirty-five, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: Thirty-four times thirty-five divided by two equals.",
+        "The FOUR part uses G2P o versus CTC open-o. Both adjacent whole-number factors and times/divided/by/two/equals are retained.",
+        "Waveform peak=20100/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E035",
+      "source_sha256": "07a77c7416c2c3ed010844a0d545b1bf2f9057b05ffa3a0a8a51831506adfcc4",
+      "expected_text": "thirty-five times thirty-six, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 35 times 36 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=19340/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E036",
+      "source_sha256": "0196efa2d6b46b504de3bd304336317fedc7a942a67352a9db65b1ed2068f108",
+      "expected_text": "thirty-six times thirty-seven, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 36 times 37 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20265/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E037",
+      "source_sha256": "45c82549e53f8870f699a13dd73aef0eafdc3c924d3cce9eb24ba5f4d4db7852",
+      "expected_text": "thirty-seven times thirty-eight, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 37 times 38 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=19477/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E038",
+      "source_sha256": "782b6694fe702828b085101213a751f5d8eac56b65fa2752265dad8b124a8cb0",
+      "expected_text": "thirty-eight times thirty-nine, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 38 times 39 divided by 2 equals.",
+        "An American medial-t flap appears in the tens factor; equals may have repeated lateral labels. Both complete factors and every operator are retained.",
+        "Waveform peak=20105/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E039",
+      "source_sha256": "290502bcdcda7b81967146f353adab84b06de6247cd3dad8b80eca4bf36fe373",
+      "expected_text": "thirty-nine times forty, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 39 times 40 divided by 2 equals.",
+        "An American medial-t flap appears in the tens factor; equals may have repeated lateral labels. Both complete factors and every operator are retained.",
+        "Waveform peak=19092/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E040",
+      "source_sha256": "2e57960e9836365d4a10a074f7f3279bdc074ffbdb9f20358ca3111a9b050fa9",
+      "expected_text": "forty times forty-one, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 40 times 41 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=21460/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E041",
+      "source_sha256": "ef919f8daa7eb5206740ba7593b6737894844254ccbe6bfec167d46e09fd4a73",
+      "expected_text": "forty-one times forty-two, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 41 times 42 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=21572/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E042",
+      "source_sha256": "235b8ddae870ad21ecb7f3b657a5046da096083441ab9c99bdb5d41b9dc8ef04",
+      "expected_text": "forty-two times forty-three, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 42 times 43 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=23319/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E043",
+      "source_sha256": "12135b9dbafd5177a5d1a79f62edc3f53c19b0bd367c85556993c677c50b9972",
+      "expected_text": "forty-three times forty-four, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 43 times 44 divided by 2 equals.",
+        "The FOUR part uses G2P o versus CTC open-o. Both adjacent whole-number factors and times/divided/by/two/equals are retained.",
+        "Waveform peak=22567/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E044",
+      "source_sha256": "7ece0493fff0335aa549497a34aff1a2ea576b673b36c449fd6e73399bdcd354",
+      "expected_text": "forty-four times forty-five, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 44 times 45 divided by 2 equals.",
+        "Fresh take restores full FOUR after forty, absent in rejected original. Only G2P o versus CTC open-o remains. Forty-four/forty-five and complete division are supported.",
+        "Waveform peak=19123/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E045",
+      "source_sha256": "3610b952e91101f0f394ed442bea05673b5ee0534b4b6983861776ca607b08ba",
+      "expected_text": "forty-five times forty-six, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 45 times 46 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=19628/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "X045",
+      "source_sha256": "5384d1cc8842d1d8bf65b7a444176234df2fcdd08d2baf8c7069f7685928c76f",
+      "expected_text": "We have passed one thousand! The triangle before this one was still below it. The next row brought us across that mark.",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: We have passed 1000. The triangle before this one was still below it. The next row brought us across that mark.",
+        "Passed vowel broad wedge versus G2P ash; four vowel and brought-us American flap/ah differ in the recognizer labels. Isolated ASR retains passed one thousand, previous triangle below it, next row across the mark; CTC retains every numeric/threshold word.",
+        "Waveform peak=15551/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "æ",
+          "recognized": "ʌ"
+        },
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɔt",
+          "recognized": "ɑɾ"
+        },
+        {
+          "operation": "replace",
+          "expected": "ə",
+          "recognized": "ɐ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E046",
+      "source_sha256": "1f559d40497191acff052636f420e74ff766044735c6caa8cd4431f4d3a518ce",
+      "expected_text": "forty-six times forty-seven, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 46 times 47 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20406/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False.",
+        "Fresh selected complete take has exact normalized CTC phone coverage, resolving the rejected original weak factor or intrusive r label."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E047",
+      "source_sha256": "a79b1c68ee3a77b0e5c349d37676b55c48990f98a21bd4787f4ae6c07335b540",
+      "expected_text": "forty-seven times forty-eight, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 47 times 48 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20877/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E048",
+      "source_sha256": "74ee616e279034914d6bcfe8615baebda785287996f77b595515987701dee354",
+      "expected_text": "forty-eight times forty-nine, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 48 times 49 divided by 2 equals.",
+        "An American medial-t flap appears in the tens factor; equals may have repeated lateral labels. Both complete factors and every operator are retained.",
+        "Waveform peak=20493/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E049",
+      "source_sha256": "a913a5ab76e29304d31c6a00ede933c8c167f6e3d1ca4e93f95c6c1a9d1f9a38",
+      "expected_text": "forty-nine times fifty, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 49 times 50 divided by 2 equals.",
+        "An American medial-t flap appears in the tens factor; equals may have repeated lateral labels. Both complete factors and every operator are retained.",
+        "Waveform peak=20771/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "t",
+          "recognized": "ɾ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E050",
+      "source_sha256": "3bb55169f2f4462f45d9328dc7a943f27bd6ce28c35d17a3644428aa5fb39d51",
+      "expected_text": "fifty times fifty-one, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 50 times 51 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=20714/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E051",
+      "source_sha256": "22bb4f8fe4646c1e8bd3de8f4e4a5c4f309a18d1b934f5f9f23a86fe7ede7ded",
+      "expected_text": "fifty-one times fifty-two, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 51 times 52 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=22460/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E052",
+      "source_sha256": "b9447891d401c6b6dc915e8668cc6286e49d98b876458f72066f3c5e56a8a134",
+      "expected_text": "fifty-two times fifty-three, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 52 times 53 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=23300/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E053",
+      "source_sha256": "054ca691000f926ac329f9e9c75ab963e36cec33f703742819586b3a77aef8ae",
+      "expected_text": "fifty-three times fifty-four, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 53 times 54 divided by 2 equals.",
+        "The FOUR part uses G2P o versus CTC open-o. Both adjacent whole-number factors and times/divided/by/two/equals are retained.",
+        "Waveform peak=23067/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E054",
+      "source_sha256": "6d23750a853f10ef985de6efc1bd66d403db91ff62b910db39c625bb50de5dd9",
+      "expected_text": "fifty-four times fifty-five, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 54 times 55 divided by 2 equals.",
+        "The FOUR part uses G2P o versus CTC open-o. Both adjacent whole-number factors and times/divided/by/two/equals are retained.",
+        "Waveform peak=21217/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "o",
+          "recognized": "ɔ"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E055",
+      "source_sha256": "25eada60ffc7874495e5184c140572c5c50277cdcda60009b6f3f3a75e32fc79",
+      "expected_text": "fifty-five times fifty-six, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 55 times 56 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20707/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E056",
+      "source_sha256": "dbea6c1b1d91921d4d9454b4435c1cb2e1bec5d80b2e7762e55ed18c1738a1be",
+      "expected_text": "fifty-six times fifty-seven, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 56 times 57 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=21346/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E057",
+      "source_sha256": "9cb8464667a2cf4787727f7102c813b947cbbe1b1f82c36128ee2ee352b5d9d4",
+      "expected_text": "fifty-seven times fifty-eight, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 57 times 58 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=21410/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E058",
+      "source_sha256": "1292623cc6f786800fb1f29b03bafddf00a50713022fd63d454429d642a50fd3",
+      "expected_text": "fifty-eight times fifty-nine, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 58 times 59 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=21683/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E059",
+      "source_sha256": "1b117695eacfdd7604a503342caa270f0b649f9ba43d7106d8cc22426a7ee53e",
+      "expected_text": "fifty-nine times sixty, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 59 times 60 divided by 2 equals.",
+        "Equals lateral l is emitted twice by CTC with no intervening vowel. All numeric factors, times, divided by two and equals are retained; no extra syllable.",
+        "Waveform peak=20348/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "insert",
+          "expected": "",
+          "recognized": "l"
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "E060",
+      "source_sha256": "1395dc181f4c5e26422381bc95585312ada1295f92764b0badb469f12e35ac25",
+      "expected_text": "sixty times sixty-one, divided by two, equals",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 60 times 61 divided by 2 equals.",
+        "Normalized independent CTC phonemes match all expected words with no remaining phone edits.",
+        "Waveform peak=20886/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    },
+    {
+      "id": "O01",
+      "source_sha256": "0f83ee4adf69052607b932973c3d2921d58bfa3b173f11f0e946221560f07089",
+      "expected_text": "Sixty rows, the same rule all the way. Each new row added the next whole number. These are triangular numbers! Thanks for counting with us. See you next time!",
+      "accepted": true,
+      "failures": [],
+      "decision": "explicit-source-specific-agent-phonetic-lexical-and-signal-review",
+      "notes": [
+        "Source-specific unprompted ASR: 60 rows the same rule all the way. Each new row added the next whole number. These are triangular numbers. Thanks for counting with us. See you next time.",
+        "Triangular unstressed-u, for rhotic vowel and shared t across next-time cluster vary. Sixty rows and every other closing word retained.",
+        "Waveform peak=23637/32768, clipped samples=0, endpoint samples=0/0; terminal-tail suspicious=False."
+      ],
+      "ctc_phone_edits": [
+        {
+          "operation": "replace",
+          "expected": "ʊ",
+          "recognized": "u"
+        },
+        {
+          "operation": "replace",
+          "expected": "ɔɹ",
+          "recognized": "ɜ"
+        },
+        {
+          "operation": "delete",
+          "expected": "t",
+          "recognized": ""
+        }
+      ],
+      "raw_lexical_status": "asr-match",
+      "raw_onset_warning": false,
+      "human_listening_claim": false
+    }
+  ]
+}

@@ -1,0 +1,733 @@
+{
+  "schema_version": 1,
+  "measurement_status": "measured",
+  "voice": {
+    "provider": "local-kokoro",
+    "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+    "library": "kokoro-js@1.2.1",
+    "voice_id": "af_heart",
+    "dtype": "fp32",
+    "generation_speed": 0.98,
+    "sample_rate": 24000,
+    "channels": 1,
+    "trim": {
+      "peak_threshold_dbfs": -50,
+      "guard_ms": 15,
+      "edge_fade_ms": 2
+    }
+  },
+  "numbers": [
+    {
+      "id": "V0",
+      "number": 0,
+      "spoken_text": "zero",
+      "path": "../../../assets/library/audio/speech/kokoro-af-heart/binary-v001/clips/binary-zero-a08d0e2e5c6a.wav",
+      "duration_s": 0.5736666666666667,
+      "sha256": "a08d0e2e5c6a33aa4a12caa59dd06626c4a62a277b01ab876730bbbe917a234c",
+      "measurement_status": "measured",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 1.425,
+        "leading_s": 0.366875,
+        "trailing_s": 0.4844583333333333,
+        "peak_normalization_gain": 1
+      },
+      "origin": "byte-identical-accepted-binary-series-source",
+      "prior_id": "binary-zero"
+    },
+    {
+      "id": "V1",
+      "number": 1,
+      "spoken_text": "one",
+      "path": "../../../assets/library/audio/speech/kokoro-af-heart/binary-v001/clips/binary-one-58d4ab64f6a9.wav",
+      "duration_s": 0.47583333333333333,
+      "sha256": "58d4ab64f6a90c84474791bfcf868b29f875a971ab633afc3627732f7af1c389",
+      "measurement_status": "measured",
+      "generation": {
+        "provider": "local-kokoro",
+        "source": "accepted-v002-reuse"
+      },
+      "trim": {
+        "raw_duration_s": 1.25,
+        "leading_s": 0.371,
+        "trailing_s": 0.4031666666666667,
+        "peak_normalization_gain": 1
+      },
+      "origin": "byte-identical-accepted-binary-series-source",
+      "prior_id": "binary-one"
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "I001",
+      "spoken_text": "Two tiny values can weave a very big pattern.",
+      "path": "candidates-v001/I001.wav",
+      "duration_s": 2.7684166666666665,
+      "sha256": "aaec368ec50550f00befcb7be92a521f2e1f6b52a4dde454af4678f24a449f8d",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.55,
+        "leading_s": 0.3082083333333333,
+        "trailing_s": 0.473375,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "I002",
+      "spoken_text": "This is the Thue-Morse sequence. Let's begin at position zero.",
+      "path": "candidates-v002/I002.wav",
+      "duration_s": 3.674541666666667,
+      "sha256": "6a10c8eed4b5a259f0c3c47aa6479fbb2fcc6659c9e9bdc083726dd50985d246",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 4.4,
+        "leading_s": 0.29783333333333334,
+        "trailing_s": 0.427625,
+        "peak_normalization_gain": 1
+      },
+      "origin": "selected-explicit-pronunciation-candidate-v002",
+      "phonemes": "ðɪs ɪz ðə tˈyː mˈɔːɹs, sˈiːkwəns. lˈɛts bɪɡˈɪn æt pəzˈɪʃən zˈiəɹoʊ",
+      "pronunciation_override": {
+        "word": "Thue-Morse",
+        "written_text": "This is the Thue-Morse sequence. Let's begin at position zero.",
+        "tts_phonemes": "tˈyː mˈɔːɹs",
+        "reason": "Single syllable Thue, not two-ee/two-eh. Front-rounded y is in the Kokoro tokenizer vocabulary; no lexical subtitle respelling.",
+        "source": "https://oeis.org/A010060"
+      },
+      "selection_reason": "Original candidates preserved; explicit syllabic support for source-specific CTC uncertainty."
+    },
+    {
+      "id": "I003",
+      "spoken_text": "Every tile is zero or one. The small position number tells us where it belongs.",
+      "path": "candidates-v001/I003.wav",
+      "duration_s": 4.683291666666666,
+      "sha256": "9234008172045688636ddb090751578432e99ea60d0f40db575f60824d91d01a",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 5.4,
+        "leading_s": 0.30041666666666667,
+        "trailing_s": 0.41629166666666667,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "I004",
+      "spoken_text": "The formula chooses the next value. Watch it work.",
+      "path": "candidates-v003/I004.wav",
+      "duration_s": 2.989375,
+      "sha256": "3c0f27a756720a5475cc588bfb1b2bc33c9a49dd47411206fe6103799d1c6aeb",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.675,
+        "leading_s": 0.3050833333333333,
+        "trailing_s": 0.38054166666666667,
+        "peak_normalization_gain": 1
+      },
+      "origin": "selected-explicit-it-pronunciation-candidate-v003",
+      "phonemes": "ðə fˈɔːɹmjuːlə tʃˈuːzᵻz ðə nˈɛkst vˈæljuː. wˈɑːtʃ ˈɪt wˈɜːk",
+      "pronunciation_override": null,
+      "selection_reason": "Explicitly stress IT mildly: base recognizer and CTC labels made the unstressed vowel ambiguous with AT. No written-text change, stretching or PCM vowel editing."
+    },
+    {
+      "id": "X003a",
+      "spoken_text": "The little number is the position. The big number is the value.",
+      "path": "candidates-v001/X003a.wav",
+      "duration_s": 3.4036666666666666,
+      "sha256": "310488b3aafd7940b69835ec17298cae94d295d1f427d6e85ca1826b6f81e11f",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 4.175,
+        "leading_s": 0.30525,
+        "trailing_s": 0.46608333333333335,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X003b",
+      "spoken_text": "At position two n, copy the value at position n.",
+      "path": "candidates-v001/X003b.wav",
+      "duration_s": 3.1420416666666666,
+      "sha256": "f3e55cff49fbc542e1c522de46067886934ee6e6414eaf861ada6fe0eeee1873",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.925,
+        "leading_s": 0.30391666666666667,
+        "trailing_s": 0.47904166666666664,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X003c",
+      "spoken_text": "At position two n plus one, use one minus the value at position n.",
+      "path": "candidates-v001/X003c.wav",
+      "duration_s": 4.556208333333333,
+      "sha256": "80e21b5586e5f1d56ee420b90e94d1bc9032a44c4b6db71097bb90d52fa77a23",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 5.325,
+        "leading_s": 0.306125,
+        "trailing_s": 0.46266666666666667,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X003d",
+      "spoken_text": "Zero becomes one. One becomes zero.",
+      "path": "candidates-v001/X003d.wav",
+      "duration_s": 2.5107083333333335,
+      "sha256": "3473da6be517eb218a7fac4e16f0b633e8740a3e7b80bd43bba3002f92c321ba",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.25,
+        "leading_s": 0.29720833333333335,
+        "trailing_s": 0.44208333333333333,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X003e",
+      "spoken_text": "Look back to the parent position, then follow the active formula.",
+      "path": "candidates-v001/X003e.wav",
+      "duration_s": 3.5227916666666665,
+      "sha256": "97699005cb042adbc8803c26c78bdae71969ff09bbf9e0509de5a926ebdab6b0",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 4.3,
+        "leading_s": 0.30420833333333336,
+        "trailing_s": 0.473,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X015a",
+      "spoken_text": "Sixteen values. Look at the first eight, then the next eight.",
+      "path": "candidates-v001/X015a.wav",
+      "duration_s": 3.228125,
+      "sha256": "98a682a9facdeb794567a4a85e0b5120b74b8867d889b6a9841114dce12e3968",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.925,
+        "leading_s": 0.26729166666666665,
+        "trailing_s": 0.4295833333333333,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X015b",
+      "spoken_text": "Keep the order. Change every zero to one, and every one to zero.",
+      "path": "candidates-v001/X015b.wav",
+      "duration_s": 3.9615416666666667,
+      "sha256": "319c75ef9bf9a14bccdb12704b8fe363140ca1c859c3f5e0e28b798b2dc1b815",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 4.725,
+        "leading_s": 0.29141666666666666,
+        "trailing_s": 0.4720416666666667,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X015c",
+      "spoken_text": "The old string and its changed copy join to make a longer string.",
+      "path": "candidates-v001/X015c.wav",
+      "duration_s": 3.763625,
+      "sha256": "680e8c746d0420a51025527fccd0e257a08f7c86de0063764ce82f30aeeed6c0",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 4.55,
+        "leading_s": 0.3192083333333333,
+        "trailing_s": 0.4671666666666667,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X015d",
+      "spoken_text": "The values have changed. Their order has stayed the same.",
+      "path": "candidates-v001/X015d.wav",
+      "duration_s": 2.930083333333333,
+      "sha256": "35f147e073c38630860616ae8897affcaaa148d8708ef9f98faa150a8dc73c60",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.675,
+        "leading_s": 0.30275,
+        "trailing_s": 0.44216666666666665,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X031a",
+      "spoken_text": "Here is the same rule, two tiles at a time.",
+      "path": "candidates-v001/X031a.wav",
+      "duration_s": 2.4884583333333334,
+      "sha256": "16b683b9031e04db3c34874b275024926352fefe7a4e149f7d35a32ab1becc0e",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.225,
+        "leading_s": 0.26945833333333336,
+        "trailing_s": 0.46708333333333335,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X031b",
+      "spoken_text": "Each zero opens into zero, one.",
+      "path": "candidates-v002/X031b.wav",
+      "duration_s": 2.414833333333333,
+      "sha256": "42b3407865e3d1498246645e00d36de3b9476a15170668823b34310db24fc3f3",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.125,
+        "leading_s": 0.318,
+        "trailing_s": 0.39216666666666666,
+        "peak_normalization_gain": 1
+      },
+      "origin": "selected-explicit-pronunciation-candidate-v002",
+      "phonemes": "ˈiːtʃ zˈiəɹoʊ ˈoʊpənz ˌɪntʊ zˈiəɹoʊ. wˈʌːn",
+      "pronunciation_override": null,
+      "selection_reason": "Original candidates preserved; explicit syllabic support for source-specific CTC uncertainty."
+    },
+    {
+      "id": "X031c",
+      "spoken_text": "Each one opens into one, zero.",
+      "path": "candidates-v001/X031c.wav",
+      "duration_s": 1.879375,
+      "sha256": "35fd613e6758cdfad23dc53b49649b71ccc1db3c77a78422aa181099592ae732",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 2.65,
+        "leading_s": 0.322125,
+        "trailing_s": 0.4485,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X031d",
+      "spoken_text": "The first child copies. The second child changes.",
+      "path": "candidates-v001/X031d.wav",
+      "duration_s": 3.1573333333333333,
+      "sha256": "a4d9daf004ab2e1f33ccc88cee9c94f2a0706268c30e31740b315ec6a2185e29",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.9,
+        "leading_s": 0.2895,
+        "trailing_s": 0.45316666666666666,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X031e",
+      "spoken_text": "Our counting still moves one value at a time.",
+      "path": "candidates-v001/X031e.wav",
+      "duration_s": 2.3735416666666667,
+      "sha256": "d67dc6af898d76ba65cd768b9966e7f4059a3cf98c3d80181c1d1a1f14194401",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.15,
+        "leading_s": 0.2971666666666667,
+        "trailing_s": 0.47929166666666667,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X127a",
+      "spoken_text": "One hundred twenty-eight values. The position itself has another clue.",
+      "path": "candidates-v001/X127a.wav",
+      "duration_s": 3.9504166666666665,
+      "sha256": "e6f04c29cd1a37f3c0573d25636298e4d8a3e00af2d975c68c88a4dfdf5d392b",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 4.725,
+        "leading_s": 0.3011666666666667,
+        "trailing_s": 0.47341666666666665,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X127b",
+      "spoken_text": "Write a position in binary, and count its ones.",
+      "path": "candidates-v001/X127b.wav",
+      "duration_s": 2.4822083333333333,
+      "sha256": "3c2adb351a49c2e07fa0be9189a60ee88c8bcee3c27243b59d715ebedd09f7a8",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.225,
+        "leading_s": 0.3122916666666667,
+        "trailing_s": 0.4305,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X127c",
+      "spoken_text": "An even number of ones gives zero. An odd number gives one.",
+      "path": "candidates-v001/X127c.wav",
+      "duration_s": 3.5485,
+      "sha256": "2a52b750763d293bc6b712c1ee101055c57c85526be7fb36e974a6b86f939526",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 4.275,
+        "leading_s": 0.29691666666666666,
+        "trailing_s": 0.4295833333333333,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X127d",
+      "spoken_text": "Four ones give zero. Seven ones give one.",
+      "path": "candidates-v001/X127d.wav",
+      "duration_s": 2.697416666666667,
+      "sha256": "0c1cd7d2e59c1a64a850adadd5a4307e878fc9294427e705018b2b77e9886a1b",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3.4,
+        "leading_s": 0.27491666666666664,
+        "trailing_s": 0.42766666666666664,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "X127e",
+      "spoken_text": "The formula and the woven pattern agree. Let's keep going.",
+      "path": "candidates-v001/X127e.wav",
+      "duration_s": 3.406833333333333,
+      "sha256": "f6f55b92cfc9a3a31c5ecb7757f9fe436e2da59c189bf8897a039a4dc4298e99",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 4.15,
+        "leading_s": 0.30645833333333333,
+        "trailing_s": 0.4367083333333333,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "O001",
+      "spoken_text": "Two hundred fifty-six values. One tile for every position.",
+      "path": "candidates-v001/O001.wav",
+      "duration_s": 3.740125,
+      "sha256": "02984cae7d120a26a4c70c19e20d338488525d42606d39f175ba26eb61991c06",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 4.5,
+        "leading_s": 0.28954166666666664,
+        "trailing_s": 0.4703333333333333,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "O002",
+      "spoken_text": "Zero, one, one, zero. Our pattern began right here.",
+      "path": "candidates-v001/O002.wav",
+      "duration_s": 3.2535,
+      "sha256": "cf0e802048b469fb55bafd9231ccb173eac3f6709ff8814fee65782c8686ccb0",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 4,
+        "leading_s": 0.29804166666666665,
+        "trailing_s": 0.44845833333333335,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "O003",
+      "spoken_text": "Copy the value. Change the value. The rule can keep growing the sequence.",
+      "path": "candidates-v001/O003.wav",
+      "duration_s": 4.325125,
+      "sha256": "a11ac9299fbb0d4e5587af8553dba30e8bf42dd7d0075ca0c9d859558d151d1f",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 5.025,
+        "leading_s": 0.29025,
+        "trailing_s": 0.409625,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    },
+    {
+      "id": "O004",
+      "spoken_text": "What a beautiful pattern. See you next time.",
+      "path": "candidates-v001/O004.wav",
+      "duration_s": 2.2684583333333332,
+      "sha256": "0f6b2eaf913a2dad5f12e2ae117d7527733e22d567c0d8cdeeab300da95ab7fe",
+      "generation": {
+        "provider": "local-kokoro",
+        "model_id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+        "voice_id": "af_heart",
+        "speed": 0.98,
+        "dtype": "fp32",
+        "status": "unreviewed-candidate"
+      },
+      "trim": {
+        "raw_duration_s": 3,
+        "leading_s": 0.296875,
+        "trailing_s": 0.43466666666666665,
+        "peak_normalization_gain": 1
+      },
+      "origin": "new-thue-morse-production-candidate",
+      "phonemes": null,
+      "pronunciation_override": null
+    }
+  ],
+  "term_count": 256,
+  "unique_source_count": 29,
+  "source_policy": "Unique zero/one WAVs repeat by source hash. Each count cue still gets an independent start/end and progress commit.",
+  "reused_gate": {
+    "path": "output/thue-morse-counting-001-v001/speech/reused-binary-v001/acceptance.json",
+    "sha256": "5f761154770ff097af32dc714e5880a60c0b3fe9de576f8bd95e68577ac796fa"
+  }
+}

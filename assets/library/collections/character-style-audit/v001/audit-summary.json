@@ -1,0 +1,798 @@
+{
+  "status": "style-consistency-needs-correction",
+  "checked_at_utc": "2026-11-11T14:59:04.333665+00:00",
+  "scope": {
+    "new_pose_pngs": 414,
+    "source_sheets": 46,
+    "characters": 11,
+    "canonical_comparison_references": 11,
+    "expanded": 270,
+    "eyecatches": 144
+  },
+  "ideal_outline_reference": {
+    "path": "assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+    "comparison_display": "output/character-style-audit-v001/ideal-outline-bear-430.png",
+    "body_reference_height_px": 430,
+    "rule": "Use the adopted bear as a family-style example while matching each character own canonical reference. Do not force all species to identical arbitrary px widths."
+  },
+  "overall": "全414姿勢を確認したが、細部の統一感は全素材合格と判定しない。4キャラクターに優先修正、2キャラクターに微調整候補、5キャラクターは概ね良好だが軽微差あり。",
+  "status_counts": {
+    "修正推奨": 4,
+    "微調整候補": 2,
+    "概ね良好・軽微差": 5
+  },
+  "method": {
+    "visual": "All46 sheets/414 poses inspected on light/dark backgrounds; fixed registered body heights (430px mammals,280px birds), independent reviewers and enlarged detail comparisons. Existing originals and historical QA remain untouched.",
+    "numeric": "Light-fill external silhouette side profiles, alpha>=230, silhouette slope<=0.75; darkness-to-interior contrast>=55, width crossing45% of luminance contrast, slope-normal correction. Scale uses registered sheet height; no per-pose fit. RGB medians and CIE Lab deltaE76; 12-color opaque palette nearest-reference distance.",
+    "numeric_caveats": "Screening, not automatic acceptance. Width flags below0.75/above1.35 and contour-color deltaE76>6 only request visual review. Dark fur and near-horizontal edges are excluded. Source texture, pose, low sample counts, accessories, species marks and registration proxies can bias estimates. Palette proportions are not required to match between poses.",
+    "automatic_flags_are_not_reject_count": true,
+    "automatically_flagged_pose_count": 170
+  },
+  "resolution": {
+    "new_poses_upscaled_at_comparison_size": 387,
+    "new_pose_count": 414,
+    "maximum_scale": 1.5925925925925926,
+    "interpretation": "Comparison size is not an episode requirement. Source-cell drawing resolution and per-sheet calibration contribute to edge softness and grain size; this is not an alpha defect."
+  },
+  "integrity": {
+    "selected_registered_pngs_pixel_verified": 456,
+    "source_files_hashed_before_and_after": 443,
+    "changed_selected_source_files": [],
+    "source_pixels_modified": false,
+    "catalogs_modified": false,
+    "historical_acceptance_records_modified": false,
+    "full_inventory_check": {
+      "status": "stale-unrelated-candidate-additions",
+      "added_paths": [
+        "assets/library/characters/kangaroo/animations/prime-v002/presentation-clap-candidate.png",
+        "assets/library/characters/kangaroo/animations/prime-v002/presentation-clap-clean-candidate.png",
+        "assets/library/characters/kangaroo/animations/prime-v002/presentation-clap-generation-prompt.txt",
+        "assets/library/characters/kangaroo/animations/prime-v002/presentation-clap-generation-record.json",
+        "assets/library/characters/kangaroo/animations/prime-v002/presentation-clap-sheet.png",
+        "assets/library/characters/kangaroo/animations/prime-v002/presentation-clap-transparency-edit-prompt.txt",
+        "assets/library/characters/kangaroo/animations/prime-v002/presentation-clap-transparency-edit-record.json",
+        "assets/library/characters/kangaroo/animations/prime-v002/wave-think-generation-prompt.txt",
+        "assets/library/characters/kangaroo/animations/prime-v002/wave-think-generation-record.json",
+        "assets/library/characters/kangaroo/animations/prime-v002/wave-think-sheet.png"
+      ],
+      "removed_paths": [],
+      "note": "No inventory refresh performed during read-only audit. These candidates are outside the414 adopted new poses."
+    }
+  },
+  "characters": [
+    {
+      "id": "bear-beret",
+      "name_ja": "赤い帽子のクマ",
+      "reviewed_new_pose_count": 18,
+      "reviewed_source_sheets": 2,
+      "assessment": "概ね良好・軽微差",
+      "observation": "輪郭の太さは通常姿に近く、顔・赤い帽子・体色を維持。新素材では紙目がやや均一。",
+      "group_median_contour_width_ratio_range": [
+        0.944380236925744,
+        1.0050563420976597
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/ideal-outline-bear-430.png",
+      "groups": [
+        {
+          "character_id": "bear-beret",
+          "set": "eyecatch",
+          "sheet": "tea_bow",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.944380236925744,
+          "median_contour_color_delta_e76": 3.925192608823847,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "bear-beret",
+          "set": "eyecatch",
+          "sheet": "jump_dance",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.0050563420976597,
+          "median_contour_color_delta_e76": 2.565076172742537,
+          "flagged_poses": 0
+        }
+      ]
+    },
+    {
+      "id": "rabbit-beret",
+      "name_ja": "ピンクのウサギ",
+      "reviewed_new_pose_count": 45,
+      "reviewed_source_sheets": 5,
+      "assessment": "概ね良好・軽微差",
+      "observation": "耳の左右差・ピンク／クリーム／赤い帽子は維持。一部シートの線幅が通常姿比で約1.3倍。",
+      "group_median_contour_width_ratio_range": [
+        0.9877951180472189,
+        1.3023209283713486
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/c/rabbit-beret-expanded_key_poses-reactions-light.jpg",
+      "groups": [
+        {
+          "character_id": "rabbit-beret",
+          "set": "expanded",
+          "sheet": "reactions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.3023209283713486,
+          "median_contour_color_delta_e76": 3.897586406255078,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "rabbit-beret",
+          "set": "expanded",
+          "sheet": "actions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.067627050820328,
+          "median_contour_color_delta_e76": 4.881223826100509,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "rabbit-beret",
+          "set": "expanded",
+          "sheet": "postures",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.9877951180472189,
+          "median_contour_color_delta_e76": 3.7726591282905955,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "rabbit-beret",
+          "set": "eyecatch",
+          "sheet": "tea_bow",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.1266506602641055,
+          "median_contour_color_delta_e76": 5.021058022075999,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "rabbit-beret",
+          "set": "eyecatch",
+          "sheet": "jump_dance",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.2971188475390154,
+          "median_contour_color_delta_e76": 3.2738151278060674,
+          "flagged_poses": 0
+        }
+      ]
+    },
+    {
+      "id": "tora",
+      "name_ja": "とら",
+      "reviewed_new_pose_count": 45,
+      "reviewed_source_sheets": 5,
+      "assessment": "概ね良好・軽微差",
+      "observation": "太さ・模様・顔は比較的近い。一部シートの線色には数値差があり、厳密な色合わせの候補。",
+      "group_median_contour_width_ratio_range": [
+        0.9714714714714714,
+        1.1129879879879878
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/b/tora-standing-and-contour-light.png",
+      "groups": [
+        {
+          "character_id": "tora",
+          "set": "expanded",
+          "sheet": "reactions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.9919294294294294,
+          "median_contour_color_delta_e76": 6.072298264977537,
+          "flagged_poses": 5
+        },
+        {
+          "character_id": "tora",
+          "set": "expanded",
+          "sheet": "actions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.056493993993994,
+          "median_contour_color_delta_e76": 9.26899078756572,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "tora",
+          "set": "expanded",
+          "sheet": "postures",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.9714714714714714,
+          "median_contour_color_delta_e76": 3.5302252753663876,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "tora",
+          "set": "eyecatch",
+          "sheet": "tea_bow",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.0681306306306306,
+          "median_contour_color_delta_e76": 3.376002190599171,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "tora",
+          "set": "eyecatch",
+          "sheet": "jump_dance",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.1129879879879878,
+          "median_contour_color_delta_e76": 4.477832033999957,
+          "flagged_poses": 0
+        }
+      ]
+    },
+    {
+      "id": "little-bird",
+      "name_ja": "小鳥",
+      "reviewed_new_pose_count": 27,
+      "reviewed_source_sheets": 3,
+      "assessment": "概ね良好・軽微差",
+      "observation": "外周線の中央値は約1.1倍。黄味と瞳の重さに小差があるが、大きな色・形の破綻とは判定しない。",
+      "group_median_contour_width_ratio_range": [
+        1.0641775636613902,
+        1.0906744666207846
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/c/little-bird-expanded_key_poses-postures-light.jpg",
+      "groups": [
+        {
+          "character_id": "little-bird",
+          "set": "expanded",
+          "sheet": "reactions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.0641775636613902,
+          "median_contour_color_delta_e76": 4.004746688277072,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "little-bird",
+          "set": "expanded",
+          "sheet": "actions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.0906744666207846,
+          "median_contour_color_delta_e76": 2.708256753451694,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "little-bird",
+          "set": "expanded",
+          "sheet": "postures",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.0879215416379904,
+          "median_contour_color_delta_e76": 4.518145473114695,
+          "flagged_poses": 0
+        }
+      ]
+    },
+    {
+      "id": "siamese-cat",
+      "name_ja": "シャム猫",
+      "reviewed_new_pose_count": 45,
+      "reviewed_source_sheets": 5,
+      "assessment": "微調整候補",
+      "observation": "輪郭が少し太く、顔のぼかし・クリーム色・紙目に差。430px表示の額の例で通常4pxに対し新素材5〜6px。",
+      "group_median_contour_width_ratio_range": [
+        1.0776364599894013,
+        1.232114467408585
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/a/siamese-cat-normalized.png",
+      "groups": [
+        {
+          "character_id": "siamese-cat",
+          "set": "expanded",
+          "sheet": "reactions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.0776364599894013,
+          "median_contour_color_delta_e76": 6.959788584321652,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "siamese-cat",
+          "set": "expanded",
+          "sheet": "actions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.232114467408585,
+          "median_contour_color_delta_e76": 9.630391009014422,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "siamese-cat",
+          "set": "expanded",
+          "sheet": "postures",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.2188659247482776,
+          "median_contour_color_delta_e76": 4.9887497659854505,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "siamese-cat",
+          "set": "eyecatch",
+          "sheet": "tea_bow",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.1245363010068892,
+          "median_contour_color_delta_e76": 6.461478108473082,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "siamese-cat",
+          "set": "eyecatch",
+          "sheet": "jump_dance",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.1653418124006358,
+          "median_contour_color_delta_e76": 6.378645952351646,
+          "flagged_poses": 9
+        }
+      ]
+    },
+    {
+      "id": "red-panda",
+      "name_ja": "レッサーパンダ",
+      "reviewed_new_pose_count": 45,
+      "reviewed_source_sheets": 5,
+      "assessment": "修正推奨",
+      "observation": "輪郭が太め・暗め。拡充版の胴の茶色は明るく鈍い方向へ変化し、全てが一様に暗いわけではない。",
+      "group_median_contour_width_ratio_range": [
+        1.3216287990557687,
+        1.501032753024491
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/a/red-panda-normalized.png",
+      "groups": [
+        {
+          "character_id": "red-panda",
+          "set": "expanded",
+          "sheet": "reactions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.4172322218943643,
+          "median_contour_color_delta_e76": 8.834487884623705,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "red-panda",
+          "set": "expanded",
+          "sheet": "actions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.3440542933018589,
+          "median_contour_color_delta_e76": 11.219161694070817,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "red-panda",
+          "set": "expanded",
+          "sheet": "postures",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.501032753024491,
+          "median_contour_color_delta_e76": 15.998855004023032,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "red-panda",
+          "set": "eyecatch",
+          "sheet": "tea_bow",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.3216287990557687,
+          "median_contour_color_delta_e76": 5.0680262455925025,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "red-panda",
+          "set": "eyecatch",
+          "sheet": "jump_dance",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.3977574505753911,
+          "median_contour_color_delta_e76": 11.745587128924681,
+          "flagged_poses": 9
+        }
+      ]
+    },
+    {
+      "id": "meerkat",
+      "name_ja": "ミーアキャット",
+      "reviewed_new_pose_count": 45,
+      "reviewed_source_sheets": 5,
+      "assessment": "修正推奨",
+      "observation": "拡充版の頭幅・頭身が変化。wave_restの頬幅は通常201.5pxに対し238px（約18%増）。アイキャッチ版は近い。",
+      "group_median_contour_width_ratio_range": [
+        0.9175789802940256,
+        1.1354394745073506
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/a/meerkat-normalized.png",
+      "groups": [
+        {
+          "character_id": "meerkat",
+          "set": "expanded",
+          "sheet": "reactions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.0086018142008133,
+          "median_contour_color_delta_e76": 7.9305428356577625,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "meerkat",
+          "set": "expanded",
+          "sheet": "actions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.0846105724116357,
+          "median_contour_color_delta_e76": 9.527624368276143,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "meerkat",
+          "set": "expanded",
+          "sheet": "postures",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.1354394745073506,
+          "median_contour_color_delta_e76": 11.586563548672984,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "meerkat",
+          "set": "eyecatch",
+          "sheet": "tea_bow",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.049264935877385,
+          "median_contour_color_delta_e76": 5.76450302442151,
+          "flagged_poses": 4
+        },
+        {
+          "character_id": "meerkat",
+          "set": "eyecatch",
+          "sheet": "jump_dance",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.9175789802940256,
+          "median_contour_color_delta_e76": 7.155790161481558,
+          "flagged_poses": 9
+        }
+      ]
+    },
+    {
+      "id": "kangaroo",
+      "name_ja": "カンガルー",
+      "reviewed_new_pose_count": 45,
+      "reviewed_source_sheets": 5,
+      "assessment": "概ね良好・軽微差",
+      "observation": "アイキャッチは輪郭がやや細く柔らかく、頭身にも小差。自動測定だけで再生成必須とは判定しない。",
+      "group_median_contour_width_ratio_range": [
+        0.8643612255868123,
+        0.9469629098727826
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/b/kangaroo-standing-and-contour-light.png",
+      "groups": [
+        {
+          "character_id": "kangaroo",
+          "set": "expanded",
+          "sheet": "reactions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.9469629098727826,
+          "median_contour_color_delta_e76": 1.9114917976896848,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "kangaroo",
+          "set": "expanded",
+          "sheet": "actions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.9396165561727288,
+          "median_contour_color_delta_e76": 6.1176931032315665,
+          "flagged_poses": 8
+        },
+        {
+          "character_id": "kangaroo",
+          "set": "expanded",
+          "sheet": "postures",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.8643612255868123,
+          "median_contour_color_delta_e76": 5.269140197911662,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "kangaroo",
+          "set": "eyecatch",
+          "sheet": "tea_bow",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.9285074359433794,
+          "median_contour_color_delta_e76": 4.73554938589035,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "kangaroo",
+          "set": "eyecatch",
+          "sheet": "jump_dance",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.8704533237771007,
+          "median_contour_color_delta_e76": 2.7596783682956763,
+          "flagged_poses": 0
+        }
+      ]
+    },
+    {
+      "id": "hedgehog",
+      "name_ja": "ハリネズミ",
+      "reviewed_new_pose_count": 45,
+      "reviewed_source_sheets": 5,
+      "assessment": "修正推奨",
+      "observation": "拡充actionsは外周線・肌色・しわ状の紙目が強い。posturesは解像度由来の輪郭の柔らかさもある。",
+      "group_median_contour_width_ratio_range": [
+        0.9321118158327462,
+        1.5701198026779424
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/b/hedgehog-standing-and-contour-light.png",
+      "groups": [
+        {
+          "character_id": "hedgehog",
+          "set": "expanded",
+          "sheet": "reactions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.1355414611228565,
+          "median_contour_color_delta_e76": 5.925826390231018,
+          "flagged_poses": 3
+        },
+        {
+          "character_id": "hedgehog",
+          "set": "expanded",
+          "sheet": "actions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.5701198026779424,
+          "median_contour_color_delta_e76": 8.924046533211536,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "hedgehog",
+          "set": "expanded",
+          "sheet": "postures",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.1712473572938689,
+          "median_contour_color_delta_e76": 7.104304293227664,
+          "flagged_poses": 9
+        },
+        {
+          "character_id": "hedgehog",
+          "set": "eyecatch",
+          "sheet": "tea_bow",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.012919896640827,
+          "median_contour_color_delta_e76": 2.3967439617303183,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "hedgehog",
+          "set": "eyecatch",
+          "sheet": "jump_dance",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.9321118158327462,
+          "median_contour_color_delta_e76": 4.541041084599387,
+          "flagged_poses": 0
+        }
+      ]
+    },
+    {
+      "id": "fairy-pitta",
+      "name_ja": "ヤイロチョウ",
+      "reviewed_new_pose_count": 27,
+      "reviewed_source_sheets": 3,
+      "assessment": "修正推奨",
+      "observation": "expanded/thinkだけ、通常姿の単色の丸い目にない白いハイライトがある。",
+      "group_median_contour_width_ratio_range": [
+        0.8992087415222305,
+        1.2339864355689525
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/c/fairy-pitta-eye-construction-comparison.png",
+      "groups": [
+        {
+          "character_id": "fairy-pitta",
+          "set": "expanded",
+          "sheet": "reactions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.8992087415222305,
+          "median_contour_color_delta_e76": 4.35237372387545,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "fairy-pitta",
+          "set": "expanded",
+          "sheet": "actions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.9694800301431801,
+          "median_contour_color_delta_e76": 4.143788344201731,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "fairy-pitta",
+          "set": "expanded",
+          "sheet": "postures",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 1.2339864355689525,
+          "median_contour_color_delta_e76": 6.954443133034136,
+          "flagged_poses": 9
+        }
+      ]
+    },
+    {
+      "id": "onagadori",
+      "name_ja": "オナガドリ",
+      "reviewed_new_pose_count": 27,
+      "reviewed_source_sheets": 3,
+      "assessment": "微調整候補",
+      "observation": "座位シートの白い羽にピンク／ベージュの陰影が強め。外周線は通常姿より細め。長い尾・鳥の造形は維持。",
+      "group_median_contour_width_ratio_range": [
+        0.7912494558119285,
+        0.8733130169786677
+      ],
+      "diagnostic_evidence": "output/character-style-audit-v001/c/onagadori-expanded_key_poses-postures-light.jpg",
+      "groups": [
+        {
+          "character_id": "onagadori",
+          "set": "expanded",
+          "sheet": "reactions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.8733130169786677,
+          "median_contour_color_delta_e76": 1.3507771492765217,
+          "flagged_poses": 0
+        },
+        {
+          "character_id": "onagadori",
+          "set": "expanded",
+          "sheet": "actions",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.80387461906835,
+          "median_contour_color_delta_e76": 5.3147878982320185,
+          "flagged_poses": 2
+        },
+        {
+          "character_id": "onagadori",
+          "set": "expanded",
+          "sheet": "postures",
+          "pose_count": 9,
+          "measurable_pose_count": 9,
+          "median_contour_width_ratio": 0.7912494558119285,
+          "median_contour_color_delta_e76": 5.541053406394703,
+          "flagged_poses": 4
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "S01",
+      "priority": "優先修正",
+      "character_id": "red-panda",
+      "scope": "拡充3シートを優先。アイキャッチ2シートも線幅・線色を照合。",
+      "confirmed_examples": [
+        "expanded/neutral",
+        "expanded/wave_rest",
+        "expanded/nod_down"
+      ],
+      "observation": "登録身体高で外周線のシート中央値が通常姿比約1.3〜1.5倍。430pxでの額の代表例は通常5px、新素材7px。線色と胴の茶色にも差。",
+      "action": "採用通常姿の線幅・茶色・水彩粒度を直接参照して新しい版を作る。全キャラ共通pxの線幅へ機械的に揃えない。",
+      "evidence": [
+        "output/character-style-audit-v001/a/red-panda-normalized.png",
+        "output/character-style-audit-v001/a/representative-metrics.json"
+      ]
+    },
+    {
+      "id": "S02",
+      "priority": "優先修正",
+      "character_id": "meerkat",
+      "scope": "expanded/actionsを優先。expanded/reactionsの頭身も確認。",
+      "confirmed_examples": [
+        "expanded/wave_rest",
+        "expanded/neutral"
+      ],
+      "observation": "430px表示で頬幅が通常201.5px、expanded/neutral220px、expanded/wave_rest238px。eyecatch/neutral204px・jump_ready205pxは通常に近い。",
+      "action": "頭身とシート間の校正を見直す。ポーズごとのbbox fitや、全身を個別に縮める処理で体型差を隠さない。",
+      "evidence": [
+        "output/character-style-audit-v001/a/meerkat-normalized.png"
+      ]
+    },
+    {
+      "id": "S03",
+      "priority": "優先修正",
+      "character_id": "hedgehog",
+      "scope": "expanded/actionsの9姿勢。expanded/posturesの9姿勢は解像感も調整候補。",
+      "confirmed_examples": [
+        "expanded/wave_rest",
+        "expanded/nod_down"
+      ],
+      "observation": "actionsの外周線は自動プロファイル中央値で通常姿比約1.57倍。肌が桃色寄りで、しわ状の紙目が粗い。posturesは430px表示で1.59倍拡大となり柔らかく見える。",
+      "action": "線と塗り・紙目を通常姿へ合わせ、一体あたりの描画解像度も確保した新しい版を用意する。",
+      "evidence": [
+        "output/character-style-audit-v001/b/hedgehog-standing-and-contour-light.png",
+        "output/character-style-audit-v001/b/audit.json"
+      ]
+    },
+    {
+      "id": "S04",
+      "priority": "優先修正",
+      "character_id": "fairy-pitta",
+      "scope": "expanded/thinkの1姿勢。",
+      "confirmed_examples": [
+        "expanded/think"
+      ],
+      "observation": "通常姿と隣接するexpanded/neutralは単色の丸い目だが、thinkには白いハイライトが追加されている。視線・瞬きに必要な変更ではない。",
+      "action": "採用通常姿の目の形式を保った差分を新しい版で作る。",
+      "evidence": [
+        "output/character-style-audit-v001/c/fairy-pitta-eye-construction-comparison.png"
+      ]
+    },
+    {
+      "id": "S05",
+      "priority": "微調整候補",
+      "character_id": "siamese-cat",
+      "scope": "拡充・アイキャッチの各シート。",
+      "confirmed_examples": [
+        "expanded/neutral",
+        "expanded/wave_rest",
+        "eyecatch/neutral",
+        "eyecatch/jump_ready"
+      ],
+      "observation": "額の例で通常4pxに対し新素材5〜6px。クリーム色・顔のぼかし・紙目も少し異なる。",
+      "action": "主な造形は維持されているため、線の重さとぼかし・塗りを通常姿へ近づける。",
+      "evidence": [
+        "output/character-style-audit-v001/a/siamese-cat-normalized.png",
+        "output/character-style-audit-v001/a/representative-metrics.json"
+      ]
+    },
+    {
+      "id": "S06",
+      "priority": "微調整候補",
+      "character_id": "onagadori",
+      "scope": "expanded/posturesの9姿勢。",
+      "confirmed_examples": [
+        "expanded/seated_neutral",
+        "expanded/seated_stretch",
+        "expanded/stand_half"
+      ],
+      "observation": "体の白羽の代表中央値は通常RGB251/244/235に対し新姿勢247〜248/233〜234/223〜225。選別した白羽領域のΔE76は約3.9〜4.4。線は細め。",
+      "action": "尾の全幅で体を縮小せず、身体の白羽の陰影と輪郭を自身の通常姿へ合わせる。",
+      "evidence": [
+        "output/character-style-audit-v001/c/onagadori-expanded_key_poses-postures-light.jpg",
+        "output/character-style-audit-v001/c/onagadori-seated_neutral-detail.png"
+      ]
+    }
+  ],
+  "evidence": {
+    "primary_comparison": "output/character-style-audit-v001/key-findings-comparison.png",
+    "full_metrics": "output/character-style-audit-v001/metrics.json",
+    "visual_reviews": [
+      "output/character-style-audit-v001/a/findings.json",
+      "output/character-style-audit-v001/b/audit.json",
+      "output/character-style-audit-v001/c/findings.json"
+    ],
+    "reproduction_tool": "tools/audit_character_style.py"
+  }
+}

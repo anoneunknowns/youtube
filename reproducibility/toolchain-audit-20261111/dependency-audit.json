@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-11T13:02:37.495170+00:00",
+  "scope": "JavaScript/Python libraries only; system runtime and multimedia tool updates are handled by parent agent.",
+  "decisions": [
+    {
+      "name": "@huggingface/transformers",
+      "selected_version": "3.8.1",
+      "latest_stable_version": "4.3.2",
+      "decision": "kept_latest_supported_major",
+      "reason": "kokoro-js1.2.1 declares^3.5.1; two-version v4/3 setup rejects Kokoro-created style/speed Tensor inputs in v4 validator. Latest3.x is3.8.1.",
+      "source_url": "https://registry.npmjs.org/@huggingface%2ftransformers"
+    },
+    {
+      "name": "kokoro-js",
+      "selected_version": "1.2.1",
+      "latest_stable_version": "1.2.1",
+      "decision": "already_latest_stable",
+      "reason": "Official npm latest remains1.2.1.",
+      "source_url": "https://registry.npmjs.org/kokoro-js"
+    },
+    {
+      "name": "@huggingface/jinja",
+      "selected_version": "0.5.12",
+      "latest_stable_version": "0.5.12",
+      "decision": "updated",
+      "reason": "Compatible transitive dependency^0.5.3; lock changed0.5.11→0.5.12.",
+      "source_url": "https://registry.npmjs.org/@huggingface%2fjinja"
+    },
+    {
+      "name": "sharp",
+      "selected_version": "0.34.5",
+      "latest_stable_version": "0.35.5",
+      "decision": "kept_latest_compatible_minor",
+      "reason": "Transformers3.8.1 declares^0.34.1;0.34.5 is latest0.34.x,0.35.5 is outside that contract.",
+      "source_url": "https://registry.npmjs.org/sharp"
+    },
+    {
+      "name": "onnxruntime-node",
+      "selected_version": "1.21.0",
+      "latest_stable_version": "1.31.1",
+      "decision": "kept_upstream_exact_pin",
+      "reason": "Transformers3.8.1 requires exact1.21.0,so do not independently replace with1.31.1.",
+      "source_url": "https://registry.npmjs.org/onnxruntime-node"
+    },
+    {
+      "name": "onnxruntime-web",
+      "selected_version": "1.22.0-dev.20250409-89f8206ba4",
+      "latest_stable_version": "1.31.1",
+      "decision": "kept_upstream_exact_pin",
+      "reason": "This prerelease is an exact upstream dependency of the stable Transformers3.8.1 package; not independently upgraded. The Node pipeline uses native onnxruntime-node.",
+      "source_url": "https://registry.npmjs.org/onnxruntime-web"
+    },
+    {
+      "name": "protobufjs",
+      "selected_version": "7.6.6",
+      "latest_stable_version": "8.8.1",
+      "decision": "kept_latest_compatible_major",
+      "reason": "Upstream onnxruntime-web7.x dependency; npm latest-7 tag is7.6.6. Latest8.8.1 is a different major.",
+      "source_url": "https://registry.npmjs.org/protobufjs"
+    },
+    {
+      "name": "phonemizer",
+      "selected_version": "1.2.1",
+      "latest_stable_version": "1.2.1",
+      "decision": "already_latest_stable",
+      "reason": "Official npm latest1.2.1.",
+      "source_url": "https://registry.npmjs.org/phonemizer"
+    },
+    {
+      "name": "Pillow",
+      "selected_version": "13.0.0",
+      "latest_stable_version": "13.0.0",
+      "decision": "already_latest_stable",
+      "reason": "Official PyPI latest13.0.0; project.venv installed13.0.0.",
+      "source_url": "https://pypi.org/pypi/Pillow/json"
+    }
+  ],
+  "changed_repository_files": [
+    "package-lock.json"
+  ],
+  "unchanged_dependency_files": [
+    "package.json",
+    ".npmrc",
+    "requirements.txt"
+  ],
+  "installation": "npm ci --no-audit --no-fund ran after the lock update and succeeded with56packages.",
+  "native_script_allowlist": "Unchanged exact versions onnxruntime-node1.21.0/protobufjs7.6.6/sharp0.34.5.",
+  "smoke_result": "dependency-smoke.json",
+  "v4_incompatibility_result": "transformers-v4-incompatibility-probe.json",
+  "models_or_production_media_generated": false
+}

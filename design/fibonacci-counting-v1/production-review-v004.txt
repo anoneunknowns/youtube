@@ -1,0 +1,51 @@
+Num-Num Numbers — フィボナッチv004 制作レビュー
+状態：完成v004実媒体の独立gate合格。ユーザー承認とは区別する。
+
+今回の改訂は「猫の動きが少なく寂しい」という要望への対応。教材・音声・数値・全104時刻を保ち、本編の視線・小頷き・短い瞬きと説明中の指示を増やす。
+音声測定正本はoutput/fibonacci-counting-001-v002/audio-build/timeline.jsonと同ディレクトリの校正済みmaster/AAC。視覚上の親版はoutput/fibonacci-counting-001-v003/timeline.jsonで、F20の88→47px移動中easingも継承。
+全41項・39加算、二つの1、F40=102,334,155が初1億超え、119数詞/式入力と全104English本文・cue時刻を今回の実入力から再確認した。
+
+動作の実入力
+  旧16姿を保ち、直接生成の新6姿（上下の左視線、nod_mid/down、blink_half/closed）を登録。合計22姿。
+  schedule118窓=39式attention、38handoff追視、6checkpoint指示、15結果後専用nod窓、4新threshold反応、旧4重要窓、intro7/finale3/seed2。
+  seedN001内にも1回小頷きがあり、nod_downの実使用区間は計16回。専用15窓と混同しない。短いblink_closedは14回。
+  旧opening/goodbye各2往復、million-notice、1.2秒の達成笑顔を時刻/keyframesごと保持。新thresholdはF17/F26/F36/F40、1mF31は旧窓。
+  a/bは同じupper-left眼位を共用。plus時の基準視線、結果へのlower-left、受渡し追視をcueに結ぶ。別々の水平眼位を描いたとはしない。
+  身体400px、足(1655,990)、原画全体の共通family尺度と足支点。hold表示で、全身crossfade/bob/呼吸代用伸縮や原画修正をしない。
+  118窓は重複なし。nodは選択された読了後gap、短blinkは腕を戻した安定中にhalf2/closed3/half2frame、operator/結果/handoff境界を避ける。
+
+全104cue文書
+  scenario-v004.txtは不変English/実測時刻・親版の教材cueと、発話中の猫poseを実frame区間で一つずつ列挙。
+  effective-visual-cues-v004.jsonには同じ104対応と、各cueに結び付く読了後のnod/反応/説明後handoff窓を分けて保存した。
+  動作入力で計算した姿勢列は完成MP4から採取した観測ではなく、実媒体の合否はproduction-run-v004の最終gateを正本とする。
+
+公開文
+  publishing-v002のユーザーstyle（自然なtitle/説明本文、Num-Num Numbers — Paspla Studio、公式URL、罫線）を正本とする。
+  制作コード・SHA・LUFS・認識器名などを動画の公開説明へ混ぜない。canonicalへのコピー比較状況はspecのpublic_metadataに記録。
+
+音声
+  新しい音声生成・ASR/CTCは行っていない。全104原音と測定base/master/AAC参照はv003から同一。
+  完成v004への認識監査の継承は、実AACパケット/時刻・ADTS・左右PCMの同一証拠後にだけ確定する。
+
+腕を戻す9framesの追加調整
+  初回v004は技術/動作の自動gateに合格したが、最終視覚比較でT018のfull→gaze戻り3か所をさらに自然につなぐと判断した。
+  frame6037/6095/6125から各3framesをpresent_halfへ替え、その後は元gazeへ残り時間を保って戻す。変更は9actorframesだけ。
+  全118窓境界・声・教材・数学・時刻は不変、他117窓は完全同一。新scheduleには他のfull→nonhalf直接遷移がない。
+  初回d620schedule/a28movie/2b08top/QA1と当時の文書は履歴として保全。採用対象はproduction-v002/以下の新媒体である。
+
+  このv004/production-v002は絵の第2出力試行を示し、測定音声の旧fibonacci-counting-001-v002とは別の区分である。
+
+完成媒体とgate
+  {'path': 'output/fibonacci-counting-001-v004/production-v002/paspla-studio-fibonacci-numbers-0-to-102334155-1080p.mp4', 'sha256': '2b4ce0cb317f59b2e284eb687c2e733e23c084371b68f58d546fc5959e4b74ee'}
+  full_media: {'path': 'output/fibonacci-counting-001-v004/production-v002/qa/v001/verification.json', 'sha256': '7f476b82d0c0a683f6e0ebe985ced4d1cc1fb47d2d0feace251dbf38a4bc6fe8'}
+  acting: {'path': 'output/fibonacci-counting-001-v004/production-v002/qa/motion-v001/verification.json', 'sha256': '5542188db949217daa48a772505a8f3fe1a3119dea7ed7094c2366ba9a167f0b'}
+  audio_identity: {'path': 'output/fibonacci-counting-001-v004/production-v002/audio-inheritance-qa/v001/verification.json', 'sha256': '580d25e83f3c89f0178fee6fa343bf89386d5c58ba88a6003a68a52779357320'}
+  additional_0: {'path': 'output/fibonacci-counting-001-v004/production-v002/qa/motion-v001/corrected-return-measurements-v002.json', 'sha256': '75028171792927a8d504fa984ed6030c4b26e8d65697888201d7215ca9a1304b'}
+  additional_1: {'path': 'design/fibonacci-counting-v1/revision-v004/final-visual-review/final-visual-review.json', 'sha256': '4c8948613d75ecbfb9644c3e89d2b4b6c489cb867867ef4b105550c227393f21'}
+  実actor全16,104frame、118窓、527切替、22原画辞書中17姿の使用を独立に照合。
+  nod_down16回（seed含む）、短blink14回、最長閉眼1.2秒、最長同姿勢5.5667秒。これらは一律の運動率基準ではない。
+  実actor照合の不備0。相対pixel projection最大0.067423、許容0.3。静止/50%二重像の5対照を拒否。
+  以上は完成v004を対象とするgate。旧v003のPASSをそのまま新版の画素合格とは扱っていない。
+
+受入・再出力・登録の正本: design/fibonacci-counting-v1/production-run-v004.json（役割参照、逆SHAを付けず循環を防ぐ）。
+今回の文書作成では旧v003文書・媒体・QA・共有台帳を変更していない。人による全編連続視聴/試聴を主張しない。

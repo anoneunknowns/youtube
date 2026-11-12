@@ -1,0 +1,1459 @@
+[
+  {
+    "id": "I01",
+    "kind": "intro",
+    "text": "Hi! Welcome to our ribbon plaza. Let's count Catalan numbers, and watch the equations make each new value.",
+    "japanese": "こんにちは。リボンの広場へようこそ。カタラン数を数えながら、数式が新しい値を作るところを見よう。",
+    "visual_cue": "白い砂丘を遠くに望む広場へ入り、空中にリボン道を結ぶ。とらは前景中央下、400px基準で一往復の手振り。タイトルに最終値を先出ししない。",
+    "word_count": 18,
+    "planning_window_seconds": [
+      0.8,
+      8.0
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "I02",
+    "kind": "intro",
+    "text": "A ribbon can go up and down. It starts on this line, finishes on the line, and never goes below it.",
+    "japanese": "リボンは上ったり下りたりする。線から出発して線に戻り、途中で線より下には行かないよ。",
+    "visual_cue": "基線を独立描画。UとDを同じ幅の斜め線で見せる。正しい道だけを残す。とらの視線は移動する先端へ。",
+    "word_count": 21,
+    "planning_window_seconds": [
+      8.6,
+      17.0
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "I03",
+    "kind": "intro",
+    "text": "One up step and one down step make a pair. Catalan numbers count the different paths for each number of pairs.",
+    "japanese": "上り一つと下り一つで一組。この組数ごとの異なる道の通り数がカタラン数だよ。",
+    "visual_cue": "教材はDyck path。物の総数や長さと通り数を混ぜない。n=組数、Cの添字=同じ組数、値=通り数。",
+    "word_count": 21,
+    "planning_window_seconds": [
+      17.6,
+      26.0
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "I04",
+    "kind": "intro",
+    "text": "With no pairs, there is one empty path. An empty path still counts as one choice. Our first value is one.",
+    "japanese": "組がない時も、空の道を選ぶ方法は一つある。空でも一通り。最初の値は1だよ。",
+    "visual_cue": "C0の独立枠と「0 PAIRS / 1 WAY」。空の経路の起点のみ描く。C0=0と誤表示しない。",
+    "word_count": 21,
+    "planning_window_seconds": [
+      26.6,
+      35.0
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "I05",
+    "kind": "intro",
+    "text": "The small label tells us the number of pairs. The big number tells us how many paths. They tell us different things.",
+    "japanese": "小さなラベルは組数。大きな数字は道の通り数。二つは違う意味なんだ。",
+    "visual_cue": "小添字0と大きい値1を矢印で区別。添字も値も数値データに束縛。",
+    "word_count": 22,
+    "planning_window_seconds": [
+      35.6,
+      44.4
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "I06",
+    "kind": "intro",
+    "text": "We will count from C zero to C thirty. First we will see the paths, then a quicker equation will make the growing values.",
+    "japanese": "CゼロからCサーティまで数えるよ。まず道を見て、その後は同じ数を作る速い式で大きな値を作ろう。",
+    "visual_cue": "目標はC30と項数31だけ示す。最終値は非表示。中央の計算盤へ寄り始める。",
+    "word_count": 24,
+    "planning_window_seconds": [
+      45.0,
+      54.6
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "N000",
+    "kind": "seed",
+    "text": "one",
+    "japanese": "1",
+    "visual_cue": "C0=1を発話0.12秒前に確定。0組の空の道を1通りとして示す。読み終わり後の進捗は1/31。",
+    "index": 0,
+    "word_count": 1,
+    "planning_window_seconds": [
+      55.2,
+      55.6
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T000a",
+    "kind": "rule",
+    "text": "To move one place forward, take the last value, multiply by four times the new label minus two, then divide by the new label plus one.",
+    "japanese": "一つ先へ進むには、直前の値に「新しい添字の4倍から2を引いた数」を掛け、「新しい添字に1を足した数」で割るよ。",
+    "visual_cue": "C_n=C_(n−1)×(4n−2)÷(n+1)、n≥1。nは作る項の添字と明示。前値→乗算器→整数中間積→除算器→結果を結ぶ。",
+    "word_count": 26,
+    "planning_window_seconds": [
+      56.2,
+      66.6
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T000b",
+    "kind": "rule",
+    "text": "Always multiply first. The middle window shows the whole product. Then divide that product into equal shares. One share gives the next Catalan number.",
+    "japanese": "先に掛ける。中央の窓に整数の積を出し、それを等しく分ける。その一つ分が次のカタラン数だよ。",
+    "visual_cue": "×と÷を順番に点灯。分数係数だけを先に作らない。窓は値であり、描いた紙片の実個数を意味しない。",
+    "word_count": 24,
+    "planning_window_seconds": [
+      67.2,
+      76.8
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T000c",
+    "kind": "rule",
+    "text": "These number windows show values. The ribbons point to the calculation; they are not a picture of every path when the numbers become large.",
+    "japanese": "数値窓は値を表す。リボンは計算の案内。数が大きい時に、すべての道を描いているわけではないよ。",
+    "visual_cue": "「VALUE WINDOWS」を短く示す。記号的な流れと有限個数の実物説明を区別。",
+    "word_count": 24,
+    "planning_window_seconds": [
+      77.4,
+      87.0
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E001",
+    "kind": "formula-prefix",
+    "text": "one times two, divided by two, equals.",
+    "japanese": "1 掛ける 2、割る 2 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 1,
+    "integer_product": "2",
+    "integer_product_display": "2",
+    "coefficient_n": 1,
+    "multiplier": 2,
+    "divisor": 2,
+    "word_count": 7,
+    "planning_window_seconds": [
+      89.0,
+      91.8
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N001",
+    "kind": "result",
+    "text": "one",
+    "japanese": "1",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 1,
+    "word_count": 1,
+    "planning_window_seconds": [
+      91.96,
+      92.36
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T001a",
+    "kind": "two-ones",
+    "text": "We have one and one. The first belongs to no pairs; the second belongs to one pair. Same value, different places. Keep both.",
+    "japanese": "1、1と並んだ。最初は0組、次は1組。値は同じでも位置は違う。どちらも残すよ。",
+    "visual_cue": "C0=1/C1=1を二つの項として履歴へ。とらは二つの窓を順に見て、小さく頷く。",
+    "index": 1,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 23,
+    "planning_window_seconds": [
+      92.96,
+      102.16
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T001b",
+    "kind": "path-example",
+    "text": "For one pair, the only path goes up, then down. Its two ends touch the line. There is exactly one way.",
+    "japanese": "1組の道は上って下りる一つだけ。両端が線に触れ、一通りになる。",
+    "visual_cue": "UD一本を実経路として描く。起点/終点を二つの小円で示す。装飾のアーチと混同しない。",
+    "index": 1,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 21,
+    "planning_window_seconds": [
+      102.76,
+      111.16
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E002",
+    "kind": "formula-prefix",
+    "text": "one times six, divided by three, equals.",
+    "japanese": "1 掛ける 6、割る 3 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 2,
+    "integer_product": "6",
+    "integer_product_display": "6",
+    "coefficient_n": 2,
+    "multiplier": 6,
+    "divisor": 3,
+    "word_count": 7,
+    "planning_window_seconds": [
+      113.16,
+      115.96
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N002",
+    "kind": "result",
+    "text": "two",
+    "japanese": "2",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 2,
+    "word_count": 1,
+    "planning_window_seconds": [
+      116.12,
+      116.52
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T002a",
+    "kind": "path-example",
+    "text": "For two pairs, we can climb twice and come down twice, or make two little peaks. Different paths, the same number of pairs.",
+    "japanese": "2組では二回上って二回下りる道と、小さな山を二つ作る道がある。組数は同じでも道が違う。",
+    "visual_cue": "UUDDとUDUDを同じ横幅のセルで並べる。とらは下部中央から二つへ手を開いて案内。",
+    "index": 2,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 23,
+    "planning_window_seconds": [
+      117.12,
+      126.32
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E003",
+    "kind": "formula-prefix",
+    "text": "two times ten, divided by four, equals.",
+    "japanese": "2 掛ける 10、割る 4 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 3,
+    "integer_product": "20",
+    "integer_product_display": "20",
+    "coefficient_n": 3,
+    "multiplier": 10,
+    "divisor": 4,
+    "word_count": 7,
+    "planning_window_seconds": [
+      128.32,
+      131.12
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N003",
+    "kind": "result",
+    "text": "five",
+    "japanese": "5",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 3,
+    "word_count": 1,
+    "planning_window_seconds": [
+      131.28,
+      131.68
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T003a",
+    "kind": "first-return",
+    "text": "Here are all five paths for three pairs. Watch the first step up. Follow its matching step down: that is the first return to the line.",
+    "japanese": "3組の道を五つ全部見よう。最初の上りに続いて、初めて線に戻る下りを探すよ。",
+    "visual_cue": "全5経路を教材図への寄り表示。最初のUとfirst-return Dを琥珀、内部Aを青緑、残部Bを珊瑚で色分け。",
+    "index": 3,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 26,
+    "planning_window_seconds": [
+      132.28,
+      142.68
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T003b",
+    "kind": "first-return",
+    "text": "Inside this first arch is a smaller path. After the arch is another path. Choose the inside and the part after it, then join them.",
+    "japanese": "最初のアーチの中に小さな道があり、その後ろにも道がある。中と後ろを選び、つなぐんだ。",
+    "visual_cue": "U A D B を四つの順序付き部分として取り出す。Aは一段下げて基線に戻した小さなDyck pathとして示す。左右の順を保つ。",
+    "index": 3,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 25,
+    "planning_window_seconds": [
+      143.28,
+      153.28
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T003c",
+    "kind": "first-return",
+    "text": "If the inside has no pairs, the part after has two. One choice times two choices gives two paths. Both belong in this first group.",
+    "japanese": "中が0組なら、後ろが2組。1通りと2通りの組合せで2通り。これが最初のグループ。",
+    "visual_cue": "k=0: C0×C2=1×2=2、実2経路を対応付ける。空のAを0通りとしない。",
+    "index": 3,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 25,
+    "planning_window_seconds": [
+      153.88,
+      163.88
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T003d",
+    "kind": "first-return",
+    "text": "One pair inside and one after gives one times one: one path. Two pairs inside and none after gives two times one: two paths.",
+    "japanese": "中が1組、後ろが1組なら1×1で1通り。中が2組、後ろが0組なら2×1で2通り。",
+    "visual_cue": "k=1は1経路、k=2は2経路。計5つを重複なく各群へ移す。とらの両手で中→後ろを案内。",
+    "index": 3,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 24,
+    "planning_window_seconds": [
+      164.48,
+      174.08
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T003e",
+    "kind": "first-return",
+    "text": "Add the three groups: two plus one plus two makes five. Each path has only one first return, so every path appears once.",
+    "japanese": "2+1+2=5。どの道も最初の帰還は一か所だから、同じ道を二度数えず全部数えられる。",
+    "visual_cue": "C3=C0C2+C1C1+C2C0=2+1+2=5。説明はREPLAY/C3。カウント進捗を増やさない。",
+    "index": 3,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 23,
+    "planning_window_seconds": [
+      174.68,
+      183.88
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E004",
+    "kind": "formula-prefix",
+    "text": "five times fourteen, divided by five, equals.",
+    "japanese": "5 掛ける 14、割る 5 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 4,
+    "integer_product": "70",
+    "integer_product_display": "70",
+    "coefficient_n": 4,
+    "multiplier": 14,
+    "divisor": 5,
+    "word_count": 7,
+    "planning_window_seconds": [
+      185.88,
+      188.68
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N004",
+    "kind": "result",
+    "text": "fourteen",
+    "japanese": "14",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 4,
+    "word_count": 1,
+    "planning_window_seconds": [
+      188.84,
+      189.24
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T004a",
+    "kind": "integer-product",
+    "text": "Look back at our equation. Five times fourteen made seventy. Dividing seventy into five equal shares gave fourteen in each share. Nothing was rounded.",
+    "japanese": "今の式では5×14=70。70を5等分した一つ分は14だった。四捨五入はしていないよ。",
+    "visual_cue": "REPLAY/C4。70個の小点を14点×5行へ移し、1行を強調。対象数が小さいこの例のみ実個数と数値が一致する。",
+    "index": 4,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 24,
+    "planning_window_seconds": [
+      189.84,
+      199.44
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T004b",
+    "kind": "equivalence",
+    "text": "The path rule and this arithmetic rule give the same Catalan numbers. We can follow the small paths, and use exact arithmetic as the values grow.",
+    "japanese": "道の組合せの規則と、この計算式は同じカタラン数を作る。小さな道を確かめ、大きな値は正確な計算で進めよう。",
+    "visual_cue": "畳込み式と比率式の「SAME SEQUENCE」を示す。等分の紙片からDyck pathへの直接の一対一対応は主張しない。",
+    "index": 4,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 26,
+    "planning_window_seconds": [
+      200.04,
+      210.44
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E005",
+    "kind": "formula-prefix",
+    "text": "fourteen times eighteen, divided by six, equals.",
+    "japanese": "14 掛ける 18、割る 6 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 5,
+    "integer_product": "252",
+    "integer_product_display": "252",
+    "coefficient_n": 5,
+    "multiplier": 18,
+    "divisor": 6,
+    "word_count": 7,
+    "planning_window_seconds": [
+      212.44,
+      215.24
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N005",
+    "kind": "result",
+    "text": "forty-two",
+    "japanese": "42",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 5,
+    "word_count": 2,
+    "planning_window_seconds": [
+      215.4,
+      216.2
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E006",
+    "kind": "formula-prefix",
+    "text": "forty-two times twenty-two, divided by seven, equals.",
+    "japanese": "42 掛ける 22、割る 7 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 6,
+    "integer_product": "924",
+    "integer_product_display": "924",
+    "coefficient_n": 6,
+    "multiplier": 22,
+    "divisor": 7,
+    "word_count": 9,
+    "planning_window_seconds": [
+      218.2,
+      221.8
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N006",
+    "kind": "result",
+    "text": "one hundred thirty-two",
+    "japanese": "132",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 6,
+    "word_count": 4,
+    "planning_window_seconds": [
+      221.96,
+      223.56
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E007",
+    "kind": "formula-prefix",
+    "text": "one hundred thirty-two times twenty-six, divided by eight, equals.",
+    "japanese": "132 掛ける 26、割る 8 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 7,
+    "integer_product": "3432",
+    "integer_product_display": "3,432",
+    "coefficient_n": 7,
+    "multiplier": 26,
+    "divisor": 8,
+    "word_count": 11,
+    "planning_window_seconds": [
+      225.56,
+      229.96
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N007",
+    "kind": "result",
+    "text": "four hundred twenty-nine",
+    "japanese": "429",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 7,
+    "word_count": 4,
+    "planning_window_seconds": [
+      230.12,
+      231.72
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E008",
+    "kind": "formula-prefix",
+    "text": "four hundred twenty-nine times thirty, divided by nine, equals.",
+    "japanese": "429 掛ける 30、割る 9 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 8,
+    "integer_product": "12870",
+    "integer_product_display": "12,870",
+    "coefficient_n": 8,
+    "multiplier": 30,
+    "divisor": 9,
+    "word_count": 10,
+    "planning_window_seconds": [
+      233.72,
+      237.72
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N008",
+    "kind": "result",
+    "text": "one thousand four hundred thirty",
+    "japanese": "1,430",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 8,
+    "word_count": 5,
+    "planning_window_seconds": [
+      237.88,
+      239.88
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E009",
+    "kind": "formula-prefix",
+    "text": "one thousand four hundred thirty times thirty-four, divided by ten, equals.",
+    "japanese": "1430 掛ける 34、割る 10 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 9,
+    "integer_product": "48620",
+    "integer_product_display": "48,620",
+    "coefficient_n": 9,
+    "multiplier": 34,
+    "divisor": 10,
+    "word_count": 12,
+    "planning_window_seconds": [
+      241.88,
+      246.68
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N009",
+    "kind": "result",
+    "text": "four thousand eight hundred sixty-two",
+    "japanese": "4,862",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 9,
+    "word_count": 6,
+    "planning_window_seconds": [
+      246.84,
+      249.24
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E010",
+    "kind": "formula-prefix",
+    "text": "four thousand eight hundred sixty-two times thirty-eight, divided by eleven, equals.",
+    "japanese": "4862 掛ける 38、割る 11 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 10,
+    "integer_product": "184756",
+    "integer_product_display": "184,756",
+    "coefficient_n": 10,
+    "multiplier": 38,
+    "divisor": 11,
+    "word_count": 13,
+    "planning_window_seconds": [
+      251.24,
+      256.44
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N010",
+    "kind": "result",
+    "text": "sixteen thousand seven hundred ninety-six",
+    "japanese": "16,796",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 10,
+    "word_count": 6,
+    "planning_window_seconds": [
+      256.6,
+      259.0
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T010a",
+    "kind": "milestone",
+    "text": "Sixteen thousand, seven hundred ninety-six. We are counting ways, not drawing that many ribbons. The smaller paths still explain why each new value belongs here.",
+    "japanese": "16,796。こんなに多くのリボンを描く代わりに通り数を数えている。小さな道の規則は、この大きな値にもつながっているよ。",
+    "visual_cue": "REPLAY/C10、結果数詞の説明再読はNとは別ID。進捗更新なし。とらは値へ視線を上げ、驚き→微笑み→通常へ。",
+    "index": 10,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 26,
+    "planning_window_seconds": [
+      259.6,
+      270.0
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E011",
+    "kind": "formula-prefix",
+    "text": "sixteen thousand seven hundred ninety-six times forty-two, divided by twelve, equals.",
+    "japanese": "16796 掛ける 42、割る 12 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 11,
+    "integer_product": "705432",
+    "integer_product_display": "705,432",
+    "coefficient_n": 11,
+    "multiplier": 42,
+    "divisor": 12,
+    "word_count": 13,
+    "planning_window_seconds": [
+      272.0,
+      277.2
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N011",
+    "kind": "result",
+    "text": "fifty-eight thousand seven hundred eighty-six",
+    "japanese": "58,786",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 11,
+    "word_count": 7,
+    "planning_window_seconds": [
+      277.36,
+      280.16
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E012",
+    "kind": "formula-prefix",
+    "text": "fifty-eight thousand seven hundred eighty-six times forty-six, divided by thirteen, equals.",
+    "japanese": "58786 掛ける 46、割る 13 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 12,
+    "integer_product": "2704156",
+    "integer_product_display": "2,704,156",
+    "coefficient_n": 12,
+    "multiplier": 46,
+    "divisor": 13,
+    "word_count": 14,
+    "planning_window_seconds": [
+      282.16,
+      287.76
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N012",
+    "kind": "result",
+    "text": "two hundred eight thousand twelve",
+    "japanese": "208,012",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 12,
+    "word_count": 5,
+    "planning_window_seconds": [
+      287.92,
+      289.92
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E013",
+    "kind": "formula-prefix",
+    "text": "two hundred eight thousand twelve times fifty, divided by fourteen, equals.",
+    "japanese": "208012 掛ける 50、割る 14 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 13,
+    "integer_product": "10400600",
+    "integer_product_display": "10,400,600",
+    "coefficient_n": 13,
+    "multiplier": 50,
+    "divisor": 14,
+    "word_count": 11,
+    "planning_window_seconds": [
+      291.92,
+      296.32
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N013",
+    "kind": "result",
+    "text": "seven hundred forty-two thousand nine hundred",
+    "japanese": "742,900",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 13,
+    "word_count": 7,
+    "planning_window_seconds": [
+      296.48,
+      299.28
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E014",
+    "kind": "formula-prefix",
+    "text": "seven hundred forty-two thousand nine hundred times fifty-four, divided by fifteen, equals.",
+    "japanese": "742900 掛ける 54、割る 15 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 14,
+    "integer_product": "40116600",
+    "integer_product_display": "40,116,600",
+    "coefficient_n": 14,
+    "multiplier": 54,
+    "divisor": 15,
+    "word_count": 14,
+    "planning_window_seconds": [
+      301.28,
+      306.88
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N014",
+    "kind": "result",
+    "text": "two million six hundred seventy-four thousand four hundred forty",
+    "japanese": "2,674,440",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 14,
+    "word_count": 10,
+    "planning_window_seconds": [
+      307.04,
+      311.04
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E015",
+    "kind": "formula-prefix",
+    "text": "two million six hundred seventy-four thousand four hundred forty times fifty-eight, divided by sixteen, equals.",
+    "japanese": "2674440 掛ける 58、割る 16 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 15,
+    "integer_product": "155117520",
+    "integer_product_display": "155,117,520",
+    "coefficient_n": 15,
+    "multiplier": 58,
+    "divisor": 16,
+    "word_count": 17,
+    "planning_window_seconds": [
+      313.04,
+      319.84
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N015",
+    "kind": "result",
+    "text": "nine million six hundred ninety-four thousand eight hundred forty-five",
+    "japanese": "9,694,845",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 15,
+    "word_count": 11,
+    "planning_window_seconds": [
+      320.0,
+      324.4
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T015a",
+    "kind": "wide-layout",
+    "text": "The numbers need more room now. We will open the whole screen for the value, while the multiplication and division keep their own clearly labeled windows.",
+    "japanese": "数が長くなったので、値が入るよう画面を広く使おう。掛け算と割り算は、それぞれラベルの付いた窓で見せるよ。",
+    "visual_cue": "次のC16からwideモード。値を隠した状態で枠と案内位置を切り替える。個々の数字が読まれる間の縮尺切替はしない。",
+    "index": 15,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 26,
+    "planning_window_seconds": [
+      325.0,
+      335.4
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E016",
+    "kind": "formula-prefix",
+    "text": "nine million six hundred ninety-four thousand eight hundred forty-five times sixty-two, divided by seventeen, equals.",
+    "japanese": "9694845 掛ける 62、割る 17 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 16,
+    "integer_product": "601080390",
+    "integer_product_display": "601,080,390",
+    "coefficient_n": 16,
+    "multiplier": 62,
+    "divisor": 17,
+    "word_count": 18,
+    "planning_window_seconds": [
+      337.4,
+      344.6
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N016",
+    "kind": "result",
+    "text": "thirty-five million three hundred fifty-seven thousand six hundred seventy",
+    "japanese": "35,357,670",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 16,
+    "word_count": 11,
+    "planning_window_seconds": [
+      344.76,
+      349.16
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E017",
+    "kind": "formula-prefix",
+    "text": "thirty-five million three hundred fifty-seven thousand six hundred seventy times sixty-six, divided by eighteen, equals.",
+    "japanese": "35357670 掛ける 66、割る 18 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 17,
+    "integer_product": "2333606220",
+    "integer_product_display": "2,333,606,220",
+    "coefficient_n": 17,
+    "multiplier": 66,
+    "divisor": 18,
+    "word_count": 18,
+    "planning_window_seconds": [
+      351.16,
+      358.36
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N017",
+    "kind": "result",
+    "text": "one hundred twenty-nine million six hundred forty-four thousand seven hundred ninety",
+    "japanese": "129,644,790",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 17,
+    "word_count": 13,
+    "planning_window_seconds": [
+      358.52,
+      363.72
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E018",
+    "kind": "formula-prefix",
+    "text": "one hundred twenty-nine million six hundred forty-four thousand seven hundred ninety times seventy, divided by nineteen, equals.",
+    "japanese": "129644790 掛ける 70、割る 19 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 18,
+    "integer_product": "9075135300",
+    "integer_product_display": "9,075,135,300",
+    "coefficient_n": 18,
+    "multiplier": 70,
+    "divisor": 19,
+    "word_count": 19,
+    "planning_window_seconds": [
+      365.72,
+      373.32
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N018",
+    "kind": "result",
+    "text": "four hundred seventy-seven million six hundred thirty-eight thousand seven hundred",
+    "japanese": "477,638,700",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 18,
+    "word_count": 12,
+    "planning_window_seconds": [
+      373.48,
+      378.28
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E019",
+    "kind": "formula-prefix",
+    "text": "four hundred seventy-seven million six hundred thirty-eight thousand seven hundred times seventy-four, divided by twenty, equals.",
+    "japanese": "477638700 掛ける 74、割る 20 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 19,
+    "integer_product": "35345263800",
+    "integer_product_display": "35,345,263,800",
+    "coefficient_n": 19,
+    "multiplier": 74,
+    "divisor": 20,
+    "word_count": 19,
+    "planning_window_seconds": [
+      380.28,
+      387.88
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N019",
+    "kind": "result",
+    "text": "one billion seven hundred sixty-seven million two hundred sixty-three thousand one hundred ninety",
+    "japanese": "1,767,263,190",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 19,
+    "word_count": 15,
+    "planning_window_seconds": [
+      388.04,
+      394.04
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E020",
+    "kind": "formula-prefix",
+    "text": "one billion seven hundred sixty-seven million two hundred sixty-three thousand one hundred ninety times seventy-eight, divided by twenty-one, equals.",
+    "japanese": "1767263190 掛ける 78、割る 21 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 20,
+    "integer_product": "137846528820",
+    "integer_product_display": "137,846,528,820",
+    "coefficient_n": 20,
+    "multiplier": 78,
+    "divisor": 21,
+    "word_count": 23,
+    "planning_window_seconds": [
+      396.04,
+      405.24
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N020",
+    "kind": "result",
+    "text": "six billion five hundred sixty-four million one hundred twenty thousand four hundred twenty",
+    "japanese": "6,564,120,420",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 20,
+    "word_count": 14,
+    "planning_window_seconds": [
+      405.4,
+      411.0
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T020a",
+    "kind": "place-groups",
+    "text": "The commas separate groups of three digits. Read each group with its place name. The commas help us read; they do not change the value.",
+    "japanese": "コンマは数字を三桁ずつに分ける。位の名前と一緒に読もう。読みやすく区切っても、値は変わらない。",
+    "visual_cue": "REPLAY/C20=6,564,120,420。billion/million/thousandを値の桁グループに対応付ける。英語short scale。",
+    "index": 20,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 25,
+    "planning_window_seconds": [
+      411.6,
+      421.6
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E021",
+    "kind": "formula-prefix",
+    "text": "six billion five hundred sixty-four million one hundred twenty thousand four hundred twenty times eighty-two, divided by twenty-two, equals.",
+    "japanese": "6564120420 掛ける 82、割る 22 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 21,
+    "integer_product": "538257874440",
+    "integer_product_display": "538,257,874,440",
+    "coefficient_n": 21,
+    "multiplier": 82,
+    "divisor": 22,
+    "word_count": 22,
+    "planning_window_seconds": [
+      423.6,
+      432.4
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N021",
+    "kind": "result",
+    "text": "twenty-four billion four hundred sixty-six million two hundred sixty-seven thousand twenty",
+    "japanese": "24,466,267,020",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 21,
+    "word_count": 14,
+    "planning_window_seconds": [
+      432.56,
+      438.16
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E022",
+    "kind": "formula-prefix",
+    "text": "twenty-four billion four hundred sixty-six million two hundred sixty-seven thousand twenty times eighty-six, divided by twenty-three, equals.",
+    "japanese": "24466267020 掛ける 86、割る 23 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 22,
+    "integer_product": "2104098963720",
+    "integer_product_display": "2,104,098,963,720",
+    "coefficient_n": 22,
+    "multiplier": 86,
+    "divisor": 23,
+    "word_count": 22,
+    "planning_window_seconds": [
+      440.16,
+      448.96
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N022",
+    "kind": "result",
+    "text": "ninety-one billion four hundred eighty-two million five hundred sixty-three thousand six hundred forty",
+    "japanese": "91,482,563,640",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 22,
+    "word_count": 16,
+    "planning_window_seconds": [
+      449.12,
+      455.52
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E023",
+    "kind": "formula-prefix",
+    "text": "ninety-one billion four hundred eighty-two million five hundred sixty-three thousand six hundred forty times ninety, divided by twenty-four, equals.",
+    "japanese": "91482563640 掛ける 90、割る 24 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 23,
+    "integer_product": "8233430727600",
+    "integer_product_display": "8,233,430,727,600",
+    "coefficient_n": 23,
+    "multiplier": 90,
+    "divisor": 24,
+    "word_count": 23,
+    "planning_window_seconds": [
+      457.52,
+      466.72
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N023",
+    "kind": "result",
+    "text": "three hundred forty-three billion fifty-nine million six hundred thirteen thousand six hundred fifty",
+    "japanese": "343,059,613,650",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 23,
+    "word_count": 15,
+    "planning_window_seconds": [
+      466.88,
+      472.88
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E024",
+    "kind": "formula-prefix",
+    "text": "three hundred forty-three billion fifty-nine million six hundred thirteen thousand six hundred fifty times ninety-four, divided by twenty-five, equals.",
+    "japanese": "343059613650 掛ける 94、割る 25 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 24,
+    "integer_product": "32247603683100",
+    "integer_product_display": "32,247,603,683,100",
+    "coefficient_n": 24,
+    "multiplier": 94,
+    "divisor": 25,
+    "word_count": 23,
+    "planning_window_seconds": [
+      474.88,
+      484.08
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N024",
+    "kind": "result",
+    "text": "one trillion two hundred eighty-nine billion nine hundred four million one hundred forty-seven thousand three hundred twenty-four",
+    "japanese": "1,289,904,147,324",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 24,
+    "word_count": 20,
+    "planning_window_seconds": [
+      484.24,
+      492.24
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E025",
+    "kind": "formula-prefix",
+    "text": "one trillion two hundred eighty-nine billion nine hundred four million one hundred forty-seven thousand three hundred twenty-four times ninety-eight, divided by twenty-six, equals.",
+    "japanese": "1289904147324 掛ける 98、割る 26 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 25,
+    "integer_product": "126410606437752",
+    "integer_product_display": "126,410,606,437,752",
+    "coefficient_n": 25,
+    "multiplier": 98,
+    "divisor": 26,
+    "word_count": 28,
+    "planning_window_seconds": [
+      494.24,
+      505.44
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N025",
+    "kind": "result",
+    "text": "four trillion eight hundred sixty-one billion nine hundred forty-six million four hundred one thousand four hundred fifty-two",
+    "japanese": "4,861,946,401,452",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 25,
+    "word_count": 20,
+    "planning_window_seconds": [
+      505.6,
+      513.6
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "T025a",
+    "kind": "growing-value",
+    "text": "We have reached the trillions. Our next calculation still begins with the last completed value. Multiply first, divide exactly, and listen for the new result.",
+    "japanese": "trillionの位まで来たね。次も直前に完成した値から始める。先に掛けて、ぴったり割り、新しい結果を聞こう。",
+    "visual_cue": "C25以降は終幕へ向けて画面中央の長い値を主役に保つ。紙片や星の常時ループを重ねない。",
+    "index": 25,
+    "replay": true,
+    "progress_increment": 0,
+    "word_count": 25,
+    "planning_window_seconds": [
+      514.2,
+      524.2
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E026",
+    "kind": "formula-prefix",
+    "text": "four trillion eight hundred sixty-one billion nine hundred forty-six million four hundred one thousand four hundred fifty-two times one hundred two, divided by twenty-seven, equals.",
+    "japanese": "4861946401452 掛ける 102、割る 27 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 26,
+    "integer_product": "495918532948104",
+    "integer_product_display": "495,918,532,948,104",
+    "coefficient_n": 26,
+    "multiplier": 102,
+    "divisor": 27,
+    "word_count": 29,
+    "planning_window_seconds": [
+      526.2,
+      537.8
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N026",
+    "kind": "result",
+    "text": "eighteen trillion three hundred sixty-seven billion three hundred fifty-three million seventy-two thousand one hundred fifty-two",
+    "japanese": "18,367,353,072,152",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 26,
+    "word_count": 19,
+    "planning_window_seconds": [
+      537.96,
+      545.56
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E027",
+    "kind": "formula-prefix",
+    "text": "eighteen trillion three hundred sixty-seven billion three hundred fifty-three million seventy-two thousand one hundred fifty-two times one hundred six, divided by twenty-eight, equals.",
+    "japanese": "18367353072152 掛ける 106、割る 28 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 27,
+    "integer_product": "1946939425648112",
+    "integer_product_display": "1,946,939,425,648,112",
+    "coefficient_n": 27,
+    "multiplier": 106,
+    "divisor": 28,
+    "word_count": 28,
+    "planning_window_seconds": [
+      547.56,
+      558.76
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N027",
+    "kind": "result",
+    "text": "sixty-nine trillion five hundred thirty-three billion five hundred fifty million nine hundred sixteen thousand four",
+    "japanese": "69,533,550,916,004",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 27,
+    "word_count": 17,
+    "planning_window_seconds": [
+      558.92,
+      565.72
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E028",
+    "kind": "formula-prefix",
+    "text": "sixty-nine trillion five hundred thirty-three billion five hundred fifty million nine hundred sixteen thousand four times one hundred ten, divided by twenty-nine, equals.",
+    "japanese": "69533550916004 掛ける 110、割る 29 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 28,
+    "integer_product": "7648690600760440",
+    "integer_product_display": "7,648,690,600,760,440",
+    "coefficient_n": 28,
+    "multiplier": 110,
+    "divisor": 29,
+    "word_count": 26,
+    "planning_window_seconds": [
+      567.72,
+      578.12
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N028",
+    "kind": "result",
+    "text": "two hundred sixty-three trillion seven hundred forty-seven billion nine hundred fifty-one million seven hundred fifty thousand three hundred sixty",
+    "japanese": "263,747,951,750,360",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 28,
+    "word_count": 22,
+    "planning_window_seconds": [
+      578.28,
+      587.08
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E029",
+    "kind": "formula-prefix",
+    "text": "two hundred sixty-three trillion seven hundred forty-seven billion nine hundred fifty-one million seven hundred fifty thousand three hundred sixty times one hundred fourteen, divided by thirty, equals.",
+    "japanese": "263747951750360 掛ける 114、割る 30 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 29,
+    "integer_product": "30067266499541040",
+    "integer_product_display": "30,067,266,499,541,040",
+    "coefficient_n": 29,
+    "multiplier": 114,
+    "divisor": 30,
+    "word_count": 30,
+    "planning_window_seconds": [
+      589.08,
+      601.08
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N029",
+    "kind": "result",
+    "text": "one quadrillion two trillion two hundred forty-two billion two hundred sixteen million six hundred fifty-one thousand three hundred sixty-eight",
+    "japanese": "1,002,242,216,651,368",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 29,
+    "word_count": 22,
+    "planning_window_seconds": [
+      601.24,
+      610.04
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 2.0
+  },
+  {
+    "id": "E030",
+    "kind": "formula-prefix",
+    "text": "one quadrillion two trillion two hundred forty-two billion two hundred sixteen million six hundred fifty-one thousand three hundred sixty-eight times one hundred eighteen, divided by thirty-one, equals.",
+    "japanese": "1002242216651368 掛ける 118、割る 31 は……",
+    "visual_cue": "前値→×係数→整数中間積→÷除数を語に合わせて順に強調。中間積は全文を独立窓へ。結果は未確定。後工程で実音声の語境界へ同期し直す。",
+    "index": 30,
+    "integer_product": "118264581564861424",
+    "integer_product_display": "118,264,581,564,861,424",
+    "coefficient_n": 30,
+    "multiplier": 118,
+    "divisor": 31,
+    "word_count": 31,
+    "planning_window_seconds": [
+      612.04,
+      624.44
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.16
+  },
+  {
+    "id": "N030",
+    "kind": "result",
+    "text": "three quadrillion eight hundred fourteen trillion nine hundred eighty-six billion five hundred two million ninety-two thousand three hundred four",
+    "japanese": "3,814,986,502,092,304",
+    "visual_cue": "この結果発話の0.12秒前に新値を確定。全文を読み終えるまで値・桁位置を維持。読了後に進捗を1増やす。",
+    "index": 30,
+    "word_count": 21,
+    "planning_window_seconds": [
+      624.6,
+      633.0
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "O01",
+    "kind": "outro",
+    "text": "We finished C thirty. Our ribbon paths, the sums of smaller choices, and our multiplying and dividing all led to the same sequence.",
+    "japanese": "Cサーティまで到着。リボンの道、小さな選択の積を足す考え方、掛けて割る計算が同じ数列につながったね。",
+    "visual_cue": "C30読了後に31/31。C0とC1を含む全31項一覧へ切替。最終値を中央で保持。",
+    "word_count": 23,
+    "planning_window_seconds": [
+      633.6,
+      642.8
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  },
+  {
+    "id": "O02",
+    "kind": "outro",
+    "text": "From one empty path to a very big number, every place had its own value. Thanks for counting Catalan numbers with me. See you next time!",
+    "japanese": "一つの空の道から、とても大きい数まで。どの位置にも値があったね。一緒にカタラン数を数えてくれてありがとう。またね。",
+    "visual_cue": "とらは中央前景へ戻り、開眼のまま短い手振り一往復。戻りの中間姿勢を経て通常姿へ。教材を消し切ってから終幕fade。",
+    "word_count": 26,
+    "planning_window_seconds": [
+      643.4,
+      653.8
+    ],
+    "timing_status": "provisional_not_audio_measured",
+    "following_pause_seconds": 0.6
+  }
+]

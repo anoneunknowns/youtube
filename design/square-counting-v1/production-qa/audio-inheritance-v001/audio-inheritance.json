@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "kind": "square-encoded-audio-direct-inheritance-verification",
+  "accepted_video": {
+    "path": "output/square-counting-001-v001/production-v001/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+    "sha256": "956db25f06068f69d0e1dec2f05646e5f51b6f4caff131ba5cfd528409e48a2e"
+  },
+  "candidate_video": {
+    "path": "output/square-counting-001-v001/production-v004/paspla-studio-square-numbers-0-to-10000-1080p.mp4",
+    "sha256": "7a45f134fb7ebc719a51d46efe7856853d0d92251fd4e35523c15d1de07f62f6"
+  },
+  "verifier": {
+    "path": "tools/verify_square_audio_inheritance.py",
+    "sha256": "f2add23a60a59be06bf29a7a6312a5b16c4514da4d262a317fbb73e944ae6146"
+  },
+  "status": "PASS",
+  "checks": {
+    "same_packet_count": true,
+    "all_payload_hashes_pts_dts_duration_sizes_flags_side_data_identical": true,
+    "media_unchanged_during_check": true
+  },
+  "packet_count": 30322,
+  "packet_differences": [],
+  "artifacts": {
+    "accepted": {
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "a:0",
+        "-show_packets",
+        "-show_data_hash",
+        "sha256",
+        "-show_entries",
+        "packet=pts,dts,duration,pts_time,dts_time,duration_time,size,flags,data_hash:packet_side_data",
+        "-of",
+        "json",
+        "/Users/support/codex/youtube/output/square-counting-001-v001/production-v001/paspla-studio-square-numbers-0-to-10000-1080p.mp4"
+      ],
+      "artifact": {
+        "path": "design/square-counting-v1/production-qa/audio-inheritance-v001/accepted-packets.json",
+        "sha256": "925de906cd624fa77a0445217f554182a2a48494076adba99239b9ad5df3f98c"
+      }
+    },
+    "candidate": {
+      "command": [
+        "/Users/support/codex/youtube/.venv/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "a:0",
+        "-show_packets",
+        "-show_data_hash",
+        "sha256",
+        "-show_entries",
+        "packet=pts,dts,duration,pts_time,dts_time,duration_time,size,flags,data_hash:packet_side_data",
+        "-of",
+        "json",
+        "/Users/support/codex/youtube/output/square-counting-001-v001/production-v004/paspla-studio-square-numbers-0-to-10000-1080p.mp4"
+      ],
+      "artifact": {
+        "path": "design/square-counting-v1/production-qa/audio-inheritance-v001/candidate-packets.json",
+        "sha256": "925de906cd624fa77a0445217f554182a2a48494076adba99239b9ad5df3f98c"
+      }
+    }
+  },
+  "audio_regenerated_by_this_verifier": false,
+  "new_ASR_or_CTC_performed": false,
+  "inheritance_scope": "Encoded AAC payload bytes and complete presentation/decode timing records are identical; existing audio-content recognition evidence may be inherited with its original scope and source video reference retained."
+}

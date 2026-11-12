@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "kind": "encoder-tools-correction-with-original-unaltered-PCM-master",
+  "passed": true,
+  "original_master": {
+    "path": "output/powers-of-two-counting-001-v001/audio-build/master.wav",
+    "sha256": "fc0564b0d474fcae762272cc243ce4facd19aebd38859cb6afdccae4778a5b52"
+  },
+  "original_timeline": {
+    "path": "output/powers-of-two-counting-001-v001/audio-build/timeline.json",
+    "sha256": "9f33235b7a7496afa7a8654964686172207699ef1e89ad40a12522b8feffd7b6"
+  },
+  "corrected_timeline": {
+    "path": "output/powers-of-two-counting-001-v001/audio-build/codec-v003/timeline.json",
+    "sha256": "7584bff038ca9e42951f09e5f0e61b44af1b5ceec3dd8d7453228d67a6ab735c"
+  },
+  "encoded_aac": {
+    "path": "output/powers-of-two-counting-001-v001/audio-build/codec-v003/accepted-aac.m4a",
+    "sha256": "6e3cbac811194a930b9523eb0a8546f3932199e695db9770d126f244a5218e3b"
+  },
+  "new_candidate_review": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/audio-correction-v001/candidate-review.json",
+    "sha256": "ce9cdee5de6913b759de21abf9c4763a95433d269fb854c8aee63ae611109c9a"
+  },
+  "codec_choice_causal_comparison": {
+    "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/audio-correction-v001/codec-choice-comparison.json",
+    "sha256": "96616c7476ab410be37687639df1034ac962ef05bcb96c5a42ea2c2146d98aa7"
+  },
+  "encoder": {
+    "codec": "aac",
+    "aac_coder": "twoloop",
+    "aac_ms": "auto(default)",
+    "aac_is": false,
+    "aac_pns": false,
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "bitrate_bps": 192000,
+    "input_format": "original48k24bitstereoPCM -> explicit fltp; no intermediate16bit encoder input",
+    "encoding_log": {
+      "path": "output/powers-of-two-counting-001-v001/recheck-20261112-v001/audio-correction-v001/candidate-original-master-auto-ms-encode.log",
+      "sha256": "48e44d6d351d05737dd2bc07e0d80ad10edf68582e2c6853f3e12c8aa725e3cb"
+    }
+  },
+  "source_audio_regenerated": false,
+  "voice_changed": false,
+  "raw_sources_modified": false,
+  "original_PCM_master_modified": false,
+  "voice_times_or_values_changed": false,
+  "per_source_gains_vs_original_changed": false,
+  "old_N029_completecue_minus3point5db_workaround_removed": true,
+  "causes_and_choice": [
+    "Old whole-cue correlation and average level checks missed an actual N029 stereo burst at170.437354s: native/fixed decoders both produced L−24551/R4115 versus codec-v002 PCM796/796. Its previous fresh-pass report was separately withdrawn, retained unchanged.",
+    "Default encode control reproduces the old final decoded PCM byte-for-byte. At the same full-film frame phase, PNSoff alone reduces N029 context residual from25347 to290; MSoff/ISoff alone leave13434–16488 residual. Principal cause is PNS in this encoder/content combination.",
+    "On original normal-gain PCM, PNSoff alone still produces N033 maximum residual4971 at203.699479s and9 screened10ms windows. ISoff additionally lowers that cue maximum to1032 with0 windows, and full-film residual maximum to1136. This is the measured reason for disabling IS as well.",
+    "MS remains auto. Disabling MS or forcing MS has higher full-film residuals and provides no practical benefit over the selected low-side-error stereo result.",
+    "Conservative local screen remains unchanged and still flags old N029. The2 selected-candidate X030 windows are explicitly resolved with actual trigger RMS−41.946/−41.332dBFS, max error923, near-identical channels and current local word/phone evidence; not silently dropped."
+  ],
+  "actual_loudness": {
+    "integrated_lufs": -16.81,
+    "true_peak_dbtp": -2.02,
+    "lra_lu": 6.4
+  },
+  "all78_each_channel_fresh_recognition_passed": true,
+  "all79_guarded_silent_intervals_passed": true,
+  "human_listening_claim": false,
+  "aac_ready_for_stream_copy_remux": true,
+  "final_MP4_acceptance_owned_by_parent": true
+}
