@@ -1,0 +1,585 @@
+{
+  "schema_version": 3,
+  "kind": "generated-gimmick-key-pose-stock",
+  "version": "v001",
+  "category": "gimmick",
+  "character_id": "flower-bed",
+  "owner": "codex:gimmicks-20261112:01a1cfaa",
+  "canonical_neutral": {
+    "path": "assets/library/characters/flower-bed/sources/v001/neutral.png",
+    "sha256": "a5f7091a4c3d60cfa38a16a54473402f59b8c7e1c034ef6d8677bf67216e4135",
+    "frame_id": "neutral"
+  },
+  "common_reference_height_px": 322,
+  "sheets": [
+    {
+      "id": "left",
+      "source_sheet": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-left-original.png",
+      "source_sheet_sha256": "d4fe2c9dea08883cf4e231e75aba04fbfa68b0d3d2c903d2a695fbbdae39b75e",
+      "generation_input": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/provenance/sway-left-input.json",
+      "generation_prompt": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/provenance/sway-left-prompt.txt",
+      "crop_boundaries_y_px": [
+        0,
+        418,
+        836,
+        1254
+      ],
+      "crop_boundary_note": "Original equal-third row boundaries preserve full native subjects.",
+      "reference_height_px": 322,
+      "calibration": {
+        "neutral_source_reference_height_px": 322,
+        "neutral_base_width_px": 1054,
+        "this_sheet_settle_base_width_px": 1054,
+        "reference_pose": "neutral",
+        "method": "Canonical subject height for A; B reference transferred by stable root-strip/soil-and-stone base width of B settle divided by A neutral base width. Every pose in each sheet uses that one fixed reference; no posed leaf/flower bbox fit."
+      }
+    },
+    {
+      "id": "right",
+      "source_sheet": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-right-original.png",
+      "source_sheet_sha256": "a6ab10c9dd94aa3cdcf72d2deb3f99c7766c339ee12de1f14a36dcda49cec98b",
+      "generation_input": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/provenance/sway-right-input.json",
+      "generation_prompt": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/provenance/sway-right-prompt.txt",
+      "crop_boundaries_y_px": [
+        0,
+        418,
+        836,
+        1254
+      ],
+      "crop_boundary_note": "Original equal-third row boundaries preserve full native subjects.",
+      "reference_height_px": 322.0,
+      "calibration": {
+        "neutral_source_reference_height_px": 322,
+        "neutral_base_width_px": 1054,
+        "this_sheet_settle_base_width_px": 1054,
+        "reference_pose": "settle",
+        "method": "Canonical subject height for A; B reference transferred by stable root-strip/soil-and-stone base width of B settle divided by A neutral base width. Every pose in each sheet uses that one fixed reference; no posed leaf/flower bbox fit."
+      }
+    }
+  ],
+  "frames": [
+    {
+      "id": "neutral",
+      "path": "assets/library/characters/flower-bed/motions/v001/neutral.png",
+      "sha256": "a5f7091a4c3d60cfa38a16a54473402f59b8c7e1c034ef6d8677bf67216e4135",
+      "size_px": [
+        1254,
+        418
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        418
+      ],
+      "sheet_id": "left",
+      "source_sheet": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-left-original.png",
+      "source_sheet_sha256": "d4fe2c9dea08883cf4e231e75aba04fbfa68b0d3d2c903d2a695fbbdae39b75e",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        98,
+        70,
+        1154,
+        392
+      ],
+      "body_bbox_px": [
+        98,
+        70,
+        1154,
+        392
+      ],
+      "subject_bbox_px": [
+        98,
+        70,
+        1154,
+        392
+      ],
+      "alpha128_bbox_px": [
+        99,
+        72,
+        1153,
+        392
+      ],
+      "alpha8_margins_px": [
+        98,
+        70,
+        100,
+        26
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        280,
+        1254,
+        392
+      ],
+      "base_span_bbox_px": [
+        99,
+        280,
+        1153,
+        392
+      ],
+      "base_width_px": 1054,
+      "anchor_px": [
+        626.0,
+        392
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Soil-and-stone base: alpha>=128 lower35percent ROI; the rigid wide bed, rather than flexing flower tips, defines its horizontal support span. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 322
+    },
+    {
+      "id": "sway_left_soft",
+      "path": "assets/library/characters/flower-bed/motions/v001/sway_left_soft.png",
+      "sha256": "3d7bb9263be3b7ee9afcf54382f64b1b6ca1665090bc986b2778fce57cc73e35",
+      "size_px": [
+        1254,
+        418
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        1254,
+        836
+      ],
+      "sheet_id": "left",
+      "source_sheet": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-left-original.png",
+      "source_sheet_sha256": "d4fe2c9dea08883cf4e231e75aba04fbfa68b0d3d2c903d2a695fbbdae39b75e",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        98,
+        49,
+        1154,
+        383
+      ],
+      "body_bbox_px": [
+        98,
+        49,
+        1154,
+        383
+      ],
+      "subject_bbox_px": [
+        98,
+        49,
+        1154,
+        383
+      ],
+      "alpha128_bbox_px": [
+        99,
+        50,
+        1153,
+        382
+      ],
+      "alpha8_margins_px": [
+        98,
+        49,
+        100,
+        35
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        265,
+        1254,
+        382
+      ],
+      "base_span_bbox_px": [
+        99,
+        265,
+        1153,
+        382
+      ],
+      "base_width_px": 1054,
+      "anchor_px": [
+        626.0,
+        382
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Soil-and-stone base: alpha>=128 lower35percent ROI; the rigid wide bed, rather than flexing flower tips, defines its horizontal support span. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 322
+    },
+    {
+      "id": "sway_left_strong",
+      "path": "assets/library/characters/flower-bed/motions/v001/sway_left_strong.png",
+      "sha256": "70be03b47f661a339a76d31388cc8265e32f081ddd8b796cded1a1d3f45e4922",
+      "size_px": [
+        1254,
+        418
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        1254,
+        1254
+      ],
+      "sheet_id": "left",
+      "source_sheet": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-left-original.png",
+      "source_sheet_sha256": "d4fe2c9dea08883cf4e231e75aba04fbfa68b0d3d2c903d2a695fbbdae39b75e",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        85,
+        32,
+        1154,
+        375
+      ],
+      "body_bbox_px": [
+        85,
+        32,
+        1154,
+        375
+      ],
+      "subject_bbox_px": [
+        85,
+        32,
+        1154,
+        375
+      ],
+      "alpha128_bbox_px": [
+        85,
+        33,
+        1153,
+        373
+      ],
+      "alpha8_margins_px": [
+        85,
+        32,
+        100,
+        43
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        254,
+        1254,
+        373
+      ],
+      "base_span_bbox_px": [
+        99,
+        254,
+        1153,
+        373
+      ],
+      "base_width_px": 1054,
+      "anchor_px": [
+        626.0,
+        373
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Soil-and-stone base: alpha>=128 lower35percent ROI; the rigid wide bed, rather than flexing flower tips, defines its horizontal support span. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 322
+    },
+    {
+      "id": "sway_right_soft",
+      "path": "assets/library/characters/flower-bed/motions/v001/sway_right_soft.png",
+      "sha256": "50d26a9be9124d3412527c0c68bd66972cee3d93319f7bb9993e60d2dcb84dff",
+      "size_px": [
+        1254,
+        418
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        418
+      ],
+      "sheet_id": "right",
+      "source_sheet": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-right-original.png",
+      "source_sheet_sha256": "a6ab10c9dd94aa3cdcf72d2deb3f99c7766c339ee12de1f14a36dcda49cec98b",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        99,
+        72,
+        1155,
+        394
+      ],
+      "body_bbox_px": [
+        99,
+        72,
+        1155,
+        394
+      ],
+      "subject_bbox_px": [
+        99,
+        72,
+        1155,
+        394
+      ],
+      "alpha128_bbox_px": [
+        100,
+        73,
+        1154,
+        393
+      ],
+      "alpha8_margins_px": [
+        99,
+        72,
+        99,
+        24
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        281,
+        1254,
+        393
+      ],
+      "base_span_bbox_px": [
+        100,
+        281,
+        1154,
+        393
+      ],
+      "base_width_px": 1054,
+      "anchor_px": [
+        627.0,
+        393
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Soil-and-stone base: alpha>=128 lower35percent ROI; the rigid wide bed, rather than flexing flower tips, defines its horizontal support span. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 322.0
+    },
+    {
+      "id": "sway_right_strong",
+      "path": "assets/library/characters/flower-bed/motions/v001/sway_right_strong.png",
+      "sha256": "a85e44c7714131f677b67e60467171573fc4bc66fbf9450450434f55839cc4fb",
+      "size_px": [
+        1254,
+        418
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        1254,
+        836
+      ],
+      "sheet_id": "right",
+      "source_sheet": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-right-original.png",
+      "source_sheet_sha256": "a6ab10c9dd94aa3cdcf72d2deb3f99c7766c339ee12de1f14a36dcda49cec98b",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        99,
+        46,
+        1192,
+        379
+      ],
+      "body_bbox_px": [
+        99,
+        46,
+        1192,
+        379
+      ],
+      "subject_bbox_px": [
+        99,
+        46,
+        1192,
+        379
+      ],
+      "alpha128_bbox_px": [
+        100,
+        47,
+        1192,
+        377
+      ],
+      "alpha8_margins_px": [
+        99,
+        46,
+        62,
+        39
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        261,
+        1254,
+        377
+      ],
+      "base_span_bbox_px": [
+        100,
+        261,
+        1154,
+        377
+      ],
+      "base_width_px": 1054,
+      "anchor_px": [
+        627.0,
+        377
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Soil-and-stone base: alpha>=128 lower35percent ROI; the rigid wide bed, rather than flexing flower tips, defines its horizontal support span. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 322.0
+    },
+    {
+      "id": "settle",
+      "path": "assets/library/characters/flower-bed/motions/v001/settle.png",
+      "sha256": "0c5d0ee93f97905e0a02c4a28b4a91805a55e96aa985a3b3487adb8993bd7485",
+      "size_px": [
+        1254,
+        418
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        1254,
+        1254
+      ],
+      "sheet_id": "right",
+      "source_sheet": "assets/library/characters/flower-bed/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-right-original.png",
+      "source_sheet_sha256": "a6ab10c9dd94aa3cdcf72d2deb3f99c7766c339ee12de1f14a36dcda49cec98b",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        99,
+        25,
+        1155,
+        368
+      ],
+      "body_bbox_px": [
+        99,
+        25,
+        1155,
+        368
+      ],
+      "subject_bbox_px": [
+        99,
+        25,
+        1155,
+        368
+      ],
+      "alpha128_bbox_px": [
+        100,
+        26,
+        1154,
+        367
+      ],
+      "alpha8_margins_px": [
+        99,
+        25,
+        99,
+        50
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        247,
+        1254,
+        367
+      ],
+      "base_span_bbox_px": [
+        100,
+        247,
+        1154,
+        367
+      ],
+      "base_width_px": 1054,
+      "anchor_px": [
+        627.0,
+        367
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Soil-and-stone base: alpha>=128 lower35percent ROI; the rigid wide bed, rather than flexing flower tips, defines its horizontal support span. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 322.0
+    }
+  ],
+  "clips": {
+    "gentle_sway": {
+      "frames": [
+        "neutral",
+        "sway_left_soft",
+        "neutral",
+        "sway_right_soft",
+        "neutral"
+      ],
+      "durations_ms": [
+        650,
+        320,
+        450,
+        320,
+        650
+      ],
+      "loop": true
+    },
+    "gust_left": {
+      "frames": [
+        "neutral",
+        "sway_left_soft",
+        "sway_left_strong",
+        "sway_left_soft",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        240,
+        380,
+        240,
+        550
+      ],
+      "loop": true
+    },
+    "gust_right": {
+      "frames": [
+        "neutral",
+        "sway_right_soft",
+        "sway_right_strong",
+        "sway_right_soft",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        240,
+        380,
+        240,
+        550
+      ],
+      "loop": true
+    },
+    "settle": {
+      "frames": [
+        "sway_left_strong",
+        "sway_left_soft",
+        "neutral",
+        "sway_right_soft",
+        "settle",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        280,
+        400,
+        260,
+        450,
+        600
+      ],
+      "loop": true
+    }
+  },
+  "source_pixels_modified": false,
+  "per_pose_bbox_fitting": false,
+  "anchor_policy": {
+    "description": "Native measured root/soil support center and bottom; upper leaves/flowers flex, base remains grounded.",
+    "ground_estimated": false
+  },
+  "scope": "Six discrete generated key poses; preview GIFs are key-pose loops, not a completed video or a claim of interpolated motion."
+}

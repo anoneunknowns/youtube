@@ -128,6 +128,8 @@ def read_config(root, path, validate_reservation_freeze=True):
         value = batch_path(root, item['root'])
         if item.get('state') not in STATES:
             raise ValueError(f'Unknown management state for {value}')
+        if item.get('category', 'character') not in {'character', 'gimmick'}:
+            raise ValueError(f'Unknown asset category for {value}')
         if any(overlaps(value, other) for other in roots):
             raise ValueError(f'Configured batch roots overlap: {value}')
         roots.append(value)
@@ -338,6 +340,7 @@ def snapshot(root, config, config_hash, active):
             else:
                 refs['canonical_reference'] = evidence(root, [canonical])[0]
         batches.append({'root': value, 'character_id': Path(value).parts[3],
+                        'category': item.get('category', 'character'),
                         'state': item.get('state', 'unclassified'), 'explicitly_classified': value in configured,
                         'inventory_status': status, **declarations,
                         'selection_policy': 'Management classification only; use existing adopted catalogs/episode registrations for playback.',
@@ -477,7 +480,8 @@ def render_index(root, result, config, config_relative=CONFIG, registry_relative
             for entry in batch.get(field, []):
                 references.append(link(entry['path'], label))
         pending = batch['inventory_status'] != 'snapshotted'
-        parts.append('<tr><td>' + link(batch['root'], batch['character_id']) + '<br><code>' + esc(batch['root']) + '</code></td>' +
+        parts.append('<tr><td>' + link(batch['root'], batch['character_id']) + '<br><small>' +
+            esc('背景ギミック' if batch.get('category') == 'gimmick' else 'キャラクター') + '</small><br><code>' + esc(batch['root']) + '</code></td>' +
             '<td>' + esc(states[batch['state']]) + '</td><td>' + esc(owner_label) + '<br><small>' + esc(owner) +
             '</small><br>' + esc(batch.get('scope','')) + '</td><td>' + ('<br>'.join(quality) or 'この一覧では品質合格を推定しない') +
             '</td><td>' + ('生成中・確定保留' if pending else '確定範囲') + '<br>' + str(batch['file_count']) +

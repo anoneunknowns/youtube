@@ -13,6 +13,7 @@ import json
 import math
 import os
 from pathlib import Path, PureWindowsPath
+import re
 import sys
 import uuid
 import zipfile
@@ -33,19 +34,22 @@ MOTIONS = 'assets/library/collections/animal-motions/v001/manifest.json'
 STYLE = 'assets/library/collections/animal-motions/v001/qa-evidence/series-style-review.json'
 EXPANSION = 'assets/library/collections/character-expansion/v001/manifest.json'
 EYECATCHES = 'assets/library/collections/character-eyecatches/v001/manifest.json'
+GIMMICKS = 'assets/library/collections/background-gimmicks/v001/manifest.json'
 MANAGEMENT = 'catalogs/character-asset-management-v1.json'
 SCOPES = ['assets/library/characters', 'assets/library/collections/animal-stock/v001',
           'assets/library/collections/animal-motions/v001',
           'assets/library/collections/character-expansion/v001',
           'assets/library/collections/character-eyecatches/v001',
           'assets/library/collections/character-style-audit/v001',
-          'assets/library/collections/character-management/v001']
+          'assets/library/collections/character-management/v001',
+          'assets/library/collections/background-gimmicks/v001']
 EXTRAS = ['assets/library/README.md', 'assets/library/AGENTS.md', 'tools/character_library.py',
           'tools/register_character_expansion.py', 'tools/register_character_eyecatches.py', 'tools/component_alignment.py',
           'tools/manage_character_assets.py', 'tools/audit_character_style.py',
           'docs/IMAGE-ASSET-MANAGEMENT.md', 'docs/LAYOUT-ALIGNMENT.md',
           'assets/library/character-assets.html', MANAGEMENT,
           'catalogs/character-asset-registry-v1.json', 'requirements.txt', INDEX]
+OPTIONAL_EXTRAS = ['catalogs/asset-library-current-v1.json', 'tools/unified_asset_library.py']
 # Videos are optional local production evidence. They are not published with
 # the portable artwork library; recorded provenance and registrations stay intact.
 LOCAL_VIDEO_EXTENSIONS = frozenset({
@@ -59,6 +63,7 @@ NAMES = {'bear-beret': ('赤い帽子のクマ', 'Bear'), 'rabbit-beret': ('ピ�
          'meerkat': ('ミーアキャット', 'Meerkat'), 'kangaroo': ('カンガルー', 'Kangaroo'),
          'hedgehog': ('ハリネズミ', 'Hedgehog'), 'fairy-pitta': ('ヤイロチョウ', 'Fairy Pitta'),
          'onagadori': ('オナガドリ', 'Onagadori')}
+GIMMICK_ANCHORS = {'ground', 'base', 'center'}
 
 
 def read(path):
@@ -134,6 +139,8 @@ def _inventory_paths_locked(root):
     paths = {relative for relative in EXTRAS
              if Path(relative).suffix.lower() not in LOCAL_VIDEO_EXTENSIONS
              and not is_pending(management.lexical_path(root, relative))}
+    paths.update(relative for relative in OPTIONAL_EXTRAS
+                 if readable_source(root, relative, pending).is_file())
     for scope in SCOPES:
         directory = management.lexical_path(root, scope)
         if is_pending(directory):
@@ -171,14 +178,42 @@ def _publication_paths(value, label):
     return set(value)
 
 
+def _registration_generation_path(root, document, reference):
+    """Resolve portable auxiliary receipts without probing historical absolute paths."""
+    if (not isinstance(reference, str) or not reference or '\\' in reference
+            or Path(reference).is_absolute() or PureWindowsPath(reference).drive):
+        raise ValueError(f'Generation metadata must be project-relative: {reference}')
+    prefixes = ('assets/', 'catalogs/', 'tools/', 'docs/', 'design/', 'materials/',
+                'reproducibility/', 'tests/', 'templates/', 'episodes/')
+    if not reference.startswith(prefixes):
+        reference = (Path(document).parent / reference).as_posix()
+    return management.lexical_relative(root, management.lexical_path(root, reference))
+
+
 def _required_current_library_paths_locked(root, pending):
     """Derive required adopted sources independently of the publication list."""
     index = _build_index_locked(root)
     required = {PUBLICATION, *EXTRAS, STYLE}
+    required.update(relative for relative in OPTIONAL_EXTRAS
+                    if readable_source(root, relative, pending).is_file())
+    if publication_path(root, 'catalogs/asset-library-current-v1.json').is_file():
+        try:
+            from .unified_asset_library import required_paths as current_view_paths
+        except ImportError:
+            from unified_asset_library import required_paths as current_view_paths
+        required.update(current_view_paths(root))
     required.update(item['path'] for item in index['source_collections'])
     for character in index['characters']:
         neutral = character['neutral']
         required.update(neutral[key] for key in ('path', 'source_manifest') if neutral.get(key))
+        if character.get('category') == 'gimmick':
+            manifest_relative = neutral['source_manifest']
+            manifest = read(readable_source(root, manifest_relative, pending))
+            for record in manifest.get('files', []):
+                relative = record['path']
+                if not relative.startswith('assets/'):
+                    relative = (Path(manifest_relative).parent / relative).as_posix()
+                required.add(relative)
         for block_name in ('key_poses', 'expanded_key_poses', 'eyecatch_key_poses'):
             block = character.get(block_name)
             if not block:
@@ -188,9 +223,12 @@ def _required_current_library_paths_locked(root, pending):
             registration = read(readable_source(root, block['registration'], pending))
             if registration.get('source_sheet'):
                 required.add(registration['source_sheet'])
+            required.update(_registration_generation_path(root, block['registration'], registration[key])
+                            for key in ('generation_input', 'generation_prompt') if registration.get(key))
             for sheet in registration.get('sheets', []):
                 required.add(sheet['source_sheet'])
-                required.update(sheet[key] for key in ('generation_input', 'generation_prompt') if sheet.get(key))
+                required.update(_registration_generation_path(root, block['registration'], sheet[key])
+                                for key in ('generation_input', 'generation_prompt') if sheet.get(key))
     return required
 
 
@@ -234,6 +272,183 @@ def readable_source(root, relative, pending):
     return lexical
 
 
+def _positive_reference(value):
+    return (not isinstance(value, bool) and isinstance(value, (int, float))
+            and math.isfinite(value) and value > 0)
+
+
+def _gimmick_geometry(record, size, label):
+    if record.get('anchor_kind') not in GIMMICK_ANCHORS:
+        raise ValueError(f'Gimmick anchor_kind must be ground, base or center: {label}')
+    anchor = record.get('anchor_px')
+    if (not isinstance(anchor, list) or len(anchor) != 2
+            or any(isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v) for v in anchor)
+            or not 0 <= anchor[0] <= size[0] or not 0 <= anchor[1] <= size[1]):
+        raise ValueError(f'Invalid gimmick anchor: {label}')
+    box = record.get('body_bbox_px')
+    if (not isinstance(box, list) or len(box) != 4
+            or any(isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v) for v in box)
+            or not 0 <= box[0] < box[2] <= size[0] or not 0 <= box[1] < box[3] <= size[1]):
+        raise ValueError(f'Invalid gimmick subject bounds: {label}')
+    if 'subject_bbox_px' in record and record['subject_bbox_px'] != box:
+        raise ValueError(f'Gimmick subject/body bounds differ: {label}')
+    if not _positive_reference(record.get('reference_height_px')):
+        raise ValueError(f'Invalid gimmick reference height: {label}')
+
+
+def _validate_gimmick_registration(registration, identity):
+    if (registration.get('schema_version') != 3 or registration.get('category') != 'gimmick'
+            or registration.get('character_id') != identity):
+        raise ValueError(f'Gimmick registration identity/category/schema differs: {identity}')
+    reference = registration.get('common_reference_height_px')
+    if not _positive_reference(reference):
+        raise ValueError(f'Invalid gimmick common reference height: {identity}')
+    frames = registration.get('frames')
+    if not isinstance(frames, list) or not frames:
+        raise ValueError(f'Gimmick registration needs frames: {identity}')
+    sheets = {}
+    if 'sheets' in registration:
+        declared = registration['sheets']
+        if not isinstance(declared, list) or not declared:
+            raise ValueError(f'Gimmick sheets must be nonempty: {identity}')
+        for sheet in declared:
+            sheet_id = sheet.get('id')
+            if (not isinstance(sheet_id, str) or not sheet_id or sheet_id in sheets
+                    or not _positive_reference(sheet.get('reference_height_px'))):
+                raise ValueError(f'Invalid or duplicate gimmick sheet identifier/reference: {identity}')
+            sheets[sheet_id] = sheet
+    ids = set()
+    for frame in frames:
+        pose_id = frame.get('id')
+        if not isinstance(pose_id, str) or not re.fullmatch(r'[a-z][a-z0-9_-]*', pose_id) or pose_id in ids:
+            raise ValueError(f'Invalid or duplicate gimmick pose id: {identity}')
+        ids.add(pose_id)
+        size = frame.get('size_px')
+        if (not isinstance(size, list) or len(size) != 2
+                or any(isinstance(v, bool) or not isinstance(v, int) or v <= 0 for v in size)):
+            raise ValueError(f'Invalid gimmick frame size: {identity}/{pose_id}')
+        _gimmick_geometry(frame, size, identity + '/' + pose_id)
+        sheet_reference = reference
+        if sheets:
+            sheet = sheets.get(frame.get('sheet_id'))
+            if sheet is None:
+                raise ValueError(f'Unknown gimmick source sheet: {identity}/{pose_id}')
+            if (frame.get('source_sheet') != sheet['source_sheet']
+                    or frame.get('source_sheet_sha256') != sheet['source_sheet_sha256']):
+                raise ValueError(f'Gimmick pose source differs from its sheet: {identity}/{pose_id}')
+            sheet_reference = sheet['reference_height_px']
+        if frame['reference_height_px'] != sheet_reference:
+            raise ValueError(f'Gimmick poses must share a calibrated reference height: {identity}')
+    canonical = registration.get('canonical_neutral', {})
+    neutral_id = canonical.get('frame_id', canonical.get('source_frame_id'))
+    matches = [frame for frame in frames
+               if (neutral_id is None or frame['id'] == neutral_id)
+               and frame.get('sha256') == canonical.get('sha256')
+               and frame['reference_height_px'] == reference]
+    if not matches:
+        raise ValueError(f'Gimmick canonical neutral is not bound to a source frame/reference: {identity}')
+    clips = registration.get('clips', {})
+    if not isinstance(clips, dict):
+        raise ValueError(f'Gimmick clips must be named records: {identity}')
+    for name, clip in clips.items():
+        if not isinstance(name, str) or not name or not isinstance(clip, dict):
+            raise ValueError(f'Invalid gimmick clip: {identity}')
+        targets, durations = clip.get('frames'), clip.get('durations_ms')
+        if (not isinstance(targets, list) or not targets
+                or any(not isinstance(target, str) or target not in ids for target in targets)):
+            raise ValueError(f'Gimmick clip references an unknown pose: {identity}/{name}')
+        if (not isinstance(durations, list) or len(durations) != len(targets)
+                or any(isinstance(v, bool) or not isinstance(v, int) or v <= 0 for v in durations)
+                or not isinstance(clip.get('loop'), bool)):
+            raise ValueError(f'Invalid gimmick clip timing: {identity}/{name}')
+    return matches[0]
+
+
+def _gimmick_index_item_locked(root, selected, pending):
+    identity = selected.get('id')
+    if (not isinstance(identity, str) or not re.fullmatch(r'[a-z][a-z0-9-]*', identity)
+            or selected.get('category') != 'gimmick'
+            or not all(isinstance(selected.get(key), str) and selected[key] for key in ('name_ja', 'name_en'))):
+        raise ValueError('Gimmick collection needs explicit id, names and category')
+    prefix = 'assets/library/characters/' + identity + '/'
+    def source_path(relative):
+        if not isinstance(relative, str) or not relative.startswith(prefix):
+            raise ValueError(f'Gimmick source must stay in its asset directory: {identity}')
+        path = readable_source(root, relative, pending)
+        if not path.relative_to(Path(root).resolve()).as_posix().startswith(prefix):
+            raise ValueError(f'Gimmick source must stay in its asset directory: {identity}')
+        return path
+    manifest_relative = selected['source_manifest_path']
+    manifest_path = source_path(manifest_relative)
+    if sha(manifest_path) != selected['source_manifest_sha256']:
+        raise ValueError(f'Gimmick source manifest changed: {identity}')
+    manifest = read(manifest_path)
+    if manifest.get('category') != 'gimmick' or manifest.get('character_id') != identity:
+        raise ValueError(f'Gimmick source manifest identity differs: {identity}')
+    render = manifest['render_registration']
+    neutral_relative = render['neutral_path']
+    if not neutral_relative.startswith('assets/'):
+        neutral_relative = (Path(manifest_relative).parent / neutral_relative).as_posix()
+    neutral_path = source_path(neutral_relative)
+    if sha(neutral_path) != render['neutral_sha256']:
+        raise ValueError(f'Gimmick neutral changed: {identity}')
+    with Image.open(neutral_path) as image:
+        size = list(image.size)
+    if render['size_px'] != size:
+        raise ValueError(f'Gimmick neutral size differs: {identity}')
+    neutral = {'path': neutral_relative, 'sha256': render['neutral_sha256'],
+               'source_size_px': size, 'image_region_px': [0, 0, *size],
+               'body_bbox_px': render['body_bbox_px'], 'subject_bbox_px': render['body_bbox_px'],
+               'anchor_px': render['neutral_anchor_px'], 'anchor_kind': render['anchor_kind'],
+               'reference_height_px': render['neutral_natural_height_px'],
+               'source_manifest': manifest_relative, 'source_manifest_sha256': selected['source_manifest_sha256'],
+               'coordinate_space': 'original subject PNG canvas; reference height and anchor are explicitly calibrated'}
+    _gimmick_geometry(neutral, size, identity + '/neutral')
+    registration_relative = selected['registration']
+    registration_path = source_path(registration_relative)
+    if sha(registration_path) != selected['registration_sha256']:
+        raise ValueError(f'Gimmick registration changed: {identity}')
+    registration = read(registration_path)
+    neutral_frame = _validate_gimmick_registration(registration, identity)
+    canonical = registration['canonical_neutral']
+    if (canonical['path'] != neutral_relative or canonical['sha256'] != neutral['sha256']
+            or registration['common_reference_height_px'] != neutral['reference_height_px']):
+        raise ValueError(f'Gimmick canonical neutral differs from selected source: {identity}')
+    if (neutral_frame['size_px'] != size or neutral_frame['anchor_px'] != neutral['anchor_px']
+            or neutral_frame['anchor_kind'] != neutral['anchor_kind']
+            or neutral_frame['body_bbox_px'] != neutral['body_bbox_px']):
+        raise ValueError(f'Gimmick neutral geometry differs from its source frame: {identity}')
+    if registration.get('sheets'):
+        for sheet in registration['sheets']:
+            source_path(sheet['source_sheet'])
+    else:
+        source_path(registration['source_sheet'])
+    poses = {}
+    for frame in registration['frames']:
+        source_path(frame['path'])
+        poses[frame['id']] = {key: frame[key] for key in
+            ('path', 'sha256', 'size_px', 'anchor_px', 'anchor_kind', 'body_bbox_px', 'tail_bbox_px', 'reference_height_px')}
+        poses[frame['id']]['subject_bbox_px'] = frame['body_bbox_px']
+        if registration.get('sheets'):
+            poses[frame['id']].update(frame_id=frame['id'], sheet_id=frame['sheet_id'],
+                                      source_sheet=frame['source_sheet'], source_sheet_sha256=frame['source_sheet_sha256'])
+    for key in ('preview', 'motion_preview'):
+        source_path(selected[key])
+    return {'id': identity, 'name_ja': selected['name_ja'], 'name_en': selected['name_en'],
+            'category': 'gimmick', 'availability': 'reviewed-neutral-and-gimmick-key-poses',
+            'neutral': neutral, 'comparison_body_height_px': neutral['reference_height_px'],
+            'key_poses': {'version': registration.get('version', 'v001'),
+                          'namespace': 'gimmick/', 'registration': registration_relative,
+                          'registration_sha256': selected['registration_sha256'],
+                          'common_reference_height_px': registration['common_reference_height_px'],
+                          'sheet_reference_heights_px': {sheet['id']: sheet['reference_height_px']
+                                                        for sheet in registration.get('sheets', [])},
+                          'reference_height_policy': 'One fixed calibrated reference per native source sheet; common reference describes the selected canonical neutral. Never fit individual pose bounds.',
+                          'coordinate_space': 'individual exact cell PNG', 'poses': poses,
+                          'preview': selected['preview'], 'motion_preview': selected['motion_preview'],
+                          'clips': registration.get('clips', {})}}
+
+
 def build_index(root):
     with reservation_snapshot(root) as root:
         return _build_index_locked(root)
@@ -271,7 +486,7 @@ def _build_index_locked(root):
             size = list(image.size)
         region = source.get('crop_px', [0, 0, *size])
         item = {
-            'id': identity, 'name_ja': ja, 'name_en': en,
+            'id': identity, 'name_ja': ja, 'name_en': en, 'category': 'character',
             'availability': 'reviewed-neutral-and-six-key-poses' if identity in selected else 'reviewed-neutral-and-legacy-episode-assets',
             'neutral': {'path': source['path'], 'sha256': source['sha256'], 'source_size_px': size,
                         'image_region_px': region, 'body_bbox_px': source['body_bbox_px'],
@@ -355,6 +570,19 @@ def _build_index_locked(root):
             item['availability'] = 'reviewed-neutral-with-supplemental-eyecatches'
             item['eyecatch_collection'] = EYECATCHES
         characters.append(item)
+    gimmicks = read(source_path(GIMMICKS)) if source_path(GIMMICKS).is_file() else None
+    if gimmicks is not None:
+        if (not isinstance(gimmicks, dict) or gimmicks.get('schema_version') != 1
+                or gimmicks.get('status') != 'stocked-and-assistant-reviewed'
+                or not isinstance(gimmicks.get('items'), list)):
+            raise ValueError('Only an explicitly reviewed gimmick collection may be adopted')
+        known = {item['id'] for item in characters}
+        for selected_gimmick in gimmicks['items']:
+            item = _gimmick_index_item_locked(root, selected_gimmick, pending)
+            if item['id'] in known:
+                raise ValueError(f'Duplicate character/gimmick identity: {item["id"]}')
+            known.add(item['id'])
+            characters.append(item)
     index = {
         'schema_version': 1, 'kind': 'portable-character-library-index',
         'path_base': 'library-root', 'guide': 'assets/library/README.md',
@@ -362,7 +590,8 @@ def _build_index_locked(root):
         'coordinate_units': 'source pixels; xyxy boxes use exclusive right/bottom',
         'selection_policy': 'Use these explicit adopted paths, never the largest version number or an unselected trial.',
         'source_collections': [{'path': path, 'sha256': sha(readable_source(root, path, pending))} for path in
-                               ([STOCK, MOTIONS] + ([EXPANSION] if expansion else []) + ([EYECATCHES] if eyecatches else []))],
+                               ([STOCK, MOTIONS] + ([EXPANSION] if expansion else [])
+                                + ([EYECATCHES] if eyecatches else []) + ([GIMMICKS] if gimmicks is not None else []))],
         'usage_rules': ['Preserve the canonical face, palette, texture, contour and species markings.',
                         'Use target_body_height / reference_height as one isotropic scale for all poses from a calibrated source sheet; never fit individual poses.',
                         'Align the anatomical foot anchor; do not fit each pose bounding box or long tail footprint.',
@@ -491,9 +720,11 @@ def _load_pose_locked(root, identity, pose='neutral', pending=None):
     if len(matches) != 1:
         raise ValueError(f'Unknown character: {identity}')
     character = matches[0]
-    if pose.startswith(('expanded/', 'eyecatch/')):
+    if pose.startswith(('expanded/', 'eyecatch/', 'gimmick/')):
         prefix, name = pose.split('/', 1)
-        block = 'expanded_key_poses' if prefix == 'expanded' else 'eyecatch_key_poses'
+        block = {'expanded': 'expanded_key_poses', 'eyecatch': 'eyecatch_key_poses', 'gimmick': 'key_poses'}[prefix]
+        if prefix == 'gimmick' and character.get('category') != 'gimmick':
+            raise ValueError(f'Character is not a gimmick: {identity}')
         record = character.get(block, {}).get('poses', {}).get(name)
         if record is None:
             raise ValueError(f'No explicitly adopted {prefix} pose {identity}/{name}')
@@ -507,6 +738,8 @@ def _load_pose_locked(root, identity, pose='neutral', pending=None):
             image = opened.crop(region)
         anchor = [record['anchor_px'][0] - region[0], record['anchor_px'][1] - region[1]]
     else:
+        if character.get('category') == 'gimmick':
+            raise ValueError(f'Gimmick poses require gimmick/<pose>: {identity}/{pose}')
         record = character.get('key_poses', {}).get('poses', {}).get(pose)
         if record is None:
             raise ValueError(f'No generic reviewed pose {identity}/{pose}; see the library guide for legacy adapters')
@@ -527,6 +760,8 @@ def _verify_pose_registration_locked(root, registration, identity, pending=None)
         pending = pending_generation_roots(root)
     def source_path(relative):
         return readable_source(root, relative, pending)
+    if registration.get('category') == 'gimmick':
+        _validate_gimmick_registration(registration, identity)
     sheets = ({sheet['id']: sheet for sheet in registration['sheets']}
               if registration.get('sheets') else None)
     if sheets and len(sheets) != len(registration['sheets']):
@@ -621,6 +856,13 @@ def _verify_locked(root):
             if sha(source_path(keys['registration'])) != keys['registration_sha256']:
                 raise ValueError('Pose registration changed')
             registration = read(source_path(keys['registration']))
+            if character.get('category') == 'gimmick':
+                if (keys.get('namespace') != 'gimmick/'
+                        or keys.get('clips', {}) != registration.get('clips', {})
+                        or keys.get('sheet_reference_heights_px', {}) != {
+                            sheet['id']: sheet['reference_height_px'] for sheet in registration.get('sheets', [])}):
+                    raise ValueError('Selected gimmick namespace/clips differ from registration')
+                _gimmick_geometry(neutral, neutral['source_size_px'], character['id'] + '/neutral')
             if block == 'key_poses' and keys['common_reference_height_px'] != registration['common_reference_height_px']:
                 raise ValueError('Original pose common scale differs from registration')
             if block in ('expanded_key_poses', 'eyecatch_key_poses') and keys['sheet_reference_heights_px'] != {
@@ -632,6 +874,10 @@ def _verify_locked(root):
                 raise ValueError('Selected pose coverage differs from registration')
             for pose_id, record in keys['poses'].items():
                 frame = registered[pose_id]
+                if character.get('category') == 'gimmick' and (
+                        record.get('anchor_kind') != frame['anchor_kind']
+                        or record.get('subject_bbox_px') != frame['body_bbox_px']):
+                    raise ValueError('Selected gimmick geometry differs from registration')
                 if (record['path'] != frame['path']
                         or ('frame_id' in record and record['frame_id'] != pose_id)
                         or ('sheet_id' in record and record['sheet_id'] != frame.get('sheet_id'))
@@ -641,7 +887,8 @@ def _verify_locked(root):
                 if any(record[key] != frame[key] for key in
                         ['sha256', 'size_px', 'anchor_px', 'body_bbox_px', 'tail_bbox_px', 'reference_height_px']):
                     raise ValueError(f'Pose geometry differs from registration: {character["id"]}/{prefix}{pose_id}')
-                image, anchor, height = _load_pose_locked(root, character['id'], prefix + pose_id, pending=pending)
+                pose_name = ('gimmick/' if character.get('category') == 'gimmick' else prefix) + pose_id
+                image, anchor, height = _load_pose_locked(root, character['id'], pose_name, pending=pending)
                 if image.mode != 'RGBA' or height != frame['reference_height_px']:
                     raise ValueError('Invalid loaded pose')
                 frames += 1
@@ -744,7 +991,7 @@ def main(argv=None):
                 print(json.dumps(index, ensure_ascii=False, indent=2))
             else:
                 for item in index['characters']:
-                    print(f'{item["id"]}\t{item["name_ja"]}\tneutral + {len(item.get("key_poses", {}).get("poses", {}))} original poses + {len(item.get("expanded_key_poses", {}).get("poses", {}))} expanded poses + {len(item.get("eyecatch_key_poses", {}).get("poses", {}))} eye-catch poses')
+                    print(f'{item["id"]}\t{item["name_ja"]}\t{item.get("category", "character")}\tneutral + {len(item.get("key_poses", {}).get("poses", {}))} original poses + {len(item.get("expanded_key_poses", {}).get("poses", {}))} expanded poses + {len(item.get("eyecatch_key_poses", {}).get("poses", {}))} eye-catch poses')
             return 0
         if args.command == 'refresh':
             result = refresh(root)

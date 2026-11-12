@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "pass-with-scene-integration-notes",
+  "scope": "Background gimmick stock and key-pose/GIF quality, not complete video acceptance.",
+  "assets": 8,
+  "registered_key_poses": 49,
+  "motion_clips": 28,
+  "registered_crop_pixels": "all49 match native selected sources without resampling or alpha/color changes",
+  "independent_art_review": "assets/library/collections/background-gimmicks/v001/qa-evidence/independent-art-review.json",
+  "independent_art_review_sha256": "d7a789241025449414ef2990bbaf272189565e7815dc6b4c4db51bcb853a2bfb",
+  "gif_decode_checks": {
+    "assets": 8,
+    "native_registered_poses": 49,
+    "private_exact_rgba_crop_verifiers": "all8pass with explicit pending=[]; no reservation changes",
+    "min_alpha8_margin_px": {
+      "grass": 13,
+      "flower-bed": 24,
+      "airplane": 34,
+      "rocket": 16,
+      "helicopter": 4,
+      "butterfly": 38,
+      "ladybug": 14,
+      "rainbow": 74
+    },
+    "decoded_gif_files": 44,
+    "decoded_gif_frames": 358,
+    "all_decoded_frame_durations_positive": true,
+    "all_gif_disposals": 2
+  },
+  "quality_blockers": [],
+  "scene_notes": {
+    "helicopter": "First four spin-pose cabin measurements are199x131,199x130,200x133,200x131px: small hand-redraw variation. Rotor foreshortening is intended; the stable cockpit anchor and fixed per-sheet window-based calibration avoid whole-body fitting. Pitch images rotate the cabin and therefore change its axis-aligned extent. Suitable for background stock; not a precision rigid-body flight rig.",
+    "airplane": "Level propeller-pose fuselage measurements233x145 and234x145px; center follows painted fuselage/cockpit rather than wing/propeller footprint. Climb/descent/bank changes are intentional and preserve identity/palette.",
+    "rocket": "Painted nozzle anchor excludes exhaust. Anatomical preview body height296..298px across all6states; varied flame length does not produce a body-scale change. Minor hand-redraw width variation remains.",
+    "butterfly": "Repaired folded-up standalone frame has complete antennae and wing margins. Anatomical reference460 for folded standalone versus169 for initial sheet yields coherent body scale in the actual flap GIF. Registered native per-sheet calibration is preserved; no per-pose silhouette fitting.",
+    "ladybug": "Consistent red elytra, spots, brown body and six-leg/wing-opening vocabulary. Walk/takeoff/landing are usable discrete poses with scene-dependent translation.",
+    "grass": "Fixed sheet scales and measured root support preserve grounding; recorded3.4056percent root-span redraw variation is minor and remains documented, not corrected with per-pose fitting.",
+    "flower-bed": "All6flowers and color order remain identifiable, soil-and-stone support width is stable in registered comparison. No visible matte/debris in proper composites.",
+    "rainbow": "One complete native arch supports three explicitly procedural variants: angular reveal, opacity fade and light sweep. These are not additional generated poses; initial invisible effect states are intentional."
+  },
+  "legacy_preservation": "assets/library/collections/background-gimmicks/v001/qa-evidence/legacy-selection-preservation.json",
+  "limits": [
+    "GIF review used decoded frames/filmstrips and timing/disposal checks, not a claim of human continuous playback.",
+    "Final scene placement, frequency, interpolation/path motion, occlusion, numeric content and completed MP4 remain production-specific QA.",
+    "This review does not clear previously recorded quality findings on legacy414stockposes."
+  ]
+}

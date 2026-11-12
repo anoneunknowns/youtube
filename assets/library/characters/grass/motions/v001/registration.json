@@ -1,0 +1,585 @@
+{
+  "schema_version": 3,
+  "kind": "generated-gimmick-key-pose-stock",
+  "version": "v001",
+  "category": "gimmick",
+  "character_id": "grass",
+  "owner": "codex:gimmicks-20261112:01a1cfaa",
+  "canonical_neutral": {
+    "path": "assets/library/characters/grass/sources/v001/neutral.png",
+    "sha256": "1f58f2947a694457ad1c7139effafdf64712b9acac288a3de494138853530144",
+    "frame_id": "neutral"
+  },
+  "common_reference_height_px": 373,
+  "sheets": [
+    {
+      "id": "left",
+      "source_sheet": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-left-original.png",
+      "source_sheet_sha256": "0d5ee2b62bc76964da00fa988f9e3ac7bcd2cab5d794720a5dc8deb7f97ff52a",
+      "generation_input": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/provenance/sway-left-input.json",
+      "generation_prompt": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/provenance/sway-left-prompt.txt",
+      "crop_boundaries_y_px": [
+        0,
+        418,
+        836,
+        1254
+      ],
+      "crop_boundary_note": "Original equal-third row boundaries preserve full native subjects.",
+      "reference_height_px": 373,
+      "calibration": {
+        "neutral_source_reference_height_px": 373,
+        "neutral_base_width_px": 334,
+        "this_sheet_settle_base_width_px": 335,
+        "reference_pose": "neutral",
+        "method": "Canonical subject height for A; B reference transferred by stable root-strip/soil-and-stone base width of B settle divided by A neutral base width. Every pose in each sheet uses that one fixed reference; no posed leaf/flower bbox fit."
+      }
+    },
+    {
+      "id": "right",
+      "source_sheet": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-right-original.png",
+      "source_sheet_sha256": "5a733e7a46178758149467853268304d44481691e712e9396e3111f596536dc1",
+      "generation_input": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/provenance/sway-right-input.json",
+      "generation_prompt": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/provenance/sway-right-prompt.txt",
+      "crop_boundaries_y_px": [
+        0,
+        418,
+        816,
+        1254
+      ],
+      "crop_boundary_note": "Native transparent gaps; right-grass boundary816 preserves the full settle tip with>=2px alpha8 clearance.",
+      "reference_height_px": 374.1167664670659,
+      "calibration": {
+        "neutral_source_reference_height_px": 373,
+        "neutral_base_width_px": 334,
+        "this_sheet_settle_base_width_px": 335,
+        "reference_pose": "settle",
+        "method": "Canonical subject height for A; B reference transferred by stable root-strip/soil-and-stone base width of B settle divided by A neutral base width. Every pose in each sheet uses that one fixed reference; no posed leaf/flower bbox fit."
+      }
+    }
+  ],
+  "frames": [
+    {
+      "id": "neutral",
+      "path": "assets/library/characters/grass/motions/v001/neutral.png",
+      "sha256": "1f58f2947a694457ad1c7139effafdf64712b9acac288a3de494138853530144",
+      "size_px": [
+        1254,
+        418
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        418
+      ],
+      "sheet_id": "left",
+      "source_sheet": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-left-original.png",
+      "source_sheet_sha256": "0d5ee2b62bc76964da00fa988f9e3ac7bcd2cab5d794720a5dc8deb7f97ff52a",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        271,
+        32,
+        974,
+        405
+      ],
+      "body_bbox_px": [
+        271,
+        32,
+        974,
+        405
+      ],
+      "subject_bbox_px": [
+        271,
+        32,
+        974,
+        405
+      ],
+      "alpha128_bbox_px": [
+        272,
+        32,
+        973,
+        405
+      ],
+      "alpha8_margins_px": [
+        271,
+        32,
+        280,
+        13
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        393,
+        1254,
+        401
+      ],
+      "base_span_bbox_px": [
+        456,
+        393,
+        790,
+        401
+      ],
+      "base_width_px": 334,
+      "anchor_px": [
+        623.0,
+        405
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Root strip: alpha>=128 in the native 8px horizontal band from support-bottom-12 to support-bottom-4; upper flexing leaves excluded. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 373
+    },
+    {
+      "id": "sway_left_soft",
+      "path": "assets/library/characters/grass/motions/v001/sway_left_soft.png",
+      "sha256": "c8751df27a969e08119e5cb4aa79c5a0ea53ccbb5a20f3587da134c1bcc0ca2a",
+      "size_px": [
+        1254,
+        418
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        1254,
+        836
+      ],
+      "sheet_id": "left",
+      "source_sheet": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-left-original.png",
+      "source_sheet_sha256": "0d5ee2b62bc76964da00fa988f9e3ac7bcd2cab5d794720a5dc8deb7f97ff52a",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        260,
+        31,
+        964,
+        381
+      ],
+      "body_bbox_px": [
+        260,
+        31,
+        964,
+        381
+      ],
+      "subject_bbox_px": [
+        260,
+        31,
+        964,
+        381
+      ],
+      "alpha128_bbox_px": [
+        261,
+        32,
+        963,
+        379
+      ],
+      "alpha8_margins_px": [
+        260,
+        31,
+        290,
+        37
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        367,
+        1254,
+        375
+      ],
+      "base_span_bbox_px": [
+        464,
+        367,
+        791,
+        375
+      ],
+      "base_width_px": 327,
+      "anchor_px": [
+        627.5,
+        379
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Root strip: alpha>=128 in the native 8px horizontal band from support-bottom-12 to support-bottom-4; upper flexing leaves excluded. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 373
+    },
+    {
+      "id": "sway_left_strong",
+      "path": "assets/library/characters/grass/motions/v001/sway_left_strong.png",
+      "sha256": "f499eb6767d3e40a7d58ad160301e7faa85d26258cbbc85c3c4b4bf76f4be27b",
+      "size_px": [
+        1254,
+        418
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        1254,
+        1254
+      ],
+      "sheet_id": "left",
+      "source_sheet": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-left-original.png",
+      "source_sheet_sha256": "0d5ee2b62bc76964da00fa988f9e3ac7bcd2cab5d794720a5dc8deb7f97ff52a",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        227,
+        17,
+        975,
+        378
+      ],
+      "body_bbox_px": [
+        227,
+        17,
+        975,
+        378
+      ],
+      "subject_bbox_px": [
+        227,
+        17,
+        975,
+        378
+      ],
+      "alpha128_bbox_px": [
+        228,
+        18,
+        974,
+        375
+      ],
+      "alpha8_margins_px": [
+        227,
+        17,
+        279,
+        40
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        363,
+        1254,
+        371
+      ],
+      "base_span_bbox_px": [
+        466,
+        363,
+        789,
+        371
+      ],
+      "base_width_px": 323,
+      "anchor_px": [
+        627.5,
+        375
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Root strip: alpha>=128 in the native 8px horizontal band from support-bottom-12 to support-bottom-4; upper flexing leaves excluded. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 373
+    },
+    {
+      "id": "sway_right_soft",
+      "path": "assets/library/characters/grass/motions/v001/sway_right_soft.png",
+      "sha256": "c579e7b2192ff4c73746408517211d0528e0282c31301183751a297b75ce413c",
+      "size_px": [
+        1254,
+        418
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        418
+      ],
+      "sheet_id": "right",
+      "source_sheet": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-right-original.png",
+      "source_sheet_sha256": "5a733e7a46178758149467853268304d44481691e712e9396e3111f596536dc1",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        282,
+        47,
+        977,
+        405
+      ],
+      "body_bbox_px": [
+        282,
+        47,
+        977,
+        405
+      ],
+      "subject_bbox_px": [
+        282,
+        47,
+        977,
+        405
+      ],
+      "alpha128_bbox_px": [
+        283,
+        48,
+        975,
+        404
+      ],
+      "alpha8_margins_px": [
+        282,
+        47,
+        277,
+        13
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        392,
+        1254,
+        400
+      ],
+      "base_span_bbox_px": [
+        456,
+        392,
+        789,
+        400
+      ],
+      "base_width_px": 333,
+      "anchor_px": [
+        622.5,
+        404
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Root strip: alpha>=128 in the native 8px horizontal band from support-bottom-12 to support-bottom-4; upper flexing leaves excluded. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 374.1167664670659
+    },
+    {
+      "id": "sway_right_strong",
+      "path": "assets/library/characters/grass/motions/v001/sway_right_strong.png",
+      "sha256": "fb643916c1b827aa3aba8946da472a283d31d981b93eae4d50a1e3d7d9e450b8",
+      "size_px": [
+        1254,
+        398
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        1254,
+        816
+      ],
+      "sheet_id": "right",
+      "source_sheet": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-right-original.png",
+      "source_sheet_sha256": "5a733e7a46178758149467853268304d44481691e712e9396e3111f596536dc1",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        313,
+        53,
+        995,
+        371
+      ],
+      "body_bbox_px": [
+        313,
+        53,
+        995,
+        371
+      ],
+      "subject_bbox_px": [
+        313,
+        53,
+        995,
+        371
+      ],
+      "alpha128_bbox_px": [
+        314,
+        55,
+        994,
+        369
+      ],
+      "alpha8_margins_px": [
+        313,
+        53,
+        259,
+        27
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        357,
+        1254,
+        365
+      ],
+      "base_span_bbox_px": [
+        456,
+        357,
+        790,
+        365
+      ],
+      "base_width_px": 334,
+      "anchor_px": [
+        623.0,
+        369
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Root strip: alpha>=128 in the native 8px horizontal band from support-bottom-12 to support-bottom-4; upper flexing leaves excluded. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 374.1167664670659
+    },
+    {
+      "id": "settle",
+      "path": "assets/library/characters/grass/motions/v001/settle.png",
+      "sha256": "3e43549296cd533ceea67181e90760e623120a55226f5a005d8f1c36e240f3fc",
+      "size_px": [
+        1254,
+        438
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        816,
+        1254,
+        1254
+      ],
+      "sheet_id": "right",
+      "source_sheet": "assets/library/characters/grass/generation-batches/background-gimmicks-20261112-01a1cfaa/source/sway-right-original.png",
+      "source_sheet_sha256": "5a733e7a46178758149467853268304d44481691e712e9396e3111f596536dc1",
+      "tail_bbox_px": null,
+      "visible_bbox_px": [
+        277,
+        21,
+        973,
+        391
+      ],
+      "body_bbox_px": [
+        277,
+        21,
+        973,
+        391
+      ],
+      "subject_bbox_px": [
+        277,
+        21,
+        973,
+        391
+      ],
+      "alpha128_bbox_px": [
+        280,
+        22,
+        972,
+        389
+      ],
+      "alpha8_margins_px": [
+        277,
+        21,
+        281,
+        47
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_roi_px": [
+        0,
+        377,
+        1254,
+        385
+      ],
+      "base_span_bbox_px": [
+        456,
+        377,
+        791,
+        385
+      ],
+      "base_width_px": 335,
+      "anchor_px": [
+        623.5,
+        389
+      ],
+      "anchor_kind": "base",
+      "anchor_method": "Root strip: alpha>=128 in the native 8px horizontal band from support-bottom-12 to support-bottom-4; upper flexing leaves excluded. Anchor x is the base span center; y is the measured actual alpha128 subject/base support bottom.",
+      "ground_estimated": false,
+      "reference_height_px": 374.1167664670659
+    }
+  ],
+  "clips": {
+    "gentle_sway": {
+      "frames": [
+        "neutral",
+        "sway_left_soft",
+        "neutral",
+        "sway_right_soft",
+        "neutral"
+      ],
+      "durations_ms": [
+        650,
+        320,
+        450,
+        320,
+        650
+      ],
+      "loop": true
+    },
+    "gust_left": {
+      "frames": [
+        "neutral",
+        "sway_left_soft",
+        "sway_left_strong",
+        "sway_left_soft",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        240,
+        380,
+        240,
+        550
+      ],
+      "loop": true
+    },
+    "gust_right": {
+      "frames": [
+        "neutral",
+        "sway_right_soft",
+        "sway_right_strong",
+        "sway_right_soft",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        240,
+        380,
+        240,
+        550
+      ],
+      "loop": true
+    },
+    "settle": {
+      "frames": [
+        "sway_left_strong",
+        "sway_left_soft",
+        "neutral",
+        "sway_right_soft",
+        "settle",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        280,
+        400,
+        260,
+        450,
+        600
+      ],
+      "loop": true
+    }
+  },
+  "source_pixels_modified": false,
+  "per_pose_bbox_fitting": false,
+  "anchor_policy": {
+    "description": "Native measured root/soil support center and bottom; upper leaves/flowers flex, base remains grounded.",
+    "ground_estimated": false
+  },
+  "scope": "Six discrete generated key poses; preview GIFs are key-pose loops, not a completed video or a claim of interpolated motion."
+}

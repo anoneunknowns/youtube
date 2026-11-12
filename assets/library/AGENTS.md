@@ -1,5 +1,13 @@
 # キャラクター素材を扱うAIへの指示
 
+<!-- BEGIN UNIFIED-ASSET-ENTRY -->
+既存11キャラクターと背景素材8種類の計19種類を共通に読む場合は `catalogs/asset-library-current-v1.json` から各IDの `current/asset.json` を辿る。同じ場所に `neutral.png`、`poses/<namespace>/<pose>.png`、`clips.json` がある。画像の実利用パスは `current/`、`source_path` はプロジェクトルートを基準に解決する。
+
+- `current/` は採用台帳から作るバイト一致コピー／採用atlasの無損失切り出しで、元の原画・登録・過去採用を保全する。管理担当は `python tools/unified_asset_library.py build` と `verify` で更新・確認し、利用側は派生画像や期待ハッシュを手編集しない。
+- `current/` の名前空間は `basic/`、`expanded/`、`eyecatch/`、`gimmick/`。背景素材のローダー指定は `gimmick/<pose>`、従来基本ポーズのローダー指定は従来どおり接頭辞なし。動作は `clips.json` の順序・時間・ループ・再生効果を読む。
+- 背景素材は `anchor_kind` とシートごとの共通基準を使う。翼・炎・ローター・虹の部分表示へ個別fitしない。昆虫等の中心支点を接地支点と取り違えず、最大表示の対象部位と原寸の確認範囲は [表示と動作の案内](README.md#背景素材8種類の表示と動作) と各登録・QAを参照する。
+<!-- END UNIFIED-ASSET-ENTRY -->
+
 このディレクトリの素材は [README.md](README.md) と、リポジトリルートの `catalogs/character-library-v1.json` を入口に利用する。
 
 並行生成・登録・整理は [画像管理仕様](../../docs/IMAGE-ASSET-MANAGEMENT.md) に従う。開始前に `catalogs/character-asset-management-v1.json` の担当予約を確認し、生成担当は専用バッチだけへ書き込む。管理在庫は `catalogs/character-asset-registry-v1.json`、人が見る入口は [管理一覧](character-assets.html)。生成中の予約範囲は確定在庫へ混ぜず、既に在庫登録された原本を予約で隠さない。

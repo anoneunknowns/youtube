@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "kind": "builtin-imagegen-source-receipt",
+  "asset_id": "rocket",
+  "owner": "codex:gimmicks-20261112:01a1cfaa",
+  "recorded_at_utc": "2026-11-12T13:37:02.961329+00:00",
+  "tool": "image_gen.imagegen",
+  "model_identifier": null,
+  "model_identifier_status": "not disclosed by tool",
+  "transparent_background_requested": true,
+  "prompt_file": "assets/library/characters/rocket/generation-batches/background-gimmicks-20261112-01a1cfaa/provenance/rocket_b-prompt-v002.txt",
+  "direct_inputs": [
+    {
+      "path": "assets/library/characters/rocket/generation-batches/background-gimmicks-20261112-01a1cfaa/source/rocket-thrust-sheet-a-v001.png",
+      "sha256": "e680de7f3277c6175275892e442157c7b9ce5ee5d8b5a7228f26ad8aefa0776f",
+      "role": "identity-reference exact rocket of sheetA"
+    },
+    {
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+      "sha256": "8512984d0660fea738192619b2bfccff1ce42a9493db49c980452ff904296e4e",
+      "role": "style-reference only; warm brown handdrawn contour and watercolor"
+    },
+    {
+      "path": "assets/library/characters/red-panda/sources/v001/neutral.png",
+      "sha256": "2bc52232008b43250b6382df4097bf526bb325925a6c50be567b0baa5c565cff",
+      "role": "style-reference only; rounded forms and paper pigment texture"
+    }
+  ],
+  "output": {
+    "original_generated_path": "/Users/support/.codex/generated_images/01a1cfaa-e730-76f0-abc1-bf1db0da03d1/exec-df06db8c-d736-432a-9338-7e370c20b9f3.png",
+    "workspace_path": "assets/library/characters/rocket/generation-batches/background-gimmicks-20261112-01a1cfaa/source/rocket-thrust-sheet-b-v002.png",
+    "original_sha256": "b237aac6d53bf51570789c9e8890365034032bdcf70575fbad74772574a4a20c",
+    "workspace_sha256": "b237aac6d53bf51570789c9e8890365034032bdcf70575fbad74772574a4a20c",
+    "byte_identical_copy": true,
+    "size_px": [
+      887,
+      1774
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "fully_transparent_pixels": 1227923,
+    "total_pixels": 1573538
+  },
+  "layout": {
+    "columns": 1,
+    "rows": 3,
+    "order": "top-to-bottom",
+    "states": [
+      "thrust-short",
+      "thrust-long",
+      "coast-tilt"
+    ]
+  },
+  "geometry_scope": "Source measurements only; actual row positions may differ from equal thirds. No cropping, registration, alpha cleanup, resampling or catalog update.",
+  "status": "selected-source-candidate; root integration and continuous animation QA pending",
+  "prompt_text": "Use case: illustration-story. Asset type: transparent RGBA animated background-prop source sheet.\nImage1 is the EXACT identity reference: the cream-and-coral rocket from sheetA. Images2 and3 are STYLE references only: bear and red panda, warm brown handdrawn contours with subtle watercolor paper grain. Preserve the same rounded cream rocket body, muted coral nose cone and fins, turquoise circular porthole, warm brown nozzle rings, silhouette proportions and painted details. Plain inanimate object, NO face or eyes, no animals/hats/text/background/shadows/smoke/sparkles.\nIMPORTANT NATIVE RESOLUTION: Produce a tall PORTRAIT canvas approximately1024x2048 or larger, exactly ONE COLUMN and THREE rows. Keep EACH nose-to-nozzle body between380and440 NATIVE pixels tall, excluding the flame. The previous square attempt made bodies too small (~275px), so this portrait layout must paint substantially larger bodies. Each row uses about600vertical pixels, with generous invisible gaps separating the three full objects. Keep the WHOLE rocket and WHOLE flame visible inside the canvas, fully transparent margins, no cropping and no upscale.\nTOP: same rocket upright with short compact orange/yellow thrust flame aboutone-quarter body length. MIDDLE: same rocket upright, same body physical size, with distinctly longer fuller orange/yellow thrust plume about35percent body length. BOTTOM: same rocket coasting with NO flame, slight8degree clockwise tilt. All three bodies same physical scale and geometry; use the nozzle center as a stable body reference, and do not count the changing flame in body height. Exactly three rockets, ordered top-to-bottom. No labels, numbers or extra objects.",
+  "prompt_sha256": "4d79e564c4e7706cd94570cac4a77b459a24f042c09b98f9e27afb85dcea72c3",
+  "tool_arguments": {
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "/Users/support/codex/youtube/assets/library/characters/rocket/generation-batches/background-gimmicks-20261112-01a1cfaa/source/rocket-thrust-sheet-a-v001.png",
+      "/Users/support/codex/youtube/assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+      "/Users/support/codex/youtube/assets/library/characters/red-panda/sources/v001/neutral.png"
+    ]
+  },
+  "geometry_observation": {
+    "visible_sheet_bbox_alpha128": [
+      258,
+      57,
+      627,
+      1665
+    ],
+    "occupied_y_bands_alpha128": [
+      [
+        57,
+        574
+      ],
+      [
+        612,
+        1177
+      ],
+      [
+        1211,
+        1665
+      ]
+    ],
+    "caution": "Nominal sheet grid is an intent. Inspect actual row bands; equal-third cuts can touch neighboring pixels. Root owns final frame rectangles and stable body/nozzle/rotor registration.",
+    "no_native_upscale_performed": true
+  },
+  "visual_review": {
+    "method": "view_image inspection of original saved output plus alpha measurements",
+    "style": "Warm brown handdrawn contour, rounded inanimate forms and soft watercolor grain; no faces, animal parts, hats, text or scene background.",
+    "scope": "Source-sheet review only, not a final motion loop, alignment acceptance or completed-video review."
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "schema_version": 3,
+  "kind": "generated-gimmick-key-pose-stock",
+  "category": "gimmick",
+  "character_id": "rocket",
+  "version": "v001",
+  "owner": "codex:gimmicks-20261112:01a1cfaa",
+  "status": "registered-native-source-poses; scene-use-not-verified",
+  "common_reference_height_px": 450.0,
+  "reference_height_policy": "One fixed physical body reference per native sheet; per-pose natural bounds never set scale.",
+  "canonical_neutral": {
+    "path": "assets/library/characters/rocket/sources/v001/neutral.png",
+    "sha256": "ae9d79a0d1efbbbaa7caf1e0f8af05af57e521655904985687ba5da31200afc2",
+    "frame_id": "idle"
+  },
+  "sheets": [
+    {
+      "id": "a",
+      "source_sheet": "assets/library/characters/rocket/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "e680de7f3277c6175275892e442157c7b9ce5ee5d8b5a7228f26ad8aefa0776f",
+      "reference_height_px": 450.0,
+      "generation_input": "assets/library/characters/rocket/motions/v001/source-sheets/a-input.json",
+      "generation_prompt": "assets/library/characters/rocket/motions/v001/source-sheets/a-prompt.txt",
+      "generation_provenance": "assets/library/characters/rocket/motions/v001/source-sheets/a-provenance.json",
+      "calibration": {
+        "reference_height_px": 450.0,
+        "baseline_pose": "idle",
+        "body_bounds_px": [
+          262,
+          59,
+          624,
+          509
+        ],
+        "calibration_marker_width_px": 110,
+        "method": "Fixed per-sheet body reference from selected upright physical body, excluding flame for rocket. All other poses inherit this one scalar; no pose bbox fitting.",
+        "native_y_bands_alpha8": [
+          [
+            58,
+            511
+          ],
+          [
+            607,
+            1135
+          ],
+          [
+            1180,
+            1747
+          ]
+        ],
+        "lossless_row_crop_boundaries": [
+          0,
+          559,
+          1158,
+          1774
+        ]
+      }
+    },
+    {
+      "id": "b",
+      "source_sheet": "assets/library/characters/rocket/motions/v001/source-sheets/b.png",
+      "source_sheet_sha256": "b237aac6d53bf51570789c9e8890365034032bdcf70575fbad74772574a4a20c",
+      "reference_height_px": 452.0,
+      "generation_input": "assets/library/characters/rocket/motions/v001/source-sheets/b-input.json",
+      "generation_prompt": "assets/library/characters/rocket/motions/v001/source-sheets/b-prompt.txt",
+      "generation_provenance": "assets/library/characters/rocket/motions/v001/source-sheets/b-provenance.json",
+      "calibration": {
+        "reference_height_px": 452.0,
+        "baseline_pose": "thrust_short",
+        "body_bounds_px": [
+          258,
+          57,
+          627,
+          509
+        ],
+        "calibration_marker_width_px": 109,
+        "method": "Fixed per-sheet body reference from selected upright physical body, excluding flame for rocket. All other poses inherit this one scalar; no pose bbox fitting.",
+        "native_y_bands_alpha8": [
+          [
+            56,
+            575
+          ],
+          [
+            611,
+            1178
+          ],
+          [
+            1210,
+            1666
+          ]
+        ],
+        "lossless_row_crop_boundaries": [
+          0,
+          593,
+          1194,
+          1774
+        ]
+      }
+    }
+  ],
+  "frames": [
+    {
+      "id": "idle",
+      "path": "assets/library/characters/rocket/motions/v001/idle.png",
+      "sha256": "ae9d79a0d1efbbbaa7caf1e0f8af05af57e521655904985687ba5da31200afc2",
+      "size_px": [
+        887,
+        559
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        887,
+        559
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/rocket/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "e680de7f3277c6175275892e442157c7b9ce5ee5d8b5a7228f26ad8aefa0776f",
+      "anchor_px": [
+        443.0,
+        480.0
+      ],
+      "anchor_kind": "base",
+      "anchor_definition": "center of painted dark nozzle block; changing exhaust excluded",
+      "body_bbox_px": [
+        261,
+        58,
+        625,
+        511
+      ],
+      "subject_bbox_px": [
+        261,
+        58,
+        625,
+        511
+      ],
+      "anatomical_body_bbox_px": [
+        262,
+        59,
+        624,
+        509
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        380,
+        452,
+        506,
+        508
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "native_visible_margin_px": 48,
+      "reference_height_px": 450.0
+    },
+    {
+      "id": "ignition_small",
+      "path": "assets/library/characters/rocket/motions/v001/ignition_small.png",
+      "sha256": "9902c6bce27de05756d2d66e1cf3095a80c858bf54365b00012a544f885152c7",
+      "size_px": [
+        887,
+        599
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        559,
+        887,
+        1158
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/rocket/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "e680de7f3277c6175275892e442157c7b9ce5ee5d8b5a7228f26ad8aefa0776f",
+      "anchor_px": [
+        443.0,
+        470.0
+      ],
+      "anchor_kind": "base",
+      "anchor_definition": "center of painted dark nozzle block; changing exhaust excluded",
+      "body_bbox_px": [
+        261,
+        48,
+        625,
+        576
+      ],
+      "subject_bbox_px": [
+        261,
+        48,
+        625,
+        576
+      ],
+      "anatomical_body_bbox_px": [
+        262,
+        49,
+        624,
+        499
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        380,
+        442,
+        506,
+        498
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "native_visible_margin_px": 23,
+      "reference_height_px": 450.0
+    },
+    {
+      "id": "steady_thrust",
+      "path": "assets/library/characters/rocket/motions/v001/steady_thrust.png",
+      "sha256": "f56f7d188735c0ee6c48e55b7993a7b304be68415d30eba25091f38803efdb6f",
+      "size_px": [
+        887,
+        616
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        1158,
+        887,
+        1774
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/rocket/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "e680de7f3277c6175275892e442157c7b9ce5ee5d8b5a7228f26ad8aefa0776f",
+      "anchor_px": [
+        443.0,
+        444.0
+      ],
+      "anchor_kind": "base",
+      "anchor_definition": "center of painted dark nozzle block; changing exhaust excluded",
+      "body_bbox_px": [
+        261,
+        22,
+        626,
+        589
+      ],
+      "subject_bbox_px": [
+        261,
+        22,
+        626,
+        589
+      ],
+      "anatomical_body_bbox_px": [
+        262,
+        23,
+        624,
+        473
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        380,
+        416,
+        506,
+        472
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "native_visible_margin_px": 22,
+      "reference_height_px": 450.0
+    },
+    {
+      "id": "thrust_short",
+      "path": "assets/library/characters/rocket/motions/v001/thrust_short.png",
+      "sha256": "c01bea4fd257792daffed95c9c3c8aac2f30bf0c480b3f56838ac1037b0137d6",
+      "size_px": [
+        887,
+        593
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        887,
+        593
+      ],
+      "sheet_id": "b",
+      "source_sheet": "assets/library/characters/rocket/motions/v001/source-sheets/b.png",
+      "source_sheet_sha256": "b237aac6d53bf51570789c9e8890365034032bdcf70575fbad74772574a4a20c",
+      "anchor_px": [
+        443.0,
+        480.0
+      ],
+      "anchor_kind": "base",
+      "anchor_definition": "center of painted dark nozzle block; changing exhaust excluded",
+      "body_bbox_px": [
+        257,
+        56,
+        627,
+        575
+      ],
+      "subject_bbox_px": [
+        257,
+        56,
+        627,
+        575
+      ],
+      "anatomical_body_bbox_px": [
+        258,
+        57,
+        627,
+        509
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        379,
+        452,
+        507,
+        508
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "native_visible_margin_px": 18,
+      "reference_height_px": 452.0
+    },
+    {
+      "id": "thrust_long",
+      "path": "assets/library/characters/rocket/motions/v001/thrust_long.png",
+      "sha256": "f94b6a461897e850981434983537cbbb74e9388ef5f284e9b18e2ee01d5a3f8d",
+      "size_px": [
+        887,
+        601
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        593,
+        887,
+        1194
+      ],
+      "sheet_id": "b",
+      "source_sheet": "assets/library/characters/rocket/motions/v001/source-sheets/b.png",
+      "source_sheet_sha256": "b237aac6d53bf51570789c9e8890365034032bdcf70575fbad74772574a4a20c",
+      "anchor_px": [
+        443.0,
+        441.5
+      ],
+      "anchor_kind": "base",
+      "anchor_definition": "center of painted dark nozzle block; changing exhaust excluded",
+      "body_bbox_px": [
+        257,
+        18,
+        628,
+        585
+      ],
+      "subject_bbox_px": [
+        257,
+        18,
+        628,
+        585
+      ],
+      "anatomical_body_bbox_px": [
+        258,
+        19,
+        627,
+        470
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        379,
+        414,
+        507,
+        469
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "native_visible_margin_px": 16,
+      "reference_height_px": 452.0
+    },
+    {
+      "id": "coast_tilt",
+      "path": "assets/library/characters/rocket/motions/v001/coast_tilt.png",
+      "sha256": "cd2c6d609331b9f0a5fd7016712dd9516f78cdd22e670ebeaa15a0b7be1a423c",
+      "size_px": [
+        887,
+        580
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        1194,
+        887,
+        1774
+      ],
+      "sheet_id": "b",
+      "source_sheet": "assets/library/characters/rocket/motions/v001/source-sheets/b.png",
+      "source_sheet_sha256": "b237aac6d53bf51570789c9e8890365034032bdcf70575fbad74772574a4a20c",
+      "anchor_px": [
+        443.5,
+        442.0
+      ],
+      "anchor_kind": "base",
+      "anchor_definition": "center of painted dark nozzle block; changing exhaust excluded",
+      "body_bbox_px": [
+        257,
+        16,
+        623,
+        472
+      ],
+      "subject_bbox_px": [
+        257,
+        16,
+        623,
+        472
+      ],
+      "anatomical_body_bbox_px": [
+        258,
+        17,
+        622,
+        471
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        374,
+        414,
+        513,
+        470
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "native_visible_margin_px": 16,
+      "reference_height_px": 452.0
+    }
+  ],
+  "clips": {
+    "ignition": {
+      "frames": [
+        "idle",
+        "ignition_small",
+        "steady_thrust",
+        "ignition_small",
+        "idle"
+      ],
+      "durations_ms": [
+        600,
+        200,
+        450,
+        200,
+        500
+      ],
+      "loop": true,
+      "preview": "assets/library/characters/rocket/motions/v001/ignition-preview.gif",
+      "interpolation": "held source poses, no full-subject dissolve"
+    },
+    "thrust": {
+      "frames": [
+        "steady_thrust",
+        "thrust_short",
+        "thrust_long",
+        "thrust_short"
+      ],
+      "durations_ms": [
+        130,
+        120,
+        130,
+        120
+      ],
+      "loop": true,
+      "preview": "assets/library/characters/rocket/motions/v001/thrust-preview.gif",
+      "interpolation": "held source poses, no full-subject dissolve"
+    },
+    "coast": {
+      "frames": [
+        "idle",
+        "coast_tilt",
+        "idle"
+      ],
+      "durations_ms": [
+        600,
+        400,
+        600
+      ],
+      "loop": true,
+      "preview": "assets/library/characters/rocket/motions/v001/coast-preview.gif",
+      "interpolation": "held source poses, no full-subject dissolve"
+    }
+  },
+  "quality_record": "assets/library/characters/rocket/motions/v001/qa-v001.json",
+  "preview_raster_anchor_policy": "After common-scale resize, round placement using the resized painted anatomical marker center; this only resolves pixel-grid rounding and never fits pose bounds.",
+  "source_pixels_modified": false,
+  "lossless_extraction": true,
+  "full_subject_blending": false
+}

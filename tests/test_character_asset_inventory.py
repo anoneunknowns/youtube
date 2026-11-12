@@ -421,6 +421,63 @@ class AssetInventoryTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'omits required adopted library source: current-source-sheet.png'):
                 library.inventory_paths(self.root)
 
+    def test_current_profile_resolves_legacy_generation_files_and_exports(self):
+        _, _, motions = self.build_source_fixture(selected=True)
+        folder = 'assets/library/characters/kangaroo/motions/v001'
+        registration_relative = folder + '/registration.json'
+        registration = library.read(self.root / 'metadata-registration.json')
+        registration.update(generation_input='generation-input.json', generation_prompt='generation-prompt.txt',
+                            sheets=[{'id': 'legacy', 'reference_height_px': 10,
+                                     'source_sheet': self.frozen.relative_to(self.root).as_posix(),
+                                     'source_sheet_sha256': library.sha(self.frozen),
+                                     'generation_input': 'sheet-input.json',
+                                     'generation_prompt': 'sheet-prompt.txt'}])
+        library.write(self.root / registration_relative, registration)
+        metadata = [folder + '/' + name for name in
+                    ('generation-input.json', 'generation-prompt.txt', 'sheet-input.json', 'sheet-prompt.txt')]
+        for relative in metadata:
+            (self.root / relative).write_text('Exact legacy generation metadata fixture.\n')
+        motions['items'][0].update(registration=registration_relative,
+                                  registration_sha256=library.sha(self.root / registration_relative))
+        library.write(self.root / library.MOTIONS, motions)
+        for relative in ('preview.png', 'motion.gif'):
+            (self.root / relative).write_bytes(b'current preview fixture')
+        extras = [library.MANAGEMENT, library.INDEX, library.STOCK, library.MOTIONS, library.STYLE,
+                  'neutral-manifest.json', 'preview.png', 'motion.gif']
+        with patch.object(library, 'NAMES', {'kangaroo': ('カンガルー', 'Kangaroo')}), \
+                patch.object(library, 'SCOPES', ['assets/library/characters']), \
+                patch.object(library, 'EXTRAS', extras):
+            library.refresh(self.root)
+            paths = [entry['path'] for entry in library.read(self.root / library.FILES)['files']]
+            self.write_current_publication(paths)
+            library.refresh(self.root)
+            expected = library.verify(self.root)
+            output = self.root / 'legacy-generation-metadata.zip'
+            library.export(self.root, output)
+            with zipfile.ZipFile(output) as archive:
+                for relative in metadata:
+                    self.assertEqual(archive.read('character-library/' + relative),
+                                     (self.root / relative).read_bytes())
+                archive.extractall(self.root / 'extracted')
+            self.assertEqual(library.verify(self.root / 'extracted/character-library'), expected)
+            for missing in metadata:
+                with self.subTest(missing=missing):
+                    fake = Path(missing).name
+                    (self.root / fake).write_text('A root-level alias must not satisfy the selected metadata.')
+                    self.write_current_publication([p for p in paths if p != missing] + [fake])
+                    with self.assertRaises(ValueError) as error:
+                        library.inventory_paths(self.root)
+                    self.assertIn('omits required adopted library source: ' + missing, str(error.exception))
+            self.write_current_publication(paths)
+            historical = self.root.parent / 'historical-generation-files'
+            for absolute in (str(historical / 'generation-input.json'), 'D:/old-machine/generation-input.json'):
+                with self.subTest(absolute=absolute):
+                    registration['generation_input'] = absolute
+                    library.write(self.root / registration_relative, registration)
+                    with reject_writer_probes(historical):
+                        with self.assertRaisesRegex(ValueError, 'Generation metadata must be project-relative'):
+                            library.inventory_paths(self.root)
+
     def test_current_publication_rejects_unsafe_video_and_candidate_paths(self):
         with self.completed_library_fixture():
             paths = [entry['path'] for entry in library.read(self.root / library.FILES)['files']]

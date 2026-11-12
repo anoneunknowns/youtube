@@ -80,6 +80,21 @@ class CharacterAssetManagementTests(unittest.TestCase):
         self.assertEqual(self.source.read_bytes(), before)
         self.assertFalse(self.registry.exists())
 
+    def test_gimmick_category_is_preserved_in_the_shared_registry(self):
+        self.document['batches'][0]['category'] = 'gimmick'
+        self.write_config()
+        snapshot = management.inspect(self.root, self.config)
+        rows = {row['root']: row for row in snapshot['batches']}
+        self.assertEqual(rows[self.folder]['category'], 'gimmick')
+        self.assertEqual(rows[self.candidate]['category'], 'character')
+        markup = management.render_index(self.root, snapshot, self.document,
+                                         management.CONFIG, management.REGISTRY).decode()
+        self.assertIn('背景ギミック', markup)
+        self.document['batches'][0]['category'] = 'unknown'
+        self.write_config()
+        with self.assertRaisesRegex(ValueError, 'Unknown asset category'):
+            management.inspect(self.root, self.config)
+
     def test_registered_roles_and_exact_hashes_are_preserved(self):
         result = management.refresh(self.root, self.config, self.registry, 'missing')
         self.assertEqual(result['status'], 'pass')

@@ -1,5 +1,41 @@
 # キャラクター素材の利用案内
 
+<!-- BEGIN UNIFIED-ASSET-ENTRY -->
+## 新旧19種類の共通配置
+
+既存キャラクター11種類と背景素材8種類は、[`catalogs/asset-library-current-v1.json`](../../catalogs/asset-library-current-v1.json)を共通の入口にします。各IDの `assets/library/characters/<id>/current/` に `asset.json`、`neutral.png`、`poses/<namespace>/<pose>.png`、`clips.json` があります。各画像のパスは `asset.json` がある `current/` から解決し、元原画を示す `source_path` はプロジェクトのルートから解決してください。
+
+`current/` は台帳が選んだ通常姿・ポーズを無改変コピー、または採用atlas領域を無拡縮で切り出した共通窓口です。従来の原画・登録・過去の採用は元の場所で保全します。名前空間は `basic/`、`expanded/`、`eyecatch/`、`gimmick/` で、動作順・時間・ループ・再生効果は `clips.json` を参照します。`character_library.py` の従来基本ポーズは接頭辞なし、背景素材は `gimmick/<pose>` で選択します。
+
+採用台帳を更新した管理担当は、次の順で共通入口を再構築・確認します。既存PNGと内容が異なるときは、期待ハッシュを書き換えず採用元と派生先を調べてください。
+
+```powershell
+python tools/unified_asset_library.py build
+python tools/unified_asset_library.py verify
+```
+
+## 背景素材8種類の表示と動作
+
+[背景素材ギャラリー](collections/background-gimmicks/v001/index.html)から、通常姿、49姿勢、28動作の実GIF、登録情報、原画・生成条件、各素材の `current/asset.json` へ進めます。[一覧PNG](collections/background-gimmicks/v001/overview.png)と[カードの配置検査](collections/background-gimmicks/v001/qa-evidence/gallery-alignment-v001.json)も保存しています。
+
+| ID | 素材 | 最大表示の目安と対象 | 登録・原寸確認の入口 |
+|---|---|---|---|
+| `grass` | 草 | 通常姿の幅600pxを基準 | [`geometry-qa.json`](characters/grass/motions/v001/geometry-qa.json) |
+| `flower-bed` | 花壇 | 通常姿の幅520pxを基準 | [`geometry-qa.json`](characters/flower-bed/motions/v001/geometry-qa.json) |
+| `airplane` | 飛行機 | 水平姿勢の全幅360px | [`qa-v001.json`](characters/airplane/motions/v001/qa-v001.json) |
+| `rocket` | ロケット | 炎を除いた胴体高300px | [`qa-v001.json`](characters/rocket/motions/v001/qa-v001.json) |
+| `helicopter` | ヘリコプター | 主ローターの非短縮時の展開幅500px | [`qa-v001.json`](characters/helicopter/motions/v001/qa-v001.json) |
+| `butterfly` | 蝶 | 翼全開時の幅200px | [`qa-registration-v001.json`](characters/butterfly/motions/v001/qa-registration-v001.json) |
+| `ladybug` | てんとう虫 | 脚・飛行翼を除いた甲羅幅140px | [`qa-registration-v001.json`](characters/ladybug/motions/v001/qa-registration-v001.json) |
+| `rainbow` | 虹 | 完全なアーチの全幅1200px | [`qa-registration-v001.json`](characters/rainbow/motions/v001/qa-registration-v001.json) |
+
+これらの幅と、ローダーの `--height` が表す登録基準高は別の量です。各frameの `reference_height_px` を使って `scale = desired_reference_height / reference_height_px` とし、同じ校正済みシート内では共通縮尺を維持します。蝶は `--height 77` で全開翼幅約198px、てんとう虫は `--height 151` で甲羅幅約140px、虹は `--height 624` で全幅約1200pxです。画素不足を拡大や輪郭清掃で埋めず、使用倍率を変えるときは原寸で再確認してください。
+
+草・花壇は根元や土台、飛行機・ヘリ・昆虫は登録された胴体等の中心、ロケット・虹は基部の支点を使います。揺れた葉・広げた翼・長い炎・回転翼の見かけ幅による個別fitはしません。草・花壇の揺れや昆虫の展開翼は通常姿より広がるため、その全範囲の余白を確保します。虹の出現・消去・光の移動は、未改変の完全形PNGを共通支点・共通縮尺で再生する効果です。
+
+ギャラリーのサムネイルは通常姿を独立に縮小した表示用画像です。実動作では登録済み支点と身体基準を使い、GIFの離散キーポーズ確認と、作品内の補間・経路・音声同期・数値や字幕との余白・連続動作の確認を分けてください。
+<!-- END UNIFIED-ASSET-ENTRY -->
+
 機械可読の入口は [`catalogs/character-library-v1.json`](../../catalogs/character-library-v1.json) です。採用版、通常姿、動作、登録座標、確認記録をこの台帳から辿ってください。フォルダの最大バージョン番号は採用版の意味ではありません。採用中の `v001` や、現行作品が継承する以前の版の入力も現在の利用対象です。
 
 GitHubの公開範囲は[公開対象一覧](../../catalogs/github-publication-v1.json)の `files`、素材パッケージの範囲は同じ一覧の `character_library_files` です。現行の採用素材と必要な入力・資料を公開し、未使用の旧版・不採用候補・過去の完成品・動画ファイルはローカル保管とします。台帳・登録情報・管理資料には旧版のパスやハッシュも来歴として残ります。公開対象一覧にない履歴参照は、GitHubや素材ZIPで取得できるファイルを示しません。
@@ -21,7 +57,7 @@ GitHubの公開範囲は[公開対象一覧](../../catalogs/github-publication-v
 Pythonを利用できる環境で、リポジトリのルートから実行します。Pillowの依存指定はルートの `requirements.txt` にあります。初回cloneで素材だけを取得する手順は[READMEのAI向け案内](../../README.md#他プロジェクトのai向けキャラクター素材の場所と利用方法)を参照してください。
 
 ```powershell
-git lfs pull --include="assets/library/characters/**,assets/library/collections/**" --exclude=""
+git lfs pull --include="assets/library/characters/**,assets/library/collections/**,assets/library/render-sources/counting-garden/v001/MPLUSRounded1c-Black.ttf" --exclude=""
 python -m pip install -r requirements.txt
 python tools/character_library.py list
 python tools/character_library.py list --json

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "kind": "builtin-imagegen-source-receipt",
+  "asset_id": "helicopter",
+  "owner": "codex:gimmicks-20261112:01a1cfaa",
+  "recorded_at_utc": "2026-11-12T13:37:02.986683+00:00",
+  "tool": "image_gen.imagegen",
+  "model_identifier": null,
+  "model_identifier_status": "not disclosed by tool",
+  "transparent_background_requested": true,
+  "prompt_file": "assets/library/characters/helicopter/generation-batches/background-gimmicks-20261112-01a1cfaa/provenance/helicopter_b-prompt-v001.txt",
+  "direct_inputs": [
+    {
+      "path": "assets/library/characters/helicopter/generation-batches/background-gimmicks-20261112-01a1cfaa/source/helicopter-rotors-sheet-a-v002.png",
+      "sha256": "0781fb48128c95fa88d835f0a59575f2f98a1be0cf22f4335b42ee2c41a71cb8",
+      "role": "identity-reference chosen broad-rotor helicopter from sheetA-v002"
+    },
+    {
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+      "sha256": "8512984d0660fea738192619b2bfccff1ce42a9493db49c980452ff904296e4e",
+      "role": "style-reference only; warm brown handdrawn contour and watercolor"
+    },
+    {
+      "path": "assets/library/characters/red-panda/sources/v001/neutral.png",
+      "sha256": "2bc52232008b43250b6382df4097bf526bb325925a6c50be567b0baa5c565cff",
+      "role": "style-reference only; rounded forms and paper pigment texture"
+    }
+  ],
+  "output": {
+    "original_generated_path": "/Users/support/.codex/generated_images/01a1cfaa-e730-76f0-abc1-bf1db0da03d1/exec-fbbd48fe-2946-459b-bb62-74b4e4341553.png",
+    "workspace_path": "assets/library/characters/helicopter/generation-batches/background-gimmicks-20261112-01a1cfaa/source/helicopter-rotors-sheet-b-v001.png",
+    "original_sha256": "3c512234ae477475a80cc8c310ba3f9369a86a44b186c469a84c36324e21cad6",
+    "workspace_sha256": "3c512234ae477475a80cc8c310ba3f9369a86a44b186c469a84c36324e21cad6",
+    "byte_identical_copy": true,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "fully_transparent_pixels": 1129926,
+    "total_pixels": 1572516
+  },
+  "layout": {
+    "columns": 1,
+    "rows": 3,
+    "order": "top-to-bottom",
+    "states": [
+      "rotor-135",
+      "pitch-forward",
+      "pitch-backward"
+    ]
+  },
+  "geometry_scope": "Source measurements only; actual row positions may differ from equal thirds. No cropping, registration, alpha cleanup, resampling or catalog update.",
+  "status": "selected-source-candidate; root integration and continuous animation QA pending",
+  "prompt_text": "Use case: illustration-story. Asset type: transparent RGBA background helicopter motion-source sheet.\nInputimage1 is the EXACT helicopter identity and physical-scale reference: adopt the SECOND source sheet version with the BROAD long main rotor, mint cabin, warm cream belly and skids, dusty-blue plain cockpit window, coral tail-boom tip and coral rotor hubs, short mast and little tail rotor. Images2 and3 are STYLE references only, warm dark-brown handdrawn contours, rounded children's-book shapes and softwatercolor papergrain. Do not change the cabin, paint panels, tail length, tailrotor, skid proportions or physical rotor length. No faces, eyes, animalparts, hats, text, labels, background, ground, smoke, shadows or extra details.\nCreate a SQUARE image preferably1536x1536or2048x2048 native, exactly ONE COLUMN and THREE wide rows. One whole helicopter perrow, right-facing nose and left tail, all same physical size. Match image1's very broad mainrotor span, roughly740 native pixels on a1254wide image and at least650native pixels, while keeping every rotor tip, skid and tail fully visible. Clear transparent gutters between rows. Do not fit each pose's fullbbox to a different size; a foreshortened rotor must not enlarge the cabin.\nTOP ROW: upright cabin, mainrotor phase135, opposite shallow diagonal to reference phase45 (upperleft to lowerright projected rotor), with2blades, shallow rotorplane perspective. MIDDLE ROW: slight forward flight pitch, nose down about10degrees, mainrotor phase0 in the tilted aircraft frame, whole cabin/tail/rotor rotates coherently, same cabin scale. BOTTOM ROW: slight backward pitch, nose up about10degrees, mainrotor phase0 in the tilted frame, same cabin scale. No blurred rotor disks, no ghosted/blended outlines, no extra blades. Exactly three full helicopters.",
+  "prompt_sha256": "760ce49f9410231b700be47a48c2f7f9ad86ddce5550e583ddcc25cfc8cff7d4",
+  "tool_arguments": {
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "/Users/support/codex/youtube/assets/library/characters/helicopter/generation-batches/background-gimmicks-20261112-01a1cfaa/source/helicopter-rotors-sheet-a-v002.png",
+      "/Users/support/codex/youtube/assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+      "/Users/support/codex/youtube/assets/library/characters/red-panda/sources/v001/neutral.png"
+    ]
+  },
+  "geometry_observation": {
+    "visible_sheet_bbox_alpha128": [
+      251,
+      12,
+      999,
+      1216
+    ],
+    "occupied_y_bands_alpha128": [
+      [
+        12,
+        425
+      ],
+      [
+        462,
+        829
+      ],
+      [
+        859,
+        1216
+      ]
+    ],
+    "caution": "Nominal sheet grid is an intent. Inspect actual row bands; equal-third cuts can touch neighboring pixels. Root owns final frame rectangles and stable body/nozzle/rotor registration.",
+    "no_native_upscale_performed": true
+  },
+  "visual_review": {
+    "method": "view_image inspection of original saved output plus alpha measurements",
+    "style": "Warm brown handdrawn contour, rounded inanimate forms and soft watercolor grain; no faces, animal parts, hats, text or scene background.",
+    "scope": "Source-sheet review only, not a final motion loop, alignment acceptance or completed-video review."
+  }
+}

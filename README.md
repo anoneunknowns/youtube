@@ -10,6 +10,33 @@ GitHubには、現行の採用素材・作品と、それらが実際に使う�
 
 画像、音声（WAV・MP3等）、フォント等はGit LFSで管理します。clone後の `git lfs pull` で公開対象の実体を取得できます。動画拡張子のファイル（MP4・MOV・MKV・WebM等）、モデルキャッシュ、`node_modules/` は公開対象外です。台帳・登録情報・制作記録には旧版や動画のパス・ハッシュも来歴として残るため、記載されたパスがすべてダウンロード可能とは限りません。公開対象一覧にない履歴参照は、ローカル資料を示す情報として扱ってください。
 
+<!-- BEGIN UNIFIED-ASSET-ENTRY -->
+### 既存11種類と背景素材8種類の共通入口
+
+既存キャラクター11種類と、草・花壇・飛行機・ロケット・ヘリコプター・蝶・てんとう虫・虹の8種類を、合計19種類の[共通台帳](catalogs/asset-library-current-v1.json)から利用できます。[背景素材ギャラリー](assets/library/collections/background-gimmicks/v001/index.html)には、採用通常姿、49姿勢、28動作のGIF、登録・生成条件への入口があります。
+
+各IDの利用先は同じ配置です。
+
+```text
+assets/library/characters/<id>/current/
+  asset.json
+  neutral.png
+  poses/<namespace>/<pose>.png
+  clips.json
+```
+
+`asset.json` 内の画像パスは、その `current/` を基準に解決します。通常姿・各ポーズのSHA-256、身体基準、支点、元の採用先を一緒に読み、動作は `clips.json` のフレーム名・時間・ループ・効果指定を使ってください。名前空間は従来動作の `basic/`、拡充の `expanded/`、アイキャッチの `eyecatch/`、背景素材の `gimmick/` です。`character_library.py` の従来基本ポーズは、引き続き接頭辞なしで指定します。
+
+`current/` は採用原画のバイト一致コピー、または採用されたatlas領域の無拡縮・無損失切り出しです。元の原画・登録情報・過去の採用は元の場所で保全します。採用台帳を更新した管理担当は `python tools/unified_asset_library.py build` で共通入口を作り直し、`python tools/unified_asset_library.py verify` で画素・座標・参照を確認します。通常の利用では台帳と `current/` を読み、派生入口を手作業で書き換えません。
+
+背景素材は足元・基部・胴体中心等の `anchor_kind` と、校正済みシートごとの共通基準を使います。蝶・てんとう虫の翼、ロケットの炎、ヘリの回転翼、虹の出現途中の外接矩形に合わせて個別に拡大しません。表示する部位ごとの上限と原寸確認は[素材案内](assets/library/README.md#背景素材8種類の表示と動作)と各登録・QAを参照してください。虹の出現・消去・光の移動は、同じ未改変PNGへ再生時の効果を適用します。
+
+```powershell
+python tools/unified_asset_library.py verify
+python tools/character_library.py preview --character butterfly --pose gimmick/fully_open --height 77 --output ../butterfly-preview.png
+```
+<!-- END UNIFIED-ASSET-ENTRY -->
+
 ## 他プロジェクトのAI向け：キャラクター素材の場所と利用方法
 
 このリポジトリは、動画制作に加えて共通キャラクター素材の公開先です。別のプロジェクトへ取り込むAIは、まず[利用案内](assets/library/README.md)と[素材を扱うAIへの指示](assets/library/AGENTS.md)を読み、[採用版台帳](catalogs/character-library-v1.json)の明示されたパスから素材を選んでください。公開範囲は[公開対象一覧](catalogs/github-publication-v1.json)、採用する画像・座標は素材台帳、品質指摘は管理資料で確認します。
@@ -42,7 +69,7 @@ $env:GIT_LFS_SKIP_SMUDGE = "1"
 git clone https://github.com/anoneunknowns/youtube.git num-num-character-source
 Remove-Item Env:GIT_LFS_SKIP_SMUDGE
 Set-Location num-num-character-source
-git lfs pull --include="assets/library/characters/**,assets/library/collections/**" --exclude=""
+git lfs pull --include="assets/library/characters/**,assets/library/collections/**,assets/library/render-sources/counting-garden/v001/MPLUSRounded1c-Black.ttf" --exclude=""
 python -m pip install -r requirements.txt
 python tools/character_library.py list --json
 python tools/character_library.py verify

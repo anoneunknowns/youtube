@@ -1,0 +1,589 @@
+{
+  "schema_version": 3,
+  "kind": "generated-gimmick-key-pose-stock",
+  "category": "gimmick",
+  "character_id": "airplane",
+  "version": "v001",
+  "owner": "codex:gimmicks-20261112:01a1cfaa",
+  "status": "registered-native-source-poses; scene-use-not-verified",
+  "common_reference_height_px": 173.0,
+  "reference_height_policy": "One fixed physical body reference per native sheet; per-pose natural bounds never set scale.",
+  "canonical_neutral": {
+    "path": "assets/library/characters/airplane/sources/v001/neutral.png",
+    "sha256": "70ea77b7f13759d52f3568007979d741aeb47f865dda873d341ec114cab37c84",
+    "frame_id": "level_propeller_vertical"
+  },
+  "sheets": [
+    {
+      "id": "a",
+      "source_sheet": "assets/library/characters/airplane/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "972dd49a22d8583c01ed83450d81ce44b092999aa42a582fbabc20fc2aabb1d7",
+      "reference_height_px": 173.0,
+      "generation_input": "assets/library/characters/airplane/motions/v001/source-sheets/a-input.json",
+      "generation_prompt": "assets/library/characters/airplane/motions/v001/source-sheets/a-prompt.txt",
+      "generation_provenance": "assets/library/characters/airplane/motions/v001/source-sheets/a-provenance.json",
+      "calibration": {
+        "reference_height_px": 173.0,
+        "baseline_pose": "level_propeller_vertical",
+        "body_bounds_px": [
+          106,
+          111,
+          386,
+          284
+        ],
+        "calibration_marker_width_px": 280,
+        "method": "Fixed per-sheet body reference from selected upright physical body, excluding flame for rocket. All other poses inherit this one scalar; no pose bbox fitting.",
+        "native_y_bands_alpha8": [
+          [
+            88,
+            343
+          ],
+          [
+            411,
+            704
+          ],
+          [
+            788,
+            1089
+          ],
+          [
+            1210,
+            1471
+          ]
+        ],
+        "lossless_row_crop_boundaries": [
+          0,
+          377,
+          746,
+          1150,
+          1536
+        ]
+      }
+    }
+  ],
+  "frames": [
+    {
+      "id": "level_propeller_vertical",
+      "path": "assets/library/characters/airplane/motions/v001/level_propeller_vertical.png",
+      "sha256": "70ea77b7f13759d52f3568007979d741aeb47f865dda873d341ec114cab37c84",
+      "size_px": [
+        512,
+        377
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        512,
+        377
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/airplane/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "972dd49a22d8583c01ed83450d81ce44b092999aa42a582fbabc20fc2aabb1d7",
+      "anchor_px": [
+        246.0,
+        197.5
+      ],
+      "anchor_kind": "center",
+      "anchor_definition": "center of actually painted blue fuselage and cockpit, excluding wings/propeller/wheels",
+      "body_bbox_px": [
+        40,
+        88,
+        444,
+        343
+      ],
+      "subject_bbox_px": [
+        40,
+        88,
+        444,
+        343
+      ],
+      "anatomical_body_bbox_px": [
+        106,
+        111,
+        386,
+        284
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        106,
+        111,
+        386,
+        284
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "native_visible_margin_px": 34,
+      "reference_height_px": 173.0
+    },
+    {
+      "id": "level_propeller_diagonal",
+      "path": "assets/library/characters/airplane/motions/v001/level_propeller_diagonal.png",
+      "sha256": "cfea37ff072110c78f298e063bd60c8d8f6fe5a340a64f49cbe899f9a666505d",
+      "size_px": [
+        512,
+        377
+      ],
+      "crop_from_sheet_xyxy": [
+        512,
+        0,
+        1024,
+        377
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/airplane/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "972dd49a22d8583c01ed83450d81ce44b092999aa42a582fbabc20fc2aabb1d7",
+      "anchor_px": [
+        246.5,
+        197.5
+      ],
+      "anchor_kind": "center",
+      "anchor_definition": "center of actually painted blue fuselage and cockpit, excluding wings/propeller/wheels",
+      "body_bbox_px": [
+        40,
+        97,
+        460,
+        343
+      ],
+      "subject_bbox_px": [
+        40,
+        97,
+        460,
+        343
+      ],
+      "anatomical_body_bbox_px": [
+        106,
+        111,
+        387,
+        284
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        106,
+        111,
+        387,
+        284
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "native_visible_margin_px": 34,
+      "reference_height_px": 173.0
+    },
+    {
+      "id": "climb_shallow",
+      "path": "assets/library/characters/airplane/motions/v001/climb_shallow.png",
+      "sha256": "a8f0e1fb40ac250bd2c03460e2c8ac71833ddfca443a41757d69429da8b52b8b",
+      "size_px": [
+        512,
+        369
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        377,
+        512,
+        746
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/airplane/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "972dd49a22d8583c01ed83450d81ce44b092999aa42a582fbabc20fc2aabb1d7",
+      "anchor_px": [
+        254.0,
+        175.5
+      ],
+      "anchor_kind": "center",
+      "anchor_definition": "center of actually painted blue fuselage and cockpit, excluding wings/propeller/wheels",
+      "body_bbox_px": [
+        45,
+        50,
+        448,
+        327
+      ],
+      "subject_bbox_px": [
+        45,
+        50,
+        448,
+        327
+      ],
+      "anatomical_body_bbox_px": [
+        113,
+        87,
+        395,
+        264
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        113,
+        87,
+        395,
+        264
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "native_visible_margin_px": 42,
+      "reference_height_px": 173.0
+    },
+    {
+      "id": "climb_strong",
+      "path": "assets/library/characters/airplane/motions/v001/climb_strong.png",
+      "sha256": "1f09618ddf16ea2a956939416c2058994f2548b891dce75e50992163c49b25c8",
+      "size_px": [
+        512,
+        369
+      ],
+      "crop_from_sheet_xyxy": [
+        512,
+        377,
+        1024,
+        746
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/airplane/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "972dd49a22d8583c01ed83450d81ce44b092999aa42a582fbabc20fc2aabb1d7",
+      "anchor_px": [
+        252.0,
+        170.0
+      ],
+      "anchor_kind": "center",
+      "anchor_definition": "center of actually painted blue fuselage and cockpit, excluding wings/propeller/wheels",
+      "body_bbox_px": [
+        49,
+        34,
+        457,
+        312
+      ],
+      "subject_bbox_px": [
+        49,
+        34,
+        457,
+        312
+      ],
+      "anatomical_body_bbox_px": [
+        119,
+        73,
+        385,
+        267
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        119,
+        73,
+        385,
+        267
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "native_visible_margin_px": 34,
+      "reference_height_px": 173.0
+    },
+    {
+      "id": "descent_shallow",
+      "path": "assets/library/characters/airplane/motions/v001/descent_shallow.png",
+      "sha256": "e514abe58089bc5a31c0a88be851b123551f0bdcb5b5c9c6ce14eea5fb440163",
+      "size_px": [
+        512,
+        404
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        746,
+        512,
+        1150
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/airplane/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "972dd49a22d8583c01ed83450d81ce44b092999aa42a582fbabc20fc2aabb1d7",
+      "anchor_px": [
+        246.5,
+        179.0
+      ],
+      "anchor_kind": "center",
+      "anchor_definition": "center of actually painted blue fuselage and cockpit, excluding wings/propeller/wheels",
+      "body_bbox_px": [
+        40,
+        55,
+        448,
+        332
+      ],
+      "subject_bbox_px": [
+        40,
+        55,
+        448,
+        332
+      ],
+      "anatomical_body_bbox_px": [
+        99,
+        92,
+        394,
+        266
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        99,
+        92,
+        394,
+        266
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "native_visible_margin_px": 40,
+      "reference_height_px": 173.0
+    },
+    {
+      "id": "descent_strong",
+      "path": "assets/library/characters/airplane/motions/v001/descent_strong.png",
+      "sha256": "1b5837cbe938e8e0a91309ca485005d4dfb000b544850b832735cf11e84df94f",
+      "size_px": [
+        512,
+        404
+      ],
+      "crop_from_sheet_xyxy": [
+        512,
+        746,
+        1024,
+        1150
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/airplane/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "972dd49a22d8583c01ed83450d81ce44b092999aa42a582fbabc20fc2aabb1d7",
+      "anchor_px": [
+        244.0,
+        195.5
+      ],
+      "anchor_kind": "center",
+      "anchor_definition": "center of actually painted blue fuselage and cockpit, excluding wings/propeller/wheels",
+      "body_bbox_px": [
+        40,
+        42,
+        470,
+        343
+      ],
+      "subject_bbox_px": [
+        40,
+        42,
+        470,
+        343
+      ],
+      "anatomical_body_bbox_px": [
+        100,
+        101,
+        388,
+        290
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        100,
+        101,
+        388,
+        290
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "native_visible_margin_px": 40,
+      "reference_height_px": 173.0
+    },
+    {
+      "id": "bank_near",
+      "path": "assets/library/characters/airplane/motions/v001/bank_near.png",
+      "sha256": "58b78842db5bec5dac6fbc68ee0ac8c0cfceb461dcf7e1408ebef7766aa0580b",
+      "size_px": [
+        512,
+        386
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        1150,
+        512,
+        1536
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/airplane/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "972dd49a22d8583c01ed83450d81ce44b092999aa42a582fbabc20fc2aabb1d7",
+      "anchor_px": [
+        257.0,
+        170.5
+      ],
+      "anchor_kind": "center",
+      "anchor_definition": "center of actually painted blue fuselage and cockpit, excluding wings/propeller/wheels",
+      "body_bbox_px": [
+        49,
+        60,
+        454,
+        321
+      ],
+      "subject_bbox_px": [
+        49,
+        60,
+        454,
+        321
+      ],
+      "anatomical_body_bbox_px": [
+        118,
+        82,
+        396,
+        259
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        118,
+        82,
+        396,
+        259
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "native_visible_margin_px": 49,
+      "reference_height_px": 173.0
+    },
+    {
+      "id": "bank_far",
+      "path": "assets/library/characters/airplane/motions/v001/bank_far.png",
+      "sha256": "a8f245cf4abb9aba0522451d3a729339dc7225eb9ea42c318e0274f029a814d1",
+      "size_px": [
+        512,
+        386
+      ],
+      "crop_from_sheet_xyxy": [
+        512,
+        1150,
+        1024,
+        1536
+      ],
+      "sheet_id": "a",
+      "source_sheet": "assets/library/characters/airplane/motions/v001/source-sheets/a.png",
+      "source_sheet_sha256": "972dd49a22d8583c01ed83450d81ce44b092999aa42a582fbabc20fc2aabb1d7",
+      "anchor_px": [
+        243.0,
+        173.0
+      ],
+      "anchor_kind": "center",
+      "anchor_definition": "center of actually painted blue fuselage and cockpit, excluding wings/propeller/wheels",
+      "body_bbox_px": [
+        40,
+        60,
+        454,
+        317
+      ],
+      "subject_bbox_px": [
+        40,
+        60,
+        454,
+        317
+      ],
+      "anatomical_body_bbox_px": [
+        109,
+        85,
+        377,
+        261
+      ],
+      "anatomical_body_measurement": "Actual material/contour visible bounds for physical anatomy; separate from full subject compatibility bounds.",
+      "anchor_marker_bbox_px": [
+        109,
+        85,
+        377,
+        261
+      ],
+      "tail_bbox_px": null,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "native_visible_margin_px": 40,
+      "reference_height_px": 173.0
+    }
+  ],
+  "clips": {
+    "propeller": {
+      "frames": [
+        "level_propeller_vertical",
+        "level_propeller_diagonal"
+      ],
+      "durations_ms": [
+        100,
+        100
+      ],
+      "loop": true,
+      "preview": "assets/library/characters/airplane/motions/v001/propeller-preview.gif",
+      "interpolation": "held source poses, no full-subject dissolve"
+    },
+    "climb": {
+      "frames": [
+        "level_propeller_vertical",
+        "climb_shallow",
+        "climb_strong",
+        "climb_shallow",
+        "level_propeller_vertical"
+      ],
+      "durations_ms": [
+        350,
+        180,
+        350,
+        180,
+        350
+      ],
+      "loop": true,
+      "preview": "assets/library/characters/airplane/motions/v001/climb-preview.gif",
+      "interpolation": "held source poses, no full-subject dissolve"
+    },
+    "descent": {
+      "frames": [
+        "level_propeller_vertical",
+        "descent_shallow",
+        "descent_strong",
+        "descent_shallow",
+        "level_propeller_vertical"
+      ],
+      "durations_ms": [
+        350,
+        180,
+        350,
+        180,
+        350
+      ],
+      "loop": true,
+      "preview": "assets/library/characters/airplane/motions/v001/descent-preview.gif",
+      "interpolation": "held source poses, no full-subject dissolve"
+    },
+    "bank": {
+      "frames": [
+        "level_propeller_vertical",
+        "bank_near",
+        "level_propeller_vertical",
+        "bank_far"
+      ],
+      "durations_ms": [
+        350,
+        260,
+        350,
+        260
+      ],
+      "loop": true,
+      "preview": "assets/library/characters/airplane/motions/v001/bank-preview.gif",
+      "interpolation": "held source poses, no full-subject dissolve"
+    }
+  },
+  "quality_record": "assets/library/characters/airplane/motions/v001/qa-v001.json",
+  "preview_raster_anchor_policy": "After common-scale resize, round placement using the resized painted anatomical marker center; this only resolves pixel-grid rounding and never fits pose bounds.",
+  "source_pixels_modified": false,
+  "lossless_extraction": true,
+  "full_subject_blending": false
+}
