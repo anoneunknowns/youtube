@@ -1,23 +1,21 @@
-# Num-Num Numbers — 動画制作プロジェクト
+# Num-Num Numbers — 画像素材ライブラリと動画制作
 
-Paspla Studio の数を学ぶ YouTube シリーズについて、企画、英語台本、背景、キャラクター、採用音声、描画・検査ツール、制作記録を管理するリポジトリです。
+Paspla StudioのNum-Num Numbersで使う、透過画像・ポーズ・動作をまとめた素材ライブラリです。全19種類を同じ台帳とフォルダ構造で管理しています。他のプロジェクトでは、使いたいPNGを1枚選ぶところから利用できます。
 
-別PCでの導入は [セットアップ](docs/SETUP.md)、既存作品の再出力と新作の設計は [制作手順](docs/PRODUCTION.md)、正本の位置は [ファイル構成](docs/PROJECT-MAP.md) を参照してください。
+画像の入口は[素材一覧・利用ガイド](assets/library/README.md)、AI向けの機械可読な入口は[共通素材台帳](catalogs/asset-library-current-v1.json)です。[素材を扱うAIへの指示](assets/library/AGENTS.md)には、画像の選び方・支点・共通縮尺・出典の扱いをまとめています。
 
-キャラクターの採用原画・基本動作を他のAIや別PCで利用する場合は、[素材の利用案内](assets/library/README.md)と[機械可読台帳](catalogs/character-library-v1.json)を起点にしてください。検証・プレビュー・保管用ZIPの作成は `python tools/character_library.py` で行えます。
+このリポジトリでは数を学ぶYouTubeシリーズの企画、英語台本、背景、採用音声、描画・検査ツール、制作記録も管理します。制作する場合は[セットアップ](docs/SETUP.md)、[制作手順](docs/PRODUCTION.md)、[ファイル構成](docs/PROJECT-MAP.md)を参照してください。
 
-GitHubには、現行の採用素材・作品と、それらが実際に使う入力・制作記録を公開しています。取得できるファイルは[公開対象一覧](catalogs/github-publication-v1.json)の `files` を正本とします。採用中の `v001` や、現行作品が継承する以前の版の入力も含みます。未使用の旧版・不採用候補・過去の完成品はローカル保管です。
+## 他プロジェクトのAI向け：キャラクター素材の場所と利用方法
 
-画像、音声（WAV・MP3等）、フォント等はGit LFSで管理します。clone後の `git lfs pull` で公開対象の実体を取得できます。動画拡張子のファイル（MP4・MOV・MKV・WebM等）、モデルキャッシュ、`node_modules/` は公開対象外です。台帳・登録情報・制作記録には旧版や動画のパス・ハッシュも来歴として残るため、記載されたパスがすべてダウンロード可能とは限りません。公開対象一覧にない履歴参照は、ローカル資料を示す情報として扱ってください。
+### 素材を選ぶ
 
-<!-- BEGIN UNIFIED-ASSET-ENTRY -->
-### 既存11種類と背景素材8種類の共通入口
+19種類・通常姿19枚・ポーズ505枚、計524ファイルの透過PNGを、[一つの素材一覧](assets/library/README.md)から選べます。クマ、ウサギ、とら、小鳥、シャム猫、レッサーパンダ、ミーアキャット、カンガルー、ハリネズミ、ヤイロチョウ、オナガドリ、草、花壇、飛行機、ロケット、ヘリコプター、蝶、てんとう虫、虹を収録しています。
 
-既存キャラクター11種類と、草・花壇・飛行機・ロケット・ヘリコプター・蝶・てんとう虫・虹の8種類を、合計19種類の[共通台帳](catalogs/asset-library-current-v1.json)から利用できます。[背景素材ギャラリー](assets/library/collections/background-gimmicks/v001/index.html)には、採用通常姿、49姿勢、28動作のGIF、登録・生成条件への入口があります。
-
-各IDの利用先は同じ配置です。
+各IDは同じ構造です。通常姿はそのまま使えるPNGで、シートからの切り出し作業は済んでいます。
 
 ```text
+catalogs/asset-library-current-v1.json
 assets/library/characters/<id>/current/
   asset.json
   neutral.png
@@ -25,70 +23,50 @@ assets/library/characters/<id>/current/
   clips.json
 ```
 
-`asset.json` 内の画像パスは、その `current/` を基準に解決します。通常姿・各ポーズのSHA-256、身体基準、支点、元の採用先を一緒に読み、動作は `clips.json` のフレーム名・時間・ループ・効果指定を使ってください。名前空間は従来動作の `basic/`、拡充の `expanded/`、アイキャッチの `eyecatch/`、背景素材の `gimmick/` です。`character_library.py` の従来基本ポーズは、引き続き接頭辞なしで指定します。
-
-`current/` は採用原画のバイト一致コピー、または採用されたatlas領域の無拡縮・無損失切り出しです。元の原画・登録情報・過去の採用は元の場所で保全します。採用台帳を更新した管理担当は `python tools/unified_asset_library.py build` で共通入口を作り直し、`python tools/unified_asset_library.py verify` で画素・座標・参照を確認します。通常の利用では台帳と `current/` を読み、派生入口を手作業で書き換えません。
-
-背景素材は足元・基部・胴体中心等の `anchor_kind` と、校正済みシートごとの共通基準を使います。蝶・てんとう虫の翼、ロケットの炎、ヘリの回転翼、虹の出現途中の外接矩形に合わせて個別に拡大しません。表示する部位ごとの上限と原寸確認は[素材案内](assets/library/README.md#背景素材8種類の表示と動作)と各登録・QAを参照してください。虹の出現・消去・光の移動は、同じ未改変PNGへ再生時の効果を適用します。
-
-```powershell
-python tools/unified_asset_library.py verify
-python tools/character_library.py preview --character butterfly --pose gimmick/fully_open --height 77 --output ../butterfly-preview.png
-```
-<!-- END UNIFIED-ASSET-ENTRY -->
-
-## 他プロジェクトのAI向け：キャラクター素材の場所と利用方法
-
-このリポジトリは、動画制作に加えて共通キャラクター素材の公開先です。別のプロジェクトへ取り込むAIは、まず[利用案内](assets/library/README.md)と[素材を扱うAIへの指示](assets/library/AGENTS.md)を読み、[採用版台帳](catalogs/character-library-v1.json)の明示されたパスから素材を選んでください。公開範囲は[公開対象一覧](catalogs/github-publication-v1.json)、採用する画像・座標は素材台帳、品質指摘は管理資料で確認します。
-
-| 探すもの | 保存場所・入口 |
+| 使いたいもの | 読む場所 |
 |---|---|
-| GitHubで取得できるファイルと素材パッケージの範囲 | [`catalogs/github-publication-v1.json`](catalogs/github-publication-v1.json) の `files`・`character_library_files` |
-| 採用する画像・ポーズ・SHA-256・描画座標 | [`catalogs/character-library-v1.json`](catalogs/character-library-v1.json) |
-| キャラクターの原画・動作PNG | [`assets/library/characters/`](assets/library/characters/) |
-| 新7種類の通常姿一覧・採用版記録 | [`assets/library/collections/animal-stock/v001/`](assets/library/collections/animal-stock/v001/) |
-| 新7種類・42ポーズの一覧・動作プレビュー | [`assets/library/collections/animal-motions/v001/`](assets/library/collections/animal-motions/v001/) |
-| クマ以外10種類・新規270姿勢と動作プレビュー | [`assets/library/collections/character-expansion/v001/`](assets/library/collections/character-expansion/v001/) |
-| 大きい表示枠の8種・紅茶／ジャンプ等のアイキャッチ144姿勢 | [`assets/library/collections/character-eyecatches/v001/`](assets/library/collections/character-eyecatches/v001/) |
-| 素材の担当・用途・品質指摘と、ローカル履歴の管理情報 | [`画像管理一覧`](assets/library/character-assets.html)、[`管理設定`](catalogs/character-asset-management-v1.json)、[`管理在庫`](catalogs/character-asset-registry-v1.json)、[`管理仕様`](docs/IMAGE-ASSET-MANAGEMENT.md) |
-| 拡充・アイキャッチの画風監査と修正候補 | [`assets/library/collections/character-style-audit/v001/`](assets/library/collections/character-style-audit/v001/) |
-| カンガルー・シャム猫等の作品固有の採用先と制作記録 | [`catalogs/library-v1.json`](catalogs/library-v1.json)、各作品の `design/` 配下の制作記録 |
-| 素数v003用カンガルーの腕リグ・27原画・29状態 | [`assets/library/characters/kangaroo/animations/prime-v002/registration.json`](assets/library/characters/kangaroo/animations/prime-v002/registration.json) |
-| 公開する素材ファイルのサイズ・ハッシュ | [`catalogs/character-library-files-v1.json`](catalogs/character-library-files-v1.json) |
-| 一覧・検証・プレビュー・素材専用ZIPの作成 | [`tools/character_library.py`](tools/character_library.py) |
+| 画像を1枚使う | 素材一覧のPNGリンク、または各IDの `current/neutral.png` |
+| 表情・姿勢のPNGを選ぶ | `current/asset.json` の `poses` にある名前と画像パス |
+| 動作を組む | `current/clips.json` のフレーム列・時間・効果と、各PNGの登録情報 |
+| 全ID・manifestの場所・SHA-256 | `catalogs/asset-library-current-v1.json` の `assets` |
+| 原画・生成条件・画風や品質の確認資料 | `asset.json` の元データ参照と[素材ガイド](assets/library/README.md) |
 
-現行の共通素材は11種類の通常姿、従来42姿勢、拡充270姿勢、アイキャッチ144姿勢です。通常姿は `neutral`、従来動作は `key_poses`、拡充は `expanded_key_poses`、アイキャッチは `eyecatch_key_poses` の登録を使います。追加分は `expanded/wave_low` や `eyecatch/tea_sip` のように明示指定します。これらは用途の異なる採用素材であり、フォルダの最大版数だけを残す選び方はしません。作品用素材は作品台帳と制作記録から選び、汎用ローダーへ自動的に読み替えません。
+### PNGを1枚取得する
 
-拡充・アイキャッチには輪郭・色・頭身・瞳等の修正候補が[画風監査](assets/library/collections/character-style-audit/v001/index.html)に残っています。使用する画像の `quality_reviews` と確認画像を読み、ファイル整合、過去の採用、現在の画風・動作品質を個別に確認してください。最大版数や更新時刻から採用版を推定せず、生成中の担当領域は確定素材へ取り込みません。
+画像だけを使う場合はPythonや動画制作ツールの導入は不要です。[全19種類の素材一覧](assets/library/README.md)から使うPNGを開いて保存できます。Git LFS管理のPNGをURLから取得するときは、画像実体のURLを使ってください。
 
-素材だけを取得する場合は、Git LFSを導入した環境で次のPowerShell例を実行します。初回cloneのLFS自動取得を止め、キャラクター原画・collection・管理監査資料に絞って画像本体を取得します。既にclone済みなら、リポジトリのルートから `git lfs pull` 以降を実行してください。
+- [クマの通常PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/bear-beret/current/neutral.png)
+- [クマの登録情報JSON](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/bear-beret/current/asset.json)
+- [全素材の共通台帳JSON](https://raw.githubusercontent.com/anoneunknowns/youtube/main/catalogs/asset-library-current-v1.json)
 
-```powershell
+画像URLの `bear-beret` を素材一覧のIDへ変えると、各素材の通常PNGを取得できます。再現する版を固定する場合は、PNGとJSONのURLにある `main` を同じコミットSHAへ置き換えます。取得内容が短い `version https://git-lfs.github.com/spec/v1` で始まるテキストなら、画像実体を取得し直してください。取り込み先には選んだ画像と、その出典・利用条件・必要な登録情報を保存します。
+
+### 画像をまとめて取得する
+
+GitとGit LFSを使う例です。最初のcloneではLFS自動取得を止め、画像の共通入口だけを取得します。JSONとガイドはcloneに含まれます。
+
+```sh
 git lfs install
-$env:GIT_LFS_SKIP_SMUDGE = "1"
-git clone https://github.com/anoneunknowns/youtube.git num-num-character-source
-Remove-Item Env:GIT_LFS_SKIP_SMUDGE
-Set-Location num-num-character-source
-git lfs pull --include="assets/library/characters/**,assets/library/collections/**,assets/library/render-sources/counting-garden/v001/MPLUSRounded1c-Black.ttf" --exclude=""
-python -m pip install -r requirements.txt
-python tools/character_library.py list --json
-python tools/character_library.py verify
-python tools/character_library.py preview --character red-panda --pose expanded/wave_low --height 430 --output ../red-panda-expanded-wave.png
-python tools/character_library.py preview --character red-panda --pose eyecatch/tea_sip --height 430 --output ../red-panda-tea.png
-python tools/character_library.py export --output ../num-num-character-library.zip
+GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://github.com/anoneunknowns/youtube.git num-num-assets
+cd num-num-assets
+git lfs pull --include="assets/library/characters/*/current/**" --exclude=""
 ```
 
-出力先は取り込み先の環境に合わせ、既存ファイルと重ならない場所を指定してください。公開版の `verify` と `export` は、公開対象一覧の `character_library_files` に従って素材を検証・収録します。ZIPは、採用画像・登録情報・生成条件・公開した確認資料・ツールを `character-library/` 配下へまとめ、`.sha256`・`.json` の検証記録も出力します。未使用の旧版・候補・動画は収録しません。管理資料に残る履歴のパスは、素材パッケージへの収録を意味しません。
+PowerShellでの取得、原画・確認資料を含む検証、プレビュー、素材ZIPは[素材ガイド](assets/library/README.md)を参照してください。この取得例は `current/` のPNG用です。元原画まで照合する `character_library.py verify` や `unified_asset_library.py verify` を実行するときは、ガイドの検証用取得範囲を使います。
 
-別PCではZIPを展開し、`character-library/` で依存導入と `python tools/character_library.py verify` を実行してください。画像・台帳・登録情報の相対配置を維持します。素材の取得・検証・ZIP利用に動画本体や音声モデルのキャッシュは不要です。利用側で `refresh` を実行して検証エラーの期待ハッシュを書き換えず、取得漏れや参照元を調べてください。
+### JSONから使う画像を解決する
 
-GitHubの公開データをすべて取得したcheckoutでは、`python tools/verify_github_publication.py` で公開範囲の整合を確認できます。上記の素材だけを取得した状態では `character_library.py verify` を使います。`verify_workspace.py`、`manage_character_assets.py check`、`update_production_archive.py --check` は、過去資料や動画も保管したローカル制作環境向けの検査です。
+共通台帳の `assets` からIDを選び、`manifest` をリポジトリのルート基準で開きます。manifestのSHA-256は共通台帳の `sha256` と照合できます。その `asset.json` の `neutral` または `poses` から画像を選び、`path` を `asset.json` がある `current/` 基準で解決します。PNGのSHA-256、寸法、`anchor_px`、`reference_height_px` も同じレコードにあります。`source_path` は来歴用のルート相対パスです。
 
-台帳の `path_base` は `library-root` で、パスはcheckoutまたは展開した `character-library/` を基準に解決します。通常姿は `image_region_px`・`anchor_px`・`reference_height_px`、従来動作は `key_poses.poses`・`common_reference_height_px`、拡充・アイキャッチは各frameの `reference_height_px` とシート別の校正記録を使って描画します。同じ校正済みシート内では `scale = desired_body_height / reference_height_px` を共通の等方縮尺とし、登録した足元支点を合わせます。
+`basic/` は反応・基本動作、`expanded/` は仕草・姿勢、`eyecatch/` は紅茶・おじぎ等の演技、`gimmick/` は背景に配置する素材の動作を表す名前空間です。各素材で使える名前は `asset.json` の `poses` を読んでください。互換ローダー `character_library.py` では `basic/` の接頭辞を省き、他は名前空間を付けます。
 
-ウサギの通常姿はシート内の指定領域を切り出します。屈伸・着座・ついばみ姿勢を個別の画像高さで拡大せず、オナガドリは身体で縮尺を決めて長い尾の領域を別に確保します。空中姿勢は登録の支点種別に従い、推定地面を使う素材へ浮きを二重に加えません。紅茶のGIFはカップを持ったループなので、通常姿との接続ではカップの登場・退場を設計します。
+同じ場面の動作群は `scale = 表示する基準高 / reference_height_px` と登録済み支点で配置します。姿勢ごとの外接高さへ合わせて拡大すると体格が跳ねます。翼・尾・炎・回転翼を含む可視範囲の余白を確保し、各素材の `anchor_kind` と表示上限は[素材ガイド](assets/library/README.md)で確認してください。動作の時間が指定されていないclipは、使う場面で設計・確認します。
 
-`generation-prompt.txt`・`generation-input.json`・`source-manifest.json`・`registration.json` と各collectionの `qa-evidence/` は、派生素材を作る際の根拠です。過去の生成先 `C:/...` や `D:/temp/...` は履歴であり、現在のPCに存在する前提にしません。採用原画を上書きせず、修正版は新しい版として保存します。キーポーズの補間・音声同期・余白は実際の取り込み先の画面で確認してください。利用条件は各素材・依存物の既存記録を確認し、この説明から新たな利用許諾を推定しないでください。
+### 公開範囲と記録
+
+GitHubで取得できるファイルは[公開対象一覧](catalogs/github-publication-v1.json)の `files`、原画・登録・確認資料を含む素材パッケージの範囲は `character_library_files` が正本です。現行素材と、その採用・利用に必要な入力・資料を公開します。採用中のファイルはフォルダの版番号に関係なく対象です。未使用の旧版・不採用候補・過去の完成品・動画ファイルはローカル保管です。台帳の履歴パスは配布ファイルの存在を保証しません。
+
+画像・GIF・音声（WAV・MP3等）・フォントはGit LFSで管理します。素材だけを使う際に動画本体・音声モデル・Node.jsは不要です。ファイル整合、過去の採用、現在の画風・動作品質は各確認記録で区別し、取得漏れを隠すためのハッシュ書換えは行いません。利用条件は[素材ガイド](assets/library/README.md)と各依存物の記録を参照してください。
 
 ## 現行作品
 
