@@ -164,7 +164,7 @@ python tools/character_library.py preview --character siamese-cat --pose expande
 python tools/character_library.py preview --character butterfly --pose gimmick/fully_open --height 77 --output ../butterfly.png
 ```
 
-別PCへライブラリ一式を渡す場合は、未使用の出力先へZIPを作れます。
+配布するライブラリ一式は、公開用checkoutのルートから未使用の出力先へZIPを作ります。profileのない制作原本から同じexportを実行すると、ローカル在庫の候補・履歴も含む別の保存範囲になるため、配布用ZIPと区別してください。
 
 ```powershell
 python tools/character_library.py export --output ../num-num-asset-library.zip
@@ -178,11 +178,13 @@ ZIPには `character-library/` を起点に、選択された全19素材の通�
 
 前バージョンとリメイク案を見比べるときは、[画像の比較・選択ツール](../../docs/IMAGE-ASSET-MANAGEMENT.md#リメイク候補をユーザーに提示する)を使えます。「前バージョン」「AIおすすめ」の印を見ながら、採用したい案・前バージョンの維持・保留を選べます。選択結果は履歴として保存し、ほかの画像でも同じ仕組みを利用できます。
 
+修正が必要な画像だけ新規案を作り、同一尺度の原寸・明暗・前後姿勢で比較します。明確な改善があり、同一性や画風等に退行がない場合だけ差し替え、同程度・判断不明なら既存を維持します。
+
 ## 保存範囲と利用条件
 
-この公開版は[公開対象一覧](../../catalogs/github-publication-v1.json)の `files` にある範囲を配布し、素材ZIPは `character_library_files` に従います。通常PNGだけを使う場合も、必要なIDの画像とJSONを同じ参照から取得してください。全公開データを取得したcheckoutは `python tools/verify_github_publication.py` で確認できます。
+GitHubで配布する範囲は[公開対象一覧](https://github.com/anoneunknowns/youtube/blob/main/catalogs/github-publication-v1.json)の `files`、公開用checkoutから作る素材パッケージの範囲は `character_library_files` が正本です。HTTPで取得する画像とJSONは同じGitHub参照から、ローカル画像とJSONは同じcheckoutの `current/` から組にして使います。公開用の全データを取得したcheckoutは `python tools/verify_github_publication.py` で確認できます。
 
-未使用の版・不採用候補・動画本体は配布対象外です。元登録やQAに残る履歴のパス・SHAは、対応するファイルがこの公開版やZIPに収録されていることを意味しません。`verify_workspace.py`、`manage_character_assets.py check`、`update_production_archive.py --check` は、保管資料・動画も揃えたローカル制作原本向けの管理検査です。
+制作原本には原画・候補・過去の媒体やQAも保管します。公開対象にない候補・未使用の版・動画は、記録にパスやSHAが残っていても配布ファイルを意味しません。`verify_workspace.py`、`manage_character_assets.py check`、`update_production_archive.py --check` は、必要な保管資料や動画も揃えた制作原本向けの管理検査です。画像利用や公開範囲の確認とは分けます。公開側へ同期する手順は [GitHub公開仕様](https://github.com/anoneunknowns/youtube/blob/main/docs/GITHUB-PUBLICATION.md) に従います。
 
 元原画、生成シート、正確なプロンプト、入力の役割とSHA、登録、過去のQAを保全しています。管理の詳細は[画像管理仕様](../../docs/IMAGE-ASSET-MANAGEMENT.md)、担当・品質は[画像管理一覧](character-assets.html)と[管理設定](../../catalogs/character-asset-management-v1.json)を参照してください。版番号の最大値、更新日時、管理在庫への収録だけで採用や画風合格を推定しません。
 
