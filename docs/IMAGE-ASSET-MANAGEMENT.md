@@ -26,7 +26,7 @@
 |---|---|
 | [`catalogs/asset-library-current-v1.json`](../catalogs/asset-library-current-v1.json) と各 `current/asset.json`・`clips.json` | 全素材の共通入口、利用PNG・ポーズ・動作・登録座標 |
 | [`catalogs/character-library-v1.json`](../catalogs/character-library-v1.json) | 採用元をまとめたINDEXと互換ローダーの入力 |
-| [`catalogs/character-adoptions-v1.json`](../catalogs/character-adoptions-v1.json) | 通常姿・短い演出の明示採用と選択・品質の根拠。過去QAを改変せず採用先を切り替える |
+| [`catalogs/character-adoptions-v1.json`](../catalogs/character-adoptions-v1.json) | 通常姿・汎用ポーズ・短い演出の明示採用と選択・品質の根拠。過去QAを改変せず採用先を切り替える |
 | [`catalogs/library-v1.json`](../catalogs/library-v1.json) と作品の制作記録 | 作品固有の採用先 |
 | [`catalogs/character-asset-management-v1.json`](../catalogs/character-asset-management-v1.json) | 管理設定、担当予約、分類、選択・品質の根拠 |
 | [`catalogs/character-asset-registry-v1.json`](../catalogs/character-asset-registry-v1.json) | 管理設定から作る在庫 |
@@ -280,7 +280,7 @@ QAには素材IDと場面、上記の解像度情報、確認フレーム・表�
 2. 一部の姿勢だけを替える場合は、良好な姿勢を固定した元パス・SHA・登録で再利用する。新しいセットの版数へ揃えるためだけに、全PNGを複製・再生成しない。必要な既存の選択根拠を保ち、新しい根拠を追加する。
 3. 直前の台帳・登録・`current/` の画像とメタデータを保全し、変更対象外の画像・登録・clipをハッシュと意味内容で照合できる状態にする。
 4. 採用台帳を更新し、`character_library.py refresh` でINDEXを再構築する。異なるPNGへの上書きを拒否する共通ビルダーの保護を回避せず、更新対象の旧ビューを記録付きで退避して `unified_asset_library.py build`・`verify` で作り直す。
-5. 必要な在庫・ファイル一覧を更新し、[全体検査](#在庫の更新と全体検査)を実行する。別素材の `asset.json` にある参照INDEXのSHAだけが変わる場合も、画像の変更と区別して理由を記録する。
+5. 必要な在庫・ファイル一覧を更新し、[全体検査](#在庫の更新と全体検査)を実行する。別素材の `asset.json` にある参照INDEXのSHAや、登録元の更新に伴う `clips.sha256` 等の連動更新も、画像・演技内容の変更と区別して理由を記録する。
 
 `expanded` または非空の `pose_set_selections` を持つ継承形式では、通常姿と短い演出を再掲せず、既存の選択を継承します。元登録・通常姿・置換前原画のパス/SHAと、変更する姿勢IDを固定します。新しい混合登録は元と同じ姿勢ID集合、未対象frameの全項目、元sheetの校正、通常姿、clip、尺度方針を保持し、置換だけを新しい単体原画へ結び付けます。通常姿と短い演出を同時採用する従来形式の完全一致条件は緩めません。現在のプレビューは新しい選択を表示し、古いプレビューは当時の記録として残します。
 

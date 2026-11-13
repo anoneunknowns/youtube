@@ -72,6 +72,10 @@ profile全体の差分からinstall対象を自動拡大しません。書込対
 
 隔離treeにplanを適用し、profileとexact allowlistの `.gitignore` を作り、currentビュー・INDEX/master・file inventoryを整合させます。画像は再エンコードせず、採用PNGのbyte-copyまたは登録に従う無損失切り出しを保ちます。承認INDEX/masterのSHA、未変更PNG、作品カタログ・入力、許可集合外の全公開ファイルをbaselineと比較します。
 
+部分的な採用変更では、画像を差し替える範囲と派生メタデータを再生成する範囲を分けます。INDEXの `usage_rules` を改訂する場合は、計画に固定した変更前後の文言を照合します。既存 `source_collections` の採用台帳参照はpath・順序・他の項目を保ち、SHAだけを変更前後それぞれの採用台帳の実体へ結び付けます。collectionの追加・削除は別の明示差分として扱います。
+
+INDEX更新に伴う各 `current/asset.json` の `source_index.sha256`、対象 `clips.json` 更新に伴う `asset.json` の `clips.sha256`、masterのmanifest SHAは、計画へ列挙した派生差分として照合します。`clips.path` を固定し、各SHAを変更前後それぞれの実ファイルと一致させます。ポーズだけの差し替えでは、clipのフレーム・順序・時間情報と未対象ポーズを保全します。更新されたcurrentメタデータの管理行も再測定の対象へ含め、全build/refreshの後に実体と再照合してからreceiptを作ります。
+
 次は**隔離treeを作り終えた後、そのtreeのルートで**行う既存ツールの例です。`python` はPillowを導入済みのインタープリターを使います。build/refreshは隔離tree内の派生ファイルを書き換えます。
 
 ```sh
