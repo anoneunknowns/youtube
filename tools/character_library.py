@@ -35,6 +35,7 @@ STYLE = 'assets/library/collections/animal-motions/v001/qa-evidence/series-style
 EXPANSION = 'assets/library/collections/character-expansion/v001/manifest.json'
 EYECATCHES = 'assets/library/collections/character-eyecatches/v001/manifest.json'
 GIMMICKS = 'assets/library/collections/background-gimmicks/v001/manifest.json'
+SUPPLEMENT = 'assets/library/collections/app-character-stock/v001/manifest.json'
 MANAGEMENT = 'catalogs/character-asset-management-v1.json'
 ADOPTIONS = 'catalogs/character-adoptions-v1.json'
 SCOPES = ['assets/library/characters', 'assets/library/collections/animal-stock/v001',
@@ -43,7 +44,8 @@ SCOPES = ['assets/library/characters', 'assets/library/collections/animal-stock/
           'assets/library/collections/character-eyecatches/v001',
           'assets/library/collections/character-style-audit/v001',
           'assets/library/collections/character-management/v001',
-          'assets/library/collections/background-gimmicks/v001']
+          'assets/library/collections/background-gimmicks/v001',
+          'assets/library/collections/app-character-stock/v001']
 EXTRAS = ['assets/library/README.md', 'assets/library/AGENTS.md', 'tools/character_library.py',
           'tools/register_character_expansion.py', 'tools/register_character_eyecatches.py', 'tools/component_alignment.py',
           'tools/manage_character_assets.py', 'tools/audit_character_style.py',
@@ -207,12 +209,16 @@ def _required_current_library_paths_locked(root, pending):
             from unified_asset_library import required_paths as current_view_paths
         required.update(current_view_paths(root))
     required.update(item['path'] for item in index['source_collections'])
+    if any(item['path'] == SUPPLEMENT for item in index['source_collections']):
+        supplement = read(readable_source(root, SUPPLEMENT, pending))
+        required.update(item['path'] for item in supplement['review_evidence'])
     for adopted in _read_adoptions_locked(root, pending).values():
         required.update(item['path'] for item in adopted['selection_evidence'])
     for character in index['characters']:
         neutral = character['neutral']
         required.update(neutral[key] for key in ('path', 'source_manifest') if neutral.get(key))
-        if character.get('category') == 'gimmick':
+        required.update(icon['path'] for icon in character.get('icons', {}).values())
+        if character.get('category') == 'gimmick' or (character.get('supplemental_collection') and neutral.get('source_manifest')):
             manifest_relative = neutral['source_manifest']
             manifest = read(readable_source(root, manifest_relative, pending))
             for record in manifest.get('files', []):
@@ -220,8 +226,7 @@ def _required_current_library_paths_locked(root, pending):
                 if not relative.startswith('assets/'):
                     relative = (Path(manifest_relative).parent / relative).as_posix()
                 required.add(relative)
-        for block_name in ('key_poses', 'expanded_key_poses', 'eyecatch_key_poses'):
-            block = character.get(block_name)
+        for block in [character.get(name) for name in ('key_poses', 'expanded_key_poses', 'eyecatch_key_poses')] + character.get('pose_sets', []):
             if not block:
                 continue
             required.update(block[key] for key in ('registration', 'preview', 'motion_preview') if block.get(key))
@@ -639,6 +644,152 @@ def _read_adoptions_locked(root, pending):
     return adopted
 
 
+def _stock_identifier(value):
+    if not isinstance(value, str) or not re.fullmatch(r'[a-z][a-z0-9_-]*', value):
+        raise ValueError(f'Invalid supplemental stock identifier: {value}')
+    return value
+
+
+def _stock_owned_path(root, relative, identity, pending):
+    _publication_paths([relative], 'supplemental source')
+    if not relative.startswith(f'assets/library/characters/{identity}/') or '/current/' in relative:
+        raise ValueError('Supplemental stock must use its own character source')
+    return readable_source(root, relative, pending)
+
+
+def _stock_picture_locked(root, record, identity, pending, *, icon=False):
+    """Validate native adopted PNGs without inventing body registration for icons."""
+    path = _stock_owned_path(root, record['path'], identity, pending)
+    if '/current/' in record['path'] or sha(path) != record['sha256']:
+        raise ValueError('Supplemental PNG changed or points into current/')
+    with Image.open(path) as image:
+        size = list(image.size)
+        if image.format != 'PNG' or image.mode != 'RGBA':
+            raise ValueError('Supplemental stock must use native RGBA PNGs')
+        alpha = image.getchannel('A')
+        visible = alpha.point(lambda a: 255 if a >= 8 else 0).getbbox()
+        if (alpha.getextrema()[0] != 0 or alpha.getextrema()[1] < 240 or visible is None
+                or min(visible[0], visible[1], size[0]-visible[2], size[1]-visible[3]) < 2):
+            raise ValueError('Supplemental stock is empty, opaque or clipped')
+    if record.get('size_px' if icon else 'source_size_px') != size:
+        raise ValueError('Supplemental stock size differs from PNG')
+    if icon:
+        box = record.get('subject_bbox_px')
+        if (record.get('role') != 'face-icon' or not isinstance(box, list) or len(box) != 4
+                or any(type(v) is not int for v in box)
+                or not 0 <= box[0] < box[2] <= size[0] or not 0 <= box[1] < box[3] <= size[1]
+                or box[0] > visible[0] or box[1] > visible[1] or box[2] < visible[2] or box[3] < visible[3]
+                or any(key in record for key in ('body_bbox_px', 'reference_height_px', 'anchor_px'))):
+            raise ValueError('Face icon needs separate subject bounds and no body registration')
+    else:
+        _adoption_geometry(record, size, record['path'], neutral=True)
+    return dict(record)
+
+
+def _supplement_pose_set_locked(root, selected, neutral, identity, pending):
+    namespace = _stock_identifier(selected['namespace'])
+    if namespace in {'basic', 'expanded', 'eyecatch', 'gimmick', 'neutral', 'icons'}:
+        raise ValueError('Supplemental pose namespace collides with a reserved namespace')
+    relative = selected['registration']
+    path = _stock_owned_path(root, relative, identity, pending)
+    if sha(path) != selected['registration_sha256']:
+        raise ValueError('Supplemental pose registration changed')
+    registration = read(path)
+    if registration.get('character_id') != identity:
+        raise ValueError('Supplemental pose registration has a different character identity')
+    if (registration.get('canonical_neutral', {}).get('path') != neutral['path']
+            or registration.get('canonical_neutral', {}).get('sha256') != neutral['sha256']):
+        raise ValueError('Supplemental poses differ from the adopted neutral')
+    for source in registration.get('sheets') or [registration]:
+        _stock_owned_path(root, source['source_sheet'], identity, pending)
+    for frame in registration['frames']:
+        _stock_owned_path(root, frame['path'], identity, pending)
+    frames = _verify_pose_registration_locked(root, registration, identity, pending=pending)
+    if not frames:
+        raise ValueError('Supplemental pose set must not be empty')
+    poses = {}
+    for frame in frames:
+        _stock_identifier(frame['id'])
+        _adoption_geometry(frame, frame['size_px'], identity+'/'+frame['id'])
+        poses[frame['id']] = {key: value for key, value in frame.items() if key != 'id'}
+        poses[frame['id']]['frame_id'] = frame['id']
+    clips = registration.get('clips', {})
+    if not isinstance(clips, dict):
+        raise ValueError('Supplemental clips must be named')
+    for name, value in clips.items():
+        _stock_identifier(name)
+        sequence = value.get('frames') if isinstance(value, dict) else value
+        if not isinstance(sequence, list) or not sequence or any(frame not in poses for frame in sequence):
+            raise ValueError('Supplemental clip refers to an unknown pose')
+    return {'namespace': namespace, 'registration': relative,
+            'registration_sha256': selected['registration_sha256'], 'poses': poses, 'clips': clips,
+            'coordinate_space': 'individual exact cell PNG',
+            'reference_height_policy': 'Use each source sheet calibration unchanged; scene relative scale is separate.'}
+
+
+def _apply_supplement_locked(root, characters, pending):
+    """Optional reviewed stock can extend identities without rewriting historical QA."""
+    path = readable_source(root, SUPPLEMENT, pending)
+    if not path.is_file():
+        return False
+    document = read(path)
+    if (document.get('schema_version') != 1 or document.get('status') != 'stocked-and-assistant-reviewed'
+            or not isinstance(document.get('items'), list) or not document.get('review_evidence')):
+        raise ValueError('Only an explicitly reviewed supplemental stock collection may be adopted')
+    for evidence in document['review_evidence']:
+        if sha(readable_source(root, evidence['path'], pending)) != evidence['sha256']:
+            raise ValueError('Supplemental stock review evidence changed')
+    known = {item['id']: item for item in characters}
+    seen = set()
+    for selected in document['items']:
+        identity = _stock_identifier(selected['id'])
+        if identity in seen:
+            raise ValueError('Duplicate supplemental stock identity')
+        seen.add(identity)
+        if identity in known:
+            item = known[identity]
+            if 'neutral' in selected or selected.get('neutral_reference') != {
+                    key: item['neutral'][key] for key in ('path', 'sha256')}:
+                raise ValueError('Supplemental stock must preserve the existing adopted neutral')
+        else:
+            if not all(isinstance(selected.get(key), str) and selected[key] for key in ('name_ja', 'name_en')):
+                raise ValueError('New supplemental stock needs explicit names')
+            neutral = _stock_picture_locked(root, selected['neutral'], identity, pending)
+            item = {'id': identity, 'name_ja': selected['name_ja'], 'name_en': selected['name_en'],
+                    'category': 'character', 'availability': 'reviewed-supplemental-stock', 'neutral': neutral}
+            characters.append(item)
+            known[identity] = item
+        pose_sets = selected.get('pose_sets', [])
+        if not isinstance(pose_sets, list):
+            raise ValueError('Supplemental pose sets must be a list')
+        namespaces = {block['namespace'] for block in item.get('pose_sets', [])}
+        for source in pose_sets:
+            block = _supplement_pose_set_locked(root, source, item['neutral'], identity, pending)
+            if block['namespace'] in namespaces:
+                raise ValueError('Duplicate supplemental pose namespace')
+            namespaces.add(block['namespace'])
+            item.setdefault('pose_sets', []).append(block)
+        if selected.get('icons'):
+            if item.get('icons') or not isinstance(selected['icons'], dict):
+                raise ValueError('Supplemental icons cannot replace existing icons')
+            item['icons'] = {_stock_identifier(name): _stock_picture_locked(root, record, identity, pending, icon=True)
+                             for name, record in selected['icons'].items()}
+        if 'scene_relative_scale' in selected:
+            scale = selected['scene_relative_scale']
+            ratio = scale.get('body_height_ratio') if isinstance(scale, dict) else None
+            if (not isinstance(scale, dict) or set(scale) != {'relative_to', 'body_height_ratio'}
+                    or scale['relative_to'] == identity or not isinstance(scale['relative_to'], str)
+                    or isinstance(ratio, bool) or not isinstance(ratio, (int, float))
+                    or not math.isfinite(ratio) or ratio <= 0 or 'scene_relative_scale' in item):
+                raise ValueError('Invalid supplemental scene relative scale')
+            item['scene_relative_scale'] = dict(scale)
+        item['supplemental_collection'] = SUPPLEMENT
+    for item in characters:
+        if item.get('scene_relative_scale', {}).get('relative_to', item['id']) not in known:
+            raise ValueError('Scene relative scale refers to an unknown character')
+    return True
+
+
 def build_index(root):
     with reservation_snapshot(root) as root:
         return _build_index_locked(root)
@@ -779,6 +930,7 @@ def _build_index_locked(root):
                 raise ValueError(f'Duplicate character/gimmick identity: {item["id"]}')
             known.add(item['id'])
             characters.append(item)
+    has_supplement = _apply_supplement_locked(root, characters, pending)
     index = {
         'schema_version': 1, 'kind': 'portable-character-library-index',
         'path_base': 'library-root', 'guide': 'assets/library/README.md',
@@ -788,6 +940,7 @@ def _build_index_locked(root):
         'source_collections': [{'path': path, 'sha256': sha(readable_source(root, path, pending))} for path in
                                ([STOCK, MOTIONS] + ([EXPANSION] if expansion else [])
                                 + ([EYECATCHES] if eyecatches else []) + ([GIMMICKS] if gimmicks is not None else [])
+                                + ([SUPPLEMENT] if has_supplement else [])
                                 + ([ADOPTIONS] if adoptions else []))],
         'usage_rules': ['Preserve the canonical face, palette, texture, contour and species markings.',
                         'Use target_body_height / reference_height as one isotropic scale for all poses from a calibrated source sheet; never fit individual poses.',
@@ -921,7 +1074,16 @@ def _load_pose_locked(root, identity, pose='neutral', pending=None):
     if len(matches) != 1:
         raise ValueError(f'Unknown character: {identity}')
     character = matches[0]
-    if pose.startswith(('expanded/', 'eyecatch/', 'gimmick/')):
+    supplemental = {block['namespace']: block for block in character.get('pose_sets', [])}
+    if '/' in pose and pose.split('/', 1)[0] in supplemental:
+        prefix, name = pose.split('/', 1)
+        record = supplemental[prefix]['poses'].get(name)
+        if record is None:
+            raise ValueError(f'No explicitly adopted {prefix} pose {identity}/{name}')
+        with Image.open(source_path(record['path'])) as opened:
+            image = opened.copy()
+        anchor = record['anchor_px']
+    elif pose.startswith(('expanded/', 'eyecatch/', 'gimmick/')):
         prefix, name = pose.split('/', 1)
         block = {'expanded': 'expanded_key_poses', 'eyecatch': 'eyecatch_key_poses', 'gimmick': 'key_poses'}[prefix]
         if prefix == 'gimmick' and character.get('category') != 'gimmick':
@@ -1093,6 +1255,17 @@ def _verify_locked(root):
                 if image.mode != 'RGBA' or height != frame['reference_height_px']:
                     raise ValueError('Invalid loaded pose')
                 frames += 1
+        for keys in character.get('pose_sets', []):
+            verified = _supplement_pose_set_locked(root, keys, neutral, character['id'], pending)
+            if verified != keys:
+                raise ValueError('Selected supplemental pose set differs from its native registration')
+            for pose_id, frame in keys['poses'].items():
+                image, anchor, height = _load_pose_locked(root, character['id'], keys['namespace']+'/'+pose_id, pending=pending)
+                if image.mode != 'RGBA' or height != frame['reference_height_px']:
+                    raise ValueError('Invalid loaded supplemental pose')
+                frames += 1
+        for icon in character.get('icons', {}).values():
+            _stock_picture_locked(root, icon, character['id'], pending, icon=True)
     return {'status': 'pass', 'characters': len(index['characters']), 'neutral_png_sources': len(neutral_sources),
             'generic_key_pose_pngs': frames, 'files': len(inventory['files']),
             'bytes': sum(entry['bytes'] for entry in inventory['files']),
@@ -1192,7 +1365,12 @@ def main(argv=None):
                 print(json.dumps(index, ensure_ascii=False, indent=2))
             else:
                 for item in index['characters']:
-                    print(f'{item["id"]}\t{item["name_ja"]}\t{item.get("category", "character")}\tneutral + {len(item.get("key_poses", {}).get("poses", {}))} original poses + {len(item.get("expanded_key_poses", {}).get("poses", {}))} expanded poses + {len(item.get("eyecatch_key_poses", {}).get("poses", {}))} eye-catch poses')
+                    summary = f'{item["id"]}\t{item["name_ja"]}\t{item.get("category", "character")}\tneutral + {len(item.get("key_poses", {}).get("poses", {}))} original poses + {len(item.get("expanded_key_poses", {}).get("poses", {}))} expanded poses + {len(item.get("eyecatch_key_poses", {}).get("poses", {}))} eye-catch poses'
+                    for block in item.get('pose_sets', []):
+                        summary += f' + {len(block["poses"])} {block["namespace"]} poses'
+                    if item.get('icons'):
+                        summary += f' + {len(item["icons"])} icons'
+                    print(summary)
             return 0
         if args.command == 'refresh':
             result = refresh(root)

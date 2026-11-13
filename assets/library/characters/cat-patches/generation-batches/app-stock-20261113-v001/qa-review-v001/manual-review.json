@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "kind": "app-character-manual-source-review",
+  "character_id": "cat-patches",
+  "status": "assistant-reviewed-stock-candidate; manager-adoption-pending",
+  "reviewer": "Codex app_stock_architecture delegated task",
+  "scope": "Newly generated 16 PNG body poses, native cropped originals, 1008x567 app-size bright/dark previews and larger maximum-native-canvas diagnostics. No final application integration or smooth-interpolation verdict.",
+  "registration": {
+    "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/registration.json",
+    "sha256": "6c3b9b091cf423f2d8f9b785c5b1201af4e2f5f539238a231be0c38cb142a527"
+  },
+  "generation": {
+    "tool": "built-in image_gen",
+    "four_original_sheets": 4,
+    "pose_pngs": 16,
+    "source_pixels_modified": false,
+    "alpha_cleanup_applied": false,
+    "actual_source_sheet_size_px": [
+      1254,
+      1254
+    ],
+    "native_cell_size_px": [
+      627,
+      627
+    ],
+    "requested_size_px": [
+      2048,
+      2048
+    ],
+    "actual_size_note": "Generation tool returned1254 sheets despite2048 prompt. Acceptance uses measured frame quality and actual display, not the requested dimension."
+  },
+  "identity_review": {
+    "passed": true,
+    "observations": [
+      "All16 preserve pale-orange screen-left ear/forehead, muted-brown screen-right ear/forehead, central cream stripe, cream body and one cream tail on screen right.",
+      "No additional limbs, detached ears, hats, red cheek circles, new patches or tail stripes found.",
+      "Signature pose holds its own attached curved tail near face and peeks beside it; the tail remains a single connected structure.",
+      "Blink/success/nap eye closures and open-mouth changes are intended expression variations."
+    ]
+  },
+  "native_and_transparency_review": {
+    "passed": true,
+    "observed_on": [
+      "all-app-poses-light.png",
+      "all-app-poses-dark.png",
+      "maximum-native-canvas/light/neutral.png",
+      "maximum-native-canvas/dark/signature.png",
+      "maximum-native-canvas/dark/success_air.png",
+      "maximum-native-canvas/light/idle_stretch.png"
+    ],
+    "observations": [
+      "Native originals/crops are unmodified RGBA. Exact extraction verified by helper.",
+      "Main outline is coherent on light and dark; no visible colored fringe, background remnants or clipped anatomy in reviewed display conditions.",
+      "Raw component counts4..20 include low-alpha specks; counts alone were not treated as faults or cleaned. Their light/dark compositions showed no distracting dirt at app/maxcanvas size.",
+      "Fine warm-brown line and soft paper fill remain readable at the intended app size and the larger567px canvas diagnostic."
+    ],
+    "maximum_canvas_display": {
+      "source_cell_px": 627,
+      "display_canvas_px": 567,
+      "isotropic_scale": 0.9043062200956937,
+      "upsampling": false
+    }
+  },
+  "scale_and_support_review": {
+    "passed": true,
+    "scene_reference_bear_height_px": 350,
+    "scene_relative_scale": {
+      "relative_to": "bear-beret",
+      "body_height_ratio": 0.95
+    },
+    "intended_cat_standing_height_px": 332.5,
+    "native_neutral_standing_reference_px": 531,
+    "sheet_reference_heights_px": {
+      "reactions-01": 531.0,
+      "reactions-02": 521.3454545454546,
+      "reactions-03": 493.9909090909091,
+      "idle-01": 539.85
+    },
+    "calibration": "One head-plate ratio transfer per sheet from measured neutral standing531px; each sheet reference remains common across all its poses. Full method/ROIs are in registration-spec.",
+    "anchor_policy": "Declared anatomy/contact support and independent contact-band observation retain their measured offset; contact-band midpoint is not substituted for an unrelated canvas centre. Normal tap_pop/success_air retain explicit inferred ground/native lift; app should not add another jump.",
+    "layout_all_passed": true,
+    "both_axis_tolerance_px": 0.5,
+    "maximum_abs_delta_px": 0.34039548022605004
+  },
+  "sequence_review": {
+    "status": "discrete-key-poses-reviewed; final runtime timing remains to be integrated",
+    "reviewed_clips": [
+      "tap",
+      "blink",
+      "think",
+      "success",
+      "retry",
+      "signature",
+      "idle",
+      "idle_to_tap"
+    ],
+    "observations": [
+      "Order communicates tap squash/rebound, thinking/aha, success preparation/air/landing/cheer and reassurance/retry.",
+      "Seated rest/stretch/nap maintain head/body scale and support registration; seated-to-tap is an intentional posture change requiring scene timing.",
+      "No interpolation, artificial limb motion, added secondary jump, or live app playback is asserted by these source previews."
+    ]
+  },
+  "selection": {
+    "delegation": "User requested creation/management and delegated quality-based adoption of new material.",
+    "is_user_click": false,
+    "replaces_existing_neutral_or_poses": false,
+    "manager_adoption_required": true
+  }
+}

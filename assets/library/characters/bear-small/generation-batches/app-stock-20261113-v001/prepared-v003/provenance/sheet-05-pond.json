@@ -1,0 +1,245 @@
+{
+  "id": "sheet-05-pond",
+  "source": {
+    "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-05-pond.png",
+    "sha256": "7c5554f1d404d713fd7ea56d543cda46d529e3ad8bc6b02bbe2068b64c255248"
+  },
+  "prompt": {
+    "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/provenance/sheet-05-pond-prompt.txt",
+    "sha256": "dbafb6d5aeb3dadbb368f6fc843a5a43375168ac6bf3782b288fbf169ef4ad20"
+  },
+  "request": {
+    "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/provenance/sheet-05-pond-request.json",
+    "sha256": "f1ed6ee7e4f176bbbde0d62e38de83e4f8f5c1d8aaaa641be3a31d2f1af925ee"
+  },
+  "input_references": [
+    {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/provenance/neutral-continuity-input.png",
+      "sha256": "f27f494c82fef487243d00d84af8413a6f4c41874c68de54f307f533966a40b1",
+      "role": "new neutral identity/continuity reference",
+      "direct_input": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/current/neutral.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "visual style reference only",
+      "direct_input": true
+    }
+  ],
+  "calibration": {
+    "reference_height_px": 474.4212271973466,
+    "method": "One shared sheet body reference transferred from the fixed first-sheet neutral by reviewed median head/body width; never per-pose bbox height fitting",
+    "reference_source": {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-01.png",
+      "sha256": "bf5e24c0f7f27d49b2db5ee3a2b07c8df4d8a2f04f904fae5cfe95692c3ee34a"
+    },
+    "neutral_reference_height_px": 476,
+    "first_sheet_width_px": 301.5,
+    "this_sheet_width_px": 300.5,
+    "notes": "Independent reference agent measured neutral anatomy477, first median head301.5. Sheet2/3/4 upper40% medians298.5/306.5/307; pond05 grounded head median300.5 (air projected292 excluded); pond06 left-stand411/land413 =>412. Pond standing508 vs front477 native body height is a projection/body drawing difference, not bbox-normalized away. Correction v002: connected neutral body bbox=[170,64,468,540] gives476px. The original all-alpha477px included an isolated soft speck on the lowest row. Source pixels, source support anchors, observer thresholds and scale transfer widths are unchanged; all sheet common body references are adjusted by the same476/477 factor."
+  },
+  "frames": [
+    {
+      "id": "pond_stand_right",
+      "role": "body",
+      "cell_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "body_bbox_px": [
+        175,
+        73,
+        478,
+        579
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        318.0,
+        579
+      ],
+      "source_foot_point_px": [
+        318.0,
+        579
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anchor_kind": "drawn-ground-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          163,
+          551,
+          490,
+          593
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "pond_air_right",
+      "role": "body",
+      "cell_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "body_bbox_px": [
+        157,
+        66,
+        470,
+        523
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        229.0,
+        523
+      ],
+      "source_foot_point_px": [
+        229.0,
+        523
+      ],
+      "support_kind": "drawn-airborne-foot",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Drawn anatomical low-foot point measured in native pose; no inferred pond ground. Application parabola supplies the entire vertical translation, so native cell offset does not add a second jump.",
+      "scene_motion_policy": "app-adds-parabolic-lift; no-native-lift",
+      "vertical_motion_policy": "app-adds-parabolic-lift; no-native-lift",
+      "anchor_kind": "drawn-airborne-foot",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Drawn anatomical low-foot point measured in native pose; no inferred pond ground. Application parabola supplies the entire vertical translation, so native cell offset does not add a second jump.",
+      "observation": {
+        "roi_px": [
+          145,
+          495,
+          482,
+          537
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "pond_land_right",
+      "role": "body",
+      "cell_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "body_bbox_px": [
+        164,
+        105,
+        512,
+        567
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        307.0,
+        567
+      ],
+      "source_foot_point_px": [
+        307.0,
+        567
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anchor_kind": "drawn-ground-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          152,
+          539,
+          524,
+          581
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "pond_air_left",
+      "role": "body",
+      "cell_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        129,
+        67,
+        461,
+        506
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        368.0,
+        506
+      ],
+      "source_foot_point_px": [
+        368.0,
+        506
+      ],
+      "support_kind": "drawn-airborne-foot",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Drawn anatomical low-foot point measured in native pose; no inferred pond ground. Application parabola supplies the entire vertical translation, so native cell offset does not add a second jump.",
+      "scene_motion_policy": "app-adds-parabolic-lift; no-native-lift",
+      "vertical_motion_policy": "app-adds-parabolic-lift; no-native-lift",
+      "anchor_kind": "drawn-airborne-foot",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Drawn anatomical low-foot point measured in native pose; no inferred pond ground. Application parabola supplies the entire vertical translation, so native cell offset does not add a second jump.",
+      "observation": {
+        "roi_px": [
+          117,
+          478,
+          473,
+          520
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    }
+  ],
+  "original_source": {
+    "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-05-pond.png",
+    "sha256": "7c5554f1d404d713fd7ea56d543cda46d529e3ad8bc6b02bbe2068b64c255248"
+  },
+  "archived_source": {
+    "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-05-pond.png",
+    "sha256": "7c5554f1d404d713fd7ea56d543cda46d529e3ad8bc6b02bbe2068b64c255248"
+  },
+  "archived_input_references": [
+    {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/provenance/neutral-continuity-input.png",
+      "sha256": "f27f494c82fef487243d00d84af8413a6f4c41874c68de54f307f533966a40b1",
+      "role": "new neutral identity/continuity reference",
+      "direct_input": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/current/neutral.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "visual style reference only",
+      "direct_input": true
+    }
+  ]
+}

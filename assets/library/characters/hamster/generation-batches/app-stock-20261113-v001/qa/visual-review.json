@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/app_character_references",
+  "reviewed_at_utc": "2026-11-13T13:40:09.303324+00:00",
+  "status": "candidate_visual_pass_for_registration; final adoption delegated to root",
+  "scope": {
+    "source_sheets": 4,
+    "independent_drawn_poses": 16,
+    "raw_source_views": "all generated source sheets displayed at source resolution",
+    "same_scale_static_composites": [
+      "qa/app-scale-all-light.png",
+      "qa/app-scale-all-dark.png"
+    ],
+    "app_viewport_reference_px": [
+      1008,
+      567
+    ],
+    "app_body_height_px": 105,
+    "untested": "No completed video, in-app playback, continuous interpolation, or final consumer layout is claimed."
+  },
+  "identity_checks": {
+    "result": "pass",
+    "observed": "Same compact cream limbless whole body, plain brown dot eyes without glints, inverted-W/M mouth, no added hands/feet/torso/nose/tail, no blush."
+  },
+  "style_and_alpha": {
+    "result": "pass at original visible source and intended app display",
+    "observed": "Warm brown connected outline, pale watercolor interior, readable facial details, no visible opaque paper background, halo, contamination, clipping, duplicate parts or disconnected props on light/dark composites. No pixel cleanup applied.",
+    "alpha_measurement_threshold": 8,
+    "low_alpha_note": "Very low-alpha edge pixels/corner value1 in one sheet are retained and not treated as visible background by value alone."
+  },
+  "scale_and_support": {
+    "result": "pass for discrete keys using suggested per-sheet common calibration",
+    "calibration": "qa/calibration-suggestions.json",
+    "measurement": "qa/measurements.json",
+    "observed": "Natural crouch/seated/tilt changes retained; none expanded by per-pose bbox. Source key poses preserve face/head identity across sheet transitions. Ground supports and airborne ankle/body bases require registration confirmation.",
+    "pond_policy": "Limbless body base serves as support; small whole-body squash is intended."
+  },
+  "limits": [
+    "Static and discrete-key review only; final usage must check layout and timing.",
+    "Head/body width transfer is an art-calibration proxy, not an anatomical measurement.",
+    "AI generation sheet resolution is actual1254x1254 (last small pond1774x887), not requested2048. At intended app body display there is no upscale."
+  ],
+  "sources": [
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/source/sheet-01.png",
+      "sha256": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178",
+      "poses_row_major": [
+        "neutral",
+        "blink",
+        "tap_down",
+        "tap_pop"
+      ],
+      "rows": 2,
+      "columns": 2,
+      "pixel_transform": "none; byte-identical copy of built-in tool output"
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/source/sheet-02.png",
+      "sha256": "de3f6d3f279d7535b3f12953e0db8574af7c208d339732153d82b026f18fa8d2",
+      "poses_row_major": [
+        "think",
+        "aha",
+        "success_ready",
+        "success_air"
+      ],
+      "rows": 2,
+      "columns": 2,
+      "pixel_transform": "none; byte-identical copy of built-in tool output"
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/source/sheet-03.png",
+      "sha256": "1219d9b1c575f2077ce9bee09e2caed88ed95ab770b391fe2bf384742f04470b",
+      "poses_row_major": [
+        "success_land",
+        "oops",
+        "retry",
+        "cheer"
+      ],
+      "rows": 2,
+      "columns": 2,
+      "pixel_transform": "none; byte-identical copy of built-in tool output"
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/source/sheet-04.png",
+      "sha256": "52c631fe1e4f705894dedbadd76d8739d4f15e3dc9f6a2345b792e573a7fd6c5",
+      "poses_row_major": [
+        "signature",
+        "idle_rest",
+        "idle_stretch",
+        "idle_nap"
+      ],
+      "rows": 2,
+      "columns": 2,
+      "pixel_transform": "none; byte-identical copy of built-in tool output"
+    }
+  ]
+}

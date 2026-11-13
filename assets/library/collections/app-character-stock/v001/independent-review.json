@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "kind": "independent-new-stock-source-review",
+  "reviewer": "Codex app_stock_architecture; independent of bear/rabbit/cream generation and registration",
+  "status": "assistant-reviewed-with-explicit-variation-and-runtime-limits",
+  "scope": "All available bear/rabbit/cream source PNGs, prepared-v001 light contact previews, independent dark source previews, source geometry diagnostics v001 and corrected-preview v002. Source-level stock review only, not final runtime playback or user-click approval.",
+  "characters": [
+    {
+      "id": "bear-beret",
+      "visual_art_review": "pass",
+      "all_sources_reviewed": [
+        {
+          "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/face-icon.png",
+          "sha256": "fa6cd15615f9b88e69d6b1f6f9d464f58fefe01fed5eff6834da7f8721c58ffb"
+        },
+        {
+          "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/pond-01-v2.png",
+          "sha256": "a0a23a0f629389ab76d6e6717abec43381f5e9e7055bb3e486d29bb14c6a70b4"
+        },
+        {
+          "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/pond-02-v2.png",
+          "sha256": "e0d43b5ebfeb20a75bc2e092985d867738767bfbf24195d50f7713ae52649200"
+        },
+        {
+          "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/reactions-01.png",
+          "sha256": "2fd91d1c87f529fd8ecfa75fb1efdc7f3ee53749226a6fc3790eb4a17ef354fa"
+        },
+        {
+          "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/reactions-02.png",
+          "sha256": "8f6fd68c44ad61475213c2ac7d3efd5f07b89437755834cdea60bb3f62875982"
+        },
+        {
+          "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/reactions-03.png",
+          "sha256": "3a9aa0e547c1058b63c183f6e20f1418267ae7c5f55cbe1aee2f31b989efc227"
+        },
+        {
+          "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/reactions-04.png",
+          "sha256": "29a9bf5b3717c08214242b448b5f2629e5cf0f450d43d35bc125a64b1bb76e02"
+        },
+        {
+          "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/seated-title-01.png",
+          "sha256": "504f9709c349056b7486f29fe7f314794de3a518178874c667fc74abcabe0469"
+        }
+      ],
+      "prepared_v001": {
+        "registration": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-v001/registration.json",
+        "sha256": "296e89a22efe46395c2335d9c011906a50de5a1201686c62865e68710af9f20a",
+        "frames": 26,
+        "layout_all_passed": false,
+        "failed_source_observation_records_preserved": [
+          {
+            "id": "oops",
+            "delta_x_px": -0.32344528819453444,
+            "delta_y_px": 0.6468905763890689,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "cheer",
+            "delta_x_px": 0.0,
+            "delta_y_px": 0.6468905763890689,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "pond_preload_left",
+            "delta_x_px": -0.37547780064687686,
+            "delta_y_px": 0.6498088797411583,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "seated_blink",
+            "delta_x_px": 0.29842742059940974,
+            "delta_y_px": 0.5968548411988195,
+            "tolerance_px": 0.5,
+            "passed": false
+          }
+        ]
+      },
+      "prepared_v002": {
+        "registration": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-v002/registration.json",
+        "sha256": "c962f01f14a86e469bc4f31b88598e5be562a757d8e2ca3fa380028d05e86e65",
+        "frames": 27,
+        "layout_all_passed": true,
+        "maximum_abs_source_delta_px": 0.5,
+        "bounded_preview_translation_recorded": true
+      },
+      "observations": [
+        "Reference neutral remains the previously adopted original (native1107px reference); new raw neutral in reactions-01 is QA/reference only.",
+        "New bear face, hat shape, warm palette, oval eyes/white crescents and restrained outline read as the established bear. No added cheeks or duplicate limbs found.",
+        "Success preparation/air/landing are distinct and coherent; clear two-leg airborne anatomy. Pond right/left silhouettes show appropriate direction and connected arms/legs.",
+        "Seated rest -> seated_tap_down -> seated_tap_pop -> seated_blink uses seated anatomy and fixed-scale heads; no sudden standing pose was substituted in this seated reaction group.",
+        "Signature uses the same red hat as a deliberate hand/hat gesture. Face icon is a standalone head/hat role and must not become a body-calibration frame."
+      ],
+      "light_dark_compositing": {
+        "pass": true,
+        "notes": "No distracting visible alpha fringe, background residue, clipped anatomy or disconnected added body parts in reviewed native sources and app-scale light/dark composites. Dark comparisons retain fine outline/texture; low-alpha component counts alone were not used as failure criteria.",
+        "all_prepared_v001_body_frames_viewed_on_dark": true
+      },
+      "sequences": {
+        "reviewed_as": "ordered fixed-scale key poses; final runtime interpolation/timing not asserted",
+        "normal_to_success": true,
+        "idle_to_tap": true,
+        "identity_specific_signature": true
+      },
+      "review_images": [
+        {
+          "path": ".work/app-character-issues-20261113/independent-review/bear-beret-light.png",
+          "sha256": "bf31ad9e718fc3642ac34e4a568292536dd33904dba5cd0792e397e3b4fb135a"
+        },
+        {
+          "path": ".work/app-character-issues-20261113/independent-review/bear-beret-dark.png",
+          "sha256": "1cb2bfab6344cee92894a74e6214c1ab8677de1ab33122b648f8ef186ffd9ab2"
+        },
+        {
+          "path": ".work/app-character-issues-20261113/independent-review/bear-beret-all-dark.png",
+          "sha256": "241f906e8afc0df560891b898673e08d4a857adfff28aead70a6dd1d424fdd24"
+        }
+      ]
+    },
+    {
+      "id": "rabbit-flower",
+      "visual_art_review": "pass-with-recorded-accessory-variation",
+      "all_sources_reviewed": [
+        {
+          "path": "assets/library/characters/rabbit-flower/generation-batches/app-stock-20261113-v001/source/idle-01.png",
+          "sha256": "6f9881bb420b75ef310648d9ab6397057b3badaa78067ad95b6ff971b969e81b"
+        },
+        {
+          "path": "assets/library/characters/rabbit-flower/generation-batches/app-stock-20261113-v001/source/reactions-01.png",
+          "sha256": "2b9ad6e539ca745a5a3b2284842c1a6acae1b7c79439d3f3dbf122ef16e47aeb"
+        },
+        {
+          "path": "assets/library/characters/rabbit-flower/generation-batches/app-stock-20261113-v001/source/reactions-02.png",
+          "sha256": "4e7d9f8596c260d5105e773e2d4d35a19cbb4ef5f5a2d258c2a6dee4f728f805"
+        },
+        {
+          "path": "assets/library/characters/rabbit-flower/generation-batches/app-stock-20261113-v001/source/reactions-03.png",
+          "sha256": "aae3231df08a8842a612bbf87cfdb37cb20354861f26305b5d4b43f38d5fdcf8"
+        }
+      ],
+      "prepared_v001": {
+        "registration": "assets/library/characters/rabbit-flower/generation-batches/app-stock-20261113-v001/prepared-v001/registration.json",
+        "sha256": "12ff043b828a12964e5ba2009b24b3e83cc58b1511c33e5dd55ae574232e1c05",
+        "frames": 16,
+        "layout_all_passed": false,
+        "failed_source_observation_records_preserved": [
+          {
+            "id": "tap_down",
+            "delta_x_px": -0.15132827324481468,
+            "delta_y_px": -0.605313092979145,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "tap_pop",
+            "delta_x_px": 0.0,
+            "delta_y_px": 0.6973434535104843,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "cheer",
+            "delta_x_px": 0.03439278937378276,
+            "delta_y_px": 0.689595192915931,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "idle_nap",
+            "delta_x_px": 0.004626090399028726,
+            "delta_y_px": 0.6697507269327616,
+            "tolerance_px": 0.5,
+            "passed": false
+          }
+        ]
+      },
+      "prepared_v002": {
+        "registration": "assets/library/characters/rabbit-flower/generation-batches/app-stock-20261113-v001/prepared-v002/registration.json",
+        "sha256": "daf9c512455b4a74df8919696e870bc3726cf62bb9a0b15ce615a81659206a70",
+        "frames": 16,
+        "layout_all_passed": true,
+        "maximum_abs_source_delta_px": 0.4953739096009713,
+        "bounded_preview_translation_recorded": true
+      },
+      "observations": [
+        "All16 new poses retain pink fill, two long ears, pale flower/yellow centre at screen-right ear base, and the plain small tail on screen right. No beret, added limbs, duplicate flower or mirrored decoration found.",
+        "Reference flower has5petals; new flower consistently has6. This is a prompt mismatch with five-petalled, accepted explicitly by root as a minor stylized accessory variation. The original reference is preserved.",
+        "Ear-flop signature bends the opposite ear while flower remains attached to its original ear. Neutral/success/idle keep body/head scale within the reviewed sheet calibration and do not visibly replace the character.",
+        "No outline, fill, head/body shape or limb-connection regression accompanying the accessory variation was found on the displayed source conditions."
+      ],
+      "light_dark_compositing": {
+        "pass": true,
+        "notes": "No distracting visible alpha fringe, background residue, clipped anatomy or disconnected added body parts in reviewed native sources and app-scale light/dark composites. Dark comparisons retain fine outline/texture; low-alpha component counts alone were not used as failure criteria.",
+        "all_prepared_v001_body_frames_viewed_on_dark": true
+      },
+      "sequences": {
+        "reviewed_as": "ordered fixed-scale key poses; final runtime interpolation/timing not asserted",
+        "normal_to_success": true,
+        "idle_to_tap": true,
+        "identity_specific_signature": true
+      },
+      "review_images": [
+        {
+          "path": ".work/app-character-issues-20261113/independent-review/rabbit-flower-light.png",
+          "sha256": "e555f89bfde19dc091dd5deaf1aa2d1da35c31824dea1b6de4b8e0bc180893f6"
+        },
+        {
+          "path": ".work/app-character-issues-20261113/independent-review/rabbit-flower-dark.png",
+          "sha256": "398ba8e0b9046c2e190e5ddfd3bc9e837740ca9141f94433d4163b6b0a5c9dce"
+        },
+        {
+          "path": ".work/app-character-issues-20261113/independent-review/rabbit-flower-all-dark.png",
+          "sha256": "12805c39b132378925b346e9a71851eb16ebb38a9ddc11095060b97de0c5ecf6"
+        }
+      ]
+    },
+    {
+      "id": "cream-companion",
+      "visual_art_review": "pass",
+      "all_sources_reviewed": [
+        {
+          "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/source/idle-01.png",
+          "sha256": "5c5eaf155c89693144edc07ce37b3f5d4d5c866ff72979761b0497b5f4864f19"
+        },
+        {
+          "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/source/reactions-01.png",
+          "sha256": "8f31ac38680246ee4d74f0fc96dd9441e868dd6112197d58b351437333f76e7d"
+        },
+        {
+          "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/source/reactions-02.png",
+          "sha256": "fbd606b2ca11026b9f3c80d3be70d6df78b991dfab641b85b721e2eae4f54c9e"
+        },
+        {
+          "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/source/reactions-03.png",
+          "sha256": "c523dfc182ec56548a41f2503efa6903aeb7bbb24e6efeb01a194c615c4a9dfa"
+        }
+      ],
+      "prepared_v001": {
+        "registration": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-v001/registration.json",
+        "sha256": "22fa436723273168de4cba7738e18e8d6a135497a3e215045c9af4f3eb873422",
+        "frames": 16,
+        "layout_all_passed": false,
+        "failed_source_observation_records_preserved": [
+          {
+            "id": "tap_down",
+            "delta_x_px": 0.21717171717170913,
+            "delta_y_px": 0.6717171717170913,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "think",
+            "delta_x_px": 0.6359778338945148,
+            "delta_y_px": 0.6543911335577377,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "aha",
+            "delta_x_px": 0.9815867003367202,
+            "delta_y_px": 0.0,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "success_ready",
+            "delta_x_px": 1.4631734006734405,
+            "delta_y_px": 0.6543911335577377,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "success_land",
+            "delta_x_px": 0.9263468013467673,
+            "delta_y_px": 0.6543911335577377,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "oops",
+            "delta_x_px": 0.9079335016834875,
+            "delta_y_px": -0.3456088664422623,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "retry",
+            "delta_x_px": 0.4079335016834875,
+            "delta_y_px": 0.6543911335577377,
+            "tolerance_px": 0.5,
+            "passed": false
+          },
+          {
+            "id": "idle_stretch",
+            "delta_x_px": 0.20198412698414359,
+            "delta_y_px": 0.6730880230879848,
+            "tolerance_px": 0.5,
+            "passed": false
+          }
+        ]
+      },
+      "prepared_v002": {
+        "registration": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-v002/registration.json",
+        "sha256": "31ad123bd61d3efff459c23571ed393acb990aff9a6ec0b033762f4adbbef671",
+        "frames": 16,
+        "layout_all_passed": true,
+        "maximum_abs_source_delta_px": 0.4631734006734405,
+        "bounded_preview_translation_recorded": true
+      },
+      "observations": [
+        "The narrow neck and elongated body, triangular pink-interior ears, plain ivory fill, two long hands with toe/finger lines, broad short feet and a single plain tail on screen left match the original established companion. No invented species markings/clothes or swapped tail side found.",
+        "Normal -> success_ready -> success_air -> success_land keeps the long-body identity even when squashed or airborne. Two feet and two hands remain distinguishable.",
+        "Signature is a smooth sideways body bend with balancing tail, rather than a new character silhouette. Idle/rest/nap remain slim and connected."
+      ],
+      "light_dark_compositing": {
+        "pass": true,
+        "notes": "No distracting visible alpha fringe, background residue, clipped anatomy or disconnected added body parts in reviewed native sources and app-scale light/dark composites. Dark comparisons retain fine outline/texture; low-alpha component counts alone were not used as failure criteria.",
+        "all_prepared_v001_body_frames_viewed_on_dark": true
+      },
+      "sequences": {
+        "reviewed_as": "ordered fixed-scale key poses; final runtime interpolation/timing not asserted",
+        "normal_to_success": true,
+        "idle_to_tap": true,
+        "identity_specific_signature": true
+      },
+      "review_images": [
+        {
+          "path": ".work/app-character-issues-20261113/independent-review/cream-companion-light.png",
+          "sha256": "bd53f4954c755dada7de0faf527531e38f23af93f01fe2165d53011678b05ffe"
+        },
+        {
+          "path": ".work/app-character-issues-20261113/independent-review/cream-companion-dark.png",
+          "sha256": "72f92b01fd711904ce6f4042d1cdb724a60d63b3f5f3f67bf0965b98b73ca705"
+        },
+        {
+          "path": ".work/app-character-issues-20261113/independent-review/cream-companion-all-dark.png",
+          "sha256": "15f068c85a2bc235c2f2185e3c7056f07139b6eb5c7d44836b94d024b1f2f920"
+        }
+      ]
+    }
+  ],
+  "global_decisions": {
+    "native_pngs_modified": false,
+    "registration_or_catalog_changed_by_reviewer": false,
+    "flower_variation_authorization": {
+      "decision_by": "root manager under user delegation",
+      "is_user_click": false,
+      "decision": "Allow reference5petals to new6petals because the issue requires the established pale flower/yellow centre/ear side and consistent new artwork, not a fixed petal count; preserve and record the difference rather than hiding it."
+    },
+    "placement_policy": "Keep0.5px acceptance tolerance and v001 failures. v002 adds bounded preview-only raster translation (up to1.5px) against the fixed projected source observation, with all measurements/corrections recorded. Source bytes, declared anchors, sheet calibration, expected source observation and content box remain fixed. A corrected-preview pass is not proof that an arbitrary application renderer applies that correction."
+  },
+  "runtime_limits": [
+    "Inspect app interpolation/timing and final target composition when integrated. These assets and source key-pose clips do not alone certify final application motion.",
+    "Normal tap_pop/success_air lift policy and pond trajectory policy are distinct; do not apply an additional jump to native-lift reactions or a second native lift to pond.",
+    "Use each calibrated sheet reference and the scene relative scale separately; do not fit crouched/seated frames independently."
+  ]
+}

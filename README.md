@@ -2,7 +2,7 @@
 
 > この公開版の現行作品と参照先は、同梱のカタログ・公開profileに合わせています。制作原本専用の資料は「公開版には未同梱」と明示します。全履歴用のarchive検査やdoctorには、未同梱の再現依存一覧・原本資料・ローカル動画を別途戻す必要があり、cloneだけで揃うとは扱いません。
 
-Paspla StudioのNum-Num Numbersで使う、透過画像・ポーズ・動作をまとめた素材ライブラリです。全19種類を同じ台帳とフォルダ構造で管理しています。他のプロジェクトでは、使いたいPNGを1枚選ぶところから利用できます。
+Paspla StudioのNum-Num Numbersで使う、透過画像・ポーズ・動作をまとめた素材ライブラリです。全24種類を同じ台帳とフォルダ構造で管理しています。他のプロジェクトでは、使いたいPNGを1枚選ぶところから利用できます。
 
 画像の入口は[素材一覧・利用ガイド](assets/library/README.md)、AI向けの機械可読な入口は[共通素材台帳](catalogs/asset-library-current-v1.json)です。[素材を扱うAIへの指示](assets/library/AGENTS.md)には、画像の選び方・支点・共通縮尺・出典の扱いをまとめています。
 
@@ -26,7 +26,7 @@ Paspla StudioのNum-Num Numbersで使う、透過画像・ポーズ・動作を�
 
 ### 素材を選ぶ
 
-19種類・通常姿19枚・ポーズ505枚、計524ファイルの透過PNGを、[一つの素材一覧](assets/library/README.md)から選べます。クマ、ウサギ、とら、小鳥、シャム猫、レッサーパンダ、ミーアキャット、カンガルー、ハリネズミ、ヤイロチョウ、オナガドリ、草、花壇、飛行機、ロケット、ヘリコプター、蝶、てんとう虫、虹を収録しています。
+24種類・通常姿24枚と各種ポーズ・顔アイコン、計643ファイルの透過PNGを、[一つの素材一覧](assets/library/README.md)から選べます。クマ、ウサギ、とら、小鳥、シャム猫、レッサーパンダ、ミーアキャット、カンガルー、ハリネズミ、ヤイロチョウ、オナガドリ、草、花壇、飛行機、ロケット、ヘリコプター、蝶、てんとう虫、虹、小さいクマ、ハムスター、花飾りのウサギ、クリーム色の細身の子、ぶち猫を収録しています。
 
 各IDは同じ構造です。通常姿はそのまま使えるPNGで、シートからの切り出し作業は済んでいます。
 
@@ -37,19 +37,21 @@ assets/library/characters/<id>/current/
   neutral.png
   poses/<namespace>/<pose>.png
   clips.json
+  icons/<name>.png（対応する素材のみ）
 ```
 
 | 使いたいもの | 読む場所 |
 |---|---|
 | 画像を1枚使う | 素材一覧のPNGリンク、または各IDの `current/neutral.png` |
 | 表情・姿勢のPNGを選ぶ | `current/asset.json` の `poses` にある名前と画像パス |
+| 顔アイコンを使う | `current/asset.json` の `icons`（クマは `icons.face`） |
 | 動作を組む | `current/clips.json` のフレーム列・時間・効果と、各PNGの登録情報 |
 | 全ID・manifestの場所・SHA-256 | `catalogs/asset-library-current-v1.json` の `assets` |
 | 原画・生成条件・画風や品質の確認資料 | `asset.json` の元データ参照と[素材ガイド](assets/library/README.md) |
 
 ### PNGを1枚取得する
 
-画像だけを使う場合はPythonや動画制作ツールの導入は不要です。[全19種類の素材一覧](assets/library/README.md)から使うPNGを開いて保存できます。Git LFS管理のPNGをURLから取得するときは、画像実体のURLを使ってください。
+画像だけを使う場合はPythonや動画制作ツールの導入は不要です。[全24種類の素材一覧](assets/library/README.md)から使うPNGを開いて保存できます。Git LFS管理のPNGをURLから取得するときは、画像実体のURLを使ってください。
 
 - [クマの通常PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/bear-beret/current/neutral.png)
 - [クマの登録情報JSON](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/bear-beret/current/asset.json)
@@ -74,11 +76,13 @@ PowerShellでの取得、原画・確認資料を含む検証、プレビュー�
 
 共通台帳の `assets` からIDを選び、`manifest` をリポジトリのルート基準で開きます。manifestのSHA-256は共通台帳の `sha256` と照合できます。その `asset.json` の `neutral` または `poses` から画像を選び、`path` を `asset.json` がある `current/` 基準で解決します。PNGのSHA-256、寸法、`anchor_px`、`reference_height_px` も同じレコードにあります。`source_path` は来歴用のルート相対パスです。
 
-`basic/` は反応・基本動作、`expanded/` は仕草・姿勢、`eyecatch/` は紅茶・おじぎ等の演技、`gimmick/` は背景に配置する素材の動作を表す名前空間です。各素材で使える名前は `asset.json` の `poses` を読んでください。互換ローダー `character_library.py` では `basic/` の接頭辞を省き、他は名前空間を付けます。
+`basic/` は反応・基本動作、`expanded/` は仕草・姿勢、`eyecatch/` は紅茶・おじぎ等の演技、`gimmick/` は背景に配置する素材の動作、`app/` はタップ・回答リアクション・待機・池ジャンプを表す名前空間です。各素材で使える名前は `asset.json` の `poses` を読んでください。互換ローダー `character_library.py` では `basic/` の接頭辞を省き、他は名前空間を付けます。
 
 同じ場面の動作群は `scale = 表示する基準高 / reference_height_px` と登録済み支点で配置します。姿勢ごとの外接高さへ合わせて拡大すると体格が跳ねます。翼・尾・炎・回転翼を含む可視範囲の余白を確保し、各素材の `anchor_kind` と表示上限は[素材ガイド](assets/library/README.md)で確認してください。動作の時間が指定されていないclipは、使う場面で設計・確認します。
 
-クマの通常姿と短い演出18状態も、同じ `current/` から利用できます。原画・登録を選び直す処理は [明示採用の記録](catalogs/character-adoptions-v1.json) を読み、過去の画風QAや最大版数から現行版を推測しません。
+クマの通常姿と短い演出18状態も、同じ `current/` から利用できます。原画・登録を選び直す処理はINDEXの `source_collections` と [明示採用の記録](catalogs/character-adoptions-v1.json) を読み、過去の画風QAや最大版数から現行版を推測しません。
+
+反応は `app/blink`・`app/tap_down`・`app/tap_pop`・`app/think`・`app/aha`・`app/success_ready`・`app/success_air`・`app/success_land`・`app/oops`・`app/retry`・`app/cheer`・`app/signature`、待機は `app/idle_rest`・`app/idle_stretch`・`app/idle_nap` から選べます。池の左右姿勢とクマの座位反応は同じ `poses` に登録しています。対象IDでの有無と支点方式は各manifestを読み、[機能別の利用条件](assets/library/README.md#ポーズや動作を使う)に従ってください。
 
 ### 公開範囲と記録
 

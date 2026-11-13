@@ -105,13 +105,14 @@ def adjusted_geometry(record, origin, size):
             or not math.isfinite(reference) or reference <= 0):
         raise ValueError('Invalid adopted reference height')
     result['reference_height_px'] = reference
-    for field in ('anchor_kind', 'sheet_id', 'frame_id', 'source_sheet', 'source_sheet_sha256'):
+    for field in ('anchor_kind', 'anchor_measurement', 'anchor_basis', 'vertical_motion_policy',
+                  'sheet_id', 'frame_id', 'source_sheet', 'source_sheet_sha256'):
         if field in record:
             result[field] = record[field]
     return result
 
 
-def picture(root, source, destination, local_path, guards, *, neutral=False, verifying=False):
+def picture(root, source, destination, local_path, guards, *, neutral=False, icon=False, verifying=False):
     relative = source['path']
     if '/current/' in relative:
         raise ValueError('Adopted sources must not point back into a generated current/ view')
@@ -145,10 +146,20 @@ def picture(root, source, destination, local_path, guards, *, neutral=False, ver
                 if alias.mode != 'RGBA' or alias.size != cropped.size or alias.tobytes() != cropped.tobytes():
                     raise ValueError(f'Current neutral pixels differ from the adopted native crop: {destination}')
             output_hash = digest(existing)
+    if icon:
+        box = source.get('subject_bbox_px')
+        if (source.get('role') != 'face-icon' or not isinstance(box, list) or len(box) != 4
+                or any(type(value) is not int for value in box)
+                or not 0 <= box[0] < box[2] <= cropped.width or not 0 <= box[1] < box[3] <= cropped.height
+                or any(key in source for key in ('body_bbox_px', 'reference_height_px', 'anchor_px'))):
+            raise ValueError('Icon needs subject bounds and a role separate from body registration')
+        geometry = {'role': source['role'], 'subject_bbox_px': box}
+    else:
+        geometry = adjusted_geometry(source, region[:2], cropped.size)
     record = {'path': local_path, 'sha256': output_hash, 'size_px': list(cropped.size),
               'source_path': relative, 'source_sha256': source['sha256'],
               'source_image_region_px': region, 'source_size_px': list(original.size),
-              'operation': operation, **adjusted_geometry(source, region[:2], cropped.size)}
+              'operation': operation, **geometry}
     return record, {'path': destination, 'source': relative, 'sha256': output_hash, 'data': output_data}
 
 
@@ -191,9 +202,17 @@ def plan(root, *, verifying=False):
         neutral, alias = picture(root, selected['neutral'], base+'neutral.png', 'neutral.png', guards,
                                  neutral=True, verifying=verifying)
         aliases, poses, clips, registrations = [alias], {}, {}, []
-        for block_name, namespace in [('key_poses', 'gimmick' if category == 'gimmick' else 'basic'),
-                                      ('expanded_key_poses', 'expanded'), ('eyecatch_key_poses', 'eyecatch')]:
-            block = selected.get(block_name)
+        blocks = [(namespace, selected.get(block_name)) for block_name, namespace in
+                  [('key_poses', 'gimmick' if category == 'gimmick' else 'basic'),
+                   ('expanded_key_poses', 'expanded'), ('eyecatch_key_poses', 'eyecatch')]]
+        namespaces = {'basic', 'gimmick', 'expanded', 'eyecatch', 'neutral', 'icons'}
+        for block in selected.get('pose_sets', []):
+            namespace = component(block['namespace'])
+            if namespace in namespaces:
+                raise ValueError('Supplemental pose namespace is duplicated or reserved')
+            namespaces.add(namespace)
+            blocks.append((namespace, block))
+        for namespace, block in blocks:
             if not block:
                 continue
             registration = json_source(root, block['registration'], guards, block['registration_sha256'])
@@ -209,6 +228,11 @@ def plan(root, *, verifying=False):
             for name, value in available.items():
                 clips[namespace+'/'+component(name)] = clip_record(value, namespace, poses, origin)
             registrations.append({'namespace': namespace, **origin, 'clips_available': bool(available)})
+        icons = {}
+        for name, source in selected.get('icons', {}).items():
+            local = 'icons/'+component(name)+'.png'
+            icons[name], alias = picture(root, source, base+local, local, guards, icon=True, verifying=verifying)
+            aliases.append(alias)
         clip_document = {'schema_version': 1, 'kind': 'unified-current-asset-clips',
                          'id': identity, 'clips': clips, 'source_registrations': registrations}
         manifest = {'schema_version': 1, 'kind': 'unified-current-asset',
@@ -217,6 +241,18 @@ def plan(root, *, verifying=False):
             'clips': {'path': 'clips.json', 'sha256': digest(payload(clip_document))},
             'source_registrations': registrations,
             'geometry_policy': 'Native pixels and adopted per-frame references retained. Atlas neutral coordinates are shifted only by the adopted crop origin.'}
+        if icons:
+            manifest['icons'] = icons
+        if 'scene_relative_scale' in selected:
+            scale = selected['scene_relative_scale']
+            ratio = scale.get('body_height_ratio') if isinstance(scale, dict) else None
+            if (not isinstance(scale, dict) or set(scale) != {'relative_to', 'body_height_ratio'}
+                    or scale['relative_to'] == identity
+                    or scale['relative_to'] not in {item['id'] for item in index['characters']}
+                    or isinstance(ratio, bool) or not isinstance(ratio, (int, float))
+                    or not math.isfinite(ratio) or ratio <= 0):
+                raise ValueError('Invalid scene relative scale')
+            manifest['scene_relative_scale'] = dict(scale)
         assets.append({'base': base, 'manifest': manifest, 'clips': clip_document, 'aliases': aliases})
     master = {'schema_version': 1, 'kind': 'unified-current-asset-library', 'source_index': source_index,
         'selection_policy': 'Explicit adopted index entries, independent of version numbers; current/ is a derived entry layer and originals remain authoritative.',
@@ -344,7 +380,7 @@ def required_paths(root=ROOT):
             raise ValueError('Unified master manifest leaves the asset current/ directory')
         manifest = json_source(root, summary['manifest'], expected=summary['sha256'])
         paths.add(summary['manifest'])
-        for record in [manifest['neutral'], *manifest['poses'].values(), manifest['clips']]:
+        for record in [manifest['neutral'], *manifest['poses'].values(), *manifest.get('icons', {}).values(), manifest['clips']]:
             relative = base+record['path']
             safe_path(root, relative)
             paths.add(relative)

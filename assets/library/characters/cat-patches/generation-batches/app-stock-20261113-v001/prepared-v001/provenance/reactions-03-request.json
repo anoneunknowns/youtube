@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "intent": "generate",
+  "generation_tool": "built-in image_gen",
+  "model_id": null,
+  "exact_model_identifier_exposed": false,
+  "character_id": "cat-patches",
+  "sheet_id": "reactions-03",
+  "frame_order": [
+    "success_land",
+    "oops",
+    "retry",
+    "cheer"
+  ],
+  "tool_arguments": {
+    "prompt": "Use case: illustration-story.\nAsset type: four brand-new full-body transparent raster character poses on one production sprite source sheet for a children arithmetic app.\nGenerate anew from reference identity and style. Do not trace, stretch, sharpen, recolour or cut reference pixels.\nINPUT 1: identity and proportions. Exact established patched cat: large rounded cream face and compact cream torso, triangular ears, warm-brown oval eyes with white outer crescents, tiny brown nose, curved W mouth, three fine whiskers per side, two mitten arms and two short feet. SCREEN LEFT forehead and ear are pale orange; SCREEN RIGHT forehead and ear are muted warm brown. The cream stripe between forehead patches stays centered. The single long cream tail rises on SCREEN RIGHT. Preserve these anatomical marking sides; do not mirror markings or swap colours. No hat, no collar, NO red cheek circles.\nINPUT 2: adopted watercolor and outline style. Match its relatively slender warm dark-brown confident continuous outline, rounded joins and restrained soft paper-watercolor fills at the same displayed body height (about 5px outline at app display scale). Do not copy bear anatomy or hat. Keep the cat silhouette, colours and features from input 1. No black outlines, glossy 3D, over-thick lines or hard vector-flat fills.\nCanvas: high-resolution square 2048x2048 transparent RGBA requested. EXACTLY 2 columns x2 rows, four separate complete full-body drawings ordered top-left, top-right, bottom-left, bottom-right. Every cell equal sized. Large transparent outside margins and gutters, at least 50 native pixels from each cell edge. All ears, tail, hands and feet entirely visible. No labels, grid, border, floor, cast shadow or text.\nScale: same head width and same anatomical standing-body reference scale in ALL four cells. Preserve identical head-to-torso proportions. Do not enlarge crouched, seated or bent poses to fill cells. Visible bbox height may change with posture; head scale must not. Leave enough headroom for jumps and raised hands without shrinking the cat.\nTOP LEFT (success_land): Soft landing with both feet planted, slightly crouched, hands forward and pleased closed-eye smile.\nTOP RIGHT (oops): Gentle oops with a small surprised mouth and head tilt, reassuring rather than distressed.\nBOTTOM LEFT (retry): Encouraging retry, friendly smile with one open hand inviting another try.\nBOTTOM RIGHT (cheer): Enthusiastic cheer with both arms lifted, one knee may lift while the other foot supports body.\nConstraints: exactly ONE complete cat per cell, only two ears, two eyes, two arms, two feet and ONE attached tail. Keep original species markings, warm cream fill and fine whiskers. No added props, sparkles, sweat, symbols, motion lines, particles or extra characters. Genuine transparent alpha around all four drawings, not a printed checkerboard.\nINPUT 3 is the newly generated first pose group of this same cat. Match that group closely for exact head/body proportions, palette and drawing consistency; its four gestures are not the gestures requested for this new sheet.",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "/Users/support/codex/youtube/.work/app-character-issues-20261113/references/latest/assets/characters/revisions/cat-patches-neutral-outline-v5.png",
+      "/Users/support/codex/youtube/assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "/Users/support/codex/youtube/assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/source/reactions-01.png"
+    ]
+  },
+  "input_references": [
+    {
+      "path": ".work/app-character-issues-20261113/references/latest/assets/characters/revisions/cat-patches-neutral-outline-v5.png",
+      "sha256": "69506eaba26f4bd3a816933495880a56d6109a684d368fb110df907f77e50c18",
+      "role": "identity-and-proportions-reference"
+    },
+    {
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "adopted-stroke-watercolor-style-reference"
+    },
+    {
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/source/reactions-01.png",
+      "sha256": "411abdda6b3a8e09d35f24ba5e6175d36ab99e18a89868aeaad99cc9421bdf81",
+      "role": "new-first-group-style-and-proportions-continuity-reference"
+    }
+  ],
+  "policy": {
+    "source_pixels_modified": false,
+    "alpha_cleanup": false,
+    "registration": "native exact-cell crops; per-sheet calibration; no per-pose bbox fit"
+  }
+}

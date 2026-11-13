@@ -1,0 +1,246 @@
+{
+  "id": "sheet-01",
+  "source": {
+    "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-01.png",
+    "sha256": "bf5e24c0f7f27d49b2db5ee3a2b07c8df4d8a2f04f904fae5cfe95692c3ee34a"
+  },
+  "prompt": {
+    "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/provenance/sheet-01-prompt.txt",
+    "sha256": "4b2413004fd591024376bbd3f1a2ddbf84208d4c01b1b9f1a33fe9ce45e0f7ab"
+  },
+  "request": {
+    "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/provenance/sheet-01-request.json",
+    "sha256": "c2b278ef59745352d835cdaf20cf217716e8ec777dde6944fd4d05d793f6e475"
+  },
+  "input_references": [
+    {
+      "path": ".work/app-character-issues-20261113/references/latest/assets/characters/revisions/bear-small-neutral-outline-v5.png",
+      "sha256": "7c0352c5529d19c607ba4c7951787dfd89c6f14b6097a0dc193996b432806401",
+      "role": "identity reference",
+      "direct_input": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/current/neutral.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "visual style reference only",
+      "direct_input": true
+    }
+  ],
+  "calibration": {
+    "reference_height_px": 476.0,
+    "method": "One shared sheet body reference transferred from the fixed first-sheet neutral by reviewed median head/body width; never per-pose bbox height fitting",
+    "reference_source": {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-01.png",
+      "sha256": "bf5e24c0f7f27d49b2db5ee3a2b07c8df4d8a2f04f904fae5cfe95692c3ee34a"
+    },
+    "neutral_reference_height_px": 476,
+    "first_sheet_width_px": 301.5,
+    "this_sheet_width_px": 301.5,
+    "notes": "Independent reference agent measured neutral anatomy477, first median head301.5. Sheet2/3/4 upper40% medians298.5/306.5/307; pond05 grounded head median300.5 (air projected292 excluded); pond06 left-stand411/land413 =>412. Pond standing508 vs front477 native body height is a projection/body drawing difference, not bbox-normalized away. Correction v002: connected neutral body bbox=[170,64,468,540] gives476px. The original all-alpha477px included an isolated soft speck on the lowest row. Source pixels, source support anchors, observer thresholds and scale transfer widths are unchanged; all sheet common body references are adjusted by the same476/477 factor."
+  },
+  "frames": [
+    {
+      "id": "neutral",
+      "role": "body",
+      "cell_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "body_bbox_px": [
+        170,
+        64,
+        468,
+        540
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        320.0,
+        540
+      ],
+      "source_foot_point_px": [
+        320.0,
+        540
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anchor_kind": "drawn-ground-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          158,
+          512,
+          480,
+          554
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "blink",
+      "role": "body",
+      "cell_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "body_bbox_px": [
+        154,
+        64,
+        456,
+        541
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        305.0,
+        541
+      ],
+      "source_foot_point_px": [
+        305.0,
+        541
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anchor_kind": "drawn-ground-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          142,
+          513,
+          468,
+          555
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "tap_down",
+      "role": "body",
+      "cell_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "body_bbox_px": [
+        164,
+        109,
+        477,
+        544
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        320.5,
+        544
+      ],
+      "source_foot_point_px": [
+        320.5,
+        544
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anchor_kind": "drawn-ground-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          152,
+          516,
+          489,
+          558
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "tap_pop",
+      "role": "body",
+      "cell_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        135,
+        40,
+        481,
+        508
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        304.0,
+        544
+      ],
+      "source_foot_point_px": [
+        304.0,
+        508
+      ],
+      "support_kind": "inferred-ground",
+      "ground_estimated": true,
+      "baked_in_lift_px": 36,
+      "support_notes": "Native tap_pop shows body/feet above same-sheet tap_down contact; inferred ground from that resting partner retains generated lift, with no extra scene jump.",
+      "scene_motion_policy": "retain-native-lift; application-must-not-add-a-second-root-jump",
+      "vertical_motion_policy": "retain-native-lift; application-must-not-add-a-second-root-jump",
+      "anchor_kind": "inferred-ground",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Same-sheet tap_down support baseline; the generated pop foot/body base remains distinct. Ground estimate is art registration, not ground pixels.",
+      "observation": {
+        "roi_px": [
+          123,
+          480,
+          493,
+          522
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    }
+  ],
+  "original_source": {
+    "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-01.png",
+    "sha256": "bf5e24c0f7f27d49b2db5ee3a2b07c8df4d8a2f04f904fae5cfe95692c3ee34a"
+  },
+  "archived_source": {
+    "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-01.png",
+    "sha256": "bf5e24c0f7f27d49b2db5ee3a2b07c8df4d8a2f04f904fae5cfe95692c3ee34a"
+  },
+  "archived_input_references": [
+    {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/inputs/bear-small-neutral-outline-v5-7c0352c552.png",
+      "sha256": "7c0352c5529d19c607ba4c7951787dfd89c6f14b6097a0dc193996b432806401",
+      "role": "identity reference",
+      "direct_input": true,
+      "original_generation_input_path": ".work/app-character-issues-20261113/references/latest/assets/characters/revisions/bear-small-neutral-outline-v5.png"
+    },
+    {
+      "path": "assets/library/characters/bear-beret/current/neutral.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "visual style reference only",
+      "direct_input": true
+    }
+  ]
+}

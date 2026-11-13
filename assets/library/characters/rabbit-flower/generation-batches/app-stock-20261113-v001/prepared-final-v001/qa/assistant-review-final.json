@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "kind": "app-stock-assistant-visual-and-geometry-review",
+  "status": "assistant-reviewed-for-stock",
+  "character_id": "rabbit-flower",
+  "reviewer": "codex:app_asset_registration; delegated by user, not a user click",
+  "registration": {
+    "path": "assets/library/characters/rabbit-flower/generation-batches/app-stock-20261113-v001/prepared-final-v001/registration.json",
+    "sha256": "f078863dd8f0990ece8d1b02460516d1c112361724b1cdc379e1797c6a86e87e"
+  },
+  "diagnostics": {
+    "path": "assets/library/characters/rabbit-flower/generation-batches/app-stock-20261113-v001/prepared-final-v001/qa/diagnostics.json",
+    "sha256": "96947253ea0460c6eab94033d39b72aa5d67cd1e9a9e8c35d9f3d83d15c3ba2f"
+  },
+  "view_manifest": {
+    "path": "assets/library/characters/rabbit-flower/generation-batches/app-stock-20261113-v001/prepared-final-v001/qa/review-view-manifest.json",
+    "sha256": "8a8c1e923ca301425c7121c89062c8b56b934f45f64667a168cf8e6765d79892"
+  },
+  "renderer_controls": {
+    "path": "assets/library/characters/rabbit-flower/generation-batches/app-stock-20261113-v001/prepared-final-v001/qa/final-renderer-controls.json",
+    "sha256": "55c1247a33383601f897b051b67e7f2c8ba9de23700275cd4ed7de9f08ef7e72"
+  },
+  "source_pngs_new": 16,
+  "reused_adopted_neutral_aliases": 0,
+  "body_frames_reviewed": 16,
+  "layout_each_axis_tolerance_px": 0.5,
+  "all_final_source_layouts_passed": true,
+  "all_cells_exact_native_rgba": true,
+  "source_pixels_modified": false,
+  "alpha_cleanup": false,
+  "per_pose_bbox_fit": false,
+  "conditions": [
+    "Original complete native RGBA sheets",
+    "1008x567 app raster at body350*scene ratio on light/dark",
+    "Full native pose canvas displayed at567px height, no upsampling",
+    "Fixed-neutral -> success ready/air/land discrete sequence",
+    "Idle and signature discrete sequence"
+  ],
+  "visual_findings": {
+    "identity": "Passed: face, eye/mouth forms, material/palette and character-specific flower/tail/hat features retained.",
+    "anatomy": "Passed: two connected arms and two feet, ear/hand/foot shapes and pose action read clearly; no extra body parts.",
+    "alpha": "Passed on reviewed light/dark compositions: no opaque background, halo, clipping or visible distracting islands. Tiny disconnected texture components retained unchanged.",
+    "stroke_and_detail": "Passed at app raster and567px native canvas: continuous brown outline and soft paper-watercolor texture, no missing thin features or unusable blur.",
+    "scale": "One calibrated body reference per sheet transferred by reviewed head width; crouch/seated/airborne poses never individually bbox-fitted. Native maximum source display requires no upsampling.",
+    "reaction_air": "Both anatomical soles inspected separately, unequal native foot heights retained; reaction inferred ground/native lift remains distinct from source feet.",
+    "identity_specific": "Pink long ears, pale five-petal yellow-centre flower stays at screen-right ear base; signature ear flop is clear. No beret substitution."
+  },
+  "limits": [
+    "Discrete key-pose/source stock review; smooth interpolation and final application render must be tested in consuming app.",
+    "567px canvas maximum and app body350*ratio are distinct display conditions.",
+    "Shared stock registration does not replace existing episode assets or historical QA."
+  ],
+  "selection_authority": "User delegated defect review and stock creation to assistant. Existing good neutral retained; new stock is not recorded as a user click."
+}

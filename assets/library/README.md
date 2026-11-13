@@ -1,6 +1,6 @@
 # 素材ライブラリの利用案内
 
-動物・植物・乗り物・昆虫・虹の全19種類を、同じ `current/` から利用できます。全IDの正本は[素材台帳](../../catalogs/asset-library-current-v1.json)です。
+動物・植物・乗り物・昆虫・虹の全24種類を、同じ `current/` から利用できます。全IDの正本は[素材台帳](../../catalogs/asset-library-current-v1.json)です。
 
 ## PNGを1枚使う
 
@@ -29,6 +29,11 @@
 | `butterfly` | 蝶 | [PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/butterfly/current/neutral.png) | [asset.json](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/butterfly/current/asset.json) |
 | `ladybug` | てんとう虫 | [PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/ladybug/current/neutral.png) | [asset.json](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/ladybug/current/asset.json) |
 | `rainbow` | 虹 | [PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/rainbow/current/neutral.png) | [asset.json](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/rainbow/current/asset.json) |
+| `bear-small` | 小さいクマ | [PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/bear-small/current/neutral.png) | [asset.json](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/bear-small/current/asset.json) |
+| `hamster` | ハムスター | [PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/hamster/current/neutral.png) | [asset.json](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/hamster/current/asset.json) |
+| `rabbit-flower` | 花飾りのウサギ | [PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/rabbit-flower/current/neutral.png) | [asset.json](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/rabbit-flower/current/asset.json) |
+| `cream-companion` | クリーム色の細身の子 | [PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/cream-companion/current/neutral.png) | [asset.json](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/cream-companion/current/asset.json) |
+| `cat-patches` | ぶち猫 | [PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/cat-patches/current/neutral.png) | [asset.json](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/cat-patches/current/asset.json) |
 
 表の画像・JSONはGitHubの `main` にある配布版です。再現する参照を固定する場合は、両URLの `main` を同じコミットIDへ置き換えます。JSONとPNGは同じ参照から取得し、受け取った画像のSHA-256をJSONの値と照合してください。
 
@@ -48,6 +53,7 @@ assets/library/characters/<id>/current/
   neutral.png
   poses/<namespace>/<pose>.png
   clips.json
+  icons/<name>.png（対応する素材のみ）
 ```
 
 | JSONの項目 | 内容・パスの基準 |
@@ -55,13 +61,14 @@ assets/library/characters/<id>/current/
 | 素材台帳の `assets[].manifest` | プロジェクトルートから各 `current/asset.json` へ進む |
 | `asset.json` の `neutral.path` | `asset.json` のある `current/` から通常PNGを解決する |
 | `asset.json` の `poses[キー].path` | 同じ `current/` から選んだポーズPNGを解決する |
+| `asset.json` の `icons[名前].path` | 同じ `current/` から頭部等の独立アイコンを解決する |
 | `asset.json` の `clips.path` | 同じ `current/` から `clips.json` を解決する |
 | `source_path`、`source_index.path`、`source_registrations[].path` | プロジェクトルートを基準とする取得元・登録の記録 |
 | `sha256` | 対応するファイルのSHA-256。`source_sha256` は元ファイルの値 |
 
 `neutral.png` は採用原画のバイト一致コピー、または指定されたシート領域の無損失切り出しです。切り出したPNGと元シートではSHAが異なり得るため、利用PNGはそのレコードの `sha256` と比較します。元シートの `source_sha256` と混同しません。
 
-通常姿と短い演出の明示採用は [採用台帳](../../catalogs/character-adoptions-v1.json) に記録します。画像利用では `current/` を入口とし、原画から一覧を再構築する場合はこの採用記録と根拠を読みます。版番号や過去の画風QAから現行版を推測しません。
+通常姿・ポーズの選択はINDEXの `source_collections` にある検査済みcollectionと、[明示採用台帳](../../catalogs/character-adoptions-v1.json)から辿れます。画像利用では `current/` を入口とし、原画から一覧を再構築する場合はこの採用記録と根拠を読みます。版番号や過去の画風QAから現行版を推測しません。
 
 PowerShellで、通常PNGだけを照合する例です。画像表示に検証ツールの実行を必須とはしません。
 
@@ -83,6 +90,7 @@ if ($actual -ne $asset.neutral.sha256) { throw "PNGのSHA-256が登録値と一�
 | `expanded/` | 手振り・視線・姿勢などの表情と全身動作 | `expanded/wave_low` |
 | `eyecatch/` | 紅茶・おじぎ・ジャンプ・ダンス等の短い演出 | `eyecatch/tea_sip` |
 | `gimmick/` | 植物・乗り物・昆虫・虹の動作 | `gimmick/fully_open` |
+| `app/` | タップ・回答リアクション・待機・池ジャンプ | `app/success_air` |
 
 表はキーの例です。必要なキーがその素材の `poses` にあることを確認してください。通常姿は `neutral` のレコードを使い、各名前空間にある `neutral` というポーズへ自動的に置き換えません。
 
@@ -90,7 +98,19 @@ if ($actual -ne $asset.neutral.sha256) { throw "PNGのSHA-256が登録値と一�
 
 `clips.json` の `clips` は、名前付きの動作定義です。各 `frames` の値を `asset.json` の `poses` へ対応付け、`durations_ms` と `loop` が記録されている場合はそれを読みます。`timing` に時間未指定とある動作は、使う場面で時間を設計・確認してください。移動や `procedural_effect` がある場合は、その指定も合わせて再生します。虹は同じPNGを使い、出現・透明度・光の移動を再生時に変えます。
 
-動作の確認入口は各 `asset.json` の `source_registrations` と、その登録が示すプレビューです。クマの短い演出は[姿勢一覧](characters/bear-beret/eyecatches/v003/pose-review.png)と[キーポーズGIF](characters/bear-beret/eyecatches/v003/key-pose-preview.gif)で確認できます。[基本の表情・しぐさ](collections/animal-motions/v001/index.html)、[全身のしぐさ](collections/character-expansion/v001/index.html)、[配置用素材の動作GIF](collections/background-gimmicks/v001/index.html)も参照できます。全19種類のポーズと動作の有無は共通台帳と各 `asset.json`・`clips.json` を正本にし、過去のcollectionの一覧から現行の採用先を推測しません。
+動作の確認入口は各 `asset.json` の `source_registrations` と、その登録が示すプレビューです。クマの短い演出は[姿勢一覧](characters/bear-beret/eyecatches/v003/pose-review.png)と[キーポーズGIF](characters/bear-beret/eyecatches/v003/key-pose-preview.gif)で確認できます。[基本の表情・しぐさ](collections/animal-motions/v001/index.html)、[全身のしぐさ](collections/character-expansion/v001/index.html)、[配置用素材の動作GIF](collections/background-gimmicks/v001/index.html)も参照できます。全24種類のポーズと動作の有無は共通台帳と各 `asset.json`・`clips.json` を正本にし、過去のcollectionの一覧から現行の採用先を推測しません。
+
+### タップ・回答・待機・池ジャンプ
+
+赤いベレー帽のクマ、小さいクマ、ハムスター、花飾りのウサギ、クリーム色の細身の子、ぶち猫は、`app/` の反応と待機を同じ `current/asset.json` から利用できます。12反応は `blink,tap_down,tap_pop,think,aha,success_ready,success_air,success_land,oops,retry,cheer,signature`、待機は `idle_rest,idle_stretch,idle_nap` です。
+
+池は2体のクマに `pond_stand_right,pond_air_right,pond_land_right,pond_air_left,pond_stand_left,pond_land_left` を収録します。空中の支点は描かれた足の解剖上の位置です。アプリ側で放物線を与え、画像の余白から推定した浮きを二重に足しません。クマの `seated_tap_down,seated_tap_pop,seated_blink` は、タイトル画面の座位から立位へ急に切り替えず反応させるための姿勢です。
+
+`scene_relative_scale` は赤いベレー帽のクマに対する場面上の身体高比の設定値です。基準表示高にこの比を掛け、それを各PNGの `reference_height_px` で割って描画倍率を求めます。小さいクマ0.65、ハムスター0.30、花飾りのウサギ1.05、クリーム色の子とぶち猫0.95です。元のクマの基準高1107pxは帽子を含む従来の登録を維持し、各シートの校正で対応付けています。見かけの全高だけから比率を再計算したり、姿勢ごとの外接高さへfitし直したりしないでください。
+
+ハムスターは手足のない体底支点、花飾りのウサギは固有の花、ぶち猫は身体側に固定した模様、クリーム色の子は種別未確定の細身の姿を保ちます。顔アイコンはクマの `icons.face` から取得し、身体基準高を持つ全身PNGと区別します。
+
+1008×567での明暗・原寸・離散キーポーズの素材QAは、[確認記録](collections/app-character-stock/v001/README.md)を参照してください。実アプリへの組込み後の補間、速度、画面遷移は利用側で確認します。
 
 <a id="背景素材8種類の表示と動作"></a>
 ## 支点・共通尺度・表示サイズ
@@ -170,7 +190,7 @@ python tools/character_library.py preview --character butterfly --pose gimmick/f
 python tools/character_library.py export --output ../num-num-asset-library.zip
 ```
 
-ZIPには `character-library/` を起点に、選択された全19素材の通常画像・ポーズ・動作定義・共通台帳・登録・生成条件・確認資料・検証ツールを収録し、`.sha256` と `.json` の検証記録も出力します。展開後はその `character-library/` へ移動して必要な依存を導入し、`character_library.py verify` と `unified_asset_library.py verify` を実行します。画像・JSONの相対配置を維持してください。
+ZIPには `character-library/` を起点に、選択された全24素材の通常画像・ポーズ・動作定義・共通台帳・登録・生成条件・確認資料・検証ツールを収録し、`.sha256` と `.json` の検証記録も出力します。展開後はその `character-library/` へ移動して必要な依存を導入し、`character_library.py verify` と `unified_asset_library.py verify` を実行します。画像・JSONの相対配置を維持してください。
 
 通常の利用では `current/` や期待SHAを編集しません。採用管理担当が登録を更新した後に `unified_asset_library.py build` で共通入口を作り直し、`verify` で元画素・座標・参照を照合します。取り込み先での検証エラーは、取得漏れ・ポインタ・参照先・実体を調べて解決し、`refresh` で期待ハッシュを上書きして隠しません。
 

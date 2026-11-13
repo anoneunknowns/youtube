@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "intent": "generate",
+  "generation_tool": "built-in image_gen",
+  "exact_model_identifier_exposed": false,
+  "model_id": null,
+  "character_id": "rabbit-flower",
+  "sheet_id": "reactions-01",
+  "frame_order": [
+    "neutral",
+    "blink",
+    "tap_down",
+    "tap_pop"
+  ],
+  "tool_arguments": {
+    "prompt": "Use case: illustration-story.\nAsset type: four new full-body transparent raster character poses in one production sprite source sheet for a children arithmetic app.\nGenerate all drawings anew using the references, rather than stretching, tracing, recolouring, sharpening, or cutting out the reference pixels.\nInput 1 is identity/proportions only; input 2 is the exact adopted line weight, warm dark-brown outline colour, restrained soft paper-watercolour texture and rendering style to match; input 3 shows gesture intent only and its heavier lines must not be copied.\nSubject identity: A pink long-eared rabbit exactly matching input 1: rounded large head, two long pink ears, dark warm-brown oval eyes with white outer eye crescent, little brown nose and curved mouth, compact rounded torso, two mitten hands, two short feet, small plain pink tail on screen right. The pale-cream five-petalled flower with yellow centre stays at the base of the SCREEN RIGHT ear (character left); never move or mirror the flower. No hat, no added cheek spots.\nStyle: match input 2 at the same displayed body size. Its clean relatively slender, confident continuous dark warm-brown outlines, rounded joins, soft subtly mottled watercolor fills. Preserve crisp native edges. Avoid the visibly heavier outline of input 1/3. No black outlines, glossy 3D, gradients or hard vector-flat fills.\nCanvas/layout: high-resolution square 2048x2048 transparent RGBA PNG requested. Exactly 2 columns by 2 rows, each equal cell. Four complete separate full-body drawings ordered top-left, top-right, bottom-left, bottom-right. Large transparent outer margins and gutters, with at least 50 source pixels of clear separation from cell edges. No labels, grid, border, background, shadow, floor or text.\nScale/registration: every drawing has the SAME anatomical head width and SAME standing-body reference scale as the first upright pose. Never expand a crouched, seated, or bent pose to fill its cell. Pose changes can change the visible bounding-box height while the body scale stays fixed. Keep all ears, flower, tail, hands and feet visible with transparent margin. Allow enough headroom for an airborne/raised-arm pose without shrinking the character.\nTOP LEFT (neutral): natural front-facing upright neutral pose, open eyes and relaxed hands.\nTOP RIGHT (blink): same upright pose and body height, a calm complete blink with both eyes closed.\nBOTTOM LEFT (tap_down): small responsive tap squash: lower the body slightly at the knees/hips and draw hands gently inward, keep head width and anatomy.\nBOTTOM RIGHT (tap_pop): small cheerful tap rebound from the preceding squash: rise slightly, open arms a little, brighten the face; same character size, no enormous jump.\nConstraints: exactly one complete character per cell, exactly two eyes, two ears, two connected arms/hands and two feet for this character; preserve the flower/tail side and all identity colours. Do not add decorative particles, sweat, stars, props, speech, motion lines, ground or companion characters. Genuine alpha transparency surrounding all four characters, not a checkerboard printed into the image.",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "/Users/support/codex/youtube/.work/app-character-issues-20261113/references/latest/assets/characters/revisions/rabbit-flower-neutral-outline-v5.png",
+      "/Users/support/codex/youtube/assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "/Users/support/codex/youtube/.work/app-character-issues-20261113/references/latest/assets/characters/reactions-v2/rabbit-flower-reactions.png"
+    ]
+  },
+  "input_references": [
+    {
+      "path": ".work/app-character-issues-20261113/references/latest/assets/characters/revisions/rabbit-flower-neutral-outline-v5.png",
+      "sha256": "f76e4922d3ffe82ec586e471544cb3bd464cf3ce12e90da33fde11b96b2f71ac",
+      "role": "identity-and-proportions-reference"
+    },
+    {
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "adopted-stroke-watercolor-style-reference"
+    },
+    {
+      "path": ".work/app-character-issues-20261113/references/latest/assets/characters/reactions-v2/rabbit-flower-reactions.png",
+      "sha256": "11c0d0c152068059ac95f3b5e50e9f07fefeea60b00d152a8a631a9ae1ffe8ab",
+      "role": "gesture-intent-reference-only; not-lineweight-or-pixel-source"
+    }
+  ],
+  "policy": {
+    "source_pixels_modified": false,
+    "alpha_cleanup": false,
+    "registration": "native exact-cell crops; per-sheet calibration; no per-pose bbox fit",
+    "future_stock": [
+      "idle_rest",
+      "idle_stretch",
+      "idle_nap"
+    ]
+  }
+}

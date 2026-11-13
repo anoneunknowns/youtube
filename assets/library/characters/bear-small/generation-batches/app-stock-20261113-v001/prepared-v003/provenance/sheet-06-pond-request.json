@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen built-in",
+  "intent": "new drawing; no prior pond images directly supplied",
+  "transparent_background": true,
+  "poses_row_major": [
+    "pond_stand_left",
+    "pond_land_left"
+  ],
+  "prompt": "Use case: illustration-story. Asset type: production transparent game character sprites. Draw NEW original images FROM SCRATCH, not edits. Image 1 is our freshly drawn small warm-ivory bear's sole identity and continuity reference: huge round head and round ears, brown oval eyes with white outer eye area, original outlined muzzle/nose and tiny pink tongue, short stocky body, mitten arms and stubby legs, no hat, absolutely no red/pink cheeks. Preserve pale ivory color, simple anatomical design and watermark-free watercolor texture inside. Image 2 is ONLY the thin warm-brown hand-drawn contour and watercolor visual-style reference; do not borrow its red hat, yellow fur or identity. Create natural new SIDE-FACING pond-crossing postures, with muzzle/head and torso visibly directed to the specified direction; a gentle 3/4 profile is fine, avoid frontal-only poses. Same anatomical head/body scale in every cell, no character enlarged to fill a cell. Keep thin contour visual weight about 5px at body height700px equivalent, crisp clear face and texture at small game scale.\nBackground MUST be genuinely transparent RGBA outside the characters, not white, cream paper, checkerboard or haze. No pond, water, rocks, floor, ground line, shadow, glow, splashes, droplets, motion lines, letters, labels, props, frames or extra objects. Draw only the bears. Each full bear must remain in its own cell with at least10% empty transparent margin on every side. Air sprites are physical tucked-leg poses: the app supplies the whole parabolic flight; use the lowest anatomical foot as the registration point and don't bake extra floating ground-offset or illustrated shadow into the image.\nCanvas: exactly TWO columns by ONE row of equal SQUARE cells, wide2:1 PNG, prefer2048x1024. Exactly TWO complete bears. LEFT CELL: pond_stand_left, natural standing ready to cross, body and muzzle face screen LEFT, both feet supported and arms relaxed slightly forward. RIGHT CELL: pond_land_left, facing screen LEFT, shallow landing crouch, both feet ready to contact, knees flex, arms forward balancing, same head size as standing. Both are drawn as left-facing side/three-quarter poses, never frontal-only. No additional bears.",
+  "inputs": [
+    {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/provenance/neutral-continuity-input.png",
+      "sha256": "f27f494c82fef487243d00d84af8413a6f4c41874c68de54f307f533966a40b1",
+      "role": "new neutral identity/continuity reference",
+      "direct_input": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/current/neutral.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "visual style reference only",
+      "direct_input": true
+    }
+  ],
+  "ancestor_input_note": "neutral-continuity-input.png is a lossless top-left627x627 crop of generated source/sheet-01.png; parent request records original app identity source."
+}

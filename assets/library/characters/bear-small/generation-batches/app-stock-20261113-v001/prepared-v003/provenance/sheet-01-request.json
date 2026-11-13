@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen built-in",
+  "intent": "new drawing from identity and style references, no existing-image edit",
+  "transparent_background": true,
+  "poses_row_major": [
+    "neutral",
+    "blink",
+    "tap_down",
+    "tap_pop"
+  ],
+  "prompt": "Use case: illustration-story. Asset type: production transparent character sprite source sheet for Num-Num Numbers. NEW DRAWING FROM SCRATCH using references for identity and visual style, never a pixel edit or a filter on existing PNG.\nLayout: exactly TWO columns by TWO rows, four equal square cells, preferably 2048x2048 PNG, true transparent RGBA background. Draw exactly one complete character in each cell in row-major order, absolutely no labels, letters, digits, frames, checkerboard, shadows, props, symbols, floor or backdrop. Keep all figures and any ears/tail completely inside their own cells with at least 10% transparent margins. Use the SAME anatomical head size and body scale for all four poses; never stretch each pose to fill the cell. Resting bodies share a consistent bottom support baseline within each cell; leave generous space above for the jumping pose. Crisp warm dark-brown hand drawn contour, pale watercolor-paper texture INSIDE the character, simple clean edges, same refined thin-outline visual weight as reference image 2 (approximately 5px when body height is about 700px); do not transfer its hat, color or bear face onto another character. No blush, red cheeks, cheek strokes, clothing, effects, duplicate limbs, human fingers, glowing halo or disconnected marks.\nReference image 1 is the sole identity reference: the SMALL warm-ivory bear with huge round head, round ears, short stocky torso, small mitten arms, stubby legs, brown oval eyes with white outer eye areas, original distinctive outlined muzzle/nose and tiny pink tongue. No hat. No red cheeks. Little round tail stays on SCREEN LEFT in frontal views. Do not make it taller, yellow or slender. Its world body height is 0.65 of red-beret bear, but do NOT draw the red bear in this sheet. Reference image 2 is STYLE ONLY.\nCell top-left NEUTRAL: natural front standing, both arms relaxed, open friendly oval eyes, calm tiny-tongue smile. Top-right BLINK: same natural standing body, eyes softly shut. Bottom-left TAP DOWN: gentle anticipation crouch, legs bent, body lowers slightly without shrinking skull or limbs, face engaged. Bottom-right TAP POP: small spring upward, body straightens, arms open slightly, feet/body visibly above the resting support baseline, cheerful face.",
+  "inputs": [
+    {
+      "path": ".work/app-character-issues-20261113/references/latest/assets/characters/revisions/bear-small-neutral-outline-v5.png",
+      "sha256": "7c0352c5529d19c607ba4c7951787dfd89c6f14b6097a0dc193996b432806401",
+      "role": "identity reference",
+      "direct_input": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/current/neutral.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "visual style reference only",
+      "direct_input": true
+    }
+  ]
+}

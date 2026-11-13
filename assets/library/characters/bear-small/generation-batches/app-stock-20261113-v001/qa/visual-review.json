@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/app_character_references",
+  "reviewed_at_utc": "2026-11-13T13:40:09.302264+00:00",
+  "status": "candidate_visual_pass_for_registration; final adoption delegated to root",
+  "scope": {
+    "source_sheets": 6,
+    "independent_drawn_poses": 22,
+    "raw_source_views": "all generated source sheets displayed at source resolution",
+    "same_scale_static_composites": [
+      "qa/app-scale-all-light.png",
+      "qa/app-scale-all-dark.png"
+    ],
+    "app_viewport_reference_px": [
+      1008,
+      567
+    ],
+    "app_body_height_px": 227.5,
+    "untested": "No completed video, in-app playback, continuous interpolation, or final consumer layout is claimed."
+  },
+  "identity_checks": {
+    "result": "pass",
+    "observed": "Warm ivory small bear, original eyes/muzzle, no hat, no red cheeks, short arms/legs, frontal tail screen left; pond direction changes are natural views."
+  },
+  "style_and_alpha": {
+    "result": "pass at original visible source and intended app display",
+    "observed": "Warm brown connected outline, pale watercolor interior, readable facial details, no visible opaque paper background, halo, contamination, clipping, duplicate parts or disconnected props on light/dark composites. No pixel cleanup applied.",
+    "alpha_measurement_threshold": 8,
+    "low_alpha_note": "Very low-alpha edge pixels/corner value1 in one sheet are retained and not treated as visible background by value alone."
+  },
+  "scale_and_support": {
+    "result": "pass for discrete keys using suggested per-sheet common calibration",
+    "calibration": "qa/calibration-suggestions.json",
+    "measurement": "qa/measurements.json",
+    "observed": "Natural crouch/seated/tilt changes retained; none expanded by per-pose bbox. Source key poses preserve face/head identity across sheet transitions. Ground supports and airborne ankle/body bases require registration confirmation.",
+    "pond_policy": "lowest anatomical foot registration, then app-supplied parabolic motion; no old pond reference was directly supplied"
+  },
+  "limits": [
+    "Static and discrete-key review only; final usage must check layout and timing.",
+    "Head/body width transfer is an art-calibration proxy, not an anatomical measurement.",
+    "AI generation sheet resolution is actual1254x1254 (last small pond1774x887), not requested2048. At intended app body display there is no upscale."
+  ],
+  "sources": [
+    {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-01.png",
+      "sha256": "bf5e24c0f7f27d49b2db5ee3a2b07c8df4d8a2f04f904fae5cfe95692c3ee34a",
+      "poses_row_major": [
+        "neutral",
+        "blink",
+        "tap_down",
+        "tap_pop"
+      ],
+      "rows": 2,
+      "columns": 2,
+      "pixel_transform": "none; byte-identical copy of built-in tool output"
+    },
+    {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-02.png",
+      "sha256": "5a4957f3c8957af73a5f2719c7646a877203496986eaa13d895c9eee3d93cb92",
+      "poses_row_major": [
+        "think",
+        "aha",
+        "success_ready",
+        "success_air"
+      ],
+      "rows": 2,
+      "columns": 2,
+      "pixel_transform": "none; byte-identical copy of built-in tool output"
+    },
+    {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-03.png",
+      "sha256": "563d4d9a53631ddbb4dc1f97a551b42ddbd55e9d819ab8211699b02b990f57ea",
+      "poses_row_major": [
+        "success_land",
+        "oops",
+        "retry",
+        "cheer"
+      ],
+      "rows": 2,
+      "columns": 2,
+      "pixel_transform": "none; byte-identical copy of built-in tool output"
+    },
+    {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-04.png",
+      "sha256": "afb58efab47893d87414bc22b9292d4c0759502482f19a6569418a384d41bcc9",
+      "poses_row_major": [
+        "signature",
+        "idle_rest",
+        "idle_stretch",
+        "idle_nap"
+      ],
+      "rows": 2,
+      "columns": 2,
+      "pixel_transform": "none; byte-identical copy of built-in tool output"
+    },
+    {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-05-pond.png",
+      "sha256": "7c5554f1d404d713fd7ea56d543cda46d529e3ad8bc6b02bbe2068b64c255248",
+      "poses_row_major": [
+        "pond_stand_right",
+        "pond_air_right",
+        "pond_land_right",
+        "pond_air_left"
+      ],
+      "rows": 2,
+      "columns": 2,
+      "pixel_transform": "none; byte-identical copy of built-in tool output"
+    },
+    {
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/source/sheet-06-pond.png",
+      "sha256": "d7e32664decb36c51aeb5798d39b849ceaccab18259c0e1a8e5cc79276323989",
+      "poses_row_major": [
+        "pond_stand_left",
+        "pond_land_left"
+      ],
+      "rows": 1,
+      "columns": 2,
+      "pixel_transform": "none; byte-identical copy of built-in tool output"
+    }
+  ]
+}

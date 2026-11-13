@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen built-in",
+  "intent": "new drawing from references; no existing-image edit",
+  "transparent_background": true,
+  "poses_row_major": [
+    "signature",
+    "idle_rest",
+    "idle_stretch",
+    "idle_nap"
+  ],
+  "prompt": "Use case: illustration-story. Asset type: production transparent character sprite source sheet for Num-Num Numbers. NEW DRAWING FROM SCRATCH using references for identity and visual style, never a pixel edit or a filter on existing PNG.\nLayout: exactly TWO columns by TWO rows, four equal square cells, preferably 2048x2048 PNG, true transparent RGBA background. Draw exactly one complete character in each cell in row-major order, absolutely no labels, letters, digits, frames, checkerboard, shadows, props, symbols, floor or backdrop. Keep all figures and any ears/tail completely inside their own cells with at least 10% transparent margins. Use the SAME anatomical head size and body scale for all four poses; never stretch each pose to fill the cell. Resting bodies share a consistent bottom support baseline within each cell; leave generous space above for the jumping pose. Crisp warm dark-brown hand drawn contour, pale watercolor-paper texture INSIDE the character, simple clean edges, same refined thin-outline visual weight as reference image 2 (approximately 5px when body height is about 700px); do not transfer its hat, color or bear face onto another character. No blush, red cheeks, cheek strokes, clothing, effects, duplicate limbs, human fingers, glowing halo or disconnected marks.\nReference image 1 is the sole identity reference: original LIMBLESS warm-cream hamster, ONE continuous plump short rounded-rectangle blob, height about 1.09 times width, two round little ears, plain dark-brown oval DOT eyes without white eye areas or glints, distinctive inverted-W/M-shaped brown mouth. It has NO separate head/torso, hands, arms, legs, feet, fingers, whiskers, nose, teeth or tail. Do not invent any appendages in any pose, even excitement or sleep. Remain compact, not a long ricecake/cylinder. World body height 0.30 of bear; do NOT draw a bear. Reference image 2 is STYLE ONLY, do not borrow its face.\nReference image 3 is the freshly generated approved-for-continuity sheet of THIS character. Match its face, color, delicate contour weight, watercolor interior, head size/body proportions across the new sheet, while drawing new poses FROM SCRATCH. Image 1 remains identity reference, image 2 style only; do not put the reference sheet into the output.\nTop-left SIGNATURE: one round ear flops slightly inward while the SAME compact whole blob tilts the other way, endearing uneven pose. Top-right IDLE REST: same compact blob resting naturally on its body base, calm half-lidded eyes; no hands or feet. Bottom-left IDLE STRETCH: ears perk up and whole compact body gently lengthens only about 5%, relaxed closed curved eyes; no arms or new anatomy. Bottom-right IDLE NAP: same compact body settles slightly lower with a small head/body tilt and peaceful curved closed eyes; no separate head, bed, sleep letters, objects or added appendages.",
+  "inputs": [
+    {
+      "path": ".work/app-character-issues-20261113/references/latest/assets/characters/base-v3/hamster.png",
+      "sha256": "66d27de9924370647c93ed71ca2850ed8a43487ae0036932baa58a126c606bd8",
+      "role": "identity reference",
+      "direct_input": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/current/neutral.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "visual style reference only",
+      "direct_input": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/source/sheet-01.png",
+      "sha256": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178",
+      "role": "new-set visual continuity reference",
+      "direct_input": true
+    }
+  ]
+}

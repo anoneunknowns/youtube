@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "kind": "app-stock-assistant-visual-and-geometry-review",
+  "status": "assistant-reviewed-for-stock",
+  "character_id": "bear-beret",
+  "reviewer": "codex:app_asset_registration; delegated by user, not a user click",
+  "registration": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/registration.json",
+    "sha256": "f7b6124c64a5a62d157a4f7ec01484f20273ac4da70cb1820a71aab87e31163c"
+  },
+  "diagnostics": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/qa/diagnostics.json",
+    "sha256": "c1b11d10b2356e45dc63b0a6596069c008deacf73e68767e634a36c98ada0986"
+  },
+  "view_manifest": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/qa/review-view-manifest.json",
+    "sha256": "35630e3c720e4c889e85c883b9988edfbe75f3e7881a9f2f2a5a523898037c50"
+  },
+  "renderer_controls": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/qa/final-renderer-controls.json",
+    "sha256": "0985bfb258abe39ccff8742f556b6c3e5cfff301aa51529eec6073dc4527a752"
+  },
+  "source_pngs_new": 26,
+  "reused_adopted_neutral_aliases": 1,
+  "body_frames_reviewed": 27,
+  "layout_each_axis_tolerance_px": 0.5,
+  "all_final_source_layouts_passed": true,
+  "all_cells_exact_native_rgba": true,
+  "source_pixels_modified": false,
+  "alpha_cleanup": false,
+  "per_pose_bbox_fit": false,
+  "conditions": [
+    "Original complete native RGBA sheets",
+    "1008x567 app raster at body350*scene ratio on light/dark",
+    "Full native pose canvas displayed at567px height, no upsampling",
+    "Fixed-neutral -> success ready/air/land discrete sequence",
+    "Idle and signature discrete sequence",
+    "Seated idle -> seated tap down/pop/blink at app1:1",
+    "Pond left/right stand/air/land anatomy and foot support"
+  ],
+  "visual_findings": {
+    "identity": "Passed: face, eye/mouth forms, material/palette and character-specific flower/tail/hat features retained.",
+    "anatomy": "Passed: two connected arms and two feet, ear/hand/foot shapes and pose action read clearly; no extra body parts.",
+    "alpha": "Passed on reviewed light/dark compositions: no opaque background, halo, clipping or visible distracting islands. Tiny disconnected texture components retained unchanged.",
+    "stroke_and_detail": "Passed at app raster and567px native canvas: continuous brown outline and soft paper-watercolor texture, no missing thin features or unusable blur.",
+    "scale": "One calibrated body reference per sheet transferred by reviewed head width; crouch/seated/airborne poses never individually bbox-fitted. Native maximum source display requires no upsampling.",
+    "reaction_air": "Both anatomical soles inspected separately, unequal native foot heights retained; reaction inferred ground/native lift remains distinct from source feet.",
+    "identity_specific": "Existing adopted A neutral PNG/SHA/bodyref1107/anchor[622.5,1184] unchanged. New first-sheet neutral is calibration-only. Salute-only initial signature not selected; final signature hat covers one eye and is pushed up by a hand.",
+    "pond": "Passed: left/right directions, unmirrored character anatomy, both-foot native support measured in separately inspected sole regions. App adds parabola; native baked-in pond lift is0, avoiding double jump. Initial lowest-foot-only x anchors were diagnostic candidates and corrected before final stock.",
+    "seated_tap": "Passed: three new seated tap/blink drawings keep seated silhouette and common head/body scale; no forced jump to standing tap."
+  },
+  "limits": [
+    "Discrete key-pose/source stock review; smooth interpolation and final application render must be tested in consuming app.",
+    "567px canvas maximum and app body350*ratio are distinct display conditions.",
+    "Shared stock registration does not replace existing episode assets or historical QA."
+  ],
+  "selection_authority": "User delegated defect review and stock creation to assistant. Existing good neutral retained; new stock is not recorded as a user click.",
+  "face_icon": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/face-icon.png",
+    "sha256": "fa6cd15615f9b88e69d6b1f6f9d464f58fefe01fed5eff6834da7f8721c58ffb",
+    "size_px": [
+      1254,
+      1254
+    ],
+    "subject_bbox_px": [
+      106,
+      125,
+      1134,
+      1160
+    ],
+    "review": "Passed native head-only drawing from cap to chin, same face/hat, transparent surrounding canvas; independent icon role has no body reference or foot anchor."
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "id": "pond-01-v2",
+  "source": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/pond-01-v2.png",
+    "sha256": "a0a23a0f629389ab76d6e6717abec43381f5e9e7055bb3e486d29bb14c6a70b4"
+  },
+  "prompt": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/provenance/pond-01-v2-prompt.txt",
+    "sha256": "a367f91eac0809a349e1fc200eafd8c4d0ba7abd5b21c67cde24115cc3c86c31"
+  },
+  "request": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/provenance/pond-01-v2-request.json",
+    "sha256": "2a4dd24706ee816bf78749c614234d6abbf14d5b4914532911a397fefdb99096"
+  },
+  "input_references": [
+    {
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "identity-and-style-reference-not-edit-target"
+    }
+  ],
+  "calibration": {
+    "reference_height_px": 514.3212669683257,
+    "method": "One shared sheet body reference transferred from the fixed first-sheet neutral by reviewed median head/body width; never per-pose bbox height fitting",
+    "reference_source": {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/reactions-01.png",
+      "sha256": "2fd91d1c87f529fd8ecfa75fb1efdc7f3ee53749226a6fc3790eb4a17ef354fa"
+    },
+    "neutral_reference_height_px": 537,
+    "first_sheet_width_px": 331.5,
+    "this_sheet_width_px": 317.5,
+    "notes": "First-sheet neutral reference only, [150,39,481,576] main anatomy537 high with original adopted-canonical convention. Per-sheet front-head width medians transfer scale once. Pond head projection is explicitly a scale proxy, not individual standing/air/land bbox fitting. Seated sheet has different native dimensions1312x1199 and larger362 head width; one shared586.4 reference protects seated body scale. Accepted old neutral is never replaced."
+  },
+  "frames": [
+    {
+      "id": "pond_stand_right",
+      "role": "body",
+      "cell_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "body_bbox_px": [
+        172,
+        22,
+        495,
+        590
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        332.5,
+        590
+      ],
+      "source_foot_point_px": [
+        332.5,
+        590
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anatomical_foot_regions_px": null,
+      "anatomical_sole_points_px": null,
+      "anchor_kind": "drawn-ground-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          160,
+          562,
+          507,
+          604
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "pond_air_right",
+      "role": "body",
+      "cell_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "body_bbox_px": [
+        117,
+        14,
+        500,
+        537
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        281.75,
+        537
+      ],
+      "source_foot_point_px": [
+        281.75,
+        537
+      ],
+      "support_kind": "drawn-airborne-foot",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Drawn anatomical low-foot point measured in native pose; no inferred pond ground. Application parabola supplies the entire vertical translation, so native cell offset does not add a second jump. Both anatomical soles are measured in separate inspected native foot regions: x is the mean of the two sole centres and y is the lower drawn sole baseline. This preserves unequal airborne feet instead of following only the lowest foot horizontally.",
+      "scene_motion_policy": "app-adds-parabolic-lift; no-native-lift",
+      "vertical_motion_policy": "app-adds-parabolic-lift; no-native-lift",
+      "anatomical_foot_regions_px": [
+        [
+          120,
+          450,
+          250,
+          540
+        ],
+        [
+          365,
+          430,
+          480,
+          535
+        ]
+      ],
+      "anatomical_sole_points_px": [
+        [
+          158.5,
+          537
+        ],
+        [
+          405.0,
+          528
+        ]
+      ],
+      "anchor_kind": "drawn-airborne-foot",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Drawn anatomical low-foot point measured in native pose; no inferred pond ground. Application parabola supplies the entire vertical translation, so native cell offset does not add a second jump. Both anatomical soles are measured in separate inspected native foot regions: x is the mean of the two sole centres and y is the lower drawn sole baseline. This preserves unequal airborne feet instead of following only the lowest foot horizontally.",
+      "observation": {
+        "roi_px": [
+          105,
+          509,
+          512,
+          551
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "pond_land_right",
+      "role": "body",
+      "cell_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "body_bbox_px": [
+        195,
+        57,
+        520,
+        575
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        329.0,
+        575
+      ],
+      "source_foot_point_px": [
+        329.0,
+        575
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anatomical_foot_regions_px": null,
+      "anatomical_sole_points_px": null,
+      "anchor_kind": "drawn-ground-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          183,
+          547,
+          532,
+          589
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "pond_air_left",
+      "role": "body",
+      "cell_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        84,
+        23,
+        479,
+        543
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        303.75,
+        544
+      ],
+      "source_foot_point_px": [
+        303.75,
+        544
+      ],
+      "support_kind": "drawn-airborne-foot",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Drawn anatomical low-foot point measured in native pose; no inferred pond ground. Application parabola supplies the entire vertical translation, so native cell offset does not add a second jump. Both anatomical soles are measured in separate inspected native foot regions: x is the mean of the two sole centres and y is the lower drawn sole baseline. This preserves unequal airborne feet instead of following only the lowest foot horizontally.",
+      "scene_motion_policy": "app-adds-parabolic-lift; no-native-lift",
+      "vertical_motion_policy": "app-adds-parabolic-lift; no-native-lift",
+      "anatomical_foot_regions_px": [
+        [
+          100,
+          440,
+          220,
+          535
+        ],
+        [
+          380,
+          440,
+          480,
+          546
+        ]
+      ],
+      "anatomical_sole_points_px": [
+        [
+          178.0,
+          529
+        ],
+        [
+          429.5,
+          544
+        ]
+      ],
+      "anchor_kind": "drawn-airborne-foot",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Drawn anatomical low-foot point measured in native pose; no inferred pond ground. Application parabola supplies the entire vertical translation, so native cell offset does not add a second jump. Both anatomical soles are measured in separate inspected native foot regions: x is the mean of the two sole centres and y is the lower drawn sole baseline. This preserves unequal airborne feet instead of following only the lowest foot horizontally.",
+      "observation": {
+        "roi_px": [
+          72,
+          515,
+          491,
+          557
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    }
+  ],
+  "original_source": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/pond-01-v2.png",
+    "sha256": "a0a23a0f629389ab76d6e6717abec43381f5e9e7055bb3e486d29bb14c6a70b4"
+  },
+  "archived_source": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-01-v2.png",
+    "sha256": "a0a23a0f629389ab76d6e6717abec43381f5e9e7055bb3e486d29bb14c6a70b4"
+  },
+  "archived_input_references": [
+    {
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "identity-and-style-reference-not-edit-target"
+    }
+  ]
+}

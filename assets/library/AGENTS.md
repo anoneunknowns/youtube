@@ -1,6 +1,6 @@
 # 素材ライブラリを扱うAIへの指示
 
-全19種類の入口は [利用案内](README.md) と `catalogs/asset-library-current-v1.json`。素材台帳から各IDの `assets/library/characters/<id>/current/asset.json` を辿り、画像・ポーズ・動作を同じ手順で扱う。
+全24種類の入口は [利用案内](README.md) と `catalogs/asset-library-current-v1.json`。素材台帳から各IDの `assets/library/characters/<id>/current/asset.json` を辿り、画像・ポーズ・動作を同じ手順で扱う。
 
 生成・比較・採用は [画像管理仕様](../../docs/IMAGE-ASSET-MANAGEMENT.md)、配置の測定は [配置仕様](../../docs/LAYOUT-ALIGNMENT.md) を正本とする。GitHubの収録・同期は [公開仕様](https://github.com/anoneunknowns/youtube/blob/main/docs/GITHUB-PUBLICATION.md) を参照する。
 
@@ -8,7 +8,7 @@
 
 - 利用者向けガイドを「新規」「既存」「追加分」等の収録時期で分割しない。常に全IDを一つの素材一覧と共通の `current/` 台帳で案内し、用途・機能で説明する。
 - ID、収録素材数、ポーズ・動作の有無、リンク、実体は、更新時に実台帳・各 `asset.json`・`clips.json` から確認する。表示数を固定の思い込みで引き継がない。
-- 名前空間 `basic/`・`expanded/`・`eyecatch/`・`gimmick/` は機能を識別する互換IDとして保持する。日本語説明は基本の表情・全身動作・短い演出・植物や物体等の動作として記述し、名称から制作時期や優先順位を推定しない。
+- 名前空間 `basic/`・`expanded/`・`eyecatch/`・`gimmick/`・`app/` は機能を識別する互換IDとして保持する。日本語説明は基本の表情・全身動作・短い演出・植物や物体等の動作・操作への反応として記述し、名称から制作時期や優先順位を推定しない。
 
 ## 画像を利用する場合
 
@@ -17,6 +17,7 @@
 - `neutral.path`・`poses[キー].path`・`clips.path` は `asset.json` のある `current/` から解決する。`source_path`・`source_index.path`・`source_registrations[].path` はプロジェクトルートを基準とする。利用PNGのSHAと元シートの `source_sha256` を混同しない。
 - Git LFSのポインタを画像本体と扱わない。画像・JSONを同じ参照から取得し、必要に応じて対応する `sha256` と実体を照合する。通常PNGだけ取得した状態に、ポーズ等を要求する全体検証を課さない。
 - 利用できるポーズは各 `asset.json` の `poses` から選ぶ。動作の `frames` はそのキーへ対応付け、時間・ループ・移動・再生効果を読む。時間未指定の動作は利用場面で設計・確認する。`character_library.py` へ `basic/` 相当のポーズを渡す場合だけ接頭辞を除く。
+- `scene_relative_scale` は場面の身体高比で、PNGの登録基準高とは別。頭部アイコンは `icons` から取得し、全身ポーズの身体尺度を与えない。座位からの反応は座位用ポーズの有無を確認する。
 - 登録された支点と校正済みシートごとの共通基準を使う。足元・基部・胴体中心を区別し、しゃがみ、翼の開閉、尾、炎、ローターの位相、虹の部分表示ごとに外接矩形で拡大しない。空中姿勢の推定地面と実接触を取り違えず、原画の浮きを二重に加えない。
 - オナガドリは身体で縮尺を決め、尾の全幅を収める。`peck_half`・`peck_down` は下向きのしぐさとして扱い、くちばしの地面接触を保証しない。紅茶のループはカップを持つ姿勢なので、通常姿との接続で出入りを設計する。
 - 透過RGBAと原画の色・輪郭・質感を保持する。アルファ最大254やアルファ0内のRGBだけで不良とせず、明色・暗色へ正しく合成して確認する。輪郭の膨張・収縮、色抜き、アルファ清掃を原画へ適用しない。

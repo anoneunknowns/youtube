@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "kind": "app-stock-assistant-visual-and-geometry-review",
+  "status": "assistant-reviewed-for-stock",
+  "character_id": "cream-companion",
+  "reviewer": "codex:app_asset_registration; delegated by user, not a user click",
+  "registration": {
+    "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/registration.json",
+    "sha256": "1242c09c3d785df05ae86d83c9bd8caac3e2285d0c5cc3b845b223f6e9c41af1"
+  },
+  "diagnostics": {
+    "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/qa/diagnostics.json",
+    "sha256": "e43980d0d1d9c02ec11c6863d09e942a5d4cbe40f3fbe0f7c7b88e5dd7faacea"
+  },
+  "view_manifest": {
+    "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/qa/review-view-manifest.json",
+    "sha256": "cf1d5726da49491127b5d48972261ecfcac3491dd6c1d780392ff7c3e3f3e0f5"
+  },
+  "renderer_controls": {
+    "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/qa/final-renderer-controls.json",
+    "sha256": "3e97f84fddbe2fc355825129e106e477e4240201e470910013a0bd47ca6a7022"
+  },
+  "source_pngs_new": 16,
+  "reused_adopted_neutral_aliases": 0,
+  "body_frames_reviewed": 16,
+  "layout_each_axis_tolerance_px": 0.5,
+  "all_final_source_layouts_passed": true,
+  "all_cells_exact_native_rgba": true,
+  "source_pixels_modified": false,
+  "alpha_cleanup": false,
+  "per_pose_bbox_fit": false,
+  "conditions": [
+    "Original complete native RGBA sheets",
+    "1008x567 app raster at body350*scene ratio on light/dark",
+    "Full native pose canvas displayed at567px height, no upsampling",
+    "Fixed-neutral -> success ready/air/land discrete sequence",
+    "Idle and signature discrete sequence"
+  ],
+  "visual_findings": {
+    "identity": "Passed: face, eye/mouth forms, material/palette and character-specific flower/tail/hat features retained.",
+    "anatomy": "Passed: two connected arms and two feet, ear/hand/foot shapes and pose action read clearly; no extra body parts.",
+    "alpha": "Passed on reviewed light/dark compositions: no opaque background, halo, clipping or visible distracting islands. Tiny disconnected texture components retained unchanged.",
+    "stroke_and_detail": "Passed at app raster and567px native canvas: continuous brown outline and soft paper-watercolor texture, no missing thin features or unusable blur.",
+    "scale": "One calibrated body reference per sheet transferred by reviewed head width; crouch/seated/airborne poses never individually bbox-fitted. Native maximum source display requires no upsampling.",
+    "reaction_air": "Both anatomical soles inspected separately, unequal native foot heights retained; reaction inferred ground/native lift remains distinct from source feet.",
+    "identity_specific": "Slim ivory original silhouette and long plain screen-left tail preserved; species left unspecified. Signature sideways spring bend is distinct."
+  },
+  "limits": [
+    "Discrete key-pose/source stock review; smooth interpolation and final application render must be tested in consuming app.",
+    "567px canvas maximum and app body350*ratio are distinct display conditions.",
+    "Shared stock registration does not replace existing episode assets or historical QA."
+  ],
+  "selection_authority": "User delegated defect review and stock creation to assistant. Existing good neutral retained; new stock is not recorded as a user click."
+}

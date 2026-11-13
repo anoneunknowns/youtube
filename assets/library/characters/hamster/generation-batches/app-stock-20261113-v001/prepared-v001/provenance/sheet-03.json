@@ -1,0 +1,258 @@
+{
+  "id": "sheet-03",
+  "source": {
+    "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/source/sheet-03.png",
+    "sha256": "1219d9b1c575f2077ce9bee09e2caed88ed95ab770b391fe2bf384742f04470b"
+  },
+  "prompt": {
+    "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/provenance/sheet-03-prompt.txt",
+    "sha256": "da4efe613c4ff8dc054065fa5fc84513428a1728f56c9d6fc3da13f0c2ba8a78"
+  },
+  "request": {
+    "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/provenance/sheet-03-request.json",
+    "sha256": "8469b1b348eaceac80b6121ba9e6dc88d9c500cdf8dec09f9afb20756bde250f"
+  },
+  "input_references": [
+    {
+      "path": ".work/app-character-issues-20261113/references/latest/assets/characters/base-v3/hamster.png",
+      "sha256": "66d27de9924370647c93ed71ca2850ed8a43487ae0036932baa58a126c606bd8",
+      "role": "identity reference",
+      "direct_input": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/current/neutral.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "visual style reference only",
+      "direct_input": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/source/sheet-01.png",
+      "sha256": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178",
+      "role": "new-set visual continuity reference",
+      "direct_input": true
+    }
+  ],
+  "calibration": {
+    "reference_height_px": 401.37810218978103,
+    "method": "One shared sheet body reference transferred from the fixed first-sheet neutral by reviewed median head/body width; never per-pose bbox height fitting",
+    "reference_source": {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/source/sheet-01.png",
+      "sha256": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178"
+    },
+    "neutral_reference_height_px": 384,
+    "first_sheet_width_px": 342.5,
+    "this_sheet_width_px": 358,
+    "notes": "Limbless whole compact body has no separate head. Independent reviewer measured neutral anatomy384 high. Calibrate each sheet once using whole body width median342.5/341/358/341.5, not each posture bbox high or imaginary feet."
+  },
+  "frames": [
+    {
+      "id": "success_land",
+      "role": "body",
+      "cell_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "body_bbox_px": [
+        148,
+        198,
+        512,
+        521
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        329.5,
+        521
+      ],
+      "source_foot_point_px": [
+        329.5,
+        521
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Hamster has no limbs; actual lower body contact is the support, no imaginary feet. Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anchor_kind": "body-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Hamster has no limbs; actual lower body contact is the support, no imaginary feet. Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          136,
+          493,
+          524,
+          535
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "oops",
+      "role": "body",
+      "cell_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "body_bbox_px": [
+        105,
+        137,
+        458,
+        524
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        315.5,
+        524
+      ],
+      "source_foot_point_px": [
+        315.5,
+        524
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Hamster has no limbs; actual lower body contact is the support, no imaginary feet. Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anchor_kind": "body-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Hamster has no limbs; actual lower body contact is the support, no imaginary feet. Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          93,
+          496,
+          470,
+          538
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "retry",
+      "role": "body",
+      "cell_xyxy": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "body_bbox_px": [
+        147,
+        129,
+        499,
+        493
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        325.5,
+        493
+      ],
+      "source_foot_point_px": [
+        325.5,
+        493
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Hamster has no limbs; actual lower body contact is the support, no imaginary feet. Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anchor_kind": "body-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Hamster has no limbs; actual lower body contact is the support, no imaginary feet. Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          135,
+          465,
+          511,
+          507
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    },
+    {
+      "id": "cheer",
+      "role": "body",
+      "cell_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        118,
+        72,
+        481,
+        490
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        267.5,
+        490
+      ],
+      "source_foot_point_px": [
+        267.5,
+        490
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Hamster has no limbs; actual lower body contact is the support, no imaginary feet. Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anchor_kind": "body-contact",
+      "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
+      "anchor_basis": "Hamster has no limbs; actual lower body contact is the support, no imaginary feet. Native lower anatomical contact band observed at the bottom of the connected body drawing; its full band midpoint is retained separately from a full alpha bbox center. Main body only excludes disconnected texture specks for measurement; source pixels remain unchanged.",
+      "observation": {
+        "roi_px": [
+          106,
+          462,
+          493,
+          504
+        ],
+        "mode": "bbox-center-bottom",
+        "role": "contact-band",
+        "alpha_threshold": 128
+      }
+    }
+  ],
+  "original_source": {
+    "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/source/sheet-03.png",
+    "sha256": "1219d9b1c575f2077ce9bee09e2caed88ed95ab770b391fe2bf384742f04470b"
+  },
+  "archived_source": {
+    "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-03.png",
+    "sha256": "1219d9b1c575f2077ce9bee09e2caed88ed95ab770b391fe2bf384742f04470b"
+  },
+  "archived_input_references": [
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/inputs/hamster-66d27de992.png",
+      "sha256": "66d27de9924370647c93ed71ca2850ed8a43487ae0036932baa58a126c606bd8",
+      "role": "identity reference",
+      "direct_input": true,
+      "original_generation_input_path": ".work/app-character-issues-20261113/references/latest/assets/characters/base-v3/hamster.png"
+    },
+    {
+      "path": "assets/library/characters/bear-beret/current/neutral.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "visual style reference only",
+      "direct_input": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/source/sheet-01.png",
+      "sha256": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178",
+      "role": "new-set visual continuity reference",
+      "direct_input": true
+    }
+  ]
+}
