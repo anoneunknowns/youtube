@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>画像の比較</title>
+  <style>
+    :root {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      color: #3e342b;
+      background: #f7f4ed;
+      font-synthesis: none;
+      --accent: #79583b;
+      --muted: #756c62;
+      --line: #ded7cc;
+      --selected: #42644f;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.65; }
+    button, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { cursor: pointer; }
+    button:disabled { cursor: wait; opacity: .58; }
+    button:focus-visible, a:focus-visible, summary:focus-visible, textarea:focus-visible {
+      outline: 3px solid #af793e;
+      outline-offset: 4px;
+    }
+    [hidden] { display: none !important; }
+    .page { width: min(1280px, 100%); margin: 0 auto; padding: 36px 32px 28px; }
+    .page-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+    .eyebrow { margin: 0 0 7px; color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .12em; }
+    h1 { margin: 0; font-size: clamp(24px, 3vw, 32px); line-height: 1.45; letter-spacing: .025em; overflow-wrap: anywhere; }
+    .intro { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+    .save-state { flex-shrink: 0; margin-top: 4px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 30px; background: #fffdf8; color: var(--muted); font-size: 12px; font-weight: 600; }
+    .save-state[data-state="saved"] { color: #365440; border-color: #becfc0; background: #edf3ed; }
+    .status-area { min-height: 35px; margin: 17px 0 20px; }
+    #review-status { margin: 0; color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+    #review-error { margin: 9px 0 0; padding: 11px 14px; border: 1px solid #dfb9ae; border-radius: 8px; background: #fff1eb; color: #8a3c2b; font-size: 14px; overflow-wrap: anywhere; }
+    .toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 20px; padding: 16px 0; border-top: 1px solid var(--line); }
+    .background-control { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .control-label { font-size: 13px; font-weight: 600; }
+    .background-buttons { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 9px; background: #eee9df; }
+    .background-button { min-height: 36px; min-width: 62px; padding: 5px 12px; border: 1px solid transparent; border-radius: 6px; color: #6e6255; background: transparent; font-size: 13px; }
+    .background-button[aria-pressed="true"] { border-color: #d2c5b4; background: #fffdf9; color: #453324; box-shadow: 0 1px 3px #56402b0b; }
+    .scale-note { margin: 0; color: var(--muted); font-size: 12px; }
+    .note-panel { margin: 0 0 19px; border: 1px solid var(--line); border-radius: 10px; background: #fffdf9; }
+    .note-panel summary { padding: 10px 14px; color: #645748; cursor: pointer; font-size: 13px; }
+    .note-content { padding: 0 14px 14px; }
+    .note-content label { display: block; margin: 0 0 5px; font-size: 13px; font-weight: 600; }
+    .note-hint { margin: 0 0 8px; font-size: 12px; color: var(--muted); }
+    textarea { display: block; width: 100%; min-height: 88px; resize: vertical; padding: 10px 12px; border: 1px solid #cfc5b8; border-radius: 7px; color: #453a30; background: #fff; font-size: 14px; }
+    textarea::placeholder { color: #92877a; }
+    .variant-grid { display: grid; grid-template-columns: repeat(var(--columns, 3), minmax(0, 1fr)); gap: 18px; align-items: stretch; }
+    .variant-card { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0; min-width: 0; overflow: hidden; border: 1px solid #ddd5c9; border-radius: 14px; background: #fffdf9; box-shadow: 0 3px 12px #61472b05; }
+    .variant-card[data-selected="true"] { border-color: var(--selected); box-shadow: 0 0 0 2px var(--selected); }
+    .card-heading { min-height: 106px; padding: 17px 18px 14px; }
+    .badges { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; min-height: 26px; margin-bottom: 9px; }
+    .badge { display: inline-flex; align-items: center; padding: 3px 8px; border: 1px solid #dcd4c8; border-radius: 5px; color: #635c52; background: #f2eee6; font-size: 11px; font-weight: 600; line-height: 1.55; }
+    .badge-recommended { border-color: #e1c798; color: #79521e; background: #fff2d9; }
+    .variant-title { margin: 0; color: #3e342b; font-size: 18px; font-weight: 700; line-height: 1.5; overflow-wrap: anywhere; }
+    .preview { position: relative; align-self: start; width: 100%; min-width: 0; min-height: 0; aspect-ratio: var(--preview-ratio, 4 / 5); overflow: hidden; background: #fff8e8; border-top: 1px solid #ebe5da; border-bottom: 1px solid #ebe5da; }
+    .preview img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; max-width: 100%; max-height: 100%; object-fit: contain; object-position: center center; }
+    .variant-grid[data-background="dark"] .preview { background: #25303b; }
+    .variant-grid[data-background="checker"] .preview {
+      background-color: #fffdfa;
+      background-image: conic-gradient(#e5dfd5 25%, transparent 0 50%, #e5dfd5 0 75%, transparent 0);
+      background-size: 24px 24px;
+    }
+    .image-error { position: absolute; inset: 0; display: grid; place-items: center; padding: 22px; background: #f5f0e7; color: #756453; text-align: center; font-size: 14px; }
+    .card-content { display: flex; flex: 1; flex-direction: column; gap: 12px; padding: 15px 18px 18px; }
+    .original-link { align-self: flex-start; color: #766044; font-size: 12px; text-underline-offset: 3px; }
+    .variant-summary { margin: 0; color: #655a4e; font-size: 13px; overflow-wrap: anywhere; }
+    .variant-details { margin: 0; padding-left: 1.2em; color: #756b60; font-size: 12px; overflow-wrap: anywhere; }
+    .variant-details li + li { margin-top: 4px; }
+    .card-action { margin-top: auto; }
+    .choose-button { display: block; width: 100%; min-height: 45px; padding: 9px 13px; border: 1px solid #bba58b; border-radius: 8px; color: #62462e; background: #fffaf1; font-size: 14px; font-weight: 700; }
+    .choose-button:hover:enabled { border-color: #886345; background: #f4e9d8; }
+    .choose-button[aria-pressed="true"] { border-color: var(--selected); color: #fff; background: var(--selected); }
+    .choose-button[aria-pressed="true"]:hover:enabled { background: #365641; }
+    .decision-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); }
+    .footer-copy { margin: 0; color: var(--muted); font-size: 12px; }
+    .defer-button, .retry-button { min-height: 42px; padding: 8px 18px; border: 1px solid #c9bdae; border-radius: 8px; color: #6d5c4b; background: #fffdf8; font-size: 13px; }
+    .defer-button:hover:enabled, .retry-button:hover:enabled { background: #ede6da; }
+    .defer-button[aria-pressed="true"] { border-color: #907556; color: #61472b; background: #eee4d3; }
+    .defer-action { max-width: 420px; }
+    .decision-feedback { min-height: 3.2em; margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+    .decision-feedback[data-state="success"] { color: #365440; }
+    .decision-feedback[data-state="error"] { color: #8a3c2b; }
+    .retry-button { margin-top: 13px; }
+    .loading { padding: 64px 18px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); text-align: center; font-size: 14px; }
+    @media (min-width: 960px) {
+      .variant-grid[data-count="2"] { max-width: 920px; margin-inline: auto; }
+    }
+    @media (max-width: 959px) and (min-width: 650px) {
+      .variant-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 649px) {
+      .page { padding: 24px 16px; }
+      .page-heading { flex-direction: column; gap: 12px; }
+      .save-state { margin-top: 0; }
+      .intro { font-size: 13px; }
+      .status-area { margin-block: 14px 16px; }
+      .toolbar { align-items: flex-start; gap: 10px; }
+      .scale-note { width: 100%; }
+      .variant-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+      .card-heading { min-height: auto; padding: 15px 16px 13px; }
+      .card-content { padding-inline: 16px; }
+      .decision-footer { align-items: flex-start; flex-direction: column-reverse; gap: 12px; }
+      .defer-button { width: 100%; }
+      .defer-action { width: 100%; max-width: none; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      button { transition: background-color .12s ease, border-color .12s ease; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" id="review-page" aria-busy="true">
+    <header class="page-heading">
+      <div>
+        <p class="eyebrow">画像の比較</p>
+        <h1 id="review-title">画像を比べて選ぶ</h1>
+        <p class="intro">並べて見比べ、使いたい画像を選んでください。</p>
+      </div>
+      <span class="save-state" id="save-state">読み込み中</span>
+    </header>
+
+    <div class="status-area">
+      <p id="review-status" role="status" aria-live="polite" aria-atomic="true">比較画像を読み込んでいます。</p>
+      <p id="review-error" role="alert" hidden></p>
+      <button class="retry-button" id="retry-button" type="button" hidden>もう一度読み込む</button>
+    </div>
+
+    <section id="comparison" aria-label="画像の比較と選択" hidden>
+      <div class="toolbar">
+        <div class="background-control" role="group" aria-label="画像の背景">
+          <span class="control-label">背景</span>
+          <div class="background-buttons">
+            <button class="background-button" data-background="light" type="button" aria-pressed="true">明るい</button>
+            <button class="background-button" data-background="dark" type="button" aria-pressed="false">暗い</button>
+            <button class="background-button" data-background="checker" type="button" aria-pressed="false">市松</button>
+          </div>
+        </div>
+        <p class="scale-note">すべて同じ尺度で表示しています</p>
+      </div>
+
+      <details class="note-panel" id="note-panel">
+        <summary>理由や気づきを添える（任意）</summary>
+        <div class="note-content">
+          <label for="decision-note">理由・メモ</label>
+          <p class="note-hint" id="note-hint">このあと選ぶ画像、または保留の記録に添えます。</p>
+          <textarea id="decision-note" rows="3" aria-describedby="note-hint" placeholder="気になった点や、この画像を選ぶ理由など"></textarea>
+        </div>
+      </details>
+
+      <div class="variant-grid" id="variant-grid" data-background="light"></div>
+
+      <footer class="decision-footer">
+        <p class="footer-copy">選択を記録します。</p>
+        <div class="defer-action">
+          <button class="defer-button" id="defer-button" type="button" aria-pressed="false" aria-describedby="defer-feedback">いったん保留する</button>
+          <p class="decision-feedback" id="defer-feedback"></p>
+        </div>
+      </footer>
+    </section>
+
+    <div class="loading" id="loading">比較画像を準備しています…</div>
+    <noscript><p>画像を比較して選ぶには、JavaScriptを有効にしてください。</p></noscript>
+  </main>
+
+  <script>
+    "use strict";
+
+    const page = document.getElementById("review-page");
+    const title = document.getElementById("review-title");
+    const status = document.getElementById("review-status");
+    const error = document.getElementById("review-error");
+    const saveState = document.getElementById("save-state");
+    const comparison = document.getElementById("comparison");
+    const grid = document.getElementById("variant-grid");
+    const note = document.getElementById("decision-note");
+    const notePanel = document.getElementById("note-panel");
+    const deferButton = document.getElementById("defer-button");
+    const deferFeedback = document.getElementById("defer-feedback");
+    const retryButton = document.getElementById("retry-button");
+    const loading = document.getElementById("loading");
+    const cards = new Map();
+    let review = null;
+    let latestDecision = null;
+    let saving = false;
+    let previewRatioSet = false;
+    let previewGeneration = 0;
+
+    class ReviewError extends Error {
+      constructor(message, status = 0) {
+        super(message);
+        this.name = "ReviewError";
+        this.status = status;
+      }
+    }
+
+    function setError(message) {
+      error.textContent = message || "";
+      error.hidden = !message;
+    }
+
+    function clearLocalFeedback() {
+      for (const feedback of [deferFeedback, ...Array.from(cards.values(), item => item.feedback)]) {
+        feedback.textContent = "";
+        feedback.dataset.state = "idle";
+      }
+    }
+
+    function setLocalFeedback(feedback, state, message) {
+      feedback.dataset.state = state;
+      feedback.textContent = message;
+    }
+
+    function setBusy(value) {
+      saving = value;
+      page.setAttribute("aria-busy", String(value));
+      note.disabled = value;
+      deferButton.disabled = value || !review;
+      for (const item of cards.values()) {
+        item.button.disabled = value || !item.imageLoaded;
+      }
+    }
+
+    function reflectDecision() {
+      for (const [id, item] of cards) {
+        const selected = !!latestDecision && latestDecision.variant_id === id;
+        item.card.dataset.selected = String(selected);
+        item.button.setAttribute("aria-pressed", String(selected));
+        item.button.textContent = selected ? "✓ 選択済み" : "この画像を選ぶ";
+      }
+      const deferred = !!latestDecision && latestDecision.variant_id === null;
+      deferButton.setAttribute("aria-pressed", String(deferred));
+      deferButton.textContent = deferred ? "保留として記録済み" : "いったん保留する";
+      saveState.dataset.state = latestDecision ? "saved" : "empty";
+      if (!latestDecision) {
+        saveState.textContent = "未選択";
+        status.textContent = "まだ選択されていません。";
+      } else if (deferred) {
+        saveState.textContent = "保留中";
+        status.textContent = "保留として記録しています。";
+      } else {
+        const selected = review.variants.find(variant => variant.id === latestDecision.variant_id);
+        saveState.textContent = "選択を記録済み";
+        status.textContent = selected ? "「" + selected.label + "」を選択しています。" : "前回の選択を記録しています。";
+      }
+    }
+
+    function badge(text, recommended) {
+      const element = document.createElement("span");
+      element.className = recommended ? "badge badge-recommended" : "badge";
+      element.textContent = text;
+      return element;
+    }
+
+    function createCard(variant, generation) {
+      const card = document.createElement("article");
+      card.className = "variant-card";
+      card.dataset.variantId = variant.id;
+      const heading = document.createElement("div");
+      heading.className = "card-heading";
+      const badges = document.createElement("div");
+      badges.className = "badges";
+      if (variant.is_previous) badges.append(badge("前バージョン", false));
+      if (variant.is_recommended) badges.append(badge("★ AIおすすめ", true));
+      const name = document.createElement("h2");
+      name.className = "variant-title";
+      name.textContent = variant.label;
+      heading.append(badges, name);
+
+      const preview = document.createElement("div");
+      preview.className = "preview";
+      const image = document.createElement("img");
+      image.alt = variant.label + "の比較用画像";
+      image.decoding = "async";
+      const imageError = document.createElement("p");
+      imageError.className = "image-error";
+      imageError.textContent = "画像を読み込めませんでした。原寸の画像も確認できます。";
+      imageError.hidden = true;
+      preview.append(image, imageError);
+
+      const content = document.createElement("div");
+      content.className = "card-content";
+      const original = document.createElement("a");
+      original.className = "original-link";
+      original.textContent = "原寸の画像を見る ↗";
+      original.href = variant.original_url;
+      original.target = "_blank";
+      original.rel = "noopener noreferrer";
+      original.setAttribute("aria-label", variant.label + "の原寸画像を見る（別タブ）");
+      content.append(original);
+      if (variant.summary) {
+        const summary = document.createElement("p");
+        summary.className = "variant-summary";
+        summary.textContent = variant.summary;
+        content.append(summary);
+      }
+      if (Array.isArray(variant.details) && variant.details.length) {
+        const details = document.createElement("ul");
+        details.className = "variant-details";
+        for (const text of variant.details) {
+          const item = document.createElement("li");
+          item.textContent = text;
+          details.append(item);
+        }
+        content.append(details);
+      }
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "choose-button";
+      button.dataset.variantId = variant.id;
+      button.textContent = "この画像を選ぶ";
+      button.setAttribute("aria-label", variant.label + "を選ぶ");
+      button.setAttribute("aria-pressed", "false");
+      button.disabled = true;
+      button.addEventListener("click", () => saveDecision(variant.id));
+      const feedback = document.createElement("p");
+      feedback.className = "decision-feedback";
+      feedback.id = "feedback-variant-" + variant.id;
+      button.setAttribute("aria-describedby", feedback.id);
+      const action = document.createElement("div");
+      action.className = "card-action";
+      action.append(button, feedback);
+      content.append(action);
+      card.append(heading, preview, content);
+      const item = { card, button, feedback, imageLoaded: false };
+      cards.set(variant.id, item);
+      image.addEventListener("load", () => {
+        if (generation !== previewGeneration) return;
+        if (!previewRatioSet && image.naturalWidth > 0 && image.naturalHeight > 0) {
+          grid.style.setProperty("--preview-ratio", image.naturalWidth + " / " + image.naturalHeight);
+          previewRatioSet = true;
+        }
+        item.imageLoaded = true;
+        imageError.hidden = true;
+        button.disabled = saving;
+      });
+      image.addEventListener("error", () => {
+        if (generation !== previewGeneration) return;
+        item.imageLoaded = false;
+        imageError.hidden = false;
+        button.disabled = true;
+      });
+      image.src = variant.preview_url;
+      return card;
+    }
+
+    async function readResponse(response, fallback) {
+      let body;
+      try {
+        body = await response.json();
+      } catch (_) {
+        throw new ReviewError(fallback, response.status);
+      }
+      if (!response.ok) {
+        throw new ReviewError(body && typeof body.error === "string" ? body.error : fallback, response.status);
+      }
+      return body;
+    }
+
+    async function loadReview() {
+      const generation = ++previewGeneration;
+      previewRatioSet = false;
+      grid.style.removeProperty("--preview-ratio");
+      clearLocalFeedback();
+      setError("");
+      retryButton.hidden = true;
+      comparison.hidden = true;
+      loading.hidden = false;
+      page.setAttribute("aria-busy", "true");
+      status.textContent = "比較画像を読み込んでいます。";
+      try {
+        const response = await fetch("api/review", { cache: "no-store" });
+        const data = await readResponse(response, "比較情報を読み込めませんでした。もう一度お試しください。");
+        if (generation !== previewGeneration) return;
+        if (!data || !Array.isArray(data.variants) || data.variants.length < 2 ||
+            new Set(data.variants.map(variant => variant.id)).size !== data.variants.length) {
+          throw new ReviewError("比較画像を準備できませんでした。もう一度お試しください。");
+        }
+        review = data;
+        latestDecision = data.latest_decision || null;
+        title.textContent = data.title || "画像を比べて選ぶ";
+        document.title = title.textContent + "｜画像の比較";
+        cards.clear();
+        grid.replaceChildren();
+        grid.dataset.count = String(data.variants.length);
+        grid.style.setProperty("--columns", Math.min(data.variants.length, 3));
+        for (const variant of data.variants) grid.append(createCard(variant, generation));
+        note.value = latestDecision && typeof latestDecision.note === "string" ? latestDecision.note : "";
+        notePanel.open = !!note.value;
+        reflectDecision();
+        comparison.hidden = false;
+      } catch (reason) {
+        if (generation !== previewGeneration) return;
+        review = null;
+        saveState.textContent = "読み込み待ち";
+        status.textContent = "画像を読み込めませんでした。";
+        setError(reason instanceof ReviewError ? reason.message : "比較情報を読み込めませんでした。もう一度お試しください。");
+        retryButton.hidden = false;
+      } finally {
+        if (generation === previewGeneration) {
+          loading.hidden = true;
+          setBusy(false);
+        }
+      }
+    }
+
+    async function freshReviewToken(intent) {
+      const response = await fetch("api/review", { cache: "no-store" });
+      const fresh = await readResponse(response, "保存の準備を確認できませんでした。もう一度お試しください。");
+      const selected = fresh && Array.isArray(fresh.variants) &&
+        fresh.variants.find(variant => variant.id === intent.variant_id);
+      if (!fresh || fresh.id !== intent.review_id || fresh.review_sha256 !== intent.review_sha256 ||
+          (intent.variant_id !== null && (!selected || selected.sha256 !== intent.image_sha256))) {
+        throw new ReviewError("比較画像が更新されています。画面を再読込してから選び直してください。");
+      }
+      if (typeof fresh.token !== "string" || !fresh.token) {
+        throw new ReviewError("保存の準備を確認できませんでした。画面を再読込してください。");
+      }
+      return fresh.token;
+    }
+
+    async function saveDecision(variantId) {
+      if (saving || !review) return;
+      const variant = variantId === null ? null : review.variants.find(item => item.id === variantId);
+      if (variantId !== null && !variant) return;
+      const generation = previewGeneration;
+      const feedback = variantId === null ? deferFeedback : cards.get(variantId).feedback;
+      const selectedReview = review;
+      const selectedNote = note.value;
+      setError("");
+      clearLocalFeedback();
+      setLocalFeedback(feedback, "saving", "選択を保存しています…");
+      setBusy(true);
+      status.textContent = "選択を保存しています…";
+      try {
+        const intent = Object.freeze({
+          review_id: selectedReview.id,
+          review_sha256: selectedReview.review_sha256,
+          variant_id: variantId,
+          image_sha256: variant ? variant.sha256 : null,
+          note: selectedNote,
+          request_id: crypto.randomUUID()
+        });
+        const body = JSON.stringify({
+          variant_id: intent.variant_id,
+          note: intent.note,
+          request_id: intent.request_id,
+          review_sha256: intent.review_sha256,
+          image_sha256: intent.image_sha256
+        });
+        let token = await freshReviewToken(intent);
+        if (generation !== previewGeneration) return;
+        for (let attempt = 0; attempt < 2; attempt++) {
+          let result;
+          try {
+            const response = await fetch("api/decision", {
+              method: "POST",
+              cache: "no-store",
+              headers: { "Content-Type": "application/json", "X-Review-Token": token },
+              body
+            });
+            result = await readResponse(response, "保存を確認できませんでした。もう一度お試しください。");
+          } catch (reason) {
+            if (generation !== previewGeneration) return;
+            if (attempt === 0 && reason instanceof ReviewError && reason.status === 403) {
+              token = await freshReviewToken(intent);
+              if (generation !== previewGeneration) return;
+              continue;
+            }
+            throw reason;
+          }
+          if (generation !== previewGeneration) return;
+          if (!result || result.saved !== true || !result.decision || result.decision.variant_id !== intent.variant_id) {
+            throw new ReviewError("保存を確認できませんでした。もう一度お試しください。");
+          }
+          latestDecision = result.decision;
+          reflectDecision();
+          setLocalFeedback(feedback, "success", intent.variant_id === null ? "保留として記録しました。" : "✓ この画像を選択済みです。");
+          break;
+        }
+      } catch (reason) {
+        if (generation !== previewGeneration) return;
+        const message = reason instanceof ReviewError ? reason.message : "保存を確認できませんでした。もう一度お試しください。";
+        status.textContent = "今回の保存を確認できませんでした。";
+        setError(message);
+        setLocalFeedback(feedback, "error", message);
+      } finally {
+        if (generation === previewGeneration) setBusy(false);
+      }
+    }
+
+    for (const button of document.querySelectorAll(".background-button")) {
+      button.addEventListener("click", () => {
+        grid.dataset.background = button.dataset.background;
+        for (const item of document.querySelectorAll(".background-button")) {
+          item.setAttribute("aria-pressed", String(item === button));
+        }
+      });
+    }
+    deferButton.addEventListener("click", () => saveDecision(null));
+    retryButton.addEventListener("click", loadReview);
+    loadReview();
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "jump_takeoff",
+  "state": "prepared-for-built-in-image-generation",
+  "owner": "codex:bear-pose-bow-jump:01a1cfaa",
+  "prepared_at_utc": "2026-11-13T01:18:15.640435+00:00",
+  "tool": "image_gen.imagegen",
+  "tool_model": "not exposed by tool",
+  "prompt": "Use case: illustration-story. Asset type: one high-resolution transparent full-body watercolor bear animation key pose.\nCreate a fresh drawing of the SAME bear in input image1 in the action shown in input image2.\nInput image1 is the PRIMARY exact character identity, proportions, facial construction, pale cream-yellow fill, red beret, warm brown line weight and delicate watercolor/paper texture reference.\nInput image2 is ONLY a pose/acting/limb-position reference; do not copy its thicker contour, older eye proportions, low-resolution texture or old rendering style.\nPreserve image1's large round head and cheek silhouette, two rounded ears, white-bordered vertical brown oval eyes when open, tiny brown nose, inverted-U muzzle contour, joyful smile and pink tongue, short soft limbs and original red beret. Keep delicate internal face/arm strokes.\nMatch image1's intermediate outer contour, about5.24px when a neutral standing height is430px (approximately13–14px native at the requested1254px square); keep inner features finer. Gentle textured watercolor, no photorealism, no plastic3D or vector-flat restyling.\nComposition: exactly one full bear on a genuinely transparent alpha background, approximately1254x1254. Keep the entire beret, ears, hands and feet safely inside the image. No text, grid, border, labels, watermark, backdrop, ground line or cast shadow.\nIMPORTANT COMMON SCALE: image1's neutral standing reference is1107px, foot baseline1184px and supportcenter roughlyx623 on a1254square canvas. Preserve that underlying anatomical scale and approximately the same face size. A bent/crouched or airborne pose must NOT be stretched to fill the neutral bounding height; preserve the natural shortening and jump lift. Do not individually fit pose bounds to canvas.\n\nAction jump_takeoff: follow image2 precisely: joyful eyes OPEN, both short arms angled upward/outward, body rising and BOTH feet just leaving the ground. The legs extend softly down with slightly bent rounded feet. The fixed implied ground remains aroundy1184; drawn foot bottoms should be aroundy1100 so there is a small actual lift, about80nativepx. Keep image1's face size and proportions; draw the raised body at the common scale. Do not place the feet on the ground, do not draw a ground/shadow, and do not add another jump offset after the pose.",
+  "transparent_background": true,
+  "direct_inputs": [
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-ab-20261113-01a1cfaa/source/edit-v002.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "role": "primary identity, intermediate contour, palette and watercolor reference",
+      "supplied_to_tool": true,
+      "snapshot_copy": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/provenance/inputs/identity-A-edit-v002.png",
+      "snapshot_sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485"
+    },
+    {
+      "path": "assets/library/characters/bear-beret/current/poses/eyecatch/jump_takeoff.png",
+      "sha256": "4afc9a3f77a78a576c7a3ccd228e5fee2537f7161d9dfe9beab2f22a25f3506b",
+      "role": "pose/acting reference only; old thick line and face proportions must not be inherited",
+      "supplied_to_tool": true,
+      "snapshot_copy": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/provenance/inputs/jump_takeoff-old-pose.png",
+      "snapshot_sha256": "4afc9a3f77a78a576c7a3ccd228e5fee2537f7161d9dfe9beab2f22a25f3506b"
+    }
+  ],
+  "generation_intent": "fresh high-resolution redraw, one pose per call; input2 is acting only",
+  "adoption_changed": false,
+  "common_reference_height_intent_px": 1107,
+  "neutral_ground_baseline_intent_px": 1184,
+  "per_pose_bbox_fit": false
+}

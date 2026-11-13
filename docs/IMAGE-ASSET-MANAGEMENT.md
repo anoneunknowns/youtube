@@ -99,6 +99,67 @@ QAには素材IDと場面、使用した上記の解像度情報、確認フレ�
 
 比較図・完成画面の配置確認と記録は [配置受入仕様](LAYOUT-ALIGNMENT.md) に従います。足支点合わせを意図した画像を、中央揃えの対象へ変えません。
 
+## リメイク候補をユーザーに提示する
+
+### 比較設定と準備
+
+リメイク案の比較には [`tools/image_remake_review.py`](../tools/image_remake_review.py) を使います。前バージョンと候補を同じ画面へ出し、**「前バージョン」「AIおすすめ」を選択前から文字付きの印で表示**します。AIのおすすめをユーザーの選択として扱わず、初期状態は未選択にします。2案にも、前バージョンを含む複数案にも使えます。
+
+入力JSONに `id`、`title`、`previous_variant_id`、`recommended_variant_id`、`variants` を指定します。各案は `id`、`label`、プロジェクト相対の `path` を持ちます。キャラクターの同尺度比較では、登録・校正の記録から各案の `reference_height_px`、`anchor_px`、`body_bbox_px` を渡します。透明余白やキャンバス全体を身体基準の代わりにせず、案ごとの個別fitで大きさを揃えません。未登録画像では可視範囲から静止画比較用の基準を作り、身体登録と区別します。
+
+比較対象の `path` には固定した原画か比較専用の無改変コピーを指定します。採用切替で内容が変わる `current/` を前バージョンの唯一の入力にせず、`asset.json` の `source_path` 等から元原画を辿ります。すでに可変パスを使った設定は保全し、元画像のSHA一致を確認した固定パスで別の比較設定を準備します。これにより正式採用後も同じ画像で比較履歴を読めます。
+
+2枚を比べる最小設定は次の形です。ID・名前・画像パスは、プロジェクト内の実体へ置き換えます。
+
+```json
+{
+  "schema_version": 1,
+  "id": "image-remake-v001",
+  "title": "リメイク画像を選ぶ",
+  "previous_variant_id": "previous",
+  "recommended_variant_id": "remake",
+  "variants": [
+    {"id": "previous", "label": "前バージョン", "path": "assets/previous.png"},
+    {"id": "remake", "label": "リメイク案", "path": "assets/remake.png"}
+  ]
+}
+```
+
+制作原本の実例 `design/image-remake-reviews/bear-outline5-v001/spec.json` は、この公開版には収録していません。公開版から利用する場合は、上の最小設定をこのパス例などへ新規保存し、画像パス・ラベル・前版・おすすめを手元の実体へ置き換えます。下のコマンドはその設定を保存してから実行します。準備時に画像のSHA-256と寸法を固定し、出力済みの比較設定へ上書きしません。
+
+```sh
+.venv/bin/python tools/image_remake_review.py prepare --spec design/image-remake-reviews/bear-outline5-v001/spec.json --output design/image-remake-reviews/bear-outline5-v001/review.json
+.venv/bin/python tools/image_remake_review.py serve --review design/image-remake-reviews/bear-outline5-v001/review.json --port 8767
+```
+
+### 表示と選択の検査
+
+比較プレビューは原画を書き換えない診断表示です。`preview_geometry` の実アルファ可視範囲と足支点近傍の実描画検査で、両軸の差・収まり・切れを確認します。座標変換の一致だけで配置合格にしません。補間で生じる微小な描画ずれは、固定した元画像の可視特徴の射影位置へ表示だけを最大1.5px補正し、補正前後の両軸差を `placement_calibration` へ記録します。元画像・尺度・登録支点・基準領域・許容差は変えず、大きなずれを無制限に補正しません。空中姿勢は描かれた足と推定地面を分け、その距離を保って実描画を測ります。小さな原画の大幅拡大等で実描画の差が許容範囲を超えた場合は、不合格を隠さず画像・登録・表示尺度を見直します。
+
+表示されたローカルURLを開き、画像を並べて選びます。前バージョンの維持と保留も記録できます。選択を比較設定と画像のSHAに結び付け、設定の隣の `decisions/` へ履歴として保存します。再選択で前の記録を消さず、画像・設定が変わった古い画面からの選択を受け付けません。
+
+選択操作はユーザーへ渡すブラウザでも実際に確認します。画面を開いたままサーバーが再起動した場合も、保存直前に同一の比較設定・画像SHAを照合して接続情報を更新します。保存中・成功・失敗は押したボタンの近くに表示し、画面上部の通知だけで完了を伝えません。検証用の選択は専用設定へ保存し、ユーザーの実際の選択履歴に混ぜません。
+
+```sh
+.venv/bin/python tools/image_remake_review.py show --review design/image-remake-reviews/bear-outline5-v001/review.json
+```
+
+### 複数ポーズの比較一覧
+
+ポーズごとに別の比較設定を準備し、`schema_version: 1`、`id`、`title`、`reviews` を持つ一覧JSONへまとめます。`reviews` の各項目には、比較設定と一致する `id`、その `review` 相対パス、任意の `group` を指定します。一覧を一つのサーバーで開けます。下の `collection-current.json` は新規に作成する一覧のパス例で、制作原本の比較設定・候補画像・選択履歴はこの公開版には同梱していません。
+
+```sh
+.venv/bin/python tools/image_remake_review.py serve --collection design/image-remake-reviews/bear-poses-outline5-v001/collection-current.json --port 8780
+```
+
+一覧からポーズを開き、前バージョンと再生成版を比べます。選択履歴は各比較設定の隣へ分けて保存し、一つのポーズの選択を他へ適用しません。一覧へ戻って次を確認できます。全ポーズを一つの比較の `variants` へ詰めて、全体から一枚だけを選ぶ設定にはしません。
+
+### 選択から採用への反映
+
+ユーザーが選ぶ前に採用済みと記録しません。選択結果を採用判断の根拠にし、原画・通常姿・動作・作品の採用先へ適用するときは、登録・共通縮尺・QAを整合させます。比較ツール自体は既存の採用素材を書き換えません。採用前の候補や個人の選択記録を、公開用の素材一覧へ自動追加しません。
+
+品質確認後におすすめ案を採用するようユーザーから委任された場合は、その指示と確認結果を採用根拠へ記録します。比較画面のクリックを代行したという履歴にはせず、指示に基づく管理上の選択と区別します。`catalogs/character-adoptions-v1.json` の `adoptions` に、対象ID・`status: adopted`・通常姿のパス/SHA/座標・短い演出の登録/SHA・非空の `selection_evidence` を明示します。既存の採用通常姿・全ポーズ・clipの同一性を検証してINDEXを再構築し、直前の `current/` を記録付きで保全してから共通ビューを再作成します。過去の通常姿やcollection、当時の画風QAは保全します。
+
 ## 台帳の更新と公開
 
 管理担当は更新前の台帳・設定のSHA-256を読み、書き込み直前に同じ内容であることを確認します。別作業の更新があれば古いJSONを丸ごと書き戻さず、最新状態を読み直して差分を再適用します。共有台帳の更新は同時実行せず、排他的な担当予約と楽観的なハッシュ照合を併用します。
@@ -159,3 +220,9 @@ QAには素材IDと場面、使用した上記の解像度情報、確認フレ�
 現在の担当・分類・品質は管理設定と管理一覧を参照します。初回整理、作品ごとの引き継ぎ、独立再検査、旧出力から保全先への対応は、[管理記録の入口](../assets/library/collections/character-management/v001/manifest.json)へまとめています。過去の記録の日時と検査範囲を保ち、個別作業の経過を本仕様へ重複記載しません。
 
 画風の自動測定を再実行する際は、`tools/audit_character_style.py --output <未使用の診断出力先>` を明示します。保全済みの監査先を新しい出力先として使いません。
+
+<!-- BEGIN EXPLICIT-CHARACTER-ADOPTIONS -->
+### 通常姿と汎用姿勢の明示採用
+
+通常姿・汎用姿勢の新しい正式採用は `catalogs/character-adoptions-v1.json` の `status: adopted` に記録し、画像・登録・採用根拠をSHA-256で束縛します。派生するINDEXと `current/` はこの明示採用を反映します。過去の画風監査・コレクション・作品入力を上書きして新採用へ置き換えません。ユーザーの候補選択イベントと、検査後の正式採用は別の記録です。
+<!-- END EXPLICIT-CHARACTER-ADOPTIONS -->

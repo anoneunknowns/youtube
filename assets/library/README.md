@@ -61,6 +61,8 @@ assets/library/characters/<id>/current/
 
 `neutral.png` は採用原画のバイト一致コピー、または指定されたシート領域の無損失切り出しです。切り出したPNGと元シートではSHAが異なり得るため、利用PNGはそのレコードの `sha256` と比較します。元シートの `source_sha256` と混同しません。
 
+通常姿と短い演出の明示採用は [採用台帳](../../catalogs/character-adoptions-v1.json) に記録します。画像利用では `current/` を入口とし、原画から一覧を再構築する場合はこの採用記録と根拠を読みます。版番号や過去の画風QAから現行版を推測しません。
+
 PowerShellで、通常PNGだけを照合する例です。画像表示に検証ツールの実行を必須とはしません。
 
 ```powershell
@@ -84,9 +86,11 @@ if ($actual -ne $asset.neutral.sha256) { throw "PNGのSHA-256が登録値と一�
 
 表はキーの例です。必要なキーがその素材の `poses` にあることを確認してください。通常姿は `neutral` のレコードを使い、各名前空間にある `neutral` というポーズへ自動的に置き換えません。
 
+クマの通常姿と短い演出18状態は、1254×1254の透過原画を共通の身体基準高1107pxで登録しています。通常姿に相当する3状態は同じ原画の再利用です。画像は他の素材と同様に `current/` から選べます。[ポーズ一覧](characters/bear-beret/eyecatches/v002/pose-review.png)と[採用・品質の記録](characters/bear-beret/eyecatches/v002/README.md)も参照できます。
+
 `clips.json` の `clips` は、名前付きの動作定義です。各 `frames` の値を `asset.json` の `poses` へ対応付け、`durations_ms` と `loop` が記録されている場合はそれを読みます。`timing` に時間未指定とある動作は、使う場面で時間を設計・確認してください。移動や `procedural_effect` がある場合は、その指定も合わせて再生します。虹は同じPNGを使い、出現・透明度・光の移動を再生時に変えます。
 
-動作の確認入口は、[基本の表情・しぐさ](collections/animal-motions/v001/index.html)、[全身のしぐさ](collections/character-expansion/v001/index.html)、[短い演出](collections/character-eyecatches/v001/index.html)、[配置用素材の動作GIF](collections/background-gimmicks/v001/index.html)です。各ページの対象素材について、姿勢・動作のプレビューと登録を確認できます。全19種類のポーズと動作の有無は共通台帳と各 `asset.json`・`clips.json` を正本にします。
+動作の確認入口は各 `asset.json` の `source_registrations` と、その登録が示すプレビューです。クマの短い演出は[姿勢一覧](characters/bear-beret/eyecatches/v002/pose-review.png)と[キーポーズGIF](characters/bear-beret/eyecatches/v002/key-pose-preview.gif)で確認できます。[基本の表情・しぐさ](collections/animal-motions/v001/index.html)、[全身のしぐさ](collections/character-expansion/v001/index.html)、[配置用素材の動作GIF](collections/background-gimmicks/v001/index.html)も参照できます。全19種類のポーズと動作の有無は共通台帳と各 `asset.json`・`clips.json` を正本にし、過去のcollectionの一覧から現行の採用先を推測しません。
 
 <a id="背景素材8種類の表示と動作"></a>
 ## 支点・共通尺度・表示サイズ
@@ -169,6 +173,10 @@ python tools/character_library.py export --output ../num-num-asset-library.zip
 ZIPには `character-library/` を起点に、選択された全19素材の通常画像・ポーズ・動作定義・共通台帳・登録・生成条件・確認資料・検証ツールを収録し、`.sha256` と `.json` の検証記録も出力します。展開後はその `character-library/` へ移動して必要な依存を導入し、`character_library.py verify` と `unified_asset_library.py verify` を実行します。画像・JSONの相対配置を維持してください。
 
 通常の利用では `current/` や期待SHAを編集しません。採用管理担当が登録を更新した後に `unified_asset_library.py build` で共通入口を作り直し、`verify` で元画素・座標・参照を照合します。取り込み先での検証エラーは、取得漏れ・ポインタ・参照先・実体を調べて解決し、`refresh` で期待ハッシュを上書きして隠しません。
+
+## リメイク候補を選ぶ
+
+前バージョンとリメイク案を見比べるときは、[画像の比較・選択ツール](../../docs/IMAGE-ASSET-MANAGEMENT.md#リメイク候補をユーザーに提示する)を使えます。「前バージョン」「AIおすすめ」の印を見ながら、採用したい案・前バージョンの維持・保留を選べます。選択結果は履歴として保存し、ほかの画像でも同じ仕組みを利用できます。
 
 ## 保存範囲と利用条件
 

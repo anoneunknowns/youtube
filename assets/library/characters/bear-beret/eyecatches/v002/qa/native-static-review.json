@@ -1,0 +1,667 @@
+{
+  "schema_version": 1,
+  "kind": "independent-native-static-review",
+  "recorded_at_utc": "2026-11-13T02:09:26.511696+00:00",
+  "reviewer": "codex:character_verify_issue",
+  "result": "pass_for_static_shared_stock",
+  "summary_ja": "18 状態・16 unique PNG を今回あらためて原寸と正しい明暗 alpha 合成で全件目視。正式共有ストックへの導入を止める顔・肢・輪郭・透過・解像度の重大な異常は見つからなかった。既知の軽微な作画差と低 alpha の点は消さずに記録し、原画は無改変で保持する。",
+  "blocking_findings": [],
+  "scope": {
+    "registration_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-review-20261113-01a1cfaa/registration-v002.json",
+    "registration_sha256": "82ed176b4196a435f932554f88d94f2b34c2b53ed11766ba2af7ec64c956aa4a",
+    "state_count": 18,
+    "unique_source_count": 16,
+    "state_ids": [
+      "neutral",
+      "tea_hold",
+      "tea_raise",
+      "tea_sip",
+      "tea_lower",
+      "bow_ready",
+      "bow_half",
+      "bow_deep",
+      "bow_return",
+      "jump_ready",
+      "jump_crouch",
+      "jump_takeoff",
+      "jump_air",
+      "jump_land",
+      "dance_left",
+      "dance_right",
+      "dance_step",
+      "dance_finish"
+    ],
+    "common_reference_height_px": 1107,
+    "source_native_size_px": [
+      1254,
+      1254
+    ],
+    "freshly_viewed_source_ids": [
+      "neutral",
+      "tea_hold",
+      "tea_raise",
+      "tea_sip",
+      "tea_lower",
+      "bow_half",
+      "bow_deep",
+      "bow_return",
+      "jump_crouch",
+      "jump_takeoff",
+      "jump_air",
+      "jump_land",
+      "dance_left",
+      "dance_right",
+      "dance_step",
+      "dance_finish"
+    ],
+    "freshly_viewed_native_light_dark_composite_ids": [
+      "neutral",
+      "tea_hold",
+      "tea_raise",
+      "tea_sip",
+      "tea_lower",
+      "bow_half",
+      "bow_deep",
+      "bow_return",
+      "jump_crouch",
+      "jump_takeoff",
+      "jump_air",
+      "jump_land",
+      "dance_left",
+      "dance_right",
+      "dance_step",
+      "dance_finish"
+    ],
+    "previous_pass_substituted": false,
+    "pixel_transform_for_native_composites": "No resize, filtering, recoloring or alpha cleanup. Native source at x=0 and x=1254 over light #fff8e8 and dark #203b3e; correct Image.alpha_composite."
+  },
+  "criteria": {
+    "identity_face_eyes": "A と同一系統の頭身・眼の白縁茶色縦瞳・口鼻・舌。閉眼や視線の演技差と、眼や眉の重複・余分部品を区別。",
+    "hat_ears_limbs": "帽子と耳の数・接続、腕/手/脚/足の数と輪郭を全身および対象 crop で確認。",
+    "color_contour_texture": "明暗双方で外線・内線・塗り・紙目・ぼけ/潰れ・色ムラを原寸確認。線幅の数値のみで合否にしない。",
+    "alpha": "主絵の欠け、背景残り、余分な孤立部品、目立つ halo を正しい明暗合成で確認。alpha=0 内の RGB 単独では不良にしない。",
+    "resolution": "1254 原寸の顔・線・帽子の紙目を確認。原画登録時の確認に限り、使用条件未定の最大拡大や圧縮後 MP4 の合格は主張しない。",
+    "layout": "原寸の全キャンバスを保持する診断。透明余白を身体高や中央判定に使わず、主絵 alpha>=8 の左右と上下の余白を独立記録。足支点の共通配置/動作合格はこの静止検査の対象外。"
+  },
+  "whole_source_bounds_check": {
+    "visible_alpha_threshold": 8,
+    "coordinate_convention": "native half-open bbox [left,top,right,bottom]",
+    "content_box_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "horizontal_intent": "元画の全可視主絵を左右に切らず保持",
+    "vertical_intent": "元画の全可視主絵を上下に切らず保持。空中足を地面へ移動しない",
+    "both_axes_contained_at_alpha8": true,
+    "minimum_margin_native_px": 41,
+    "per_source_evidence": ".work/bear-official-adoption-20261113/static-qa/native-evidence-manifest.json",
+    "caveat": "alpha1 の非常に淡い点は一部で端へ達する。下記 low_alpha を参照。alpha1 の bbox を主絵の切れへ読み替えていない。"
+  },
+  "per_source_observations": [
+    {
+      "id": "neutral",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-ab-20261113-01a1cfaa/source/edit-v002.png",
+      "source_sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "state_ids": [
+        "neutral",
+        "bow_ready",
+        "jump_ready"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "ユーザー選択 A の同一バイト。白縁茶色の縦眼・逆 U の口元・桃色の舌・赤帽子・クリーム色と紙目が基準。bow_ready / jump_ready は同画像再利用で 3 状態。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/neutral-native-light-dark.png"
+    },
+    {
+      "id": "tea_hold",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-tea-20261113-01a1cfaa/source/tea_hold-v001.png",
+      "source_sha256": "98407d22896fc958842c86eb01c618876177ad6e5a0dad717d46deae9c8e49b8",
+      "state_ids": [
+        "tea_hold"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "左右 2 つの丸い手でカップを支える。持ち手の一部が右手の奥へ隠れる関係は成立。輪郭は A よりやや強いが、二重線・太い塊・顔の別物化は見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/tea_hold-native-light-dark.png"
+    },
+    {
+      "id": "tea_raise",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-tea-20261113-01a1cfaa/source/tea_raise-v001.png",
+      "source_sha256": "8076b07275dcb293f1c4810bd945dce989ab29e7fd7cb931c9664254d1ae0470",
+      "state_ids": [
+        "tea_raise"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "手とカップを持ち上げる位置関係は自然。カップ縁の楕円・飲み物・丸い両手を識別でき、追加の手や指は見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/tea_raise-native-light-dark.png"
+    },
+    {
+      "id": "tea_sip",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-tea-20261113-01a1cfaa/source/tea_sip-v001.png",
+      "source_sha256": "cbcb112001734505aed0ad73cfb4c61c0b933ed31a187abbb80a4090495b9cbd",
+      "state_ids": [
+        "tea_sip"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "閉眼は横長の穏やかな弧。カップが口元の下部を隠す演技で、口や眼の重複・余分な眉は見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/tea_sip-native-light-dark.png"
+    },
+    {
+      "id": "tea_lower",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-tea-20261113-01a1cfaa/source/tea_lower-v001.png",
+      "source_sha256": "7cf42d24c77e0035f548f1f7692e4bbde3323bc5c5e5c88eb43c0817bf9dc900",
+      "state_ids": [
+        "tea_lower"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "両手とカップ、右側持ち手の前後関係が保たれる。塗りの大きな斑点や透明な穴、顔・足の崩れは見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/tea_lower-native-light-dark.png"
+    },
+    {
+      "id": "bow_half",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-tea-20261113-01a1cfaa/source/bow_half-v004.png",
+      "source_sha256": "d367b0688ab7dcbc5376fa1c879f6a5258051a3e75d91ddf3fc022cdea77a819",
+      "state_ids": [
+        "bow_half"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "最終 v004。頭を下げ眼を下へ向ける姿勢として成立。左右の長い U 字状の腕は体とつながり、追加の腕ではない。やや強い外線は残るが局所の破綻や潰れは見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/bow_half-native-light-dark.png"
+    },
+    {
+      "id": "bow_deep",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/source/bow_deep-v001.png",
+      "source_sha256": "34742d692f44e9168023c6016ca1a0c96af15a59d41b0f64e4900733efb43815",
+      "state_ids": [
+        "bow_deep"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "左へ傾いた深いお辞儀で、両眼・鼻・口・耳・帽子は同じ向きへ傾き整合。頭の横投影が A より約 7.5% 狭い差は残る。静止像では傾きと投影で説明できる範囲で、顔の潰れや別個体化を止める根拠は見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/bow_deep-native-light-dark.png"
+    },
+    {
+      "id": "bow_return",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/source/bow_return-v001.png",
+      "source_sha256": "f65d536de83cf776b3bf4eab9791f3805b68050689a3da35cdcbcdf8e4c08830",
+      "state_ids": [
+        "bow_return"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "左右へ腕を開いた戻り姿勢。顔・帽子・両耳が A と同系統で、両腕・両足は識別できる。孤立線・付加部品は見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/bow_return-native-light-dark.png"
+    },
+    {
+      "id": "jump_crouch",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/source/jump_crouch-v001.png",
+      "source_sha256": "e7999e3fdc029209ce3c44128740e070e85dd62ded9f87c207767a0d4c0c6351",
+      "state_ids": [
+        "jump_crouch"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "両手を前へ寄せ両膝を曲げた構え。頭の高さを bbox に合わせて増大させた見え方ではなく、屈みで体が短くなる描き方。膝と足の分岐は追える。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/jump_crouch-native-light-dark.png"
+    },
+    {
+      "id": "jump_takeoff",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/source/jump_takeoff-v001.png",
+      "source_sha256": "68587cc52fa11ea14493cfabd20c4bdf42fcf175e8f6329734a7e903e2721ba8",
+      "state_ids": [
+        "jump_takeoff"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "両腕を斜め上へ出し、両足を地面から離した姿勢。丸い両手と左右の足が自然につながり、余分な手足は見つからない。描かれた足と登録上の仮想地面は別概念。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/jump_takeoff-native-light-dark.png"
+    },
+    {
+      "id": "jump_air",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/source/jump_air-v001.png",
+      "source_sha256": "bdacb14cbcb05fd8e4baab05dc680cec1009e2ed9f646bc82839832e9b2f4061",
+      "state_ids": [
+        "jump_air"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "閉眼を強く笑う弧、両腕 V 字、両脚をたたんだ姿勢。閉眼線はやや強いが元の眼が残る重複や眉化はなく、嬉しい表情として読める。脚・足は 2 本で、胴の裂けや余分な部品は見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/jump_air-native-light-dark.png"
+    },
+    {
+      "id": "jump_land",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-dance-20261113-01a1cfaa/source/jump_land-v001.png",
+      "source_sha256": "328f775828371d67a81af32a44672e519ac8a84f998f8cd47185bbced00e9150",
+      "state_ids": [
+        "jump_land"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "両足を開き両手を前へ寄せる着地姿勢。膝・股・足の輪郭が閉じ、身体の穴や余分な肢は見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/jump_land-native-light-dark.png"
+    },
+    {
+      "id": "dance_left",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-dance-20261113-01a1cfaa/source/dance_left-v001.png",
+      "source_sha256": "ffe415b833f3153384995e374c0cbdc6f25688071ff7b227fbe331861626d3eb",
+      "state_ids": [
+        "dance_left"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "左右の腕を反対方向へ伸ばし左へ傾く。顔・帽子も姿勢とそろい、首や腕が不自然に途切れる箇所は見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/dance_left-native-light-dark.png"
+    },
+    {
+      "id": "dance_right",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-dance-20261113-01a1cfaa/source/dance_right-v001.png",
+      "source_sha256": "b173852cb809814d7fe3a9ef8d2b04d854e9fb72ed818ef159d0938067c6529e",
+      "state_ids": [
+        "dance_right"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "反対の傾きと腕方向。眼の白縁・茶瞳と口元を保ち、非対称は傾いた演技として整合。追加の手足・色の斑点は見つからない。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/dance_right-native-light-dark.png"
+    },
+    {
+      "id": "dance_step",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-dance-20261113-01a1cfaa/source/dance_step-v001.png",
+      "source_sha256": "4f0bfedcab8132b203f523730d2938d55a53d4716781d41be0ba4e96249bd025",
+      "state_ids": [
+        "dance_step"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "片足支持・他方の足を横へ上げる。腰から上げた脚へつながる外周と股の線が成立し、増えた足ではない。輪郭が横方向の余白へ収まる。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/dance_step-native-light-dark.png"
+    },
+    {
+      "id": "dance_finish",
+      "source_path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-dance-20261113-01a1cfaa/source/dance_finish-v001.png",
+      "source_sha256": "29b6631f2cbfbd6c7f1ad6493080c54836e1007197098baaffddf893dc58fb74",
+      "state_ids": [
+        "dance_finish"
+      ],
+      "result": "no_blocking_static_defect_observed",
+      "observation_ja": "片腕を上げた笑顔の終わり姿勢。閉眼線の強い弧は jump_air と同じ表情系で、追加の眼や眉ではない。左右の腕足・帽子・耳の数と接続は自然。",
+      "native_light_dark_evidence": ".work/bear-official-adoption-20261113/static-qa/dance_finish-native-light-dark.png"
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "outline_variation",
+      "subjects": [
+        "tea_hold",
+        "bow_half"
+      ],
+      "finding_ja": "外線が A よりやや強い。A 5.244、tea_hold 5.632、bow_half-v004 5.733 px @登録身体高 430 px。目・口の細線は区別でき、重複線や大きな塊には見えない。正式静止ストックを止める根拠にはしない。",
+      "evidence": "face-detail-A-tea_hold-bow_half.png"
+    },
+    {
+      "id": "bow_deep_projection",
+      "subjects": [
+        "bow_deep"
+      ],
+      "finding_ja": "頭の横投影幅は A 692 に対し 640 native px（約 -7.5%）という既存測定差が残る。今回の原寸再確認で眼鼻口と頭・帽子・耳の傾きは整合。頭幅の完全一致は主張せず、静止投影差として許容。連続切替の自然さは別検査。",
+      "evidence": "bow-deep-face-detail.png"
+    },
+    {
+      "id": "closed_eye_strength",
+      "subjects": [
+        "tea_sip",
+        "jump_air",
+        "dance_finish"
+      ],
+      "finding_ja": "tea_sip は平たい弧、jump_air / dance_finish は高さと太さのある喜びの弧。元の眼が下に残る重複ではなく、演技の表情差として読める。完全に同じ内線強度とは記録しない。",
+      "evidence": "closed-eye-details.png"
+    },
+    {
+      "id": "low_alpha",
+      "subjects": [
+        "neutral",
+        "tea_hold",
+        "tea_raise",
+        "tea_sip",
+        "tea_lower",
+        "bow_half",
+        "bow_deep",
+        "bow_return",
+        "jump_crouch",
+        "jump_takeoff",
+        "jump_air",
+        "jump_land",
+        "dance_left",
+        "dance_right",
+        "dance_step",
+        "dance_finish"
+      ],
+      "finding_ja": "主絵 alpha8 bbox 外に alpha1〜7 の微小点があり、A にも存在する。一部候補のキャンバス端にも alpha1（約 0.39% 不透明度）の点がある。正しい明暗合成で背景残り・目立つ色汚れとして視認されず、主絵の切れではない。画像清掃は行わない。",
+      "diagnostic_path": ".work/bear-official-adoption-20261113/static-qa/low-alpha-diagnostic.json"
+    }
+  ],
+  "contour_screening_reference": {
+    "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-review-20261113-01a1cfaa/qa/contour-screening-v002.json",
+    "sha256": "85311ad49ec68943d0e83347a92dc8d86892c8078240c915623512681680a978",
+    "display_reference_height_px": 430,
+    "source_common_reference_height_px": 1107,
+    "method_limit": "既存 outer contour の選別 sample による補助推定。全ての線、顔内部線、形態同一性を代表せず、数値閾値だけで受入を決めていない。今回追加測定はしていない。",
+    "summary_by_state": {
+      "neutral": {
+        "sample_count": 142,
+        "median_display_width_px": 5.244,
+        "display_width_p25_p75_px": [
+          5.038,
+          5.464
+        ]
+      },
+      "tea_hold": {
+        "sample_count": 154,
+        "median_display_width_px": 5.632,
+        "display_width_p25_p75_px": [
+          5.438,
+          5.841
+        ]
+      },
+      "tea_raise": {
+        "sample_count": 150,
+        "median_display_width_px": 5.385,
+        "display_width_p25_p75_px": [
+          5.127,
+          5.464
+        ]
+      },
+      "tea_sip": {
+        "sample_count": 153,
+        "median_display_width_px": 5.087,
+        "display_width_p25_p75_px": [
+          5.038,
+          5.385
+        ]
+      },
+      "tea_lower": {
+        "sample_count": 153,
+        "median_display_width_px": 5.385,
+        "display_width_p25_p75_px": [
+          5.127,
+          5.464
+        ]
+      },
+      "bow_ready": {
+        "sample_count": 142,
+        "median_display_width_px": 5.244,
+        "display_width_p25_p75_px": [
+          5.038,
+          5.464
+        ]
+      },
+      "bow_half": {
+        "sample_count": 156,
+        "median_display_width_px": 5.733,
+        "display_width_p25_p75_px": [
+          5.385,
+          6.08
+        ]
+      },
+      "bow_deep": {
+        "sample_count": 144,
+        "median_display_width_px": 5.385,
+        "display_width_p25_p75_px": [
+          5.127,
+          5.464
+        ]
+      },
+      "bow_return": {
+        "sample_count": 153,
+        "median_display_width_px": 5.087,
+        "display_width_p25_p75_px": [
+          4.817,
+          5.244
+        ]
+      },
+      "jump_ready": {
+        "sample_count": 142,
+        "median_display_width_px": 5.244,
+        "display_width_p25_p75_px": [
+          5.038,
+          5.464
+        ]
+      },
+      "jump_crouch": {
+        "sample_count": 137,
+        "median_display_width_px": 5.464,
+        "display_width_p25_p75_px": [
+          5.127,
+          5.749
+        ]
+      },
+      "jump_takeoff": {
+        "sample_count": 158,
+        "median_display_width_px": 4.817,
+        "display_width_p25_p75_px": [
+          4.69,
+          5.038
+        ]
+      },
+      "jump_air": {
+        "sample_count": 140,
+        "median_display_width_px": 4.855,
+        "display_width_p25_p75_px": [
+          4.71,
+          5.087
+        ]
+      },
+      "jump_land": {
+        "sample_count": 140,
+        "median_display_width_px": 5.464,
+        "display_width_p25_p75_px": [
+          5.127,
+          5.733
+        ]
+      },
+      "dance_left": {
+        "sample_count": 141,
+        "median_display_width_px": 4.855,
+        "display_width_p25_p75_px": [
+          4.71,
+          5.087
+        ]
+      },
+      "dance_right": {
+        "sample_count": 145,
+        "median_display_width_px": 5.087,
+        "display_width_p25_p75_px": [
+          5.038,
+          5.385
+        ]
+      },
+      "dance_step": {
+        "sample_count": 148,
+        "median_display_width_px": 5.244,
+        "display_width_p25_p75_px": [
+          5.087,
+          5.464
+        ]
+      },
+      "dance_finish": {
+        "sample_count": 139,
+        "median_display_width_px": 4.71,
+        "display_width_p25_p75_px": [
+          4.467,
+          5.038
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "native_manifest_path": ".work/bear-official-adoption-20261113/static-qa/native-evidence-manifest.json",
+    "detail_manifest_path": ".work/bear-official-adoption-20261113/static-qa/detail-evidence-manifest.json",
+    "native_diagnostic_crops_viewed": [
+      ".work/bear-official-adoption-20261113/static-qa/face-detail-A-tea_hold-bow_half.png",
+      ".work/bear-official-adoption-20261113/static-qa/bow-deep-face-detail.png",
+      ".work/bear-official-adoption-20261113/static-qa/closed-eye-details.png",
+      ".work/bear-official-adoption-20261113/static-qa/cup-hand-details.png",
+      ".work/bear-official-adoption-20261113/static-qa/air-step-limb-details.png"
+    ],
+    "diagnostic_crops_only": "ROI は局所の目視診断専用。切れ/両軸余白の判定は uncropped 全画像で別に確認。原画利用は禁止。"
+  },
+  "integrity": {
+    "all_16_source_hashes_match_frozen_registration_after_review": true,
+    "registration_hash_matches_before_review": true,
+    "legacy_original": {
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v001.png",
+      "sha256": "8512984d0660fea738192619b2bfccff1ce42a9493db49c980452ff904296e4e",
+      "matches_known_sha256": true
+    },
+    "source_records": [
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-ab-20261113-01a1cfaa/source/edit-v002.png",
+        "ids": [
+          "neutral",
+          "bow_ready",
+          "jump_ready"
+        ],
+        "expected_sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+        "actual_sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-tea-20261113-01a1cfaa/source/tea_hold-v001.png",
+        "ids": [
+          "tea_hold"
+        ],
+        "expected_sha256": "98407d22896fc958842c86eb01c618876177ad6e5a0dad717d46deae9c8e49b8",
+        "actual_sha256": "98407d22896fc958842c86eb01c618876177ad6e5a0dad717d46deae9c8e49b8"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-tea-20261113-01a1cfaa/source/tea_raise-v001.png",
+        "ids": [
+          "tea_raise"
+        ],
+        "expected_sha256": "8076b07275dcb293f1c4810bd945dce989ab29e7fd7cb931c9664254d1ae0470",
+        "actual_sha256": "8076b07275dcb293f1c4810bd945dce989ab29e7fd7cb931c9664254d1ae0470"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-tea-20261113-01a1cfaa/source/tea_sip-v001.png",
+        "ids": [
+          "tea_sip"
+        ],
+        "expected_sha256": "cbcb112001734505aed0ad73cfb4c61c0b933ed31a187abbb80a4090495b9cbd",
+        "actual_sha256": "cbcb112001734505aed0ad73cfb4c61c0b933ed31a187abbb80a4090495b9cbd"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-tea-20261113-01a1cfaa/source/tea_lower-v001.png",
+        "ids": [
+          "tea_lower"
+        ],
+        "expected_sha256": "7cf42d24c77e0035f548f1f7692e4bbde3323bc5c5e5c88eb43c0817bf9dc900",
+        "actual_sha256": "7cf42d24c77e0035f548f1f7692e4bbde3323bc5c5e5c88eb43c0817bf9dc900"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-tea-20261113-01a1cfaa/source/bow_half-v004.png",
+        "ids": [
+          "bow_half"
+        ],
+        "expected_sha256": "d367b0688ab7dcbc5376fa1c879f6a5258051a3e75d91ddf3fc022cdea77a819",
+        "actual_sha256": "d367b0688ab7dcbc5376fa1c879f6a5258051a3e75d91ddf3fc022cdea77a819"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/source/bow_deep-v001.png",
+        "ids": [
+          "bow_deep"
+        ],
+        "expected_sha256": "34742d692f44e9168023c6016ca1a0c96af15a59d41b0f64e4900733efb43815",
+        "actual_sha256": "34742d692f44e9168023c6016ca1a0c96af15a59d41b0f64e4900733efb43815"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/source/bow_return-v001.png",
+        "ids": [
+          "bow_return"
+        ],
+        "expected_sha256": "f65d536de83cf776b3bf4eab9791f3805b68050689a3da35cdcbcdf8e4c08830",
+        "actual_sha256": "f65d536de83cf776b3bf4eab9791f3805b68050689a3da35cdcbcdf8e4c08830"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/source/jump_crouch-v001.png",
+        "ids": [
+          "jump_crouch"
+        ],
+        "expected_sha256": "e7999e3fdc029209ce3c44128740e070e85dd62ded9f87c207767a0d4c0c6351",
+        "actual_sha256": "e7999e3fdc029209ce3c44128740e070e85dd62ded9f87c207767a0d4c0c6351"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/source/jump_takeoff-v001.png",
+        "ids": [
+          "jump_takeoff"
+        ],
+        "expected_sha256": "68587cc52fa11ea14493cfabd20c4bdf42fcf175e8f6329734a7e903e2721ba8",
+        "actual_sha256": "68587cc52fa11ea14493cfabd20c4bdf42fcf175e8f6329734a7e903e2721ba8"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-bow-jump-20261113-01a1cfaa/source/jump_air-v001.png",
+        "ids": [
+          "jump_air"
+        ],
+        "expected_sha256": "bdacb14cbcb05fd8e4baab05dc680cec1009e2ed9f646bc82839832e9b2f4061",
+        "actual_sha256": "bdacb14cbcb05fd8e4baab05dc680cec1009e2ed9f646bc82839832e9b2f4061"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-dance-20261113-01a1cfaa/source/jump_land-v001.png",
+        "ids": [
+          "jump_land"
+        ],
+        "expected_sha256": "328f775828371d67a81af32a44672e519ac8a84f998f8cd47185bbced00e9150",
+        "actual_sha256": "328f775828371d67a81af32a44672e519ac8a84f998f8cd47185bbced00e9150"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-dance-20261113-01a1cfaa/source/dance_left-v001.png",
+        "ids": [
+          "dance_left"
+        ],
+        "expected_sha256": "ffe415b833f3153384995e374c0cbdc6f25688071ff7b227fbe331861626d3eb",
+        "actual_sha256": "ffe415b833f3153384995e374c0cbdc6f25688071ff7b227fbe331861626d3eb"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-dance-20261113-01a1cfaa/source/dance_right-v001.png",
+        "ids": [
+          "dance_right"
+        ],
+        "expected_sha256": "b173852cb809814d7fe3a9ef8d2b04d854e9fb72ed818ef159d0938067c6529e",
+        "actual_sha256": "b173852cb809814d7fe3a9ef8d2b04d854e9fb72ed818ef159d0938067c6529e"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-dance-20261113-01a1cfaa/source/dance_step-v001.png",
+        "ids": [
+          "dance_step"
+        ],
+        "expected_sha256": "4f0bfedcab8132b203f523730d2938d55a53d4716781d41be0ba4e96249bd025",
+        "actual_sha256": "4f0bfedcab8132b203f523730d2938d55a53d4716781d41be0ba4e96249bd025"
+      },
+      {
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-outline5-poses-dance-20261113-01a1cfaa/source/dance_finish-v001.png",
+        "ids": [
+          "dance_finish"
+        ],
+        "expected_sha256": "29b6631f2cbfbd6c7f1ad6493080c54836e1007197098baaffddf893dc58fb74",
+        "actual_sha256": "29b6631f2cbfbd6c7f1ad6493080c54836e1007197098baaffddf893dc58fb74"
+      }
+    ],
+    "source_pixels_modified": false,
+    "shared_catalogs_modified_by_reviewer": false,
+    "reservation_config_modified_by_reviewer": false,
+    "git_mutations": false,
+    "writes_confined_to": ".work/bear-official-adoption-20261113/static-qa"
+  },
+  "reservation_observations": {
+    "at_start_active_reservations": [],
+    "at_final_record_active_reservations": [
+      {
+        "id": "bear-outline5-adoption-20261113-01a1cfaa",
+        "root": "assets/library/characters/bear-beret/generation-batches/bear-outline5-adoption-20261113-01a1cfaa",
+        "owner": "codex:bear-official-adoption:01a1cfaa"
+      },
+      {
+        "id": "bear-eyecatches-v002-20261113-01a1cfaa",
+        "root": "assets/library/characters/bear-beret/eyecatches/v002",
+        "owner": "codex:bear-official-adoption:01a1cfaa"
+      }
+    ],
+    "note": "管理担当が検査中に正式採用用の新領域を予約。今回はそこへ入らず、freeze 済み source と registration を read-only で検査した。"
+  },
+  "limits": [
+    "静止原画の共有ストック用途に対する検査。補間・連続動作・ループ継ぎ目・完成 MP4 の品質は合格と主張しない。",
+    "使用作品の最大表示/ズームと圧縮後の検査は、組み込み時に別途必要。",
+    "素材採用/共有台帳更新は管理担当が行う。今回の検査担当は採用を変更していない。"
+  ],
+  "required_static_fixes_before_stock_adoption": []
+}

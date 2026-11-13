@@ -31,6 +31,8 @@ assets/library/characters/<id>/current/
 | 全ID・manifestの場所・SHA-256 | `catalogs/asset-library-current-v1.json` の `assets` |
 | 原画・生成条件・画風や品質の確認資料 | `asset.json` の元データ参照と[素材ガイド](assets/library/README.md) |
 
+クマの通常姿と短い演出18状態も、同じ `current/` から利用できます。原画・登録を選び直す処理は [明示採用の記録](catalogs/character-adoptions-v1.json) を読み、過去の画風QAや最大版数から現行版を推測しません。
+
 ### PNGを1枚取得する
 
 画像だけを使う場合はPythonや動画制作ツールの導入は不要です。[全19種類の素材一覧](assets/library/README.md)から使うPNGを開いて保存できます。Git LFS管理のPNGをURLから取得するときは、画像実体のURLを使ってください。

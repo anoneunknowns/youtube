@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "kind": "compressed-discrete-key-pose-stock-review",
+  "result": "pass_for_discrete_key_pose_shared_stock",
+  "blocking_findings": [],
+  "summary_ja": "全4 clips・18状態を共通1107基準の430/860px身体高で並列表示し、明暗2パスのH264試写を作成。最終2本を全936フレームdecodeし、全状態の原寸顔/手元と代表全画面、重要切替前後を時間順静止で確認。二重像・目立つ圧縮崩れ・不意の倍率変化・全身の切れは見つからず、原画の再生成を要する具体的な新異常なし。切替は明瞭なhardcutであり、補間や完成作品の動作品質合格は主張しない。",
+  "render_design": {
+    "width_px": 1920,
+    "height_px": 1080,
+    "fps": 30,
+    "seconds_per_background": 15.6,
+    "frames_per_background": 468,
+    "backgrounds": {
+      "light": "#fff8e8",
+      "dark": "#203b3e"
+    },
+    "stages": [
+      {
+        "id": "left",
+        "reference_display_height_px": 430,
+        "scale": 0.3884372177055104,
+        "anchor_px": [
+          400,
+          1000
+        ],
+        "content_box_px": [
+          25,
+          100,
+          780,
+          1030
+        ]
+      },
+      {
+        "id": "right",
+        "reference_display_height_px": 860,
+        "scale": 0.7768744354110207,
+        "anchor_px": [
+          1325,
+          1000
+        ],
+        "content_box_px": [
+          800,
+          100,
+          1900,
+          1030
+        ]
+      }
+    ],
+    "horizontal_intent": "各段の登録足支点 x を固定。体の傾き、片足支持、頭の横投影は原画どおり保持。中央揃えへ置き換えない。",
+    "vertical_intent": "地面 y1000 を固定。grounded は描かれた足、air は登録された推定地面を使い、足の浮き距離を一度だけ保持。",
+    "resampling": "一律等方scale1107基準、2x診断ラスタからLANCZOSで1080pへ。姿勢別bboxfit、輪郭/色/alpha処理、変形、crossfade、追加jump移動なし。原PNG無改変。",
+    "air_lift": {
+      "takeoff_source_px": 72,
+      "air_source_px": 118,
+      "takeoff_display_430_px": 27.96747967479675,
+      "air_display_430_px": 45.83559168925023,
+      "takeoff_display_860_px": 55.9349593495935,
+      "air_display_860_px": 91.67118337850046,
+      "additional_jump_transform_px": 0
+    },
+    "timing": "旧v001のclipsの姿勢順を保持。各キー12frames=.4s、各clip前後の通常A18frames=.6sを付加。同一idの繰返しも保持。このQA用hold時間を既存作品のtimingとして主張しない。",
+    "placement_calibration": {
+      "maximum_allowed_px": 1.5,
+      "actual_maximum_absolute_correction_px": 1.0,
+      "reason": "透過縁の縮小/整数ラスタ化で実alpha8足帯が最大1pxずれたため、元画像/scale/登録を固定したまま診断表示だけ微小平行移動。各軸の実測before/afterを保全。",
+      "cases": [
+        {
+          "pose": "neutral",
+          "height": 860,
+          "correction_xy_px": [
+            -0.11156278229441341,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            0.11156278229441341,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            0.11156278229441341,
+            0.0
+          ]
+        },
+        {
+          "pose": "tea_hold",
+          "height": 430,
+          "correction_xy_px": [
+            -0.0,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            0.0,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "pose": "tea_raise",
+          "height": 860,
+          "correction_xy_px": [
+            -0.0,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            0.0,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "pose": "tea_lower",
+          "height": 430,
+          "correction_xy_px": [
+            -0.0,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            0.0,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "pose": "tea_lower",
+          "height": 860,
+          "correction_xy_px": [
+            -0.0,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            0.0,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "pose": "bow_ready",
+          "height": 860,
+          "correction_xy_px": [
+            -0.11156278229441341,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            0.11156278229441341,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            0.11156278229441341,
+            0.0
+          ]
+        },
+        {
+          "pose": "bow_half",
+          "height": 860,
+          "correction_xy_px": [
+            -0.0,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            0.0,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            -0.5,
+            0.0
+          ]
+        },
+        {
+          "pose": "bow_deep",
+          "height": 860,
+          "correction_xy_px": [
+            0.5,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            -0.5,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            0.5,
+            0.0
+          ]
+        },
+        {
+          "pose": "bow_return",
+          "height": 860,
+          "correction_xy_px": [
+            -0.0,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            0.0,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            0.5,
+            0.0
+          ]
+        },
+        {
+          "pose": "jump_ready",
+          "height": 860,
+          "correction_xy_px": [
+            -0.11156278229441341,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            0.11156278229441341,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            0.11156278229441341,
+            0.0
+          ]
+        },
+        {
+          "pose": "dance_finish",
+          "height": 860,
+          "correction_xy_px": [
+            -0.5,
+            1.0
+          ],
+          "before_delta_xy_px": [
+            0.5,
+            -1.0
+          ],
+          "after_delta_xy_px": [
+            -0.5,
+            0.0
+          ]
+        }
+      ]
+    }
+  },
+  "technical_checks": {
+    "full_decode_count": 936,
+    "full_decode_count_each": 468,
+    "source_actual_alpha8_alignment_cases": 36,
+    "source_tolerance_px": 0.5,
+    "source_maximum_absolute_delta_px": 0.5,
+    "source_both_axis_containment_passed": true,
+    "decoded_rgb_measurement_cases": 420,
+    "decoded_final_tolerance_px": 1.0,
+    "decoded_maximum_absolute_delta_xy_px": [
+      0.5,
+      1
+    ],
+    "decoded_both_axis_containment_and_support_passed": true,
+    "decoded_observer_controls_passed": true,
+    "controls_description": "同じ実decode画素の0px正例と±2px水平/垂直の各符号移動を用い、固定ROI・背景・差32閾値・許容1pxで検査。すべて期待結果。",
+    "maximum_stage_rgb_mae_channel_value": 1.3577614858260019,
+    "maximum_stage_pixels_error_ge24_ratio": 0.0018756675923947874,
+    "metrics_limit": "MAE/差画素率だけで画風/動作合格とはせず、実画像の局所・全身と時系列を別に確認。"
+  },
+  "clip_observations": {
+    "tea": "顔・耳・帽子・脚は保たれ、hold→raise→sip→lower→holdが追える。sipの閉眼とカップによる口の遮蔽は明瞭。通常Aとの受け渡しでカップはhardcutで出現/消失し、手も切り替わる。このままで自然な道具登退場のアニメ完成とは主張しないが、単独原画の破綻や二重線はない。",
+    "bow": "ready=A→half→deep→half→return→Aが成立。deepへの切替は頭の左傾きと低下が目立ち、横投影幅約-7.5%も残る。足支点は固定され、等方scaleは不変なのでbbox拡大/全身跳びとは区別できる。滑らかな正面お辞儀としての補間検査は未実施。",
+    "jump": "A→crouch→takeoff→air→takeoff→land→A。屈みの頭低下、離地、空中の脚たたみと閉眼、着地の屈伸が読める。描かれた足の27.97/45.84px（430段）の浮きを保ち、仮想地面へ足を再接地させたり二重の跳躍オフセットは加えていない。頭の上下は姿勢差に対応し、無関係な全身の倍率変化は見つからない。",
+    "dance": "A→左右の傾き繰返し→片足step→笑顔finish→A。傾き/片足支持で頭や腕の位置が大きく切り替わるが、登録支持点とrefは不変。閉眼への変化は演技として読め、保持中に余分な眼や手足が現れる像は見つからない。hardcutの段階差は残り、滑らかなdance完成ではない。"
+  },
+  "nonblocking_findings": [
+    "hardcutのため演技位置・紙目・線のわずかな作画差は瞬間的に切り替わる。補間や任意crossfadeで隠していない。",
+    "tea_hold / bow_halfのやや強い外線、bow_deepの横投影差、jump_air / dance_finishの強い閉眼は静止QAの記録どおり残る。今回の圧縮で新しい破綻へ変わった箇所は見つからない。"
+  ],
+  "source_review_sha256": "6cba15f4f4940e0e5f72006541db220c537fd3993d9638b865b270be487f531d",
+  "scope": "Full936-frame decode, time-ordered selected decoded frames and native details. No claim of real-time full playback, interpolation or episode acceptance.",
+  "qa_videos": [
+    {
+      "label": "light-crf14",
+      "sha256": "6a822d9ff9435ab8ae3021083321ef2034da8d91b492463e7f1def46b56c168f"
+    },
+    {
+      "label": "dark-crf14",
+      "sha256": "af2aa52016105d462ae3ef90fed9f68fc87c9a71fcd43f9ca1f510917efa8e06"
+    }
+  ],
+  "qa_video_policy": "Local QA evidence; video files are not GitHub assets.",
+  "originals_modified": false,
+  "limits": [
+    "離散キーポーズの候補ストック検査に限る。補間・完成episode・教材音声字幕・最終出力条件の合格は主張しない。",
+    "全フレームdecodeと、標本測定/時間順静止の実視認を区別。実時間連続再生を済ませたという記録はしない。",
+    "旧v001は姿勢順の入力として使用。旧絵と新絵の圧縮MP4同尺度比較は今回は行っていない。"
+  ]
+}
