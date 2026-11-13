@@ -304,6 +304,8 @@ ZIPには `character-library/` を起点に、選択された全120素材の通�
 
 修正が必要な画像だけ新規案を作り、同一尺度の原寸・明暗・前後姿勢で比較します。明確な改善があり、同一性や画風等に退行がない場合だけ差し替え、同程度・判断不明なら既存を維持します。
 
+[仕上がりの再検査記録](collections/asset-polish-review/v001/README.md)には、現行画像のSHA・観測尺度・確認範囲と、鮮明さが増しても画調のつながりを優先して既存版を維持した比較判断をまとめています。
+
 ## 保存範囲と利用条件
 
 GitHubで配布する範囲は[公開対象一覧](https://github.com/anoneunknowns/youtube/blob/main/catalogs/github-publication-v1.json)の `files`、公開用checkoutから作る素材パッケージの範囲は `character_library_files` が正本です。HTTPで取得する画像とJSONは同じGitHub参照から、ローカル画像とJSONは同じcheckoutの `current/` から組にして使います。公開用の全データを取得したcheckoutは `python tools/verify_github_publication.py` で確認できます。
