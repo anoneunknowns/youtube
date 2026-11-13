@@ -86,7 +86,7 @@ PowerShellでの取得、原画・確認資料を含む検証、プレビュー�
 
 ### 公開範囲と記録
 
-GitHubで取得できるファイルは、[公開対象一覧](https://github.com/anoneunknowns/youtube/blob/main/catalogs/github-publication-v1.json)の `files`、原画・登録・確認資料を含む公開素材パッケージの範囲は `character_library_files` が正本です。現行素材と、その採用・利用に必要な入力・資料を公開します。採用中のファイルはフォルダの版番号に関係なく対象です。完成MP4等の動画本体は公開しません。未使用の旧版・不採用候補は新たに追加せず、現在の利用・再制作・必要なQAに使う原本を保管します。容量整理は、明らかに再生成できる大容量動画や用済みの旧build・cacheを優先します。削除対象・旧SHA・提供状況は[削除記録](docs/IMAGE-ASSET-MANAGEMENT.md#不要旧版を削除する場合)で確認できます。台帳の履歴パスは配布ファイルの存在を保証しません。
+GitHubで取得できるファイルは、[公開対象一覧](https://github.com/anoneunknowns/youtube/blob/main/catalogs/github-publication-v1.json)の `files`、原画・登録・確認資料を含む公開素材パッケージの範囲は `character_library_files` が正本です。現行素材と、その採用・利用に必要な入力・資料を公開します。採用中のファイルはフォルダの版番号に関係なく対象です。完成MP4等の動画本体は公開しません。未使用の旧版・不採用候補は新たに追加せず、現在の利用・再制作・必要なQAに使う原本を保管します。容量整理は、明らかに再生成できる大容量動画や用済みの旧build・cacheを優先します。整理の手順は[削除手順](docs/IMAGE-ASSET-MANAGEMENT.md#不要旧版を削除する場合)、実施した削除対象・旧SHA・提供状況は[管理設定](catalogs/character-asset-management-v1.json)の `retirement_records` から確認できます。台帳の履歴パスは配布ファイルの存在を保証しません。
 
 画像・GIF・音声（WAV・MP3等）・フォントはGit LFSで管理します。素材だけを使う際に動画本体・音声モデル・Node.jsは不要です。ファイル整合、過去の採用、現在の画風・動作品質は各確認記録で区別し、取得漏れを隠すためのハッシュ書換えは行いません。利用条件は[素材ガイド](assets/library/README.md)と各依存物の記録を参照してください。
 
