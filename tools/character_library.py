@@ -231,15 +231,19 @@ def _required_current_library_paths_locked(root, pending):
                 continue
             required.update(block[key] for key in ('registration', 'preview', 'motion_preview') if block.get(key))
             required.update(frame['path'] for frame in block['poses'].values())
-            registration = read(readable_source(root, block['registration'], pending))
-            if registration.get('source_sheet'):
-                required.add(registration['source_sheet'])
-            required.update(_registration_generation_path(root, block['registration'], registration[key])
-                            for key in ('generation_input', 'generation_prompt') if registration.get(key))
-            for sheet in registration.get('sheets', []):
-                required.add(sheet['source_sheet'])
-                required.update(_registration_generation_path(root, block['registration'], sheet[key])
-                                for key in ('generation_input', 'generation_prompt') if sheet.get(key))
+            for selected in [block, *block.get('pose_overrides', [])]:
+                relative = selected['registration']
+                required.add(relative)
+                registration = read(readable_source(root, relative, pending))
+                required.update(frame['path'] for frame in registration['frames'])
+                if registration.get('source_sheet'):
+                    required.add(registration['source_sheet'])
+                required.update(_registration_generation_path(root, relative, registration[key])
+                                for key in ('generation_input', 'generation_prompt') if registration.get(key))
+                for sheet in registration.get('sheets', []):
+                    required.add(sheet['source_sheet'])
+                    required.update(_registration_generation_path(root, relative, sheet[key])
+                                    for key in ('generation_input', 'generation_prompt') if sheet.get(key))
     return required
 
 
@@ -460,8 +464,9 @@ def _gimmick_index_item_locked(root, selected, pending):
                           'clips': registration.get('clips', {})}}
 
 
-def _adoption_keys(value, expected, label):
-    if not isinstance(value, dict) or set(value) != set(expected):
+def _adoption_keys(value, expected, label, optional=()):
+    if (not isinstance(value, dict) or not set(expected) <= set(value)
+            or not set(value) <= set(expected) | set(optional)):
         raise ValueError(f'Invalid explicit adoption fields: {label}')
 
 
@@ -523,7 +528,8 @@ def _read_adoptions_locked(root, pending):
     neutral_keys = ('path', 'sha256', 'source_size_px', 'image_region_px',
                     'body_bbox_px', 'anchor_px', 'reference_height_px')
     for entry in document['adoptions']:
-        _adoption_keys(entry, ('id', 'status', 'neutral', 'eyecatch', 'selection_evidence'), 'entry')
+        _adoption_keys(entry, ('id', 'status', 'neutral', 'eyecatch', 'selection_evidence'), 'entry',
+                       optional=('pose_set_overrides',))
         identity = entry['id']
         if not isinstance(identity, str) or identity not in NAMES or identity in adopted:
             raise ValueError(f'Unknown or duplicate explicit adoption identity: {identity}')
@@ -640,6 +646,21 @@ def _read_adoptions_locked(root, pending):
             if item['path'] in seen:
                 raise ValueError('Duplicate explicit selection evidence')
             seen.add(item['path'])
+        overrides = entry.get('pose_set_overrides', [])
+        if not isinstance(overrides, list):
+            raise ValueError('Explicit pose set overrides must be a list')
+        namespaces = set()
+        for override in overrides:
+            _adoption_keys(override, ('namespace', 'base_registration', 'base_registration_sha256',
+                                      'registration', 'registration_sha256', 'replacements'),
+                           identity + '/pose_set_override')
+            namespace = _stock_identifier(override['namespace'])
+            if namespace in namespaces:
+                raise ValueError('Duplicate explicit pose override namespace')
+            namespaces.add(namespace)
+            for field in ('base_registration', 'registration'):
+                _stock_owned_path(root, override[field], identity, pending)
+                source(override[field], override[field+'_sha256'])
         adopted[identity] = entry
     return adopted
 
@@ -790,6 +811,39 @@ def _apply_supplement_locked(root, characters, pending):
     return True
 
 
+def _merge_pose_set_override_locked(root, block, selected, neutral, identity, pending):
+    """Replace named source records only; retain the original clips and other poses."""
+    if (selected['namespace'] != block['namespace'] or block.get('pose_overrides')
+            or selected['base_registration'] != block['registration']
+            or selected['base_registration_sha256'] != block['registration_sha256']):
+        raise ValueError('Explicit pose override base namespace/registration changed')
+    replacements = selected['replacements']
+    if not isinstance(replacements, dict) or not replacements:
+        raise ValueError('Explicit pose override needs named previous selections')
+    for name, previous in replacements.items():
+        _stock_identifier(name)
+        _adoption_keys(previous, ('path', 'sha256'), identity+'/'+name+'/previous')
+        if name == 'neutral' or name not in block['poses'] or previous != {
+                key: block['poses'][name][key] for key in ('path', 'sha256')}:
+            raise ValueError('Explicit pose override previous selection changed or is neutral')
+    replacement = _supplement_pose_set_locked(root, selected, neutral, identity, pending)
+    if set(replacement['poses']) != set(replacements):
+        raise ValueError('Explicit pose override registration must contain exactly the replacement poses')
+    block['poses'].update(replacement['poses'])
+    block['pose_overrides'] = [selected]
+
+
+def _apply_pose_set_adoptions_locked(root, characters, adoptions, pending):
+    for character in characters:
+        for selected in adoptions.get(character['id'], {}).get('pose_set_overrides', []):
+            matches = [block for block in character.get('pose_sets', [])
+                       if block['namespace'] == selected['namespace']]
+            if len(matches) != 1:
+                raise ValueError('Explicit pose override requires one existing supplemental namespace')
+            _merge_pose_set_override_locked(root, matches[0], selected, character['neutral'],
+                                           character['id'], pending)
+
+
 def build_index(root):
     with reservation_snapshot(root) as root:
         return _build_index_locked(root)
@@ -931,6 +985,7 @@ def _build_index_locked(root):
             known.add(item['id'])
             characters.append(item)
     has_supplement = _apply_supplement_locked(root, characters, pending)
+    _apply_pose_set_adoptions_locked(root, characters, adoptions, pending)
     index = {
         'schema_version': 1, 'kind': 'portable-character-library-index',
         'path_base': 'library-root', 'guide': 'assets/library/README.md',
@@ -1199,6 +1254,7 @@ def _verify_locked(root):
         if not path.is_file() or path.stat().st_size != entry['bytes'] or sha(path) != entry['sha256']:
             raise ValueError(f'Missing or changed library file: {entry["path"]}')
     index = read(source_path(INDEX))
+    adoptions = _read_adoptions_locked(root, pending)
     frames = 0
     neutral_sources = set()
     for collection in index['source_collections']:
@@ -1257,6 +1313,9 @@ def _verify_locked(root):
                 frames += 1
         for keys in character.get('pose_sets', []):
             verified = _supplement_pose_set_locked(root, keys, neutral, character['id'], pending)
+            for selected in adoptions.get(character['id'], {}).get('pose_set_overrides', []):
+                if selected['namespace'] == keys['namespace']:
+                    _merge_pose_set_override_locked(root, verified, selected, neutral, character['id'], pending)
             if verified != keys:
                 raise ValueError('Selected supplemental pose set differs from its native registration')
             for pose_id, frame in keys['poses'].items():

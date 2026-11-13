@@ -1,0 +1,41 @@
+{
+  "reference_height_px": 1000.2941176470588,
+  "method": "One common calibrated reference for these two independent source originals: transfer mean middle-face width from fixed original neutral scale; never fit individual pose full-body height",
+  "reference_source": {
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/reactions-01.png",
+    "sha256": "2fd91d1c87f529fd8ecfa75fb1efdc7f3ee53749226a6fc3790eb4a17ef354fa"
+  },
+  "fixed_original_neutral_reference_height_px": 537,
+  "fixed_original_neutral_head_proxy_width_px": 331.5,
+  "new_pair_head_proxy_width_px": 617.5,
+  "formula": "537 * mean(new right head span, new left head span) / 331.5",
+  "input_measurements": [
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_right.png",
+      "sha256": "1550868904ba44bdb50a01ba0d04788e273f7fa5cb085339cea1d224cefa6daa",
+      "head_proxy_roi_px": [
+        0,
+        430,
+        1254,
+        620
+      ],
+      "alpha_threshold": 8,
+      "head_proxy_measurement": "maximum horizontal span in face middle band, excluding ears and shoulders",
+      "head_proxy_width_px": 618
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_left.png",
+      "sha256": "29857b4fcffcc56eb9a063b9a156b8f0ab16307fa9c852347fae167b6a88c76e",
+      "head_proxy_roi_px": [
+        0,
+        430,
+        1254,
+        620
+      ],
+      "alpha_threshold": 8,
+      "head_proxy_measurement": "maximum horizontal span in face middle band, excluding ears and shoulders",
+      "head_proxy_width_px": 617
+    }
+  ],
+  "projection_limit": "3/4 head width is a scale proxy, not a guarantee of identical projected full-body height. Both directions are visually checked against stand/air context."
+}

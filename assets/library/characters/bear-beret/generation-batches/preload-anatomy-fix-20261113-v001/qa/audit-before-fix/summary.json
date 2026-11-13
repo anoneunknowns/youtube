@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "status": "two-defects-confirmed-before-replacement",
+  "new_drawings_audited": 113,
+  "new_drawings_without_confirmed_visual_defect": 111,
+  "defects": [
+    {
+      "id": "BB-PRELOAD-LEFT",
+      "severity": "P1",
+      "character": "bear-beret",
+      "pose": "pond_preload_left",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_left.png",
+      "sha256": "05cf6ab90a71b68e5a4b405715a014d9092ebb84c36053988e450ff90de0b0a4",
+      "observation": "肩の後方に腕状突起が2本、胸前にも短い腕状突起が1本見える。三腕に読める解剖異常。",
+      "source_coordinates_xyxy": [
+        [
+          389,
+          342,
+          493,
+          414
+        ],
+        [
+          377,
+          362,
+          466,
+          453
+        ],
+        [
+          208,
+          383,
+          252,
+          448
+        ]
+      ],
+      "why_not_expression_or_projection": "後方に並ぶ2つの腕状突起と胸前の第3突起が単一姿勢内に同時存在する。頭の投影や表情変化で説明できず、肩高から生える尾としても不自然。正しく透過合成しても残り、原画自体にある。",
+      "comparison": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_preload_left.png",
+      "annotated_native_comparison": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/issue-bear-beret-pond_preload_left-native-annotated.png",
+      "root_independent_confirmation": "Root separately viewed both current PNGs and confirmed anatomical defect by collaboration message. This is an assistant audit, not user click/approval."
+    },
+    {
+      "id": "BB-PRELOAD-RIGHT",
+      "severity": "P1",
+      "character": "bear-beret",
+      "pose": "pond_preload_right",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_right.png",
+      "sha256": "a29e4d4e5b4874ff1c8acd8ef8e5b3ae2e6f098d1af3bb63c2b98091f777a655",
+      "observation": "肩の後方に腕状突起が2本、胸前にも短い腕状突起が1本見える。三腕に読める解剖異常。",
+      "source_coordinates_xyxy": [
+        [
+          117,
+          344,
+          238,
+          414
+        ],
+        [
+          142,
+          366,
+          270,
+          452
+        ],
+        [
+          361,
+          387,
+          391,
+          448
+        ]
+      ],
+      "why_not_expression_or_projection": "後方に並ぶ2つの腕状突起と胸前の第3突起が単一姿勢内に同時存在する。頭の投影や表情変化で説明できず、肩高から生える尾としても不自然。正しく透過合成しても残り、原画自体にある。",
+      "comparison": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_preload_right.png",
+      "annotated_native_comparison": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/issue-bear-beret-pond_preload_right-native-annotated.png",
+      "root_independent_confirmation": "Root separately viewed both current PNGs and confirmed anatomical defect by collaboration message. This is an assistant audit, not user click/approval."
+    }
+  ],
+  "records_correction": {
+    "character": "rabbit-flower",
+    "previous_report": "Six petals were previously reported and accepted as a variation.",
+    "fresh_observation": "All16 adopted poses and the reference have5 petals; previous six-petal report was a counting error.",
+    "independent_confirmation": "Root viewed the fresh native16-head comparison and independently confirmed5 petals."
+  },
+  "technical_checks": "113 body records including one previous-neutral alias plus1icon SHA/native-crop/current/public consistency verified; no alpha8 edge clipping.",
+  "limits": "Static native/light-dark/discrete-key review, not consumer app interpolation or final playback.",
+  "original_media_and_previous_qa_preserved": true
+}

@@ -1,0 +1,2822 @@
+{
+  "schema_version": 1,
+  "audit_id": "post-publication-audit-v001-small-cat",
+  "created_at_utc": "2026-11-13T14:26:39.767626+00:00",
+  "authorization": "read-only fresh image audit delegated by root; no generation, adoption, source modification, ledger change or Git operation",
+  "previous_qa_used_as_evidence": false,
+  "status": "static-image-pass",
+  "counts": {
+    "bear-small": 22,
+    "cat-patches": 16,
+    "pass": 38,
+    "issue": 0,
+    "needs_confirmation": 0
+  },
+  "conditions": {
+    "default_scene_px": [
+      1008,
+      567
+    ],
+    "base_bear_body_reference_height_px": 350,
+    "bear_small_scene_body_reference_px": 227.5,
+    "cat_scene_body_reference_px": 332.5,
+    "scene_ratio_is_separate_from_registration": true,
+    "light_background_rgb": [
+      248,
+      244,
+      234
+    ],
+    "dark_background_rgb": [
+      30,
+      38,
+      51
+    ],
+    "native_raw_sheets_viewed": 10,
+    "canonical_references_viewed": 3,
+    "fresh_scene_pose_pairs_viewed": 38,
+    "key_strips_viewed": 13,
+    "native1to1_extra_composites_viewed": [
+      "neutral",
+      "tap_pop",
+      "signature",
+      "idle_nap"
+    ],
+    "reference_comparison": "canonical standing reference alone measured by alpha8 body bbox; candidate poses use their registered per-sheet body reference, not per-pose bbox fit",
+    "additional_430_diagnostics": "generated earlier before actual default was clarified; not accepted as default scene or claimed as complete stress audit"
+  },
+  "scope_limits": [
+    "No live app was opened or tested. This is distinct from an image defect.",
+    "No interpolation, timing, final encoded video or added pond root trajectory was tested.",
+    "Static discrete keys alone do not prove smooth animation."
+  ],
+  "general_findings": [
+    "全38枚に顔/眼の破綻、手足の過不足・断裂、可視の透過汚れ、セル境界による本体の切れを確認せず。",
+    "小熊のscene0.65を身体referenceと分離。猫の頭斑/尾の身体側は維持。",
+    "低alpha境界画素(alpha0–2)や透過ビューの赤っぽい見え方だけを異常扱いせず、正しい明暗合成で判定。原画の清掃等は未実施。"
+  ],
+  "references": [
+    {
+      "character_id": "bear-small",
+      "reference": ".work/app-character-issues-20261113/references/latest/assets/characters/revisions/bear-small-neutral-outline-v5.png",
+      "sha256": "7c0352c5529d19c607ba4c7951787dfd89c6f14b6097a0dc193996b432806401",
+      "alpha8_standing_bbox_px": [
+        296,
+        179,
+        938,
+        1180
+      ],
+      "reference_height_px": 1001,
+      "reference_anchor": "bbox bottom midpoint diagnostic only, not adoption metadata",
+      "comparison_target_body_reference_px": 227.5
+    },
+    {
+      "character_id": "cat-patches",
+      "reference": ".work/app-character-issues-20261113/references/latest/assets/characters/revisions/cat-patches-neutral-outline-v5.png",
+      "sha256": "69506eaba26f4bd3a816933495880a56d6109a684d368fb110df907f77e50c18",
+      "alpha8_standing_bbox_px": [
+        253,
+        140,
+        992,
+        1151
+      ],
+      "reference_height_px": 1011,
+      "reference_anchor": "bbox bottom midpoint diagnostic only, not adoption metadata",
+      "comparison_target_body_reference_px": 332.5
+    }
+  ],
+  "poses": [
+    {
+      "character_id": "bear-small",
+      "pose_id": "neutral",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/neutral.png",
+      "sha256": "f27f494c82fef487243d00d84af8413a6f4c41874c68de54f307f533966a40b1",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-01.png",
+      "source_sheet_sha256": "bf5e24c0f7f27d49b2db5ee3a2b07c8df4d8a2f04f904fae5cfe95692c3ee34a",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 476.0,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47794117647058826,
+      "registered_anchor_px": [
+        320.0,
+        540
+      ],
+      "source_foot_point_px": [
+        320.0,
+        540
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/neutral-light.png",
+          "sha256": "e14b80b27c39f492f1dd5640ea11f24a3dc5b75519593e2681c09e390f1362c5"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/neutral-dark.png",
+          "sha256": "bb7f3ba955f913e5f86cbd5c66b6db4fd21f493e444edc970416f3a3ca0b8365"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        170,
+        64,
+        468,
+        541
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "通常姿参照と同じ楕円眼・白目・口形を保持。左右2腕2脚、輪郭の破断なし。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 320.5,
+        "native_declared_support_x": 320.0,
+        "native_dx": 0.5,
+        "scene_dx_px": 0.23897058823529413,
+        "native_alpha8_bottom_y": 541,
+        "native_declared_drawn_foot_y": 540,
+        "native_dy": 1,
+        "scene_dy_px": 0.47794117647058826,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "blink",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/blink.png",
+      "sha256": "fcdee7bb1f6d17fc4031c61772da1412075221ca6a20451d1116d4a4a6b2ff30",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-01.png",
+      "source_sheet_sha256": "bf5e24c0f7f27d49b2db5ee3a2b07c8df4d8a2f04f904fae5cfe95692c3ee34a",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 476.0,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47794117647058826,
+      "registered_anchor_px": [
+        305.0,
+        541
+      ],
+      "source_foot_point_px": [
+        305.0,
+        541
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        23,
+        595,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/blink-light.png",
+          "sha256": "81e785d5335866d524eea58d15f56770d23b8b1f75d768a19402c00b2980184b"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/blink-dark.png",
+          "sha256": "9a8cce01017191b2c1a432bad22c01b28ef174a3429eb816c4693658afda482e"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        154,
+        64,
+        456,
+        541
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両眼を閉じる意図を確認。通常姿と頭部・体幹・足元の位置関係がつながり、眼以外の別部品化なし。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 305.5,
+        "native_declared_support_x": 305.0,
+        "native_dx": 0.5,
+        "scene_dx_px": 0.23897058823529413,
+        "native_alpha8_bottom_y": 541,
+        "native_declared_drawn_foot_y": 541,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "tap_down",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/tap_down.png",
+      "sha256": "c4bdd14b31856c52bed1658fdd4dbfa7f9a99c83dea378e5e9e6775c4421843c",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-01.png",
+      "source_sheet_sha256": "bf5e24c0f7f27d49b2db5ee3a2b07c8df4d8a2f04f904fae5cfe95692c3ee34a",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 476.0,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47794117647058826,
+      "registered_anchor_px": [
+        320.5,
+        544
+      ],
+      "source_foot_point_px": [
+        320.5,
+        544
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        71,
+        0,
+        605,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/tap_down-light.png",
+          "sha256": "86ad97facb64ae7a92eca78008656a079ddb95b5aa13ba18108a2154eea7d5a0"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/tap_down-dark.png",
+          "sha256": "c2b7bf20ca2ce1140635fc6b1b61071293bc62407ad0da8c51c451263fcb0f28"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        164,
+        109,
+        477,
+        545
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "膝を曲げて沈む姿勢。頭だけを縮める/胴体が消える変化ではなく、2腕2脚を識別できる。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 320.5,
+        "native_declared_support_x": 320.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 545,
+        "native_declared_drawn_foot_y": 544,
+        "native_dy": 1,
+        "scene_dy_px": 0.47794117647058826,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "tap_pop",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/tap_pop.png",
+      "sha256": "05ee24054c0a04076b06935186a723127c83927d2580e6194f8f0e7c402d1081",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-01.png",
+      "source_sheet_sha256": "bf5e24c0f7f27d49b2db5ee3a2b07c8df4d8a2f04f904fae5cfe95692c3ee34a",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 476.0,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47794117647058826,
+      "registered_anchor_px": [
+        304.0,
+        544
+      ],
+      "source_foot_point_px": [
+        304.0,
+        508
+      ],
+      "support_kind": "inferred-ground",
+      "alpha_bbox": [
+        1,
+        0,
+        607,
+        589
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/tap_pop-light.png",
+          "sha256": "ca3b70142ee628db9f01cc0c52840188311c7bfeda340458c4c971d70487977f"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/tap_pop-dark.png",
+          "sha256": "ce9a99ac41cea5d58f839194f9da49060e908d4de524136d761d7141d4d08647"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        135,
+        40,
+        481,
+        508
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両腕を開く反発姿勢。描画済みの浮きと登録の推定地面を区別。輪郭・眼・足の接続良好。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 303.5,
+        "native_declared_support_x": 304.0,
+        "native_dx": -0.5,
+        "scene_dx_px": -0.23897058823529413,
+        "native_alpha8_bottom_y": 508,
+        "native_declared_drawn_foot_y": 508,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "think",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/think.png",
+      "sha256": "00f2921faafeedd78a5c9cee88b51fdf2176d9f9f70882807267fd43249162de",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-02.png",
+      "source_sheet_sha256": "5a4957f3c8957af73a5f2719c7646a877203496986eaa13d895c9eee3d93cb92",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 471.26368159203975,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.48274460537984043,
+      "registered_anchor_px": [
+        332.0,
+        556
+      ],
+      "source_foot_point_px": [
+        332.0,
+        556
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        23,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/think-light.png",
+          "sha256": "a24a21e204ceb199011490f88dcb42ed6379809f4b1534978fddcb7f78ee8480"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/think-dark.png",
+          "sha256": "62e5e48cefe8225d2d01f286363c6b343956061fe0d3531d44215fb6b142d34e"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        166,
+        82,
+        482,
+        558
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "頭の傾きと上向きの視線が対応。白目と瞳の関係が読み取れ、手が顔へめり込む/余分な腕はない。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 332.0,
+        "native_declared_support_x": 332.0,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 558,
+        "native_declared_drawn_foot_y": 556,
+        "native_dy": 2,
+        "scene_dy_px": 0.9654892107596809,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "aha",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/aha.png",
+      "sha256": "1d0fabe586dc0293e0bbbcbf0aa88e2ae0e6e9839285a0201e331b855fa387e1",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-02.png",
+      "source_sheet_sha256": "5a4957f3c8957af73a5f2719c7646a877203496986eaa13d895c9eee3d93cb92",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 471.26368159203975,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.48274460537984043,
+      "registered_anchor_px": [
+        308.0,
+        556
+      ],
+      "source_foot_point_px": [
+        308.0,
+        556
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        20,
+        587,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/aha-light.png",
+          "sha256": "d9ebb38e25e91a6c4bcfc8c292d1271a9c08b4a1ec54d25c5dc76d2c8a0d261f"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/aha-dark.png",
+          "sha256": "9f158ab3c035b4a416d6d3be0a026fd1bea7e4cc805a4e67b5f92c1b679ba114"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        154,
+        82,
+        463,
+        558
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "片腕を上げるしぐさ。反対の腕・2脚と区別でき、口・眼の一貫性を保持。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 307.5,
+        "native_declared_support_x": 308.0,
+        "native_dx": -0.5,
+        "scene_dx_px": -0.24137230268992022,
+        "native_alpha8_bottom_y": 558,
+        "native_declared_drawn_foot_y": 556,
+        "native_dy": 2,
+        "scene_dy_px": 0.9654892107596809,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "success_ready",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/success_ready.png",
+      "sha256": "fe155bb2fdd3d7d33205c444192b56e06f4c4f925eb19620f339ea49aa0d5ec8",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-02.png",
+      "source_sheet_sha256": "5a4957f3c8957af73a5f2719c7646a877203496986eaa13d895c9eee3d93cb92",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 471.26368159203975,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.48274460537984043,
+      "registered_anchor_px": [
+        325.5,
+        557
+      ],
+      "source_foot_point_px": [
+        325.5,
+        557
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        7,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/success_ready-light.png",
+          "sha256": "31b48c8e534cc4eeb969bb9e0d8161f691eae8ea35b4f792799cae49cbcf476d"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/success_ready-dark.png",
+          "sha256": "732ef77ee7fa1fdc30b9b55be55eac081fd5bee530ab8e79e844a1aa5c70beaa"
+        }
+      },
+      "border_alpha_max": 2,
+      "alpha8_bbox": [
+        177,
+        137,
+        480,
+        559
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両手を体前へ寄せてしゃがむ準備姿勢。手足の数と接続が明瞭。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは2/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 326.0,
+        "native_declared_support_x": 325.5,
+        "native_dx": 0.5,
+        "scene_dx_px": 0.24137230268992022,
+        "native_alpha8_bottom_y": 559,
+        "native_declared_drawn_foot_y": 557,
+        "native_dy": 2,
+        "scene_dy_px": 0.9654892107596809,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "success_air",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/success_air.png",
+      "sha256": "8b6b22a644c0a0cf571b41de31ebee4106167c9cf2e04fb3348ba77ab7493e6a",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-02.png",
+      "source_sheet_sha256": "5a4957f3c8957af73a5f2719c7646a877203496986eaa13d895c9eee3d93cb92",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 471.26368159203975,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.48274460537984043,
+      "registered_anchor_px": [
+        288.0,
+        557
+      ],
+      "source_foot_point_px": [
+        288.0,
+        496
+      ],
+      "support_kind": "inferred-ground",
+      "alpha_bbox": [
+        0,
+        0,
+        599,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/success_air-light.png",
+          "sha256": "b99a2d2a8dba14217953b37c1f475fa4c179eaa6ea13b26e184bff649f185a60"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/success_air-dark.png",
+          "sha256": "de9b2b1e2c8ffca1cc01a2dbb92e60aead10b642769840fae300c0a8e86bdea7"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        140,
+        44,
+        475,
+        496
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両腕を開いて膝を曲げた空中姿勢。閉じ笑いの眼と口が対応し、二重輪郭・余分な脚なし。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 288.0,
+        "native_declared_support_x": 288.0,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 496,
+        "native_declared_drawn_foot_y": 496,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "success_land",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/success_land.png",
+      "sha256": "08532be8262201a706f09d7f13deb17291a2028fd252637de5e48e9f81470533",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-03.png",
+      "source_sheet_sha256": "563d4d9a53631ddbb4dc1f97a551b42ddbd55e9d819ab8211699b02b990f57ea",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 483.893864013267,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47014441992131273,
+      "registered_anchor_px": [
+        314.5,
+        562
+      ],
+      "source_foot_point_px": [
+        314.5,
+        562
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        47,
+        9,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/success_land-light.png",
+          "sha256": "01b21e32c3bb2d26473a7d1ed095573bc9a179a46d023935a3d0f3203c1b064c"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/success_land-dark.png",
+          "sha256": "17b86917f6421093676fae32a13025b9ad2785232a28d4870976de91453da8ce"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        139,
+        118,
+        492,
+        562
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両脚の屈曲による着地姿勢。前後キーのしゃがみ/浮き/通常姿への演技が読める。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 314.5,
+        "native_declared_support_x": 314.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 562,
+        "native_declared_drawn_foot_y": 562,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "oops",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/oops.png",
+      "sha256": "1205e9ef8538ab8fec8c7a715a39a2a11b4199842c0589748d5681e0f651e0d9",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-03.png",
+      "source_sheet_sha256": "563d4d9a53631ddbb4dc1f97a551b42ddbd55e9d819ab8211699b02b990f57ea",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 483.893864013267,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47014441992131273,
+      "registered_anchor_px": [
+        323.0,
+        563
+      ],
+      "source_foot_point_px": [
+        323.0,
+        563
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        1,
+        19,
+        621,
+        626
+      ],
+      "alpha_touches_cell_edge": false,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/oops-light.png",
+          "sha256": "0dc34e38a4299fe6282dbac8207e62b25f19e9e7ffce148367eff0685e968146"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/oops-dark.png",
+          "sha256": "05b2a6cda6c2668b7fe9900d8bf97f3edf25ec1f6be143d024a47d75814f0870"
+        }
+      },
+      "border_alpha_max": 0,
+      "alpha8_bbox": [
+        135,
+        78,
+        450,
+        565
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "首・体の傾きと驚き/戸惑いの手振りが対応。顔が別方向へ外れる等の破綻なし。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは0/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 322.5,
+        "native_declared_support_x": 323.0,
+        "native_dx": -0.5,
+        "scene_dx_px": -0.23507220996065636,
+        "native_alpha8_bottom_y": 565,
+        "native_declared_drawn_foot_y": 563,
+        "native_dy": 2,
+        "scene_dy_px": 0.9402888398426255,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "retry",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/retry.png",
+      "sha256": "b4ce9a97d3d6abe1d9d91e5a2bb619876304652ecf7a6eb8db9273a3de8f3df5",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-03.png",
+      "source_sheet_sha256": "563d4d9a53631ddbb4dc1f97a551b42ddbd55e9d819ab8211699b02b990f57ea",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 483.893864013267,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47014441992131273,
+      "registered_anchor_px": [
+        320.5,
+        543
+      ],
+      "source_foot_point_px": [
+        320.5,
+        543
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        0,
+        627,
+        603
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/retry-light.png",
+          "sha256": "4e4f39b5be69225e6ad3161ca1fd050aa754aededcfd527098c4045c35d4cdd0"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/retry-dark.png",
+          "sha256": "490a4452ce5191514932da2dd8072c04587e1d648ae98ce9164ead8a4d05f14e"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        166,
+        67,
+        478,
+        544
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "片腕を横へ伸ばす提案のしぐさ。もう片方の腕・2脚と一体化せず、輪郭が接続。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 321.0,
+        "native_declared_support_x": 320.5,
+        "native_dx": 0.5,
+        "scene_dx_px": 0.23507220996065636,
+        "native_alpha8_bottom_y": 544,
+        "native_declared_drawn_foot_y": 543,
+        "native_dy": 1,
+        "scene_dy_px": 0.47014441992131273,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "cheer",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/cheer.png",
+      "sha256": "3eef3641f57cf1c567ef09748962cf04e430c051c094bc8f343bfa9c0bd7a152",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-03.png",
+      "source_sheet_sha256": "563d4d9a53631ddbb4dc1f97a551b42ddbd55e9d819ab8211699b02b990f57ea",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 483.893864013267,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47014441992131273,
+      "registered_anchor_px": [
+        307.5,
+        543
+      ],
+      "source_foot_point_px": [
+        307.5,
+        543
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        1,
+        3,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/cheer-light.png",
+          "sha256": "de5f4c09d676227ad5fd925900e289764306197afce931029d07b8eaf2cbdaf9"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/cheer-dark.png",
+          "sha256": "c45950e59b3b85d73465caf2047f581cc6ab547e012c5943bcfc62603d237906"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        135,
+        67,
+        471,
+        545
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両腕を上げる応援のしぐさ。表情・足の支持と対応し、手足の増減なし。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 307.0,
+        "native_declared_support_x": 307.5,
+        "native_dx": -0.5,
+        "scene_dx_px": -0.23507220996065636,
+        "native_alpha8_bottom_y": 545,
+        "native_declared_drawn_foot_y": 543,
+        "native_dy": 2,
+        "scene_dy_px": 0.9402888398426255,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "signature",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/signature.png",
+      "sha256": "9d5943a570aa31e7842b59a9bb9f95b449fdcf76467e3f618f26aa0b5d655607",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-04.png",
+      "source_sheet_sha256": "afb58efab47893d87414bc22b9292d4c0759502482f19a6569418a384d41bcc9",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 484.68325041459366,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.46937871239701096,
+      "registered_anchor_px": [
+        331.5,
+        572
+      ],
+      "source_foot_point_px": [
+        331.5,
+        572
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        22,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/signature-light.png",
+          "sha256": "dedddbff21f4ede5895ace60ff0a7e2a070245ef2d9404435f097dea27d5d814"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/signature-dark.png",
+          "sha256": "f4ff61cb2cb913c6e26c3c710b0ddaada892d50f8368c3629a9182e783642365"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        165,
+        68,
+        498,
+        572
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "通常姿と別の固有しぐさとして顔・胴体・腕・脚の解剖関係を確認。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。 両腕を開いたつま先寄りの姿勢として読め、接地側の足元に大きな横ずれを確認せず。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 331.5,
+        "native_declared_support_x": 331.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 572,
+        "native_declared_drawn_foot_y": 572,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "idle_rest",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/idle_rest.png",
+      "sha256": "44d1cdf119e961723be24ea010b7066aea230259d8508bef07f1c7d4562949e2",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-04.png",
+      "source_sheet_sha256": "afb58efab47893d87414bc22b9292d4c0759502482f19a6569418a384d41bcc9",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 484.68325041459366,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.46937871239701096,
+      "registered_anchor_px": [
+        306.0,
+        579
+      ],
+      "source_foot_point_px": [
+        306.0,
+        579
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        3,
+        41,
+        589,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/idle_rest-light.png",
+          "sha256": "05237ee392714647539172b676c4a028e8ef745db681e7e25f3575cd83e5406d"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/idle_rest-dark.png",
+          "sha256": "349c1f430e48267c81c8d69a14ff15374f5b66d10ae4ec9d4efe86dbda3b71a3"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        146,
+        135,
+        457,
+        579
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "座位の待機。前へ見える左右の足と膝上の2腕を識別でき、胴体の消失・切れなし。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 305.5,
+        "native_declared_support_x": 306.0,
+        "native_dx": -0.5,
+        "scene_dx_px": -0.23468935619850548,
+        "native_alpha8_bottom_y": 579,
+        "native_declared_drawn_foot_y": 579,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "idle_stretch",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/idle_stretch.png",
+      "sha256": "76032f4c675a96bae15ee7a02fa01e57fd9d2fe9850ac48fe63256fcf27aaad1",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-04.png",
+      "source_sheet_sha256": "afb58efab47893d87414bc22b9292d4c0759502482f19a6569418a384d41bcc9",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 484.68325041459366,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.46937871239701096,
+      "registered_anchor_px": [
+        333.0,
+        560
+      ],
+      "source_foot_point_px": [
+        333.0,
+        560
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        1,
+        623,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/idle_stretch-light.png",
+          "sha256": "3df1605e146e7425e73aad6c0db6c02aca5ad7f68c923e96d320264e75a4ff39"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/idle_stretch-dark.png",
+          "sha256": "1d02c098913f1c8e3fd12368d16d6bfc61830293acef8095aaf558abdccf9e2c"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        151,
+        106,
+        499,
+        560
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "座位を維持して両腕を上げる伸び。足元と体格がidle_restへつながる。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 332.5,
+        "native_declared_support_x": 333.0,
+        "native_dx": -0.5,
+        "scene_dx_px": -0.23468935619850548,
+        "native_alpha8_bottom_y": 560,
+        "native_declared_drawn_foot_y": 560,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "idle_nap",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/idle_nap.png",
+      "sha256": "bfd084c1b700b64954233df45372a2d490d29dac402a32ee7e1475cd874b8cf5",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-04.png",
+      "source_sheet_sha256": "afb58efab47893d87414bc22b9292d4c0759502482f19a6569418a384d41bcc9",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 484.68325041459366,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.46937871239701096,
+      "registered_anchor_px": [
+        314.0,
+        562
+      ],
+      "source_foot_point_px": [
+        314.0,
+        562
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        7,
+        0,
+        609,
+        611
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/idle_nap-light.png",
+          "sha256": "9c62826ef318383b4cc8dd8571778999341ead1bd8a5ecebc37f619f4d95a03c"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/idle_nap-dark.png",
+          "sha256": "bb4325cf0e61387e29c45415d6e78415ccd98899d235d5a7da948f3078faf8d8"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        133,
+        104,
+        451,
+        562
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "座位で頭を傾けて閉眼。傾きに追随する眼/口と体の関係、2腕2脚を確認。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 314.0,
+        "native_declared_support_x": 314.0,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 562,
+        "native_declared_drawn_foot_y": 562,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "pond_stand_right",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/pond_stand_right.png",
+      "sha256": "84ff1790c5f9594128d6b2c968d5946d3080cf5ccba3ed4a1203291870d623a6",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-05-pond.png",
+      "source_sheet_sha256": "7c5554f1d404d713fd7ea56d543cda46d529e3ad8bc6b02bbe2068b64c255248",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 474.4212271973466,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47953166291474997,
+      "registered_anchor_px": [
+        318.0,
+        579
+      ],
+      "source_foot_point_px": [
+        318.0,
+        579
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        19,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_stand_right-light.png",
+          "sha256": "549ee8fc42777ba763ea09c9ed5e4de05e5f9b6d8f90e20c8a94e8905f24a1fb"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_stand_right-dark.png",
+          "sha256": "ac6390b26012d68379557b983c406aefb1c20ed97a026c046a981adc74d8950a"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        175,
+        71,
+        478,
+        579
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "右向き3/4投影の立位。遠側眼・口元・前後の腕と脚の投影を確認。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 318.5,
+        "native_declared_support_x": 318.0,
+        "native_dx": 0.5,
+        "scene_dx_px": 0.23976583145737498,
+        "native_alpha8_bottom_y": 579,
+        "native_declared_drawn_foot_y": 579,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "pond_air_right",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/pond_air_right.png",
+      "sha256": "226f5594a864c50645c995cf991ac6dd52dad59bd5f413d6386246031d4823a4",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-05-pond.png",
+      "source_sheet_sha256": "7c5554f1d404d713fd7ea56d543cda46d529e3ad8bc6b02bbe2068b64c255248",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 474.4212271973466,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47953166291474997,
+      "registered_anchor_px": [
+        229.0,
+        523
+      ],
+      "source_foot_point_px": [
+        229.0,
+        523
+      ],
+      "support_kind": "drawn-airborne-foot",
+      "alpha_bbox": [
+        0,
+        19,
+        609,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_air_right-light.png",
+          "sha256": "8a31e49f78496e5fe980a12456bc31af9967df93485968339d9d69ea65478f47"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_air_right-dark.png",
+          "sha256": "00d4fde048dccd4409f7e494197b72e6b7b40566ef57a726c0785c4fb6007130"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        157,
+        66,
+        470,
+        523
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "右向き跳躍の空中原画。両腕を前へ伸ばし2脚を曲げる。足支点へ追加する場面移動は別検査。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 229.0,
+        "native_declared_support_x": 229.0,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 523,
+        "native_declared_drawn_foot_y": 523,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "pond_land_right",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/pond_land_right.png",
+      "sha256": "dda8b522a38526a26daa6888f96d8e3204f666f3a3b97ae9b178cbc82fe1ed76",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-05-pond.png",
+      "source_sheet_sha256": "7c5554f1d404d713fd7ea56d543cda46d529e3ad8bc6b02bbe2068b64c255248",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 474.4212271973466,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47953166291474997,
+      "registered_anchor_px": [
+        307.0,
+        567
+      ],
+      "source_foot_point_px": [
+        307.0,
+        567
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_land_right-light.png",
+          "sha256": "f96cfda3e45e225c55ee39c778dea0454c8fdccd798b6f9a46f29d4b3e62cb9e"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_land_right-dark.png",
+          "sha256": "b12a043a33a4cf556fc4eabd01985c40fe8f1afdd8b16e40962bd8e82a7b0bc4"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        164,
+        105,
+        512,
+        567
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "右向き3/4投影の着地しゃがみ。顔と胴体、前後2腕2脚がつながる。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 307.5,
+        "native_declared_support_x": 307.0,
+        "native_dx": 0.5,
+        "scene_dx_px": 0.23976583145737498,
+        "native_alpha8_bottom_y": 567,
+        "native_declared_drawn_foot_y": 567,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "pond_air_left",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/pond_air_left.png",
+      "sha256": "523f8c80f9ed90bdfa215be080d4daae323c1328ae01267e25aa1c0277d57d81",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-05-pond.png",
+      "source_sheet_sha256": "7c5554f1d404d713fd7ea56d543cda46d529e3ad8bc6b02bbe2068b64c255248",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 474.4212271973466,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.47953166291474997,
+      "registered_anchor_px": [
+        368.0,
+        506
+      ],
+      "source_foot_point_px": [
+        368.0,
+        506
+      ],
+      "support_kind": "drawn-airborne-foot",
+      "alpha_bbox": [
+        0,
+        0,
+        613,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_air_left-light.png",
+          "sha256": "8520042e472b47ce9bd61c9349330a29b7649da28e20e343e27e2f3f4d1e4fc4"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_air_left-dark.png",
+          "sha256": "793ee4aff61bedf32cb06349eaebd0b51be438d14c1e8af5b0adf2f756fa9732"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        129,
+        67,
+        461,
+        506
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "左向き投影の空中原画。頭の向きに合う眼/口、2腕2脚・後方の尾を確認。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 367.5,
+        "native_declared_support_x": 368.0,
+        "native_dx": -0.5,
+        "scene_dx_px": -0.23976583145737498,
+        "native_alpha8_bottom_y": 506,
+        "native_declared_drawn_foot_y": 506,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "pond_stand_left",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/pond_stand_left.png",
+      "sha256": "510a1743b08de78322feb75dd576035e0275598994730fed472b2c73832a3eb2",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-06-pond.png",
+      "source_sheet_sha256": "d7e32664decb36c51aeb5798d39b849ceaccab18259c0e1a8e5cc79276323989",
+      "native_size": [
+        887,
+        887
+      ],
+      "registered_reference_height_px": 650.4543946932006,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.3497554968589378,
+      "registered_anchor_px": [
+        466.0,
+        794
+      ],
+      "source_foot_point_px": [
+        466.0,
+        794
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        23,
+        883,
+        815
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_stand_left-light.png",
+          "sha256": "0d439ded1a1375210dc931dbb297d80f5480fecca756a00ffdfe9cf9c0115654"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_stand_left-dark.png",
+          "sha256": "4862a41e873ee62b44c7f5ab61bf0d75831f393f9b657c5dc0fbf9301015f3fd"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        229,
+        108,
+        640,
+        794
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "左向き3/4立位。887セルの登録reference650.454を使い、他シートの476を代用していない。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 463.5,
+        "native_declared_support_x": 466.0,
+        "native_dx": -2.5,
+        "scene_dx_px": -0.8743887421473445,
+        "native_alpha8_bottom_y": 794,
+        "native_declared_drawn_foot_y": 794,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "bear-small",
+      "pose_id": "pond_land_left",
+      "path": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/poses/pond_land_left.png",
+      "sha256": "486119f620cec8187cefd594f373afec86a2ff8e7d414f62446836abd6a126f8",
+      "source_sheet": "assets/library/characters/bear-small/generation-batches/app-stock-20261113-v001/prepared-v003/raw/sheet-06-pond.png",
+      "source_sheet_sha256": "d7e32664decb36c51aeb5798d39b849ceaccab18259c0e1a8e5cc79276323989",
+      "native_size": [
+        887,
+        887
+      ],
+      "registered_reference_height_px": 650.4543946932006,
+      "scene_relative_scale": 0.65,
+      "scene_target_reference_height_px": 227.5,
+      "display_scale": 0.3497554968589378,
+      "registered_anchor_px": [
+        435.5,
+        791
+      ],
+      "source_foot_point_px": [
+        435.5,
+        791
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        1,
+        8,
+        849,
+        863
+      ],
+      "alpha_touches_cell_edge": false,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_land_left-light.png",
+          "sha256": "7d7ca418ebec749fc77ad7787da2bbf413bf50e4a6413335f5ee6f2589813abd"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/bear-small/pond_land_left-dark.png",
+          "sha256": "3ffdd9af2a081629e5d7bb5515a7542ca8c3cf63de7e72b25454241949ee1209"
+        }
+      },
+      "border_alpha_max": 0,
+      "alpha8_bbox": [
+        182,
+        145,
+        620,
+        791
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "左向き3/4投影の着地しゃがみ。887セルの共通referenceを維持し、足元・前後姿勢を確認。 帽子・赤い頬を追加せず、淡クリーム色の身体と茶輪郭、通常姿の同一性を保持。",
+      "visible_alpha_findings": "セル端の最大alphaは0/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 434.5,
+        "native_declared_support_x": 435.5,
+        "native_dx": -1.0,
+        "scene_dx_px": -0.3497554968589378,
+        "native_alpha8_bottom_y": 791,
+        "native_declared_drawn_foot_y": 791,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "neutral",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/neutral.png",
+      "sha256": "0a2333e41abc965696a96e20df17902ec9d857810c5c0fccfc041e499fe55c6b",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-01.png",
+      "source_sheet_sha256": "411abdda6b3a8e09d35f24ba5e6175d36ab99e18a89868aeaad99cc9421bdf81",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 531.0,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6261770244821092,
+      "registered_anchor_px": [
+        333.0,
+        574
+      ],
+      "source_foot_point_px": [
+        333.0,
+        574
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/neutral-light.png",
+          "sha256": "08e331ba2b62d47fbda51fec91a04dd2f62d13ba8ceb242e4fed4366886633af"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/neutral-dark.png",
+          "sha256": "47b8d9fdce6e406ace700cf4e86a0f46248ba5532a7b148b1b8503f0d9149a6a"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        144,
+        42,
+        527,
+        576
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "通常姿参照と同じ楕円眼・白目・口形を保持。左右2腕2脚、輪郭の破断なし。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 333.0,
+        "native_declared_support_x": 333.0,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 576,
+        "native_declared_drawn_foot_y": 574,
+        "native_dy": 2,
+        "scene_dy_px": 1.2523540489642184,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "blink",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/blink.png",
+      "sha256": "8d313d96dd5dfa05ce25d945699f2b87604d0105186269a07f2d998c404169fc",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-01.png",
+      "source_sheet_sha256": "411abdda6b3a8e09d35f24ba5e6175d36ab99e18a89868aeaad99cc9421bdf81",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 531.0,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6261770244821092,
+      "registered_anchor_px": [
+        293.5,
+        574
+      ],
+      "source_foot_point_px": [
+        293.5,
+        574
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        1,
+        17,
+        609,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/blink-light.png",
+          "sha256": "f9ed1764b22a22ce89916b5b45919cd4447a7ded7652eda4586891ba5b4b8729"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/blink-dark.png",
+          "sha256": "738c9fff0abdd3b8cc3e1a62bf48af34a834cce69df1066501824b11e870fd3a"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        104,
+        42,
+        487,
+        576
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両眼を閉じる意図を確認。通常姿と頭部・体幹・足元の位置関係がつながり、眼以外の別部品化なし。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 293.5,
+        "native_declared_support_x": 293.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 576,
+        "native_declared_drawn_foot_y": 574,
+        "native_dy": 2,
+        "scene_dy_px": 1.2523540489642184,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "tap_down",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/tap_down.png",
+      "sha256": "b57a8062aac9445fdda02ff7b7c5ec37a1b7eeaee575e2f56d8af3e974b1873c",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-01.png",
+      "source_sheet_sha256": "411abdda6b3a8e09d35f24ba5e6175d36ab99e18a89868aeaad99cc9421bdf81",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 531.0,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6261770244821092,
+      "registered_anchor_px": [
+        333.0,
+        555
+      ],
+      "source_foot_point_px": [
+        333.0,
+        555
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/tap_down-light.png",
+          "sha256": "d252148e9f685148c83521285c0b22ab355e4b60d982febc6d8714861755c981"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/tap_down-dark.png",
+          "sha256": "8ae5729cba9c0bfe4c376b3ee8fdf5768bcce7b5c891cf0fe41cfff330719b1a"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        144,
+        61,
+        526,
+        558
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "膝を曲げて沈む姿勢。頭だけを縮める/胴体が消える変化ではなく、2腕2脚を識別できる。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 333.0,
+        "native_declared_support_x": 333.0,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 558,
+        "native_declared_drawn_foot_y": 555,
+        "native_dy": 3,
+        "scene_dy_px": 1.8785310734463276,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "tap_pop",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/tap_pop.png",
+      "sha256": "d0a7cc5ae483dded0e28df59656b5cdad5717cb9749fe851317da0babf80c1f6",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-01.png",
+      "source_sheet_sha256": "411abdda6b3a8e09d35f24ba5e6175d36ab99e18a89868aeaad99cc9421bdf81",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 531.0,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6261770244821092,
+      "registered_anchor_px": [
+        292.5,
+        574
+      ],
+      "source_foot_point_px": [
+        292.5,
+        555
+      ],
+      "support_kind": "inferred-ground",
+      "alpha_bbox": [
+        1,
+        0,
+        611,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/tap_pop-light.png",
+          "sha256": "6ce558a5635beb486e6e8e22994bbdd2bbf0a274e58c93d1aae6f122165d64b8"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/tap_pop-dark.png",
+          "sha256": "4b776b62567ef962b5b7d30ced3862a229c42bc102bec5577b6996a998db90b3"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        104,
+        18,
+        498,
+        557
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両腕を開く反発姿勢。描画済みの浮きと登録の推定地面を区別。輪郭・眼・足の接続良好。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 292.5,
+        "native_declared_support_x": 292.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 557,
+        "native_declared_drawn_foot_y": 555,
+        "native_dy": 2,
+        "scene_dy_px": 1.2523540489642184,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "think",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/think.png",
+      "sha256": "3309f7d1c7c5b5fb18f701a2243ea8891f005cb4c2e6912abfb12dd5f574508f",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-02.png",
+      "source_sheet_sha256": "0a9889dc62c2a111330a181ca5e3bd36b563e71d74fc9fbad537fe9f37a9a61e",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 521.3454545454546,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6377728953058519,
+      "registered_anchor_px": [
+        342.5,
+        574
+      ],
+      "source_foot_point_px": [
+        342.5,
+        574
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        38,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/think-light.png",
+          "sha256": "28f0e5674ee107c920558265b6031de8ba4271c490c54e53cb3a98b68aac8cee"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/think-dark.png",
+          "sha256": "706c6749f230c442a6cd982d5ecddfcf232000fc4aceb123cd64e961c19f39a9"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        153,
+        41,
+        523,
+        576
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "頭の傾きと上向きの視線が対応。白目と瞳の関係が読み取れ、手が顔へめり込む/余分な腕はない。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 342.5,
+        "native_declared_support_x": 342.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 576,
+        "native_declared_drawn_foot_y": 574,
+        "native_dy": 2,
+        "scene_dy_px": 1.2755457906117038,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "aha",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/aha.png",
+      "sha256": "297c892f9dc245f5618dd8467f537d7cf7b2a430d866ff6238ffd8ad16c1bef8",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-02.png",
+      "source_sheet_sha256": "0a9889dc62c2a111330a181ca5e3bd36b563e71d74fc9fbad537fe9f37a9a61e",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 521.3454545454546,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6377728953058519,
+      "registered_anchor_px": [
+        283.5,
+        573
+      ],
+      "source_foot_point_px": [
+        283.5,
+        573
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        1,
+        23,
+        579,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/aha-light.png",
+          "sha256": "7b1e01efdf893869d2c2a586153a556fde083f1d28ee1b83288110513d2b3c01"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/aha-dark.png",
+          "sha256": "2727afb067fab4d3f5be2392393687645d4ec35777e248eeab947f35624ce968"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        99,
+        52,
+        481,
+        576
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "片腕を上げるしぐさ。反対の腕・2脚と区別でき、口・眼の一貫性を保持。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 283.5,
+        "native_declared_support_x": 283.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 576,
+        "native_declared_drawn_foot_y": 573,
+        "native_dy": 3,
+        "scene_dy_px": 1.9133186859175557,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "success_ready",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/success_ready.png",
+      "sha256": "f3f36b63dab61884069718517f1fe61c9c3b7c2041e477ed358d23cbcbf08d55",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-02.png",
+      "source_sheet_sha256": "0a9889dc62c2a111330a181ca5e3bd36b563e71d74fc9fbad537fe9f37a9a61e",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 521.3454545454546,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6377728953058519,
+      "registered_anchor_px": [
+        330.5,
+        563
+      ],
+      "source_foot_point_px": [
+        330.5,
+        563
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        37,
+        1,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/success_ready-light.png",
+          "sha256": "6a36246caeeae8d9a7aae451ba78f7108454c46a24751aec5a0d71c8a2ca90ee"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/success_ready-dark.png",
+          "sha256": "9afe73cebc9683890a4663609b693cb5a880a03c3fe911f410060f8fbd47c6d2"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        137,
+        102,
+        528,
+        563
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両手を体前へ寄せてしゃがむ準備姿勢。手足の数と接続が明瞭。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 330.5,
+        "native_declared_support_x": 330.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 563,
+        "native_declared_drawn_foot_y": 563,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "success_air",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/success_air.png",
+      "sha256": "4a05d2539df9ad040af9c55c6f55993ca4c4cd8c5afab140af0ccb35f18dcc3b",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-02.png",
+      "source_sheet_sha256": "0a9889dc62c2a111330a181ca5e3bd36b563e71d74fc9fbad537fe9f37a9a61e",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 521.3454545454546,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6377728953058519,
+      "registered_anchor_px": [
+        261.5,
+        574
+      ],
+      "source_foot_point_px": [
+        261.5,
+        493
+      ],
+      "support_kind": "inferred-ground",
+      "alpha_bbox": [
+        1,
+        3,
+        617,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/success_air-light.png",
+          "sha256": "5288e200b227f87ddfcdadc54afb6041768371dff33dd7ee72d95593772bb68c"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/success_air-dark.png",
+          "sha256": "e127bd4cfaed69606ea228ffc949fa9f6baf17da4b947eb0089063ef9e4b4e2d"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        96,
+        10,
+        475,
+        494
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両腕を開いて膝を曲げた空中姿勢。閉じ笑いの眼と口が対応し、二重輪郭・余分な脚なし。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 261.5,
+        "native_declared_support_x": 261.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 494,
+        "native_declared_drawn_foot_y": 493,
+        "native_dy": 1,
+        "scene_dy_px": 0.6377728953058519,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "success_land",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/success_land.png",
+      "sha256": "81a3212b36d8066dbd1d7827794ad9e1a4e3687cb31d96aa7c1c44290c90dda0",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-03.png",
+      "source_sheet_sha256": "c4d3d123ee1d976a3776ee729b5c25dd1a92c862527c34cfd708644408030d25",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 493.9909090909091,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6730893097038959,
+      "registered_anchor_px": [
+        321.5,
+        576
+      ],
+      "source_foot_point_px": [
+        321.5,
+        576
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        49,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/success_land-light.png",
+          "sha256": "71d5429d2729f1f58e5cc36a94e68e87370600acca282c5a3b72a608d0e9fdf1"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/success_land-dark.png",
+          "sha256": "0764d45f95c043d8de2f9569a38fe46a2087d8111273b8c232beafc0ae9f386d"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        141,
+        88,
+        502,
+        577
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両脚の屈曲による着地姿勢。前後キーのしゃがみ/浮き/通常姿への演技が読める。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 321.5,
+        "native_declared_support_x": 321.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 577,
+        "native_declared_drawn_foot_y": 576,
+        "native_dy": 1,
+        "scene_dy_px": 0.6730893097038959,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "oops",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/oops.png",
+      "sha256": "55b210f55825e24c8a2811e00787493c27c742529e9b452a259e64e71603591f",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-03.png",
+      "source_sheet_sha256": "c4d3d123ee1d976a3776ee729b5c25dd1a92c862527c34cfd708644408030d25",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 493.9909090909091,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6730893097038959,
+      "registered_anchor_px": [
+        256.5,
+        576
+      ],
+      "source_foot_point_px": [
+        256.5,
+        576
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        13,
+        52,
+        607,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/oops-light.png",
+          "sha256": "2b017835e9ca0c0cca52c7ff6943d45906080904d453cb0c3a11e3c6ce50ae3c"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/oops-dark.png",
+          "sha256": "87ed26f82888aa6e19f485347e5d2573bb9f6d7f1a41e13054d1392edd0918c2"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        106,
+        73,
+        456,
+        577
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "首・体の傾きと驚き/戸惑いの手振りが対応。顔が別方向へ外れる等の破綻なし。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 256.5,
+        "native_declared_support_x": 256.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 577,
+        "native_declared_drawn_foot_y": 576,
+        "native_dy": 1,
+        "scene_dy_px": 0.6730893097038959,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "retry",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/retry.png",
+      "sha256": "19f97d62c01ba343e00a8c45840054ec58560cf2921cc1462c879a647b6b5568",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-03.png",
+      "source_sheet_sha256": "c4d3d123ee1d976a3776ee729b5c25dd1a92c862527c34cfd708644408030d25",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 493.9909090909091,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6730893097038959,
+      "registered_anchor_px": [
+        321.5,
+        553
+      ],
+      "source_foot_point_px": [
+        321.5,
+        553
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        43,
+        22,
+        627,
+        604
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/retry-light.png",
+          "sha256": "747dceeadff5637bdc124ee0efd4f69710a1dcc85f02a6055fc2cd5d3b77b4a4"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/retry-dark.png",
+          "sha256": "4f4706915595dde00484cd302aedb01d3a1cd22600bd535ec9281bc299086c39"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        145,
+        45,
+        505,
+        554
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "片腕を横へ伸ばす提案のしぐさ。もう片方の腕・2脚と一体化せず、輪郭が接続。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 321.5,
+        "native_declared_support_x": 321.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 554,
+        "native_declared_drawn_foot_y": 553,
+        "native_dy": 1,
+        "scene_dy_px": 0.6730893097038959,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "cheer",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/cheer.png",
+      "sha256": "699b98dd3c2a07e543345b206c0c55f23a05152d9d2dc900c11cded3d30b1121",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/reactions-03.png",
+      "source_sheet_sha256": "c4d3d123ee1d976a3776ee729b5c25dd1a92c862527c34cfd708644408030d25",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 493.9909090909091,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6730893097038959,
+      "registered_anchor_px": [
+        277.0,
+        553
+      ],
+      "source_foot_point_px": [
+        277.0,
+        553
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        1,
+        9,
+        579,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/cheer-light.png",
+          "sha256": "bb724354011f7ed4441558c20414831d69cb228f672cc4b18b64cb7f9da37c31"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/cheer-dark.png",
+          "sha256": "8cf703b3227b7785a00a6fd5f9b39028971369b44c2a7b000b37c8d42dccda68"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        101,
+        33,
+        459,
+        554
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "両腕を上げる応援のしぐさ。表情・足の支持と対応し、手足の増減なし。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。 片脚を上げ、他方の脚を支持側とする演技。両脚接地へ無理に合わせていない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 277.0,
+        "native_declared_support_x": 277.0,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 554,
+        "native_declared_drawn_foot_y": 553,
+        "native_dy": 1,
+        "scene_dy_px": 0.6730893097038959,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "signature",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/signature.png",
+      "sha256": "579259db109dc022593e9610391cf52b1bf1fac2b02bbcb84af5820e878a21b6",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/idle-01.png",
+      "source_sheet_sha256": "ab071cfb0bd2e193ddc17658e669fae29c75dfa5b2b4a5ed1cd28f74893d945e",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 539.85,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6159118273594517,
+      "registered_anchor_px": [
+        329.0,
+        593
+      ],
+      "source_foot_point_px": [
+        329.0,
+        593
+      ],
+      "support_kind": "drawn-ground-contact",
+      "alpha_bbox": [
+        0,
+        32,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/signature-light.png",
+          "sha256": "4340127bb5d7885cefca576eceb28dd8f0957a72d9f88580e4bda6122f7ea227"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/signature-dark.png",
+          "sha256": "bf238da3d0d8dcaf6255342f93e2d0899407d6cacd331e70700e47698ae88c0a"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        150,
+        35,
+        539,
+        594
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "通常姿と別の固有しぐさとして顔・胴体・腕・脚の解剖関係を確認。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。 尾を身体の右側から前へ抱えるしぐさ。右側の丸い手、体前の左腕、長い尾を区別し、3本腕ではない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 329.0,
+        "native_declared_support_x": 329.0,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 594,
+        "native_declared_drawn_foot_y": 593,
+        "native_dy": 1,
+        "scene_dy_px": 0.6159118273594517,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "idle_rest",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/idle_rest.png",
+      "sha256": "12d3e5e7de32b4a03c72f5c5233df02c1ffb822247b54d4b53aa902e8d9f1172",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/idle-01.png",
+      "source_sheet_sha256": "ab071cfb0bd2e193ddc17658e669fae29c75dfa5b2b4a5ed1cd28f74893d945e",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 539.85,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6159118273594517,
+      "registered_anchor_px": [
+        285.5,
+        599
+      ],
+      "source_foot_point_px": [
+        285.5,
+        599
+      ],
+      "support_kind": "body-contact",
+      "alpha_bbox": [
+        0,
+        32,
+        591,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/idle_rest-light.png",
+          "sha256": "b9947487d196940511fc8f07652858398cffe773f5d9cf32b38f92977ba3cf8c"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/idle_rest-dark.png",
+          "sha256": "79d1791adaf058f5c18cd58e4b3a0f2c3897733ae1e8276a4e2e32ff6ce98a36"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        97,
+        102,
+        491,
+        601
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "座位の待機。前へ見える左右の足と膝上の2腕を識別でき、胴体の消失・切れなし。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 285.5,
+        "native_declared_support_x": 285.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 601,
+        "native_declared_drawn_foot_y": 599,
+        "native_dy": 2,
+        "scene_dy_px": 1.2318236547189034,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "idle_stretch",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/idle_stretch.png",
+      "sha256": "813e9e8cdb16c95bbdeb0c9352cf32b2a466458292e93ce29b08cb3e34b431fa",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/idle-01.png",
+      "source_sheet_sha256": "ab071cfb0bd2e193ddc17658e669fae29c75dfa5b2b4a5ed1cd28f74893d945e",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 539.85,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6159118273594517,
+      "registered_anchor_px": [
+        321.5,
+        567
+      ],
+      "source_foot_point_px": [
+        321.5,
+        567
+      ],
+      "support_kind": "body-contact",
+      "alpha_bbox": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/idle_stretch-light.png",
+          "sha256": "7102275a4fb65ec96af1ff683c599ed89cde2e15be428af8fd8b2456880b18eb"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/idle_stretch-dark.png",
+          "sha256": "ab11e55dbe58fe2eec7c30fa9cc149e27a334b3788696f80ec8a5921c3d0892e"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        140,
+        58,
+        536,
+        570
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "座位を維持して両腕を上げる伸び。足元と体格がidle_restへつながる。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 321.5,
+        "native_declared_support_x": 321.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 570,
+        "native_declared_drawn_foot_y": 567,
+        "native_dy": 3,
+        "scene_dy_px": 1.8477354820783551,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    },
+    {
+      "character_id": "cat-patches",
+      "pose_id": "idle_nap",
+      "path": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/poses/idle_nap.png",
+      "sha256": "42bce0131962626d143578a257049311d04f142dbbea45d33cbf26512898ed62",
+      "source_sheet": "assets/library/characters/cat-patches/generation-batches/app-stock-20261113-v001/prepared-v001/raw/idle-01.png",
+      "source_sheet_sha256": "ab071cfb0bd2e193ddc17658e669fae29c75dfa5b2b4a5ed1cd28f74893d945e",
+      "native_size": [
+        627,
+        627
+      ],
+      "registered_reference_height_px": 539.85,
+      "scene_relative_scale": 0.95,
+      "scene_target_reference_height_px": 332.5,
+      "display_scale": 0.6159118273594517,
+      "registered_anchor_px": [
+        286.5,
+        570
+      ],
+      "source_foot_point_px": [
+        286.5,
+        570
+      ],
+      "support_kind": "body-contact",
+      "alpha_bbox": [
+        1,
+        1,
+        611,
+        627
+      ],
+      "alpha_touches_cell_edge": true,
+      "cell_equals_raw_crop": true,
+      "composites": {
+        "light": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/idle_nap-light.png",
+          "sha256": "1cfbcc547fda386116fe9c99466598214a28d53322101d804e9a41fd3f51fac2"
+        },
+        "dark": {
+          "path": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/scenes/cat-patches/idle_nap-dark.png",
+          "sha256": "f0b98fe2404c4727890b5d754198ea0f158631962812631b1ba9a717ff04c755"
+        }
+      },
+      "border_alpha_max": 1,
+      "alpha8_bbox": [
+        86,
+        75,
+        488,
+        570
+      ],
+      "status": "pass",
+      "review_scope": "native sheet + fresh light/dark 1008x567 registered scene + discrete key poses",
+      "visual_findings": "座位で頭を傾けて閉眼。傾きに追随する眼/口と体の関係、2腕2脚を確認。 正面の画面左orange/右brownの耳頭斑と画面右の尾を保持。傾きによる投影変化を左右反転と混同していない。",
+      "visible_alpha_findings": "セル端の最大alphaは1/255。明暗合成で可視の汚れ・赤縁・身体の切れを確認せず。alpha8本体描画はセル内部に収まる。値の存在だけで不良にはしていない。",
+      "support_observer": {
+        "method": "independent diagnostic alpha128 bbox midpoint within native source_foot_y-12..+3, offset is an observation, not a replacement anchor",
+        "native_observed_band_x": 286.5,
+        "native_declared_support_x": 286.5,
+        "native_dx": 0.0,
+        "scene_dx_px": 0.0,
+        "native_alpha8_bottom_y": 570,
+        "native_declared_drawn_foot_y": 570,
+        "native_dy": 0,
+        "scene_dy_px": 0.0,
+        "assessment": "pass by anatomical visual review; observer offsets retained rather than force-centering"
+      },
+      "crop_and_hash_check": "pass; PNG RGBA pixels equal declared raw cell crop; source hashes fixed in this record"
+    }
+  ],
+  "clips": [
+    {
+      "character_id": "bear-small",
+      "clip": "tap",
+      "sequence": [
+        "neutral",
+        "tap_down",
+        "tap_pop",
+        "neutral"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/bear-small-tap-light.png",
+      "sha256": "9ace81d8200cd40149eab5afa08571f33105c25977191bf15b077d59478059c5",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "bear-small",
+      "clip": "success",
+      "sequence": [
+        "neutral",
+        "success_ready",
+        "success_air",
+        "success_land",
+        "neutral"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/bear-small-success-light.png",
+      "sha256": "a63ae6056ce52bd00f0d22bf96e8bc1e723ae3da994557ce9b966d58706584ea",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "bear-small",
+      "clip": "idle",
+      "sequence": [
+        "idle_rest",
+        "idle_stretch",
+        "idle_rest",
+        "idle_nap",
+        "idle_rest"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/bear-small-idle-light.png",
+      "sha256": "97d3d25b638cbc1fea7990b3dd46cfdeb9c605adfd61be54f1c2ee38273e6b92",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "bear-small",
+      "clip": "pond_right",
+      "sequence": [
+        "pond_stand_right",
+        "pond_air_right",
+        "pond_land_right",
+        "pond_stand_right"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/bear-small-pond_right-light.png",
+      "sha256": "a392099fade7b3c256ec519775714180f1abd81c8678bf92e704e4b76d64ba2c",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "bear-small",
+      "clip": "pond_left",
+      "sequence": [
+        "pond_stand_left",
+        "pond_air_left",
+        "pond_land_left",
+        "pond_stand_left"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/bear-small-pond_left-light.png",
+      "sha256": "c43fe9dacd66b33e57f606da73cc9d7261cf2a4432145ac9f10db6ef7b9fc6ea",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "cat-patches",
+      "clip": "tap",
+      "sequence": [
+        "neutral",
+        "tap_down",
+        "tap_pop",
+        "neutral"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/cat-patches-tap-light.png",
+      "sha256": "ee89bb48ef8245c182966ce8b2ee6bbfe4e3df35aa7955bb5daf7b3fcb41addf",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "cat-patches",
+      "clip": "blink",
+      "sequence": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/cat-patches-blink-light.png",
+      "sha256": "912c1f1c2395fe03a13f8b5b92231eeed4d465ee67fbb95cacb6c14bfcb17b3d",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "cat-patches",
+      "clip": "think",
+      "sequence": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/cat-patches-think-light.png",
+      "sha256": "5abd256a5528205319473c77b3f71ba8a1ca982a21a82ebf78a7d10e2e836b46",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "cat-patches",
+      "clip": "success",
+      "sequence": [
+        "neutral",
+        "success_ready",
+        "success_air",
+        "success_land",
+        "cheer",
+        "neutral"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/cat-patches-success-light.png",
+      "sha256": "273fab7950b010b410f18db5d1149ace99ee7616be80fe5ba1a98ddb2110e0d9",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "cat-patches",
+      "clip": "retry",
+      "sequence": [
+        "neutral",
+        "oops",
+        "retry",
+        "neutral"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/cat-patches-retry-light.png",
+      "sha256": "f9c9f30d0ab5d5d8c30020827b9492680063a443b8dccc3c07197629d855601a",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "cat-patches",
+      "clip": "signature",
+      "sequence": [
+        "neutral",
+        "signature",
+        "neutral"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/cat-patches-signature-light.png",
+      "sha256": "eea515e3bdeca8c02e892ab6be5eba0344b1d00fa624855b27addc12d9c1f0a7",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "cat-patches",
+      "clip": "idle",
+      "sequence": [
+        "idle_rest",
+        "idle_stretch",
+        "idle_rest",
+        "idle_nap",
+        "idle_rest"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/cat-patches-idle-light.png",
+      "sha256": "9b5889f8eed1d875587fcc8b73cb0623133dfc562b2adf025f0d8c3a687bc4c8",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    },
+    {
+      "character_id": "cat-patches",
+      "clip": "idle_to_tap",
+      "sequence": [
+        "idle_rest",
+        "tap_down",
+        "tap_pop",
+        "neutral"
+      ],
+      "status": "pass-discrete-keys",
+      "viewed": ".work/app-character-issues-20261113/post-publication-audit-v001/small-cat/scene350/keys/cat-patches-idle_to_tap-light.png",
+      "sha256": "6b8bc86cb6217189cb4e19ff636cd284e318a4e63d5f2a2b269d19d7294fccf4",
+      "observations": "登録の共通尺度と支持/浮き方針を固定。キー順で演技意図が読め、同一性・体格・支持側の大きな飛躍を確認せず。補間・速度・二重像・実アプリの場面移動は未検査。"
+    }
+  ]
+}

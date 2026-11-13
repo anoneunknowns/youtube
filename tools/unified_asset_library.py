@@ -228,6 +228,12 @@ def plan(root, *, verifying=False):
             for name, value in available.items():
                 clips[namespace+'/'+component(name)] = clip_record(value, namespace, poses, origin)
             registrations.append({'namespace': namespace, **origin, 'clips_available': bool(available)})
+            for override in block.get('pose_overrides', []):
+                json_source(root, override['registration'], guards, override['registration_sha256'])
+                registrations.append({'namespace': namespace, 'path': override['registration'],
+                    'sha256': override['registration_sha256'], 'role': 'explicit-pose-override',
+                    'pose_ids': sorted(override['replacements']), 'clips_available': False,
+                    'selection': 'catalogs/character-adoptions-v1.json'})
         icons = {}
         for name, source in selected.get('icons', {}).items():
             local = 'icons/'+component(name)+'.png'

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "adopt-corrected-two-poses",
+  "decision_authority": "User explicitly instructed 要修正はその場で修正してください。 Assistant comparison/adoption, not a user click.",
+  "method": "New original raster drawings with built-in imagegen, canonical-neutral identity/style reference; no line erosion or alpha cleanup.",
+  "defect": "Previous left/right preload each read as three arms. New drawings each have two connected arms and two feet.",
+  "review": {
+    "native_anatomy": "Root and two independent reviewers confirmed the excess shoulder appendage is absent and no new visible defect.",
+    "same_scale": "350px registered reference on1008x567 light/dark; one common new-sheet reference1000.294117647px, no individual pose-height fit.",
+    "context": "stand -> corrected preload -> air for both directions; no evident head-size, palette, outline, support or anatomy regression.",
+    "two_soles_alignment": "4soles passed each-axis0.5px SOURCE checks;8independent ±1px negative controls rejected. Final preview-only phases R[0,0], L[0,0.125].",
+    "past_failures": "Initial observer/ROI failures and old right AB preview dx0.850px failure remain in their records; they are not relabelled passed."
+  },
+  "limits": "Native/light-dark/discrete-key review. Consumer application interpolation and final playback remain separate.",
+  "replacement_registration": {
+    "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/registration.json",
+    "sha256": "359deae502b87f3f1eadb2ad609c45fc28749364dd41168b7caeb382437fb7ac"
+  },
+  "before_after": [
+    {
+      "pose": "pond_preload_right",
+      "previous": {
+        "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_right.png",
+        "sha256": "a29e4d4e5b4874ff1c8acd8ef8e5b3ae2e6f098d1af3bb63c2b98091f777a655"
+      },
+      "selected": {
+        "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_right.png",
+        "sha256": "1550868904ba44bdb50a01ba0d04788e273f7fa5cb085339cea1d224cefa6daa"
+      },
+      "reason": "Clear anatomy improvement from3arm-like appendages to2connected arms, no observed static-art regression."
+    },
+    {
+      "pose": "pond_preload_left",
+      "previous": {
+        "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_left.png",
+        "sha256": "05cf6ab90a71b68e5a4b405715a014d9092ebb84c36053988e450ff90de0b0a4"
+      },
+      "selected": {
+        "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_left.png",
+        "sha256": "29857b4fcffcc56eb9a063b9a156b8f0ab16307fa9c852347fae167b6a88c76e"
+      },
+      "reason": "Clear anatomy improvement from3arm-like appendages to2connected arms, no observed static-art regression."
+    }
+  ]
+}

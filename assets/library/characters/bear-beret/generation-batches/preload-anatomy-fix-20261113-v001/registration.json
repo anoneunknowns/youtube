@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "kind": "app-character-native-pose-registration",
+  "character_id": "bear-beret",
+  "batch_id": "preload-anatomy-fix-20261113-v001",
+  "status": "quality-reviewed-partial-correction; adoption-controlled-by-explicit-catalog",
+  "source_pixels_modified": false,
+  "alpha_cleanup_applied": false,
+  "created_at_utc": "2026-11-13T14:39:54.700131+00:00",
+  "sheets": [
+    {
+      "id": "corrected-preload-right",
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_right.png",
+      "source_sheet_sha256": "1550868904ba44bdb50a01ba0d04788e273f7fa5cb085339cea1d224cefa6daa",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "reference_height_px": 1000.2941176470588,
+      "calibration": {
+        "reference_height_px": 1000.2941176470588,
+        "method": "One common calibrated reference for these two independent source originals: transfer mean middle-face width from fixed original neutral scale; never fit individual pose full-body height",
+        "reference_source": {
+          "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/reactions-01.png",
+          "sha256": "2fd91d1c87f529fd8ecfa75fb1efdc7f3ee53749226a6fc3790eb4a17ef354fa"
+        },
+        "fixed_original_neutral_reference_height_px": 537,
+        "fixed_original_neutral_head_proxy_width_px": 331.5,
+        "new_pair_head_proxy_width_px": 617.5,
+        "formula": "537 * mean(new right head span, new left head span) / 331.5",
+        "input_measurements": [
+          {
+            "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_right.png",
+            "sha256": "1550868904ba44bdb50a01ba0d04788e273f7fa5cb085339cea1d224cefa6daa",
+            "head_proxy_roi_px": [
+              0,
+              430,
+              1254,
+              620
+            ],
+            "alpha_threshold": 8,
+            "head_proxy_measurement": "maximum horizontal span in face middle band, excluding ears and shoulders",
+            "head_proxy_width_px": 618
+          },
+          {
+            "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_left.png",
+            "sha256": "29857b4fcffcc56eb9a063b9a156b8f0ab16307fa9c852347fae167b6a88c76e",
+            "head_proxy_roi_px": [
+              0,
+              430,
+              1254,
+              620
+            ],
+            "alpha_threshold": 8,
+            "head_proxy_measurement": "maximum horizontal span in face middle band, excluding ears and shoulders",
+            "head_proxy_width_px": 617
+          }
+        ],
+        "projection_limit": "3/4 head width is a scale proxy, not a guarantee of identical projected full-body height. Both directions are visually checked against stand/air context."
+      },
+      "generation_input": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/provenance/pond_preload_right-request.json",
+      "generation_prompt": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/provenance/pond_preload_right-prompt.txt"
+    },
+    {
+      "id": "corrected-preload-left",
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_left.png",
+      "source_sheet_sha256": "29857b4fcffcc56eb9a063b9a156b8f0ab16307fa9c852347fae167b6a88c76e",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "reference_height_px": 1000.2941176470588,
+      "calibration": {
+        "reference_height_px": 1000.2941176470588,
+        "method": "One common calibrated reference for these two independent source originals: transfer mean middle-face width from fixed original neutral scale; never fit individual pose full-body height",
+        "reference_source": {
+          "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/reactions-01.png",
+          "sha256": "2fd91d1c87f529fd8ecfa75fb1efdc7f3ee53749226a6fc3790eb4a17ef354fa"
+        },
+        "fixed_original_neutral_reference_height_px": 537,
+        "fixed_original_neutral_head_proxy_width_px": 331.5,
+        "new_pair_head_proxy_width_px": 617.5,
+        "formula": "537 * mean(new right head span, new left head span) / 331.5",
+        "input_measurements": [
+          {
+            "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_right.png",
+            "sha256": "1550868904ba44bdb50a01ba0d04788e273f7fa5cb085339cea1d224cefa6daa",
+            "head_proxy_roi_px": [
+              0,
+              430,
+              1254,
+              620
+            ],
+            "alpha_threshold": 8,
+            "head_proxy_measurement": "maximum horizontal span in face middle band, excluding ears and shoulders",
+            "head_proxy_width_px": 618
+          },
+          {
+            "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_left.png",
+            "sha256": "29857b4fcffcc56eb9a063b9a156b8f0ab16307fa9c852347fae167b6a88c76e",
+            "head_proxy_roi_px": [
+              0,
+              430,
+              1254,
+              620
+            ],
+            "alpha_threshold": 8,
+            "head_proxy_measurement": "maximum horizontal span in face middle band, excluding ears and shoulders",
+            "head_proxy_width_px": 617
+          }
+        ],
+        "projection_limit": "3/4 head width is a scale proxy, not a guarantee of identical projected full-body height. Both directions are visually checked against stand/air context."
+      },
+      "generation_input": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/provenance/pond_preload_left-request.json",
+      "generation_prompt": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/provenance/pond_preload_left-prompt.txt"
+    }
+  ],
+  "frames": [
+    {
+      "id": "pond_preload_right",
+      "role": "body",
+      "body_bbox_px": [
+        245,
+        97,
+        989,
+        1162
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        607.75,
+        1162
+      ],
+      "source_foot_point_px": [
+        607.75,
+        1162
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Both anatomical soles measured independently in reviewed native regions. Anchor x is mean of the two sole centres; y is the lower sole baseline. Slight unequal sole heights are 3/4 projection, retained without source edits. The low-band observable is distinct and its native offset from anatomical anchor is preserved. No inferred jump and no extra root lift.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anatomical_foot_regions_px": [
+        [
+          395,
+          1050,
+          606,
+          1180
+        ],
+        [
+          606,
+          1050,
+          825,
+          1180
+        ]
+      ],
+      "anatomical_sole_points_px": [
+        [
+          506.0,
+          1162
+        ],
+        [
+          709.5,
+          1154
+        ]
+      ],
+      "anatomical_sole_band_rois_px": [
+        [
+          395,
+          1152,
+          606,
+          1162
+        ],
+        [
+          606,
+          1144,
+          825,
+          1154
+        ]
+      ],
+      "anchor_kind": "drawn-ground-contact",
+      "anchor_measurement": "two independently measured alpha8 sole-band centres; mean x and lower y",
+      "anchor_basis": "Both anatomical soles measured independently in reviewed native regions. Anchor x is mean of the two sole centres; y is the lower sole baseline. Slight unequal sole heights are 3/4 projection, retained without source edits. The low-band observable is distinct and its native offset from anatomical anchor is preserved. No inferred jump and no extra root lift.",
+      "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_right.png",
+      "sha256": "1550868904ba44bdb50a01ba0d04788e273f7fa5cb085339cea1d224cefa6daa",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_right.png",
+      "source_sheet_sha256": "1550868904ba44bdb50a01ba0d04788e273f7fa5cb085339cea1d224cefa6daa",
+      "sheet_id": "corrected-preload-right",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "exact_cell_pixel_match": true,
+      "source_pixels_modified": false,
+      "reference_height_px": 1000.2941176470588,
+      "generation_provenance": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/provenance/pond_preload_right-request.json"
+    },
+    {
+      "id": "pond_preload_left",
+      "role": "body",
+      "body_bbox_px": [
+        239,
+        102,
+        994,
+        1149
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        602.75,
+        1149
+      ],
+      "source_foot_point_px": [
+        602.75,
+        1149
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "support_notes": "Both anatomical soles measured independently in reviewed native regions. Anchor x is mean of the two sole centres; y is the lower sole baseline. Slight unequal sole heights are 3/4 projection, retained without source edits. The low-band observable is distinct and its native offset from anatomical anchor is preserved. No inferred jump and no extra root lift.",
+      "scene_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "vertical_motion_policy": "grounded-support; application-may-sequence-poses-without-extra-root-lift",
+      "anatomical_foot_regions_px": [
+        [
+          395,
+          1050,
+          606,
+          1180
+        ],
+        [
+          606,
+          1050,
+          825,
+          1180
+        ]
+      ],
+      "anatomical_sole_points_px": [
+        [
+          501.0,
+          1138
+        ],
+        [
+          704.5,
+          1149
+        ]
+      ],
+      "anatomical_sole_band_rois_px": [
+        [
+          395,
+          1128,
+          606,
+          1138
+        ],
+        [
+          606,
+          1139,
+          825,
+          1149
+        ]
+      ],
+      "anchor_kind": "drawn-ground-contact",
+      "anchor_measurement": "two independently measured alpha8 sole-band centres; mean x and lower y",
+      "anchor_basis": "Both anatomical soles measured independently in reviewed native regions. Anchor x is mean of the two sole centres; y is the lower sole baseline. Slight unequal sole heights are 3/4 projection, retained without source edits. The low-band observable is distinct and its native offset from anatomical anchor is preserved. No inferred jump and no extra root lift.",
+      "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_left.png",
+      "sha256": "29857b4fcffcc56eb9a063b9a156b8f0ab16307fa9c852347fae167b6a88c76e",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/source/pond_preload_left.png",
+      "source_sheet_sha256": "29857b4fcffcc56eb9a063b9a156b8f0ab16307fa9c852347fae167b6a88c76e",
+      "sheet_id": "corrected-preload-left",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "exact_cell_pixel_match": true,
+      "source_pixels_modified": false,
+      "reference_height_px": 1000.2941176470588,
+      "generation_provenance": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/provenance/pond_preload_left-request.json"
+    }
+  ],
+  "clips": {},
+  "scale_policy": "Two-pose override only. Common pair head-width calibrated isotropic scale; all other 25 base frames and existing clips remain unchanged. No per-pose bbox fitting.",
+  "canonical_neutral": {
+    "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+    "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485"
+  },
+  "spec": {
+    "path": "assets/library/characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/provenance/registration-spec.json",
+    "sha256": "c4f7b187e6b7f40a91073a34c5fc62e4366c95208495c0ccd08a7340bc3312d3"
+  }
+}

@@ -15,6 +15,8 @@
 
 反応12種は `blink,tap_down,tap_pop,think,aha,success_ready,success_air,success_land,oops,retry,cheer,signature`、待機3種は `idle_rest,idle_stretch,idle_nap`。池の2体には往復に使う待機・空中・着地を、赤いベレー帽のクマには座位のタップ・瞬きを収録します。各IDの正確なキーは `asset.json` を読んでください。顔はクマの `icons.face` です。
 
+左右の `pond_preload_left`・`pond_preload_right` は三腕に見える崩れが再監査で見つかったため、腕2本の新規原画へ明示的に差し替えました。[比較・採用根拠](../../../characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/selection.json)を確認できます。通常姿・他の良好なポーズと動作列は保持しています。
+
 ## 基準と使い方
 
 各PNGは透過RGBAで、原画の指定セルを無損失で切り出しています。元出力、実寸、抽出矩形、正確なプロンプト、直接入力の役割とSHA、PNGのSHA、支点、シート共通の基準高を登録から辿れます。生成は組込みimagegenで行い、色抜き・アルファ清掃・輪郭の機械的な細線化はしていません。
@@ -29,7 +31,7 @@ Issue [#1](https://github.com/anoneunknowns/youtube/issues/1)・[#2](https://git
 
 1008×567相当の明暗、原寸、通常姿から成功、待機から操作反応、池の往復を離散キーポーズで確認しました。各batchの `qa-review.json` が対象SHA・支点・校正・実効解像度・配置結果を記録しています。[別担当の確認](independent-review.json)、[比較画像の対応表](review-image-map.json)、[管理担当の目視](root-static-review.json)も併記します。
 
-花飾りは入力参照の5弁から6弁に変わりました。全採用姿勢で淡色花・黄芯・同じ耳側が一貫し、同一性を保つ細部の変化として許容しています。プロンプトの5弁指定と一致しなかった事実は品質記録に残しています。猫の身体側の模様、クリーム色の子の細身の姿、小クマの頬に赤を足さない条件も確認しています。
+花飾りは再監査で、参照と全16姿勢とも5弁と確認しました。以前の「6弁へ変化」という検査記録は数え間違いでした。当時のQA JSONを保全し、[再監査と訂正](../../../characters/bear-beret/generation-batches/preload-anatomy-fix-20261113-v001/README.md)へ新しい観測を記録しています。猫の身体側の模様、クリーム色の子の細身の姿、小クマの頬に赤を足さない条件も確認しています。
 
 初回の配置不合格や背景が混入した池の試作を、合格記録へ書き換えていません。採用版の表示検査はSOURCEの両軸0.5pxを維持し、縮小時のラスタ位相は原画・登録座標を変えずにプレビュー側だけで校正します。校正を固定した後の実素材の移動負例でも誤合格を検査しました。不採用画像と用済みの旧プレビュー画像は公開一覧に含めず、判断・失敗のJSON記録を保全しています。
 

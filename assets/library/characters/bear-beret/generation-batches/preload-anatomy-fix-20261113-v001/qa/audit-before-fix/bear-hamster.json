@@ -1,0 +1,3840 @@
+{
+  "schema_version": 1,
+  "audit_id": "post-publication-audit-v001-bear-hamster",
+  "created_at_utc": "2026-11-13T14:28:37.820832+00:00",
+  "basis": "User asked to check created images. Independent new read-only inspection; previous pass results not reused. No regeneration, adoption, catalogue, QA overwrite or Git operation.",
+  "counts": {
+    "body_poses": 43,
+    "bear_body_poses": 27,
+    "bear_reused_neutral_aliases_included": 1,
+    "bear_face_icons": 1,
+    "hamster_body_poses": 16,
+    "targets_total": 44,
+    "pass": 42,
+    "issue": 2,
+    "needs_confirmation": 0
+  },
+  "result": "issue",
+  "conditions": {
+    "screen_size_px": [
+      1008,
+      567
+    ],
+    "panels": {
+      "light": [
+        248,
+        245,
+        235
+      ],
+      "dark": [
+        26,
+        36,
+        52
+      ]
+    },
+    "display_body_reference_px": {
+      "bear-beret": 350,
+      "hamster": 105
+    },
+    "source_native_read": true,
+    "isotropic_scale": "display reference / registered per-sheet reference; never per-pose bbox fit",
+    "anchor_target_per_panel": [
+      252,
+      510
+    ],
+    "note": "Direct key-pose panels only, no interpolation or application rendering tested"
+  },
+  "findings": [
+    {
+      "id": "BB-PRELOAD-LEFT",
+      "severity": "P1",
+      "character": "bear-beret",
+      "pose": "pond_preload_left",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_left.png",
+      "sha256": "05cf6ab90a71b68e5a4b405715a014d9092ebb84c36053988e450ff90de0b0a4",
+      "observation": "肩の後方に腕状突起が2本、胸前にも短い腕状突起が1本見える。三腕に読める解剖異常。",
+      "source_coordinates_xyxy": [
+        [
+          389,
+          342,
+          493,
+          414
+        ],
+        [
+          377,
+          362,
+          466,
+          453
+        ],
+        [
+          208,
+          383,
+          252,
+          448
+        ]
+      ],
+      "why_not_expression_or_projection": "後方に並ぶ2つの腕状突起と胸前の第3突起が単一姿勢内に同時存在する。頭の投影や表情変化で説明できず、肩高から生える尾としても不自然。正しく透過合成しても残り、原画自体にある。",
+      "comparison": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_preload_left.png",
+      "annotated_native_comparison": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/issue-bear-beret-pond_preload_left-native-annotated.png",
+      "root_independent_confirmation": "Root separately viewed both current PNGs and confirmed anatomical defect by collaboration message. This is an assistant audit, not user click/approval."
+    },
+    {
+      "id": "BB-PRELOAD-RIGHT",
+      "severity": "P1",
+      "character": "bear-beret",
+      "pose": "pond_preload_right",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_right.png",
+      "sha256": "a29e4d4e5b4874ff1c8acd8ef8e5b3ae2e6f098d1af3bb63c2b98091f777a655",
+      "observation": "肩の後方に腕状突起が2本、胸前にも短い腕状突起が1本見える。三腕に読める解剖異常。",
+      "source_coordinates_xyxy": [
+        [
+          117,
+          344,
+          238,
+          414
+        ],
+        [
+          142,
+          366,
+          270,
+          452
+        ],
+        [
+          361,
+          387,
+          391,
+          448
+        ]
+      ],
+      "why_not_expression_or_projection": "後方に並ぶ2つの腕状突起と胸前の第3突起が単一姿勢内に同時存在する。頭の投影や表情変化で説明できず、肩高から生える尾としても不自然。正しく透過合成しても残り、原画自体にある。",
+      "comparison": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_preload_right.png",
+      "annotated_native_comparison": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/issue-bear-beret-pond_preload_right-native-annotated.png",
+      "root_independent_confirmation": "Root separately viewed both current PNGs and confirmed anatomical defect by collaboration message. This is an assistant audit, not user click/approval."
+    }
+  ],
+  "non_findings": [
+    {
+      "topic": "normal vs pond height difference",
+      "observation": "At reference350px and fixed support, alpha8/native anatomical bounds project to neutral350px, pond_stand_right386.5px, pond_stand_left366.5px including beret. Same calibrated head width transfers source scale while the 3/4 head/body silhouette is vertically taller.",
+      "judgement": "Do not classify bbox difference alone as defect. These are distinct scene poses; in same-direction stand→air→land→stand discrete comparisons no additional clear abrupt head/body scale or support defect was established. Actual application scene transitions remain untested.",
+      "comparison": "sequence-bear-beret-neutral-pond-stand-light.png"
+    },
+    {
+      "topic": "transparent edge specks",
+      "observation": "Several sources have alpha1 at cell boundaries; uncomposited tool display showed colored edge pixels. Correct light/dark composites at native issue size and application reference350/105 show no colored halo/residual background that impairs art.",
+      "judgement": "Not failed for alpha0 RGB or alpha1 existence. No source alpha cleanup performed."
+    },
+    {
+      "topic": "signature one-eye cover",
+      "judgement": "Intentional beret-cover action; not a missing-eye defect."
+    }
+  ],
+  "pose_results": [
+    {
+      "character": "bear-beret",
+      "pose": "neutral",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/neutral.png",
+      "sha256": "6db1bcdbe567edf0529607b557e35c8ce4e8082746d7d288195bfbb2e024d509",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/selected-neutral-a.png",
+      "source_sheet_sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "crop": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        1254,
+        1254
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 1107,
+      "anchor_px": [
+        622.5,
+        1184
+      ],
+      "body_bbox_px": [
+        275,
+        77,
+        970,
+        1184
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.31616982836495033,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        25,
+        54,
+        1240,
+        1192
+      ],
+      "alpha8_bounds": [
+        275,
+        77,
+        970,
+        1184
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-neutral.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "採用正本canonical-neutral-v002の無改変alias。目2・耳2・腕2・脚2、帽子・口・紙目に異常なし。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/neutral.png",
+      "current_sha256": "6db1bcdbe567edf0529607b557e35c8ce4e8082746d7d288195bfbb2e024d509",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "blink",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/blink.png",
+      "sha256": "90f051c6f72e50d67beafeab285b49479815081d01f3fb48f0ccd66839088979",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-01.png",
+      "source_sheet_sha256": "2fd91d1c87f529fd8ecfa75fb1efdc7f3ee53749226a6fc3790eb4a17ef354fa",
+      "crop": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 537.0,
+      "anchor_px": [
+        311.5,
+        576
+      ],
+      "body_bbox_px": [
+        147,
+        39,
+        476,
+        576
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6517690875232774,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        30,
+        587,
+        611
+      ],
+      "alpha8_bounds": [
+        147,
+        39,
+        476,
+        578
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-blink.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "両眼を曲線に閉じる意図。余分な眼・白縁の残像なし。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/blink.png",
+      "current_sha256": "90f051c6f72e50d67beafeab285b49479815081d01f3fb48f0ccd66839088979",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "tap_down",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/tap_down.png",
+      "sha256": "dca24fd1ddb408b794bb70dc288ffcb73d437d4887a9312f8e41b5253b34122d",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-01.png",
+      "source_sheet_sha256": "2fd91d1c87f529fd8ecfa75fb1efdc7f3ee53749226a6fc3790eb4a17ef354fa",
+      "crop": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 537.0,
+      "anchor_px": [
+        317.0,
+        575
+      ],
+      "body_bbox_px": [
+        147,
+        74,
+        486,
+        575
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6517690875232774,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        147,
+        74,
+        486,
+        576
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-tap_down.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "押し込みの屈伸と両前腕の曲げが成立。腕2・脚2。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/tap_down.png",
+      "current_sha256": "dca24fd1ddb408b794bb70dc288ffcb73d437d4887a9312f8e41b5253b34122d",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "tap_pop",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/tap_pop.png",
+      "sha256": "33ea9b9d745b6fd5bb91be15a8dd440b005e2f66b299e7edf564479d153b34b5",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-01.png",
+      "source_sheet_sha256": "2fd91d1c87f529fd8ecfa75fb1efdc7f3ee53749226a6fc3790eb4a17ef354fa",
+      "crop": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 537.0,
+      "anchor_px": [
+        310.0,
+        575
+      ],
+      "body_bbox_px": [
+        143,
+        35,
+        479,
+        575
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6517690875232774,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        5,
+        587,
+        592
+      ],
+      "alpha8_bounds": [
+        143,
+        35,
+        479,
+        576
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-tap_pop.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "両腕を開く反応。neutralへ戻す比較で明確な頭身・支点の突発的変化なし。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/tap_pop.png",
+      "current_sha256": "33ea9b9d745b6fd5bb91be15a8dd440b005e2f66b299e7edf564479d153b34b5",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "think",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/think.png",
+      "sha256": "94152cc3d09f4b1e4f03df2a646705b04500a245dc2cc663fafdd34b7629c961",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-02.png",
+      "source_sheet_sha256": "8f6fd68c44ad61475213c2ac7d3efd5f07b89437755834cdea60bb3f62875982",
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 528.9004524886877,
+      "anchor_px": [
+        309.0,
+        569
+      ],
+      "body_bbox_px": [
+        156,
+        31,
+        484,
+        569
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6617502374087795,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        9,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        156,
+        31,
+        484,
+        569
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-think.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "瞳の上向きと片腕の顎付近接触は考える演技。眼の白/茶の形式は維持。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/think.png",
+      "current_sha256": "94152cc3d09f4b1e4f03df2a646705b04500a245dc2cc663fafdd34b7629c961",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "aha",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/aha.png",
+      "sha256": "fd75c6543a5c0ff93f0a129e1b20e3a0ddf2abee8bc0f7734479bc60d534a14e",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-02.png",
+      "source_sheet_sha256": "8f6fd68c44ad61475213c2ac7d3efd5f07b89437755834cdea60bb3f62875982",
+      "crop": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 528.9004524886877,
+      "anchor_px": [
+        297.5,
+        569
+      ],
+      "body_bbox_px": [
+        142,
+        31,
+        468,
+        569
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6617502374087795,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        29,
+        609,
+        627
+      ],
+      "alpha8_bounds": [
+        142,
+        31,
+        468,
+        569
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-aha.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "片腕を上げる演技。頬・腕の前後関係に欠損や二重輪郭なし。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/aha.png",
+      "current_sha256": "fd75c6543a5c0ff93f0a129e1b20e3a0ddf2abee8bc0f7734479bc60d534a14e",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "success_ready",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/success_ready.png",
+      "sha256": "76dc1e1b2b9e1cf241780512e2381de68e5f35e697660f3800d56690dcf9a2d9",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-02.png",
+      "source_sheet_sha256": "8f6fd68c44ad61475213c2ac7d3efd5f07b89437755834cdea60bb3f62875982",
+      "crop": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 528.9004524886877,
+      "anchor_px": [
+        319.0,
+        570
+      ],
+      "body_bbox_px": [
+        157,
+        54,
+        490,
+        570
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6617502374087795,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        157,
+        54,
+        490,
+        572
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-success_ready.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "しゃがみ準備。前腕2・脚2を判読できる。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/success_ready.png",
+      "current_sha256": "76dc1e1b2b9e1cf241780512e2381de68e5f35e697660f3800d56690dcf9a2d9",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "success_air",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/success_air.png",
+      "sha256": "7387e2b736be19107e8865ba63e80fd4798c7379c0a78fce908487cdb8326231",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-02.png",
+      "source_sheet_sha256": "8f6fd68c44ad61475213c2ac7d3efd5f07b89437755834cdea60bb3f62875982",
+      "crop": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 528.9004524886877,
+      "anchor_px": [
+        275.5,
+        570
+      ],
+      "body_bbox_px": [
+        128,
+        23,
+        477,
+        537
+      ],
+      "support_kind": "inferred-ground",
+      "ground_estimated": true,
+      "baked_in_lift_px": 33,
+      "scale": 0.6617502374087795,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        3,
+        607,
+        619
+      ],
+      "alpha8_bounds": [
+        128,
+        23,
+        477,
+        537
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-success_air.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "両腕を上げ脚を曲げる空中姿勢。33pxの原画内浮きを登録済み推定地面に対して保持。追加の地面浮きを不良と扱わない。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/success_air.png",
+      "current_sha256": "7387e2b736be19107e8865ba63e80fd4798c7379c0a78fce908487cdb8326231",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "success_land",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/success_land.png",
+      "sha256": "9fbcaa66d2a8fe7227822ac592182dffd8912853c69d67e82da8ea92931cb65a",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-03.png",
+      "source_sheet_sha256": "3a9aa0e547c1058b63c183f6e20f1418267ae7c5f55cbe1aee2f31b989efc227",
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 541.0497737556561,
+      "anchor_px": [
+        318.5,
+        574
+      ],
+      "body_bbox_px": [
+        149,
+        61,
+        490,
+        574
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6468905763891212,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        149,
+        61,
+        490,
+        575
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-success_land.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "着地のしゃがみ。両前腕・両脚の接続が成立。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/success_land.png",
+      "current_sha256": "9fbcaa66d2a8fe7227822ac592182dffd8912853c69d67e82da8ea92931cb65a",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "oops",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/oops.png",
+      "sha256": "b8a16880b86da02d27dc79beaa4ae0aa374528b53e29a21bfbcc124646540e47",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-03.png",
+      "source_sheet_sha256": "3a9aa0e547c1058b63c183f6e20f1418267ae7c5f55cbe1aee2f31b989efc227",
+      "crop": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 541.0497737556561,
+      "anchor_px": [
+        309.0,
+        573
+      ],
+      "body_bbox_px": [
+        144,
+        41,
+        476,
+        573
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6468905763891212,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        19,
+        624,
+        627
+      ],
+      "alpha8_bounds": [
+        144,
+        41,
+        476,
+        575
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-oops.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "眉2本と小さい開口は驚きの表情。眼の追加とは判定しない。両手は胸前。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/oops.png",
+      "current_sha256": "b8a16880b86da02d27dc79beaa4ae0aa374528b53e29a21bfbcc124646540e47",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "retry",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/retry.png",
+      "sha256": "36b4cea50c11fa1d423a21b910412706521ea3b9ae7afbf85968eae4cb7dda46",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-03.png",
+      "source_sheet_sha256": "3a9aa0e547c1058b63c183f6e20f1418267ae7c5f55cbe1aee2f31b989efc227",
+      "crop": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 541.0497737556561,
+      "anchor_px": [
+        320.5,
+        571
+      ],
+      "body_bbox_px": [
+        153,
+        36,
+        490,
+        571
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6468905763891212,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        31,
+        0,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        153,
+        36,
+        490,
+        573
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-retry.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "片腕を曲げ上げる演技。腕2・脚2、接続と輪郭正常。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/retry.png",
+      "current_sha256": "36b4cea50c11fa1d423a21b910412706521ea3b9ae7afbf85968eae4cb7dda46",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "cheer",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/cheer.png",
+      "sha256": "812d2521c72b0a477f3691101e9223c55475a4c2488284a5fdfe1a6889692243",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-03.png",
+      "source_sheet_sha256": "3a9aa0e547c1058b63c183f6e20f1418267ae7c5f55cbe1aee2f31b989efc227",
+      "crop": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 541.0497737556561,
+      "anchor_px": [
+        308.0,
+        571
+      ],
+      "body_bbox_px": [
+        123,
+        32,
+        493,
+        571
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6468905763891212,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        1,
+        601,
+        600
+      ],
+      "alpha8_bounds": [
+        123,
+        32,
+        493,
+        573
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-cheer.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "両腕の上げ姿勢。腕2・脚2、手と頬の接続に余分な線なし。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/cheer.png",
+      "current_sha256": "812d2521c72b0a477f3691101e9223c55475a4c2488284a5fdfe1a6889692243",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "idle_rest",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/idle_rest.png",
+      "sha256": "4f08a577118bf44edf785d298bde5f58be1bd26df77c5137c5d88b618c6c9825",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-04.png",
+      "source_sheet_sha256": "29a9bf5b3717c08214242b448b5f2629e5cf0f450d43d35bc125a64b1bb76e02",
+      "crop": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 539.4298642533937,
+      "anchor_px": [
+        310.0,
+        593
+      ],
+      "body_bbox_px": [
+        146,
+        79,
+        482,
+        593
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.648833190732632,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        0,
+        603,
+        627
+      ],
+      "alpha8_bounds": [
+        146,
+        79,
+        482,
+        593
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-idle_rest.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "座位。腿/足・両前腕が別々に読め、余分な四肢なし。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/idle_rest.png",
+      "current_sha256": "4f08a577118bf44edf785d298bde5f58be1bd26df77c5137c5d88b618c6c9825",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "idle_stretch",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/idle_stretch.png",
+      "sha256": "2f4fd1c74277151500d1572ec6ec96b5436d3af8fa21f3aee0d63b9f37d6f096",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-04.png",
+      "source_sheet_sha256": "29a9bf5b3717c08214242b448b5f2629e5cf0f450d43d35bc125a64b1bb76e02",
+      "crop": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 539.4298642533937,
+      "anchor_px": [
+        314.5,
+        580
+      ],
+      "body_bbox_px": [
+        119,
+        51,
+        514,
+        580
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.648833190732632,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        119,
+        51,
+        514,
+        580
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-idle_stretch.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "座位の伸び、両腕上げと笑い眼は意図。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/idle_stretch.png",
+      "current_sha256": "2f4fd1c74277151500d1572ec6ec96b5436d3af8fa21f3aee0d63b9f37d6f096",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "idle_nap",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/idle_nap.png",
+      "sha256": "c1202ce045ef0eb19ea7d55ae2e5bc95f8e03e89162c5f8e22e529415507fc4b",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-04.png",
+      "source_sheet_sha256": "29a9bf5b3717c08214242b448b5f2629e5cf0f450d43d35bc125a64b1bb76e02",
+      "crop": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 539.4298642533937,
+      "anchor_px": [
+        314.5,
+        576
+      ],
+      "body_bbox_px": [
+        146,
+        60,
+        489,
+        576
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.648833190732632,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        0,
+        626,
+        627
+      ],
+      "alpha8_bounds": [
+        146,
+        60,
+        489,
+        578
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-idle_nap.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "座位の頭傾斜と閉眼は眠りの演技。帽子も同方向に傾く。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/idle_nap.png",
+      "current_sha256": "c1202ce045ef0eb19ea7d55ae2e5bc95f8e03e89162c5f8e22e529415507fc4b",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "pond_stand_right",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_stand_right.png",
+      "sha256": "ca270e3cfb5e8483752c93da7ff63df0689608916a53d2831a44bdd2a99cf631",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-01-v2.png",
+      "source_sheet_sha256": "a0a23a0f629389ab76d6e6717abec43381f5e9e7055bb3e486d29bb14c6a70b4",
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 514.3212669683257,
+      "anchor_px": [
+        332.5,
+        590
+      ],
+      "body_bbox_px": [
+        172,
+        22,
+        495,
+        590
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6805085118550126,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        18,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        172,
+        22,
+        495,
+        591
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_stand_right.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "右3/4向きの立位。顔投影は広い遠近差として読め、耳2・腕2・脚2。帽子全高はneutralより高いが別場面差として記録し自動NGにしない。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/pond_stand_right.png",
+      "current_sha256": "ca270e3cfb5e8483752c93da7ff63df0689608916a53d2831a44bdd2a99cf631",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "pond_air_right",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_air_right.png",
+      "sha256": "21425c31fc7958cd67e6599b686b69cd886d54061ed3c52659ad4cee126d0455",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-01-v2.png",
+      "source_sheet_sha256": "a0a23a0f629389ab76d6e6717abec43381f5e9e7055bb3e486d29bb14c6a70b4",
+      "crop": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 514.3212669683257,
+      "anchor_px": [
+        281.75,
+        537
+      ],
+      "body_bbox_px": [
+        117,
+        14,
+        500,
+        537
+      ],
+      "support_kind": "drawn-airborne-foot",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6805085118550126,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        12,
+        591,
+        619
+      ],
+      "alpha8_bounds": [
+        117,
+        14,
+        500,
+        537
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_air_right.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "右方向の跳躍形。腕2・脚2、手足の出現消失なし。アプリの放物移動は未検証。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/pond_air_right.png",
+      "current_sha256": "21425c31fc7958cd67e6599b686b69cd886d54061ed3c52659ad4cee126d0455",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "pond_land_right",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_land_right.png",
+      "sha256": "e9eae4abe8441759474b8b675f3f5f3119afd88629ea45775f9166286ee34abe",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-01-v2.png",
+      "source_sheet_sha256": "a0a23a0f629389ab76d6e6717abec43381f5e9e7055bb3e486d29bb14c6a70b4",
+      "crop": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 514.3212669683257,
+      "anchor_px": [
+        329.0,
+        575
+      ],
+      "body_bbox_px": [
+        195,
+        57,
+        520,
+        575
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6805085118550126,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        1,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        195,
+        57,
+        520,
+        576
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_land_right.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "右向き着地の屈伸。腕2・脚2、standへの戻りに明確な身体尺度の跳ねを静止列で認めない。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/pond_land_right.png",
+      "current_sha256": "e9eae4abe8441759474b8b675f3f5f3119afd88629ea45775f9166286ee34abe",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "pond_air_left",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_air_left.png",
+      "sha256": "83f69fbe18ff2afd41d61cf93f95e81f0879ac9259d6b90221dc486653454761",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-01-v2.png",
+      "source_sheet_sha256": "a0a23a0f629389ab76d6e6717abec43381f5e9e7055bb3e486d29bb14c6a70b4",
+      "crop": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 514.3212669683257,
+      "anchor_px": [
+        303.75,
+        544
+      ],
+      "body_bbox_px": [
+        84,
+        23,
+        479,
+        543
+      ],
+      "support_kind": "drawn-airborne-foot",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6805085118550126,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        7,
+        613,
+        592
+      ],
+      "alpha8_bounds": [
+        84,
+        23,
+        479,
+        544
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_air_left.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "左方向の跳躍形。腕2・脚2、原画内支持点とアプリ移動を区別。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/pond_air_left.png",
+      "current_sha256": "83f69fbe18ff2afd41d61cf93f95e81f0879ac9259d6b90221dc486653454761",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "pond_stand_left",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_stand_left.png",
+      "sha256": "6eec39ea67441cbbc03fe0a7c4e6a6a7431f91354d5abf48cb11796d37629398",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-02-v2.png",
+      "source_sheet_sha256": "e0d43b5ebfeb20a75bc2e092985d867738767bfbf24195d50f7713ae52649200",
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 538.6199095022624,
+      "anchor_px": [
+        312.0,
+        591
+      ],
+      "body_bbox_px": [
+        147,
+        27,
+        480,
+        591
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6498088797412526,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        147,
+        27,
+        480,
+        593
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_stand_left.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "左3/4向き。顔の投影差は意図として読める。耳2・腕2・脚2。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/pond_stand_left.png",
+      "current_sha256": "6eec39ea67441cbbc03fe0a7c4e6a6a7431f91354d5abf48cb11796d37629398",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "pond_land_left",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_land_left.png",
+      "sha256": "184c408f14303b4931ae7ab5da0f16325b5f1c0de40d31d37b246fdb453e55e2",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-02-v2.png",
+      "source_sheet_sha256": "e0d43b5ebfeb20a75bc2e092985d867738767bfbf24195d50f7713ae52649200",
+      "crop": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 538.6199095022624,
+      "anchor_px": [
+        283.0,
+        592
+      ],
+      "body_bbox_px": [
+        106,
+        62,
+        439,
+        592
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6498088797412526,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        29,
+        611,
+        620
+      ],
+      "alpha8_bounds": [
+        106,
+        62,
+        439,
+        592
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_land_left.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "左向き着地の屈伸。腕2・脚2、standへの戻りに明確な身体尺度の跳ねを静止列で認めない。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/pond_land_left.png",
+      "current_sha256": "184c408f14303b4931ae7ab5da0f16325b5f1c0de40d31d37b246fdb453e55e2",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "pond_preload_left",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_left.png",
+      "sha256": "05cf6ab90a71b68e5a4b405715a014d9092ebb84c36053988e450ff90de0b0a4",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-02-v2.png",
+      "source_sheet_sha256": "e0d43b5ebfeb20a75bc2e092985d867738767bfbf24195d50f7713ae52649200",
+      "crop": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 538.6199095022624,
+      "anchor_px": [
+        325.5,
+        575
+      ],
+      "body_bbox_px": [
+        118,
+        42,
+        492,
+        575
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6498088797412526,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        3,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        118,
+        42,
+        492,
+        577
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_preload_left.png",
+      "status": "issue",
+      "severity": "P1",
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "肩の後方に腕状突起が2本、胸前にも短い腕状突起が1本見える。三腕に読める解剖異常。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/pond_preload_left.png",
+      "current_sha256": "05cf6ab90a71b68e5a4b405715a014d9092ebb84c36053988e450ff90de0b0a4",
+      "current_matches_registered_pose": true,
+      "finding_id": "BB-PRELOAD-LEFT",
+      "evidence": {
+        "pose": "pond_preload_left",
+        "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/issue-bear-beret-pond_preload_left-native-annotated.png",
+        "sha256": "a1e37d3ee6b923b00d525fff50b9cc1b18828d17d61deed2625d8554d7d99d2c",
+        "source_path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_left.png",
+        "source_sha256": "05cf6ab90a71b68e5a4b405715a014d9092ebb84c36053988e450ff90de0b0a4",
+        "native_source_box_coordinates_xyxy": [
+          [
+            389,
+            342,
+            493,
+            414
+          ],
+          [
+            377,
+            362,
+            466,
+            453
+          ],
+          [
+            208,
+            383,
+            252,
+            448
+          ]
+        ],
+        "description": "Original unchanged RGBA composited 1x on light/dark; boxes identify rear upper protrusion, rear lower arm and front stub. Source pixels are not altered."
+      }
+    },
+    {
+      "character": "bear-beret",
+      "pose": "pond_preload_right",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_right.png",
+      "sha256": "a29e4d4e5b4874ff1c8acd8ef8e5b3ae2e6f098d1af3bb63c2b98091f777a655",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-02-v2.png",
+      "source_sheet_sha256": "e0d43b5ebfeb20a75bc2e092985d867738767bfbf24195d50f7713ae52649200",
+      "crop": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 538.6199095022624,
+      "anchor_px": [
+        273.5,
+        574
+      ],
+      "body_bbox_px": [
+        117,
+        42,
+        506,
+        574
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.6498088797412526,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        1,
+        591,
+        627
+      ],
+      "alpha8_bounds": [
+        117,
+        42,
+        506,
+        576
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-pond_preload_right.png",
+      "status": "issue",
+      "severity": "P1",
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "肩の後方に腕状突起が2本、胸前にも短い腕状突起が1本見える。三腕に読める解剖異常。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/pond_preload_right.png",
+      "current_sha256": "a29e4d4e5b4874ff1c8acd8ef8e5b3ae2e6f098d1af3bb63c2b98091f777a655",
+      "current_matches_registered_pose": true,
+      "finding_id": "BB-PRELOAD-RIGHT",
+      "evidence": {
+        "pose": "pond_preload_right",
+        "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/issue-bear-beret-pond_preload_right-native-annotated.png",
+        "sha256": "79d21544c8de61e82537bde6a11bb55551d43629e94c8d6a365d553ade2ec2a0",
+        "source_path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_right.png",
+        "source_sha256": "a29e4d4e5b4874ff1c8acd8ef8e5b3ae2e6f098d1af3bb63c2b98091f777a655",
+        "native_source_box_coordinates_xyxy": [
+          [
+            117,
+            344,
+            238,
+            414
+          ],
+          [
+            142,
+            366,
+            270,
+            452
+          ],
+          [
+            361,
+            387,
+            391,
+            448
+          ]
+        ],
+        "description": "Original unchanged RGBA composited 1x on light/dark; boxes identify rear upper protrusion, rear lower arm and front stub. Source pixels are not altered."
+      }
+    },
+    {
+      "character": "bear-beret",
+      "pose": "signature",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/signature.png",
+      "sha256": "66bbcb77075dd59f6cbfc712bdb17541f0b6ef893644ba0be52f7dadc45d7285",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/seated-title-01.png",
+      "source_sheet_sha256": "504f9709c349056b7486f29fe7f314794de3a518178874c667fc74abcabe0469",
+      "crop": [
+        0,
+        0,
+        656,
+        600
+      ],
+      "native_size_px": [
+        656,
+        600
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 586.4072398190045,
+      "anchor_px": [
+        350.0,
+        568
+      ],
+      "body_bbox_px": [
+        168,
+        57,
+        533,
+        568
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.5968548411988024,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        25,
+        656,
+        596
+      ],
+      "alpha8_bounds": [
+        168,
+        57,
+        533,
+        568
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-signature.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "帽子を下げて片眼を隠す演技は指定された意図。片眼欠損とはしない。手/帽子の接触、腕2・脚2を確認。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/signature.png",
+      "current_sha256": "66bbcb77075dd59f6cbfc712bdb17541f0b6ef893644ba0be52f7dadc45d7285",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "seated_tap_down",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/seated_tap_down.png",
+      "sha256": "27b3f3b03e278d49ff7287d7a263091c34ad217cc517bc976f35fb1d39719122",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/seated-title-01.png",
+      "source_sheet_sha256": "504f9709c349056b7486f29fe7f314794de3a518178874c667fc74abcabe0469",
+      "crop": [
+        656,
+        0,
+        1312,
+        600
+      ],
+      "native_size_px": [
+        656,
+        600
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 586.4072398190045,
+      "anchor_px": [
+        305.0,
+        569
+      ],
+      "body_bbox_px": [
+        128,
+        50,
+        494,
+        569
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.5968548411988024,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        48,
+        648,
+        594
+      ],
+      "alpha8_bounds": [
+        128,
+        50,
+        494,
+        569
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-seated_tap_down.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "座位の押し込み。両手を前で曲げ、両脚の輪郭と区別できる。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/seated_tap_down.png",
+      "current_sha256": "27b3f3b03e278d49ff7287d7a263091c34ad217cc517bc976f35fb1d39719122",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "seated_tap_pop",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/seated_tap_pop.png",
+      "sha256": "31728ae7adba58674428cf28bb207035ea9bf7f1eecade719753151d2e1a0fa6",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/seated-title-01.png",
+      "source_sheet_sha256": "504f9709c349056b7486f29fe7f314794de3a518178874c667fc74abcabe0469",
+      "crop": [
+        0,
+        600,
+        656,
+        1199
+      ],
+      "native_size_px": [
+        656,
+        599
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 586.4072398190045,
+      "anchor_px": [
+        351.0,
+        563
+      ],
+      "body_bbox_px": [
+        171,
+        30,
+        535,
+        563
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.5968548411988024,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        25,
+        652,
+        568
+      ],
+      "alpha8_bounds": [
+        171,
+        30,
+        535,
+        563
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-seated_tap_pop.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "座位で両腕を開く反応。胴の出現や立位への急な切替なし。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/seated_tap_pop.png",
+      "current_sha256": "31728ae7adba58674428cf28bb207035ea9bf7f1eecade719753151d2e1a0fa6",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "bear-beret",
+      "pose": "seated_blink",
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/seated_blink.png",
+      "sha256": "6e9a90cd940bb164886b661785307b2d59965253876e2eb356cbff0aab4dad4e",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/seated-title-01.png",
+      "source_sheet_sha256": "504f9709c349056b7486f29fe7f314794de3a518178874c667fc74abcabe0469",
+      "crop": [
+        656,
+        600,
+        1312,
+        1199
+      ],
+      "native_size_px": [
+        656,
+        599
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 586.4072398190045,
+      "anchor_px": [
+        308.0,
+        563
+      ],
+      "body_bbox_px": [
+        127,
+        31,
+        492,
+        563
+      ],
+      "support_kind": "drawn-ground-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.5968548411988024,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        25,
+        4,
+        618,
+        575
+      ],
+      "alpha8_bounds": [
+        127,
+        31,
+        492,
+        563
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-seated_blink.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "座位の閉眼。idle_restへの比較で四肢の増減なし。",
+      "current_path": "assets/library/characters/bear-beret/current/poses/app/seated_blink.png",
+      "current_sha256": "6e9a90cd940bb164886b661785307b2d59965253876e2eb356cbff0aab4dad4e",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "neutral",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/neutral.png",
+      "sha256": "e82eceaa4c15286905fc0ab6e9264eb2f1b769dc400c797f1f5a6230048af9c6",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-01.png",
+      "source_sheet_sha256": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178",
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 384.0,
+      "anchor_px": [
+        326.0,
+        509
+      ],
+      "body_bbox_px": [
+        155,
+        125,
+        497,
+        509
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2734375,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        27,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        155,
+        125,
+        497,
+        509
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-neutral.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "正面の基準姿勢。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/neutral.png",
+      "current_sha256": "e82eceaa4c15286905fc0ab6e9264eb2f1b769dc400c797f1f5a6230048af9c6",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "blink",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/blink.png",
+      "sha256": "665b190a0a694c149406ae1037956c39ff5709bd253f553e97d20fc37375a7cc",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-01.png",
+      "source_sheet_sha256": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178",
+      "crop": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 384.0,
+      "anchor_px": [
+        300.0,
+        509
+      ],
+      "body_bbox_px": [
+        129,
+        125,
+        471,
+        509
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2734375,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        21,
+        613,
+        627
+      ],
+      "alpha8_bounds": [
+        129,
+        125,
+        471,
+        509
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-blink.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "曲線による閉眼。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/blink.png",
+      "current_sha256": "665b190a0a694c149406ae1037956c39ff5709bd253f553e97d20fc37375a7cc",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "tap_down",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/tap_down.png",
+      "sha256": "c47015cd846f5ee0c355f5959aa60562363dfd9e3d6d9c795749afec37896a21",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-01.png",
+      "source_sheet_sha256": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178",
+      "crop": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 384.0,
+      "anchor_px": [
+        325.5,
+        498
+      ],
+      "body_bbox_px": [
+        152,
+        156,
+        501,
+        498
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2734375,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        0,
+        625,
+        587
+      ],
+      "alpha8_bounds": [
+        152,
+        156,
+        501,
+        498
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-tap_down.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "胴全体の縦圧縮による押し込み。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/tap_down.png",
+      "current_sha256": "c47015cd846f5ee0c355f5959aa60562363dfd9e3d6d9c795749afec37896a21",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "tap_pop",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/tap_pop.png",
+      "sha256": "d9c2307a9ff786686a7c07f5872ced670c5e0d609f6caf398ce6f57266d1c2fb",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-01.png",
+      "source_sheet_sha256": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178",
+      "crop": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 384.0,
+      "anchor_px": [
+        299.5,
+        498
+      ],
+      "body_bbox_px": [
+        128,
+        79,
+        471,
+        465
+      ],
+      "support_kind": "inferred-ground",
+      "ground_estimated": true,
+      "baked_in_lift_px": 33,
+      "scale": 0.2734375,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        23,
+        1,
+        611,
+        595
+      ],
+      "alpha8_bounds": [
+        128,
+        79,
+        471,
+        465
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-tap_pop.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "原画に描かれた33pxの浮きを推定地面に対して保持。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/tap_pop.png",
+      "current_sha256": "d9c2307a9ff786686a7c07f5872ced670c5e0d609f6caf398ce6f57266d1c2fb",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "think",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/think.png",
+      "sha256": "5d7adb64d23d0d50565ead657656436e5a2e06bae6b4ff772b7e9d033e0f2ac7",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-02.png",
+      "source_sheet_sha256": "de3f6d3f279d7535b3f12953e0db8574af7c208d339732153d82b026f18fa8d2",
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 382.3182481751825,
+      "anchor_px": [
+        350.5,
+        518
+      ],
+      "body_bbox_px": [
+        161,
+        125,
+        503,
+        518
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.27464030425219943,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        38,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        161,
+        125,
+        503,
+        518
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-think.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "全体の傾斜で考える演技。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/think.png",
+      "current_sha256": "5d7adb64d23d0d50565ead657656436e5a2e06bae6b4ff772b7e9d033e0f2ac7",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "aha",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/aha.png",
+      "sha256": "ee98a13fc11be38dad39ca2f08e59eec91d63c3e37e876b89b60921eadbaf875",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-02.png",
+      "source_sheet_sha256": "de3f6d3f279d7535b3f12953e0db8574af7c208d339732153d82b026f18fa8d2",
+      "crop": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 382.3182481751825,
+      "anchor_px": [
+        293.0,
+        515
+      ],
+      "body_bbox_px": [
+        126,
+        127,
+        461,
+        515
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.27464030425219943,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        27,
+        607,
+        621
+      ],
+      "alpha8_bounds": [
+        126,
+        127,
+        461,
+        515
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-aha.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "開眼の気付き反応。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/aha.png",
+      "current_sha256": "ee98a13fc11be38dad39ca2f08e59eec91d63c3e37e876b89b60921eadbaf875",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "success_ready",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/success_ready.png",
+      "sha256": "4aa4990248be26781a388112f60ee03ed4469ab5f595df16a71282a566e5b815",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-02.png",
+      "source_sheet_sha256": "de3f6d3f279d7535b3f12953e0db8574af7c208d339732153d82b026f18fa8d2",
+      "crop": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 382.3182481751825,
+      "anchor_px": [
+        327.5,
+        499
+      ],
+      "body_bbox_px": [
+        147,
+        169,
+        500,
+        499
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.27464030425219943,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        1,
+        627,
+        611
+      ],
+      "alpha8_bounds": [
+        147,
+        169,
+        500,
+        499
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-success_ready.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "胴を縦圧縮した準備。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/success_ready.png",
+      "current_sha256": "4aa4990248be26781a388112f60ee03ed4469ab5f595df16a71282a566e5b815",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "success_air",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/success_air.png",
+      "sha256": "cf3b7d1892a0792992b4607cf8f6c0dabb54954cb2f6846d3d9371b299772120",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-02.png",
+      "source_sheet_sha256": "de3f6d3f279d7535b3f12953e0db8574af7c208d339732153d82b026f18fa8d2",
+      "crop": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 382.3182481751825,
+      "anchor_px": [
+        292.0,
+        499
+      ],
+      "body_bbox_px": [
+        121,
+        79,
+        461,
+        460
+      ],
+      "support_kind": "inferred-ground",
+      "ground_estimated": true,
+      "baked_in_lift_px": 39,
+      "scale": 0.27464030425219943,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        4,
+        607,
+        611
+      ],
+      "alpha8_bounds": [
+        121,
+        79,
+        461,
+        460
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-success_air.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "閉じた笑い眼、原画内39pxの浮きを保持。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/success_air.png",
+      "current_sha256": "cf3b7d1892a0792992b4607cf8f6c0dabb54954cb2f6846d3d9371b299772120",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "success_land",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/success_land.png",
+      "sha256": "f7c8126f4b8dac9e80372416d56d22fb92c98b6269c03a8e31e2d4fe6765050e",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-03.png",
+      "source_sheet_sha256": "1219d9b1c575f2077ce9bee09e2caed88ed95ab770b391fe2bf384742f04470b",
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 401.37810218978103,
+      "anchor_px": [
+        329.5,
+        521
+      ],
+      "body_bbox_px": [
+        148,
+        198,
+        512,
+        521
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2615987255586592,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        10,
+        627,
+        625
+      ],
+      "alpha8_bounds": [
+        148,
+        198,
+        512,
+        521
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-success_land.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "胴を低く圧縮する着地。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/success_land.png",
+      "current_sha256": "f7c8126f4b8dac9e80372416d56d22fb92c98b6269c03a8e31e2d4fe6765050e",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "oops",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/oops.png",
+      "sha256": "52f9c19db295a0147976eef08f89b194517ae955c50273bcd56c10b2a217d35e",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-03.png",
+      "source_sheet_sha256": "1219d9b1c575f2077ce9bee09e2caed88ed95ab770b391fe2bf384742f04470b",
+      "crop": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 401.37810218978103,
+      "anchor_px": [
+        315.5,
+        524
+      ],
+      "body_bbox_px": [
+        105,
+        137,
+        458,
+        524
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2615987255586592,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        23,
+        617,
+        617
+      ],
+      "alpha8_bounds": [
+        105,
+        137,
+        458,
+        524
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-oops.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "全体の傾斜と開眼の反応。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/oops.png",
+      "current_sha256": "52f9c19db295a0147976eef08f89b194517ae955c50273bcd56c10b2a217d35e",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "retry",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/retry.png",
+      "sha256": "628d8290fef14aca1c99d1e92f60a59f61175113b9e3b19df2e87e96245b33e1",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-03.png",
+      "source_sheet_sha256": "1219d9b1c575f2077ce9bee09e2caed88ed95ab770b391fe2bf384742f04470b",
+      "crop": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 401.37810218978103,
+      "anchor_px": [
+        325.5,
+        493
+      ],
+      "body_bbox_px": [
+        147,
+        129,
+        499,
+        493
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2615987255586592,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        11,
+        627,
+        627
+      ],
+      "alpha8_bounds": [
+        147,
+        129,
+        499,
+        493
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-retry.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "閉じた笑い眼の反応。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/retry.png",
+      "current_sha256": "628d8290fef14aca1c99d1e92f60a59f61175113b9e3b19df2e87e96245b33e1",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "cheer",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/cheer.png",
+      "sha256": "63f30305b10de443514a03025938f1956f6e79e15fd87b02aec813a422cdcc66",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-03.png",
+      "source_sheet_sha256": "1219d9b1c575f2077ce9bee09e2caed88ed95ab770b391fe2bf384742f04470b",
+      "crop": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 401.37810218978103,
+      "anchor_px": [
+        267.5,
+        490
+      ],
+      "body_bbox_px": [
+        118,
+        72,
+        481,
+        490
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2615987255586592,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        3,
+        597,
+        617
+      ],
+      "alpha8_bounds": [
+        118,
+        72,
+        481,
+        490
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-cheer.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "全体の傾斜と閉じた笑い眼。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/cheer.png",
+      "current_sha256": "63f30305b10de443514a03025938f1956f6e79e15fd87b02aec813a422cdcc66",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "signature",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/signature.png",
+      "sha256": "f3da6de29fa66456c523056912f4fa81e803bbd26f947d4e6752fd6741a83f88",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-04.png",
+      "source_sheet_sha256": "52c631fe1e4f705894dedbadd76d8739d4f15e3dc9f6a2345b792e573a7fd6c5",
+      "crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 382.8788321167883,
+      "anchor_px": [
+        340.5,
+        513
+      ],
+      "body_bbox_px": [
+        175,
+        121,
+        513,
+        513
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2742381954612006,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        17,
+        47,
+        627,
+        621
+      ],
+      "alpha8_bounds": [
+        175,
+        121,
+        513,
+        513
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-signature.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "全体の傾斜による固有しぐさ。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/signature.png",
+      "current_sha256": "f3da6de29fa66456c523056912f4fa81e803bbd26f947d4e6752fd6741a83f88",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "idle_rest",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/idle_rest.png",
+      "sha256": "6ce08a3d480d5c521e5394f3c891693eba7e84ae30b5f1236e67258031656662",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-04.png",
+      "source_sheet_sha256": "52c631fe1e4f705894dedbadd76d8739d4f15e3dc9f6a2345b792e573a7fd6c5",
+      "crop": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 382.8788321167883,
+      "anchor_px": [
+        292.0,
+        513
+      ],
+      "body_bbox_px": [
+        119,
+        130,
+        464,
+        513
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2742381954612006,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        38,
+        613,
+        619
+      ],
+      "alpha8_bounds": [
+        119,
+        130,
+        464,
+        513
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-idle_rest.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "半眼の休息表情。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/idle_rest.png",
+      "current_sha256": "6ce08a3d480d5c521e5394f3c891693eba7e84ae30b5f1236e67258031656662",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "idle_stretch",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/idle_stretch.png",
+      "sha256": "24fde93f448061762f23bda84dcd50258cdf6a46c0931c122b07403ad08e6d46",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-04.png",
+      "source_sheet_sha256": "52c631fe1e4f705894dedbadd76d8739d4f15e3dc9f6a2345b792e573a7fd6c5",
+      "crop": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 382.8788321167883,
+      "anchor_px": [
+        329.0,
+        497
+      ],
+      "body_bbox_px": [
+        158,
+        87,
+        493,
+        497
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2742381954612006,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        0,
+        4,
+        627,
+        605
+      ],
+      "alpha8_bounds": [
+        158,
+        87,
+        493,
+        497
+      ],
+      "alpha_edge_max": 1,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-idle_stretch.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "胴を縦へ伸ばして閉眼。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/idle_stretch.png",
+      "current_sha256": "24fde93f448061762f23bda84dcd50258cdf6a46c0931c122b07403ad08e6d46",
+      "current_matches_registered_pose": true
+    },
+    {
+      "character": "hamster",
+      "pose": "idle_nap",
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/idle_nap.png",
+      "sha256": "7663c596dc892b3cc11c9da84b57ab584ec11553706e912cf02cf5b5dcead06e",
+      "sha256_matches_registration": true,
+      "source_sheet": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-04.png",
+      "source_sheet_sha256": "52c631fe1e4f705894dedbadd76d8739d4f15e3dc9f6a2345b792e573a7fd6c5",
+      "crop": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "native_size_px": [
+        627,
+        627
+      ],
+      "crop_exact_pixels": true,
+      "reference_height_px": 382.8788321167883,
+      "anchor_px": [
+        296.0,
+        497
+      ],
+      "body_bbox_px": [
+        119,
+        105,
+        474,
+        497
+      ],
+      "support_kind": "body-contact",
+      "ground_estimated": false,
+      "baked_in_lift_px": 0,
+      "scale": 0.2742381954612006,
+      "alpha_max": 255,
+      "alpha_nonzero_bounds": [
+        1,
+        3,
+        607,
+        603
+      ],
+      "alpha8_bounds": [
+        119,
+        105,
+        474,
+        497
+      ],
+      "alpha_edge_max": 0,
+      "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-hamster-idle_nap.png",
+      "status": "pass",
+      "severity": null,
+      "native_visual_method": "view_image of unmodified full raw sheet at native 1254px width (seated 1312px), with its identified cell; issue poses also separately viewed as unmodified native 627x627 PNG",
+      "screen_visual_method": "view_image of new 1008x567 screen on light/dark backgrounds",
+      "notes": "頭/胴全体の傾斜と閉眼。手足・別胴・白目・鼻・尾の追加なし。耳2・眼2（閉眼/半眼を含む）・単一の外周とM字口を維持。",
+      "current_path": "assets/library/characters/hamster/current/poses/app/idle_nap.png",
+      "current_sha256": "7663c596dc892b3cc11c9da84b57ab584ec11553706e912cf02cf5b5dcead06e",
+      "current_matches_registered_pose": true
+    }
+  ],
+  "icon_result": {
+    "character": "bear-beret",
+    "pose": "face-icon",
+    "role": "face-icon",
+    "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/face-icon.png",
+    "sha256": "fa6cd15615f9b88e69d6b1f6f9d464f58fefe01fed5eff6834da7f8721c58ffb",
+    "native_size_px": [
+      1254,
+      1254
+    ],
+    "display_visible_height_px": 350,
+    "screen": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/screen-bear-beret-face-icon.png",
+    "screen_sha256": "85b53c7fd725663ad8d7f74acbb1a0d5d261ed1a35ff141e067d07dcfce5e004",
+    "note": "head icon separate role; no ground/body reference",
+    "status": "pass",
+    "severity": null,
+    "notes": "頭部のみの独立icon。眼2・耳2・帽子・口の構造と通常姿の同一性を維持。頭部アイコンなので胴/足の欠損や支点を求めない。原画1254x1254と明暗可視高350pxの1008x567比較を新規視認。",
+    "current_path": "assets/library/characters/bear-beret/current/icons/face.png",
+    "current_sha256": "fa6cd15615f9b88e69d6b1f6f9d464f58fefe01fed5eff6834da7f8721c58ffb",
+    "current_matches_source": true
+  },
+  "sequences": [
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-tap-1-light.png",
+      "sha256": "3477f4e1aef1b3d03fdcbbcbfa2c5145a80fc9975c95db3647c2fd03a9ac39f3",
+      "character": "bear-beret",
+      "poses": [
+        "neutral",
+        "tap_down",
+        "tap_pop"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-tap-1-dark.png",
+      "sha256": "36c34459e297039d8b34990cf3c0caf30b6c2abff06a29f38fdcd9f32c4985c9",
+      "character": "bear-beret",
+      "poses": [
+        "neutral",
+        "tap_down",
+        "tap_pop"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-tap-2-light.png",
+      "sha256": "d8ea1d5fd23f0ea3e6e4cfe77e8c2ac324c78ca798c40929df1ca90e7d804b48",
+      "character": "bear-beret",
+      "poses": [
+        "tap_pop",
+        "neutral"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-tap-2-dark.png",
+      "sha256": "e1969e7e9f47e8226b167cb819e790a68961bf8600a4f02050f92c3d2213c49c",
+      "character": "bear-beret",
+      "poses": [
+        "tap_pop",
+        "neutral"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-success-1-light.png",
+      "sha256": "ce2704b4b92b2ceb99a2e8db87ede1b12b053372b3362e6687c9b2367f2ae0dd",
+      "character": "bear-beret",
+      "poses": [
+        "neutral",
+        "success_ready",
+        "success_air"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-success-1-dark.png",
+      "sha256": "a3eeb9b540c35af70126e3c6665554673834b60356bceb42c0e9c187ae9c2c17",
+      "character": "bear-beret",
+      "poses": [
+        "neutral",
+        "success_ready",
+        "success_air"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-success-2-light.png",
+      "sha256": "df08e7d3c52a0940889d6c522dbb7fefc133ae2718932fb068b879845683fe17",
+      "character": "bear-beret",
+      "poses": [
+        "success_air",
+        "success_land",
+        "neutral"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-success-2-dark.png",
+      "sha256": "bdfd9ac2b46e7606ccc40def5dd1e6ba558ec9aa808ec1d74df33237392aee17",
+      "character": "bear-beret",
+      "poses": [
+        "success_air",
+        "success_land",
+        "neutral"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-idle-1-light.png",
+      "sha256": "a52990658739b24d0b8375f05aef58630980188eb8449d4c5386d18facda0018",
+      "character": "bear-beret",
+      "poses": [
+        "idle_rest",
+        "idle_stretch",
+        "idle_rest"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-idle-1-dark.png",
+      "sha256": "f59f9f3fae10647ad4deeaf68eb5dbe29f69d09b718a2ba8b8f42f87f975cfca",
+      "character": "bear-beret",
+      "poses": [
+        "idle_rest",
+        "idle_stretch",
+        "idle_rest"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-idle-2-light.png",
+      "sha256": "420b9b90e9624b1f48505b6b96edfbebdaba3b041f8e301eccd811becc3213d0",
+      "character": "bear-beret",
+      "poses": [
+        "idle_rest",
+        "idle_nap",
+        "idle_rest"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-idle-2-dark.png",
+      "sha256": "e9057854f435c7e3ecfcb86af063f6986077102880c87c03030464e19c8cf920",
+      "character": "bear-beret",
+      "poses": [
+        "idle_rest",
+        "idle_nap",
+        "idle_rest"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-seated_tap-1-light.png",
+      "sha256": "26b0db3bfa5263fc2ced42621c23a2ad9bb797e371f84e443f56d496f64bc218",
+      "character": "bear-beret",
+      "poses": [
+        "idle_rest",
+        "seated_tap_down",
+        "seated_tap_pop"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-seated_tap-1-dark.png",
+      "sha256": "7542572ead6e3e8c2d0e270725cadcd6e675840dc9ac0c3cf9977d6300f701d2",
+      "character": "bear-beret",
+      "poses": [
+        "idle_rest",
+        "seated_tap_down",
+        "seated_tap_pop"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-seated_tap-2-light.png",
+      "sha256": "e2484718c435ddc068eae1a414684ba1c9f08104018731f7c22e4e240c477ad6",
+      "character": "bear-beret",
+      "poses": [
+        "seated_tap_pop",
+        "seated_blink",
+        "idle_rest"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-seated_tap-2-dark.png",
+      "sha256": "e008b75febdb0acb819eb57bd8b0183846c5a8ea80e0ff3a02fe70277938c25f",
+      "character": "bear-beret",
+      "poses": [
+        "seated_tap_pop",
+        "seated_blink",
+        "idle_rest"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-pond_right-1-light.png",
+      "sha256": "7b02d3d4865908a4154f534f3055c0067ec0507825b916e21fe081beb66c127d",
+      "character": "bear-beret",
+      "poses": [
+        "pond_stand_right",
+        "pond_air_right",
+        "pond_land_right"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-pond_right-1-dark.png",
+      "sha256": "215f113dfee7503c1d110a6b2b0db2854c1a6f435edfeaf28cbc33bb9a93e3ae",
+      "character": "bear-beret",
+      "poses": [
+        "pond_stand_right",
+        "pond_air_right",
+        "pond_land_right"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-pond_right-2-light.png",
+      "sha256": "61d53f769e182e4be51ff21c5b16eab181a2504c16462b20cacdb4aa131d8289",
+      "character": "bear-beret",
+      "poses": [
+        "pond_land_right",
+        "pond_stand_right"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-pond_right-2-dark.png",
+      "sha256": "addb37e7b29254c8befaf7c970ea5b565603981d14928b0080183627d73b66c9",
+      "character": "bear-beret",
+      "poses": [
+        "pond_land_right",
+        "pond_stand_right"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-pond_left-1-light.png",
+      "sha256": "63fb1d64814b9d0a7956e7f70950e9c869f0e0f169835f26d82653ab1bec2ba1",
+      "character": "bear-beret",
+      "poses": [
+        "pond_stand_left",
+        "pond_air_left",
+        "pond_land_left"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-pond_left-1-dark.png",
+      "sha256": "d96811157ebe3533dc8375c35c408fc2ea03395a79c7897f6ef5a67a25503c44",
+      "character": "bear-beret",
+      "poses": [
+        "pond_stand_left",
+        "pond_air_left",
+        "pond_land_left"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-pond_left-2-light.png",
+      "sha256": "c8d0dd83f4b7b10925efb3492e62be11b4d849e233c41bd07f9a96c4eb5db871",
+      "character": "bear-beret",
+      "poses": [
+        "pond_land_left",
+        "pond_stand_left"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-pond_left-2-dark.png",
+      "sha256": "fbeee76c9e4bb6c573f4886b32c77ceccdf8d1ae44da98ca95d810a5d801a53d",
+      "character": "bear-beret",
+      "poses": [
+        "pond_land_left",
+        "pond_stand_left"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-tap-1-light.png",
+      "sha256": "73486be0ab964ff5c0fcd9a208cad2fcb4ff263274d9b16a592fafbf62bbbcc4",
+      "character": "hamster",
+      "poses": [
+        "neutral",
+        "tap_down",
+        "tap_pop"
+      ],
+      "reference_display_px": 105,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-tap-1-dark.png",
+      "sha256": "8c1e78b321255dd92cf7cfaf58a9c86bdea65773304bcd2db589e644a1392425",
+      "character": "hamster",
+      "poses": [
+        "neutral",
+        "tap_down",
+        "tap_pop"
+      ],
+      "reference_display_px": 105,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-tap-2-light.png",
+      "sha256": "24133df9bb5af44f27cf9d958328562f2d533a0907e04798ee918431dc695725",
+      "character": "hamster",
+      "poses": [
+        "tap_pop",
+        "neutral"
+      ],
+      "reference_display_px": 105,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-tap-2-dark.png",
+      "sha256": "96b354a4324f30ee07cf050386d2d705d3cd46f668e9509d5011d730daa2b68a",
+      "character": "hamster",
+      "poses": [
+        "tap_pop",
+        "neutral"
+      ],
+      "reference_display_px": 105,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-success-1-light.png",
+      "sha256": "f889e85e837f77c493d97aa8b6a063967f2c66733849225e0684a112abd7849e",
+      "character": "hamster",
+      "poses": [
+        "neutral",
+        "success_ready",
+        "success_air"
+      ],
+      "reference_display_px": 105,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-success-1-dark.png",
+      "sha256": "d060d644fb47cd8043df1d1cea5716b2e66722dc99d6346c441f6966f468cc76",
+      "character": "hamster",
+      "poses": [
+        "neutral",
+        "success_ready",
+        "success_air"
+      ],
+      "reference_display_px": 105,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-success-2-light.png",
+      "sha256": "8d2fb633e1d2b34fda579a844a85b8e16106e841eac45b17aca204a3bcce4573",
+      "character": "hamster",
+      "poses": [
+        "success_air",
+        "success_land",
+        "neutral"
+      ],
+      "reference_display_px": 105,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-success-2-dark.png",
+      "sha256": "c5fd534cfb9309b3d8ec3a37071142232bfce8b728983529c3328cafed68366b",
+      "character": "hamster",
+      "poses": [
+        "success_air",
+        "success_land",
+        "neutral"
+      ],
+      "reference_display_px": 105,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-idle-1-light.png",
+      "sha256": "6ee9c4b82b275208256b78d7c95e60aa0ae7b8ff1977b44d835eaa0ce6c1994d",
+      "character": "hamster",
+      "poses": [
+        "idle_rest",
+        "idle_stretch",
+        "idle_rest"
+      ],
+      "reference_display_px": 105,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-idle-1-dark.png",
+      "sha256": "036c60570dea25cc75eba1a731715918554bbd1f3a6fab9eec2a9957f94116a2",
+      "character": "hamster",
+      "poses": [
+        "idle_rest",
+        "idle_stretch",
+        "idle_rest"
+      ],
+      "reference_display_px": 105,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-idle-2-light.png",
+      "sha256": "449439c4b08dfcdd7fca5329f434a8d298ee9a3920330e190e0b7f86354b01d6",
+      "character": "hamster",
+      "poses": [
+        "idle_rest",
+        "idle_nap",
+        "idle_rest"
+      ],
+      "reference_display_px": 105,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-hamster-idle-2-dark.png",
+      "sha256": "59d9373ce61684885e5d9e143278a3aae82df2680e7323296d20417c7c9c57e4",
+      "character": "hamster",
+      "poses": [
+        "idle_rest",
+        "idle_nap",
+        "idle_rest"
+      ],
+      "reference_display_px": 105,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-neutral-pond-stand-light.png",
+      "sha256": "ff742b79c31f008f03433e4aaebd95862e96a7331b71e3f11d40b11fca75b28a",
+      "character": "bear-beret",
+      "poses": [
+        "neutral",
+        "pond_stand_right",
+        "pond_stand_left"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-neutral-pond-stand-dark.png",
+      "sha256": "2ca1975f376f5e6652fa2bc9dd15d9aa4446ac64559870fee0fb8d6aef074f79",
+      "character": "bear-beret",
+      "poses": [
+        "neutral",
+        "pond_stand_right",
+        "pond_stand_left"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-right-preload-detail-light.png",
+      "sha256": "5c86f77ad605b6dcf252ee730dda9ac054fb740aba6bbecb609c6a9f396640ef",
+      "character": "bear-beret",
+      "poses": [
+        "pond_stand_right",
+        "pond_preload_right",
+        "pond_air_right"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-right-preload-detail-dark.png",
+      "sha256": "c059aae906c5d5a1f8499c23a0945759fb5b3b9a53b057eeab09ec7e8603d0a4",
+      "character": "bear-beret",
+      "poses": [
+        "pond_stand_right",
+        "pond_preload_right",
+        "pond_air_right"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-left-preload-detail-light.png",
+      "sha256": "6a9d896f04c365cdebffb99649cc7413cede5923c58605d4f844461f2eab1446",
+      "character": "bear-beret",
+      "poses": [
+        "pond_stand_left",
+        "pond_preload_left",
+        "pond_air_left"
+      ],
+      "reference_display_px": 350,
+      "background": "light",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/post-publication-audit-v001/bear-hamster/sequence-bear-beret-left-preload-detail-dark.png",
+      "sha256": "c4018470d07ae81487413c7b0e7ad78509b6c83e52eb2e0acdc9869d322b3776",
+      "character": "bear-beret",
+      "poses": [
+        "pond_stand_left",
+        "pond_preload_left",
+        "pond_air_left"
+      ],
+      "reference_display_px": 350,
+      "background": "dark",
+      "canvas_px": [
+        1008,
+        567
+      ],
+      "note": "Independent discrete source keys, no interpolation; 336px panels; anatomical anchor registration retained",
+      "new_visual_inspected": false
+    }
+  ],
+  "observed_sequence_scope": "All 21 light-background sequence pages newly viewed. Both backgrounds newly viewed for every individual pose. 42 sequence pages generated; dark sequence pages are preserved but not separately claimed as viewed. No GIF, video, interpolation or application playback was inspected.",
+  "limits": [
+    "Live consumer app, root motion, crossfade/mesh interpolation, actual runtime layout and compressed output are unverified.",
+    "Static/discrete source pass is limited to the stated backgrounds and reference sizes; it does not certify smoothness or completed app behavior.",
+    "All sources preserved. Existing QA/collection adoption status left intact; this independent report carries the current adverse finding."
+  ],
+  "input_stability": [
+    {
+      "path": "assets/library/collections/app-character-stock/v001/manifest.json",
+      "sha256_before": "b7b450b80f350535d40752aacb20eb89054d886e8537cdd825c0bd8a04ad227c",
+      "sha256_after": "b7b450b80f350535d40752aacb20eb89054d886e8537cdd825c0bd8a04ad227c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/registration.json",
+      "sha256_before": "f7b6124c64a5a62d157a4f7ec01484f20273ac4da70cb1820a71aab87e31163c",
+      "sha256_after": "f7b6124c64a5a62d157a4f7ec01484f20273ac4da70cb1820a71aab87e31163c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/registration.json",
+      "sha256_before": "117d0b1c2752b4fdb4a9cf5e7db81105b2da81ab74b0bde4177ab40e3fac03cc",
+      "sha256_after": "117d0b1c2752b4fdb4a9cf5e7db81105b2da81ab74b0bde4177ab40e3fac03cc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/selected-neutral-a.png",
+      "sha256_before": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "sha256_after": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-01.png",
+      "sha256_before": "2fd91d1c87f529fd8ecfa75fb1efdc7f3ee53749226a6fc3790eb4a17ef354fa",
+      "sha256_after": "2fd91d1c87f529fd8ecfa75fb1efdc7f3ee53749226a6fc3790eb4a17ef354fa",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-02.png",
+      "sha256_before": "8f6fd68c44ad61475213c2ac7d3efd5f07b89437755834cdea60bb3f62875982",
+      "sha256_after": "8f6fd68c44ad61475213c2ac7d3efd5f07b89437755834cdea60bb3f62875982",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-03.png",
+      "sha256_before": "3a9aa0e547c1058b63c183f6e20f1418267ae7c5f55cbe1aee2f31b989efc227",
+      "sha256_after": "3a9aa0e547c1058b63c183f6e20f1418267ae7c5f55cbe1aee2f31b989efc227",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-04.png",
+      "sha256_before": "29a9bf5b3717c08214242b448b5f2629e5cf0f450d43d35bc125a64b1bb76e02",
+      "sha256_after": "29a9bf5b3717c08214242b448b5f2629e5cf0f450d43d35bc125a64b1bb76e02",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-01-v2.png",
+      "sha256_before": "a0a23a0f629389ab76d6e6717abec43381f5e9e7055bb3e486d29bb14c6a70b4",
+      "sha256_after": "a0a23a0f629389ab76d6e6717abec43381f5e9e7055bb3e486d29bb14c6a70b4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/pond-02-v2.png",
+      "sha256_before": "e0d43b5ebfeb20a75bc2e092985d867738767bfbf24195d50f7713ae52649200",
+      "sha256_after": "e0d43b5ebfeb20a75bc2e092985d867738767bfbf24195d50f7713ae52649200",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/seated-title-01.png",
+      "sha256_before": "504f9709c349056b7486f29fe7f314794de3a518178874c667fc74abcabe0469",
+      "sha256_after": "504f9709c349056b7486f29fe7f314794de3a518178874c667fc74abcabe0469",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-01.png",
+      "sha256_before": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178",
+      "sha256_after": "f417856c2b68fafc618e6f20e61f5552bc84dfeaad88c2a81fa461636312c178",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-02.png",
+      "sha256_before": "de3f6d3f279d7535b3f12953e0db8574af7c208d339732153d82b026f18fa8d2",
+      "sha256_after": "de3f6d3f279d7535b3f12953e0db8574af7c208d339732153d82b026f18fa8d2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-03.png",
+      "sha256_before": "1219d9b1c575f2077ce9bee09e2caed88ed95ab770b391fe2bf384742f04470b",
+      "sha256_after": "1219d9b1c575f2077ce9bee09e2caed88ed95ab770b391fe2bf384742f04470b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/raw/sheet-04.png",
+      "sha256_before": "52c631fe1e4f705894dedbadd76d8739d4f15e3dc9f6a2345b792e573a7fd6c5",
+      "sha256_after": "52c631fe1e4f705894dedbadd76d8739d4f15e3dc9f6a2345b792e573a7fd6c5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "sha256_before": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "sha256_after": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+      "unchanged": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/references/latest/assets/characters/base-v3/hamster.png",
+      "sha256_before": "66d27de9924370647c93ed71ca2850ed8a43487ae0036932baa58a126c606bd8",
+      "sha256_after": "66d27de9924370647c93ed71ca2850ed8a43487ae0036932baa58a126c606bd8",
+      "unchanged": true
+    },
+    {
+      "path": ".work/app-character-issues-20261113/references/latest/assets/characters/base-v3/bear-beret.png",
+      "sha256_before": "c5459d3e33ac3d5c5a3fe46bfcef9fa5b1c32aca2129424585f808d2b92415d3",
+      "sha256_after": "c5459d3e33ac3d5c5a3fe46bfcef9fa5b1c32aca2129424585f808d2b92415d3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/neutral.png",
+      "sha256_before": "6db1bcdbe567edf0529607b557e35c8ce4e8082746d7d288195bfbb2e024d509",
+      "sha256_after": "6db1bcdbe567edf0529607b557e35c8ce4e8082746d7d288195bfbb2e024d509",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/blink.png",
+      "sha256_before": "90f051c6f72e50d67beafeab285b49479815081d01f3fb48f0ccd66839088979",
+      "sha256_after": "90f051c6f72e50d67beafeab285b49479815081d01f3fb48f0ccd66839088979",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/tap_down.png",
+      "sha256_before": "dca24fd1ddb408b794bb70dc288ffcb73d437d4887a9312f8e41b5253b34122d",
+      "sha256_after": "dca24fd1ddb408b794bb70dc288ffcb73d437d4887a9312f8e41b5253b34122d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/tap_pop.png",
+      "sha256_before": "33ea9b9d745b6fd5bb91be15a8dd440b005e2f66b299e7edf564479d153b34b5",
+      "sha256_after": "33ea9b9d745b6fd5bb91be15a8dd440b005e2f66b299e7edf564479d153b34b5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/think.png",
+      "sha256_before": "94152cc3d09f4b1e4f03df2a646705b04500a245dc2cc663fafdd34b7629c961",
+      "sha256_after": "94152cc3d09f4b1e4f03df2a646705b04500a245dc2cc663fafdd34b7629c961",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/aha.png",
+      "sha256_before": "fd75c6543a5c0ff93f0a129e1b20e3a0ddf2abee8bc0f7734479bc60d534a14e",
+      "sha256_after": "fd75c6543a5c0ff93f0a129e1b20e3a0ddf2abee8bc0f7734479bc60d534a14e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/success_ready.png",
+      "sha256_before": "76dc1e1b2b9e1cf241780512e2381de68e5f35e697660f3800d56690dcf9a2d9",
+      "sha256_after": "76dc1e1b2b9e1cf241780512e2381de68e5f35e697660f3800d56690dcf9a2d9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/success_air.png",
+      "sha256_before": "7387e2b736be19107e8865ba63e80fd4798c7379c0a78fce908487cdb8326231",
+      "sha256_after": "7387e2b736be19107e8865ba63e80fd4798c7379c0a78fce908487cdb8326231",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/success_land.png",
+      "sha256_before": "9fbcaa66d2a8fe7227822ac592182dffd8912853c69d67e82da8ea92931cb65a",
+      "sha256_after": "9fbcaa66d2a8fe7227822ac592182dffd8912853c69d67e82da8ea92931cb65a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/oops.png",
+      "sha256_before": "b8a16880b86da02d27dc79beaa4ae0aa374528b53e29a21bfbcc124646540e47",
+      "sha256_after": "b8a16880b86da02d27dc79beaa4ae0aa374528b53e29a21bfbcc124646540e47",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/retry.png",
+      "sha256_before": "36b4cea50c11fa1d423a21b910412706521ea3b9ae7afbf85968eae4cb7dda46",
+      "sha256_after": "36b4cea50c11fa1d423a21b910412706521ea3b9ae7afbf85968eae4cb7dda46",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/cheer.png",
+      "sha256_before": "812d2521c72b0a477f3691101e9223c55475a4c2488284a5fdfe1a6889692243",
+      "sha256_after": "812d2521c72b0a477f3691101e9223c55475a4c2488284a5fdfe1a6889692243",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/idle_rest.png",
+      "sha256_before": "4f08a577118bf44edf785d298bde5f58be1bd26df77c5137c5d88b618c6c9825",
+      "sha256_after": "4f08a577118bf44edf785d298bde5f58be1bd26df77c5137c5d88b618c6c9825",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/idle_stretch.png",
+      "sha256_before": "2f4fd1c74277151500d1572ec6ec96b5436d3af8fa21f3aee0d63b9f37d6f096",
+      "sha256_after": "2f4fd1c74277151500d1572ec6ec96b5436d3af8fa21f3aee0d63b9f37d6f096",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/idle_nap.png",
+      "sha256_before": "c1202ce045ef0eb19ea7d55ae2e5bc95f8e03e89162c5f8e22e529415507fc4b",
+      "sha256_after": "c1202ce045ef0eb19ea7d55ae2e5bc95f8e03e89162c5f8e22e529415507fc4b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_stand_right.png",
+      "sha256_before": "ca270e3cfb5e8483752c93da7ff63df0689608916a53d2831a44bdd2a99cf631",
+      "sha256_after": "ca270e3cfb5e8483752c93da7ff63df0689608916a53d2831a44bdd2a99cf631",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_air_right.png",
+      "sha256_before": "21425c31fc7958cd67e6599b686b69cd886d54061ed3c52659ad4cee126d0455",
+      "sha256_after": "21425c31fc7958cd67e6599b686b69cd886d54061ed3c52659ad4cee126d0455",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_land_right.png",
+      "sha256_before": "e9eae4abe8441759474b8b675f3f5f3119afd88629ea45775f9166286ee34abe",
+      "sha256_after": "e9eae4abe8441759474b8b675f3f5f3119afd88629ea45775f9166286ee34abe",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_air_left.png",
+      "sha256_before": "83f69fbe18ff2afd41d61cf93f95e81f0879ac9259d6b90221dc486653454761",
+      "sha256_after": "83f69fbe18ff2afd41d61cf93f95e81f0879ac9259d6b90221dc486653454761",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_stand_left.png",
+      "sha256_before": "6eec39ea67441cbbc03fe0a7c4e6a6a7431f91354d5abf48cb11796d37629398",
+      "sha256_after": "6eec39ea67441cbbc03fe0a7c4e6a6a7431f91354d5abf48cb11796d37629398",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_land_left.png",
+      "sha256_before": "184c408f14303b4931ae7ab5da0f16325b5f1c0de40d31d37b246fdb453e55e2",
+      "sha256_after": "184c408f14303b4931ae7ab5da0f16325b5f1c0de40d31d37b246fdb453e55e2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_left.png",
+      "sha256_before": "05cf6ab90a71b68e5a4b405715a014d9092ebb84c36053988e450ff90de0b0a4",
+      "sha256_after": "05cf6ab90a71b68e5a4b405715a014d9092ebb84c36053988e450ff90de0b0a4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/pond_preload_right.png",
+      "sha256_before": "a29e4d4e5b4874ff1c8acd8ef8e5b3ae2e6f098d1af3bb63c2b98091f777a655",
+      "sha256_after": "a29e4d4e5b4874ff1c8acd8ef8e5b3ae2e6f098d1af3bb63c2b98091f777a655",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/signature.png",
+      "sha256_before": "66bbcb77075dd59f6cbfc712bdb17541f0b6ef893644ba0be52f7dadc45d7285",
+      "sha256_after": "66bbcb77075dd59f6cbfc712bdb17541f0b6ef893644ba0be52f7dadc45d7285",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/seated_tap_down.png",
+      "sha256_before": "27b3f3b03e278d49ff7287d7a263091c34ad217cc517bc976f35fb1d39719122",
+      "sha256_after": "27b3f3b03e278d49ff7287d7a263091c34ad217cc517bc976f35fb1d39719122",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/seated_tap_pop.png",
+      "sha256_before": "31728ae7adba58674428cf28bb207035ea9bf7f1eecade719753151d2e1a0fa6",
+      "sha256_after": "31728ae7adba58674428cf28bb207035ea9bf7f1eecade719753151d2e1a0fa6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/seated_blink.png",
+      "sha256_before": "6e9a90cd940bb164886b661785307b2d59965253876e2eb356cbff0aab4dad4e",
+      "sha256_after": "6e9a90cd940bb164886b661785307b2d59965253876e2eb356cbff0aab4dad4e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/neutral.png",
+      "sha256_before": "e82eceaa4c15286905fc0ab6e9264eb2f1b769dc400c797f1f5a6230048af9c6",
+      "sha256_after": "e82eceaa4c15286905fc0ab6e9264eb2f1b769dc400c797f1f5a6230048af9c6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/blink.png",
+      "sha256_before": "665b190a0a694c149406ae1037956c39ff5709bd253f553e97d20fc37375a7cc",
+      "sha256_after": "665b190a0a694c149406ae1037956c39ff5709bd253f553e97d20fc37375a7cc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/tap_down.png",
+      "sha256_before": "c47015cd846f5ee0c355f5959aa60562363dfd9e3d6d9c795749afec37896a21",
+      "sha256_after": "c47015cd846f5ee0c355f5959aa60562363dfd9e3d6d9c795749afec37896a21",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/tap_pop.png",
+      "sha256_before": "d9c2307a9ff786686a7c07f5872ced670c5e0d609f6caf398ce6f57266d1c2fb",
+      "sha256_after": "d9c2307a9ff786686a7c07f5872ced670c5e0d609f6caf398ce6f57266d1c2fb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/think.png",
+      "sha256_before": "5d7adb64d23d0d50565ead657656436e5a2e06bae6b4ff772b7e9d033e0f2ac7",
+      "sha256_after": "5d7adb64d23d0d50565ead657656436e5a2e06bae6b4ff772b7e9d033e0f2ac7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/aha.png",
+      "sha256_before": "ee98a13fc11be38dad39ca2f08e59eec91d63c3e37e876b89b60921eadbaf875",
+      "sha256_after": "ee98a13fc11be38dad39ca2f08e59eec91d63c3e37e876b89b60921eadbaf875",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/success_ready.png",
+      "sha256_before": "4aa4990248be26781a388112f60ee03ed4469ab5f595df16a71282a566e5b815",
+      "sha256_after": "4aa4990248be26781a388112f60ee03ed4469ab5f595df16a71282a566e5b815",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/success_air.png",
+      "sha256_before": "cf3b7d1892a0792992b4607cf8f6c0dabb54954cb2f6846d3d9371b299772120",
+      "sha256_after": "cf3b7d1892a0792992b4607cf8f6c0dabb54954cb2f6846d3d9371b299772120",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/success_land.png",
+      "sha256_before": "f7c8126f4b8dac9e80372416d56d22fb92c98b6269c03a8e31e2d4fe6765050e",
+      "sha256_after": "f7c8126f4b8dac9e80372416d56d22fb92c98b6269c03a8e31e2d4fe6765050e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/oops.png",
+      "sha256_before": "52f9c19db295a0147976eef08f89b194517ae955c50273bcd56c10b2a217d35e",
+      "sha256_after": "52f9c19db295a0147976eef08f89b194517ae955c50273bcd56c10b2a217d35e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/retry.png",
+      "sha256_before": "628d8290fef14aca1c99d1e92f60a59f61175113b9e3b19df2e87e96245b33e1",
+      "sha256_after": "628d8290fef14aca1c99d1e92f60a59f61175113b9e3b19df2e87e96245b33e1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/cheer.png",
+      "sha256_before": "63f30305b10de443514a03025938f1956f6e79e15fd87b02aec813a422cdcc66",
+      "sha256_after": "63f30305b10de443514a03025938f1956f6e79e15fd87b02aec813a422cdcc66",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/signature.png",
+      "sha256_before": "f3da6de29fa66456c523056912f4fa81e803bbd26f947d4e6752fd6741a83f88",
+      "sha256_after": "f3da6de29fa66456c523056912f4fa81e803bbd26f947d4e6752fd6741a83f88",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/idle_rest.png",
+      "sha256_before": "6ce08a3d480d5c521e5394f3c891693eba7e84ae30b5f1236e67258031656662",
+      "sha256_after": "6ce08a3d480d5c521e5394f3c891693eba7e84ae30b5f1236e67258031656662",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/idle_stretch.png",
+      "sha256_before": "24fde93f448061762f23bda84dcd50258cdf6a46c0931c122b07403ad08e6d46",
+      "sha256_after": "24fde93f448061762f23bda84dcd50258cdf6a46c0931c122b07403ad08e6d46",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/hamster/generation-batches/app-stock-20261113-v001/prepared-v001/poses/idle_nap.png",
+      "sha256_before": "7663c596dc892b3cc11c9da84b57ab584ec11553706e912cf02cf5b5dcead06e",
+      "sha256_after": "7663c596dc892b3cc11c9da84b57ab584ec11553706e912cf02cf5b5dcead06e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/library/characters/bear-beret/generation-batches/app-stock-20261113-v001/source/face-icon.png",
+      "sha256_before": "fa6cd15615f9b88e69d6b1f6f9d464f58fefe01fed5eff6834da7f8721c58ffb",
+      "sha256_after": "fa6cd15615f9b88e69d6b1f6f9d464f58fefe01fed5eff6834da7f8721c58ffb",
+      "unchanged": true
+    }
+  ],
+  "all_fixed_inputs_unchanged": true,
+  "all_pose_current_copies_match": true,
+  "icon_current_copy_matches": true
+}
