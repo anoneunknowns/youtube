@@ -1,0 +1,197 @@
+{
+  "method": "Transfer the old selected source-sheet standing-equivalent reference through independently inspected head/face/shoulder/trunk/feet landmarks. Use one isotropic ratio for this fresh single-frame sheet; never derive standing reference solely from this pose bbox.",
+  "old_registration": {
+    "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/registration.json",
+    "sha256": "1242c09c3d785df05ae86d83c9bd8caac3e2285d0c5cc3b845b223f6e9c41af1",
+    "bytes": 46404
+  },
+  "old_sheet_id": "reactions-02",
+  "old_reference_height_px": 508.1059063136456,
+  "chosen_new_to_old_native_ratio": 2.2,
+  "new_reference_height_px": 1117.8329938900204,
+  "landmark_cross_checks": [
+    {
+      "landmark": "head-at-eye-level",
+      "old_y_px": 170,
+      "new_y_px": 430,
+      "old_span_px": [
+        167,
+        415
+      ],
+      "new_span_px": [
+        351,
+        901
+      ],
+      "width_ratio": 2.217741935483871
+    },
+    {
+      "landmark": "shoulder/raised-arm-cross-section",
+      "old_y_px": 240,
+      "new_y_px": 575,
+      "old_span_px": [
+        145,
+        445
+      ],
+      "new_span_px": [
+        295,
+        965
+      ],
+      "width_ratio": 2.2333333333333334
+    },
+    {
+      "landmark": "waist-cross-section",
+      "old_y_px": 330,
+      "new_y_px": 745,
+      "old_span_px": [
+        232,
+        359
+      ],
+      "new_span_px": [
+        490,
+        765
+      ],
+      "width_ratio": 2.1653543307086616
+    },
+    {
+      "landmark": "two-anatomical-sole-centres-horizontal-separation",
+      "old_px": 87.0,
+      "new_px": 205.0,
+      "ratio": 2.3563218390804597,
+      "calibration_weight": "secondary: stance width may change with redrawn pose"
+    },
+    {
+      "landmark": "two-closed-eye-arc-centres",
+      "old_points_px": [
+        [
+          244,
+          168
+        ],
+        [
+          343,
+          148
+        ]
+      ],
+      "new_points_px": [
+        [
+          520,
+          418
+        ],
+        [
+          749,
+          390
+        ]
+      ],
+      "method": "Approximate visual correspondences; old±2px/new±6px. Head tilt and expression may change, so eye spacing and shoulder/feet are cross-checks, not independent pose fitting.",
+      "old_distance_px": 101.0,
+      "new_distance_px": 230.70543990118657,
+      "ratio": 2.284212276249372
+    }
+  ],
+  "old_sole_measurements": [
+    {
+      "roi_xyxy": [
+        210,
+        420,
+        286,
+        496
+      ],
+      "alpha_threshold": 8,
+      "sole_band_height_px": 4,
+      "sole_band_x_interval": [
+        249,
+        275
+      ],
+      "point_px": [
+        262.0,
+        494
+      ],
+      "method": "Inspected anatomical foot ROI; alpha8 final4px sole band midpoint; y is exclusive native lower bound."
+    },
+    {
+      "roi_xyxy": [
+        320,
+        410,
+        415,
+        480
+      ],
+      "alpha_threshold": 8,
+      "sole_band_height_px": 4,
+      "sole_band_x_interval": [
+        337,
+        361
+      ],
+      "point_px": [
+        349.0,
+        475
+      ],
+      "method": "Inspected anatomical foot ROI; alpha8 final4px sole band midpoint; y is exclusive native lower bound."
+    }
+  ],
+  "new_sole_measurements": [
+    {
+      "roi_xyxy": [
+        405,
+        910,
+        591,
+        1110
+      ],
+      "alpha_threshold": 8,
+      "sole_band_height_px": 4,
+      "sole_band_x_interval": [
+        511,
+        550
+      ],
+      "point_px": [
+        530.5,
+        1107
+      ],
+      "method": "Inspected anatomical foot ROI; alpha8 final4px sole band midpoint; y is exclusive native lower bound."
+    },
+    {
+      "roi_xyxy": [
+        673,
+        874,
+        881,
+        1090
+      ],
+      "alpha_threshold": 8,
+      "sole_band_height_px": 4,
+      "sole_band_x_interval": [
+        718,
+        753
+      ],
+      "point_px": [
+        735.5,
+        1083
+      ],
+      "method": "Inspected anatomical foot ROI; alpha8 final4px sole band midpoint; y is exclusive native lower bound."
+    }
+  ],
+  "old_registered_anchor_x_offset_from_measured_mean_soles_px": 0,
+  "new_registered_anchor_x_offset_px": 0.0,
+  "source_foot_point_px": [
+    633.0,
+    1107
+  ],
+  "anchor_px": [
+    633.0,
+    1223.6
+  ],
+  "baked_in_lift_px": 116.60000000000001,
+  "not_per_pose_bbox_fit": true,
+  "uncertainty": "Art calibration from hand-selected homologous cross-sections and face correspondences; pose articulation and outline softness introduce several percent variation. New head/trunk matches are checked against unchanged neutral and neighbors at430 reference; no anatomy or motion guarantee.",
+  "old_ready_floor_basis": {
+    "frame_id": "success_ready",
+    "anchor_px": [
+      344.5,
+      547
+    ],
+    "old_air_source_foot_point_px": [
+      305.5,
+      494
+    ],
+    "old_lift_px": 53,
+    "old_lift_to_reference_ratio": 0.10430896264229597,
+    "new_lift_to_reference_ratio": 0.10430896264229599
+  }
+}

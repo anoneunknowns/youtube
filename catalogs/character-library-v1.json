@@ -37,7 +37,7 @@
     },
     {
       "path": "catalogs/character-adoptions-v1.json",
-      "sha256": "c304acba1d39dc9bb32b48f2176a1dace260127c77ed5a32726a7a30b8878a93"
+      "sha256": "395c2c9f8a56149cc984a45a85c7d6f043e38277c24f5a554556bac6aa2c7928"
     }
   ],
   "usage_rules": [
@@ -50,7 +50,7 @@
     "New expansion poses require expanded/<pose>; unprefixed poses and the canonical neutral retain their original selections.",
     "Eye-catch poses require eyecatch/<pose>; prior original and expanded selections are unchanged.",
     "Key poses are reviewed stock. Actual episode timing, clearance and continuous movement need scene review.",
-    "Explicit approvals in catalogs/character-adoptions-v1.json select replacement neutral/eye-catch sources. Historical selection defaults above apply to entries without an override; episode adapters remain independent."
+    "Explicit approvals in catalogs/character-adoptions-v1.json select replacement neutral/eye-catch/expanded/supplemental sources. Historical selection defaults above apply to entries without an override; episode adapters remain independent."
   ],
   "characters": [
     {
@@ -11276,17 +11276,35 @@
         "preview": "assets/library/characters/fairy-pitta/motions/v001/pose-review.png",
         "motion_preview": "assets/library/characters/fairy-pitta/motions/v001/key-pose-preview.gif"
       },
+      "adoption_selection": {
+        "path": "catalogs/character-adoptions-v1.json",
+        "selection_evidence": [
+          {
+            "path": "assets/library/characters/fairy-pitta/generation-batches/final-audit-20261114-root-v001/selection-v001.json",
+            "sha256": "f94afe991b4f4c6cb61d8d1a6da228a6f0944277197e4667c17582f78c82cb19"
+          },
+          {
+            "path": "assets/library/characters/fairy-pitta/generation-batches/final-audit-20261114-root-v001/art-acceptance-v001.json",
+            "sha256": "c31b168a37b2b357feb966742fc08507d36eecfa56fe622891d887a5641122be"
+          },
+          {
+            "path": "assets/library/characters/fairy-pitta/generation-batches/final-audit-20261114-root-v001/geometry-review-v001.json",
+            "sha256": "8639b104518775cb8c4ebf56dddd5e3f22cf1a06d72c8cbac16dc280417430f8"
+          }
+        ]
+      },
       "expanded_key_poses": {
-        "version": "v002",
-        "registration": "assets/library/characters/fairy-pitta/motions/v002/registration.json",
-        "registration_sha256": "60fafee5709aa5ef8e063de6b7012a698ea404e092f4359e53fce6dc04ee45ff",
+        "version": "v003",
+        "registration": "assets/library/characters/fairy-pitta/generation-batches/final-audit-20261114-root-v001/registration.json",
+        "registration_sha256": "5a796287d843065b601f71ca97586472429ecb6248bd628d0e325c2ba1b9b5ac",
         "namespace": "expanded/",
         "coordinate_space": "individual exact cell PNG",
         "reference_height_policy": "One calibrated standing reference height per source sheet; each frame carries its sheet reference. Never fit each pose.",
         "sheet_reference_heights_px": {
           "reactions": 352,
           "actions": 365,
-          "postures": 325.0
+          "postures": 325.0,
+          "final-audit-think-v001": 1020.8
         },
         "poses": {
           "neutral": {
@@ -11378,25 +11396,25 @@
             "frame_id": "tap_pop"
           },
           "think": {
-            "path": "assets/library/characters/fairy-pitta/motions/v002/think.png",
-            "sha256": "d5f01e96109bd5af7a8d1f2412dc4cf1865d6aa7df7212c7bf7fb2fd38899bd0",
+            "path": "assets/library/characters/fairy-pitta/generation-batches/final-audit-20261114-root-v001/source/think-v001.png",
+            "sha256": "66f261320903e316ec6d6a38c781057ee6de5d8aea86f712e4f2f2edd8124cdb",
             "size_px": [
-              418,
-              418
+              1254,
+              1254
             ],
             "anchor_px": [
-              211.0,
-              377
+              613.675,
+              1101
             ],
             "body_bbox_px": [
-              68,
-              25,
-              365,
-              377
+              205,
+              84,
+              1060,
+              1101
             ],
             "tail_bbox_px": null,
-            "reference_height_px": 352,
-            "sheet_id": "reactions",
+            "reference_height_px": 1020.8,
+            "sheet_id": "final-audit-think-v001",
             "frame_id": "think"
           },
           "aha": {
@@ -11884,10 +11902,10 @@
             "frame_id": "nod_down"
           }
         },
-        "preview": "assets/library/characters/fairy-pitta/motions/v002/pose-review.png",
-        "motion_preview": "assets/library/characters/fairy-pitta/motions/v002/key-pose-preview.gif"
+        "preview": "assets/library/characters/fairy-pitta/generation-batches/final-audit-20261114-root-v001/pose-review.png",
+        "motion_preview": "assets/library/characters/fairy-pitta/generation-batches/final-audit-20261114-root-v001/key-pose-preview.gif"
       },
-      "expansion_collection": "assets/library/collections/character-expansion/v001/manifest.json"
+      "expansion_collection": "catalogs/character-adoptions-v1.json"
     },
     {
       "id": "onagadori",
@@ -18393,8 +18411,8 @@
       "pose_sets": [
         {
           "namespace": "app",
-          "registration": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/registration.json",
-          "registration_sha256": "1242c09c3d785df05ae86d83c9bd8caac3e2285d0c5cc3b845b223f6e9c41af1",
+          "registration": "assets/library/characters/cream-companion/generation-batches/final-audit-20261114-root-v001/registration.json",
+          "registration_sha256": "3416571c04d5d40ce405c8e148d728b3194598230570a937e230eb1c390f84d5",
           "poses": {
             "neutral": {
               "role": "body",
@@ -18742,72 +18760,90 @@
             "success_air": {
               "role": "body",
               "body_bbox_px": [
-                137,
-                31,
-                448,
-                494
+                272,
+                129,
+                968,
+                1107
               ],
               "tail_bbox_px": null,
               "anchor_px": [
-                305.5,
-                547
+                633.0,
+                1223.6
               ],
               "source_foot_point_px": [
-                305.5,
-                494
+                633.0,
+                1107
               ],
               "support_kind": "inferred-ground",
               "ground_estimated": true,
-              "baked_in_lift_px": 53,
-              "support_notes": "Ground inferred from same-sheet ready pose native baseline; drawn feet remain distinct. The baked-in native lift is retained in reaction animation; do not add a second root jump. Ground estimate is an art calibration, not ground pixels. Both anatomical soles are measured in separate inspected native foot regions: x is the mean of the two sole centres and y is the lower drawn sole baseline. This preserves unequal airborne feet instead of following only the lowest foot horizontally.",
+              "baked_in_lift_px": 116.60000000000001,
+              "support_notes": "Both airborne anatomical soles are measured separately. Their mean x and lower drawn sole y form source_foot_point_px. Ground y is inferred by preserving old same-sheet ready floor minus lower-airborne-sole lift/reference ratio: old53/508.1059063136456; it is not a painted contact pixel. Keep the unequal foot heights. Never add a second root jump.",
               "scene_motion_policy": "retain-native-lift; application-must-not-add-a-second-root-jump",
               "vertical_motion_policy": "retain-native-lift; application-must-not-add-a-second-root-jump",
               "anatomical_foot_regions_px": [
                 [
-                  210,
-                  420,
-                  286,
-                  496
+                  405,
+                  910,
+                  591,
+                  1110
                 ],
                 [
-                  320,
-                  410,
-                  415,
-                  480
+                  673,
+                  874,
+                  881,
+                  1090
                 ]
               ],
               "anatomical_sole_points_px": [
                 [
-                  261.5,
-                  494
+                  530.5,
+                  1107
                 ],
                 [
-                  349.5,
-                  475
+                  735.5,
+                  1083
                 ]
               ],
               "anchor_kind": "inferred-ground",
-              "anchor_measurement": "measured-native-alpha8-contact-band; reviewed against pose anatomy",
-              "anchor_basis": "Ground inferred from same-sheet ready pose native baseline; drawn feet remain distinct. The baked-in native lift is retained in reaction animation; do not add a second root jump. Ground estimate is an art calibration, not ground pixels. Both anatomical soles are measured in separate inspected native foot regions: x is the mean of the two sole centres and y is the lower drawn sole baseline. This preserves unequal airborne feet instead of following only the lowest foot horizontally.",
-              "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/success_air.png",
-              "sha256": "4afdd16353b399a5840ffc07a325a26aa13d7f7d2025390e8eded3d1731f5dd4",
+              "anchor_measurement": "native-alpha8-independent-anatomical-sole-regions; art-calibrated sheet reference",
+              "anchor_basis": "Both airborne anatomical soles are measured separately. Their mean x and lower drawn sole y form source_foot_point_px. Ground y is inferred by preserving old same-sheet ready floor minus lower-airborne-sole lift/reference ratio: old53/508.1059063136456; it is not a painted contact pixel. Keep the unequal foot heights. Never add a second root jump.",
+              "path": "assets/library/characters/cream-companion/generation-batches/final-audit-20261114-root-v001/source/success-air-v001.png",
+              "sha256": "6e8d959c5489dfd972c98dad85213339527048163a5e96e4e3e16bbea6a0e134",
               "size_px": [
-                627,
-                627
+                1254,
+                1254
               ],
-              "source_sheet": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/raw/reactions-02.png",
-              "source_sheet_sha256": "fbd606b2ca11026b9f3c80d3be70d6df78b991dfab641b85b721e2eae4f54c9e",
-              "sheet_id": "reactions-02",
+              "source_sheet": "assets/library/characters/cream-companion/generation-batches/final-audit-20261114-root-v001/source/success-air-v001.png",
+              "source_sheet_sha256": "6e8d959c5489dfd972c98dad85213339527048163a5e96e4e3e16bbea6a0e134",
+              "sheet_id": "final-audit-success-air-v001",
               "crop_from_sheet_xyxy": [
-                627,
-                627,
+                0,
+                0,
                 1254,
                 1254
               ],
               "exact_cell_pixel_match": true,
               "source_pixels_modified": false,
-              "reference_height_px": 508.1059063136456,
-              "generation_provenance": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/provenance/reactions-02.json",
+              "reference_height_px": 1117.8329938900204,
+              "generation_provenance": "assets/library/characters/cream-companion/generation-batches/final-audit-20261114-root-v001/provenance/output-record-v001.json",
+              "visible_bbox_px": [
+                272,
+                129,
+                968,
+                1107
+              ],
+              "alpha_extrema": [
+                0,
+                255
+              ],
+              "visible_alpha8_margins_px": [
+                272,
+                129,
+                286,
+                147
+              ],
+              "rgba_pixel_sha256": "d7a5406cc998180db225d47900129f9037fff00151e8c3df5e2a13434c8ab65b",
+              "review": "Fresh full1254 original preserved. Registration candidate reviewed at native and430 on light/dark; limited still/discrete scope. Formal adoption requires manager decision.",
               "frame_id": "success_air"
             },
             "success_land": {
@@ -19226,14 +19262,49 @@
             ]
           },
           "coordinate_space": "individual exact cell PNG",
-          "reference_height_policy": "Use each source sheet calibration unchanged; scene relative scale is separate."
+          "reference_height_policy": "Use each source sheet calibration unchanged; scene relative scale is separate.",
+          "adoption_selection": {
+            "version": "v002",
+            "registration": "assets/library/characters/cream-companion/generation-batches/final-audit-20261114-root-v001/registration.json",
+            "registration_sha256": "3416571c04d5d40ce405c8e148d728b3194598230570a937e230eb1c390f84d5",
+            "canonical_neutral": {
+              "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/neutral.png",
+              "sha256": "e6b3c7e870dfef5730770e2fc90723bd8c09c143d72690d4ac73f7f51434a0be"
+            },
+            "base_registration": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/registration.json",
+            "base_registration_sha256": "1242c09c3d785df05ae86d83c9bd8caac3e2285d0c5cc3b845b223f6e9c41af1",
+            "replacements": {
+              "success_air": {
+                "path": "assets/library/characters/cream-companion/generation-batches/app-stock-20261113-v001/prepared-final-v001/poses/success_air.png",
+                "sha256": "4afdd16353b399a5840ffc07a325a26aa13d7f7d2025390e8eded3d1731f5dd4"
+              }
+            },
+            "namespace": "app"
+          }
         }
       ],
       "scene_relative_scale": {
         "relative_to": "bear-beret",
         "body_height_ratio": 0.95
       },
-      "supplemental_collection": "assets/library/collections/app-character-stock/v001/manifest.json"
+      "supplemental_collection": "assets/library/collections/app-character-stock/v001/manifest.json",
+      "adoption_selection": {
+        "path": "catalogs/character-adoptions-v1.json",
+        "selection_evidence": [
+          {
+            "path": "assets/library/characters/cream-companion/generation-batches/final-audit-20261114-root-v001/selection-v001.json",
+            "sha256": "0ac3866096c6256cbbddc52350083222bbe98a2524f024e1576937fdd7b33eb3"
+          },
+          {
+            "path": "assets/library/characters/cream-companion/generation-batches/final-audit-20261114-root-v001/art-acceptance-v001.json",
+            "sha256": "8c9f93b52bd3b46eea9b006baa425bd84b9354eec2df8ec196d91412747eb1bf"
+          },
+          {
+            "path": "assets/library/characters/cream-companion/generation-batches/final-audit-20261114-root-v001/geometry-review-v001.json",
+            "sha256": "5f5016863f051de45a05e5a5c11fb7dc518c2a9a0fa308ce9c14e3d6053b403f"
+          }
+        ]
+      }
     },
     {
       "id": "cat-patches",

@@ -217,6 +217,9 @@ def _required_current_library_paths_locked(root, pending):
             required.update(item['path'] for item in supplement['review_evidence'])
     for adopted in _read_adoptions_locked(root, pending).values():
         required.update(item['path'] for item in adopted['selection_evidence'])
+        for selected in ([adopted['expanded']] if 'expanded' in adopted else []) + adopted.get('pose_set_selections', []):
+            required.update((selected['base_registration'], selected['canonical_neutral']['path']))
+            required.update(record['path'] for record in selected['replacements'].values())
     for character in index['characters']:
         neutral = character['neutral']
         required.update(neutral[key] for key in ('path', 'source_manifest') if neutral.get(key))
@@ -531,113 +534,128 @@ def _read_adoptions_locked(root, pending):
     neutral_keys = ('path', 'sha256', 'source_size_px', 'image_region_px',
                     'body_bbox_px', 'anchor_px', 'reference_height_px')
     for entry in document['adoptions']:
-        _adoption_keys(entry, ('id', 'status', 'neutral', 'eyecatch', 'selection_evidence'), 'entry',
-                       optional=('pose_set_overrides',))
+        inherited_only = (isinstance(entry, dict)
+                          and 'neutral' not in entry and 'eyecatch' not in entry)
+        if inherited_only:
+            _adoption_keys(entry, ('id', 'status', 'selection_evidence'), 'entry',
+                           optional=('expanded', 'pose_set_selections'))
+            if 'expanded' not in entry and not entry.get('pose_set_selections'):
+                raise ValueError('Inherited adoption needs a selected existing namespace')
+        else:
+            _adoption_keys(entry, ('id', 'status', 'neutral', 'eyecatch', 'selection_evidence'), 'entry',
+                           optional=('pose_set_overrides', 'expanded', 'pose_set_selections'))
         identity = entry['id']
-        if not isinstance(identity, str) or identity not in NAMES or identity in adopted:
+        known = set(NAMES)
+        if inherited_only:
+            supplement_path = readable_source(root, SUPPLEMENT, pending)
+            if supplement_path.is_file():
+                known.update(item['id'] for item in read(supplement_path).get('items', [])
+                             if isinstance(item, dict) and isinstance(item.get('id'), str))
+        if not isinstance(identity, str) or identity not in known or identity in adopted:
             raise ValueError(f'Unknown or duplicate explicit adoption identity: {identity}')
         if entry['status'] != 'adopted':
             raise ValueError(f'Explicit character selection must be adopted: {identity}')
         prefix = f'assets/library/characters/{identity}/'
-        neutral = entry['neutral']
-        _adoption_keys(neutral, neutral_keys, identity + '/neutral')
-        neutral_path = source(neutral['path'], neutral['sha256'])
-        if not neutral['path'].startswith(prefix) or '/current/' in neutral['path']:
-            raise ValueError('Explicit neutral must use its own original character source')
-        _adoption_geometry(neutral, neutral['source_size_px'], identity, neutral=True)
-        with Image.open(neutral_path) as image:
-            if (image.mode != 'RGBA' or image.format != 'PNG'
-                    or list(image.size) != neutral['source_size_px']):
-                raise ValueError(f'Explicit neutral PNG differs: {identity}')
-            alpha = image.getchannel('A')
-            bounds = alpha.point(lambda value: 255 if value >= 8 else 0).getbbox()
-            if (bounds is None or alpha.getextrema()[0] != 0 or alpha.getextrema()[1] < 240
-                    or min(bounds[0], bounds[1], image.width-bounds[2], image.height-bounds[3]) < 2):
-                raise ValueError(f'Explicit neutral is empty, clipped or not transparent: {identity}')
+        if not inherited_only:
+            neutral = entry['neutral']
+            _adoption_keys(neutral, neutral_keys, identity + '/neutral')
+            neutral_path = source(neutral['path'], neutral['sha256'])
+            if not neutral['path'].startswith(prefix) or '/current/' in neutral['path']:
+                raise ValueError('Explicit neutral must use its own original character source')
+            _adoption_geometry(neutral, neutral['source_size_px'], identity, neutral=True)
+            with Image.open(neutral_path) as image:
+                if (image.mode != 'RGBA' or image.format != 'PNG'
+                        or list(image.size) != neutral['source_size_px']):
+                    raise ValueError(f'Explicit neutral PNG differs: {identity}')
+                alpha = image.getchannel('A')
+                bounds = alpha.point(lambda value: 255 if value >= 8 else 0).getbbox()
+                if (bounds is None or alpha.getextrema()[0] != 0 or alpha.getextrema()[1] < 240
+                        or min(bounds[0], bounds[1], image.width-bounds[2], image.height-bounds[3]) < 2):
+                    raise ValueError(f'Explicit neutral is empty, clipped or not transparent: {identity}')
 
-        movement = entry['eyecatch']
-        _adoption_keys(movement, ('version', 'registration', 'registration_sha256',
-                                  'preview', 'motion_preview'), identity + '/eyecatch')
-        if not isinstance(movement['version'], str) or re.fullmatch(r'v[0-9]+', movement['version']) is None:
-            raise ValueError('Invalid explicit eye-catch version')
-        registration = read(source(movement['registration'], movement['registration_sha256']))
-        for key in ('registration', 'preview', 'motion_preview'):
-            if not isinstance(movement[key], str) or not movement[key].startswith(prefix) or '/current/' in movement[key]:
-                raise ValueError('Explicit eye-catch must use its own original character sources')
-            source(movement[key])
-        if (type(registration.get('schema_version')) is not int or registration['schema_version'] not in (2, 3)
-                or registration.get('kind') != 'generated-character-eyecatch-key-pose-stock'
-                or registration.get('character_id') != identity
-                or registration.get('version') != movement['version']
-                or registration.get('status') != 'stocked-and-assistant-reviewed'
-                or registration.get('category', 'character') != 'character'):
-            raise ValueError(f'Explicit eye-catch registration identity/status differs: {identity}')
-        canonical = registration.get('canonical_neutral', {})
-        if not isinstance(canonical, dict) or any(canonical.get(key) != neutral[key] for key in neutral_keys):
-            raise ValueError(f'Explicit eye-catch canonical neutral differs: {identity}')
-        if (not isinstance(registration.get('sheets'), list) or not registration['sheets']
-                or not isinstance(registration.get('frames'), list) or not registration['frames']):
-            raise ValueError('Explicit eye-catch needs source sheets and frames')
-        sheet_sizes = {}
-        for sheet in registration['sheets']:
-            if (not isinstance(sheet, dict) or not isinstance(sheet.get('id'), str)
-                    or not sheet['id'] or not {'source_sheet', 'source_sheet_sha256', 'reference_height_px'} <= set(sheet)):
-                raise ValueError('Invalid explicit eye-catch source sheet')
-            sheet_path = source(sheet['source_sheet'], sheet['source_sheet_sha256'])
-            if not sheet['source_sheet'].startswith(prefix) or '/current/' in sheet['source_sheet']:
-                raise ValueError('Explicit source sheet must use its own original character source')
-            with Image.open(sheet_path) as image:
-                if image.format != 'PNG' or image.mode != 'RGBA':
-                    raise ValueError('Explicit pose source sheet must be RGBA PNG')
-                sheet_sizes[sheet['id']] = image.size
-        for frame in registration['frames']:
-            if (not isinstance(frame, dict) or not isinstance(frame.get('id'), str)
-                    or re.fullmatch(r'[a-z][a-z0-9_-]*', frame['id']) is None
-                    or not {'path', 'sha256', 'size_px', 'sheet_id', 'source_sheet', 'source_sheet_sha256',
-                            'crop_from_sheet_xyxy', 'body_bbox_px', 'anchor_px', 'reference_height_px',
-                            'tail_bbox_px'} <= set(frame)):
-                raise ValueError('Invalid explicit eye-catch frame')
-        sheet_ids = {sheet['id'] for sheet in registration['sheets']}
-        if any(not isinstance(frame['sheet_id'], str) or frame['sheet_id'] not in sheet_ids
-               for frame in registration['frames']):
-            raise ValueError('Explicit pose refers to an unknown source sheet')
-        for frame in registration['frames']:
-            crop = frame['crop_from_sheet_xyxy']
-            width, height = sheet_sizes[frame['sheet_id']]
-            if (not isinstance(crop, list) or len(crop) != 4
-                    or any(type(value) is not int for value in crop)
-                    or not 0 <= crop[0] < crop[2] <= width or not 0 <= crop[1] < crop[3] <= height):
-                raise ValueError('Invalid explicit pose native crop')
-        frames = _verify_pose_registration_locked(root, registration, identity, pending=pending)
-        neutral_frames = [frame for frame in frames if frame['id'] == 'neutral']
-        if len(neutral_frames) != 1:
-            raise ValueError('Explicit eye-catch must include one canonical neutral frame')
-        for frame in frames:
-            if not frame['path'].startswith(prefix) or '/current/' in frame['path']:
-                raise ValueError('Explicit pose must use its own original character source')
-            _adoption_geometry(frame, frame['size_px'], identity + '/' + frame['id'])
-            if frame['tail_bbox_px'] is not None:
-                _adoption_geometry({**frame, 'body_bbox_px': frame['tail_bbox_px']},
-                                   frame['size_px'], identity + '/tail')
-            with Image.open(source(frame['path'])) as image:
-                if image.format != 'PNG':
-                    raise ValueError('Explicit pose must be a PNG')
-        frame = neutral_frames[0]
-        if (frame['sha256'] != neutral['sha256'] or frame['size_px'] != neutral['source_size_px']
-                or neutral['image_region_px'] != [0, 0, *neutral['source_size_px']]
-                or any(frame[key] != neutral[key] for key in ('body_bbox_px', 'anchor_px', 'reference_height_px'))):
-            raise ValueError('Explicit eye-catch neutral frame geometry differs from its canonical source')
-        clips = registration.get('clips')
-        if not isinstance(clips, dict) or not clips:
-            raise ValueError('Explicit eye-catch needs named clips')
-        names = {frame['id'] for frame in frames}
-        for name, clip in clips.items():
-            if not isinstance(name, str) or re.fullmatch(r'[a-z][a-z0-9_-]*', name) is None:
-                raise ValueError('Invalid explicit eye-catch clip name')
-            sequence = clip.get('frames') if isinstance(clip, dict) else clip
-            if (not isinstance(sequence, list) or not sequence
-                    or any(not isinstance(name, str) or name not in names for name in sequence)):
-                raise ValueError('Explicit eye-catch clip refers to an unknown pose')
+            movement = entry['eyecatch']
+            _adoption_keys(movement, ('version', 'registration', 'registration_sha256',
+                                      'preview', 'motion_preview'), identity + '/eyecatch')
+            if not isinstance(movement['version'], str) or re.fullmatch(r'v[0-9]+', movement['version']) is None:
+                raise ValueError('Invalid explicit eye-catch version')
+            registration = read(source(movement['registration'], movement['registration_sha256']))
+            for key in ('registration', 'preview', 'motion_preview'):
+                if not isinstance(movement[key], str) or not movement[key].startswith(prefix) or '/current/' in movement[key]:
+                    raise ValueError('Explicit eye-catch must use its own original character sources')
+                source(movement[key])
+            if (type(registration.get('schema_version')) is not int or registration['schema_version'] not in (2, 3)
+                    or registration.get('kind') != 'generated-character-eyecatch-key-pose-stock'
+                    or registration.get('character_id') != identity
+                    or registration.get('version') != movement['version']
+                    or registration.get('status') != 'stocked-and-assistant-reviewed'
+                    or registration.get('category', 'character') != 'character'):
+                raise ValueError(f'Explicit eye-catch registration identity/status differs: {identity}')
+            canonical = registration.get('canonical_neutral', {})
+            if not isinstance(canonical, dict) or any(canonical.get(key) != neutral[key] for key in neutral_keys):
+                raise ValueError(f'Explicit eye-catch canonical neutral differs: {identity}')
+            if (not isinstance(registration.get('sheets'), list) or not registration['sheets']
+                    or not isinstance(registration.get('frames'), list) or not registration['frames']):
+                raise ValueError('Explicit eye-catch needs source sheets and frames')
+            sheet_sizes = {}
+            for sheet in registration['sheets']:
+                if (not isinstance(sheet, dict) or not isinstance(sheet.get('id'), str)
+                        or not sheet['id'] or not {'source_sheet', 'source_sheet_sha256', 'reference_height_px'} <= set(sheet)):
+                    raise ValueError('Invalid explicit eye-catch source sheet')
+                sheet_path = source(sheet['source_sheet'], sheet['source_sheet_sha256'])
+                if not sheet['source_sheet'].startswith(prefix) or '/current/' in sheet['source_sheet']:
+                    raise ValueError('Explicit source sheet must use its own original character source')
+                with Image.open(sheet_path) as image:
+                    if image.format != 'PNG' or image.mode != 'RGBA':
+                        raise ValueError('Explicit pose source sheet must be RGBA PNG')
+                    sheet_sizes[sheet['id']] = image.size
+            for frame in registration['frames']:
+                if (not isinstance(frame, dict) or not isinstance(frame.get('id'), str)
+                        or re.fullmatch(r'[a-z][a-z0-9_-]*', frame['id']) is None
+                        or not {'path', 'sha256', 'size_px', 'sheet_id', 'source_sheet', 'source_sheet_sha256',
+                                'crop_from_sheet_xyxy', 'body_bbox_px', 'anchor_px', 'reference_height_px',
+                                'tail_bbox_px'} <= set(frame)):
+                    raise ValueError('Invalid explicit eye-catch frame')
+            sheet_ids = {sheet['id'] for sheet in registration['sheets']}
+            if any(not isinstance(frame['sheet_id'], str) or frame['sheet_id'] not in sheet_ids
+                   for frame in registration['frames']):
+                raise ValueError('Explicit pose refers to an unknown source sheet')
+            for frame in registration['frames']:
+                crop = frame['crop_from_sheet_xyxy']
+                width, height = sheet_sizes[frame['sheet_id']]
+                if (not isinstance(crop, list) or len(crop) != 4
+                        or any(type(value) is not int for value in crop)
+                        or not 0 <= crop[0] < crop[2] <= width or not 0 <= crop[1] < crop[3] <= height):
+                    raise ValueError('Invalid explicit pose native crop')
+            frames = _verify_pose_registration_locked(root, registration, identity, pending=pending)
+            neutral_frames = [frame for frame in frames if frame['id'] == 'neutral']
+            if len(neutral_frames) != 1:
+                raise ValueError('Explicit eye-catch must include one canonical neutral frame')
+            for frame in frames:
+                if not frame['path'].startswith(prefix) or '/current/' in frame['path']:
+                    raise ValueError('Explicit pose must use its own original character source')
+                _adoption_geometry(frame, frame['size_px'], identity + '/' + frame['id'])
+                if frame['tail_bbox_px'] is not None:
+                    _adoption_geometry({**frame, 'body_bbox_px': frame['tail_bbox_px']},
+                                       frame['size_px'], identity + '/tail')
+                with Image.open(source(frame['path'])) as image:
+                    if image.format != 'PNG':
+                        raise ValueError('Explicit pose must be a PNG')
+            frame = neutral_frames[0]
+            if (frame['sha256'] != neutral['sha256'] or frame['size_px'] != neutral['source_size_px']
+                    or neutral['image_region_px'] != [0, 0, *neutral['source_size_px']]
+                    or any(frame[key] != neutral[key] for key in ('body_bbox_px', 'anchor_px', 'reference_height_px'))):
+                raise ValueError('Explicit eye-catch neutral frame geometry differs from its canonical source')
+            clips = registration.get('clips')
+            if not isinstance(clips, dict) or not clips:
+                raise ValueError('Explicit eye-catch needs named clips')
+            names = {frame['id'] for frame in frames}
+            for name, clip in clips.items():
+                if not isinstance(name, str) or re.fullmatch(r'[a-z][a-z0-9_-]*', name) is None:
+                    raise ValueError('Invalid explicit eye-catch clip name')
+                sequence = clip.get('frames') if isinstance(clip, dict) else clip
+                if (not isinstance(sequence, list) or not sequence
+                        or any(not isinstance(name, str) or name not in names for name in sequence)):
+                    raise ValueError('Explicit eye-catch clip refers to an unknown pose')
 
         evidence = entry['selection_evidence']
         if not isinstance(evidence, list) or not evidence:
@@ -649,6 +667,40 @@ def _read_adoptions_locked(root, pending):
             if item['path'] in seen:
                 raise ValueError('Duplicate explicit selection evidence')
             seen.add(item['path'])
+        selections = entry.get('pose_set_selections', [])
+        if not isinstance(selections, list) or ('pose_set_selections' in entry and not selections):
+            raise ValueError('Explicit pose-set selections must be a nonempty list')
+        selected_namespaces = set()
+        for movement in selections:
+            if not isinstance(movement, dict):
+                raise ValueError('Invalid explicit pose-set selection')
+            namespace = _stock_identifier(movement.get('namespace'))
+            if namespace in {'basic', 'expanded', 'eyecatch', 'gimmick', 'neutral', 'icons'} or namespace in selected_namespaces:
+                raise ValueError('Invalid or duplicate selected supplemental namespace')
+            selected_namespaces.add(namespace)
+        for movement in ([entry['expanded']] if 'expanded' in entry else []) + selections:
+            extra = ('preview', 'motion_preview') if movement is entry.get('expanded') else ('namespace',)
+            _adoption_keys(movement, ('version', 'registration', 'registration_sha256',
+                'canonical_neutral', 'base_registration',
+                'base_registration_sha256', 'replacements', *extra), identity + '/pose-selection')
+            if (not isinstance(movement['version'], str)
+                    or re.fullmatch(r'v[0-9]+', movement['version']) is None):
+                raise ValueError('Invalid explicit expansion version')
+            canonical = movement['canonical_neutral']
+            _adoption_keys(canonical, ('path', 'sha256'), identity + '/expanded/canonical_neutral')
+            for field in ('registration', 'base_registration', *[key for key in ('preview', 'motion_preview') if key in movement]):
+                _stock_owned_path(root, movement[field], identity, pending)
+                source(movement[field], movement.get(field + '_sha256'))
+            _stock_owned_path(root, canonical['path'], identity, pending)
+            source(canonical['path'], canonical['sha256'])
+            replacements = movement['replacements']
+            if not isinstance(replacements, dict) or not replacements:
+                raise ValueError('Explicit expansion needs named previous selections')
+            for name, previous in replacements.items():
+                _stock_identifier(name)
+                _adoption_keys(previous, ('path', 'sha256'), identity + '/expanded/' + name)
+                _stock_owned_path(root, previous['path'], identity, pending)
+                source(previous['path'], previous['sha256'])
         overrides = entry.get('pose_set_overrides', [])
         if not isinstance(overrides, list):
             raise ValueError('Explicit pose set overrides must be a list')
@@ -658,7 +710,7 @@ def _read_adoptions_locked(root, pending):
                                       'registration', 'registration_sha256', 'replacements'),
                            identity + '/pose_set_override')
             namespace = _stock_identifier(override['namespace'])
-            if namespace in namespaces:
+            if namespace in namespaces or namespace in selected_namespaces:
                 raise ValueError('Duplicate explicit pose override namespace')
             namespaces.add(namespace)
             for field in ('base_registration', 'registration'):
@@ -666,6 +718,146 @@ def _read_adoptions_locked(root, pending):
                 source(override[field], override[field+'_sha256'])
         adopted[identity] = entry
     return adopted
+
+
+def _expanded_adoption_locked(root, selected, base, neutral, identity, pending, *, namespace='expanded'):
+    """Select one complete mixed registration, with every changed pose declared."""
+    if (selected['base_registration'] != base['registration']
+            or selected['base_registration_sha256'] != base['registration_sha256']):
+        raise ValueError('Explicit expansion base registration changed')
+    if selected['canonical_neutral'] != {key: neutral[key] for key in ('path', 'sha256')}:
+        raise ValueError('Explicit expansion differs from the inherited canonical neutral')
+    guards = {}
+
+    def source(relative, expected=None):
+        path = _stock_owned_path(root, relative, identity, pending)
+        if Path(relative).suffix.lower() in LOCAL_VIDEO_EXTENSIONS or not path.is_file():
+            raise ValueError('Explicit expansion requires an existing non-video source')
+        checksum = sha(path)
+        if expected is not None and (not isinstance(expected, str)
+                or re.fullmatch(r'[a-f0-9]{64}', expected) is None or checksum != expected):
+            raise ValueError(f'Explicit expansion source SHA-256 differs: {relative}')
+        if relative in guards and guards[relative] != checksum:
+            raise ValueError('Explicit expansion source changed during validation')
+        guards[relative] = checksum
+        return path
+
+    old = read(source(base['registration'], base['registration_sha256']))
+    new = read(source(selected['registration'], selected['registration_sha256']))
+    source(selected['canonical_neutral']['path'], selected['canonical_neutral']['sha256'])
+    for key in ('preview', 'motion_preview'):
+        if key in selected:
+            source(selected[key])
+    expected_kind = ('generated-character-multisheet-key-pose-stock' if namespace == 'expanded'
+                     else 'app-character-native-pose-registration')
+    expected_schema = 2 if namespace == 'expanded' else 1
+    if (not isinstance(old, dict) or not isinstance(new, dict)
+            or type(new.get('schema_version')) is not int or new['schema_version'] != expected_schema
+            or type(old.get('schema_version')) is not int or old['schema_version'] != expected_schema
+            or old.get('kind') != expected_kind or new.get('kind') != expected_kind
+            or new.get('character_id') != identity or new.get('version') != selected['version']
+            or new.get('status') != 'stocked-and-assistant-reviewed'
+            or new.get('registration_candidate_only') is True or new.get('current_adoption') is False
+            or new.get('category', 'character') != 'character'):
+        raise ValueError('Explicit expansion registration identity/status differs')
+    canonical_keys = ('path', 'sha256', 'source_size_px', 'image_region_px',
+                      'body_bbox_px', 'anchor_px', 'reference_height_px')
+    canonical = new.get('canonical_neutral')
+    if (not isinstance(canonical, dict) or canonical != old.get('canonical_neutral')
+            or any(canonical.get(key) != neutral[key] for key in ('path', 'sha256'))
+            or any(canonical[key] != neutral[key] for key in canonical_keys if key in canonical)):
+        raise ValueError('Explicit expansion canonical geometry differs from inherited neutral')
+
+    def registered(document):
+        if (not isinstance(document.get('sheets'), list) or not document['sheets']
+                or not isinstance(document.get('frames'), list) or not document['frames']):
+            raise ValueError('Explicit expansion needs native sheets and frames')
+        sizes = {}
+        for sheet in document['sheets']:
+            if (not isinstance(sheet, dict) or not isinstance(sheet.get('id'), str)
+                    or not sheet['id'] or sheet['id'] in sizes
+                    or not {'source_sheet', 'source_sheet_sha256', 'reference_height_px'} <= set(sheet)):
+                raise ValueError('Invalid explicit expansion sheet')
+            path = source(sheet['source_sheet'], sheet['source_sheet_sha256'])
+            with Image.open(path) as image:
+                if image.format != 'PNG' or image.mode != 'RGBA':
+                    raise ValueError('Explicit expansion sheets must be native RGBA PNGs')
+                sizes[sheet['id']] = image.size
+        names = set()
+        for frame in document['frames']:
+            if (not isinstance(frame, dict) or not {'id', 'path', 'sha256', 'size_px', 'sheet_id',
+                    'source_sheet', 'source_sheet_sha256', 'crop_from_sheet_xyxy', 'body_bbox_px',
+                    'anchor_px', 'reference_height_px', 'tail_bbox_px'} <= set(frame)):
+                raise ValueError('Invalid explicit expansion frame')
+            name = _stock_identifier(frame['id'])
+            if (name in names or not isinstance(frame['sheet_id'], str)
+                    or frame['sheet_id'] not in sizes):
+                raise ValueError('Duplicate expansion pose or unknown source sheet')
+            names.add(name)
+            crop, size = frame['crop_from_sheet_xyxy'], sizes[frame['sheet_id']]
+            if (not isinstance(crop, list) or len(crop) != 4 or any(type(v) is not int for v in crop)
+                    or not 0 <= crop[0] < crop[2] <= size[0]
+                    or not 0 <= crop[1] < crop[3] <= size[1]):
+                raise ValueError('Invalid explicit expansion native crop')
+            source(frame['path'], frame['sha256'])
+            _adoption_geometry(frame, frame['size_px'], identity + '/expanded/' + name)
+            if frame['tail_bbox_px'] is not None:
+                _adoption_geometry({**frame, 'body_bbox_px': frame['tail_bbox_px']},
+                                   frame['size_px'], identity + '/expanded/tail')
+        frames = _verify_pose_registration_locked(root, document, identity, pending=pending)
+        return {frame['id']: frame for frame in frames}, {sheet['id']: sheet for sheet in document['sheets']}
+
+    previous, old_sheets = registered(old)
+    frames, sheets = registered(new)
+    replacements = selected['replacements']
+    if set(frames) != set(previous):
+        raise ValueError('Explicit expansion pose coverage must equal the base registration')
+    for name, reference in replacements.items():
+        if name == 'neutral' or name not in previous or reference != {
+                key: previous[name][key] for key in ('path', 'sha256')}:
+            raise ValueError('Explicit expansion previous selection changed or is neutral')
+    changed = {name for name in frames if frames[name] != previous[name]}
+    if changed != set(replacements):
+        raise ValueError('Explicit expansion must change exactly the declared replacement poses')
+    if any(sheets.get(name) != sheet for name, sheet in old_sheets.items()):
+        raise ValueError('Explicit expansion must retain every original sheet calibration')
+    extra_sheets = set(sheets) - set(old_sheets)
+    if (extra_sheets != {frames[name]['sheet_id'] for name in changed}
+            or any(frames[name]['sheet_id'] in old_sheets for name in changed)):
+        raise ValueError('Explicit expansion replacements require exactly their own new sheets')
+    if new.get('clips', {}) != old.get('clips', {}):
+        raise ValueError('Explicit expansion must retain existing clips')
+    if new.get('scale_policy') != old.get('scale_policy'):
+        raise ValueError('Explicit mixed registration must retain existing scale policy')
+    for name in changed:
+        frame = frames[name]
+        if (frame['crop_from_sheet_xyxy'] != [0, 0, *frame['size_px']]
+                or frame['source_sheet'] != frame['path']
+                or frame['source_sheet_sha256'] != frame['sha256']):
+            raise ValueError('Explicit expansion replacements must retain whole native originals')
+    for relative, expected in guards.items():
+        if sha(_stock_owned_path(root, relative, identity, pending)) != expected:
+            raise ValueError('Explicit expansion source changed during validation')
+    return new
+
+
+def _selected_pose_set_locked(root, selected, neutral, identity, pending, *, base_block=None):
+    """Select a complete reviewed mixed namespace over one exact historical base."""
+    supplement = read(readable_source(root, SUPPLEMENT, pending))
+    items = [item for item in supplement['items'] if item['id'] == identity]
+    bases = [block for item in items for block in item.get('pose_sets', [])
+             if block['namespace'] == selected['namespace']]
+    if len(items) != 1 or len(bases) != 1:
+        raise ValueError('Explicit pose-set selection requires one existing supplemental namespace')
+    base = bases[0]
+    original = _supplement_pose_set_locked(root, base, neutral, identity, pending)
+    if base_block is not None and base_block != original:
+        raise ValueError('Explicit pose-set selection must replace the unchanged inherited namespace')
+    _expanded_adoption_locked(root, selected, base, neutral, identity, pending,
+                              namespace=selected['namespace'])
+    block = _supplement_pose_set_locked(root, selected, neutral, identity, pending)
+    block['adoption_selection'] = selected
+    return block
 
 
 def _stock_identifier(value):
@@ -853,14 +1045,29 @@ def _merge_pose_set_override_locked(root, block, selected, neutral, identity, pe
 
 
 def _apply_pose_set_adoptions_locked(root, characters, adoptions, pending):
+    known = {character['id']: character for character in characters}
+    if any(identity not in known for identity in adoptions):
+        raise ValueError('Explicit adoption must refer to an inherited character identity')
     for character in characters:
-        for selected in adoptions.get(character['id'], {}).get('pose_set_overrides', []):
+        adoption = adoptions.get(character['id'], {})
+        for selected in adoption.get('pose_set_selections', []):
+            matches = [block for block in character.get('pose_sets', [])
+                       if block['namespace'] == selected['namespace']]
+            if len(matches) != 1:
+                raise ValueError('Explicit pose selection requires one existing supplemental namespace')
+            block = _selected_pose_set_locked(root, selected, character['neutral'],
+                character['id'], pending, base_block=matches[0])
+            character['pose_sets'][character['pose_sets'].index(matches[0])] = block
+        for selected in adoption.get('pose_set_overrides', []):
             matches = [block for block in character.get('pose_sets', [])
                        if block['namespace'] == selected['namespace']]
             if len(matches) != 1:
                 raise ValueError('Explicit pose override requires one existing supplemental namespace')
             _merge_pose_set_override_locked(root, matches[0], selected, character['neutral'],
                                            character['id'], pending)
+        if adoption:
+            character['adoption_selection'] = {'path': ADOPTIONS,
+                                              'selection_evidence': adoption['selection_evidence']}
 
 
 def build_index(root):
@@ -892,12 +1099,17 @@ def _build_index_locked(root):
         raise ValueError('Only an explicitly reviewed expansion may be adopted')
     eyecatches = read(source_path(EYECATCHES)) if source_path(EYECATCHES).is_file() else None
     eye_additions = {item['id']: item for item in eyecatches['items']} if eyecatches else {}
-    eye_additions.update({identity: entry['eyecatch'] for identity, entry in adoptions.items()})
+    eye_additions.update({identity: entry['eyecatch'] for identity, entry in adoptions.items()
+                          if 'eyecatch' in entry})
+    for identity, entry in adoptions.items():
+        if 'expanded' in entry and identity not in additions:
+            raise ValueError('Explicit expansion requires an existing expanded namespace')
     if eyecatches and eyecatches.get('status') != 'stocked-and-assistant-reviewed':
         raise ValueError('Only an explicitly reviewed eye-catch collection may be adopted')
     characters = []
     for identity, (ja, en) in NAMES.items():
-        source = adoptions[identity]['neutral'] if identity in adoptions else records[identity]
+        adoption = adoptions.get(identity, {})
+        source = adoption['neutral'] if 'neutral' in adoption else records[identity]
         with Image.open(readable_source(root, source['path'], pending)) as image:
             size = list(image.size)
         region = source.get('image_region_px', source.get('crop_px', [0, 0, *size]))
@@ -916,7 +1128,7 @@ def _build_index_locked(root):
             movement = movements[identity]
             registration = registration_source(movement['registration'])
             item['canonical_source_version'] = canonical['source_version']
-            if identity not in adoptions:
+            if 'neutral' not in adoption:
                 item['neutral']['source_manifest'] = canonical['source_manifest_path']
                 item['neutral']['source_manifest_sha256'] = canonical['source_manifest_sha256']
             item['key_poses'] = {
@@ -935,7 +1147,9 @@ def _build_index_locked(root):
             item['adoption_selection'] = {'path': ADOPTIONS,
                                           'selection_evidence': adoptions[identity]['selection_evidence']}
         if identity in additions:
-            movement = additions[identity]
+            movement = adoption.get('expanded', additions[identity])
+            if 'expanded' in adoption:
+                _expanded_adoption_locked(root, movement, additions[identity], item['neutral'], identity, pending)
             if sha(readable_source(root, movement['registration'], pending)) != movement['registration_sha256']:
                 raise ValueError(f'Expansion registration changed: {identity}')
             registration = registration_source(movement['registration'])
@@ -952,7 +1166,7 @@ def _build_index_locked(root):
                     ['path', 'sha256', 'size_px', 'anchor_px', 'body_bbox_px', 'tail_bbox_px', 'reference_height_px']}
                 poses[pose_id].update(sheet_id=frame['sheet_id'], frame_id=frame['id'])
             item['expanded_key_poses'] = {
-                'version': 'v002', 'registration': movement['registration'],
+                'version': movement.get('version', 'v002'), 'registration': movement['registration'],
                 'registration_sha256': movement['registration_sha256'],
                 'namespace': 'expanded/', 'coordinate_space': 'individual exact cell PNG',
                 'reference_height_policy': 'One calibrated standing reference height per source sheet; each frame carries its sheet reference. Never fit each pose.',
@@ -960,7 +1174,7 @@ def _build_index_locked(root):
                 'poses': poses, 'preview': movement['preview'], 'motion_preview': movement['motion_preview'],
             }
             item['availability'] = 'reviewed-neutral-and-expanded-key-poses'
-            item['expansion_collection'] = EXPANSION
+            item['expansion_collection'] = ADOPTIONS if 'expanded' in adoption else EXPANSION
         if identity in eye_additions:
             movement = eye_additions[identity]
             if sha(readable_source(root, movement['registration'], pending)) != movement['registration_sha256']:
@@ -988,7 +1202,7 @@ def _build_index_locked(root):
                 'clips': registration.get('clips', {}),
             }
             item['availability'] = 'reviewed-neutral-with-supplemental-eyecatches'
-            item['eyecatch_collection'] = ADOPTIONS if identity in adoptions else EYECATCHES
+            item['eyecatch_collection'] = ADOPTIONS if 'eyecatch' in adoption else EYECATCHES
         characters.append(item)
     gimmicks = read(source_path(GIMMICKS)) if source_path(GIMMICKS).is_file() else None
     if gimmicks is not None:
@@ -1031,7 +1245,7 @@ def _build_index_locked(root):
     }
     if adoptions:
         index['usage_rules'].append(
-            'Explicit approvals in catalogs/character-adoptions-v1.json select replacement neutral/eye-catch sources. '
+            'Explicit approvals in catalogs/character-adoptions-v1.json select replacement neutral/eye-catch/expanded/supplemental sources. '
             'Historical selection defaults above apply to entries without an override; episode adapters remain independent.')
     for character in characters:
         for key in ('path', 'source_manifest'):
@@ -1140,6 +1354,60 @@ def load_pose(root, identity, pose='neutral'):
         return _load_pose_locked(root, identity, pose)
 
 
+def _load_namespace_adoption_locked(root, index, character, namespace, pending, *, selected_in_index):
+    """Cheap dispatch keeps unchanged namespaces off the full native validator."""
+    path = readable_source(root, ADOPTIONS, pending)
+    if not path.is_file():
+        if selected_in_index:
+            raise ValueError('Loaded namespace selection is no longer adopted')
+        return {}
+    payload = path.read_bytes()
+    document = json.loads(payload.decode('utf-8-sig'))
+    _adoption_keys(document, ('schema_version', 'kind', 'adoptions'), ADOPTIONS)
+    if (type(document['schema_version']) is not int or document['schema_version'] != 1
+            or document['kind'] != 'explicit-character-adoptions'
+            or not isinstance(document['adoptions'], list)):
+        raise ValueError('Unsupported explicit character adoption document')
+    seen, entry = set(), {}
+    for row in document['adoptions']:
+        inherited = isinstance(row, dict) and 'neutral' not in row and 'eyecatch' not in row
+        if inherited:
+            _adoption_keys(row, ('id', 'status', 'selection_evidence'), 'entry',
+                           optional=('expanded', 'pose_set_selections'))
+            if 'expanded' not in row and not row.get('pose_set_selections'):
+                raise ValueError('Inherited adoption needs a selected existing namespace')
+        else:
+            _adoption_keys(row, ('id', 'status', 'neutral', 'eyecatch', 'selection_evidence'), 'entry',
+                           optional=('pose_set_overrides', 'expanded', 'pose_set_selections'))
+        identity = row['id']
+        if not isinstance(identity, str) or identity in seen:
+            raise ValueError('Duplicate or invalid explicit adoption identity')
+        seen.add(identity)
+        if row['status'] != 'adopted' or not isinstance(row['selection_evidence'], list) or not row['selection_evidence']:
+            raise ValueError('Explicit adoption needs adopted status and selection evidence')
+        if 'pose_set_selections' in row and (not isinstance(row['pose_set_selections'], list)
+                or not row['pose_set_selections']
+                or any(not isinstance(value, dict) or not isinstance(value.get('namespace'), str)
+                       for value in row['pose_set_selections'])):
+            raise ValueError('Invalid explicit pose-set selection dispatch')
+        if identity == character['id']:
+            entry = row
+    selects_namespace = ('expanded' in entry if namespace == 'expanded' else
+        any(value['namespace'] == namespace for value in entry.get('pose_set_selections', [])))
+    if not selects_namespace:
+        if selected_in_index:
+            raise ValueError('Loaded namespace selection is no longer adopted')
+        return {}
+    observed = hashlib.sha256(payload).hexdigest()
+    bindings = [value for value in index['source_collections'] if value['path'] == ADOPTIONS]
+    if len(bindings) != 1 or bindings[0]['sha256'] != observed:
+        raise ValueError('Loaded adoption document differs from the index binding')
+    result = _read_adoptions_locked(root, pending).get(character['id'], {})
+    if sha(path) != observed:
+        raise ValueError('Explicit adoption document changed during load')
+    return result
+
+
 def _load_pose_locked(root, identity, pose='neutral', pending=None):
     if pending is None:
         pending = pending_generation_roots(root)
@@ -1153,11 +1421,23 @@ def _load_pose_locked(root, identity, pose='neutral', pending=None):
     supplemental = {block['namespace']: block for block in character.get('pose_sets', [])}
     if '/' in pose and pose.split('/', 1)[0] in supplemental:
         prefix, name = pose.split('/', 1)
+        adoption = _load_namespace_adoption_locked(root, index, character, prefix, pending,
+            selected_in_index='adoption_selection' in supplemental[prefix])
+        selection = next((selected for selected in adoption.get('pose_set_selections', [])
+                          if selected['namespace'] == prefix), None)
+        if selection is not None:
+            verified = _selected_pose_set_locked(root, selection, character['neutral'], identity, pending)
+            if verified != supplemental[prefix]:
+                raise ValueError('Loaded supplemental namespace differs from explicit adoption')
+        elif 'adoption_selection' in supplemental[prefix]:
+            raise ValueError('Loaded supplemental selection is no longer adopted')
         record = supplemental[prefix]['poses'].get(name)
         if record is None:
             raise ValueError(f'No explicitly adopted {prefix} pose {identity}/{name}')
         with Image.open(source_path(record['path'])) as opened:
             image = opened.copy()
+        if selection is not None and sha(source_path(record['path'])) != record['sha256']:
+            raise ValueError('Selected supplemental pose changed during load')
         anchor = record['anchor_px']
     elif pose.startswith(('expanded/', 'eyecatch/', 'gimmick/')):
         prefix, name = pose.split('/', 1)
@@ -1167,8 +1447,33 @@ def _load_pose_locked(root, identity, pose='neutral', pending=None):
         record = character.get(block, {}).get('poses', {}).get(name)
         if record is None:
             raise ValueError(f'No explicitly adopted {prefix} pose {identity}/{name}')
+        expanded_selection = None
+        if prefix == 'expanded':
+            adoption = _load_namespace_adoption_locked(root, index, character, prefix, pending,
+                selected_in_index=character.get('expansion_collection') == ADOPTIONS)
+            expanded_selection = adoption.get('expanded')
+            if expanded_selection is None and character.get('expansion_collection') == ADOPTIONS:
+                raise ValueError('Loaded expansion selection is no longer adopted')
+            if expanded_selection is not None:
+                bases = [row for row in read(source_path(EXPANSION))['items'] if row['id'] == identity]
+                if len(bases) != 1:
+                    raise ValueError('Explicit expansion requires one existing namespace')
+                registration = _expanded_adoption_locked(root, expanded_selection, bases[0],
+                    character['neutral'], identity, pending)
+                selected_block = character[block]
+                if any(selected_block.get(key) != expanded_selection[key] for key in
+                       ('version', 'registration', 'registration_sha256', 'preview', 'motion_preview')):
+                    raise ValueError('Loaded expansion differs from explicit adoption')
+                registered = next(frame for frame in registration['frames'] if frame['id'] == name)
+                expected = {key: registered[key] for key in ('path', 'sha256', 'size_px',
+                    'anchor_px', 'body_bbox_px', 'tail_bbox_px', 'reference_height_px')}
+                expected.update(sheet_id=registered['sheet_id'], frame_id=registered['id'])
+                if record != expected:
+                    raise ValueError('Loaded expansion pose differs from its selected registration')
         with Image.open(source_path(record['path'])) as opened:
             image = opened.copy()
+        if expanded_selection is not None and sha(source_path(record['path'])) != record['sha256']:
+            raise ValueError('Expanded pose changed during load')
         anchor = record['anchor_px']
     elif pose == 'neutral':
         record = character['neutral']
@@ -1276,6 +1581,8 @@ def _verify_locked(root):
             raise ValueError(f'Missing or changed library file: {entry["path"]}')
     index = read(source_path(INDEX))
     adoptions = _read_adoptions_locked(root, pending)
+    expanded_bases = ({row['id']: row for row in read(source_path(EXPANSION))['items']}
+                      if any('expanded' in entry for entry in adoptions.values()) else {})
     frames = 0
     neutral_sources = set()
     for collection in index['source_collections']:
@@ -1286,6 +1593,17 @@ def _verify_locked(root):
         if sha(source_path(neutral['path'])) != neutral['sha256']:
             raise ValueError(f'Neutral changed: {character["id"]}')
         neutral_sources.add(source_path(neutral['path']))
+        adopted_expansion = adoptions.get(character['id'], {}).get('expanded')
+        if adopted_expansion is not None:
+            base = expanded_bases.get(character['id'])
+            if base is None:
+                raise ValueError('Explicit expansion requires an existing expanded namespace')
+            _expanded_adoption_locked(root, adopted_expansion, base, neutral, character['id'], pending)
+            block = character.get('expanded_key_poses', {})
+            if (any(block.get(key) != adopted_expansion[key] for key in
+                    ('version', 'registration', 'registration_sha256', 'preview', 'motion_preview'))
+                    or character.get('expansion_collection') != ADOPTIONS):
+                raise ValueError('Selected expansion differs from explicit adoption')
         image, anchor, height = _load_pose_locked(root, character['id'], pending=pending)
         if image.mode != 'RGBA' or not (0 <= anchor[0] <= image.width and 0 <= anchor[1] <= image.height) or height <= 0:
             raise ValueError('Invalid neutral geometry')
@@ -1333,7 +1651,13 @@ def _verify_locked(root):
                     raise ValueError('Invalid loaded pose')
                 frames += 1
         for keys in character.get('pose_sets', []):
-            verified = _supplement_pose_set_locked(root, keys, neutral, character['id'], pending)
+            adoption = adoptions.get(character['id'], {})
+            selection = next((selected for selected in adoption.get('pose_set_selections', [])
+                              if selected['namespace'] == keys['namespace']), None)
+            if selection is not None:
+                verified = _selected_pose_set_locked(root, selection, neutral, character['id'], pending)
+            else:
+                verified = _supplement_pose_set_locked(root, keys, neutral, character['id'], pending)
             for selected in adoptions.get(character['id'], {}).get('pose_set_overrides', []):
                 if selected['namespace'] == keys['namespace']:
                     _merge_pose_set_override_locked(root, verified, selected, neutral, character['id'], pending)
