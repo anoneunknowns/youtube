@@ -486,7 +486,12 @@ def render_index(root, result, config, config_relative=CONFIG, registry_relative
             '</small><br>' + esc(batch.get('scope','')) + '</td><td>' + ('<br>'.join(quality) or 'この一覧では品質合格を推定しない') +
             '</td><td>' + ('生成中・確定保留' if pending else '確定範囲') + '<br>' + str(batch['file_count']) +
             'ファイル</td><td>' + ('<br>'.join(references) or '登録なし／分類根拠は管理設定を参照') + '</td></tr>')
-    parts.append('</table><h2>同一内容の別名（整理時点の記録）</h2><p>同一SHA-256でも来歴と参照元を保ち、削除・置換・リンク化しません。</p>')
+    parts.append('</table>')
+    if config.get('retirement_records'):
+        parts.append('<h2>不要旧版の削除記録</h2><p>現行の採用・制作依存を保護し、明示した旧媒体だけを削除しています。過去の登録に残るパスの提供状況は、次の記録で確認してください。</p>')
+        for entry in config['retirement_records']:
+            parts.append('<p>' + link(entry['path'], entry.get('label', '削除対象・旧SHA・保持した原画')) + '</p>')
+    parts.append('<h2>同一内容の別名（整理時点の記録）</h2><p>残存する別名と参照元の記録です。同一SHA-256だけを理由に削除・置換・リンク化しません。明示的に削除した旧媒体は削除記録へ分けています。</p>')
     for group in config.get('duplicate_media_groups', []):
         parts.append('<p><code>' + esc(group.get('sha256','')) + '</code><br>' +
                      '<br>'.join(link(path, path) for path in group.get('paths', [])) + '</p>')
