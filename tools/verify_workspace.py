@@ -521,10 +521,10 @@ class Auditor:
                              'The workspace verifier supports main catalog schema_version 1.')
             policy = catalog.get('storage_policy', {})
             for key, expected in {'latest_production_only':False, 'latest_adopted_versions_only':False,
-                                  'retain_superseded_outputs':True}.items():
+                                  'retain_superseded_outputs':False}.items():
                 if not isinstance(policy, dict) or policy.get(key) is not expected:
                     self.message('error', 'retention_policy_mismatch', MAIN + '/storage_policy/' + key,
-                                 f'Expected {key} to be {str(expected).lower()} to preserve adopted history and dependencies.')
+                                 f'Expected {key} to be {str(expected).lower()}: preserve current dependencies and records, not unused media.')
             self.check_ids(catalog)
             self.load_overrides(catalog)
             selected = catalog.get('active_production_set_ids', [])

@@ -184,8 +184,8 @@ ZIPには `character-library/` を起点に、選択された全19素材の通�
 
 GitHubで配布する範囲は[公開対象一覧](https://github.com/anoneunknowns/youtube/blob/main/catalogs/github-publication-v1.json)の `files`、公開用checkoutから作る素材パッケージの範囲は `character_library_files` が正本です。HTTPで取得する画像とJSONは同じGitHub参照から、ローカル画像とJSONは同じcheckoutの `current/` から組にして使います。公開用の全データを取得したcheckoutは `python tools/verify_github_publication.py` で確認できます。
 
-制作原本には原画・候補・過去の媒体やQAも保管します。公開対象にない候補・未使用の版・動画は、記録にパスやSHAが残っていても配布ファイルを意味しません。`verify_workspace.py`、`manage_character_assets.py check`、`update_production_archive.py --check` は、必要な保管資料や動画も揃えた制作原本向けの管理検査です。画像利用や公開範囲の確認とは分けます。公開側へ同期する手順は [GitHub公開仕様](https://github.com/anoneunknowns/youtube/blob/main/docs/GITHUB-PUBLICATION.md) に従います。
+制作原本では現在の利用・再制作・必要なQAに使う原画・入力・比較資料を保管します。不要な旧媒体を一律に保管し続ける方針ではありません。整理の優先度、当時のパス・SHAと現在の提供状況は[削除記録](../../docs/IMAGE-ASSET-MANAGEMENT.md#不要旧版を削除する場合)で区別します。公開対象にない候補・未使用の版・動画は、記録にパスやSHAが残っていても配布ファイルを意味しません。`verify_workspace.py`、`manage_character_assets.py check`、`update_production_archive.py --check` は、必要な保管資料や動画も揃えた制作原本向けの管理検査です。画像利用や公開範囲の確認とは分けます。公開側へ同期する手順は [GitHub公開仕様](https://github.com/anoneunknowns/youtube/blob/main/docs/GITHUB-PUBLICATION.md) に従います。
 
-元原画、生成シート、正確なプロンプト、入力の役割とSHA、登録、過去のQAを保全しています。管理の詳細は[画像管理仕様](../../docs/IMAGE-ASSET-MANAGEMENT.md)、担当・品質は[画像管理一覧](character-assets.html)と[管理設定](../../catalogs/character-asset-management-v1.json)を参照してください。版番号の最大値、更新日時、管理在庫への収録だけで採用や画風合格を推定しません。
+現在の利用・再制作・必要なQAに使う元原画や生成シートを保持し、正確なプロンプト・入力の役割とSHA・登録・過去の検査記録は、媒体の提供状況と分けて管理します。管理の詳細は[画像管理仕様](../../docs/IMAGE-ASSET-MANAGEMENT.md)、担当・品質は[画像管理一覧](character-assets.html)と[管理設定](../../catalogs/character-asset-management-v1.json)を参照してください。版番号の最大値、更新日時、管理在庫への収録だけで採用や画風合格を推定しません。
 
 各素材の取得元・生成条件・依存物の利用条件を確認し、必要な条件を画像と取込記録に添えてください。この案内から一律の再配布ライセンスを推定しません。履歴の絶対パスや元生成先は作成時の記録であり、現在のPCの読み込み先には使いません。

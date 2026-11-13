@@ -31,7 +31,7 @@ class WorkspaceIntegrityTests(unittest.TestCase):
         self.catalog = {
             'schema_version':1, 'catalog_id':'fixture',
             'storage_policy':{'latest_production_only':False, 'latest_adopted_versions_only':False,
-                              'retain_superseded_outputs':True,
+                              'retain_superseded_outputs':False,
                               'new_reusable_materials_default_location':'assets/library/<category>/<name>/<version>/'},
             'items':{'character':{'path':self.art, 'sha256':self.sha(self.art)}},
             'reference_sets':{'reference':{'items':['character'],
@@ -125,6 +125,12 @@ class WorkspaceIntegrityTests(unittest.TestCase):
 
     def test_adoption_retention_policy_cannot_discard_dependencies(self):
         self.catalog['storage_policy']['latest_production_only'] = True
+        self.save_catalog()
+        self.assertIn('retention_policy_mismatch', self.codes(workspace.verify(self.root)))
+
+    def test_unused_old_media_must_not_be_retained_by_default(self):
+        self.assertEqual(workspace.verify(self.root)['status'], 'pass')
+        self.catalog['storage_policy']['retain_superseded_outputs'] = True
         self.save_catalog()
         self.assertIn('retention_policy_mismatch', self.codes(workspace.verify(self.root)))
 
