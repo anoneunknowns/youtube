@@ -1,6 +1,6 @@
 # 素材ライブラリを扱うAIへの指示
 
-全24種類の入口は [利用案内](README.md) と `catalogs/asset-library-current-v1.json`。素材台帳から各IDの `assets/library/characters/<id>/current/asset.json` を辿り、画像・ポーズ・動作を同じ手順で扱う。
+全120種類の入口は [利用案内](README.md) と `catalogs/asset-library-current-v1.json`。素材台帳から各IDの `assets/library/characters/<id>/current/asset.json` を辿り、画像・ポーズ・動作を同じ手順で扱う。
 
 生成・比較・採用は [画像管理仕様](../../docs/IMAGE-ASSET-MANAGEMENT.md)、配置の測定は [配置仕様](../../docs/LAYOUT-ALIGNMENT.md) を正本とする。GitHubの収録・同期は [公開仕様](https://github.com/anoneunknowns/youtube/blob/main/docs/GITHUB-PUBLICATION.md) を参照する。
 
@@ -36,6 +36,9 @@
 - ユーザーから委任された採否は指示と確認結果へ結び付け、ユーザー自身のクリックと分けて記録する。検証用の選択を実際のユーザー履歴へ混ぜない。
 
 ## 生成・登録・管理する場合
+
+- 動物を増やすときは、シャム猫・ハリネズミ・トラの軽い擬人化か、ヤイロチョウの丸く簡略化した小物のパターンに合わせる。ハムスターと黄色い小鳥は例外で、新しい動物の標準に流用しない。擬人化キャラを自然な四足姿のまま合格にせず、小物も細密な図鑑調へ寄せない。採用原画SHAへ `style_pattern`・用途・現在の画風確認を結び付け、旧QAを現在の合格へ書き換えない。
+
 
 - [画像管理仕様](../../docs/IMAGE-ASSET-MANAGEMENT.md) と `catalogs/character-asset-management-v1.json` の担当予約を先に確認する。担当専用バッチだけへ書き、他担当の生成中領域を移動・削除・上書きしない。管理在庫の更新は管理担当が直列に実施する。
 - 顔、眼、模様、色、輪郭、水彩の質感は、対象素材の採用通常姿を基準にする。画風だけの参照と、同一性の参照・編集対象・合成要素を区別し、動物の顔や帽子を物体へ転写しない。

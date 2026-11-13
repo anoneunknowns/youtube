@@ -247,6 +247,9 @@ def plan(root, *, verifying=False):
             'clips': {'path': 'clips.json', 'sha256': digest(payload(clip_document))},
             'source_registrations': registrations,
             'geometry_policy': 'Native pixels and adopted per-frame references retained. Atlas neutral coordinates are shifted only by the adopted crop origin.'}
+        for field in ('style_pattern', 'usage_role', 'taxonomy'):
+            if field in selected:
+                manifest[field] = selected[field]
         if icons:
             manifest['icons'] = icons
         if 'scene_relative_scale' in selected:
@@ -264,7 +267,9 @@ def plan(root, *, verifying=False):
         'selection_policy': 'Explicit adopted index entries, independent of version numbers; current/ is a derived entry layer and originals remain authoritative.',
         'assets': [{'id': item['manifest']['id'], 'name_ja': item['manifest']['name_ja'],
                     'name_en': item['manifest']['name_en'], 'category': item['manifest']['category'],
-                    'manifest': item['base']+'asset.json', 'sha256': digest(payload(item['manifest']))} for item in assets]}
+                    'manifest': item['base']+'asset.json', 'sha256': digest(payload(item['manifest'])),
+                    **{field: item['manifest'][field] for field in ('style_pattern', 'usage_role', 'taxonomy')
+                       if field in item['manifest']}} for item in assets]}
     return assets, master, guards
 
 

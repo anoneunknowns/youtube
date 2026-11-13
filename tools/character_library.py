@@ -36,6 +36,7 @@ EXPANSION = 'assets/library/collections/character-expansion/v001/manifest.json'
 EYECATCHES = 'assets/library/collections/character-eyecatches/v001/manifest.json'
 GIMMICKS = 'assets/library/collections/background-gimmicks/v001/manifest.json'
 SUPPLEMENT = 'assets/library/collections/app-character-stock/v001/manifest.json'
+SPECIES = 'assets/library/collections/animal-species-stock/v001/manifest.json'
 MANAGEMENT = 'catalogs/character-asset-management-v1.json'
 ADOPTIONS = 'catalogs/character-adoptions-v1.json'
 SCOPES = ['assets/library/characters', 'assets/library/collections/animal-stock/v001',
@@ -45,7 +46,8 @@ SCOPES = ['assets/library/characters', 'assets/library/collections/animal-stock/
           'assets/library/collections/character-style-audit/v001',
           'assets/library/collections/character-management/v001',
           'assets/library/collections/background-gimmicks/v001',
-          'assets/library/collections/app-character-stock/v001']
+          'assets/library/collections/app-character-stock/v001',
+          'assets/library/collections/animal-species-stock/v001']
 EXTRAS = ['assets/library/README.md', 'assets/library/AGENTS.md', 'tools/character_library.py',
           'tools/register_character_expansion.py', 'tools/register_character_eyecatches.py', 'tools/component_alignment.py',
           'tools/manage_character_assets.py', 'tools/audit_character_style.py',
@@ -209,9 +211,10 @@ def _required_current_library_paths_locked(root, pending):
             from unified_asset_library import required_paths as current_view_paths
         required.update(current_view_paths(root))
     required.update(item['path'] for item in index['source_collections'])
-    if any(item['path'] == SUPPLEMENT for item in index['source_collections']):
-        supplement = read(readable_source(root, SUPPLEMENT, pending))
-        required.update(item['path'] for item in supplement['review_evidence'])
+    for collection in (SUPPLEMENT, SPECIES):
+        if any(item['path'] == collection for item in index['source_collections']):
+            supplement = read(readable_source(root, collection, pending))
+            required.update(item['path'] for item in supplement['review_evidence'])
     for adopted in _read_adoptions_locked(root, pending).values():
         required.update(item['path'] for item in adopted['selection_evidence'])
     for character in index['characters']:
@@ -748,9 +751,9 @@ def _supplement_pose_set_locked(root, selected, neutral, identity, pending):
             'reference_height_policy': 'Use each source sheet calibration unchanged; scene relative scale is separate.'}
 
 
-def _apply_supplement_locked(root, characters, pending):
+def _apply_supplement_locked(root, characters, pending, collection=SUPPLEMENT, *, new_identities_only=False):
     """Optional reviewed stock can extend identities without rewriting historical QA."""
-    path = readable_source(root, SUPPLEMENT, pending)
+    path = readable_source(root, collection, pending)
     if not path.is_file():
         return False
     document = read(path)
@@ -767,7 +770,19 @@ def _apply_supplement_locked(root, characters, pending):
         if identity in seen:
             raise ValueError('Duplicate supplemental stock identity')
         seen.add(identity)
+        if new_identities_only:
+            patterns = {'slightly-anthropomorphic-character': ('character', 'cast-character'),
+                        'bird-like-prop': ('gimmick', 'background-animal-prop')}
+            expected = patterns.get(selected.get('style_pattern'))
+            if expected is None or (selected.get('category'), selected.get('usage_role')) != expected:
+                raise ValueError('Species stock category/usage must match one approved style pattern')
+            if 'taxonomy' in selected and (not isinstance(selected['taxonomy'], dict)
+                    or not isinstance(selected['taxonomy'].get('scientific_name'), str)
+                    or not selected['taxonomy']['scientific_name']):
+                raise ValueError('Species taxonomy must preserve an explicit scientific identity')
         if identity in known:
+            if new_identities_only:
+                raise ValueError('Species stock must not replace an existing character identity')
             item = known[identity]
             if 'neutral' in selected or selected.get('neutral_reference') != {
                     key: item['neutral'][key] for key in ('path', 'sha256')}:
@@ -777,7 +792,8 @@ def _apply_supplement_locked(root, characters, pending):
                 raise ValueError('New supplemental stock needs explicit names')
             neutral = _stock_picture_locked(root, selected['neutral'], identity, pending)
             item = {'id': identity, 'name_ja': selected['name_ja'], 'name_en': selected['name_en'],
-                    'category': 'character', 'availability': 'reviewed-supplemental-stock', 'neutral': neutral}
+                    'category': selected.get('category', 'character'),
+                    'availability': 'reviewed-supplemental-stock', 'neutral': neutral}
             characters.append(item)
             known[identity] = item
         pose_sets = selected.get('pose_sets', [])
@@ -804,7 +820,10 @@ def _apply_supplement_locked(root, characters, pending):
                     or not math.isfinite(ratio) or ratio <= 0 or 'scene_relative_scale' in item):
                 raise ValueError('Invalid supplemental scene relative scale')
             item['scene_relative_scale'] = dict(scale)
-        item['supplemental_collection'] = SUPPLEMENT
+        for field in ('style_pattern', 'usage_role', 'taxonomy'):
+            if field in selected:
+                item[field] = selected[field]
+        item['supplemental_collection'] = collection
     for item in characters:
         if item.get('scene_relative_scale', {}).get('relative_to', item['id']) not in known:
             raise ValueError('Scene relative scale refers to an unknown character')
@@ -985,6 +1004,7 @@ def _build_index_locked(root):
             known.add(item['id'])
             characters.append(item)
     has_supplement = _apply_supplement_locked(root, characters, pending)
+    has_species = _apply_supplement_locked(root, characters, pending, SPECIES, new_identities_only=True)
     _apply_pose_set_adoptions_locked(root, characters, adoptions, pending)
     index = {
         'schema_version': 1, 'kind': 'portable-character-library-index',
@@ -996,6 +1016,7 @@ def _build_index_locked(root):
                                ([STOCK, MOTIONS] + ([EXPANSION] if expansion else [])
                                 + ([EYECATCHES] if eyecatches else []) + ([GIMMICKS] if gimmicks is not None else [])
                                 + ([SUPPLEMENT] if has_supplement else [])
+                                + ([SPECIES] if has_species else [])
                                 + ([ADOPTIONS] if adoptions else []))],
         'usage_rules': ['Preserve the canonical face, palette, texture, contour and species markings.',
                         'Use target_body_height / reference_height as one isotropic scale for all poses from a calibrated source sheet; never fit individual poses.',

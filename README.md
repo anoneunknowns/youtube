@@ -2,7 +2,7 @@
 
 > この公開版の現行作品と参照先は、同梱のカタログ・公開profileに合わせています。制作原本専用の資料は「公開版には未同梱」と明示します。全履歴用のarchive検査やdoctorには、未同梱の再現依存一覧・原本資料・ローカル動画を別途戻す必要があり、cloneだけで揃うとは扱いません。
 
-Paspla StudioのNum-Num Numbersで使う、透過画像・ポーズ・動作をまとめた素材ライブラリです。全24種類を同じ台帳とフォルダ構造で管理しています。他のプロジェクトでは、使いたいPNGを1枚選ぶところから利用できます。
+Paspla StudioのNum-Num Numbersで使う、透過画像・ポーズ・動作をまとめた素材ライブラリです。全120種類を同じ台帳とフォルダ構造で管理しています。他のプロジェクトでは、使いたいPNGを1枚選ぶところから利用できます。
 
 画像の入口は[素材一覧・利用ガイド](assets/library/README.md)、AI向けの機械可読な入口は[共通素材台帳](catalogs/asset-library-current-v1.json)です。[素材を扱うAIへの指示](assets/library/AGENTS.md)には、画像の選び方・支点・共通縮尺・出典の扱いをまとめています。
 
@@ -26,7 +26,7 @@ Paspla StudioのNum-Num Numbersで使う、透過画像・ポーズ・動作を�
 
 ### 素材を選ぶ
 
-24種類・通常姿24枚と各種ポーズ・顔アイコン、計643ファイルの透過PNGを、[一つの素材一覧](assets/library/README.md)から選べます。クマ、ウサギ、とら、小鳥、シャム猫、レッサーパンダ、ミーアキャット、カンガルー、ハリネズミ、ヤイロチョウ、オナガドリ、草、花壇、飛行機、ロケット、ヘリコプター、蝶、てんとう虫、虹、小さいクマ、ハムスター、花飾りのウサギ、クリーム色の細身の子、ぶち猫を収録しています。
+120種類・通常姿120枚と各種ポーズ・顔アイコン、計739ファイルの透過PNGを、[一つの素材一覧](assets/library/README.md)から選べます。擬人化した動物キャラ、鳥のように簡略化した動物の小物、植物・乗り物・昆虫・虹を、同じ台帳とフォルダ構造で扱います。使う画像と動作の有無は各IDの `asset.json`・`clips.json` から確認してください。
 
 各IDは同じ構造です。通常姿はそのまま使えるPNGで、シートからの切り出し作業は済んでいます。
 
@@ -51,7 +51,7 @@ assets/library/characters/<id>/current/
 
 ### PNGを1枚取得する
 
-画像だけを使う場合はPythonや動画制作ツールの導入は不要です。[全24種類の素材一覧](assets/library/README.md)から使うPNGを開いて保存できます。Git LFS管理のPNGをURLから取得するときは、画像実体のURLを使ってください。
+画像だけを使う場合はPythonや動画制作ツールの導入は不要です。[全120種類の素材一覧](assets/library/README.md)から使うPNGを開いて保存できます。Git LFS管理のPNGをURLから取得するときは、画像実体のURLを使ってください。
 
 - [クマの通常PNG](https://media.githubusercontent.com/media/anoneunknowns/youtube/main/assets/library/characters/bear-beret/current/neutral.png)
 - [クマの登録情報JSON](https://raw.githubusercontent.com/anoneunknowns/youtube/main/assets/library/characters/bear-beret/current/asset.json)
