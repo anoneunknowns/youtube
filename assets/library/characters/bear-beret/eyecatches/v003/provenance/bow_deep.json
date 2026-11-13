@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "adopted-image-generation-provenance",
+  "pose": "bow_deep",
+  "generation_tool": "built-in image_gen",
+  "model": "not disclosed by tool",
+  "operation": "byte-copy-of-generated-original",
+  "source_pixels_modified": false,
+  "alpha_cleanup_applied": false,
+  "output": {
+    "path": "assets/library/characters/bear-beret/eyecatches/v003/bow_deep.png",
+    "sha256": "bc2f8eea14e7cd27df9f61b03cdd9ac881517ada85052a11c2508787da2e1d09"
+  },
+  "original_candidate_path": "assets/library/characters/bear-beret/generation-batches/bear-bow-clarity-20261113-01a1cfaa-5fd35f/source/bow-deep-remake-v001.png",
+  "original_generation_output_path": "/Users/support/.codex/generated_images/01a1cfaa-aefc-79f1-ac9b-6ff6027944b6/exec-6ee10b04-7dd8-4d21-bc2f-2f0f202659a2.png",
+  "prompt": {
+    "path": "assets/library/characters/bear-beret/eyecatches/v003/provenance/raw/prompt-v001.txt",
+    "sha256": "f52086865ee96b39f2495717c2926bad797b4287770ee96168f51fb74aecb5ef"
+  },
+  "exact_input_record": {
+    "path": "assets/library/characters/bear-beret/eyecatches/v003/provenance/raw/request-v001.json",
+    "sha256": "8ad169abd03dbec8dbe2b71590900e3ba2ba4ffda9089463cd175b5710473091"
+  },
+  "exact_output_record": {
+    "path": "assets/library/characters/bear-beret/eyecatches/v003/provenance/raw/output-v001.json",
+    "sha256": "8ee76c95b2c453e7a5eb7b70c85222fda8e985612c771a16ca9deae3018ac55f"
+  },
+  "exact_tool_prompt": {
+    "path": "assets/library/characters/bear-beret/eyecatches/v003/provenance/raw/request-v001.json",
+    "json_pointer": "/tool_arguments/prompt",
+    "txt_copy_note": "TXT is preserved byte-for-byte including its final LF; request contains the exact tool argument string."
+  },
+  "direct_inputs": [
+    {
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "role": "identity, palette, line treatment and character-proportion reference only; not an edit target",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485"
+    },
+    {
+      "path": "assets/library/characters/bear-beret/eyecatches/v002/bow_half.png",
+      "role": "preceding shallow-forward-bow state and shared scale context only; not an edit target",
+      "sha256": "d367b0688ab7dcbc5376fa1c879f6a5258051a3e75d91ddf3fc022cdea77a819"
+    }
+  ],
+  "comparison_baseline": {
+    "path": "assets/library/characters/bear-beret/eyecatches/v002/bow_deep.png",
+    "sha256": "34742d692f44e9168023c6016ca1a0c96af15a59d41b0f64e4900733efb43815"
+  },
+  "policy": "Replace only if clearly better with no identity/style/anatomical/registration regression. Keep baseline on tie, uncertainty or worse result.",
+  "input_policy": "A and preceding half are identity/style and sequence references, not image edit targets; all direct paths and SHAs preserved. Historical comparison baseline is informational, not a runtime dependency."
+}

@@ -1,0 +1,654 @@
+{
+  "schema_version": 1,
+  "kind": "independent-limited-bow-compressed-key-pose-review",
+  "recorded_at_utc": "2026-11-13T03:45:49.538725+00:00",
+  "reviewer": "codex:character_verify_issue",
+  "result": "pass_for_this_bow_deep_stock_replacement",
+  "blocking_findings": [],
+  "candidate_sha256": "bc2f8eea14e7cd27df9f61b03cdd9ac881517ada85052a11c2508787da2e1d09",
+  "previous_sha256": "34742d692f44e9168023c6016ca1a0c96af15a59d41b0f64e4900733efb43815",
+  "recommendation": "replace_only_bow_deep_keep_other15_unique",
+  "summary_ja": "既存deepと新deepのお辞儀キー順を同じ1107尺度/足支点で明暗430/860段に圧縮表示。新deepは正面の前傾が明確で、隣接halfへ出入りする実decodeで新しい切れ・二重像・顔/輪郭の乱れや不意の体格変更を見つけなかった。静止比較の明確改善を維持。今回のお辞儀離散キー検査に限り、この1姿勢の差替えを推薦。",
+  "scope": {
+    "clips": "bow only, old-deep vs new-deep comparison",
+    "scope_state_labels": [
+      "neutral",
+      "bow_ready",
+      "bow_half",
+      "old_deep",
+      "new_deep",
+      "bow_return"
+    ],
+    "state_label_count": 6,
+    "unique_png_count": 5,
+    "sequence_current": [
+      "bow_ready",
+      "bow_half",
+      "old_deep",
+      "old_deep",
+      "bow_half",
+      "bow_return"
+    ],
+    "sequence_candidate": [
+      "bow_ready",
+      "bow_half",
+      "new_deep",
+      "new_deep",
+      "bow_half",
+      "bow_return"
+    ],
+    "extra_before_after": "each version adds neutral A .6s before and .6s after",
+    "key_hold_seconds": 0.4,
+    "version_duration_seconds": 3.6,
+    "background_duration_seconds": 7.2,
+    "output_size_px": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "reference_height_px": 1107,
+    "display_reference_heights_px": [
+      430,
+      860
+    ],
+    "new_deep_source_anchor_px": [
+      611,
+      1181
+    ],
+    "no_pose_bboxfit_or_extra_jump": true,
+    "hardcuts_only_no_morph_or_crossfade": true,
+    "prior18pose936frame420case_result_recounted": false
+  },
+  "current_run_actual_counts": {
+    "mp4s": 2,
+    "fully_decoded_frames_each": 216,
+    "fully_decoded_frames_total": 432,
+    "source_alpha8_geometry_cases": 12,
+    "decoded_rgb_measurement_cases": 192,
+    "new_deep_decoded_rgb_cases": 24,
+    "new_deep_translation_control_cases": 40,
+    "separate_new_deep_actual_contact_sole_checks": 2
+  },
+  "alignment": {
+    "horizontal_intent": "same registered source support x400 left /x1325 right, source shape/lean retained",
+    "vertical_intent": "same ground y1000; raw new source contact611/1181, common1107; visible965px height never used as ref",
+    "source_alpha8_feature_tracking_tolerance_px": 0.5,
+    "source_alpha8_maximum_absolute_delta_xy_px": [
+      0.5,
+      0.0
+    ],
+    "source_both_axis_containment_passed": true,
+    "new_deep_actual_contact_sole_checks": [
+      {
+        "stage": "430",
+        "reference_height_px": 1107,
+        "source_anchor_px": [
+          611,
+          1181
+        ],
+        "target_anchor_px": [
+          400.0,
+          1000.0
+        ],
+        "actual_alpha8_lowest_row_y": 999,
+        "actual_two_sole_intervals_x": [
+          [
+            345,
+            372
+          ],
+          [
+            428,
+            457
+          ]
+        ],
+        "actual_contact_center_px": [
+          400.5,
+          1000
+        ],
+        "delta_xy_px": [
+          0.5,
+          0.0
+        ],
+        "tolerance_px": 0.5,
+        "passed": true
+      },
+      {
+        "stage": "860",
+        "reference_height_px": 1107,
+        "source_anchor_px": [
+          611,
+          1181
+        ],
+        "target_anchor_px": [
+          1325.0,
+          1000.0
+        ],
+        "actual_alpha8_lowest_row_y": 999,
+        "actual_two_sole_intervals_x": [
+          [
+            1220,
+            1262
+          ],
+          [
+            1386,
+            1433
+          ]
+        ],
+        "actual_contact_center_px": [
+          1325.25,
+          1000
+        ],
+        "delta_xy_px": [
+          0.25,
+          0.0
+        ],
+        "tolerance_px": 0.5,
+        "passed": true
+      }
+    ],
+    "sole_feature_distinction_ja": "登録は実最下行2soleの中心611。一方、従来observerの最下23px帯bbox中心は616で別の特徴点。帯中心を接地座標に置換せず、その5native pxのoffsetを430では1.942px、860では3.884pxとして射影し実ラスタと比較。さらに実最下行2sole中心も独立観測しx=.5/.25px,y=0の範囲を確認。",
+    "decoded_rgb_tolerance_px": 1.0,
+    "decoded_rgb_maximum_absolute_delta_xy_px": [
+      1.0,
+      1
+    ],
+    "decoded_both_axis_containment_and_support_passed": true,
+    "matched_observer": "same actual preencode RGB PNG and decoded image, whole fixed stage background subtraction max-channel difference>=32, fixed sole-band ROI; no pose shape stencil",
+    "translation_controls_passed": true,
+    "translation_controls": "new_deep実decode0pxと±2px水平/垂直、固定ROI/threshold/toleranceの40件",
+    "display_only_calibration": "same prior renderer, existing reference states at most1px source raster calibration; new_deep has zero correction at both scales. Raw pixels/registration/common scale unchanged."
+  },
+  "manual_visual_checks": {
+    "method": "actual decoded1080p full frames + native430 temporal strips, view_image; time-ordered still review, not a claim of real-time playback",
+    "fullframes_viewed": [
+      {
+        "background": "light",
+        "frame": 47,
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded/light/frame-0011.png",
+        "sha256": "e6ff0b9c81e09f7325752a5a7ba3157af82580aad1a94b9c405cb3477d6a146d"
+      },
+      {
+        "background": "light",
+        "frame": 149,
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded/light/frame-0033.png",
+        "sha256": "833a17a8f16f4b27c8603a254460c8b81b18b1dc7eedde178eff974f9d5677e1"
+      },
+      {
+        "background": "light",
+        "frame": 150,
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded/light/frame-0034.png",
+        "sha256": "c44115519af2994cdcc009bf88481a6edbce3b4ed0a4ba233ed2cdfb821819bb"
+      },
+      {
+        "background": "light",
+        "frame": 173,
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded/light/frame-0039.png",
+        "sha256": "b1b205040171ddb85e4ee81d27c019c4e3529e2e4e8345eeef7a99c2266f8f3b"
+      },
+      {
+        "background": "light",
+        "frame": 174,
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded/light/frame-0040.png",
+        "sha256": "c457c0871fe61332bd5c8ab4e5408fba691bd3e3f1267aea0200c1e6269b1b3a"
+      },
+      {
+        "background": "dark",
+        "frame": 47,
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded/dark/frame-0011.png",
+        "sha256": "688cb3a5b61fc67d5f47628d222bde5d44dc1048ee7ff0613607c843cf282a24"
+      },
+      {
+        "background": "dark",
+        "frame": 149,
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded/dark/frame-0033.png",
+        "sha256": "ee4fe95dc5e07c7aaa36dc8325db241985d4ef22e5ecb99eb6aa337d1939f49b"
+      },
+      {
+        "background": "dark",
+        "frame": 150,
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded/dark/frame-0034.png",
+        "sha256": "6f0336b38196cd742801deb55fa9a2755788c93b8d54d5452ca64cea39414dbe"
+      },
+      {
+        "background": "dark",
+        "frame": 173,
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded/dark/frame-0039.png",
+        "sha256": "d6b544ba2efb26209ef242ada5b24f138fc823b65dbfa850b79d81fe8bb9646e"
+      },
+      {
+        "background": "dark",
+        "frame": 174,
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded/dark/frame-0040.png",
+        "sha256": "5404fec4666b174537486622205f19a7044a9184bd94294794dce238adc00ae4"
+      }
+    ],
+    "temporal_strips_viewed": [
+      ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/strips/430-native-light-current-temporal.png",
+      ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/strips/430-native-light-candidate-temporal.png",
+      ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/strips/430-native-dark-current-temporal.png",
+      ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/strips/430-native-dark-candidate-temporal.png"
+    ],
+    "new_deep_entry_cut_frames": [
+      149,
+      150
+    ],
+    "new_deep_exit_cut_frames": [
+      173,
+      174
+    ],
+    "findings_ja": [
+      "half→newdeepで帽子上面と下がる顔/視線が深い前傾を示し、旧deepの左右rollへの軸変更が解消される。",
+      "明暗とも860原寸で眼/鼻/口/桃舌・帽子/耳・手足・茶輪郭を識別でき、圧縮による追加の眼/線や二重像は見つからない。",
+      "両足は同じgroundへ収まり、深い礼で見える頭位置/身体高が変わることと倍率変更を区別した。common1107は固定。",
+      "戻りもnewdeep→half→return→Aの同じ正面軸で読める。hardcutの段階差は残り、滑らかな補間完成とは判定しない。"
+    ]
+  },
+  "encoding": {
+    "codec": "H264 libx264",
+    "crf": 14,
+    "pixel_format": "yuv420p",
+    "preset": "medium",
+    "audio": false,
+    "local_qa_only": true,
+    "github_upload": false,
+    "outputs": [
+      {
+        "background": "light",
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/bear-bow-contrast-hardcut-light-1080p30.mp4",
+        "sha256": "4e675192ed904d86b8a8b0055a86e20e870d1c27565b4d508e4c2f7a79f88c21",
+        "bytes": 1461548,
+        "probe": {
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+              "profile": "High",
+              "codec_type": "video",
+              "codec_tag_string": "avc1",
+              "codec_tag": "0x31637661",
+              "mime_codec_string": "avc1.640028",
+              "width": 1920,
+              "height": 1080,
+              "coded_width": 1920,
+              "coded_height": 1088,
+              "has_b_frames": 2,
+              "pix_fmt": "yuv420p",
+              "level": 40,
+              "chroma_location": "left",
+              "field_order": "progressive",
+              "refs": 4,
+              "is_avc": "true",
+              "nal_length_size": "4",
+              "id": "0x1",
+              "r_frame_rate": "30/1",
+              "avg_frame_rate": "30/1",
+              "time_base": "1/15360",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 110592,
+              "duration": "7.200000",
+              "bit_rate": "1620098",
+              "bits_per_raw_sample": "8",
+              "nb_frames": "216",
+              "nb_read_frames": "216",
+              "extradata_size": 47,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "encoder": "Lavc63.1.102 libx264"
+              }
+            }
+          ],
+          "format": {
+            "filename": "/Users/support/codex/youtube/.work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/bear-bow-contrast-hardcut-light-1080p30.mp4",
+            "nb_streams": 1,
+            "nb_programs": 0,
+            "nb_stream_groups": 0,
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "format_long_name": "QuickTime / MOV",
+            "start_time": "0.000000",
+            "duration": "7.200000",
+            "size": "1461548",
+            "bit_rate": "1623942",
+            "probe_score": 100,
+            "tags": {
+              "major_brand": "isom",
+              "minor_version": "512",
+              "compatible_brands": "isomiso2avc1mp41",
+              "encoder": "Lavf63.1.102"
+            }
+          }
+        },
+        "fully_decoded_frame_count": 216,
+        "selected_decoded_frames": 48
+      },
+      {
+        "background": "dark",
+        "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/bear-bow-contrast-hardcut-dark-1080p30.mp4",
+        "sha256": "5df6a919f08c9a11b9075e4bfd2bf1e687d6a02e91460d9fb44e1d876606838a",
+        "bytes": 1461234,
+        "probe": {
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+              "profile": "High",
+              "codec_type": "video",
+              "codec_tag_string": "avc1",
+              "codec_tag": "0x31637661",
+              "mime_codec_string": "avc1.640028",
+              "width": 1920,
+              "height": 1080,
+              "coded_width": 1920,
+              "coded_height": 1088,
+              "has_b_frames": 2,
+              "pix_fmt": "yuv420p",
+              "level": 40,
+              "chroma_location": "left",
+              "field_order": "progressive",
+              "refs": 4,
+              "is_avc": "true",
+              "nal_length_size": "4",
+              "id": "0x1",
+              "r_frame_rate": "30/1",
+              "avg_frame_rate": "30/1",
+              "time_base": "1/15360",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 110592,
+              "duration": "7.200000",
+              "bit_rate": "1619750",
+              "bits_per_raw_sample": "8",
+              "nb_frames": "216",
+              "nb_read_frames": "216",
+              "extradata_size": 47,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "encoder": "Lavc63.1.102 libx264"
+              }
+            }
+          ],
+          "format": {
+            "filename": "/Users/support/codex/youtube/.work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/bear-bow-contrast-hardcut-dark-1080p30.mp4",
+            "nb_streams": 1,
+            "nb_programs": 0,
+            "nb_stream_groups": 0,
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "format_long_name": "QuickTime / MOV",
+            "start_time": "0.000000",
+            "duration": "7.200000",
+            "size": "1461234",
+            "bit_rate": "1623593",
+            "probe_score": 100,
+            "tags": {
+              "major_brand": "isom",
+              "minor_version": "512",
+              "compatible_brands": "isomiso2avc1mp41",
+              "encoder": "Lavf63.1.102"
+            }
+          }
+        },
+        "fully_decoded_frame_count": 216,
+        "selected_decoded_frames": 48
+      }
+    ]
+  },
+  "quality_metrics": {
+    "maximum_stage_rgb_mae_channel_value": 1.3499345063538613,
+    "maximum_stage_pixels_error_ge24_ratio": 0.0017118849248736025,
+    "metrics_only_acceptance": false
+  },
+  "inputs": {
+    "schema_version": 1,
+    "kind": "local-bow-comparison-input-only",
+    "character_id": "bear-beret",
+    "reference_height_px": 1107,
+    "frames": [
+      {
+        "id": "neutral",
+        "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+        "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+        "size_px": [
+          1254,
+          1254
+        ],
+        "reference_height_px": 1107,
+        "anchor_px": [
+          622.5,
+          1184
+        ],
+        "body_bbox_px": [
+          275,
+          77,
+          970,
+          1184
+        ],
+        "support_kind": "drawn-ground-contact",
+        "baked_in_lift_px": 0
+      },
+      {
+        "id": "bow_ready",
+        "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+        "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+        "size_px": [
+          1254,
+          1254
+        ],
+        "reference_height_px": 1107,
+        "anchor_px": [
+          622.5,
+          1184
+        ],
+        "body_bbox_px": [
+          275,
+          77,
+          970,
+          1184
+        ],
+        "support_kind": "drawn-ground-contact",
+        "baked_in_lift_px": 0
+      },
+      {
+        "id": "bow_half",
+        "path": "assets/library/characters/bear-beret/eyecatches/v002/bow_half.png",
+        "sha256": "d367b0688ab7dcbc5376fa1c879f6a5258051a3e75d91ddf3fc022cdea77a819",
+        "size_px": [
+          1254,
+          1254
+        ],
+        "reference_height_px": 1107,
+        "anchor_px": [
+          626.5,
+          1183
+        ],
+        "body_bbox_px": [
+          269,
+          99,
+          965,
+          1183
+        ],
+        "support_kind": "drawn-ground-contact",
+        "baked_in_lift_px": 0
+      },
+      {
+        "id": "old_deep",
+        "path": "assets/library/characters/bear-beret/eyecatches/v002/bow_deep.png",
+        "sha256": "34742d692f44e9168023c6016ca1a0c96af15a59d41b0f64e4900733efb43815",
+        "size_px": [
+          1254,
+          1254
+        ],
+        "reference_height_px": 1107,
+        "anchor_px": [
+          679.5,
+          1138
+        ],
+        "body_bbox_px": [
+          219,
+          182,
+          936,
+          1138
+        ],
+        "support_kind": "drawn-ground-contact",
+        "baked_in_lift_px": 0
+      },
+      {
+        "id": "new_deep",
+        "path": "assets/library/characters/bear-beret/generation-batches/bear-bow-clarity-20261113-01a1cfaa-5fd35f/source/bow-deep-remake-v001.png",
+        "sha256": "bc2f8eea14e7cd27df9f61b03cdd9ac881517ada85052a11c2508787da2e1d09",
+        "size_px": [
+          1254,
+          1254
+        ],
+        "reference_height_px": 1107,
+        "anchor_px": [
+          611,
+          1181
+        ],
+        "body_bbox_px": [
+          267,
+          216,
+          972,
+          1181
+        ],
+        "support_kind": "drawn-ground-contact",
+        "baked_in_lift_px": 0
+      },
+      {
+        "id": "bow_return",
+        "path": "assets/library/characters/bear-beret/eyecatches/v002/bow_return.png",
+        "sha256": "f65d536de83cf776b3bf4eab9791f3805b68050689a3da35cdcbcdf8e4c08830",
+        "size_px": [
+          1254,
+          1254
+        ],
+        "reference_height_px": 1107,
+        "anchor_px": [
+          621.0,
+          1185
+        ],
+        "body_bbox_px": [
+          255,
+          74,
+          998,
+          1185
+        ],
+        "support_kind": "drawn-ground-contact",
+        "baked_in_lift_px": 0
+      }
+    ],
+    "note": "No shared registration. new_deep anchor611/1181 from actual two lowest-row sole centers; 23px sole band tracking point616 is a separate feature and is projected with its5px offset, never recentered."
+  },
+  "code": [
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/build_motion_qa.py",
+      "sha256": "482af3c3e3b1afbd623f45928683fdb05b5cc781cfbfa472cac6a4e45a06231f"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/analyze_decode.py",
+      "sha256": "5dc6c94aef2118903b71ac60ddc704e4b9a3431535e9e4b272662f40cbdec820"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/check_contact_soles.py",
+      "sha256": "9770866bc54fa9b445516814f4ad14574cd52e23ec947f77bbe59d58f8e1d093"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/build-receipt.json",
+      "sha256": "9aed44ef1b0d7be3b680519278b6694370b895beb059240abf5d650856e78b0d"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/timeline.json",
+      "sha256": "8dee493a7b3241c756f5ccfce5fec1dbc85ea6d7feac4f3d6ecfff64cce36c34"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/source-raster-alignment.json",
+      "sha256": "63449bf94837cca63799ed37cc4e0784b7fd79b2939a554ac2d0a37b7bb32a96"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded-raster-measurements.json",
+      "sha256": "6e6b75e10eba7ee46fcaaa740b77b4d74095df80ed9f8c61b0931544b6081700"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded-observer-controls.json",
+      "sha256": "8bd07187c46879ab88add9f47b4c878bcd4b2b0001f15125e8d180eb6d53cf59"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/new-actual-contact-sole-check.json",
+      "sha256": "0d3a2631cd808108d0532a8eac2ea3a132283fa2b77368e9d592cbbdc0c66f57"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/decoded-frame-map.json",
+      "sha256": "9857c9de42c1db3d724bd24d4ebf4b3d33190da799d2e302491d86475ba0d0f4"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/light-all-frames.framemd5",
+      "sha256": "cf90fce3d2bc8ad4e4d6fb663e457151e6a6481f0bfa58ba83240fc76fd38c6e"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-motion-v001/final-crf14/dark-all-frames.framemd5",
+      "sha256": "09e46af61cb31cf1529737b20a2e53bbf14ad8e2180a15f79df13638472be454"
+    }
+  ],
+  "static_comparison_final": {
+    "path": ".work/bear-selective-remake-20261113/native-audit/bow-deep-v001-static-comparison-final.json",
+    "sha256": "076dd6908fc547ff98a6700f7cb63dcc2732a0349cd56beb43ca8402b5de869a"
+  },
+  "integrity": {
+    "all5_input_unique_png_hashes_unchanged_after": true,
+    "shared_images_registration_catalogs_or_selection_modified_by_reviewer": false,
+    "git_mutations": false,
+    "writes_confined_to": ".work/bear-selective-remake-20261113/native-audit"
+  },
+  "limits": [
+    "今回実施したbow1clipの旧/新対比に限定。ほか3clips/全18stateを再圧縮確認したという主張はしない。",
+    "全432frame decodeと、192測定標本/時間順静止の実視認を区別。実時間連続再生や完成episodeの受入ではない。",
+    "変形/補間/crossfadeなし。作品へ採用するときはその実装・出力条件の動作と完成動画を別に確認する。"
+  ]
+}

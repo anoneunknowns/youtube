@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "selective-remake-generation-task",
+  "created_at_utc": "2026-11-13T03:29:29.356422+00:00",
+  "batch_id": "bear-bow-clarity-20261113-01a1cfaa-5fd35f",
+  "batch_root": "assets/library/characters/bear-beret/generation-batches/bear-bow-clarity-20261113-01a1cfaa-5fd35f",
+  "owner": "codex:bear-selective-remake:01a1cfaa",
+  "tool": "built-in image_gen",
+  "intent": "new illustration from identity references; not raster editing",
+  "slot": "bow_deep",
+  "references": [
+    {
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "role": "identity, palette, line treatment and character-proportion reference only; not an edit target",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485"
+    },
+    {
+      "path": "assets/library/characters/bear-beret/eyecatches/v002/bow_half.png",
+      "role": "preceding shallow-forward-bow state and shared scale context only; not an edit target",
+      "sha256": "d367b0688ab7dcbc5376fa1c879f6a5258051a3e75d91ddf3fc022cdea77a819"
+    }
+  ],
+  "comparison_baseline": {
+    "path": "assets/library/characters/bear-beret/eyecatches/v002/bow_deep.png",
+    "sha256": "34742d692f44e9168023c6016ca1a0c96af15a59d41b0f64e4900733efb43815"
+  },
+  "prompt_path": "assets/library/characters/bear-beret/generation-batches/bear-bow-clarity-20261113-01a1cfaa-5fd35f/provenance/prompt-v001.txt",
+  "policy": "Replace only if clearly better with no identity/style/anatomical/registration regression. Keep baseline on tie, uncertainty or worse result.",
+  "tool_arguments": {
+    "prompt": "Use case: illustration-story.\nAsset type: a single full-body transparent PNG key-pose for an existing illustrated bear character, replacing only a deep-forward-bow pose if the new drawing proves better.\nGenerate a NEW illustration from scratch. Do not patch, trace pixels, rotate or warp an existing picture. Input image 1 is the adopted neutral character: use it as the exact identity/style/proportion reference. Input image 2 is the preceding shallow bow: use it only as sequence context, showing that the new bow must be distinctly deeper while preserving the same character and scale.\nSubject and style: the same warm cream teddy bear with two round ears, the same coral red beret and small beret stem, simple dark warm-brown outlines, soft subtle watercolor/paper texture, oval brown pupils surrounded by white, a small brown nose and the same smiling muzzle with a small pink tongue. Preserve the large head, compact torso, short legs, simple round paws, original palette and softness. Lines should feel as delicate as reference 1, about 5px at a 430px standing-body display height, with thinner internal facial lines. No added eye sparkles, eyebrows, blush, fur strands, clothes, or objects.\nRequested action: a clear polite DEEP FORWARD BOW, hinging forward from waist/torso, about 30-40 degrees, head and gaze lowering along the same forward-bow axis as image 2. Show more of the upper surface of the beret and a visibly lowered face/eye line so the action reads as a deeper bow toward the viewer. Keep left/right facial symmetry in screen space; no sideways roll, no sideways leaning, no three-quarter side turn. The lower face may be foreshortened naturally; retain sufficient face size and recognizable white-edged brown eyes looking downward. Do not shrink the whole character to simulate bowing. Both arms hang naturally along the front of the thighs, rounded paws visible, with clean shoulder connections and no overlapping duplicate arm lines. Both feet remain planted on one horizontal ground line and the legs maintain their short original anatomy.\nComposition: one character only, front camera, full body including both feet and complete hat, centered horizontally with comfortable clear margins. Match the reference square canvas framing and character drawing scale (reference canvas 1254x1254, neutral standing reference height 1107px, neutral support center x622.5 and ground y1184). The bowed head lowers naturally while foot size and spacing preserve the reference scale. Use a genuinely transparent RGBA background, including between the legs; no ground shadow, background, border, caption, labels, comparison panel or watermark. No image cleanup or image compositing is requested: deliver the new original with its generated alpha.",
+    "referenced_image_paths": [
+      "/Users/support/codex/youtube/assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "/Users/support/codex/youtube/assets/library/characters/bear-beret/eyecatches/v002/bow_half.png"
+    ],
+    "transparent_background": true
+  },
+  "tool_output_pending": true
+}

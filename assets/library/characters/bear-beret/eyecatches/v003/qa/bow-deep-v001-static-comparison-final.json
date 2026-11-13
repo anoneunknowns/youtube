@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "kind": "independent-bear-bow-deep-static-comparison-decision",
+  "recorded_at_utc": "2026-11-13T03:38:12.101246+00:00",
+  "reviewer": "codex:character_verify_issue",
+  "pose_id": "eyecatch/bow_deep",
+  "verdict": "candidate_clearly_better_for_bow_clarity",
+  "recommendation": "replace_this_pose_after_separate_limited_compressed_key_pose_check",
+  "same_quality_or_uncertain": false,
+  "candidate": {
+    "path": "assets/library/characters/bear-beret/generation-batches/bear-bow-clarity-20261113-01a1cfaa-5fd35f/source/bow-deep-remake-v001.png",
+    "sha256": "bc2f8eea14e7cd27df9f61b03cdd9ac881517ada85052a11c2508787da2e1d09",
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "visible_alpha8_bbox_px": [
+      267,
+      216,
+      972,
+      1181
+    ],
+    "reference_height_px": 1107,
+    "anchor_px": [
+      611,
+      1181
+    ],
+    "anchor_basis": "midpoint of actual lowest-row sole interval centers[482,524),[698,740) at y1180;half-open bottom1181",
+    "visible_pose_height965_is_not_standing_reference": true
+  },
+  "previous": {
+    "role": "previous-deep",
+    "path": "assets/library/characters/bear-beret/eyecatches/v002/bow_deep.png",
+    "sha256": "34742d692f44e9168023c6016ca1a0c96af15a59d41b0f64e4900733efb43815"
+  },
+  "references": [
+    {
+      "role": "identity-A",
+      "path": "assets/library/characters/bear-beret/references/canonical-neutral-v002.png",
+      "sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485"
+    },
+    {
+      "role": "adjacent-half",
+      "path": "assets/library/characters/bear-beret/eyecatches/v002/bow_half.png",
+      "sha256": "d367b0688ab7dcbc5376fa1c879f6a5258051a3e75d91ddf3fc022cdea77a819"
+    },
+    {
+      "role": "adjacent-return",
+      "path": "assets/library/characters/bear-beret/eyecatches/v002/bow_return.png",
+      "sha256": "f65d536de83cf776b3bf4eab9791f3805b68050689a3da35cdcbcdf8e4c08830"
+    }
+  ],
+  "clear_improvement": {
+    "result": true,
+    "finding_ja": "現行deepは帽子・眼・顔・胴を左へrollし、halfから深い前傾へ進むより横にかしげる演技が強い。新候補は左右rollを抑え、帽子上面・下がる顔面/視線・短く見える胴によって正面の深いお辞儀が明確に読める。half→新deep→returnの演技軸がそろう。",
+    "basis": "原寸source/明暗合成、native顔詳細、同1107基準の430/860表示でA/half/既存deep/新deep/return/Aを目視比較。数値の線幅差のみや生成の新しさでは決めていない。"
+  },
+  "regression_review": {
+    "result": "no_material_static_regression_observed",
+    "face_identity_ja": "白縁茶瞳、鼻、逆U系の口元と桃色舌は保たれる。眼は短く丸く見え、顔部品は下へ寄るが、前傾の投影と視線の下向きに整合。眼/眉/口の重複や顔の別物化は見つからない。",
+    "head_body_ja": "頭周囲が最大幅となるalpha8横幅705pxはAの約695pxに近い。見える全高965pxは深い礼の投影であり、1107基準を置換していない。bboxfitで頭を拡大していない。",
+    "hat_ears_ja": "帽子上面の見える面積が大きく、brimの曲線が変わる。深くうつむく視点に整合し、帽子/二耳の数や接続は自然。帽子形状の完全一致は主張しない。",
+    "arms_hands_legs_feet_ja": "左右の腕は体側から前下方へ下がり、丸い手/両足がつながる。余分な指・肢、欠け、体の穴は見つからない。",
+    "color_contour_texture_ja": "暖色茶輪郭、クリーム塗り、赤帽子、紙目/水彩系の質感を維持。帽子の紙目はAより細かく均一に見える差はあるが、別の材質や劣化したぼけには見えない。",
+    "alpha_resolution_ja": "1254原寸と正しい明暗合成で目立つ背景残り、にじみ、孤立部品、切れ、色汚れは見つからない。清掃や輪郭補正なし。"
+  },
+  "projection_notes": [
+    "眼が短く丸い/額と帽子上面が広いことを直ちに形崩れとせず、前傾の投影としてA/halfと比較して判定。",
+    "現行deepの頭投影幅差や線幅を一律不合格にした判断ではない。主な改善はお辞儀という演技の読みやすさ。",
+    "診断v001では最下23px帯中央616/1181を仮使用。接地を実sole中心へそろえるv002で611/1181へ変更し再比較。原画/共通ref/キャンバスは不変、初回診断も保全。"
+  ],
+  "other_current_assets": {
+    "keep_other_unique_count": 15,
+    "keep_ids": [
+      "neutral",
+      "tea_hold",
+      "tea_raise",
+      "tea_sip",
+      "tea_lower",
+      "bow_half",
+      "bow_return",
+      "jump_crouch",
+      "jump_takeoff",
+      "jump_air",
+      "jump_land",
+      "dance_left",
+      "dance_right",
+      "dance_step",
+      "dance_finish"
+    ],
+    "reason_ja": "全16現行uniqueを今回fresh確認済み。他は具体的な新規描き直しの利益が示せず、軽微な線/閉眼差だけで交換しない。",
+    "fresh_current_audit_path": ".work/bear-selective-remake-20261113/native-audit/fresh-current-audit.json",
+    "fresh_current_audit_sha256": "3283cbaf953c4d6b6a599e3010d5321a6ae70fb3ce4fbdbb02b94e3c1dab8f5e"
+  },
+  "evidence": [
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-deep-remake-v001-native-light-dark.png",
+      "sha256": "9bd7a47906799588fe123e6e1a5bb2445faf3ea634fc2f38254e6ac51ab07624"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-deep-v001-vs-current-native-faces.png",
+      "sha256": "efc6ad0d5cb022a3ca21473445aae4f83541baaee2b41517617a80c53af4e418"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-deep-v001-vs-current-430-light-dark-v002.png",
+      "sha256": "9d856764a43b82b63896725bba931c48239e797a1482d31b847e360a9e5a76a6"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-deep-v001-vs-current-860-light-dark-v002.png",
+      "sha256": "7990dc9fb9c644170147a09bc7b7c9936fb1a7b43540090eb65c463bc3a2752a"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-deep-v001-860-A-half-current.png",
+      "sha256": "921ec263824311ac143f600ca934b690d0f238ae6c4c68c3c4445ac34020bc32"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-deep-v001-860-new-return-A.png",
+      "sha256": "2d03c86c8b8579a8fbded678c54331eebc0ccf9d46504fb9db950e2fc91ab4b3"
+    },
+    {
+      "path": ".work/bear-selective-remake-20261113/native-audit/bow-deep-v001-comparison-evidence-v002.json",
+      "sha256": "4ca3f13ad7a3206108e5b4fdab7c250e0dffb89ff26285c8713dc34649c9f251"
+    }
+  ],
+  "scope": "静止原画・同尺度の並びの独立比較結論。新候補の圧縮短片は別記録。補間や完成動画の合格ではない。",
+  "source_integrity": {
+    "candidate_after_sha256": "bc2f8eea14e7cd27df9f61b03cdd9ac881517ada85052a11c2508787da2e1d09",
+    "previous_after_sha256": "34742d692f44e9168023c6016ca1a0c96af15a59d41b0f64e4900733efb43815",
+    "A_after_sha256": "7989e0baa0a3ff27691e547ae889895b6e8699d914ef0d221e81d12e21ee1485",
+    "images_modified": false,
+    "shared_catalogs_registration_or_selection_modified": false,
+    "reservations_or_git_mutations": false,
+    "writes_confined_to": ".work/bear-selective-remake-20261113/native-audit"
+  }
+}
