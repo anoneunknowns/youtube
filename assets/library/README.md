@@ -2,6 +2,8 @@
 
 動物・植物・乗り物・昆虫・虹の全120種類を、同じ `current/` から利用できます。全IDの正本は[素材台帳](../../catalogs/asset-library-current-v1.json)です。
 
+AIは「共通素材台帳の `assets` → 各IDの `manifest`（`current/asset.json`）→ `neutral`・`poses`・`clips`」の順に参照します。`manifest` はリポジトリルート基準、画像の `path` はその `asset.json` がある `current/` 基準です。同じGit参照からPNGとJSONを取得し、記録したSHA-256を照合してください。採用先や使用可能な動作を版番号や他IDから推測しません。
+
 ## PNGを1枚使う
 
 下表のPNGリンクから、選んだ素材の通常画像を取得して画像として読み込みます。表示するだけならPNG1枚で使えます。Python、動画制作ツール、素材ZIP全体の導入は不要です。ローカルの画像を使う場合は `assets/library/characters/<id>/current/neutral.png` を開いてください。
@@ -344,7 +346,7 @@ ZIPには `character-library/` を起点に、選択された全120素材の通�
 
 [仕上がりの再検査記録](collections/asset-polish-review/v001/README.md)には、現行画像のSHA・観測尺度・確認範囲と、鮮明さが増しても画調のつながりを優先して既存版を維持した比較判断をまとめています。
 
-[正式版の全数原寸再検査](collections/final-image-review/v001/README.md)には、全画像の確認範囲と、細部に不足があった2姿勢だけを新規原画へ差し替えた判断をまとめています。利用画像はすべて同じ `current/` に反映し、通常姿を含む良好な素材を保持します。
+[当時の正式版739枚の全数原寸再検査](collections/final-image-review/v001/README.md)には、その739 PNGの確認範囲と、細部に不足があった2姿勢だけを新規原画へ差し替えた判断をまとめています。96種類の動画用セットは、別の[基本ポーズ受入記録](collections/youtube-basic-stock/v001/qa/acceptance-v001.json)と[検査範囲](collections/youtube-basic-stock/v001/README.md)を参照してください。各記録は実施時の画像・SHAと観測範囲に対応し、素材追加後の全1699 PNGや完成MP4を一つの過去記録で再検査した意味ではありません。利用画像はすべて同じ `current/` に反映し、通常姿を含む良好な素材を保持します。
 
 ## 保存範囲と利用条件
 

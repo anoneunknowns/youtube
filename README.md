@@ -78,7 +78,7 @@ PowerShellでの取得、原画・確認資料を含む検証、プレビュー�
 
 共通台帳の `assets` からIDを選び、`manifest` をリポジトリのルート基準で開きます。manifestのSHA-256は共通台帳の `sha256` と照合できます。その `asset.json` の `neutral` または `poses` から画像を選び、`path` を `asset.json` がある `current/` 基準で解決します。PNGのSHA-256、寸法、`anchor_px`、`reference_height_px` も同じレコードにあります。`source_path` は来歴用のルート相対パスです。
 
-`basic/` は反応・基本動作、`expanded/` は仕草・姿勢、`eyecatch/` は紅茶・おじぎ等の演技、`gimmick/` は背景に配置する素材の動作、`app/` はタップ・回答リアクション・待機・池ジャンプを表す名前空間です。各素材で使える名前は `asset.json` の `poses` を読んでください。互換ローダー `character_library.py` では `basic/` の接頭辞を省き、他は名前空間を付けます。
+`basic/` は反応・基本動作、`expanded/` は仕草・姿勢、`eyecatch/` は紅茶・おじぎ等の演技、`gimmick/` は背景に配置する素材の動作、`app/` はタップ・回答リアクション・待機・池ジャンプ、`video/` は動画で使う瞬き・挨拶・左右案内・考える／気づく・喜ぶ・固有のしぐさを表す名前空間です。各素材で使える名前は `asset.json` の `poses` を読んでください。互換ローダー `character_library.py` では `basic/` の接頭辞を省き、他は名前空間を付けます。
 
 同じ場面の動作群は `scale = 表示する基準高 / reference_height_px` と登録済み支点で配置します。姿勢ごとの外接高さへ合わせて拡大すると体格が跳ねます。翼・尾・炎・回転翼を含む可視範囲の余白を確保し、各素材の `anchor_kind` と表示上限は[素材ガイド](assets/library/README.md)で確認してください。動作の時間が指定されていないclipは、使う場面で設計・確認します。
 
