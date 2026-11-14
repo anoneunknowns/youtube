@@ -93,7 +93,7 @@ npm ci
 
 `npm install` による依存更新ではなく、採用済みの `package-lock.json` を使います。Python側の必須外部依存はPillowです。
 
-npm 12.2.1で必要な依存インストール処理は、同梱の `.npmrc` で `onnxruntime-node@1.21.0`、`protobufjs@7.6.6`、`sharp@0.34.5` の3つの固定版だけを許可しています。この設定を保持し、リポジトリ直下でそのまま `npm ci` を実行します。一括の `approve --all` や `package.json` の変更は不要です。設定の詳細は [npm公式のinstall scripts説明](https://docs.npmjs.com/cli/commands/npm-install-scripts/) を参照してください。
+同梱の `.npmrc` は、インストール処理が必要な `onnxruntime-node@1.21.0` と `protobufjs@7.6.6` の2固定版だけを許可します。`sharp@0.35.5` にはインストールスクリプトがないため許可一覧へ追加しません。`package.json` の `overrides.sharp` とロックは、セキュリティ修正版を固定する組です。この設定を保持し、リポジトリ直下でそのまま `npm ci` を実行します。一括の `approve --all` や手元での `package.json` の変更は不要です。更新理由と確認範囲は [制作ツールの記録](TOOLCHAIN.md#2026年11月14日の画像処理依存の修正)、許可設定の詳細は [npm公式のinstall scripts説明](https://docs.npmjs.com/cli/commands/npm-install-scripts/) を参照してください。
 
 ## 3. 一時フォルダと実行環境を確認する
 

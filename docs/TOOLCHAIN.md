@@ -2,6 +2,15 @@
 
 この文書は環境の確認記録です。導入手順は [セットアップ](SETUP.md)、公開用worktree・LFS・認証の運用は [GitHub公開仕様](GITHUB-PUBLICATION.md) を使います。記録した版数やテスト数を今後の固定要件や現在の最新版と読み替えません。
 
+## 2026年11月14日の画像処理依存の修正
+
+GitHubの依存関係警告3件に対応し、推移依存の `sharp` を0.34.5から0.35.5へ更新しました。[上流の修正情報](https://github.com/advisories/GHSA-wq5f-xc86-pv6w)に基づくセキュリティ例外として `overrides.sharp` を固定しています。親のTransformers.js 3.8.1が宣言する `^0.34.1` の範囲外なので、Kokoro 1.2.1・Transformers.js 3.8.1・ONNX Runtimeの組を保った隔離環境で互換性を確認しました。
+
+Node.js 26.13.1とnpm 12.2.2でクリーンな `npm ci`、依存ツリー、`npm audit` の警告0件、sharpの透過PNG読込・縮小、Transformers.jsのRawImage読込・縮小、KokoroとONNX Runtimeの読込を確認しました。素材や音声モデルは更新していません。この検査は音声生成・発音検査・完成MP4の再検査を含みません。
+
+sharpは[0.35.0でインストールスクリプトを廃止](https://sharp.pixelplumbing.com/changelog/v0.35.0/)しているため、`.npmrc` の許可はONNX Runtimeとprotobufjsの固定2件に整理しました。過去の音声・映像の採用入力とQAは保持し、当時のlockのSHAを新しいものへ書き換えません。変更前のlockは[コミット2906ca2のpackage-lock.json](https://github.com/anoneunknowns/youtube/blob/2906ca2c87d2e5cb9e7a3bc5a9dc78f86a7b4694/package-lock.json)から取得できます。以下の11月11日の環境・試験結果は当時の記録です。
+
+
 ## 確認時点の制作環境
 
 2026年11月11日、このMac（Apple Silicon）で上流の安定版と実際の実行環境を照合しました。以下の「最新」はこの確認時点の記録です。リリース候補・開発版を最新安定版として採用していません。
