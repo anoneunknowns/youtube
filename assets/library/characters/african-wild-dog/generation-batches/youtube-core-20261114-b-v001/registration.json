@@ -1,0 +1,1582 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "african-wild-dog",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "086fa945e03d1fb3ec1a5d270563adfe7939a5f3cb97745d386f1eea682aa8fa",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      220.0,
+      81.0,
+      1029.0,
+      1189.0
+    ],
+    "anchor_px": [
+      599.0,
+      1185.0
+    ],
+    "reference_height_px": 1108.0,
+    "anchor_kind": "anatomical-two-foot-contact",
+    "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+    "anchor_basis": "Midpoint of the two standing paw sole contacts beneath upright torso; side white-tipped tail is excluded from support.",
+    "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+    "source_manifest": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "0e5fcbd6a657721df82205ecb34b7d3378acd3d7887ea078c5bb6079f8a4048e"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "086fa945e03d1fb3ec1a5d270563adfe7939a5f3cb97745d386f1eea682aa8fa",
+      "reference_height_px": 1108.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "a96fa9ac4fef0cf9856e478120f5a6191b5d555660fc9e814b983be705e3f276",
+      "reference_height_px": 825.9540701881333,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "086fa945e03d1fb3ec1a5d270563adfe7939a5f3cb97745d386f1eea682aa8fa",
+          "bytes": 1179218,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1108.0,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 302.6,
+            "source_y": 191.4,
+            "canonical_span": [
+              225,
+              1025
+            ],
+            "source_span": [
+              115,
+              730
+            ],
+            "ratio": 0.76875
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 413.4,
+            "source_y": 276.09999999999997,
+            "canonical_span": [
+              295,
+              953
+            ],
+            "source_span": [
+              161,
+              712
+            ],
+            "ratio": 0.837386018237082
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 767.96,
+            "source_y": 547.14,
+            "canonical_span": [
+              370,
+              839
+            ],
+            "source_span": [
+              262,
+              591
+            ],
+            "ratio": 0.7014925373134329
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 900.92,
+            "source_y": 648.78,
+            "canonical_span": [
+              338,
+              1029
+            ],
+            "source_span": [
+              231,
+              730
+            ],
+            "ratio": 0.7221418234442837
+          }
+        ],
+        "common_ratio": 0.7454459117221419,
+        "initial_roi_locator_only_visible_height_ratio": 0.7644404332129964,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.193720494082649,
+        "visual_confirmation": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "9966b464fb99bf93889ae260ddf9eed1670184cb5779f1edde0c416780837e6d",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+      "generation_record_sha256": "3b983afe7047541b2fce6a65ea58ffc96bbebe1c888d358ad9aa7434d14a433f"
+    },
+    {
+      "id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "925038cdb55dc3248440b1211299cf66c0ae041045d659409736ae77c58d0392",
+      "reference_height_px": 813.8495744680852,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "086fa945e03d1fb3ec1a5d270563adfe7939a5f3cb97745d386f1eea682aa8fa",
+          "bytes": 1179218,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1108.0,
+        "reference_frame_id": "present_left",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 302.6,
+            "source_y": 183.40000000000003,
+            "canonical_span": [
+              225,
+              1025
+            ],
+            "source_span": [
+              158,
+              746
+            ],
+            "ratio": 0.735
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 413.4,
+            "source_y": 267.6,
+            "canonical_span": [
+              295,
+              953
+            ],
+            "source_span": [
+              209,
+              692
+            ],
+            "ratio": 0.7340425531914894
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 767.96,
+            "source_y": 537.0400000000001,
+            "canonical_span": [
+              370,
+              839
+            ],
+            "source_span": [
+              252,
+              609
+            ],
+            "ratio": 0.7611940298507462
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 900.92,
+            "source_y": 638.08,
+            "canonical_span": [
+              338,
+              1029
+            ],
+            "source_span": [
+              305,
+              760
+            ],
+            "ratio": 0.658465991316932
+          }
+        ],
+        "common_ratio": 0.7345212765957447,
+        "initial_roi_locator_only_visible_height_ratio": 0.759927797833935,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.1560111530260784,
+        "visual_confirmation": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "9966b464fb99bf93889ae260ddf9eed1670184cb5779f1edde0c416780837e6d",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_record_sha256": "9d0c4390dccb99452e86651679c9f9957915d42c0bd324dbbf39ba261d20c64c"
+    },
+    {
+      "id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "3817f289947db9da8d3dfced56f2d5f8345848ec685ea50c94fcdb53f4cc8a9b",
+      "reference_height_px": 825.3379179331307,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "086fa945e03d1fb3ec1a5d270563adfe7939a5f3cb97745d386f1eea682aa8fa",
+          "bytes": 1179218,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1108.0,
+        "reference_frame_id": "aha",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 302.6,
+            "source_y": 197.60000000000002,
+            "canonical_span": [
+              225,
+              1025
+            ],
+            "source_span": [
+              98,
+              688
+            ],
+            "ratio": 0.7375
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 413.4,
+            "source_y": 279.9,
+            "canonical_span": [
+              295,
+              953
+            ],
+            "source_span": [
+              145,
+              640
+            ],
+            "ratio": 0.7522796352583586
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 767.96,
+            "source_y": 543.26,
+            "canonical_span": [
+              370,
+              839
+            ],
+            "source_span": [
+              171,
+              541
+            ],
+            "ratio": 0.7889125799573561
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 900.92,
+            "source_y": 642.02,
+            "canonical_span": [
+              338,
+              1029
+            ],
+            "source_span": [
+              233,
+              691
+            ],
+            "ratio": 0.662807525325615
+          }
+        ],
+        "common_ratio": 0.7448898176291794,
+        "initial_roi_locator_only_visible_height_ratio": 0.7427797833935018,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.190258936136535,
+        "visual_confirmation": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "9966b464fb99bf93889ae260ddf9eed1670184cb5779f1edde0c416780837e6d",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+      "generation_record_sha256": "4c66ef3d4679f11d8f513b1ed5d65e95216f3a8469fee4759da388c6149bcac8"
+    },
+    {
+      "id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "c8e525ac9b3fe8191028fbe28e05aa66f55ee7811f4bbfe50b41e4b946d8d3b5",
+      "reference_height_px": 783.108235607676,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "086fa945e03d1fb3ec1a5d270563adfe7939a5f3cb97745d386f1eea682aa8fa",
+          "bytes": 1179218,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1108.0,
+        "reference_frame_id": "cheer",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 302.6,
+            "source_y": 189.0,
+            "canonical_span": [
+              225,
+              1025
+            ],
+            "source_span": [
+              152,
+              737
+            ],
+            "ratio": 0.73125
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 413.4,
+            "source_y": 272.0,
+            "canonical_span": [
+              295,
+              953
+            ],
+            "source_span": [
+              201,
+              688
+            ],
+            "ratio": 0.7401215805471124
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 767.96,
+            "source_y": 537.6,
+            "canonical_span": [
+              370,
+              839
+            ],
+            "source_span": [
+              282,
+              602
+            ],
+            "ratio": 0.6823027718550106
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 900.92,
+            "source_y": 637.1999999999999,
+            "canonical_span": [
+              338,
+              1029
+            ],
+            "source_span": [
+              287,
+              729
+            ],
+            "ratio": 0.6396526772793053
+          }
+        ],
+        "common_ratio": 0.7067763859275054,
+        "initial_roi_locator_only_visible_height_ratio": 0.7490974729241877,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.1570679008100786,
+        "visual_confirmation": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "9966b464fb99bf93889ae260ddf9eed1670184cb5779f1edde0c416780837e6d",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_record_sha256": "4f7f41b6e0cad744564807c2797b183c5731948fc8fca9851ff8258de46f4a34"
+    },
+    {
+      "id": "species_b-single-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/species_b-single-v001.png",
+      "source_sheet_sha256": "f0ac35e9f33823b97cfe9b6ef6ced2059dbec1fa8ad87f7d6a18bc248d2a596d",
+      "reference_height_px": 1115.6722264437692,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "086fa945e03d1fb3ec1a5d270563adfe7939a5f3cb97745d386f1eea682aa8fa",
+          "bytes": 1179218,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1108.0,
+        "reference_frame_id": "species_b",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 302.6,
+            "source_y": 305.40000000000003,
+            "canonical_span": [
+              225,
+              1025
+            ],
+            "source_span": [
+              190,
+              995
+            ],
+            "ratio": 1.00625
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 413.4,
+            "source_y": 418.6,
+            "canonical_span": [
+              295,
+              953
+            ],
+            "source_span": [
+              262,
+              925
+            ],
+            "ratio": 1.0075987841945289
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 767.96,
+            "source_y": 780.8400000000001,
+            "canonical_span": [
+              370,
+              839
+            ],
+            "source_span": [
+              331,
+              808
+            ],
+            "ratio": 1.0170575692963753
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 900.92,
+            "source_y": 916.6800000000001,
+            "canonical_span": [
+              338,
+              1029
+            ],
+            "source_span": [
+              299,
+              839
+            ],
+            "ratio": 0.7814761215629522
+          }
+        ],
+        "common_ratio": 1.0069243920972646,
+        "initial_roi_locator_only_visible_height_ratio": 1.0216606498194947,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.301457000710732,
+        "visual_confirmation": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "9966b464fb99bf93889ae260ddf9eed1670184cb5779f1edde0c416780837e6d",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+      "generation_record_sha256": "97391a9a5c81eafee18db1fab098d4c5eb8e40753e9a888d5e7031ea16b5126d"
+    },
+    {
+      "id": "blink-single-v002",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/blink-single-v002.png",
+      "source_sheet_sha256": "a010eee025c6fdc469fc2416f9c6e796cbebc041247643bfc1a19f67fe75a0e9",
+      "reference_height_px": 1110.0231819625276,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "086fa945e03d1fb3ec1a5d270563adfe7939a5f3cb97745d386f1eea682aa8fa",
+          "bytes": 1179218,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1108.0,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 302.6,
+            "source_y": 301.6,
+            "canonical_span": [
+              225,
+              1025
+            ],
+            "source_span": [
+              222,
+              1025
+            ],
+            "ratio": 1.00375
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 413.4,
+            "source_y": 412.9,
+            "canonical_span": [
+              295,
+              953
+            ],
+            "source_span": [
+              293,
+              952
+            ],
+            "ratio": 1.0015197568389058
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 767.96,
+            "source_y": 769.0600000000001,
+            "canonical_span": [
+              370,
+              839
+            ],
+            "source_span": [
+              369,
+              839
+            ],
+            "ratio": 1.0021321961620469
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 900.92,
+            "source_y": 902.62,
+            "canonical_span": [
+              338,
+              1029
+            ],
+            "source_span": [
+              337,
+              1029
+            ],
+            "ratio": 1.0014471780028944
+          }
+        ],
+        "common_ratio": 1.0018259765004762,
+        "initial_roi_locator_only_visible_height_ratio": 1.0045126353790614,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.002299494219653,
+        "visual_confirmation": {
+          "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "9966b464fb99bf93889ae260ddf9eed1670184cb5779f1edde0c416780837e6d",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_record_sha256": "52fccbc3c70b625144bbc96ffd8abd8f948afacf3deb8e42f99c2b0753263cf9"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "086fa945e03d1fb3ec1a5d270563adfe7939a5f3cb97745d386f1eea682aa8fa",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        220.0,
+        81.0,
+        1029.0,
+        1189.0
+      ],
+      "anchor_px": [
+        599.0,
+        1185.0
+      ],
+      "reference_height_px": 1108.0,
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+      "anchor_basis": "Midpoint of the two standing paw sole contacts beneath upright torso; side white-tipped tail is excluded from support.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_manifest": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "0e5fcbd6a657721df82205ecb34b7d3378acd3d7887ea078c5bb6079f8a4048e",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "086fa945e03d1fb3ec1a5d270563adfe7939a5f3cb97745d386f1eea682aa8fa",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/frames/blink-v002.png",
+      "sha256": "c571171c0a57b5ac0150ea9572cdfdad8cedf4cb10d14d33d6db455df2306251",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "visible": [
+        216,
+        79,
+        1050,
+        1192
+      ],
+      "sheet_id": "blink-single-v002",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/blink-single-v002.png",
+      "source_sheet_sha256": "a010eee025c6fdc469fc2416f9c6e796cbebc041247643bfc1a19f67fe75a0e9",
+      "body_bbox_px": [
+        216,
+        79,
+        1029,
+        1192
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        216,
+        79,
+        1050,
+        1192
+      ],
+      "reference_height_px": 1110.0231819625276,
+      "anchor_px": [
+        598.7554779295015,
+        1187.9926960939981
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        595.75,
+        1192
+      ],
+      "sole_points": [
+        [
+          490.0,
+          1192
+        ],
+        [
+          701.5,
+          1192
+        ]
+      ],
+      "sole_regions": [
+        [
+          408,
+          992,
+          590,
+          1194
+        ],
+        [
+          609,
+          992,
+          789,
+          1194
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        216,
+        79,
+        1050,
+        1192
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "82253e6ccf36b093314ee7224ff9c62fc497facaf5ada4a7d3f47b33a81d8624",
+      "size_px": [
+        887,
+        887
+      ],
+      "visible": [
+        113,
+        20,
+        759,
+        869
+      ],
+      "sheet_id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "a96fa9ac4fef0cf9856e478120f5a6191b5d555660fc9e814b983be705e3f276",
+      "body_bbox_px": [
+        113,
+        20,
+        733,
+        869
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        113,
+        20,
+        759,
+        869
+      ],
+      "reference_height_px": 825.9540701881333,
+      "anchor_px": [
+        425.48633773516644,
+        866.0182163531115
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        423.25,
+        869
+      ],
+      "sole_points": [
+        [
+          348.0,
+          869
+        ],
+        [
+          498.5,
+          869
+        ]
+      ],
+      "sole_regions": [
+        [
+          283,
+          720,
+          416,
+          871
+        ],
+        [
+          430,
+          720,
+          562,
+          871
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        113,
+        20,
+        759,
+        869
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "b9fab547cbbb51cd1fdc84bdb840d0ee9c258fc28668529489c7008f43c5ed72",
+      "size_px": [
+        887,
+        887
+      ],
+      "visible": [
+        145,
+        15,
+        772,
+        857
+      ],
+      "sheet_id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "925038cdb55dc3248440b1211299cf66c0ae041045d659409736ae77c58d0392",
+      "body_bbox_px": [
+        145,
+        15,
+        760,
+        857
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        145,
+        15,
+        772,
+        857
+      ],
+      "reference_height_px": 813.8495744680852,
+      "anchor_px": [
+        446.45356382978724,
+        854.061914893617
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        444.25,
+        857
+      ],
+      "sole_points": [
+        [
+          367.0,
+          857
+        ],
+        [
+          521.5,
+          857
+        ]
+      ],
+      "sole_regions": [
+        [
+          303,
+          711,
+          440,
+          859
+        ],
+        [
+          453,
+          711,
+          586,
+          859
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        145,
+        15,
+        772,
+        857
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "cd136d72c8884f9f353e17fb121b3cb4769bb74c840806df45c7ce689119a14f",
+      "size_px": [
+        887,
+        887
+      ],
+      "visible": [
+        134,
+        15,
+        744,
+        857
+      ],
+      "sheet_id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "925038cdb55dc3248440b1211299cf66c0ae041045d659409736ae77c58d0392",
+      "body_bbox_px": [
+        134,
+        15,
+        749,
+        857
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        134,
+        15,
+        744,
+        857
+      ],
+      "reference_height_px": 813.8495744680852,
+      "anchor_px": [
+        438.95356382978724,
+        854.061914893617
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        436.75,
+        857
+      ],
+      "sole_points": [
+        [
+          360.0,
+          857
+        ],
+        [
+          513.5,
+          857
+        ]
+      ],
+      "sole_regions": [
+        [
+          297,
+          711,
+          431,
+          859
+        ],
+        [
+          444,
+          711,
+          579,
+          859
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        134,
+        15,
+        744,
+        857
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        900,
+        887
+      ],
+      "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "529b48eb9a46599fc7a43f5e5fd82f2405289c77c77bc0798f05b292f3cd6f5e",
+      "size_px": [
+        900,
+        887
+      ],
+      "visible": [
+        239,
+        13,
+        807,
+        856
+      ],
+      "sheet_id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "3817f289947db9da8d3dfced56f2d5f8345848ec685ea50c94fcdb53f4cc8a9b",
+      "body_bbox_px": [
+        239,
+        13,
+        855,
+        856
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        239,
+        13,
+        807,
+        856
+      ],
+      "reference_height_px": 825.3379179331307,
+      "anchor_px": [
+        439.48466945288754,
+        853.0204407294833
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        437.25,
+        856
+      ],
+      "sole_points": [
+        [
+          362.5,
+          856
+        ],
+        [
+          512.0,
+          856
+        ]
+      ],
+      "sole_regions": [
+        [
+          303,
+          707,
+          432,
+          858
+        ],
+        [
+          446,
+          707,
+          576,
+          858
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        239,
+        13,
+        807,
+        856
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        900,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "16b989336821bbba943d4ea8340be6938618edc1ae245fa84feab4bf0533f87d",
+      "size_px": [
+        874,
+        887
+      ],
+      "visible": [
+        95,
+        33,
+        694,
+        856
+      ],
+      "sheet_id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "3817f289947db9da8d3dfced56f2d5f8345848ec685ea50c94fcdb53f4cc8a9b",
+      "body_bbox_px": [
+        95,
+        33,
+        696,
+        856
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        95,
+        33,
+        694,
+        856
+      ],
+      "reference_height_px": 825.3379179331307,
+      "anchor_px": [
+        378.73466945288754,
+        853.0204407294833
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        376.5,
+        856
+      ],
+      "sole_points": [
+        [
+          301.5,
+          856
+        ],
+        [
+          451.5,
+          856
+        ]
+      ],
+      "sole_regions": [
+        [
+          238,
+          707,
+          371,
+          858
+        ],
+        [
+          387,
+          707,
+          519,
+          858
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        95,
+        33,
+        694,
+        856
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "993076b9b6b7f6ff07ff819a7ea2d0ed4ac21af6209442c064d1636a8f3bf8cb",
+      "size_px": [
+        887,
+        887
+      ],
+      "visible": [
+        148,
+        23,
+        740,
+        853
+      ],
+      "sheet_id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "c8e525ac9b3fe8191028fbe28e05aa66f55ee7811f4bbfe50b41e4b946d8d3b5",
+      "body_bbox_px": [
+        148,
+        23,
+        754,
+        853
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        148,
+        23,
+        740,
+        853
+      ],
+      "reference_height_px": 783.108235607676,
+      "anchor_px": [
+        430.6203291577825,
+        850.17289445629
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        428.5,
+        853
+      ],
+      "sole_points": [
+        [
+          352.5,
+          853
+        ],
+        [
+          504.5,
+          853
+        ]
+      ],
+      "sole_regions": [
+        [
+          282,
+          712,
+          421,
+          855
+        ],
+        [
+          438,
+          712,
+          572,
+          855
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        148,
+        23,
+        740,
+        853
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "e383d51411aa01fc80ae50842fc9d1794a115bd5400500db2731d6b54db5594d",
+      "size_px": [
+        887,
+        887
+      ],
+      "visible": [
+        148,
+        23,
+        765,
+        853
+      ],
+      "sheet_id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "c8e525ac9b3fe8191028fbe28e05aa66f55ee7811f4bbfe50b41e4b946d8d3b5",
+      "body_bbox_px": [
+        148,
+        23,
+        754,
+        853
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        148,
+        23,
+        765,
+        853
+      ],
+      "reference_height_px": 783.108235607676,
+      "anchor_px": [
+        430.8703291577825,
+        850.17289445629
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        428.75,
+        853
+      ],
+      "sole_points": [
+        [
+          352.0,
+          853
+        ],
+        [
+          505.5,
+          853
+        ]
+      ],
+      "sole_regions": [
+        [
+          284,
+          712,
+          421,
+          855
+        ],
+        [
+          438,
+          712,
+          572,
+          855
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        148,
+        23,
+        765,
+        853
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1199,
+        1312
+      ],
+      "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "4e982dddd98e38911cf62675252b9d460ead0da9d1e53d70d656a241ee45a0ff",
+      "size_px": [
+        1199,
+        1312
+      ],
+      "visible": [
+        185,
+        79,
+        1008,
+        1211
+      ],
+      "sheet_id": "species_b-single-v001",
+      "source_sheet": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/source/species_b-single-v001.png",
+      "source_sheet_sha256": "f0ac35e9f33823b97cfe9b6ef6ced2059dbec1fa8ad87f7d6a18bc248d2a596d",
+      "body_bbox_px": [
+        185,
+        79,
+        1012,
+        1211
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        185,
+        79,
+        1008,
+        1211
+      ],
+      "reference_height_px": 1115.6722264437692,
+      "anchor_px": [
+        566.7707731762918,
+        1206.9723024316108
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        563.75,
+        1211
+      ],
+      "sole_points": [
+        [
+          459.0,
+          1211
+        ],
+        [
+          668.5,
+          1211
+        ]
+      ],
+      "sole_regions": [
+        [
+          371,
+          1010,
+          555,
+          1213
+        ],
+        [
+          574,
+          1010,
+          759,
+          1213
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        185,
+        79,
+        1008,
+        1211
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+        "sha256": "3b983afe7047541b2fce6a65ea58ffc96bbebe1c888d358ad9aa7434d14a433f",
+        "bytes": 4313
+      },
+      {
+        "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+        "sha256": "9d0c4390dccb99452e86651679c9f9957915d42c0bd324dbbf39ba261d20c64c",
+        "bytes": 4195
+      },
+      {
+        "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+        "sha256": "4c66ef3d4679f11d8f513b1ed5d65e95216f3a8469fee4759da388c6149bcac8",
+        "bytes": 4138
+      },
+      {
+        "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+        "sha256": "4f7f41b6e0cad744564807c2797b183c5731948fc8fca9851ff8258de46f4a34",
+        "bytes": 4195
+      },
+      {
+        "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+        "sha256": "97391a9a5c81eafee18db1fab098d4c5eb8e40753e9a888d5e7031ea16b5126d",
+        "bytes": 4016
+      },
+      {
+        "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/provenance/selected-blink-single-v002-generation-v001.json",
+        "sha256": "52fccbc3c70b625144bbc96ffd8abd8f948afacf3deb8e42f99c2b0753263cf9",
+        "bytes": 3740
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/african-wild-dog/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "462cc98119b5b6e3d2b080593dff93fecdb716fa52f884faf4bbaa3a60d30655",
+      "bytes": 8638
+    }
+  ]
+}

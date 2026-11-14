@@ -1,0 +1,628 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "brent-goose",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-a-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/brent-goose/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "8d2e4557fd4c8f336a6e423b9bea5a028a28a9ce8730c4d7363631d04490871c",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      355,
+      324,
+      851,
+      976
+    ],
+    "anchor_px": [
+      574,
+      965
+    ],
+    "reference_height_px": 652,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Visual midpoint of the two small webbed support feet; bill and short tail excluded from body width.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/brent-goose/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "47f5ccf7b2f7a81e1e8a69b433ad117df32a50e20e72668b9bcd33f3ac658280"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "8d2e4557fd4c8f336a6e423b9bea5a028a28a9ce8730c4d7363631d04490871c",
+      "reference_height_px": 652,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "84c2b56b5402d0507f334e0535e5439fecd062e0bf3837cf5a7376c4c6f0496e",
+      "reference_height_px": 326.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "canonical_reference_px": 652,
+            "sheet_body_crown_to_foot_height_px_approx": 326.0,
+            "observation": "Native head width and cranial top-to-neck and body-to-sole proportions inspected jointly across canonical and sheet; original paper grain is intended. Ear tufts (owl), projecting bills, tails and spread wings do not increase body scale. Single shared ratio preserves intentional nod/tilt."
+          }
+        ],
+        "common_ratio": 0.5,
+        "canonical_reference_height_px": 652,
+        "canonical_source": {
+          "path": "assets/library/characters/brent-goose/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "8d2e4557fd4c8f336a6e423b9bea5a028a28a9ce8730c4d7363631d04490871c",
+          "bytes": 460446,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manually checked canonical and native sheet anatomy; same head/body scale across nine poses. No per-pose bbox normalization."
+      },
+      "generation_input": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "dc39d32e006225eda87767416d2228d1ad66cde3d9337d31e53194d890db3297"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/brent-goose/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "8d2e4557fd4c8f336a6e423b9bea5a028a28a9ce8730c4d7363631d04490871c",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        355,
+        324,
+        851,
+        976
+      ],
+      "anchor_px": [
+        574,
+        965
+      ],
+      "reference_height_px": 652,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Visual midpoint of the two small webbed support feet; bill and short tail excluded from body width.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/brent-goose/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "47f5ccf7b2f7a81e1e8a69b433ad117df32a50e20e72668b9bcd33f3ac658280",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "8d2e4557fd4c8f336a6e423b9bea5a028a28a9ce8730c4d7363631d04490871c",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/poses/blink-v001.png",
+      "sha256": "2cbf328a543add6c06bde890a30c647b2bd686dd83fcd0b849e5d3e28700dbe9",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "body_bbox_px": [
+        93,
+        34,
+        343,
+        365
+      ],
+      "anchor_px": [
+        218.391,
+        359.5
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "subject_bbox_px": [
+        80,
+        34,
+        363,
+        365
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the actual paired feet in bottom eight native rows, located within feet-only ROI; y is sole interior corresponding to canonical foot interior. Wing and tail extensions do not set scale.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "reference_height_px": 326.0,
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "84c2b56b5402d0507f334e0535e5439fecd062e0bf3837cf5a7376c4c6f0496e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/poses/greet-v001.png",
+      "sha256": "f116d857044187e8a625c4e3bbb58761a6e0763427db082cdcba3b6d0e70070a",
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "body_bbox_px": [
+        80,
+        29,
+        330,
+        364
+      ],
+      "anchor_px": [
+        204.533,
+        358.5
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "subject_bbox_px": [
+        77,
+        29,
+        347,
+        364
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the actual paired feet in bottom eight native rows, located within feet-only ROI; y is sole interior corresponding to canonical foot interior. Wing and tail extensions do not set scale.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "reference_height_px": 326.0,
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "84c2b56b5402d0507f334e0535e5439fecd062e0bf3837cf5a7376c4c6f0496e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/poses/present_left-v001.png",
+      "sha256": "d6e2bc21eeb5c74cb694ff5d284dad8b7bdef3a3a1507055df4e75fb515cf1a5",
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "body_bbox_px": [
+        89,
+        32,
+        339,
+        363
+      ],
+      "anchor_px": [
+        214.49,
+        357.5
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "subject_bbox_px": [
+        33,
+        32,
+        356,
+        363
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the actual paired feet in bottom eight native rows, located within feet-only ROI; y is sole interior corresponding to canonical foot interior. Wing and tail extensions do not set scale.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "reference_height_px": 326.0,
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "84c2b56b5402d0507f334e0535e5439fecd062e0bf3837cf5a7376c4c6f0496e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/poses/present_right-v001.png",
+      "sha256": "9ca039668f9aeb60e08d17df7e5bef811358167c4428c761c2cde18635d11ea0",
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "body_bbox_px": [
+        89,
+        27,
+        339,
+        361
+      ],
+      "anchor_px": [
+        213.845,
+        355.5
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "subject_bbox_px": [
+        99,
+        27,
+        357,
+        361
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the actual paired feet in bottom eight native rows, located within feet-only ROI; y is sole interior corresponding to canonical foot interior. Wing and tail extensions do not set scale.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "reference_height_px": 326.0,
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "84c2b56b5402d0507f334e0535e5439fecd062e0bf3837cf5a7376c4c6f0496e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/poses/think-v001.png",
+      "sha256": "d186eb85aa15722d797816a499098682399b2c7fc324a0d31aedf4724870135c",
+      "crop_from_sheet_xyxy": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "body_bbox_px": [
+        88,
+        37,
+        338,
+        361
+      ],
+      "anchor_px": [
+        213.092,
+        355.5
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "subject_bbox_px": [
+        65,
+        37,
+        360,
+        361
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the actual paired feet in bottom eight native rows, located within feet-only ROI; y is sole interior corresponding to canonical foot interior. Wing and tail extensions do not set scale.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "reference_height_px": 326.0,
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "84c2b56b5402d0507f334e0535e5439fecd062e0bf3837cf5a7376c4c6f0496e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/poses/aha-v001.png",
+      "sha256": "9d5d4ff233c38b7c09d013daa2f7c1bd835238e60326c3fb269ee2971dfddf30",
+      "crop_from_sheet_xyxy": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "body_bbox_px": [
+        100,
+        24,
+        350,
+        364
+      ],
+      "anchor_px": [
+        225.227,
+        358.5
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "subject_bbox_px": [
+        65,
+        24,
+        356,
+        364
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the actual paired feet in bottom eight native rows, located within feet-only ROI; y is sole interior corresponding to canonical foot interior. Wing and tail extensions do not set scale.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "reference_height_px": 326.0,
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "84c2b56b5402d0507f334e0535e5439fecd062e0bf3837cf5a7376c4c6f0496e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/poses/cheer-v001.png",
+      "sha256": "35c9caded514dc643867d31d6d83be5765516b66a9f116b9c57923bb1aa411fc",
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "body_bbox_px": [
+        95,
+        25,
+        345,
+        366
+      ],
+      "anchor_px": [
+        220.203,
+        360.5
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "subject_bbox_px": [
+        69,
+        25,
+        366,
+        366
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the actual paired feet in bottom eight native rows, located within feet-only ROI; y is sole interior corresponding to canonical foot interior. Wing and tail extensions do not set scale.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "reference_height_px": 326.0,
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "84c2b56b5402d0507f334e0535e5439fecd062e0bf3837cf5a7376c4c6f0496e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/poses/species_a-v001.png",
+      "sha256": "ad0f6b2ed2c4066882c1068205d523e9fd63264311c9c7a93a0db46814d341cb",
+      "crop_from_sheet_xyxy": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "body_bbox_px": [
+        76,
+        26,
+        326,
+        368
+      ],
+      "anchor_px": [
+        201.32,
+        362.5
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "subject_bbox_px": [
+        62,
+        26,
+        349,
+        368
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the actual paired feet in bottom eight native rows, located within feet-only ROI; y is sole interior corresponding to canonical foot interior. Wing and tail extensions do not set scale.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "reference_height_px": 326.0,
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "84c2b56b5402d0507f334e0535e5439fecd062e0bf3837cf5a7376c4c6f0496e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/poses/species_b-v001.png",
+      "sha256": "3dc2ed1c4c91103c73c951444442740305de573fb04e54e9c3842d6e78df3e47",
+      "crop_from_sheet_xyxy": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        73,
+        25,
+        323,
+        369
+      ],
+      "anchor_px": [
+        198.287,
+        363.5
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "subject_bbox_px": [
+        61,
+        25,
+        351,
+        369
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the actual paired feet in bottom eight native rows, located within feet-only ROI; y is sole interior corresponding to canonical foot interior. Wing and tail extensions do not set scale.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "reference_height_px": 326.0,
+      "source_sheet": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "84c2b56b5402d0507f334e0535e5439fecd062e0bf3837cf5a7376c4c6f0496e",
+      "size_px": [
+        418,
+        418
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        180,
+        180,
+        180
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        450,
+        450,
+        450,
+        450
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        350,
+        350
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "dc39d32e006225eda87767416d2228d1ad66cde3d9337d31e53194d890db3297",
+        "bytes": 5773
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/brent-goose/generation-batches/youtube-core-20261114-a-v001/qa/stock-adoption-v001.json",
+      "sha256": "5b030fea45c108c08bb76f6fd27ef244e6f2158377f7c81ec068712bc5d9544d",
+      "bytes": 7681
+    }
+  ]
+}

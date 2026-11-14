@@ -1,0 +1,1261 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "dama-gazelle",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/dama-gazelle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "c701832027833fbed2a2570051b473fba39135ee1f06db1a966704d3b7445843",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      253.0,
+      147.0,
+      1002.0,
+      1200.0
+    ],
+    "anchor_px": [
+      625.0,
+      1196.0
+    ],
+    "reference_height_px": 1053.0,
+    "anchor_kind": "anatomical_feet_support",
+    "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+    "anchor_basis": "Body reference excludes horn extension; paired short hoof contacts supply the registered foot support.",
+    "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+    "source_manifest": "assets/library/characters/dama-gazelle/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "9e8fef1d79bb5d80335247dfdf5e5408f462a4559dbd1a48960651a4786222f0"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "c701832027833fbed2a2570051b473fba39135ee1f06db1a966704d3b7445843",
+      "reference_height_px": 1053.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "trio-01-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v002.png",
+      "source_sheet_sha256": "b3ec362c519eadf919ad36a2ecbe752c2ec1f52706ed379cc8666f31057b170a",
+      "reference_height_px": 609.3587121595626,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/dama-gazelle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "c701832027833fbed2a2570051b473fba39135ee1f06db1a966704d3b7445843",
+          "bytes": 963411,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1053.0,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 357.6,
+            "source_y": 194.81732283464567,
+            "canonical_span": [
+              302,
+              953
+            ],
+            "source_span": [
+              187,
+              545
+            ],
+            "ratio": 0.5499231950844854
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 462.9,
+            "source_y": 256.7259842519685,
+            "canonical_span": [
+              330,
+              911
+            ],
+            "source_span": [
+              195,
+              532
+            ],
+            "ratio": 0.5800344234079173
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 799.86,
+            "source_y": 454.8337007874016,
+            "canonical_span": [
+              413,
+              829
+            ],
+            "source_span": [
+              236,
+              491
+            ],
+            "ratio": 0.6129807692307693
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 926.22,
+            "source_y": 529.124094488189,
+            "canonical_span": [
+              391,
+              850
+            ],
+            "source_span": [
+              231,
+              496
+            ],
+            "ratio": 0.5773420479302832
+          }
+        ],
+        "common_ratio": 0.5786882356691003,
+        "initial_roi_locator_only_visible_height_ratio": 0.5879265091863517,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.114666147400086,
+        "visual_confirmation": {
+          "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "76a176ab131178cbf0374e90fb72b2e9e020c13f610033917c6117daa55b2889",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v002-generation-v001.json",
+      "generation_record_sha256": "f37a43ca1b1ba0c5c63e34d3ba6e67e451ecfd282ea283eff1d9fa860b2c0285"
+    },
+    {
+      "id": "trio-02-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v002.png",
+      "source_sheet_sha256": "0e76731190e9fe7e22b5380bf897933f7a96d5811db5100b1e585ef6dd968e34",
+      "reference_height_px": 609.4975527108434,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/dama-gazelle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "c701832027833fbed2a2570051b473fba39135ee1f06db1a966704d3b7445843",
+          "bytes": 963411,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1053.0,
+        "reference_frame_id": "aha",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 357.6,
+            "source_y": 201.08031496062995,
+            "canonical_span": [
+              302,
+              953
+            ],
+            "source_span": [
+              161,
+              545
+            ],
+            "ratio": 0.5898617511520737
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 462.9,
+            "source_y": 262.62047244094487,
+            "canonical_span": [
+              330,
+              911
+            ],
+            "source_span": [
+              179,
+              515
+            ],
+            "ratio": 0.5783132530120482
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 799.86,
+            "source_y": 459.5489763779528,
+            "canonical_span": [
+              413,
+              829
+            ],
+            "source_span": [
+              222,
+              463
+            ],
+            "ratio": 0.5793269230769231
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 926.22,
+            "source_y": 533.3971653543308,
+            "canonical_span": [
+              391,
+              850
+            ],
+            "source_span": [
+              215,
+              460
+            ],
+            "ratio": 0.5337690631808278
+          }
+        ],
+        "common_ratio": 0.5788200880444856,
+        "initial_roi_locator_only_visible_height_ratio": 0.584426946631671,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.105087933791028,
+        "visual_confirmation": {
+          "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "76a176ab131178cbf0374e90fb72b2e9e020c13f610033917c6117daa55b2889",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v002-generation-v001.json",
+      "generation_record_sha256": "7f743ac95eaa20da72d6ec3e7b2850904f1c68540c1b88981cef5bd400942e84"
+    },
+    {
+      "id": "trio-03-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v002.png",
+      "source_sheet_sha256": "ddb41449a01fed6d1c125ed77d03fd5a2abc25adb3de45add0450a235aa90f2c",
+      "reference_height_px": 571.670395869191,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/dama-gazelle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "c701832027833fbed2a2570051b473fba39135ee1f06db1a966704d3b7445843",
+          "bytes": 963411,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1053.0,
+        "reference_frame_id": "cheer",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 357.6,
+            "source_y": 197.26456692913388,
+            "canonical_span": [
+              302,
+              953
+            ],
+            "source_span": [
+              192,
+              565
+            ],
+            "ratio": 0.5729646697388633
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 462.9,
+            "source_y": 258.8968503937008,
+            "canonical_span": [
+              330,
+              911
+            ],
+            "source_span": [
+              219,
+              537
+            ],
+            "ratio": 0.5473321858864028
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 799.86,
+            "source_y": 456.120157480315,
+            "canonical_span": [
+              413,
+              829
+            ],
+            "source_span": [
+              266,
+              490
+            ],
+            "ratio": 0.5384615384615384
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 926.22,
+            "source_y": 530.0788976377953,
+            "canonical_span": [
+              391,
+              850
+            ],
+            "source_span": [
+              269,
+              484
+            ],
+            "ratio": 0.4684095860566449
+          }
+        ],
+        "common_ratio": 0.5428968621739706,
+        "initial_roi_locator_only_visible_height_ratio": 0.5853018372703412,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.2232129460936663,
+        "visual_confirmation": {
+          "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "76a176ab131178cbf0374e90fb72b2e9e020c13f610033917c6117daa55b2889",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v002-generation-v001.json",
+      "generation_record_sha256": "bb7cf2786102e057cbf17421e82ed69fa261d8a9d7d8d78a52d785fa21257c4b"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/dama-gazelle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "c701832027833fbed2a2570051b473fba39135ee1f06db1a966704d3b7445843",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        253.0,
+        147.0,
+        1002.0,
+        1200.0
+      ],
+      "anchor_px": [
+        625.0,
+        1196.0
+      ],
+      "reference_height_px": 1053.0,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Body reference excludes horn extension; paired short hoof contacts supply the registered foot support.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "source_manifest": "assets/library/characters/dama-gazelle/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "9e8fef1d79bb5d80335247dfdf5e5408f462a4559dbd1a48960651a4786222f0",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "c701832027833fbed2a2570051b473fba39135ee1f06db1a966704d3b7445843",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/frames/blink-v002.png",
+      "sha256": "d98112295220d6b727ba1362046297646576e6ee5c1e52dcb850160d64c1ddb0",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        159,
+        18,
+        572,
+        690
+      ],
+      "sheet_id": "trio-01-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v002.png",
+      "source_sheet_sha256": "b3ec362c519eadf919ad36a2ecbe752c2ec1f52706ed379cc8666f31057b170a",
+      "body_bbox_px": [
+        159,
+        71,
+        599,
+        690
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        159,
+        18,
+        572,
+        690
+      ],
+      "reference_height_px": 609.3587121595626,
+      "anchor_px": [
+        366.68278529618004,
+        687.6852470573236
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        363.5,
+        690
+      ],
+      "sole_points": [
+        [
+          309.5,
+          690
+        ],
+        [
+          417.5,
+          690
+        ]
+      ],
+      "sole_regions": [
+        [
+          268,
+          580,
+          354,
+          692
+        ],
+        [
+          372,
+          580,
+          458,
+          692
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        159,
+        18,
+        572,
+        690
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/frames/greet-v002.png",
+      "sha256": "e88b05b3ff1dc8a0f7c8698cda658b58ac66f394639c23d1d8c5ec0d616708c9",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        159,
+        18,
+        572,
+        690
+      ],
+      "sheet_id": "trio-01-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v002.png",
+      "source_sheet_sha256": "b3ec362c519eadf919ad36a2ecbe752c2ec1f52706ed379cc8666f31057b170a",
+      "body_bbox_px": [
+        159,
+        71,
+        599,
+        690
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        159,
+        18,
+        572,
+        690
+      ],
+      "reference_height_px": 609.3587121595626,
+      "anchor_px": [
+        366.93278529618004,
+        687.6852470573236
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        363.75,
+        690
+      ],
+      "sole_points": [
+        [
+          310.0,
+          690
+        ],
+        [
+          417.5,
+          690
+        ]
+      ],
+      "sole_regions": [
+        [
+          269,
+          580,
+          354,
+          692
+        ],
+        [
+          373,
+          580,
+          459,
+          692
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        159,
+        18,
+        572,
+        690
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/frames/present_left-v002.png",
+      "sha256": "1781aaa835f7b19addc7c8f19be78b3de432a9d96a44204f22450b654069f882",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        158,
+        18,
+        571,
+        690
+      ],
+      "sheet_id": "trio-01-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v002.png",
+      "source_sheet_sha256": "b3ec362c519eadf919ad36a2ecbe752c2ec1f52706ed379cc8666f31057b170a",
+      "body_bbox_px": [
+        158,
+        71,
+        598,
+        690
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        158,
+        18,
+        571,
+        690
+      ],
+      "reference_height_px": 609.3587121595626,
+      "anchor_px": [
+        367.68278529618004,
+        687.6852470573236
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        364.5,
+        690
+      ],
+      "sole_points": [
+        [
+          311.0,
+          690
+        ],
+        [
+          418.0,
+          690
+        ]
+      ],
+      "sole_regions": [
+        [
+          270,
+          580,
+          355,
+          692
+        ],
+        [
+          374,
+          580,
+          459,
+          692
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        158,
+        18,
+        571,
+        690
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/frames/present_right-v002.png",
+      "sha256": "b9aa77ebe604b5cc0cbaf14faf6c21bd043a4d4e8c53ddb0d6d0bb4f1f1f41dd",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        171,
+        17,
+        579,
+        693
+      ],
+      "sheet_id": "trio-02-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v002.png",
+      "source_sheet_sha256": "0e76731190e9fe7e22b5380bf897933f7a96d5811db5100b1e585ef6dd968e34",
+      "body_bbox_px": [
+        171,
+        70,
+        614,
+        693
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        171,
+        17,
+        579,
+        693
+      ],
+      "reference_height_px": 609.4975527108434,
+      "anchor_px": [
+        378.43351048424466,
+        690.684719647822
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        375.25,
+        693
+      ],
+      "sole_points": [
+        [
+          320.0,
+          693
+        ],
+        [
+          430.5,
+          693
+        ]
+      ],
+      "sole_regions": [
+        [
+          279,
+          583,
+          367,
+          695
+        ],
+        [
+          384,
+          583,
+          472,
+          695
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        171,
+        17,
+        579,
+        693
+      ]
+    },
+    {
+      "id": "think",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/frames/think-v002.png",
+      "sha256": "1a65db99d182c1ad09d921b250fcc2e14fdb8bc7b9362b44077def27368e1bcc",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        112,
+        10,
+        527,
+        694
+      ],
+      "sheet_id": "trio-02-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v002.png",
+      "source_sheet_sha256": "0e76731190e9fe7e22b5380bf897933f7a96d5811db5100b1e585ef6dd968e34",
+      "body_bbox_px": [
+        112,
+        64,
+        560,
+        694
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        112,
+        10,
+        527,
+        694
+      ],
+      "reference_height_px": 609.4975527108434,
+      "anchor_px": [
+        379.18351048424466,
+        691.684719647822
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        376.0,
+        694
+      ],
+      "sole_points": [
+        [
+          319.5,
+          694
+        ],
+        [
+          432.5,
+          694
+        ]
+      ],
+      "sole_regions": [
+        [
+          278,
+          584,
+          368,
+          696
+        ],
+        [
+          386,
+          584,
+          475,
+          696
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        112,
+        10,
+        527,
+        694
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/frames/aha-v002.png",
+      "sha256": "77e7ed3ad9efc0e05d87e83bbe30b66a6166555d298ef192ff74ee47a57863b8",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        143,
+        25,
+        563,
+        693
+      ],
+      "sheet_id": "trio-02-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v002.png",
+      "source_sheet_sha256": "0e76731190e9fe7e22b5380bf897933f7a96d5811db5100b1e585ef6dd968e34",
+      "body_bbox_px": [
+        143,
+        78,
+        581,
+        693
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        143,
+        25,
+        563,
+        693
+      ],
+      "reference_height_px": 609.4975527108434,
+      "anchor_px": [
+        348.43351048424466,
+        690.684719647822
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        345.25,
+        693
+      ],
+      "sole_points": [
+        [
+          291.0,
+          693
+        ],
+        [
+          399.5,
+          693
+        ]
+      ],
+      "sole_regions": [
+        [
+          249,
+          583,
+          337,
+          695
+        ],
+        [
+          353,
+          583,
+          441,
+          695
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        143,
+        25,
+        563,
+        693
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/frames/cheer-v002.png",
+      "sha256": "9d71764c386dd9ba6ed45e5122de5d9c11e777770ebd448741c724e8d4cbba75",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        181,
+        21,
+        578,
+        690
+      ],
+      "sheet_id": "trio-03-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v002.png",
+      "source_sheet_sha256": "ddb41449a01fed6d1c125ed77d03fd5a2abc25adb3de45add0450a235aa90f2c",
+      "body_bbox_px": [
+        181,
+        74,
+        619,
+        690
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        181,
+        21,
+        578,
+        690
+      ],
+      "reference_height_px": 571.670395869191,
+      "anchor_px": [
+        378.73593274195684,
+        687.8284125513042
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        375.75,
+        690
+      ],
+      "sole_points": [
+        [
+          323.0,
+          690
+        ],
+        [
+          428.5,
+          690
+        ]
+      ],
+      "sole_regions": [
+        [
+          282,
+          587,
+          367,
+          692
+        ],
+        [
+          384,
+          587,
+          471,
+          692
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        181,
+        21,
+        578,
+        690
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/frames/species_a-v002.png",
+      "sha256": "c1e31bf7c86bd0f9f543d616e0ff5a0cb6085d45f2225b3db60c8820cc96c1c7",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        107,
+        20,
+        607,
+        691
+      ],
+      "sheet_id": "trio-03-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v002.png",
+      "source_sheet_sha256": "ddb41449a01fed6d1c125ed77d03fd5a2abc25adb3de45add0450a235aa90f2c",
+      "body_bbox_px": [
+        107,
+        73,
+        547,
+        691
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        107,
+        20,
+        607,
+        691
+      ],
+      "reference_height_px": 571.670395869191,
+      "anchor_px": [
+        363.73593274195684,
+        688.8284125513042
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        360.75,
+        691
+      ],
+      "sole_points": [
+        [
+          303.5,
+          691
+        ],
+        [
+          418.0,
+          691
+        ]
+      ],
+      "sole_regions": [
+        [
+          261,
+          588,
+          351,
+          693
+        ],
+        [
+          373,
+          588,
+          462,
+          693
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        107,
+        20,
+        607,
+        691
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/frames/species_b-v002.png",
+      "sha256": "06c5cf3fe021e0a7733485cf28a89fe9d7f543dd06eba2ca40b8d1638668058a",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        136,
+        21,
+        553,
+        691
+      ],
+      "sheet_id": "trio-03-v002",
+      "source_sheet": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v002.png",
+      "source_sheet_sha256": "ddb41449a01fed6d1c125ed77d03fd5a2abc25adb3de45add0450a235aa90f2c",
+      "body_bbox_px": [
+        136,
+        74,
+        575,
+        691
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        136,
+        21,
+        553,
+        691
+      ],
+      "reference_height_px": 571.670395869191,
+      "anchor_px": [
+        349.23593274195684,
+        688.8284125513042
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        346.25,
+        691
+      ],
+      "sole_points": [
+        [
+          291.5,
+          691
+        ],
+        [
+          401.0,
+          691
+        ]
+      ],
+      "sole_regions": [
+        [
+          250,
+          588,
+          336,
+          693
+        ],
+        [
+          356,
+          588,
+          443,
+          693
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        136,
+        21,
+        553,
+        691
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v002-generation-v001.json",
+        "sha256": "f37a43ca1b1ba0c5c63e34d3ba6e67e451ecfd282ea283eff1d9fa860b2c0285",
+        "bytes": 4581
+      },
+      {
+        "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v002-generation-v001.json",
+        "sha256": "7f743ac95eaa20da72d6ec3e7b2850904f1c68540c1b88981cef5bd400942e84",
+        "bytes": 4469
+      },
+      {
+        "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v002-generation-v001.json",
+        "sha256": "bb7cf2786102e057cbf17421e82ed69fa261d8a9d7d8d78a52d785fa21257c4b",
+        "bytes": 4500
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/dama-gazelle/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "30ef22395489805b324e43155452d09023fece881e48bf8307c67fc4fdae33a7",
+      "bytes": 8777
+    }
+  ]
+}

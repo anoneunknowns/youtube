@@ -1,0 +1,827 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "ishikawa-frog",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-c-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/ishikawa-frog/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "d7db36a90538b27a923e7c0ae8910842b671f2c40bf322a8c67f227b5d136df8",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      268,
+      148,
+      976,
+      1158
+    ],
+    "anchor_px": [
+      621,
+      1151
+    ],
+    "reference_height_px": 1010,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of the two broad drawn short-foot support regions. Entire upright head-to-foot body used as reference.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/ishikawa-frog/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "4bb48a8c5640a5d1b70b96cbc7ce9e6e00f3ccbca849f0541a26ba9d07f015c4"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "d7db36a90538b27a923e7c0ae8910842b671f2c40bf322a8c67f227b5d136df8",
+      "reference_height_px": 1010,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "1d6d0e32cd51a19d29ea7cae6499557e0fd15f63f5b86f0cbf91e1c313148021",
+      "reference_height_px": 362.96875,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/ishikawa-frog/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "d7db36a90538b27a923e7c0ae8910842b671f2c40bf322a8c67f227b5d136df8",
+          "bytes": 1068644,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1010,
+        "landmarks": [
+          {
+            "name": "upper-head-width",
+            "canonical_y": 350,
+            "source_y": 81,
+            "canonical_span_px": [
+              311,
+              936
+            ],
+            "source_span_px": [
+              113,
+              333
+            ],
+            "ratio": 0.352,
+            "used_for_scale": true
+          },
+          {
+            "name": "mid-head-width",
+            "canonical_y": 450,
+            "source_y": 117,
+            "canonical_span_px": [
+              270,
+              974
+            ],
+            "source_span_px": [
+              96,
+              349
+            ],
+            "ratio": 0.359375,
+            "used_for_scale": true
+          },
+          {
+            "name": "lower-head-width",
+            "canonical_y": 550,
+            "source_y": 153,
+            "canonical_span_px": [
+              303,
+              942
+            ],
+            "source_span_px": [
+              104,
+              341
+            ],
+            "ratio": 0.37089201877934275,
+            "used_for_scale": true
+          }
+        ],
+        "common_ratio": 0.359375,
+        "reference_height_px": 362.96875,
+        "crosscheck": "Whole head/body reference1010, upperhead148→10 andfoot1158→373 implyfactor~0.3594; sourcehead spans at3matching levels transfercommonfactor. Intentional species crouch not bbox-normalized.",
+        "method": "Explicit corresponding anatomical head spans, median shared source-sheet scale; torso/feet crosschecked on actual same-scale diagnostics, never per-pose fit.",
+        "canonical_paired_sole_points_px": [
+          [
+            506.0,
+            1157
+          ],
+          [
+            762.0,
+            1157
+          ]
+        ],
+        "canonical_source_foot_point_px": [
+          634.0,
+          1157
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -13.0,
+          -6
+        ],
+        "scope": "Approximate anatomical registration, not subpixel motion acceptance."
+      },
+      "generation_input": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "2f4fbe74ba54259899481563acc6c24ecd03f69c10fdd646917fe288af043ed4"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "d7db36a90538b27a923e7c0ae8910842b671f2c40bf322a8c67f227b5d136df8",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        268,
+        148,
+        976,
+        1158
+      ],
+      "anchor_px": [
+        621,
+        1151
+      ],
+      "reference_height_px": 1010,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of the two broad drawn short-foot support regions. Entire upright head-to-foot body used as reference.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/ishikawa-frog/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "4bb48a8c5640a5d1b70b96cbc7ce9e6e00f3ccbca849f0541a26ba9d07f015c4",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "d7db36a90538b27a923e7c0ae8910842b671f2c40bf322a8c67f227b5d136df8",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/frames/blink-v002.png",
+      "sha256": "29d3cc299f9b00178a77199d0aa44bc87ce32fa0cc7720f02cf0a5ebc451b3e0",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        400
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        98,
+        10,
+        352,
+        374
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        96,
+        10,
+        350,
+        374
+      ],
+      "anchor_px": [
+        220.078125,
+        370.84375
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        224.75,
+        373
+      ],
+      "paired_sole_points_px": [
+        [
+          183.0,
+          373
+        ],
+        [
+          266.5,
+          373
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 362.96875,
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "1d6d0e32cd51a19d29ea7cae6499557e0fd15f63f5b86f0cbf91e1c313148021",
+      "size_px": [
+        418,
+        400
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/frames/greet-v002.png",
+      "sha256": "2213e40d2f8a89e479c5e264402c7d4a3ec358e67ea8035c019bc4c044212e5c",
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        400
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        75,
+        10,
+        329,
+        374
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        57,
+        10,
+        330,
+        374
+      ],
+      "anchor_px": [
+        197.578125,
+        370.84375
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        202.25,
+        373
+      ],
+      "paired_sole_points_px": [
+        [
+          158.0,
+          373
+        ],
+        [
+          246.5,
+          373
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 362.96875,
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "1d6d0e32cd51a19d29ea7cae6499557e0fd15f63f5b86f0cbf91e1c313148021",
+      "size_px": [
+        418,
+        400
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/frames/present_left-v002.png",
+      "sha256": "39ed57136015ee29bf6ab65999f2383368d6bd3d3ee95dc58494e51f338d43e1",
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        400
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        60,
+        10,
+        315,
+        374
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        20,
+        11,
+        315,
+        374
+      ],
+      "anchor_px": [
+        182.828125,
+        370.84375
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        187.5,
+        373
+      ],
+      "paired_sole_points_px": [
+        [
+          143.0,
+          373
+        ],
+        [
+          232.0,
+          373
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 362.96875,
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "1d6d0e32cd51a19d29ea7cae6499557e0fd15f63f5b86f0cbf91e1c313148021",
+      "size_px": [
+        418,
+        400
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/frames/present_right-v002.png",
+      "sha256": "539b1913c23188a9c9b5b623ae21ddee3ee7bbfa850bfc82409c0ffa585744bf",
+      "crop_from_sheet_xyxy": [
+        0,
+        400,
+        418,
+        820
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        89,
+        27,
+        343,
+        391
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        89,
+        25,
+        376,
+        391
+      ],
+      "anchor_px": [
+        211.328125,
+        387.84375
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        216.0,
+        390
+      ],
+      "paired_sole_points_px": [
+        [
+          172.0,
+          390
+        ],
+        [
+          260.0,
+          390
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 362.96875,
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "1d6d0e32cd51a19d29ea7cae6499557e0fd15f63f5b86f0cbf91e1c313148021",
+      "size_px": [
+        418,
+        420
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/frames/think-v002.png",
+      "sha256": "ee7df64eac2fbb8ce591982b160fde465480edf608c546482f4d696db11526a0",
+      "crop_from_sheet_xyxy": [
+        418,
+        400,
+        836,
+        820
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        75,
+        27,
+        330,
+        391
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        78,
+        15,
+        330,
+        391
+      ],
+      "anchor_px": [
+        197.828125,
+        387.84375
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        202.5,
+        390
+      ],
+      "paired_sole_points_px": [
+        [
+          157.0,
+          390
+        ],
+        [
+          248.0,
+          390
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 362.96875,
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "1d6d0e32cd51a19d29ea7cae6499557e0fd15f63f5b86f0cbf91e1c313148021",
+      "size_px": [
+        418,
+        420
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/frames/aha-v002.png",
+      "sha256": "e55b2f2ff9a78fcb8ac24643788154f1f2a16647a623af00cc8a598b0815ed10",
+      "crop_from_sheet_xyxy": [
+        836,
+        400,
+        1254,
+        820
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        51,
+        27,
+        305,
+        391
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        58,
+        26,
+        310,
+        391
+      ],
+      "anchor_px": [
+        173.078125,
+        387.84375
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        177.75,
+        390
+      ],
+      "paired_sole_points_px": [
+        [
+          136.5,
+          390
+        ],
+        [
+          219.0,
+          390
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 362.96875,
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "1d6d0e32cd51a19d29ea7cae6499557e0fd15f63f5b86f0cbf91e1c313148021",
+      "size_px": [
+        418,
+        420
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/frames/cheer-v002.png",
+      "sha256": "26ebc619f5d235294eed54480122095a6f6b7ed0035ef28471786ca534c29097",
+      "crop_from_sheet_xyxy": [
+        0,
+        820,
+        418,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        95,
+        32,
+        349,
+        396
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        93,
+        22,
+        350,
+        396
+      ],
+      "anchor_px": [
+        217.078125,
+        392.84375
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        221.75,
+        395
+      ],
+      "paired_sole_points_px": [
+        [
+          176.5,
+          395
+        ],
+        [
+          267.0,
+          395
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 362.96875,
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "1d6d0e32cd51a19d29ea7cae6499557e0fd15f63f5b86f0cbf91e1c313148021",
+      "size_px": [
+        418,
+        434
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/frames/species_a-v002.png",
+      "sha256": "18b704319c1df9ae54a5af1085a78ef2ca01ec94c850d95e9aa0fd9c226d4450",
+      "crop_from_sheet_xyxy": [
+        418,
+        820,
+        836,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        71,
+        31,
+        325,
+        395
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        70,
+        44,
+        329,
+        395
+      ],
+      "anchor_px": [
+        193.328125,
+        391.84375
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        198.0,
+        394
+      ],
+      "paired_sole_points_px": [
+        [
+          149.5,
+          394
+        ],
+        [
+          246.5,
+          394
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 362.96875,
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "1d6d0e32cd51a19d29ea7cae6499557e0fd15f63f5b86f0cbf91e1c313148021",
+      "size_px": [
+        418,
+        434
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/frames/species_b-v002.png",
+      "sha256": "675385ac690bbb3abaf424b946fd965c3a6fbf96f539c1467c4e4f9da9d3610d",
+      "crop_from_sheet_xyxy": [
+        836,
+        820,
+        1254,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        56,
+        31,
+        310,
+        395
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        53,
+        32,
+        312,
+        395
+      ],
+      "anchor_px": [
+        178.078125,
+        391.84375
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        182.75,
+        394
+      ],
+      "paired_sole_points_px": [
+        [
+          135.0,
+          394
+        ],
+        [
+          230.5,
+          394
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 362.96875,
+      "source_sheet": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "1d6d0e32cd51a19d29ea7cae6499557e0fd15f63f5b86f0cbf91e1c313148021",
+      "size_px": [
+        418,
+        434
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "2f4fbe74ba54259899481563acc6c24ecd03f69c10fdd646917fe288af043ed4",
+        "bytes": 5268
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/ishikawa-frog/generation-batches/youtube-core-20261114-c-v001/qa/stock-adoption-v001.json",
+      "sha256": "73cd4922831769315deaa7ec28eaa8bf400dd36d9c4c68be6796f57f90b8296b",
+      "bytes": 7780
+    }
+  ]
+}

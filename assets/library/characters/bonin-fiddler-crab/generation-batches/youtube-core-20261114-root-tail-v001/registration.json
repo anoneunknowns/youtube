@@ -1,0 +1,2524 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "bonin-fiddler-crab",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-root-tail-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+    "sha256": "40f55b318240d66449681440238b6f7a9189a0d38286a795e92da0c8b21d9045",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      347,
+      562,
+      866,
+      900
+    ],
+    "anchor_px": [
+      598,
+      976
+    ],
+    "reference_height_px": 338,
+    "anchor_kind": "anatomical-walking-leg-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Visual midpoint at the lowest supporting walking-leg tip regions. Body reference is shell height, excluding stalk eyes, both claw arms and walking legs.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "a074918949279fcb291e3508edabfa215a4513360c423a6bd4eb530632ae00f9"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+      "source_sheet_sha256": "40f55b318240d66449681440238b6f7a9189a0d38286a795e92da0c8b21d9045",
+      "reference_height_px": 338,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "split-a-v001",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "bce3c5d273add2e87d6bdba4aa29ae26bb2a1ecf223afe1a00f5990abc8957ae",
+      "reference_height_px": 204.152,
+      "calibration": {
+        "method": "Median of three independently located head/shell/trunk anatomical spans; one source-wide isotropic reference, never fit individual frame or whole alpha bounds.",
+        "neutral_reference": {
+          "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+          "sha256": "40f55b318240d66449681440238b6f7a9189a0d38286a795e92da0c8b21d9045",
+          "bytes": 847614,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 338,
+        "reference_frame_id": "blink",
+        "source_reference_body_roi_px": [
+          326,
+          192,
+          642,
+          396
+        ],
+        "canonical_body_roi_px": [
+          347,
+          562,
+          866,
+          900
+        ],
+        "landmarks": [
+          {
+            "name": "Shell equatorial width, no claws/eyes/legs",
+            "ratio": 0.6088631984585742,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans; several-pixel contour uncertainty. Common source scale, no individual full-alpha fit.",
+            "canonical_span_px": 519,
+            "source_span_px": 316,
+            "canonical_endpoints_px": [
+              [
+                347,
+                730
+              ],
+              [
+                866,
+                730
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                326,
+                300
+              ],
+              [
+                642,
+                300
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                326,
+                300
+              ],
+              [
+                642,
+                300
+              ]
+            ]
+          },
+          {
+            "name": "Shell vertical height, no eye stalks or legs",
+            "ratio": 0.6035502958579881,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans; several-pixel contour uncertainty. Common source scale, no individual full-alpha fit.",
+            "canonical_span_px": 338,
+            "source_span_px": 204,
+            "canonical_endpoints_px": [
+              [
+                600,
+                562
+              ],
+              [
+                600,
+                900
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                480,
+                192
+              ],
+              [
+                480,
+                396
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                480,
+                192
+              ],
+              [
+                480,
+                396
+              ]
+            ]
+          },
+          {
+            "name": "Shell upper/mid cross-section, independent contour check",
+            "ratio": 0.604,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans; several-pixel contour uncertainty. Common source scale, no individual full-alpha fit.",
+            "canonical_span_px": 500,
+            "source_span_px": 302,
+            "canonical_endpoints_px": [
+              [
+                356,
+                730
+              ],
+              [
+                856,
+                730
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                332,
+                300
+              ],
+              [
+                634,
+                300
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                332,
+                300
+              ],
+              [
+                634,
+                300
+              ]
+            ]
+          }
+        ],
+        "common_ratio": 0.604,
+        "reference_height_px": 204.152,
+        "landmark_ratio_spread": 1.0088027503872454,
+        "needs_visual_confirmation": false,
+        "canonical_projected_support": {
+          "points": [
+            [
+              188.5,
+              883
+            ],
+            [
+              249.0,
+              949
+            ],
+            [
+              334.5,
+              976
+            ],
+            [
+              430.5,
+              983
+            ],
+            [
+              763.0,
+              977
+            ],
+            [
+              859.5,
+              972
+            ],
+            [
+              939.5,
+              946
+            ],
+            [
+              1002.0,
+              882
+            ]
+          ],
+          "regions": [
+            [
+              168,
+              731,
+              215,
+              983
+            ],
+            [
+              230,
+              731,
+              277,
+              983
+            ],
+            [
+              308,
+              731,
+              355,
+              983
+            ],
+            [
+              407,
+              731,
+              453,
+              983
+            ],
+            [
+              760,
+              731,
+              806,
+              983
+            ],
+            [
+              858,
+              731,
+              905,
+              983
+            ],
+            [
+              936,
+              731,
+              983,
+              983
+            ],
+            [
+              998,
+              731,
+              1045,
+              983
+            ]
+          ],
+          "point": [
+            595.8125,
+            983
+          ],
+          "offset_to_adopted_anchor_px": [
+            2.1875,
+            -7
+          ]
+        },
+        "scope": "B producer approximate native anatomical registration; final max-scale/neighbor confirmation required.",
+        "visual_confirmation": {
+          "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "59d240e1152badaa48f133630c2ff505527f3936ec7f37000452227323c11dad"
+        }
+      },
+      "generation_input": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-a-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-a-v001-generation-v001.json",
+      "generation_record_sha256": "22abf8d6eaef44e327e5feed6d03353a5c3a98d029fe3127292e45e233143570"
+    },
+    {
+      "id": "split-b-v001",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "9a93a56a1a4faf79db334596ec37f694f732148fd5cfdaf6fd8c732c21855d96",
+      "reference_height_px": 215.0,
+      "calibration": {
+        "method": "Median of three independently located head/shell/trunk anatomical spans; one source-wide isotropic reference, never fit individual frame or whole alpha bounds.",
+        "neutral_reference": {
+          "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+          "sha256": "40f55b318240d66449681440238b6f7a9189a0d38286a795e92da0c8b21d9045",
+          "bytes": 847614,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 338,
+        "reference_frame_id": "present_right",
+        "source_reference_body_roi_px": [
+          318,
+          201,
+          651,
+          416
+        ],
+        "canonical_body_roi_px": [
+          347,
+          562,
+          866,
+          900
+        ],
+        "landmarks": [
+          {
+            "name": "Shell equatorial width, no claws/eyes/legs",
+            "ratio": 0.6416184971098265,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans; several-pixel contour uncertainty. Common source scale, no individual full-alpha fit.",
+            "canonical_span_px": 519,
+            "source_span_px": 333,
+            "canonical_endpoints_px": [
+              [
+                347,
+                730
+              ],
+              [
+                866,
+                730
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                318,
+                300
+              ],
+              [
+                651,
+                300
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                318,
+                300
+              ],
+              [
+                651,
+                300
+              ]
+            ]
+          },
+          {
+            "name": "Shell vertical height, no eye stalks or legs",
+            "ratio": 0.636094674556213,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans; several-pixel contour uncertainty. Common source scale, no individual full-alpha fit.",
+            "canonical_span_px": 338,
+            "source_span_px": 215,
+            "canonical_endpoints_px": [
+              [
+                600,
+                562
+              ],
+              [
+                600,
+                900
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                480,
+                201
+              ],
+              [
+                480,
+                416
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                480,
+                201
+              ],
+              [
+                480,
+                416
+              ]
+            ]
+          },
+          {
+            "name": "Shell upper/mid cross-section, independent contour check",
+            "ratio": 0.636,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans; several-pixel contour uncertainty. Common source scale, no individual full-alpha fit.",
+            "canonical_span_px": 500,
+            "source_span_px": 318,
+            "canonical_endpoints_px": [
+              [
+                356,
+                730
+              ],
+              [
+                856,
+                730
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                324,
+                310
+              ],
+              [
+                642,
+                310
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                324,
+                310
+              ],
+              [
+                642,
+                310
+              ]
+            ]
+          }
+        ],
+        "common_ratio": 0.636094674556213,
+        "reference_height_px": 215.0,
+        "landmark_ratio_spread": 1.0088341149525575,
+        "needs_visual_confirmation": false,
+        "canonical_projected_support": {
+          "points": [
+            [
+              188.5,
+              883
+            ],
+            [
+              249.0,
+              949
+            ],
+            [
+              334.5,
+              976
+            ],
+            [
+              430.5,
+              983
+            ],
+            [
+              763.0,
+              977
+            ],
+            [
+              859.5,
+              972
+            ],
+            [
+              939.5,
+              946
+            ],
+            [
+              1002.0,
+              882
+            ]
+          ],
+          "regions": [
+            [
+              168,
+              731,
+              215,
+              983
+            ],
+            [
+              230,
+              731,
+              277,
+              983
+            ],
+            [
+              308,
+              731,
+              355,
+              983
+            ],
+            [
+              407,
+              731,
+              453,
+              983
+            ],
+            [
+              760,
+              731,
+              806,
+              983
+            ],
+            [
+              858,
+              731,
+              905,
+              983
+            ],
+            [
+              936,
+              731,
+              983,
+              983
+            ],
+            [
+              998,
+              731,
+              1045,
+              983
+            ]
+          ],
+          "point": [
+            595.8125,
+            983
+          ],
+          "offset_to_adopted_anchor_px": [
+            2.1875,
+            -7
+          ]
+        },
+        "scope": "B producer approximate native anatomical registration; final max-scale/neighbor confirmation required.",
+        "visual_confirmation": {
+          "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "59d240e1152badaa48f133630c2ff505527f3936ec7f37000452227323c11dad"
+        }
+      },
+      "generation_input": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-b-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-b-v001-generation-v001.json",
+      "generation_record_sha256": "1e65fb4d57c9640423759c734d5fad2ac8d9663d4843e4fa43407235505aed65"
+    },
+    {
+      "id": "split-c-v001",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "1210087e56fd3073a9ba379abe06a702c0702ded523c5a22cf07d580b6103be2",
+      "reference_height_px": 209.05202312138726,
+      "calibration": {
+        "method": "Median of three independently located head/shell/trunk anatomical spans; one source-wide isotropic reference, never fit individual frame or whole alpha bounds.",
+        "neutral_reference": {
+          "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+          "sha256": "40f55b318240d66449681440238b6f7a9189a0d38286a795e92da0c8b21d9045",
+          "bytes": 847614,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 338,
+        "reference_frame_id": "cheer",
+        "source_reference_body_roi_px": [
+          318,
+          202,
+          639,
+          420
+        ],
+        "canonical_body_roi_px": [
+          347,
+          562,
+          866,
+          900
+        ],
+        "landmarks": [
+          {
+            "name": "Shell equatorial width, no claws/eyes/legs",
+            "ratio": 0.6184971098265896,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans; several-pixel contour uncertainty. Common source scale, no individual full-alpha fit.",
+            "canonical_span_px": 519,
+            "source_span_px": 321,
+            "canonical_endpoints_px": [
+              [
+                347,
+                730
+              ],
+              [
+                866,
+                730
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                318,
+                310
+              ],
+              [
+                639,
+                310
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                318,
+                310
+              ],
+              [
+                639,
+                310
+              ]
+            ]
+          },
+          {
+            "name": "Shell vertical height, no eye stalks or legs",
+            "ratio": 0.6449704142011834,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans; several-pixel contour uncertainty. Common source scale, no individual full-alpha fit.",
+            "canonical_span_px": 338,
+            "source_span_px": 218,
+            "canonical_endpoints_px": [
+              [
+                600,
+                562
+              ],
+              [
+                600,
+                900
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                480,
+                202
+              ],
+              [
+                480,
+                420
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                480,
+                202
+              ],
+              [
+                480,
+                420
+              ]
+            ]
+          },
+          {
+            "name": "Shell upper/mid cross-section, independent contour check",
+            "ratio": 0.618,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans; several-pixel contour uncertainty. Common source scale, no individual full-alpha fit.",
+            "canonical_span_px": 500,
+            "source_span_px": 309,
+            "canonical_endpoints_px": [
+              [
+                356,
+                730
+              ],
+              [
+                856,
+                730
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                324,
+                310
+              ],
+              [
+                633,
+                310
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                324,
+                310
+              ],
+              [
+                633,
+                310
+              ]
+            ]
+          }
+        ],
+        "common_ratio": 0.6184971098265896,
+        "reference_height_px": 209.05202312138726,
+        "landmark_ratio_spread": 1.0436414469274813,
+        "needs_visual_confirmation": false,
+        "canonical_projected_support": {
+          "points": [
+            [
+              188.5,
+              883
+            ],
+            [
+              249.0,
+              949
+            ],
+            [
+              334.5,
+              976
+            ],
+            [
+              430.5,
+              983
+            ],
+            [
+              763.0,
+              977
+            ],
+            [
+              859.5,
+              972
+            ],
+            [
+              939.5,
+              946
+            ],
+            [
+              1002.0,
+              882
+            ]
+          ],
+          "regions": [
+            [
+              168,
+              731,
+              215,
+              983
+            ],
+            [
+              230,
+              731,
+              277,
+              983
+            ],
+            [
+              308,
+              731,
+              355,
+              983
+            ],
+            [
+              407,
+              731,
+              453,
+              983
+            ],
+            [
+              760,
+              731,
+              806,
+              983
+            ],
+            [
+              858,
+              731,
+              905,
+              983
+            ],
+            [
+              936,
+              731,
+              983,
+              983
+            ],
+            [
+              998,
+              731,
+              1045,
+              983
+            ]
+          ],
+          "point": [
+            595.8125,
+            983
+          ],
+          "offset_to_adopted_anchor_px": [
+            2.1875,
+            -7
+          ]
+        },
+        "scope": "B producer approximate native anatomical registration; final max-scale/neighbor confirmation required.",
+        "visual_confirmation": {
+          "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "59d240e1152badaa48f133630c2ff505527f3936ec7f37000452227323c11dad"
+        }
+      },
+      "generation_input": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-c-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-c-v001-generation-v001.json",
+      "generation_record_sha256": "3d90e01dfd5661af6b42e141f91115ce816f14adac537bf7918d91bcba2c7798"
+    },
+    {
+      "id": "blink-single-v002",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/blink-single-v002.png",
+      "source_sheet_sha256": "d41a046fe7a1b1846302f8d4f3b85f7799083e8fc3407c2899e9e2f44c13526a",
+      "reference_height_px": 333.16155419222906,
+      "calibration": {
+        "method": "Median of three corresponding anatomical shell spans; single-source scale independent of eye/claw extrema. Other eight frame geometry unchanged.",
+        "landmarks": [
+          {
+            "name": "Shell equatorial width, no claws or eyes",
+            "canonical_endpoints_px": [
+              [
+                347,
+                700
+              ],
+              [
+                866,
+                700
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                344,
+                700
+              ],
+              [
+                855,
+                700
+              ]
+            ],
+            "canonical_span_px": 519,
+            "source_span_px": 511,
+            "ratio": 0.9845857418111753,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans using labeled pixel-grid diagnostic; several-pixel uncertainty. Not a full-alpha or individual-pose fit."
+          },
+          {
+            "name": "Shell vertical contour below stalk roots, no feet",
+            "canonical_endpoints_px": [
+              [
+                600,
+                563
+              ],
+              [
+                600,
+                893
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                600,
+                562
+              ],
+              [
+                600,
+                893
+              ]
+            ],
+            "canonical_span_px": 330,
+            "source_span_px": 331,
+            "ratio": 1.003030303030303,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans using labeled pixel-grid diagnostic; several-pixel uncertainty. Not a full-alpha or individual-pose fit."
+          },
+          {
+            "name": "Mid/lower-shell cross-section at750, no walking legs",
+            "canonical_endpoints_px": [
+              [
+                361,
+                750
+              ],
+              [
+                850,
+                750
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                359,
+                750
+              ],
+              [
+                841,
+                750
+              ]
+            ],
+            "canonical_span_px": 489,
+            "source_span_px": 482,
+            "ratio": 0.9856850715746421,
+            "used_for_scale": true,
+            "measurement": "Approximate native visually read corresponding shell spans using labeled pixel-grid diagnostic; several-pixel uncertainty. Not a full-alpha or individual-pose fit."
+          }
+        ],
+        "common_ratio": 0.9856850715746421,
+        "canonical_reference_height_px": 338,
+        "reference_height_px": 333.16155419222906,
+        "reference_frame_id": "blink",
+        "source_reference_body_roi_px": [
+          344,
+          562,
+          855,
+          893
+        ],
+        "canonical_body_roi_px": [
+          347,
+          562,
+          866,
+          900
+        ],
+        "canonical_projected_support": {
+          "points": [
+            [
+              188.5,
+              883
+            ],
+            [
+              249.0,
+              949
+            ],
+            [
+              334.5,
+              976
+            ],
+            [
+              430.5,
+              983
+            ],
+            [
+              763.0,
+              977
+            ],
+            [
+              859.5,
+              972
+            ],
+            [
+              939.5,
+              946
+            ],
+            [
+              1002.0,
+              882
+            ]
+          ],
+          "regions": [
+            [
+              168,
+              731,
+              215,
+              983
+            ],
+            [
+              230,
+              731,
+              277,
+              983
+            ],
+            [
+              308,
+              731,
+              355,
+              983
+            ],
+            [
+              407,
+              731,
+              453,
+              983
+            ],
+            [
+              760,
+              731,
+              806,
+              983
+            ],
+            [
+              858,
+              731,
+              905,
+              983
+            ],
+            [
+              936,
+              731,
+              983,
+              983
+            ],
+            [
+              998,
+              731,
+              1045,
+              983
+            ]
+          ],
+          "point": [
+            595.8125,
+            983
+          ],
+          "offset_to_adopted_anchor_px": [
+            2.1875,
+            -7
+          ]
+        },
+        "landmark_grid": {
+          "path": ".work/youtube-stock-20261114-v001/independent-b/root-tail-registration/bonin-fiddler-crab/shell-landmark-grid-v002.png",
+          "sha256": "92579ab911ce4c86f2f5401c5cc445147b26a57fedecac436b28d0d7d1f18734"
+        },
+        "needs_visual_confirmation": false,
+        "visual_confirmation": {
+          "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "59d240e1152badaa48f133630c2ff505527f3936ec7f37000452227323c11dad"
+        }
+      },
+      "generation_input": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_record_sha256": "fc58c3725162ea4508c317a4d559ef685c619db7e2a79c645030e1668a67c2d0"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+      "sha256": "40f55b318240d66449681440238b6f7a9189a0d38286a795e92da0c8b21d9045",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        347,
+        562,
+        866,
+        900
+      ],
+      "anchor_px": [
+        598,
+        976
+      ],
+      "reference_height_px": 338,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Visual midpoint at the lowest supporting walking-leg tip regions. Body reference is shell height, excluding stalk eyes, both claw arms and walking legs.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "a074918949279fcb291e3508edabfa215a4513360c423a6bd4eb530632ae00f9",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+      "source_sheet_sha256": "40f55b318240d66449681440238b6f7a9189a0d38286a795e92da0c8b21d9045",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "blink-single-v002",
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink-single-v002.png",
+      "sha256": "d41a046fe7a1b1846302f8d4f3b85f7799083e8fc3407c2899e9e2f44c13526a",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "full_visible_alpha8_bbox_px": [
+        169,
+        291,
+        1145,
+        984
+      ],
+      "visible_margin_px": [
+        212,
+        17,
+        197,
+        32
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        344,
+        562,
+        855,
+        893
+      ],
+      "subject_bbox_px": [
+        169,
+        291,
+        1145,
+        984
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 333.16155419222906,
+      "anchor_px": [
+        594.4061860940695,
+        977.1002044989775
+      ],
+      "anchor_kind": "anatomical-walking-leg-support",
+      "source_foot_point_px": [
+        592.25,
+        984
+      ],
+      "sole_points": [
+        [
+          189.0,
+          885
+        ],
+        [
+          250.0,
+          950
+        ],
+        [
+          334.5,
+          979
+        ],
+        [
+          430.0,
+          984
+        ],
+        [
+          753.5,
+          983
+        ],
+        [
+          851.0,
+          979
+        ],
+        [
+          933.0,
+          949
+        ],
+        [
+          997.0,
+          885
+        ]
+      ],
+      "sole_regions": [
+        [
+          168,
+          728,
+          214,
+          887
+        ],
+        [
+          229,
+          728,
+          275,
+          952
+        ],
+        [
+          306,
+          728,
+          352,
+          981
+        ],
+        [
+          403,
+          728,
+          449,
+          986
+        ],
+        [
+          750,
+          728,
+          796,
+          985
+        ],
+        [
+          847,
+          728,
+          893,
+          981
+        ],
+        [
+          924,
+          728,
+          970,
+          951
+        ],
+        [
+          985,
+          728,
+          1031,
+          887
+        ]
+      ],
+      "anchor_measurement": "Approximate native shell-grid landmarks plus measured alpha8 walking-tip ROIs; source unmodified.",
+      "anchor_basis": "Four observed native walking-leg-tip bands on each side, same canonical mean-x/lowest-y support and projection offset as old eight poses. New shell anatomical scale uses three corresponding spans; no pincer/eye/canvas/full-alpha fit.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/blink-single-v002.png",
+      "source_sheet_sha256": "d41a046fe7a1b1846302f8d4f3b85f7799083e8fc3407c2899e9e2f44c13526a"
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "sheet_id": "split-a-v001",
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/greet.png",
+      "sha256": "bf39b29d327f61f7f278d7fe7738504c25c6092d8e756f33847c385ffd800f22",
+      "size_px": [
+        1024,
+        512
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        496,
+        1024,
+        1008
+      ],
+      "full_visible_alpha8_bbox_px": [
+        212,
+        32,
+        829,
+        479
+      ],
+      "visible_margin_px": [
+        212,
+        32,
+        195,
+        33
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        326,
+        207,
+        642,
+        411
+      ],
+      "subject_bbox_px": [
+        212,
+        32,
+        829,
+        479
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 204.152,
+      "anchor_px": [
+        485.50875,
+        474.772
+      ],
+      "anchor_kind": "anatomical-walking-leg-support",
+      "source_foot_point_px": [
+        484.1875,
+        479
+      ],
+      "sole_points": [
+        [
+          227.5,
+          410
+        ],
+        [
+          268.0,
+          451
+        ],
+        [
+          321.0,
+          472
+        ],
+        [
+          382.0,
+          478
+        ],
+        [
+          584.5,
+          479
+        ],
+        [
+          649.0,
+          474
+        ],
+        [
+          701.0,
+          455
+        ],
+        [
+          740.5,
+          410
+        ]
+      ],
+      "sole_regions": [
+        [
+          217,
+          309,
+          245,
+          479
+        ],
+        [
+          255,
+          309,
+          283,
+          479
+        ],
+        [
+          302,
+          309,
+          331,
+          479
+        ],
+        [
+          362,
+          309,
+          391,
+          479
+        ],
+        [
+          577,
+          309,
+          606,
+          479
+        ],
+        [
+          637,
+          309,
+          666,
+          479
+        ],
+        [
+          685,
+          309,
+          713,
+          479
+        ],
+        [
+          723,
+          309,
+          751,
+          479
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "bce3c5d273add2e87d6bdba4aa29ae26bb2a1ecf223afe1a00f5990abc8957ae"
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "sheet_id": "split-a-v001",
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_left.png",
+      "sha256": "30a0a948abc60ecbf735d4050f7315416a8d54f44bd2c2b03d905ca5484c6055",
+      "size_px": [
+        1024,
+        528
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        1008,
+        1024,
+        1536
+      ],
+      "full_visible_alpha8_bbox_px": [
+        167,
+        34,
+        830,
+        479
+      ],
+      "visible_margin_px": [
+        167,
+        34,
+        194,
+        49
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        326,
+        207,
+        642,
+        411
+      ],
+      "subject_bbox_px": [
+        167,
+        34,
+        830,
+        479
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 204.152,
+      "anchor_px": [
+        485.63375,
+        474.772
+      ],
+      "anchor_kind": "anatomical-walking-leg-support",
+      "source_foot_point_px": [
+        484.3125,
+        479
+      ],
+      "sole_points": [
+        [
+          227.0,
+          411
+        ],
+        [
+          268.0,
+          452
+        ],
+        [
+          321.0,
+          472
+        ],
+        [
+          380.5,
+          477
+        ],
+        [
+          586.0,
+          479
+        ],
+        [
+          650.0,
+          475
+        ],
+        [
+          701.0,
+          454
+        ],
+        [
+          741.0,
+          410
+        ]
+      ],
+      "sole_regions": [
+        [
+          217,
+          309,
+          245,
+          479
+        ],
+        [
+          255,
+          309,
+          283,
+          479
+        ],
+        [
+          302,
+          309,
+          331,
+          479
+        ],
+        [
+          362,
+          309,
+          391,
+          479
+        ],
+        [
+          577,
+          309,
+          606,
+          479
+        ],
+        [
+          637,
+          309,
+          666,
+          479
+        ],
+        [
+          685,
+          309,
+          713,
+          479
+        ],
+        [
+          723,
+          309,
+          751,
+          479
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "bce3c5d273add2e87d6bdba4aa29ae26bb2a1ecf223afe1a00f5990abc8957ae"
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "sheet_id": "split-b-v001",
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+      "sha256": "ef2df5142d8ae032202f7e39998f69e8483416a225f6f5e07106a6020918268b",
+      "size_px": [
+        1024,
+        502
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1024,
+        502
+      ],
+      "full_visible_alpha8_bbox_px": [
+        201,
+        18,
+        847,
+        481
+      ],
+      "visible_margin_px": [
+        201,
+        18,
+        177,
+        21
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        318,
+        201,
+        651,
+        416
+      ],
+      "subject_bbox_px": [
+        201,
+        18,
+        847,
+        481
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 215.0,
+      "anchor_px": [
+        483.7039571005917,
+        476.5473372781065
+      ],
+      "anchor_kind": "anatomical-walking-leg-support",
+      "source_foot_point_px": [
+        482.3125,
+        481
+      ],
+      "sole_points": [
+        [
+          217.5,
+          416
+        ],
+        [
+          258.0,
+          457
+        ],
+        [
+          312.5,
+          477
+        ],
+        [
+          376.0,
+          481
+        ],
+        [
+          588.0,
+          481
+        ],
+        [
+          653.5,
+          477
+        ],
+        [
+          707.0,
+          457
+        ],
+        [
+          746.0,
+          411
+        ]
+      ],
+      "sole_regions": [
+        [
+          203,
+          308,
+          233,
+          481
+        ],
+        [
+          243,
+          308,
+          273,
+          481
+        ],
+        [
+          293,
+          308,
+          323,
+          481
+        ],
+        [
+          356,
+          308,
+          386,
+          481
+        ],
+        [
+          583,
+          308,
+          613,
+          481
+        ],
+        [
+          646,
+          308,
+          676,
+          481
+        ],
+        [
+          696,
+          308,
+          726,
+          481
+        ],
+        [
+          736,
+          308,
+          766,
+          481
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "9a93a56a1a4faf79db334596ec37f694f732148fd5cfdaf6fd8c732c21855d96"
+    },
+    {
+      "id": "think",
+      "index": 1,
+      "sheet_id": "split-b-v001",
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/think.png",
+      "sha256": "c11ccc6c511c16bfb7a4ecd4091e9acc10fbb4705dc8b66f0de74defb83ec6bc",
+      "size_px": [
+        1024,
+        499
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        502,
+        1024,
+        1001
+      ],
+      "full_visible_alpha8_bbox_px": [
+        200,
+        22,
+        847,
+        476
+      ],
+      "visible_margin_px": [
+        200,
+        22,
+        177,
+        23
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        318,
+        196,
+        651,
+        411
+      ],
+      "subject_bbox_px": [
+        200,
+        22,
+        847,
+        476
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 215.0,
+      "anchor_px": [
+        483.5164571005917,
+        471.5473372781065
+      ],
+      "anchor_kind": "anatomical-walking-leg-support",
+      "source_foot_point_px": [
+        482.125,
+        476
+      ],
+      "sole_points": [
+        [
+          217.0,
+          411
+        ],
+        [
+          258.0,
+          453
+        ],
+        [
+          312.5,
+          472
+        ],
+        [
+          375.5,
+          476
+        ],
+        [
+          588.5,
+          476
+        ],
+        [
+          653.0,
+          473
+        ],
+        [
+          706.5,
+          451
+        ],
+        [
+          746.0,
+          406
+        ]
+      ],
+      "sole_regions": [
+        [
+          203,
+          304,
+          233,
+          476
+        ],
+        [
+          243,
+          304,
+          273,
+          476
+        ],
+        [
+          293,
+          304,
+          323,
+          476
+        ],
+        [
+          356,
+          304,
+          386,
+          476
+        ],
+        [
+          583,
+          304,
+          613,
+          476
+        ],
+        [
+          646,
+          304,
+          676,
+          476
+        ],
+        [
+          696,
+          304,
+          726,
+          476
+        ],
+        [
+          736,
+          304,
+          766,
+          476
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "9a93a56a1a4faf79db334596ec37f694f732148fd5cfdaf6fd8c732c21855d96"
+    },
+    {
+      "id": "aha",
+      "index": 2,
+      "sheet_id": "split-b-v001",
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/aha.png",
+      "sha256": "abc794c5a6b9bc7ee805ebfc0d9421bef22e045168eaca829d8c1019c8d2be1c",
+      "size_px": [
+        1024,
+        535
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        1001,
+        1024,
+        1536
+      ],
+      "full_visible_alpha8_bbox_px": [
+        201,
+        24,
+        847,
+        488
+      ],
+      "visible_margin_px": [
+        201,
+        24,
+        177,
+        47
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        318,
+        208,
+        651,
+        423
+      ],
+      "subject_bbox_px": [
+        201,
+        24,
+        847,
+        488
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 215.0,
+      "anchor_px": [
+        483.7039571005917,
+        483.5473372781065
+      ],
+      "anchor_kind": "anatomical-walking-leg-support",
+      "source_foot_point_px": [
+        482.3125,
+        488
+      ],
+      "sole_points": [
+        [
+          217.0,
+          422
+        ],
+        [
+          258.0,
+          465
+        ],
+        [
+          312.0,
+          484
+        ],
+        [
+          376.0,
+          488
+        ],
+        [
+          589.0,
+          488
+        ],
+        [
+          653.0,
+          485
+        ],
+        [
+          707.5,
+          464
+        ],
+        [
+          746.0,
+          419
+        ]
+      ],
+      "sole_regions": [
+        [
+          203,
+          316,
+          233,
+          488
+        ],
+        [
+          243,
+          316,
+          273,
+          488
+        ],
+        [
+          293,
+          316,
+          323,
+          488
+        ],
+        [
+          356,
+          316,
+          386,
+          488
+        ],
+        [
+          583,
+          316,
+          613,
+          488
+        ],
+        [
+          646,
+          316,
+          676,
+          488
+        ],
+        [
+          696,
+          316,
+          726,
+          488
+        ],
+        [
+          736,
+          316,
+          766,
+          488
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "9a93a56a1a4faf79db334596ec37f694f732148fd5cfdaf6fd8c732c21855d96"
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "sheet_id": "split-c-v001",
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+      "sha256": "bdc40bebba4c82da4256ceb0b56871d1fbf896ae3db1d8b355a61873d18188c1",
+      "size_px": [
+        1024,
+        516
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1024,
+        516
+      ],
+      "full_visible_alpha8_bbox_px": [
+        204,
+        15,
+        822,
+        482
+      ],
+      "visible_margin_px": [
+        204,
+        15,
+        202,
+        34
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        318,
+        202,
+        639,
+        420
+      ],
+      "subject_bbox_px": [
+        204,
+        15,
+        822,
+        482
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 209.05202312138726,
+      "anchor_px": [
+        480.16546242774564,
+        477.67052023121386
+      ],
+      "anchor_kind": "anatomical-walking-leg-support",
+      "source_foot_point_px": [
+        478.8125,
+        482
+      ],
+      "sole_points": [
+        [
+          218.0,
+          410
+        ],
+        [
+          254.5,
+          453
+        ],
+        [
+          308.5,
+          476
+        ],
+        [
+          369.0,
+          481
+        ],
+        [
+          587.5,
+          482
+        ],
+        [
+          649.0,
+          478
+        ],
+        [
+          702.5,
+          454
+        ],
+        [
+          741.5,
+          411
+        ]
+      ],
+      "sole_regions": [
+        [
+          207,
+          311,
+          236,
+          482
+        ],
+        [
+          246,
+          311,
+          275,
+          482
+        ],
+        [
+          294,
+          311,
+          323,
+          482
+        ],
+        [
+          355,
+          311,
+          384,
+          482
+        ],
+        [
+          573,
+          311,
+          602,
+          482
+        ],
+        [
+          634,
+          311,
+          663,
+          482
+        ],
+        [
+          682,
+          311,
+          711,
+          482
+        ],
+        [
+          721,
+          311,
+          750,
+          482
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "1210087e56fd3073a9ba379abe06a702c0702ded523c5a22cf07d580b6103be2"
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "sheet_id": "split-c-v001",
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/species_a.png",
+      "sha256": "7cc710e78955bb1f5fe550de7407edc96fd044a0e87f76ebf88e1116699b799d",
+      "size_px": [
+        1024,
+        492
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        516,
+        1024,
+        1008
+      ],
+      "full_visible_alpha8_bbox_px": [
+        204,
+        35,
+        819,
+        463
+      ],
+      "visible_margin_px": [
+        204,
+        35,
+        205,
+        29
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        318,
+        183,
+        639,
+        401
+      ],
+      "subject_bbox_px": [
+        204,
+        35,
+        819,
+        463
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 209.05202312138726,
+      "anchor_px": [
+        480.47796242774564,
+        458.67052023121386
+      ],
+      "anchor_kind": "anatomical-walking-leg-support",
+      "source_foot_point_px": [
+        479.125,
+        463
+      ],
+      "sole_points": [
+        [
+          218.5,
+          390
+        ],
+        [
+          254.5,
+          433
+        ],
+        [
+          308.5,
+          456
+        ],
+        [
+          369.5,
+          462
+        ],
+        [
+          588.0,
+          463
+        ],
+        [
+          649.5,
+          458
+        ],
+        [
+          703.0,
+          434
+        ],
+        [
+          741.5,
+          391
+        ]
+      ],
+      "sole_regions": [
+        [
+          207,
+          292,
+          236,
+          463
+        ],
+        [
+          246,
+          292,
+          275,
+          463
+        ],
+        [
+          294,
+          292,
+          323,
+          463
+        ],
+        [
+          355,
+          292,
+          384,
+          463
+        ],
+        [
+          573,
+          292,
+          602,
+          463
+        ],
+        [
+          634,
+          292,
+          663,
+          463
+        ],
+        [
+          682,
+          292,
+          711,
+          463
+        ],
+        [
+          721,
+          292,
+          750,
+          463
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "1210087e56fd3073a9ba379abe06a702c0702ded523c5a22cf07d580b6103be2"
+    },
+    {
+      "id": "species_b",
+      "index": 2,
+      "sheet_id": "split-c-v001",
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/species_b.png",
+      "sha256": "583829f64b6ba0b9ad28fd0e7426290f076d91c1b51cd08ee2ba9e5bfd58bf60",
+      "size_px": [
+        1024,
+        528
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        1008,
+        1024,
+        1536
+      ],
+      "full_visible_alpha8_bbox_px": [
+        204,
+        29,
+        823,
+        485
+      ],
+      "visible_margin_px": [
+        204,
+        29,
+        201,
+        43
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        318,
+        205,
+        639,
+        423
+      ],
+      "subject_bbox_px": [
+        204,
+        29,
+        823,
+        485
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 209.05202312138726,
+      "anchor_px": [
+        480.29046242774564,
+        480.67052023121386
+      ],
+      "anchor_kind": "anatomical-walking-leg-support",
+      "source_foot_point_px": [
+        478.9375,
+        485
+      ],
+      "sole_points": [
+        [
+          218.0,
+          413
+        ],
+        [
+          254.0,
+          456
+        ],
+        [
+          309.0,
+          479
+        ],
+        [
+          369.0,
+          484
+        ],
+        [
+          588.0,
+          485
+        ],
+        [
+          649.5,
+          480
+        ],
+        [
+          702.5,
+          456
+        ],
+        [
+          741.5,
+          414
+        ]
+      ],
+      "sole_regions": [
+        [
+          207,
+          314,
+          236,
+          485
+        ],
+        [
+          246,
+          314,
+          275,
+          485
+        ],
+        [
+          294,
+          314,
+          323,
+          485
+        ],
+        [
+          355,
+          314,
+          384,
+          485
+        ],
+        [
+          573,
+          314,
+          602,
+          485
+        ],
+        [
+          634,
+          314,
+          663,
+          485
+        ],
+        [
+          682,
+          314,
+          711,
+          485
+        ],
+        [
+          721,
+          314,
+          750,
+          485
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "1210087e56fd3073a9ba379abe06a702c0702ded523c5a22cf07d580b6103be2"
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-a-v001-generation-v001.json",
+        "sha256": "22abf8d6eaef44e327e5feed6d03353a5c3a98d029fe3127292e45e233143570",
+        "bytes": 3935
+      },
+      {
+        "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-b-v001-generation-v001.json",
+        "sha256": "1e65fb4d57c9640423759c734d5fad2ac8d9663d4843e4fa43407235505aed65",
+        "bytes": 3854
+      },
+      {
+        "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-c-v001-generation-v001.json",
+        "sha256": "3d90e01dfd5661af6b42e141f91115ce816f14adac537bf7918d91bcba2c7798",
+        "bytes": 3847
+      },
+      {
+        "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-blink-single-v002-generation-v001.json",
+        "sha256": "fc58c3725162ea4508c317a4d559ef685c619db7e2a79c645030e1668a67c2d0",
+        "bytes": 5153
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/qa/stock-adoption-v001.json",
+      "sha256": "309a26330d355401b7972575ea7a61058ec01d4a77626a3fe0c333b64c0541e9",
+      "bytes": 9282
+    }
+  ]
+}

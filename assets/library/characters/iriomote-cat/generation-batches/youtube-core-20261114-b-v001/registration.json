@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "iriomote-cat",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/iriomote-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "d705b8368a117c719b8e1b39709580da06d51e850965ebdc3207eb3ee0ae1ca5",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      287,
+      210,
+      957,
+      1187
+    ],
+    "anchor_px": [
+      611,
+      1180
+    ],
+    "reference_height_px": 977,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of two short supporting feet; ear tips, whiskers and separate tail excluded from body reference.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/iriomote-cat/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "35a41c513c9eeca92dec7779cf9b316dca2dbe07e44c6c28ac5ed7319c085201"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "d705b8368a117c719b8e1b39709580da06d51e850965ebdc3207eb3ee0ae1ca5",
+      "reference_height_px": 977,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "529d8fa820397713c07b6f0afb45a5b967be4deae2305d320bcc7e009396aaf0",
+      "reference_height_px": 338.4517571036559,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/iriomote-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "d705b8368a117c719b8e1b39709580da06d51e850965ebdc3207eb3ee0ae1ca5",
+          "bytes": 1185383,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 977,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 405.4,
+            "source_y": 109.32554194156457,
+            "canonical_span": [
+              309,
+              942
+            ],
+            "source_span": [
+              109,
+              322
+            ],
+            "ratio": 0.33649289099526064
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 503.09999999999997,
+            "source_y": 143.48831291234683,
+            "canonical_span": [
+              287,
+              957
+            ],
+            "source_span": [
+              101,
+              336
+            ],
+            "ratio": 0.35074626865671643
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 815.74,
+            "source_y": 252.80918001885016,
+            "canonical_span": [
+              325,
+              957
+            ],
+            "source_span": [
+              118,
+              336
+            ],
+            "ratio": 0.3449367088607595
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 932.98,
+            "source_y": 293.8045051837889,
+            "canonical_span": [
+              385,
+              957
+            ],
+            "source_span": [
+              137,
+              336
+            ],
+            "ratio": 0.3479020979020979
+          }
+        ],
+        "common_ratio": 0.34641940338142874,
+        "initial_roi_locator_only_visible_height_ratio": 0.34967012252591895,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.04235862938827,
+        "visual_confirmation": {
+          "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "10cb3bb4efface75d02856ddf69391a57459c30e1ea53043c51bf85a93dda969",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "d09e4cc0891dc889f517aec5612efea8bcb9fdbbef35789c7dcafd5c05fd02b3"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/iriomote-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "d705b8368a117c719b8e1b39709580da06d51e850965ebdc3207eb3ee0ae1ca5",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        287,
+        210,
+        957,
+        1187
+      ],
+      "anchor_px": [
+        611,
+        1180
+      ],
+      "reference_height_px": 977,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of two short supporting feet; ear tips, whiskers and separate tail excluded from body reference.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/iriomote-cat/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "35a41c513c9eeca92dec7779cf9b316dca2dbe07e44c6c28ac5ed7319c085201",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "d705b8368a117c719b8e1b39709580da06d51e850965ebdc3207eb3ee0ae1ca5",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        402
+      ],
+      "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "f2d256b0212faeae865c2dbaa63835374e71d0d01ed56c71e9a4fd82d8cfd8f6",
+      "size_px": [
+        418,
+        402
+      ],
+      "visible": [
+        88,
+        12,
+        358,
+        383
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "529d8fa820397713c07b6f0afb45a5b967be4deae2305d320bcc7e009396aaf0",
+      "body_bbox_px": [
+        101,
+        41,
+        336,
+        383
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        88,
+        12,
+        358,
+        383
+      ],
+      "reference_height_px": 338.4517571036559,
+      "anchor_px": [
+        214.68302425422678,
+        380.57506417633
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        214.25,
+        383
+      ],
+      "sole_points": [
+        [
+          179.0,
+          383
+        ],
+        [
+          249.5,
+          383
+        ]
+      ],
+      "sole_regions": [
+        [
+          145,
+          322,
+          212,
+          385
+        ],
+        [
+          216,
+          322,
+          283,
+          385
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        88,
+        12,
+        358,
+        383
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        835,
+        402
+      ],
+      "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "8cc10630f189a2da7f342fe1f4c53ddfaeecf91e385d548896c5f3ebad45ba9f",
+      "size_px": [
+        417,
+        402
+      ],
+      "visible": [
+        67,
+        12,
+        335,
+        384
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "529d8fa820397713c07b6f0afb45a5b967be4deae2305d320bcc7e009396aaf0",
+      "body_bbox_px": [
+        80,
+        41,
+        315,
+        384
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        67,
+        12,
+        335,
+        384
+      ],
+      "reference_height_px": 338.4517571036559,
+      "anchor_px": [
+        192.93302425422678,
+        381.57506417633
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        192.5,
+        384
+      ],
+      "sole_points": [
+        [
+          157.5,
+          384
+        ],
+        [
+          227.5,
+          383
+        ]
+      ],
+      "sole_regions": [
+        [
+          123,
+          323,
+          190,
+          386
+        ],
+        [
+          194,
+          323,
+          261,
+          386
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        67,
+        12,
+        335,
+        384
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        835,
+        0,
+        1254,
+        402
+      ],
+      "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "a86592cfa6549b9fc99c8e2f20cf98773af23c8ca6a1ddc19b96fc3a21d795c9",
+      "size_px": [
+        419,
+        402
+      ],
+      "visible": [
+        50,
+        10,
+        337,
+        384
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "529d8fa820397713c07b6f0afb45a5b967be4deae2305d320bcc7e009396aaf0",
+      "body_bbox_px": [
+        63,
+        40,
+        300,
+        384
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        50,
+        10,
+        337,
+        384
+      ],
+      "reference_height_px": 338.4517571036559,
+      "anchor_px": [
+        192.18302425422678,
+        381.57506417633
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        191.75,
+        384
+      ],
+      "sole_points": [
+        [
+          156.5,
+          382
+        ],
+        [
+          227.0,
+          384
+        ]
+      ],
+      "sole_regions": [
+        [
+          123,
+          323,
+          189,
+          386
+        ],
+        [
+          193,
+          323,
+          260,
+          386
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        50,
+        10,
+        337,
+        384
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        402,
+        418,
+        824
+      ],
+      "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "88ab9c3192dc2f78bed859debe2979dd17855590df3e25db8b3e76ab1ab60af4",
+      "size_px": [
+        418,
+        422
+      ],
+      "visible": [
+        98,
+        29,
+        357,
+        398
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "529d8fa820397713c07b6f0afb45a5b967be4deae2305d320bcc7e009396aaf0",
+      "body_bbox_px": [
+        111,
+        58,
+        344,
+        398
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        98,
+        29,
+        357,
+        398
+      ],
+      "reference_height_px": 338.4517571036559,
+      "anchor_px": [
+        219.93302425422678,
+        395.57506417633
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        219.5,
+        398
+      ],
+      "sole_points": [
+        [
+          184.5,
+          398
+        ],
+        [
+          254.5,
+          398
+        ]
+      ],
+      "sole_regions": [
+        [
+          151,
+          337,
+          219,
+          400
+        ],
+        [
+          222,
+          337,
+          288,
+          400
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        98,
+        29,
+        357,
+        398
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        418,
+        402,
+        835,
+        824
+      ],
+      "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "dd521eeee67032f52d7e82dab212a6ab891773789523fc8896344a6be031b57d",
+      "size_px": [
+        417,
+        422
+      ],
+      "visible": [
+        63,
+        19,
+        335,
+        400
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "529d8fa820397713c07b6f0afb45a5b967be4deae2305d320bcc7e009396aaf0",
+      "body_bbox_px": [
+        77,
+        49,
+        317,
+        400
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        63,
+        19,
+        335,
+        400
+      ],
+      "reference_height_px": 338.4517571036559,
+      "anchor_px": [
+        191.43302425422678,
+        397.57506417633
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        191.0,
+        400
+      ],
+      "sole_points": [
+        [
+          154.0,
+          400
+        ],
+        [
+          228.0,
+          398
+        ]
+      ],
+      "sole_regions": [
+        [
+          123,
+          339,
+          190,
+          402
+        ],
+        [
+          194,
+          339,
+          261,
+          402
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        63,
+        19,
+        335,
+        400
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        835,
+        402,
+        1254,
+        824
+      ],
+      "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "52250a27666e813d2733e73075141d56f5568061379c86db1474200358830e7c",
+      "size_px": [
+        419,
+        422
+      ],
+      "visible": [
+        70,
+        27,
+        336,
+        399
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "529d8fa820397713c07b6f0afb45a5b967be4deae2305d320bcc7e009396aaf0",
+      "body_bbox_px": [
+        83,
+        56,
+        318,
+        399
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        70,
+        27,
+        336,
+        399
+      ],
+      "reference_height_px": 338.4517571036559,
+      "anchor_px": [
+        193.68302425422678,
+        396.57506417633
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        193.25,
+        399
+      ],
+      "sole_points": [
+        [
+          158.0,
+          399
+        ],
+        [
+          228.5,
+          398
+        ]
+      ],
+      "sole_regions": [
+        [
+          124,
+          338,
+          193,
+          401
+        ],
+        [
+          194,
+          338,
+          262,
+          401
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        70,
+        27,
+        336,
+        399
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        824,
+        418,
+        1254
+      ],
+      "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "d6b8425b0c0583793e9c53c1ac97fc00abe7a90eaae22a9605d2685b036cf60e",
+      "size_px": [
+        418,
+        430
+      ],
+      "visible": [
+        92,
+        24,
+        359,
+        394
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "529d8fa820397713c07b6f0afb45a5b967be4deae2305d320bcc7e009396aaf0",
+      "body_bbox_px": [
+        105,
+        53,
+        339,
+        394
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        92,
+        24,
+        359,
+        394
+      ],
+      "reference_height_px": 338.4517571036559,
+      "anchor_px": [
+        218.18302425422678,
+        391.57506417633
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        217.75,
+        394
+      ],
+      "sole_points": [
+        [
+          182.0,
+          394
+        ],
+        [
+          253.5,
+          394
+        ]
+      ],
+      "sole_regions": [
+        [
+          148,
+          333,
+          216,
+          396
+        ],
+        [
+          220,
+          333,
+          286,
+          396
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        92,
+        24,
+        359,
+        394
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        418,
+        824,
+        835,
+        1254
+      ],
+      "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "2ad03cb882c45893c8f8faef34c34e8452059f10d4c079004783349d2631b568",
+      "size_px": [
+        417,
+        430
+      ],
+      "visible": [
+        67,
+        24,
+        335,
+        395
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "529d8fa820397713c07b6f0afb45a5b967be4deae2305d320bcc7e009396aaf0",
+      "body_bbox_px": [
+        80,
+        53,
+        315,
+        395
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        67,
+        24,
+        335,
+        395
+      ],
+      "reference_height_px": 338.4517571036559,
+      "anchor_px": [
+        192.93302425422678,
+        392.57506417633
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        192.5,
+        395
+      ],
+      "sole_points": [
+        [
+          157.5,
+          395
+        ],
+        [
+          227.5,
+          394
+        ]
+      ],
+      "sole_regions": [
+        [
+          123,
+          334,
+          190,
+          397
+        ],
+        [
+          194,
+          334,
+          261,
+          397
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        67,
+        24,
+        335,
+        395
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        835,
+        824,
+        1254,
+        1254
+      ],
+      "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "ee06044314611ef2c76a3284c07727ad7830cab868e7f0f13dd3caa1a1b6121e",
+      "size_px": [
+        419,
+        430
+      ],
+      "visible": [
+        69,
+        24,
+        336,
+        395
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "529d8fa820397713c07b6f0afb45a5b967be4deae2305d320bcc7e009396aaf0",
+      "body_bbox_px": [
+        82,
+        53,
+        317,
+        395
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        69,
+        24,
+        336,
+        395
+      ],
+      "reference_height_px": 338.4517571036559,
+      "anchor_px": [
+        193.93302425422678,
+        392.57506417633
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        193.5,
+        395
+      ],
+      "sole_points": [
+        [
+          158.0,
+          393
+        ],
+        [
+          229.0,
+          395
+        ]
+      ],
+      "sole_regions": [
+        [
+          124,
+          334,
+          191,
+          397
+        ],
+        [
+          195,
+          334,
+          262,
+          397
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        69,
+        24,
+        336,
+        395
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "d09e4cc0891dc889f517aec5612efea8bcb9fdbbef35789c7dcafd5c05fd02b3",
+        "bytes": 5126
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/iriomote-cat/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "d8e821a5edf4fe5eeda72ea8ce1a98cc9a9fa048cf65edf8472bb14ad862f21f",
+      "bytes": 7692
+    }
+  ]
+}

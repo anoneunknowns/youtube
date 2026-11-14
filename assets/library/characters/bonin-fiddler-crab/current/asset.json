@@ -7,7 +7,7 @@
   "category": "gimmick",
   "source_index": {
     "path": "catalogs/character-library-v1.json",
-    "sha256": "7264356c1519b8cd3456fd828264313f550108a19da98d290318b9e982b5bb2e"
+    "sha256": "6a7c20e39fc176ef5123086d6334b18ab04f594c3fd9cbf480fe1d5cb9612cbb"
   },
   "neutral": {
     "path": "neutral.png",
@@ -45,12 +45,484 @@
     "anchor_basis": "Visual midpoint at the lowest supporting walking-leg tip regions. Body reference is shell height, excluding stalk eyes, both claw arms and walking legs.",
     "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement."
   },
-  "poses": {},
+  "poses": {
+    "video/neutral": {
+      "path": "poses/video/neutral.png",
+      "sha256": "40f55b318240d66449681440238b6f7a9189a0d38286a795e92da0c8b21d9045",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_path": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+      "source_sha256": "40f55b318240d66449681440238b6f7a9189a0d38286a795e92da0c8b21d9045",
+      "source_image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        598,
+        976
+      ],
+      "body_bbox_px": [
+        347,
+        562,
+        866,
+        900
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 338,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Visual midpoint at the lowest supporting walking-leg tip regions. Body reference is shell height, excluding stalk eyes, both claw arms and walking legs.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "sheet_id": "canonical-neutral",
+      "frame_id": "neutral",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+      "source_sheet_sha256": "40f55b318240d66449681440238b6f7a9189a0d38286a795e92da0c8b21d9045"
+    },
+    "video/blink": {
+      "path": "poses/video/blink.png",
+      "sha256": "d41a046fe7a1b1846302f8d4f3b85f7799083e8fc3407c2899e9e2f44c13526a",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink-single-v002.png",
+      "source_sha256": "d41a046fe7a1b1846302f8d4f3b85f7799083e8fc3407c2899e9e2f44c13526a",
+      "source_image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        594.4061860940695,
+        977.1002044989775
+      ],
+      "body_bbox_px": [
+        344,
+        562,
+        855,
+        893
+      ],
+      "subject_bbox_px": [
+        169,
+        291,
+        1145,
+        984
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 333.16155419222906,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "Approximate native shell-grid landmarks plus measured alpha8 walking-tip ROIs; source unmodified.",
+      "anchor_basis": "Four observed native walking-leg-tip bands on each side, same canonical mean-x/lowest-y support and projection offset as old eight poses. New shell anatomical scale uses three corresponding spans; no pincer/eye/canvas/full-alpha fit.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "sheet_id": "blink-single-v002",
+      "frame_id": "blink",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/blink-single-v002.png",
+      "source_sheet_sha256": "d41a046fe7a1b1846302f8d4f3b85f7799083e8fc3407c2899e9e2f44c13526a"
+    },
+    "video/greet": {
+      "path": "poses/video/greet.png",
+      "sha256": "bf39b29d327f61f7f278d7fe7738504c25c6092d8e756f33847c385ffd800f22",
+      "size_px": [
+        1024,
+        512
+      ],
+      "source_path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/greet.png",
+      "source_sha256": "bf39b29d327f61f7f278d7fe7738504c25c6092d8e756f33847c385ffd800f22",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        512
+      ],
+      "source_size_px": [
+        1024,
+        512
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        485.50875,
+        474.772
+      ],
+      "body_bbox_px": [
+        326,
+        207,
+        642,
+        411
+      ],
+      "subject_bbox_px": [
+        212,
+        32,
+        829,
+        479
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 204.152,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "sheet_id": "split-a-v001",
+      "frame_id": "greet",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "bce3c5d273add2e87d6bdba4aa29ae26bb2a1ecf223afe1a00f5990abc8957ae"
+    },
+    "video/present_left": {
+      "path": "poses/video/present_left.png",
+      "sha256": "30a0a948abc60ecbf735d4050f7315416a8d54f44bd2c2b03d905ca5484c6055",
+      "size_px": [
+        1024,
+        528
+      ],
+      "source_path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_left.png",
+      "source_sha256": "30a0a948abc60ecbf735d4050f7315416a8d54f44bd2c2b03d905ca5484c6055",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        528
+      ],
+      "source_size_px": [
+        1024,
+        528
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        485.63375,
+        474.772
+      ],
+      "body_bbox_px": [
+        326,
+        207,
+        642,
+        411
+      ],
+      "subject_bbox_px": [
+        167,
+        34,
+        830,
+        479
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 204.152,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "sheet_id": "split-a-v001",
+      "frame_id": "present_left",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "bce3c5d273add2e87d6bdba4aa29ae26bb2a1ecf223afe1a00f5990abc8957ae"
+    },
+    "video/present_right": {
+      "path": "poses/video/present_right.png",
+      "sha256": "ef2df5142d8ae032202f7e39998f69e8483416a225f6f5e07106a6020918268b",
+      "size_px": [
+        1024,
+        502
+      ],
+      "source_path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+      "source_sha256": "ef2df5142d8ae032202f7e39998f69e8483416a225f6f5e07106a6020918268b",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        502
+      ],
+      "source_size_px": [
+        1024,
+        502
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        483.7039571005917,
+        476.5473372781065
+      ],
+      "body_bbox_px": [
+        318,
+        201,
+        651,
+        416
+      ],
+      "subject_bbox_px": [
+        201,
+        18,
+        847,
+        481
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 215.0,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "sheet_id": "split-b-v001",
+      "frame_id": "present_right",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "9a93a56a1a4faf79db334596ec37f694f732148fd5cfdaf6fd8c732c21855d96"
+    },
+    "video/think": {
+      "path": "poses/video/think.png",
+      "sha256": "c11ccc6c511c16bfb7a4ecd4091e9acc10fbb4705dc8b66f0de74defb83ec6bc",
+      "size_px": [
+        1024,
+        499
+      ],
+      "source_path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/think.png",
+      "source_sha256": "c11ccc6c511c16bfb7a4ecd4091e9acc10fbb4705dc8b66f0de74defb83ec6bc",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        499
+      ],
+      "source_size_px": [
+        1024,
+        499
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        483.5164571005917,
+        471.5473372781065
+      ],
+      "body_bbox_px": [
+        318,
+        196,
+        651,
+        411
+      ],
+      "subject_bbox_px": [
+        200,
+        22,
+        847,
+        476
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 215.0,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "sheet_id": "split-b-v001",
+      "frame_id": "think",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "9a93a56a1a4faf79db334596ec37f694f732148fd5cfdaf6fd8c732c21855d96"
+    },
+    "video/aha": {
+      "path": "poses/video/aha.png",
+      "sha256": "abc794c5a6b9bc7ee805ebfc0d9421bef22e045168eaca829d8c1019c8d2be1c",
+      "size_px": [
+        1024,
+        535
+      ],
+      "source_path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/aha.png",
+      "source_sha256": "abc794c5a6b9bc7ee805ebfc0d9421bef22e045168eaca829d8c1019c8d2be1c",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        535
+      ],
+      "source_size_px": [
+        1024,
+        535
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        483.7039571005917,
+        483.5473372781065
+      ],
+      "body_bbox_px": [
+        318,
+        208,
+        651,
+        423
+      ],
+      "subject_bbox_px": [
+        201,
+        24,
+        847,
+        488
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 215.0,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "sheet_id": "split-b-v001",
+      "frame_id": "aha",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "9a93a56a1a4faf79db334596ec37f694f732148fd5cfdaf6fd8c732c21855d96"
+    },
+    "video/cheer": {
+      "path": "poses/video/cheer.png",
+      "sha256": "bdc40bebba4c82da4256ceb0b56871d1fbf896ae3db1d8b355a61873d18188c1",
+      "size_px": [
+        1024,
+        516
+      ],
+      "source_path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+      "source_sha256": "bdc40bebba4c82da4256ceb0b56871d1fbf896ae3db1d8b355a61873d18188c1",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        516
+      ],
+      "source_size_px": [
+        1024,
+        516
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        480.16546242774564,
+        477.67052023121386
+      ],
+      "body_bbox_px": [
+        318,
+        202,
+        639,
+        420
+      ],
+      "subject_bbox_px": [
+        204,
+        15,
+        822,
+        482
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 209.05202312138726,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "sheet_id": "split-c-v001",
+      "frame_id": "cheer",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "1210087e56fd3073a9ba379abe06a702c0702ded523c5a22cf07d580b6103be2"
+    },
+    "video/species_a": {
+      "path": "poses/video/species_a.png",
+      "sha256": "7cc710e78955bb1f5fe550de7407edc96fd044a0e87f76ebf88e1116699b799d",
+      "size_px": [
+        1024,
+        492
+      ],
+      "source_path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/species_a.png",
+      "source_sha256": "7cc710e78955bb1f5fe550de7407edc96fd044a0e87f76ebf88e1116699b799d",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        492
+      ],
+      "source_size_px": [
+        1024,
+        492
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        480.47796242774564,
+        458.67052023121386
+      ],
+      "body_bbox_px": [
+        318,
+        183,
+        639,
+        401
+      ],
+      "subject_bbox_px": [
+        204,
+        35,
+        819,
+        463
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 209.05202312138726,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "sheet_id": "split-c-v001",
+      "frame_id": "species_a",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "1210087e56fd3073a9ba379abe06a702c0702ded523c5a22cf07d580b6103be2"
+    },
+    "video/species_b": {
+      "path": "poses/video/species_b.png",
+      "sha256": "583829f64b6ba0b9ad28fd0e7426290f076d91c1b51cd08ee2ba9e5bfd58bf60",
+      "size_px": [
+        1024,
+        528
+      ],
+      "source_path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/frames/species_b.png",
+      "source_sha256": "583829f64b6ba0b9ad28fd0e7426290f076d91c1b51cd08ee2ba9e5bfd58bf60",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        528
+      ],
+      "source_size_px": [
+        1024,
+        528
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        480.29046242774564,
+        480.67052023121386
+      ],
+      "body_bbox_px": [
+        318,
+        205,
+        639,
+        423
+      ],
+      "subject_bbox_px": [
+        204,
+        29,
+        823,
+        485
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 209.05202312138726,
+      "anchor_kind": "anatomical-walking-leg-support",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Four observed walking-leg tips per side; mean x of all eight tips and lowest tip y, plus unchanged canonical projection offset scaled by the sheet ratio.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "sheet_id": "split-c-v001",
+      "frame_id": "species_b",
+      "source_sheet": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "1210087e56fd3073a9ba379abe06a702c0702ded523c5a22cf07d580b6103be2"
+    }
+  },
   "clips": {
     "path": "clips.json",
-    "sha256": "dcd92004df1c82c2ffd78bf7fd0eb2aa19a5351023b5ba7fdbda9249902a5840"
+    "sha256": "12c120fc7aff2c048ccbe231fb418b697bc37245edb17dbf2689ceecadb2c25b"
   },
-  "source_registrations": [],
+  "source_registrations": [
+    {
+      "namespace": "video",
+      "path": "assets/library/characters/bonin-fiddler-crab/generation-batches/youtube-core-20261114-root-tail-v001/registration.json",
+      "sha256": "868a3041b2875088f7b323a5b64bcf94e51d260d224b8f40db94544b4fd15471",
+      "clips_available": true
+    }
+  ],
   "geometry_policy": "Native pixels and adopted per-frame references retained. Atlas neutral coordinates are shifted only by the adopted crop origin.",
   "style_pattern": "bird-like-prop",
   "usage_role": "background-animal-prop",

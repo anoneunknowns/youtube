@@ -1,0 +1,1154 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "chimpanzee",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/chimpanzee/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "349388c70dd3015014028c1b7a23bdc22f69d6e00a0455ae744852e5c330328a",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      217,
+      123,
+      1027,
+      1181
+    ],
+    "anchor_px": [
+      619,
+      1179
+    ],
+    "reference_height_px": 1058,
+    "anchor_kind": "anatomical-feet-projected-contact",
+    "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+    "anchor_basis": "Large head/ears and short upright body through the two feet; no tail; support midpoint at visible level foot bases.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+    "source_manifest": "assets/library/characters/chimpanzee/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "15cffce349c21cbf6accbe04a3c10226831868b15ee74b995205047cfbc2c0de"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "349388c70dd3015014028c1b7a23bdc22f69d6e00a0455ae744852e5c330328a",
+      "reference_height_px": 1058,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f116ca3b389a435cccb17b2b5c83176fde7bef1f0caea9d91c1258d0c7153981",
+      "reference_height_px": 368.7843466107617,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/chimpanzee/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "349388c70dd3015014028c1b7a23bdc22f69d6e00a0455ae744852e5c330328a",
+          "bytes": 966591,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1058,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 334.6,
+            "source_y": 91.60000000000001,
+            "canonical_span": [
+              276,
+              972
+            ],
+            "source_span": [
+              116,
+              305
+            ],
+            "ratio": 0.27155172413793105
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 440.4,
+            "source_y": 129.89999999999998,
+            "canonical_span": [
+              217,
+              1027
+            ],
+            "source_span": [
+              69,
+              354
+            ],
+            "ratio": 0.35185185185185186
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 778.96,
+            "source_y": 252.46000000000004,
+            "canonical_span": [
+              356,
+              886
+            ],
+            "source_span": [
+              122,
+              305
+            ],
+            "ratio": 0.3452830188679245
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 905.92,
+            "source_y": 298.42,
+            "canonical_span": [
+              362,
+              880
+            ],
+            "source_span": [
+              122,
+              307
+            ],
+            "ratio": 0.35714285714285715
+          }
+        ],
+        "common_ratio": 0.3485674353598882,
+        "initial_roi_locator_only_visible_height_ratio": 0.3620037807183365,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.3151927437641724,
+        "visual_confirmation": {
+          "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "8c346c8dbc4c74334e04821daf6a7d7bf8c9e596a4b3dc3ad0be7f7e56e0df57",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "dc2703f4816aceffb9cdafb7f19f632fbebed2461ac1c541ce798026d7c62df3"
+    },
+    {
+      "id": "blink-single-v002",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/blink-single-v002.png",
+      "source_sheet_sha256": "dcee34a9303d533226d9cbd025a395770231a1b9a5e9df3157fa8d2a94da5a31",
+      "reference_height_px": 1060.6862799906826,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/chimpanzee/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "349388c70dd3015014028c1b7a23bdc22f69d6e00a0455ae744852e5c330328a",
+          "bytes": 966591,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1058,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 334.6,
+            "source_y": 333.8,
+            "canonical_span": [
+              276,
+              972
+            ],
+            "source_span": [
+              273,
+              966
+            ],
+            "ratio": 0.9956896551724138
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 440.4,
+            "source_y": 439.69999999999993,
+            "canonical_span": [
+              217,
+              1027
+            ],
+            "source_span": [
+              215,
+              1023
+            ],
+            "ratio": 0.9975308641975309
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 778.96,
+            "source_y": 778.5799999999999,
+            "canonical_span": [
+              356,
+              886
+            ],
+            "source_span": [
+              352,
+              886
+            ],
+            "ratio": 1.0075471698113208
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 905.92,
+            "source_y": 905.6599999999999,
+            "canonical_span": [
+              362,
+              880
+            ],
+            "source_span": [
+              358,
+              881
+            ],
+            "ratio": 1.0096525096525097
+          }
+        ],
+        "common_ratio": 1.002539017004426,
+        "initial_roi_locator_only_visible_height_ratio": 1.0009451795841209,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0140232997375855,
+        "visual_confirmation": {
+          "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "8c346c8dbc4c74334e04821daf6a7d7bf8c9e596a4b3dc3ad0be7f7e56e0df57",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_record_sha256": "4e90df0d330eff55e477565edeee447016a4dab4e925900d9f1390b270853f8b"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/chimpanzee/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "349388c70dd3015014028c1b7a23bdc22f69d6e00a0455ae744852e5c330328a",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        217,
+        123,
+        1027,
+        1181
+      ],
+      "anchor_px": [
+        619,
+        1179
+      ],
+      "reference_height_px": 1058,
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+      "anchor_basis": "Large head/ears and short upright body through the two feet; no tail; support midpoint at visible level foot bases.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "source_manifest": "assets/library/characters/chimpanzee/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "15cffce349c21cbf6accbe04a3c10226831868b15ee74b995205047cfbc2c0de",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "349388c70dd3015014028c1b7a23bdc22f69d6e00a0455ae744852e5c330328a",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/frames/blink-v002.png",
+      "sha256": "b0a9f7b41380158c2f3614979694277c8a704d3dc33a766b42dadf95ff4a0995",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "visible": [
+        215,
+        122,
+        1023,
+        1181
+      ],
+      "sheet_id": "blink-single-v002",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/blink-single-v002.png",
+      "source_sheet_sha256": "dcee34a9303d533226d9cbd025a395770231a1b9a5e9df3157fa8d2a94da5a31",
+      "body_bbox_px": [
+        215,
+        122,
+        1026,
+        1181
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        215,
+        122,
+        1023,
+        1181
+      ],
+      "reference_height_px": 1060.6862799906826,
+      "anchor_px": [
+        619.7544432797578,
+        1178.9949219659911
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        618.0,
+        1181
+      ],
+      "sole_points": [
+        [
+          500.0,
+          1181
+        ],
+        [
+          736.0,
+          1180
+        ]
+      ],
+      "sole_regions": [
+        [
+          408,
+          990,
+          600,
+          1183
+        ],
+        [
+          638,
+          990,
+          827,
+          1183
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        215,
+        122,
+        1023,
+        1181
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        415,
+        0,
+        828,
+        415
+      ],
+      "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "e8e41032c19a40335d431244ed39a7f27a72e7d06e40ee0a8726113601c95d60",
+      "size_px": [
+        413,
+        415
+      ],
+      "visible": [
+        63,
+        15,
+        349,
+        400
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f116ca3b389a435cccb17b2b5c83176fde7bef1f0caea9d91c1258d0c7153981",
+      "body_bbox_px": [
+        63,
+        15,
+        358,
+        400
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        63,
+        15,
+        349,
+        400
+      ],
+      "reference_height_px": 368.7843466107617,
+      "anchor_px": [
+        208.1099930118798,
+        399.30286512928024
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        207.5,
+        400
+      ],
+      "sole_points": [
+        [
+          166.5,
+          398
+        ],
+        [
+          248.5,
+          400
+        ]
+      ],
+      "sole_regions": [
+        [
+          132,
+          334,
+          203,
+          402
+        ],
+        [
+          212,
+          334,
+          283,
+          402
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        63,
+        15,
+        349,
+        400
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        828,
+        0,
+        1246,
+        415
+      ],
+      "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "fb886e75ee45dc21a4cf0e22ba1182fb3e37b79a89675a88b5bf8af132fc5608",
+      "size_px": [
+        418,
+        415
+      ],
+      "visible": [
+        48,
+        16,
+        348,
+        399
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f116ca3b389a435cccb17b2b5c83176fde7bef1f0caea9d91c1258d0c7153981",
+      "body_bbox_px": [
+        48,
+        16,
+        341,
+        399
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        48,
+        16,
+        348,
+        399
+      ],
+      "reference_height_px": 368.7843466107617,
+      "anchor_px": [
+        205.3599930118798,
+        398.30286512928024
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        204.75,
+        399
+      ],
+      "sole_points": [
+        [
+          163.5,
+          398
+        ],
+        [
+          246.0,
+          399
+        ]
+      ],
+      "sole_regions": [
+        [
+          129,
+          333,
+          201,
+          401
+        ],
+        [
+          210,
+          333,
+          281,
+          401
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        48,
+        16,
+        348,
+        399
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        415,
+        415,
+        829
+      ],
+      "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "7d79289e168e1ae808d01afb379b81307af11175f7d7eeaf4f6a334dcb7ca72b",
+      "size_px": [
+        415,
+        414
+      ],
+      "visible": [
+        68,
+        16,
+        365,
+        397
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f116ca3b389a435cccb17b2b5c83176fde7bef1f0caea9d91c1258d0c7153981",
+      "body_bbox_px": [
+        68,
+        16,
+        360,
+        397
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        68,
+        16,
+        365,
+        397
+      ],
+      "reference_height_px": 368.7843466107617,
+      "anchor_px": [
+        214.8599930118798,
+        396.30286512928024
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        214.25,
+        397
+      ],
+      "sole_points": [
+        [
+          173.0,
+          397
+        ],
+        [
+          255.5,
+          397
+        ]
+      ],
+      "sole_regions": [
+        [
+          138,
+          331,
+          210,
+          399
+        ],
+        [
+          219,
+          331,
+          291,
+          399
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        68,
+        16,
+        365,
+        397
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        415,
+        415,
+        828,
+        829
+      ],
+      "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "db0c4aaeaed8f6940ba99260afe2e7b2973cacc6a607b69e597039bfdaa38540",
+      "size_px": [
+        413,
+        414
+      ],
+      "visible": [
+        59,
+        18,
+        343,
+        397
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f116ca3b389a435cccb17b2b5c83176fde7bef1f0caea9d91c1258d0c7153981",
+      "body_bbox_px": [
+        59,
+        18,
+        349,
+        397
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        59,
+        18,
+        343,
+        397
+      ],
+      "reference_height_px": 368.7843466107617,
+      "anchor_px": [
+        210.8599930118798,
+        396.30286512928024
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        210.25,
+        397
+      ],
+      "sole_points": [
+        [
+          167.0,
+          397
+        ],
+        [
+          253.5,
+          397
+        ]
+      ],
+      "sole_regions": [
+        [
+          132,
+          331,
+          205,
+          399
+        ],
+        [
+          215,
+          331,
+          288,
+          399
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        59,
+        18,
+        343,
+        397
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        828,
+        415,
+        1246,
+        829
+      ],
+      "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "a9f8d72a6ae3ebc0adad4f1d9cba0fecfa192fcc95d5a4e7351d6f0dca0fa721",
+      "size_px": [
+        418,
+        414
+      ],
+      "visible": [
+        62,
+        16,
+        351,
+        397
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f116ca3b389a435cccb17b2b5c83176fde7bef1f0caea9d91c1258d0c7153981",
+      "body_bbox_px": [
+        62,
+        16,
+        354,
+        397
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        62,
+        16,
+        351,
+        397
+      ],
+      "reference_height_px": 368.7843466107617,
+      "anchor_px": [
+        205.8599930118798,
+        396.30286512928024
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        205.25,
+        397
+      ],
+      "sole_points": [
+        [
+          163.5,
+          397
+        ],
+        [
+          247.0,
+          397
+        ]
+      ],
+      "sole_regions": [
+        [
+          129,
+          331,
+          201,
+          399
+        ],
+        [
+          210,
+          331,
+          281,
+          399
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        62,
+        16,
+        351,
+        397
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        829,
+        415,
+        1263
+      ],
+      "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "739a5408280c26449ab17cca200463215cba94a172de1cd7d49c0507aaa590ba",
+      "size_px": [
+        415,
+        434
+      ],
+      "visible": [
+        68,
+        18,
+        355,
+        405
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f116ca3b389a435cccb17b2b5c83176fde7bef1f0caea9d91c1258d0c7153981",
+      "body_bbox_px": [
+        68,
+        18,
+        364,
+        405
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        68,
+        18,
+        355,
+        405
+      ],
+      "reference_height_px": 368.7843466107617,
+      "anchor_px": [
+        213.8599930118798,
+        404.30286512928024
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        213.25,
+        405
+      ],
+      "sole_points": [
+        [
+          172.0,
+          405
+        ],
+        [
+          254.5,
+          405
+        ]
+      ],
+      "sole_regions": [
+        [
+          138,
+          339,
+          209,
+          407
+        ],
+        [
+          218,
+          339,
+          289,
+          407
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        68,
+        18,
+        355,
+        405
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        415,
+        829,
+        828,
+        1263
+      ],
+      "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "353e067c273ce296b63748f90eb4e7c7f945ef9ada7d3d514700d30d39894838",
+      "size_px": [
+        413,
+        434
+      ],
+      "visible": [
+        63,
+        18,
+        351,
+        405
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f116ca3b389a435cccb17b2b5c83176fde7bef1f0caea9d91c1258d0c7153981",
+      "body_bbox_px": [
+        63,
+        18,
+        359,
+        405
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        63,
+        18,
+        351,
+        405
+      ],
+      "reference_height_px": 368.7843466107617,
+      "anchor_px": [
+        208.3599930118798,
+        404.30286512928024
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        207.75,
+        405
+      ],
+      "sole_points": [
+        [
+          166.0,
+          405
+        ],
+        [
+          249.5,
+          404
+        ]
+      ],
+      "sole_regions": [
+        [
+          132,
+          339,
+          204,
+          407
+        ],
+        [
+          212,
+          339,
+          284,
+          407
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        63,
+        18,
+        351,
+        405
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        828,
+        829,
+        1246,
+        1263
+      ],
+      "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "be26d7bc35ac70ebc0a4828df9b9191cc3022874b9fb7c1081f648618d86bbc0",
+      "size_px": [
+        418,
+        434
+      ],
+      "visible": [
+        62,
+        18,
+        351,
+        405
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f116ca3b389a435cccb17b2b5c83176fde7bef1f0caea9d91c1258d0c7153981",
+      "body_bbox_px": [
+        62,
+        18,
+        358,
+        405
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        62,
+        18,
+        351,
+        405
+      ],
+      "reference_height_px": 368.7843466107617,
+      "anchor_px": [
+        206.3599930118798,
+        404.30286512928024
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        205.75,
+        405
+      ],
+      "sole_points": [
+        [
+          163.5,
+          405
+        ],
+        [
+          248.0,
+          405
+        ]
+      ],
+      "sole_regions": [
+        [
+          129,
+          339,
+          201,
+          407
+        ],
+        [
+          210,
+          339,
+          282,
+          407
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        62,
+        18,
+        351,
+        405
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "dc2703f4816aceffb9cdafb7f19f632fbebed2461ac1c541ce798026d7c62df3",
+        "bytes": 5081
+      },
+      {
+        "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/provenance/selected-blink-single-v002-generation-v001.json",
+        "sha256": "4e90df0d330eff55e477565edeee447016a4dab4e925900d9f1390b270853f8b",
+        "bytes": 3776
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/chimpanzee/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "0fcb52d50775b8d48a2b6bbec54b0dfecd7ed5ab70cb380e4be41973b1b67462",
+      "bytes": 7669
+    }
+  ]
+}

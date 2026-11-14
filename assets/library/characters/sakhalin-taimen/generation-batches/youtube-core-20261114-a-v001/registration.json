@@ -1,0 +1,994 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "sakhalin-taimen",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-a-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      85,
+      488,
+      1023,
+      850
+    ],
+    "anchor_px": [
+      555,
+      670
+    ],
+    "reference_height_px": 362,
+    "anchor_kind": "anatomical-fish-body-centre",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Visual centre of head/torso mass; dorsal, ventral fins and caudal fin excluded from reference height.",
+    "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+    "source_manifest": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "cbac9277944e8d6d33e786cb2c685dd40d30b210b21bfaff6ecbe7cc8d12bd25"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+      "reference_height_px": 362,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "blink-v002",
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/blink-v002.png",
+      "source_sheet_sha256": "d57aa5dd72afa2bee4f9d35b6ebd36e390539b125e37bd249b77a94e66a087a1",
+      "reference_height_px": 362,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Head-to-peduncle horizontal mass and skull/torso thickness compared with canonical 938px trunk width and362px body ref. Fins/tail excluded; blink same1254 native anatomy."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 362,
+        "canonical_source": {
+          "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+          "bytes": 791743,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-v002-generation-v001.json",
+      "generation_record_sha256": "d0ac479ff7553bc1c08a468b61c0c46ce7ecce10443646043dc323d6aa9b287b"
+    },
+    {
+      "id": "greet-v003",
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/greet-v003.png",
+      "source_sheet_sha256": "54923290fc6976cac071d4770f2e58b99f1d91a9e7d8a538ab85c8489a1ecf1c",
+      "reference_height_px": 390.96000000000004,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Head-to-peduncle horizontal mass and skull/torso thickness compared with canonical 938px trunk width and362px body ref. Fins/tail excluded; blink same1254 native anatomy."
+          }
+        ],
+        "common_ratio": 1.08,
+        "canonical_reference_height_px": 362,
+        "canonical_source": {
+          "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+          "bytes": 791743,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-greet-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-greet-v003-generation-v001.json",
+      "generation_record_sha256": "9e42baf6b419a1700d3a7f8f315be13d596d6c96611656bca52c71b6fed75cd3"
+    },
+    {
+      "id": "present_right-v002",
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/present_right-v002.png",
+      "source_sheet_sha256": "77e5c8e1c8340ca32b597ab5967d41b7db44f533841ee54baccf56959ede2140",
+      "reference_height_px": 427.15999999999997,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Head-to-peduncle horizontal mass and skull/torso thickness compared with canonical 938px trunk width and362px body ref. Fins/tail excluded; blink same1254 native anatomy."
+          }
+        ],
+        "common_ratio": 1.18,
+        "canonical_reference_height_px": 362,
+        "canonical_source": {
+          "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+          "bytes": 791743,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-v002-generation-v001.json",
+      "generation_record_sha256": "a0da7e733e22e40ba2d19ef1c87cbb3974703951e2b6fca2fea4f09f5dee986c"
+    },
+    {
+      "id": "think-v002",
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/think-v002.png",
+      "source_sheet_sha256": "621c22cbde02c51dbd7c504c7a483b1f40dee2fe4d80915580569af02ce73348",
+      "reference_height_px": 427.15999999999997,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Head-to-peduncle horizontal mass and skull/torso thickness compared with canonical 938px trunk width and362px body ref. Fins/tail excluded; blink same1254 native anatomy."
+          }
+        ],
+        "common_ratio": 1.18,
+        "canonical_reference_height_px": 362,
+        "canonical_source": {
+          "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+          "bytes": 791743,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-think-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-think-v002-generation-v001.json",
+      "generation_record_sha256": "b603ac5970c0ff3f4cd2b001fd0516ebaeffe1178db0f9e02edfc8d7826d1579"
+    },
+    {
+      "id": "aha-v002",
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/aha-v002.png",
+      "source_sheet_sha256": "5a742386ba3a61c189c3ff5a8d5d1a424e598c88b8205a24cbdfda924c68f588",
+      "reference_height_px": 427.15999999999997,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Head-to-peduncle horizontal mass and skull/torso thickness compared with canonical 938px trunk width and362px body ref. Fins/tail excluded; blink same1254 native anatomy."
+          }
+        ],
+        "common_ratio": 1.18,
+        "canonical_reference_height_px": 362,
+        "canonical_source": {
+          "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+          "bytes": 791743,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-aha-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-aha-v002-generation-v001.json",
+      "generation_record_sha256": "34b04447e1966b842a1192d847ecd9856b97f937584304f2137588c9dc183691"
+    },
+    {
+      "id": "cheer-v002",
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/cheer-v002.png",
+      "source_sheet_sha256": "d141b4f8801eb911b089093fe0778523e296fb97ab5fc8a0e824d6272da7a840",
+      "reference_height_px": 427.15999999999997,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Head-to-peduncle horizontal mass and skull/torso thickness compared with canonical 938px trunk width and362px body ref. Fins/tail excluded; blink same1254 native anatomy."
+          }
+        ],
+        "common_ratio": 1.18,
+        "canonical_reference_height_px": 362,
+        "canonical_source": {
+          "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+          "bytes": 791743,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-v002-generation-v001.json",
+      "generation_record_sha256": "7e7f26c1126a3708c526007ee82b8d50740a202d9a46f7004c4d709ad376df76"
+    },
+    {
+      "id": "species_a-v002",
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/species_a-v002.png",
+      "source_sheet_sha256": "2799d3c71b86e168127e23b077fc72b72e7ceb5f08bff21132eb74ace34c6f3b",
+      "reference_height_px": 427.15999999999997,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Head-to-peduncle horizontal mass and skull/torso thickness compared with canonical 938px trunk width and362px body ref. Fins/tail excluded; blink same1254 native anatomy."
+          }
+        ],
+        "common_ratio": 1.18,
+        "canonical_reference_height_px": 362,
+        "canonical_source": {
+          "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+          "bytes": 791743,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-v002-generation-v001.json",
+      "generation_record_sha256": "ffa0359537930d8af4a3aa6b54719abff2d9d477d59aae0ec5c4ec4382e0ce54"
+    },
+    {
+      "id": "species_b-v002",
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/species_b-v002.png",
+      "source_sheet_sha256": "b4692ab0964ff41c0ec8ceddecab03608de21578ce0e27b756e88111a398b6e3",
+      "reference_height_px": 427.15999999999997,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Head-to-peduncle horizontal mass and skull/torso thickness compared with canonical 938px trunk width and362px body ref. Fins/tail excluded; blink same1254 native anatomy."
+          }
+        ],
+        "common_ratio": 1.18,
+        "canonical_reference_height_px": 362,
+        "canonical_source": {
+          "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+          "bytes": 791743,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-v002-generation-v001.json",
+      "generation_record_sha256": "c49cc4387475ca85ca3e8d0d7036a015f9ecc468a35bc450d178e71692cb4855"
+    },
+    {
+      "id": "present_left-v003",
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/present_left-v003.png",
+      "source_sheet_sha256": "2f81e3de9d1a7644f6443f56811b050a794b9b9a4c90be51c8c679a27b2f20d0",
+      "reference_height_px": 427.15999999999997,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Corresponding trunk width1145 vs adopted938 and rounded head/trunk contour, axial trunkheight~417 vs362; shared1.18isotropic source scale based on body mass, excludes dorsal/tail/pectoral extension."
+          }
+        ],
+        "common_ratio": 1.18,
+        "canonical_reference_height_px": 362,
+        "canonical_source": {
+          "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+          "bytes": 791743,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Single native homologous head/trunk mass compared with unchanged adopted neutral and good8singles; no full-alpha/per-act fit."
+      },
+      "generation_input": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_left-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_left-v003-generation-v001.json",
+      "generation_record_sha256": "3943fe0fc94de320708201c912b4998868ae09545ac34d2578ed486bfb4c6b52"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        85,
+        488,
+        1023,
+        850
+      ],
+      "anchor_px": [
+        555,
+        670
+      ],
+      "reference_height_px": 362,
+      "anchor_kind": "anatomical-fish-body-centre",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Visual centre of head/torso mass; dorsal, ventral fins and caudal fin excluded from reference height.",
+      "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+      "source_manifest": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "cbac9277944e8d6d33e786cb2c685dd40d30b210b21bfaff6ecbe7cc8d12bd25",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "6cad9c84ad6544156fc1beb7afcdbc4411c6a9fb08695a26859185a4e7788b02",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "blink-v002",
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/frames/blink-blink-v002.png",
+      "sha256": "7a85ddfbf0c87601b826ef34df23f047f5d1a9f032e0020bedc3f9af86f46454",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        86,
+        487,
+        1023,
+        851
+      ],
+      "anchor_px": [
+        555,
+        670
+      ],
+      "anchor_kind": "anatomical-fish-body-centre",
+      "subject_bbox_px": [
+        86,
+        374,
+        1170,
+        904
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+      "reference_height_px": 362,
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/blink-v002.png",
+      "source_sheet_sha256": "d57aa5dd72afa2bee4f9d35b6ebd36e390539b125e37bd249b77a94e66a087a1",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 0,
+      "sheet_id": "greet-v003",
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/frames/greet-greet-v003.png",
+      "sha256": "db1a4f9faa05de5db7161a741467b79bd72791109b0ddb468f761dffb75f5de6",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        178,
+        340,
+        1202,
+        724
+      ],
+      "anchor_px": [
+        690,
+        532
+      ],
+      "anchor_kind": "anatomical-fish-body-centre",
+      "subject_bbox_px": [
+        178,
+        211,
+        1355,
+        796
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+      "reference_height_px": 390.96000000000004,
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/greet-v003.png",
+      "source_sheet_sha256": "54923290fc6976cac071d4770f2e58b99f1d91a9e7d8a538ab85c8489a1ecf1c",
+      "size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "sheet_id": "present_left-v003",
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/frames/present_left-present_left-v003.png",
+      "sha256": "ba42c49602724b57eb146bbe06766081132026bedd7597894bc7c48bd05d1ab1",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        115,
+        327,
+        1260,
+        744
+      ],
+      "anchor_px": [
+        687.5,
+        535.5
+      ],
+      "anchor_kind": "anatomical-fish-body-centre",
+      "subject_bbox_px": [
+        114,
+        175,
+        1440,
+        830
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Anatomical trunk mass centre excludes appendage projections/tail; swimming/floating support, no floor or feet invented.",
+      "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+      "reference_height_px": 427.15999999999997,
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/present_left-v003.png",
+      "source_sheet_sha256": "2f81e3de9d1a7644f6443f56811b050a794b9b9a4c90be51c8c679a27b2f20d0",
+      "size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "sheet_id": "present_right-v002",
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/frames/present_right-present_right-v002.png",
+      "sha256": "320f0969a28f05ebccf8c7201cccfb5bbbfdf56d2cc045a6bc21ae55a4088ae1",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        300,
+        330,
+        1381,
+        740
+      ],
+      "anchor_px": [
+        840.5,
+        535
+      ],
+      "anchor_kind": "anatomical-fish-body-centre",
+      "subject_bbox_px": [
+        131,
+        179,
+        1381,
+        814
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+      "reference_height_px": 427.15999999999997,
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/present_right-v002.png",
+      "source_sheet_sha256": "77e5c8e1c8340ca32b597ab5967d41b7db44f533841ee54baccf56959ede2140",
+      "size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "sheet_id": "think-v002",
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/frames/think-think-v002.png",
+      "sha256": "5b0ec988720ba00abd8f912cdef0fa10dfcc6dfefb648a4dc0c2145b6ebb7b13",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        124,
+        328,
+        1268,
+        760
+      ],
+      "anchor_px": [
+        696,
+        544
+      ],
+      "anchor_kind": "anatomical-fish-body-centre",
+      "subject_bbox_px": [
+        124,
+        179,
+        1418,
+        845
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+      "reference_height_px": 427.15999999999997,
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/think-v002.png",
+      "source_sheet_sha256": "621c22cbde02c51dbd7c504c7a483b1f40dee2fe4d80915580569af02ce73348",
+      "size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 0,
+      "sheet_id": "aha-v002",
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/frames/aha-aha-v002.png",
+      "sha256": "cab0e655c58f086c824d2331b73c0bcfb75ab86c9ccde1049ce9199738dc371c",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        97,
+        345,
+        1260,
+        750
+      ],
+      "anchor_px": [
+        678.5,
+        547.5
+      ],
+      "anchor_kind": "anatomical-fish-body-centre",
+      "subject_bbox_px": [
+        97,
+        183,
+        1437,
+        831
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+      "reference_height_px": 427.15999999999997,
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/aha-v002.png",
+      "source_sheet_sha256": "5a742386ba3a61c189c3ff5a8d5d1a424e598c88b8205a24cbdfda924c68f588",
+      "size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "sheet_id": "cheer-v002",
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/frames/cheer-cheer-v002.png",
+      "sha256": "2ea4eb7f62827a078f8a4205ebf20ca18c51a8ea2e2304b9ba3088cdc2754c6d",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        142,
+        330,
+        1240,
+        730
+      ],
+      "anchor_px": [
+        691,
+        530
+      ],
+      "anchor_kind": "anatomical-fish-body-centre",
+      "subject_bbox_px": [
+        142,
+        178,
+        1403,
+        825
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+      "reference_height_px": 427.15999999999997,
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/cheer-v002.png",
+      "source_sheet_sha256": "d141b4f8801eb911b089093fe0778523e296fb97ab5fc8a0e824d6272da7a840",
+      "size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 0,
+      "sheet_id": "species_a-v002",
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/frames/species_a-species_a-v002.png",
+      "sha256": "0a40f3c88817c6ff22b6309470fefef4988bd31dbe4a4eebccde84f3c6cd6458",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        142,
+        365,
+        1260,
+        738
+      ],
+      "anchor_px": [
+        701,
+        551.5
+      ],
+      "anchor_kind": "anatomical-fish-body-centre",
+      "subject_bbox_px": [
+        142,
+        217,
+        1418,
+        823
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+      "reference_height_px": 427.15999999999997,
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/species_a-v002.png",
+      "source_sheet_sha256": "2799d3c71b86e168127e23b077fc72b72e7ceb5f08bff21132eb74ace34c6f3b",
+      "size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "sheet_id": "species_b-v002",
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/frames/species_b-species_b-v002.png",
+      "sha256": "92a2e37e528c196fc93cba975fd3dcc6e8a047344a002c9ecac4680003c8bbaf",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        91,
+        330,
+        1240,
+        736
+      ],
+      "anchor_px": [
+        665.5,
+        533
+      ],
+      "anchor_kind": "anatomical-fish-body-centre",
+      "subject_bbox_px": [
+        91,
+        167,
+        1446,
+        829
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Floating fish prop. Consumer sets movement from body-centre anchor; no ground or foot support implied.",
+      "reference_height_px": 427.15999999999997,
+      "source_sheet": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/source/species_b-v002.png",
+      "source_sheet_sha256": "b4692ab0964ff41c0ec8ceddecab03608de21578ce0e27b756e88111a398b6e3",
+      "size_px": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        180,
+        180,
+        180
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        450,
+        450,
+        450,
+        450
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        350,
+        350
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-v002-generation-v001.json",
+        "sha256": "d0ac479ff7553bc1c08a468b61c0c46ce7ecce10443646043dc323d6aa9b287b",
+        "bytes": 4013
+      },
+      {
+        "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-greet-v003-generation-v001.json",
+        "sha256": "9e42baf6b419a1700d3a7f8f315be13d596d6c96611656bca52c71b6fed75cd3",
+        "bytes": 4502
+      },
+      {
+        "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-v002-generation-v001.json",
+        "sha256": "a0da7e733e22e40ba2d19ef1c87cbb3974703951e2b6fca2fea4f09f5dee986c",
+        "bytes": 3792
+      },
+      {
+        "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-think-v002-generation-v001.json",
+        "sha256": "b603ac5970c0ff3f4cd2b001fd0516ebaeffe1178db0f9e02edfc8d7826d1579",
+        "bytes": 3764
+      },
+      {
+        "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-aha-v002-generation-v001.json",
+        "sha256": "34b04447e1966b842a1192d847ecd9856b97f937584304f2137588c9dc183691",
+        "bytes": 3701
+      },
+      {
+        "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-v002-generation-v001.json",
+        "sha256": "7e7f26c1126a3708c526007ee82b8d50740a202d9a46f7004c4d709ad376df76",
+        "bytes": 3740
+      },
+      {
+        "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-v002-generation-v001.json",
+        "sha256": "ffa0359537930d8af4a3aa6b54719abff2d9d477d59aae0ec5c4ec4382e0ce54",
+        "bytes": 3734
+      },
+      {
+        "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-v002-generation-v001.json",
+        "sha256": "c49cc4387475ca85ca3e8d0d7036a015f9ecc468a35bc450d178e71692cb4855",
+        "bytes": 3741
+      },
+      {
+        "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_left-v003-generation-v001.json",
+        "sha256": "3943fe0fc94de320708201c912b4998868ae09545ac34d2578ed486bfb4c6b52",
+        "bytes": 4093
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/sakhalin-taimen/generation-batches/youtube-core-20261114-a-v001/qa/stock-adoption-v001.json",
+      "sha256": "659f9c392817e2cd555e99b0a4e2a2470c8c0e3b86e87734792176a4671e951f",
+      "bytes": 25837
+    }
+  ]
+}

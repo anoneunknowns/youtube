@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "oriental-stork",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/oriental-stork/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "e1c6117ceda49157147bdedb514f7faebb4f48ac69ed2f806d40aacc2f0f4a48",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      390,
+      273,
+      930,
+      995
+    ],
+    "anchor_px": [
+      604,
+      983
+    ],
+    "reference_height_px": 722,
+    "anchor_kind": "anatomical-prop-support",
+    "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+    "anchor_basis": "Rounded head/short curved neck and torso through feet, excluding long black bill; projected foot-base midpoint.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+    "source_manifest": "assets/library/characters/oriental-stork/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "3a30deb9e5b49080d379ef6e37ddde7557adb6fb61f6b8f07e75f40b58596cf1"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "e1c6117ceda49157147bdedb514f7faebb4f48ac69ed2f806d40aacc2f0f4a48",
+      "reference_height_px": 722,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "dc1e1f3cd92f41e020086d141a7f20f96782881c6e6a718e8ad23aac6506e557",
+      "reference_height_px": 342.91771019678,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/oriental-stork/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "e1c6117ceda49157147bdedb514f7faebb4f48ac69ed2f806d40aacc2f0f4a48",
+          "bytes": 500942,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 722,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 417.4,
+            "source_y": 103.4,
+            "canonical_span": [
+              406,
+              707
+            ],
+            "source_span": [
+              140,
+              287
+            ],
+            "ratio": 0.4883720930232558
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 489.6,
+            "source_y": 139.1,
+            "canonical_span": [
+              456,
+              680
+            ],
+            "source_span": [
+              133,
+              276
+            ],
+            "ratio": 0.6383928571428571
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 720.64,
+            "source_y": 253.34,
+            "canonical_span": [
+              393,
+              909
+            ],
+            "source_span": [
+              133,
+              365
+            ],
+            "ratio": 0.4496124031007752
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 807.28,
+            "source_y": 296.18,
+            "canonical_span": [
+              439,
+              881
+            ],
+            "source_span": [
+              154,
+              358
+            ],
+            "ratio": 0.46153846153846156
+          }
+        ],
+        "common_ratio": 0.4749552772808587,
+        "initial_roi_locator_only_visible_height_ratio": 0.49445983379501385,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.4198737684729061,
+        "visual_confirmation": {
+          "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "bb8cb1e860e8aac61203532ac64074385a7a204e94fe87a36d9611779c149d63",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "9a69cc13fa22f34604e585f0b8d3d2ae9171aee0454f77c4d2e149b12ae96549"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/oriental-stork/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "e1c6117ceda49157147bdedb514f7faebb4f48ac69ed2f806d40aacc2f0f4a48",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        390,
+        273,
+        930,
+        995
+      ],
+      "anchor_px": [
+        604,
+        983
+      ],
+      "reference_height_px": 722,
+      "anchor_kind": "anatomical-prop-support",
+      "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+      "anchor_basis": "Rounded head/short curved neck and torso through feet, excluding long black bill; projected foot-base midpoint.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "source_manifest": "assets/library/characters/oriental-stork/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "3a30deb9e5b49080d379ef6e37ddde7557adb6fb61f6b8f07e75f40b58596cf1",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "e1c6117ceda49157147bdedb514f7faebb4f48ac69ed2f806d40aacc2f0f4a48",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        428,
+        416
+      ],
+      "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "fb054833262821708a9345da1433cc50f5c7d0f79f3ac6921ab53cc89d11fe30",
+      "size_px": [
+        428,
+        416
+      ],
+      "visible": [
+        79,
+        32,
+        377,
+        389
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "dc1e1f3cd92f41e020086d141a7f20f96782881c6e6a718e8ad23aac6506e557",
+      "body_bbox_px": [
+        133,
+        32,
+        400,
+        389
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        79,
+        32,
+        377,
+        389
+      ],
+      "reference_height_px": 342.91771019678,
+      "anchor_px": [
+        228.487030411449,
+        383.3005366726297
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        223.5,
+        389
+      ],
+      "sole_points": [
+        [
+          194.0,
+          387
+        ],
+        [
+          253.0,
+          389
+        ]
+      ],
+      "sole_regions": [
+        [
+          175,
+          327,
+          209,
+          391
+        ],
+        [
+          232,
+          327,
+          269,
+          391
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        79,
+        32,
+        377,
+        389
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        428,
+        0,
+        844,
+        416
+      ],
+      "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "33bd1869c83eff474d1afc675be13676b6a2bb9026db8959a12d25c6defafaf7",
+      "size_px": [
+        416,
+        416
+      ],
+      "visible": [
+        48,
+        32,
+        362,
+        389
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "dc1e1f3cd92f41e020086d141a7f20f96782881c6e6a718e8ad23aac6506e557",
+      "body_bbox_px": [
+        102,
+        32,
+        369,
+        389
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        48,
+        32,
+        362,
+        389
+      ],
+      "reference_height_px": 342.91771019678,
+      "anchor_px": [
+        208.487030411449,
+        383.3005366726297
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        203.5,
+        389
+      ],
+      "sole_points": [
+        [
+          174.0,
+          388
+        ],
+        [
+          233.0,
+          389
+        ]
+      ],
+      "sole_regions": [
+        [
+          149,
+          327,
+          210,
+          391
+        ],
+        [
+          208,
+          327,
+          268,
+          391
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        48,
+        32,
+        362,
+        389
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        844,
+        0,
+        1263,
+        416
+      ],
+      "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "3a4d114f9639b5b4281e610b82b4ec36a11fd507246fd392e37b53a0768cacf8",
+      "size_px": [
+        419,
+        416
+      ],
+      "visible": [
+        39,
+        31,
+        368,
+        389
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "dc1e1f3cd92f41e020086d141a7f20f96782881c6e6a718e8ad23aac6506e557",
+      "body_bbox_px": [
+        94,
+        31,
+        361,
+        389
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        39,
+        31,
+        368,
+        389
+      ],
+      "reference_height_px": 342.91771019678,
+      "anchor_px": [
+        226.237030411449,
+        383.3005366726297
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        221.25,
+        389
+      ],
+      "sole_points": [
+        [
+          191.5,
+          387
+        ],
+        [
+          251.0,
+          389
+        ]
+      ],
+      "sole_regions": [
+        [
+          174,
+          327,
+          207,
+          391
+        ],
+        [
+          230,
+          327,
+          267,
+          391
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        39,
+        31,
+        368,
+        389
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        416,
+        428,
+        822
+      ],
+      "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "137107aa2ddc03c899f9571456519a4d3b52294c947a61c97955d2b84aef3663",
+      "size_px": [
+        428,
+        406
+      ],
+      "visible": [
+        68,
+        27,
+        369,
+        381
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "dc1e1f3cd92f41e020086d141a7f20f96782881c6e6a718e8ad23aac6506e557",
+      "body_bbox_px": [
+        122,
+        27,
+        387,
+        381
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        68,
+        27,
+        369,
+        381
+      ],
+      "reference_height_px": 342.91771019678,
+      "anchor_px": [
+        228.737030411449,
+        375.3005366726297
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        223.75,
+        381
+      ],
+      "sole_points": [
+        [
+          194.0,
+          381
+        ],
+        [
+          253.5,
+          380
+        ]
+      ],
+      "sole_regions": [
+        [
+          166,
+          319,
+          215,
+          383
+        ],
+        [
+          236,
+          319,
+          273,
+          383
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        68,
+        27,
+        369,
+        381
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        428,
+        416,
+        844,
+        822
+      ],
+      "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "8f5d0fe0659cb45d576fc7da38e31a5d31d926fe0fb7b858b3769a1ff526db53",
+      "size_px": [
+        416,
+        406
+      ],
+      "visible": [
+        80,
+        30,
+        356,
+        381
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "dc1e1f3cd92f41e020086d141a7f20f96782881c6e6a718e8ad23aac6506e557",
+      "body_bbox_px": [
+        133,
+        30,
+        396,
+        381
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        80,
+        30,
+        356,
+        381
+      ],
+      "reference_height_px": 342.91771019678,
+      "anchor_px": [
+        208.237030411449,
+        375.3005366726297
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        203.25,
+        381
+      ],
+      "sole_points": [
+        [
+          173.5,
+          380
+        ],
+        [
+          233.0,
+          381
+        ]
+      ],
+      "sole_regions": [
+        [
+          148,
+          319,
+          209,
+          383
+        ],
+        [
+          207,
+          319,
+          267,
+          383
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        80,
+        30,
+        356,
+        381
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        844,
+        416,
+        1263,
+        822
+      ],
+      "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "1ef7be15676a2e9102f0ede0e9fc48447e630f31e3f3f0778ef7ad9399792993",
+      "size_px": [
+        419,
+        406
+      ],
+      "visible": [
+        47,
+        27,
+        362,
+        381
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "dc1e1f3cd92f41e020086d141a7f20f96782881c6e6a718e8ad23aac6506e557",
+      "body_bbox_px": [
+        101,
+        27,
+        366,
+        381
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        47,
+        27,
+        362,
+        381
+      ],
+      "reference_height_px": 342.91771019678,
+      "anchor_px": [
+        216.737030411449,
+        375.3005366726297
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        211.75,
+        381
+      ],
+      "sole_points": [
+        [
+          181.0,
+          380
+        ],
+        [
+          242.5,
+          381
+        ]
+      ],
+      "sole_regions": [
+        [
+          155,
+          319,
+          218,
+          383
+        ],
+        [
+          216,
+          319,
+          276,
+          383
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        47,
+        27,
+        362,
+        381
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        822,
+        428,
+        1246
+      ],
+      "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "3b3d363e1dd0f68e8301b4339c18ad9bef92e57625eb41639e9a43d00dce85dc",
+      "size_px": [
+        428,
+        424
+      ],
+      "visible": [
+        50,
+        26,
+        385,
+        389
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "dc1e1f3cd92f41e020086d141a7f20f96782881c6e6a718e8ad23aac6506e557",
+      "body_bbox_px": [
+        105,
+        26,
+        377,
+        389
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        50,
+        26,
+        385,
+        389
+      ],
+      "reference_height_px": 342.91771019678,
+      "anchor_px": [
+        227.737030411449,
+        383.3005366726297
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        222.75,
+        389
+      ],
+      "sole_points": [
+        [
+          191.0,
+          388
+        ],
+        [
+          254.5,
+          389
+        ]
+      ],
+      "sole_regions": [
+        [
+          166,
+          327,
+          228,
+          391
+        ],
+        [
+          227,
+          327,
+          288,
+          391
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        50,
+        26,
+        385,
+        389
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        428,
+        822,
+        844,
+        1246
+      ],
+      "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "3b16fd89cf0bbc3793206c866fbc672d41f44f6aa2495f023f915aae1d3aa38b",
+      "size_px": [
+        416,
+        424
+      ],
+      "visible": [
+        52,
+        27,
+        378,
+        389
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "dc1e1f3cd92f41e020086d141a7f20f96782881c6e6a718e8ad23aac6506e557",
+      "body_bbox_px": [
+        107,
+        27,
+        378,
+        389
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        52,
+        27,
+        378,
+        389
+      ],
+      "reference_height_px": 342.91771019678,
+      "anchor_px": [
+        199.237030411449,
+        383.3005366726297
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        194.25,
+        389
+      ],
+      "sole_points": [
+        [
+          163.5,
+          388
+        ],
+        [
+          225.0,
+          389
+        ]
+      ],
+      "sole_regions": [
+        [
+          138,
+          327,
+          197,
+          391
+        ],
+        [
+          199,
+          327,
+          259,
+          391
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        52,
+        27,
+        378,
+        389
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        844,
+        822,
+        1263,
+        1246
+      ],
+      "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "2176e3c8b86f3e7fc144182ab30841e1510f97213c7fd1b61e32ff27f3691e3e",
+      "size_px": [
+        419,
+        424
+      ],
+      "visible": [
+        52,
+        27,
+        355,
+        388
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "dc1e1f3cd92f41e020086d141a7f20f96782881c6e6a718e8ad23aac6506e557",
+      "body_bbox_px": [
+        107,
+        27,
+        377,
+        388
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        52,
+        27,
+        355,
+        388
+      ],
+      "reference_height_px": 342.91771019678,
+      "anchor_px": [
+        208.237030411449,
+        382.3005366726297
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        203.25,
+        388
+      ],
+      "sole_points": [
+        [
+          173.0,
+          388
+        ],
+        [
+          233.5,
+          388
+        ]
+      ],
+      "sole_regions": [
+        [
+          147,
+          326,
+          210,
+          390
+        ],
+        [
+          208,
+          326,
+          268,
+          390
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        52,
+        27,
+        355,
+        388
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "9a69cc13fa22f34604e585f0b8d3d2ae9171aee0454f77c4d2e149b12ae96549",
+        "bytes": 5782
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/oriental-stork/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "805bd1221f02f1d92b7355d2546be19dd1a41b39cfef046a9393367d087690ab",
+      "bytes": 7772
+    }
+  ]
+}

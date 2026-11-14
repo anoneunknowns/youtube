@@ -1,0 +1,935 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "malayan-tapir",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-c-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/malayan-tapir/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "72a959db074512adb934de3433c57dfb42c67bb8ae8ea5997de0ba1c1825133d",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      293,
+      216,
+      939,
+      1184
+    ],
+    "anchor_px": [
+      612,
+      1177
+    ],
+    "reference_height_px": 968,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of the two short support feet; protruding ears excluded from skull-to-foot body reference.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/malayan-tapir/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "ca26a375fc39aeb22c0067db6c3d987c307974cd2ea89772369e148819980ced"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "72a959db074512adb934de3433c57dfb42c67bb8ae8ea5997de0ba1c1825133d",
+      "reference_height_px": 968,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "957004be55afd51ee07802417d2d7958206e17d581d3b485a79b4ad00b3f284a",
+      "reference_height_px": 353.95866454689985,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/malayan-tapir/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "72a959db074512adb934de3433c57dfb42c67bb8ae8ea5997de0ba1c1825133d",
+          "bytes": 943586,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 968,
+        "landmarks": [
+          {
+            "name": "upper-head-width",
+            "canonical_y": 350,
+            "source_y": 92,
+            "canonical_span_px": [
+              353,
+              909
+            ],
+            "source_span_px": [
+              89,
+              302
+            ],
+            "ratio": 0.3830935251798561,
+            "used_for_scale": true
+          },
+          {
+            "name": "mid-head-width",
+            "canonical_y": 450,
+            "source_y": 130,
+            "canonical_span_px": [
+              303,
+              929
+            ],
+            "source_span_px": [
+              77,
+              305
+            ],
+            "ratio": 0.36421725239616615,
+            "used_for_scale": true
+          },
+          {
+            "name": "lower-head-width",
+            "canonical_y": 550,
+            "source_y": 168,
+            "canonical_span_px": [
+              300,
+              929
+            ],
+            "source_span_px": [
+              76,
+              306
+            ],
+            "ratio": 0.3656597774244833,
+            "used_for_scale": true
+          }
+        ],
+        "common_ratio": 0.3656597774244833,
+        "reference_height_px": 353.95866454689985,
+        "crosscheck": "Head/shorttrunk through2feet; skulltop216→39 andfeet1184→397 approximatelyfactor0.37. Large ears excluded from bodyref but kept in visibleenvelope. Nose sweep is a small intended motion. Canonical fresh blink selected instead of provisional core blink; remaining8 core states unchanged.",
+        "method": "Explicit corresponding anatomical head spans, median shared source-sheet scale; torso/feet crosschecked on actual same-scale diagnostics, never per-pose fit.",
+        "canonical_paired_sole_points_px": [
+          [
+            501.5,
+            1183
+          ],
+          [
+            725.5,
+            1183
+          ]
+        ],
+        "canonical_source_foot_point_px": [
+          613.5,
+          1183
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -1.5,
+          -6
+        ],
+        "scope": "Approximate anatomical registration, not subpixel motion acceptance."
+      },
+      "generation_input": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "cd0e274f1d963ab2aa1be0acd8a0000b1004e242217c0123f4415db3570b86c8"
+    },
+    {
+      "id": "blink-single-v003",
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v003.png",
+      "source_sheet_sha256": "77ce21a04392324d25713ca595b674dde1661f0a814c63cf948106212d864ff0",
+      "reference_height_px": 971.0926517571884,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/malayan-tapir/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "72a959db074512adb934de3433c57dfb42c67bb8ae8ea5997de0ba1c1825133d",
+          "bytes": 943586,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 968,
+        "landmarks": [
+          {
+            "name": "upper-head-width",
+            "canonical_y": 350,
+            "source_y": 350,
+            "canonical_span_px": [
+              353,
+              909
+            ],
+            "source_span_px": [
+              353,
+              910
+            ],
+            "ratio": 1.0017985611510791,
+            "used_for_scale": true
+          },
+          {
+            "name": "mid-head-width",
+            "canonical_y": 450,
+            "source_y": 450,
+            "canonical_span_px": [
+              303,
+              929
+            ],
+            "source_span_px": [
+              302,
+              930
+            ],
+            "ratio": 1.0031948881789137,
+            "used_for_scale": true
+          },
+          {
+            "name": "lower-head-width",
+            "canonical_y": 550,
+            "source_y": 550,
+            "canonical_span_px": [
+              300,
+              929
+            ],
+            "source_span_px": [
+              298,
+              931
+            ],
+            "ratio": 1.0063593004769475,
+            "used_for_scale": true
+          }
+        ],
+        "common_ratio": 1.0031948881789137,
+        "reference_height_px": 971.0926517571884,
+        "crosscheck": "Fresh exact original silhouette, keeps skull216/chin704/sole1184 and changes eyes only.",
+        "method": "Explicit corresponding anatomical head spans, median shared source-sheet scale; torso/feet crosschecked on actual same-scale diagnostics, never per-pose fit.",
+        "canonical_paired_sole_points_px": [
+          [
+            501.5,
+            1183
+          ],
+          [
+            725.5,
+            1183
+          ]
+        ],
+        "canonical_source_foot_point_px": [
+          613.5,
+          1183
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -1.5,
+          -6
+        ],
+        "scope": "Approximate anatomical registration, not subpixel motion acceptance."
+      },
+      "generation_input": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v003-generation-v001.json",
+      "generation_record_sha256": "687f39f7b11f9f54ee3b9141707febc93cb5ed58972015525297e4f6cff628df"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/malayan-tapir/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "72a959db074512adb934de3433c57dfb42c67bb8ae8ea5997de0ba1c1825133d",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        293,
+        216,
+        939,
+        1184
+      ],
+      "anchor_px": [
+        612,
+        1177
+      ],
+      "reference_height_px": 968,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of the two short support feet; protruding ears excluded from skull-to-foot body reference.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/malayan-tapir/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "ca26a375fc39aeb22c0067db6c3d987c307974cd2ea89772369e148819980ced",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "72a959db074512adb934de3433c57dfb42c67bb8ae8ea5997de0ba1c1825133d",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v003.png",
+      "sha256": "77ce21a04392324d25713ca595b674dde1661f0a814c63cf948106212d864ff0",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "blink-single-v003",
+      "body_bbox_px": [
+        289,
+        215,
+        937,
+        1186
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        292,
+        133,
+        958,
+        1186
+      ],
+      "anchor_px": [
+        611.7452076677316,
+        1178.9808306709265
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        613.25,
+        1185
+      ],
+      "paired_sole_points_px": [
+        [
+          500.5,
+          1185
+        ],
+        [
+          726.0,
+          1185
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 971.0926517571884,
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v003.png",
+      "source_sheet_sha256": "77ce21a04392324d25713ca595b674dde1661f0a814c63cf948106212d864ff0",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/frames/greet-v002.png",
+      "sha256": "eb90803e91baebe94dfb7dc81f2010ab9a779ae39c4f585eadb315745950ff26",
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        407
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        84,
+        42,
+        320,
+        397
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        72,
+        8,
+        324,
+        397
+      ],
+      "anchor_px": [
+        201.70151033386327,
+        393.8060413354531
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        202.25,
+        396
+      ],
+      "paired_sole_points_px": [
+        [
+          159.5,
+          396
+        ],
+        [
+          245.0,
+          396
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 353.95866454689985,
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "957004be55afd51ee07802417d2d7958206e17d581d3b485a79b4ad00b3f284a",
+      "size_px": [
+        418,
+        407
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/frames/present_left-v002.png",
+      "sha256": "df58ed3aca54d19adf21d6f0cb61b8048c83464af1d90d46e8595a3961354802",
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        407
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        71,
+        42,
+        308,
+        397
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        39,
+        8,
+        318,
+        397
+      ],
+      "anchor_px": [
+        188.95151033386327,
+        393.8060413354531
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        189.5,
+        396
+      ],
+      "paired_sole_points_px": [
+        [
+          146.5,
+          396
+        ],
+        [
+          232.5,
+          396
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 353.95866454689985,
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "957004be55afd51ee07802417d2d7958206e17d581d3b485a79b4ad00b3f284a",
+      "size_px": [
+        418,
+        407
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/frames/present_right-v002.png",
+      "sha256": "50329a49e7f332b242412617d78a1f7452aac42a9dbec75e9dbc4dbfea50e7d1",
+      "crop_from_sheet_xyxy": [
+        0,
+        407,
+        418,
+        828
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        103,
+        54,
+        340,
+        409
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        97,
+        22,
+        367,
+        409
+      ],
+      "anchor_px": [
+        220.95151033386327,
+        405.8060413354531
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        221.5,
+        408
+      ],
+      "paired_sole_points_px": [
+        [
+          178.5,
+          408
+        ],
+        [
+          264.5,
+          408
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 353.95866454689985,
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "957004be55afd51ee07802417d2d7958206e17d581d3b485a79b4ad00b3f284a",
+      "size_px": [
+        418,
+        421
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/frames/think-v002.png",
+      "sha256": "feb9e81c5b2524fc821165a390efcbe6b7ef4138c4694e41129b5767adbd1cca",
+      "crop_from_sheet_xyxy": [
+        418,
+        407,
+        836,
+        828
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        93,
+        54,
+        329,
+        409
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        70,
+        11,
+        328,
+        409
+      ],
+      "anchor_px": [
+        210.20151033386327,
+        405.8060413354531
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        210.75,
+        408
+      ],
+      "paired_sole_points_px": [
+        [
+          168.0,
+          408
+        ],
+        [
+          253.5,
+          408
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 353.95866454689985,
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "957004be55afd51ee07802417d2d7958206e17d581d3b485a79b4ad00b3f284a",
+      "size_px": [
+        418,
+        421
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/frames/aha-v002.png",
+      "sha256": "f1c716ca91d5a5ae44934e2097dd6231ac1c355cd970fb35459522657d0c61c2",
+      "crop_from_sheet_xyxy": [
+        836,
+        407,
+        1254,
+        828
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        76,
+        54,
+        312,
+        409
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        74,
+        22,
+        313,
+        409
+      ],
+      "anchor_px": [
+        193.20151033386327,
+        405.8060413354531
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        193.75,
+        408
+      ],
+      "paired_sole_points_px": [
+        [
+          151.0,
+          408
+        ],
+        [
+          236.5,
+          408
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 353.95866454689985,
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "957004be55afd51ee07802417d2d7958206e17d581d3b485a79b4ad00b3f284a",
+      "size_px": [
+        418,
+        421
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/frames/cheer-v002.png",
+      "sha256": "ac8cd47586738d725c44436d52e134dd83ea5eb51ec401ceccee9e5cc7d148eb",
+      "crop_from_sheet_xyxy": [
+        0,
+        828,
+        418,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        103,
+        55,
+        340,
+        410
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        72,
+        14,
+        367,
+        410
+      ],
+      "anchor_px": [
+        220.95151033386327,
+        406.8060413354531
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        221.5,
+        409
+      ],
+      "paired_sole_points_px": [
+        [
+          178.0,
+          409
+        ],
+        [
+          265.0,
+          409
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 353.95866454689985,
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "957004be55afd51ee07802417d2d7958206e17d581d3b485a79b4ad00b3f284a",
+      "size_px": [
+        418,
+        426
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/frames/species_a-v002.png",
+      "sha256": "bc5a6ac4785a874989db1633b62f05c3ff1d10c52618ce87a0774db473c8eb12",
+      "crop_from_sheet_xyxy": [
+        418,
+        828,
+        836,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        87,
+        55,
+        324,
+        410
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        69,
+        14,
+        321,
+        410
+      ],
+      "anchor_px": [
+        204.95151033386327,
+        406.8060413354531
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        205.5,
+        409
+      ],
+      "paired_sole_points_px": [
+        [
+          161.5,
+          409
+        ],
+        [
+          249.5,
+          409
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 353.95866454689985,
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "957004be55afd51ee07802417d2d7958206e17d581d3b485a79b4ad00b3f284a",
+      "size_px": [
+        418,
+        426
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/frames/species_b-v002.png",
+      "sha256": "3cb5652bc333eb59a725c8346811893d2b8cba69e4af8e33cec7806c7c42521e",
+      "crop_from_sheet_xyxy": [
+        836,
+        828,
+        1254,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        73,
+        55,
+        309,
+        410
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        71,
+        13,
+        317,
+        410
+      ],
+      "anchor_px": [
+        190.70151033386327,
+        406.8060413354531
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        191.25,
+        409
+      ],
+      "paired_sole_points_px": [
+        [
+          147.5,
+          409
+        ],
+        [
+          235.0,
+          409
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 353.95866454689985,
+      "source_sheet": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "957004be55afd51ee07802417d2d7958206e17d581d3b485a79b4ad00b3f284a",
+      "size_px": [
+        418,
+        426
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "cd0e274f1d963ab2aa1be0acd8a0000b1004e242217c0123f4415db3570b86c8",
+        "bytes": 5252
+      },
+      {
+        "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v003-generation-v001.json",
+        "sha256": "687f39f7b11f9f54ee3b9141707febc93cb5ed58972015525297e4f6cff628df",
+        "bytes": 3125
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/malayan-tapir/generation-batches/youtube-core-20261114-c-v001/qa/stock-adoption-v001.json",
+      "sha256": "4eddc4187d72d7254f6967b69a5c909558b2df35b4ea5182bbc79ba9f4ea8b8c",
+      "bytes": 8050
+    }
+  ]
+}

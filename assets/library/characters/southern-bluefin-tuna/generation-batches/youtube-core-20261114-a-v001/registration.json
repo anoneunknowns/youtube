@@ -1,0 +1,680 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "southern-bluefin-tuna",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-a-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "fbf8eb85b04153396c7e763c69fde3d3a744865ba15c3a4fa1fb07471489abb5",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      143.0,
+      489.0,
+      950.0,
+      849.0
+    ],
+    "anchor_px": [
+      540.0,
+      670.0
+    ],
+    "reference_height_px": 360.0,
+    "anchor_kind": "floating_body_center",
+    "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+    "anchor_basis": "Head/trunk reference excludes projecting fins and tail; floating center anchor implies no ground contact. At140px reference height the full animal is about385px wide as a background prop.",
+    "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+    "source_manifest": "assets/library/characters/southern-bluefin-tuna/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "8d044612c6e1abd3616bffa0ec0300eceb7fbce667045d39b78c157ecb76a36b"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "fbf8eb85b04153396c7e763c69fde3d3a744865ba15c3a4fa1fb07471489abb5",
+      "reference_height_px": 360.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "4603f5ed1e806c3532bc91c292be9c0e32e4084373d833693fbce011a79a6279",
+      "reference_height_px": 131.4,
+      "calibration": {
+        "landmarks": [
+          {
+            "canonical_body_reference_px": 360.0,
+            "sheet_reference_px": 131.4,
+            "observations": "Manual native homologous head breadth, head-to-torso relation and neck-to-support comparison across sheet. Long cottontail ears and pika ear tips excluded as in canonical. Tail/wing extensions excluded from reference. One common isotropic scale, not nine fitted bbox heights."
+          }
+        ],
+        "common_ratio": 0.365,
+        "canonical_reference_height_px": 360.0,
+        "canonical_source": {
+          "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "fbf8eb85b04153396c7e763c69fde3d3a744865ba15c3a4fa1fb07471489abb5",
+          "bytes": 669815,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual common original-sheet head and torso scale, approximate anatomical registration awaiting independent QA; preserves intentional gesture deformation."
+      },
+      "generation_input": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "d05450c6d6db962f4e6d44a93ceeb6fa1617161c3fcd3cd8956828c2e33a050e"
+    },
+    {
+      "id": "present_right-v002",
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/present_right-v002.png",
+      "source_sheet_sha256": "838c0d8476ace625d8c9accf7146aaf231a52cf4d4ed91c6759d9ea3113bad2e",
+      "reference_height_px": 403.20000000000005,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_body_rectangle_px": [
+              353,
+              335,
+              1255,
+              739
+            ],
+            "observations": "Fresh single measured against adopted neutral homologous head/trunk dimensions. Fin/tail and barbels excluded for fish; bat ears included as in canonical."
+          }
+        ],
+        "common_ratio": 1.12,
+        "canonical_reference_height_px": 360.0,
+        "canonical_source": {
+          "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "fbf8eb85b04153396c7e763c69fde3d3a744865ba15c3a4fa1fb07471489abb5",
+          "bytes": 669815,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Native anatomical head/trunk breadth and thickness comparison; one isotropic reference for this independent original. It is not mechanically mirrored or fitted to total alpha bounds."
+      },
+      "generation_input": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-v002-generation-v001.json",
+      "generation_record_sha256": "7ff74356ae75050dfa30c6702ebdec4e3159729f0e32c18110ac9088caa32eeb"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "fbf8eb85b04153396c7e763c69fde3d3a744865ba15c3a4fa1fb07471489abb5",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        143.0,
+        489.0,
+        950.0,
+        849.0
+      ],
+      "anchor_px": [
+        540.0,
+        670.0
+      ],
+      "reference_height_px": 360.0,
+      "anchor_kind": "floating_body_center",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Head/trunk reference excludes projecting fins and tail; floating center anchor implies no ground contact. At140px reference height the full animal is about385px wide as a background prop.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "source_manifest": "assets/library/characters/southern-bluefin-tuna/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "8d044612c6e1abd3616bffa0ec0300eceb7fbce667045d39b78c157ecb76a36b",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "fbf8eb85b04153396c7e763c69fde3d3a744865ba15c3a4fa1fb07471489abb5",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/poses/blink-v001.png",
+      "sha256": "057613af27e49abe52aad208e5fccdc2a177f1dda64e19c075b19359ea38c861",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "body_bbox_px": [
+        45,
+        178,
+        342,
+        308
+      ],
+      "anchor_px": [
+        193.5,
+        243.0
+      ],
+      "anchor_kind": "floating_body_center",
+      "subject_bbox_px": [
+        42,
+        132,
+        409,
+        338
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visual head/trunk centre through caudal peduncle; projecting pectoral/dorsal/ventral fins and crescent tail excluded. Floating centre, no foot anchor.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 131.4,
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "4603f5ed1e806c3532bc91c292be9c0e32e4084373d833693fbce011a79a6279",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/poses/greet-v001.png",
+      "sha256": "80e9835cdc5e08b8d43a98c11ebe3ba6fdf86aea73d53da41bd917427818c8a1",
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "body_bbox_px": [
+        30,
+        177,
+        324,
+        307
+      ],
+      "anchor_px": [
+        177.0,
+        242.0
+      ],
+      "anchor_kind": "floating_body_center",
+      "subject_bbox_px": [
+        26,
+        133,
+        388,
+        338
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visual head/trunk centre through caudal peduncle; projecting pectoral/dorsal/ventral fins and crescent tail excluded. Floating centre, no foot anchor.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 131.4,
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "4603f5ed1e806c3532bc91c292be9c0e32e4084373d833693fbce011a79a6279",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/poses/present_left-v001.png",
+      "sha256": "12cbc81058052c7fda95f5c473da7e1540163621a74e384ce843f26d681c1c07",
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "body_bbox_px": [
+        7,
+        178,
+        310,
+        308
+      ],
+      "anchor_px": [
+        158.5,
+        243.0
+      ],
+      "anchor_kind": "floating_body_center",
+      "subject_bbox_px": [
+        8,
+        134,
+        374,
+        337
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visual head/trunk centre through caudal peduncle; projecting pectoral/dorsal/ventral fins and crescent tail excluded. Floating centre, no foot anchor.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 131.4,
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "4603f5ed1e806c3532bc91c292be9c0e32e4084373d833693fbce011a79a6279",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "sheet_id": "present_right-v002",
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/frames/present_right-present_right-v002.png",
+      "sha256": "0cc4458da84c7f7fefa1621dbcb420ebfcbf4cb28ac9f8d06a65a5ba366b2c49",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        353,
+        335,
+        1255,
+        739
+      ],
+      "anchor_px": [
+        804,
+        537
+      ],
+      "anchor_kind": "floating_body_center",
+      "subject_bbox_px": [
+        161,
+        201,
+        1351,
+        815
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Floating anatomical head/trunk center excluding fins/tail/barbels; no ground support.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 403.20000000000005,
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/present_right-v002.png",
+      "source_sheet_sha256": "838c0d8476ace625d8c9accf7146aaf231a52cf4d4ed91c6759d9ea3113bad2e",
+      "size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/poses/think-v001.png",
+      "sha256": "db374bdecf484c2bf26a23300ec4ee4719bb343704768698da8ed1c78824c7b8",
+      "crop_from_sheet_xyxy": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "body_bbox_px": [
+        30,
+        148,
+        328,
+        276
+      ],
+      "anchor_px": [
+        179.0,
+        212.0
+      ],
+      "anchor_kind": "floating_body_center",
+      "subject_bbox_px": [
+        29,
+        93,
+        394,
+        295
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visual head/trunk centre through caudal peduncle; projecting pectoral/dorsal/ventral fins and crescent tail excluded. Floating centre, no foot anchor.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 131.4,
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "4603f5ed1e806c3532bc91c292be9c0e32e4084373d833693fbce011a79a6279",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/poses/aha-v001.png",
+      "sha256": "bf0ab130047f6f18f116ebce5baac5575ea00042b77bb7c154c64e507b2bde48",
+      "crop_from_sheet_xyxy": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "body_bbox_px": [
+        20,
+        119,
+        314,
+        253
+      ],
+      "anchor_px": [
+        167.0,
+        186.0
+      ],
+      "anchor_kind": "floating_body_center",
+      "subject_bbox_px": [
+        15,
+        81,
+        374,
+        283
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visual head/trunk centre through caudal peduncle; projecting pectoral/dorsal/ventral fins and crescent tail excluded. Floating centre, no foot anchor.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 131.4,
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "4603f5ed1e806c3532bc91c292be9c0e32e4084373d833693fbce011a79a6279",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/poses/cheer-v001.png",
+      "sha256": "26d67f7e6a63e0cd4cd76ab1290d31059c636255258d697ffc7b3825fe965da9",
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "body_bbox_px": [
+        44,
+        112,
+        340,
+        244
+      ],
+      "anchor_px": [
+        192.0,
+        178.0
+      ],
+      "anchor_kind": "floating_body_center",
+      "subject_bbox_px": [
+        41,
+        38,
+        407,
+        251
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visual head/trunk centre through caudal peduncle; projecting pectoral/dorsal/ventral fins and crescent tail excluded. Floating centre, no foot anchor.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 131.4,
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "4603f5ed1e806c3532bc91c292be9c0e32e4084373d833693fbce011a79a6279",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/poses/species_a-v001.png",
+      "sha256": "e11baa5e6645e8a648d5c598424c99943aa9844917d8a9a092aa8cf57fe56352",
+      "crop_from_sheet_xyxy": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "body_bbox_px": [
+        29,
+        109,
+        325,
+        241
+      ],
+      "anchor_px": [
+        177.0,
+        175.0
+      ],
+      "anchor_kind": "floating_body_center",
+      "subject_bbox_px": [
+        26,
+        43,
+        391,
+        250
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visual head/trunk centre through caudal peduncle; projecting pectoral/dorsal/ventral fins and crescent tail excluded. Floating centre, no foot anchor.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 131.4,
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "4603f5ed1e806c3532bc91c292be9c0e32e4084373d833693fbce011a79a6279",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/poses/species_b-v001.png",
+      "sha256": "db133e4cc802094744e7ca4467e33e156136852ceec797c7d9a6a6eeb258ce11",
+      "crop_from_sheet_xyxy": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        10,
+        114,
+        311,
+        245
+      ],
+      "anchor_px": [
+        160.5,
+        179.5
+      ],
+      "anchor_kind": "floating_body_center",
+      "subject_bbox_px": [
+        8,
+        42,
+        382,
+        250
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visual head/trunk centre through caudal peduncle; projecting pectoral/dorsal/ventral fins and crescent tail excluded. Floating centre, no foot anchor.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 131.4,
+      "source_sheet": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "4603f5ed1e806c3532bc91c292be9c0e32e4084373d833693fbce011a79a6279",
+      "size_px": [
+        418,
+        418
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        180,
+        180,
+        180
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        450,
+        450,
+        450,
+        450
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        350,
+        350
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "d05450c6d6db962f4e6d44a93ceeb6fa1617161c3fcd3cd8956828c2e33a050e",
+        "bytes": 5867
+      },
+      {
+        "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-v002-generation-v001.json",
+        "sha256": "7ff74356ae75050dfa30c6702ebdec4e3159729f0e32c18110ac9088caa32eeb",
+        "bytes": 4386
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/southern-bluefin-tuna/generation-batches/youtube-core-20261114-a-v001/qa/stock-adoption-v001.json",
+      "sha256": "5ae401064291420c25519d801b0ee0135c712b64887da5912a95a59c93c5659e",
+      "bytes": 14176
+    }
+  ]
+}

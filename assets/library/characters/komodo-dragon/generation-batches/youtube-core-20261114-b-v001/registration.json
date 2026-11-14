@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "komodo-dragon",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/komodo-dragon/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "6d4d2001a9b5a2bf5cbb333bc0834e7ad21707e51047befeab287827b5a06c54",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      264.0,
+      165.0,
+      944.0,
+      1181.0
+    ],
+    "anchor_px": [
+      600.0,
+      1175.0
+    ],
+    "reference_height_px": 1016.0,
+    "anchor_kind": "anatomical_feet_support",
+    "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+    "anchor_basis": "Body reference excludes side tail, support anchor is the projected middle of the two short foot bottoms.",
+    "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+    "source_manifest": "assets/library/characters/komodo-dragon/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "cfb8e60bc09d60ccb5c39b21e7748bde4d9ce3110a46c5efc26985a785189459"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "6d4d2001a9b5a2bf5cbb333bc0834e7ad21707e51047befeab287827b5a06c54",
+      "reference_height_px": 1016.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0113322819a56b46660790529e542945676bc43e47e9d64c23381db6a027c574",
+      "reference_height_px": 370.8918100339961,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/komodo-dragon/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "6d4d2001a9b5a2bf5cbb333bc0834e7ad21707e51047befeab287827b5a06c54",
+          "bytes": 1075393,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1016.0,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 368.20000000000005,
+            "source_y": 89.80000000000001,
+            "canonical_span": [
+              310,
+              901
+            ],
+            "source_span": [
+              106,
+              318
+            ],
+            "ratio": 0.3587140439932318
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 469.8,
+            "source_y": 126.70000000000002,
+            "canonical_span": [
+              264,
+              944
+            ],
+            "source_span": [
+              88,
+              332
+            ],
+            "ratio": 0.3588235294117647
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 794.92,
+            "source_y": 244.78,
+            "canonical_span": [
+              327,
+              873
+            ],
+            "source_span": [
+              104,
+              335
+            ],
+            "ratio": 0.4230769230769231
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 916.84,
+            "source_y": 289.06,
+            "canonical_span": [
+              373,
+              944
+            ],
+            "source_span": [
+              123,
+              335
+            ],
+            "ratio": 0.3712784588441331
+          }
+        ],
+        "common_ratio": 0.3650509941279489,
+        "initial_roi_locator_only_visible_height_ratio": 0.3631889763779528,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.1794267053701015,
+        "visual_confirmation": {
+          "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "c47ab9286f26e65c63adb02bb6fca56c09500d96331795fcc055e22e96bfc7b6",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "636c99c184a9ab37d4d25fc97e2430bd1828e0c9f1dbfd2b1547c022ec703742"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/komodo-dragon/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "6d4d2001a9b5a2bf5cbb333bc0834e7ad21707e51047befeab287827b5a06c54",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        264.0,
+        165.0,
+        944.0,
+        1181.0
+      ],
+      "anchor_px": [
+        600.0,
+        1175.0
+      ],
+      "reference_height_px": 1016.0,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Body reference excludes side tail, support anchor is the projected middle of the two short foot bottoms.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "source_manifest": "assets/library/characters/komodo-dragon/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "cfb8e60bc09d60ccb5c39b21e7748bde4d9ce3110a46c5efc26985a785189459",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "6d4d2001a9b5a2bf5cbb333bc0834e7ad21707e51047befeab287827b5a06c54",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        409
+      ],
+      "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "2cb61883bbb2e2bbaa0b1b8ae5a2a0feaf8d799dd4f29c3e151a60e68637d00e",
+      "size_px": [
+        418,
+        409
+      ],
+      "visible": [
+        88,
+        16,
+        368,
+        385
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0113322819a56b46660790529e542945676bc43e47e9d64c23381db6a027c574",
+      "body_bbox_px": [
+        88,
+        16,
+        335,
+        385
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        88,
+        16,
+        368,
+        385
+      ],
+      "reference_height_px": 370.8918100339961,
+      "anchor_px": [
+        206.96409421036367,
+        382.8096940352323
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        204.5,
+        385
+      ],
+      "sole_points": [
+        [
+          160.5,
+          385
+        ],
+        [
+          248.5,
+          385
+        ]
+      ],
+      "sole_regions": [
+        [
+          126,
+          318,
+          203,
+          387
+        ],
+        [
+          206,
+          318,
+          283,
+          387
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        88,
+        16,
+        368,
+        385
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        834,
+        409
+      ],
+      "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "ab0fad9c7c29a7ec300bb5b768fe7d46f2b0e8f0a65b2c427f307078889b1efb",
+      "size_px": [
+        416,
+        409
+      ],
+      "visible": [
+        73,
+        16,
+        364,
+        385
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0113322819a56b46660790529e542945676bc43e47e9d64c23381db6a027c574",
+      "body_bbox_px": [
+        73,
+        16,
+        320,
+        385
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        73,
+        16,
+        364,
+        385
+      ],
+      "reference_height_px": 370.8918100339961,
+      "anchor_px": [
+        204.96409421036367,
+        382.8096940352323
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        202.5,
+        385
+      ],
+      "sole_points": [
+        [
+          157.0,
+          385
+        ],
+        [
+          248.0,
+          384
+        ]
+      ],
+      "sole_regions": [
+        [
+          124,
+          318,
+          200,
+          387
+        ],
+        [
+          206,
+          318,
+          282,
+          387
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        73,
+        16,
+        364,
+        385
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        834,
+        0,
+        1254,
+        409
+      ],
+      "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "39f00ad0109b9eb1c6a6f612201aacfa9c8da5b71e43c2e4f560470328f71eda",
+      "size_px": [
+        420,
+        409
+      ],
+      "visible": [
+        50,
+        16,
+        368,
+        385
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0113322819a56b46660790529e542945676bc43e47e9d64c23381db6a027c574",
+      "body_bbox_px": [
+        50,
+        16,
+        297,
+        385
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        50,
+        16,
+        368,
+        385
+      ],
+      "reference_height_px": 370.8918100339961,
+      "anchor_px": [
+        207.21409421036367,
+        382.8096940352323
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        204.75,
+        385
+      ],
+      "sole_points": [
+        [
+          161.0,
+          385
+        ],
+        [
+          248.5,
+          385
+        ]
+      ],
+      "sole_regions": [
+        [
+          126,
+          318,
+          201,
+          387
+        ],
+        [
+          208,
+          318,
+          283,
+          387
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        50,
+        16,
+        368,
+        385
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        409,
+        418,
+        828
+      ],
+      "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "58ec5e2f62ba16c430f1b02e9fd17f351759123ed64857ebabdb9105863b8ad2",
+      "size_px": [
+        418,
+        419
+      ],
+      "visible": [
+        84,
+        25,
+        368,
+        396
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0113322819a56b46660790529e542945676bc43e47e9d64c23381db6a027c574",
+      "body_bbox_px": [
+        84,
+        25,
+        332,
+        396
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        84,
+        25,
+        368,
+        396
+      ],
+      "reference_height_px": 370.8918100339961,
+      "anchor_px": [
+        207.96409421036367,
+        393.8096940352323
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        205.5,
+        396
+      ],
+      "sole_points": [
+        [
+          161.5,
+          395
+        ],
+        [
+          249.5,
+          396
+        ]
+      ],
+      "sole_regions": [
+        [
+          126,
+          329,
+          202,
+          398
+        ],
+        [
+          208,
+          329,
+          283,
+          398
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        84,
+        25,
+        368,
+        396
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        418,
+        409,
+        834,
+        828
+      ],
+      "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "1f173e9830998179046deb9ebe45582b2ce412ca521f811269e66f4fa2d2fa33",
+      "size_px": [
+        416,
+        419
+      ],
+      "visible": [
+        94,
+        26,
+        365,
+        395
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0113322819a56b46660790529e542945676bc43e47e9d64c23381db6a027c574",
+      "body_bbox_px": [
+        94,
+        26,
+        341,
+        395
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        94,
+        26,
+        365,
+        395
+      ],
+      "reference_height_px": 370.8918100339961,
+      "anchor_px": [
+        203.96409421036367,
+        392.8096940352323
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        201.5,
+        395
+      ],
+      "sole_points": [
+        [
+          158.5,
+          394
+        ],
+        [
+          244.5,
+          395
+        ]
+      ],
+      "sole_regions": [
+        [
+          123,
+          328,
+          198,
+          397
+        ],
+        [
+          205,
+          328,
+          280,
+          397
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        94,
+        26,
+        365,
+        395
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        834,
+        409,
+        1254,
+        828
+      ],
+      "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "f6cbf853b1494beddffcce47478e8de4d6eac094791c3dba0039b8369c69e26e",
+      "size_px": [
+        420,
+        419
+      ],
+      "visible": [
+        84,
+        25,
+        369,
+        394
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0113322819a56b46660790529e542945676bc43e47e9d64c23381db6a027c574",
+      "body_bbox_px": [
+        84,
+        25,
+        331,
+        394
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        84,
+        25,
+        369,
+        394
+      ],
+      "reference_height_px": 370.8918100339961,
+      "anchor_px": [
+        206.96409421036367,
+        391.8096940352323
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        204.5,
+        394
+      ],
+      "sole_points": [
+        [
+          160.5,
+          394
+        ],
+        [
+          248.5,
+          394
+        ]
+      ],
+      "sole_regions": [
+        [
+          126,
+          327,
+          201,
+          396
+        ],
+        [
+          208,
+          327,
+          283,
+          396
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        84,
+        25,
+        369,
+        394
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        828,
+        418,
+        1254
+      ],
+      "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "813c980f45963e1d4e2509db12a058fdb993e58609ccec4d64f7786007e4be07",
+      "size_px": [
+        418,
+        426
+      ],
+      "visible": [
+        85,
+        24,
+        368,
+        399
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0113322819a56b46660790529e542945676bc43e47e9d64c23381db6a027c574",
+      "body_bbox_px": [
+        85,
+        24,
+        336,
+        399
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        85,
+        24,
+        368,
+        399
+      ],
+      "reference_height_px": 370.8918100339961,
+      "anchor_px": [
+        207.96409421036367,
+        396.8096940352323
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        205.5,
+        399
+      ],
+      "sole_points": [
+        [
+          161.5,
+          399
+        ],
+        [
+          249.5,
+          398
+        ]
+      ],
+      "sole_regions": [
+        [
+          126,
+          332,
+          202,
+          401
+        ],
+        [
+          209,
+          332,
+          284,
+          401
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        85,
+        24,
+        368,
+        399
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        418,
+        828,
+        834,
+        1254
+      ],
+      "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "57e20ba8099fbcc58fffd345ef0c4f35b1eac8f27a07463a28ad15c11607152b",
+      "size_px": [
+        416,
+        426
+      ],
+      "visible": [
+        81,
+        26,
+        366,
+        398
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0113322819a56b46660790529e542945676bc43e47e9d64c23381db6a027c574",
+      "body_bbox_px": [
+        81,
+        26,
+        330,
+        398
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        81,
+        26,
+        366,
+        398
+      ],
+      "reference_height_px": 370.8918100339961,
+      "anchor_px": [
+        205.71409421036367,
+        395.8096940352323
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        203.25,
+        398
+      ],
+      "sole_points": [
+        [
+          159.5,
+          398
+        ],
+        [
+          247.0,
+          398
+        ]
+      ],
+      "sole_regions": [
+        [
+          124,
+          331,
+          200,
+          400
+        ],
+        [
+          207,
+          331,
+          282,
+          400
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        81,
+        26,
+        366,
+        398
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        834,
+        828,
+        1254,
+        1254
+      ],
+      "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "79ce0910d351edd5277e83128429c6b2de8fb4c31a2476323c454d77fcfe153b",
+      "size_px": [
+        420,
+        426
+      ],
+      "visible": [
+        81,
+        25,
+        369,
+        398
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0113322819a56b46660790529e542945676bc43e47e9d64c23381db6a027c574",
+      "body_bbox_px": [
+        81,
+        25,
+        331,
+        398
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        81,
+        25,
+        369,
+        398
+      ],
+      "reference_height_px": 370.8918100339961,
+      "anchor_px": [
+        206.21409421036367,
+        395.8096940352323
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        203.75,
+        398
+      ],
+      "sole_points": [
+        [
+          159.5,
+          398
+        ],
+        [
+          248.0,
+          398
+        ]
+      ],
+      "sole_regions": [
+        [
+          126,
+          331,
+          201,
+          400
+        ],
+        [
+          208,
+          331,
+          283,
+          400
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        81,
+        25,
+        369,
+        398
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "636c99c184a9ab37d4d25fc97e2430bd1828e0c9f1dbfd2b1547c022ec703742",
+        "bytes": 5134
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/komodo-dragon/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "ecf934fc48390f86a6285f6e9e654221e8d1fd46e10d31f6f84b68c8db420d95",
+      "bytes": 7680
+    }
+  ]
+}

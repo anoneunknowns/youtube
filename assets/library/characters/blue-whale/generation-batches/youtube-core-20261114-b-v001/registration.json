@@ -1,0 +1,849 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "blue-whale",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/blue-whale/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "98d2fb8e54eae0369c112154aff86e963e762ffbe448f1052f3895bda8c45513",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      125,
+      426,
+      1014,
+      929
+    ],
+    "anchor_px": [
+      567,
+      677
+    ],
+    "reference_height_px": 503,
+    "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+    "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+    "anchor_basis": "Broad rounded whale head/trunk excluding two flippers, small dorsal fin and tail flukes; torso center is placement anchor without invented support.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+    "source_manifest": "assets/library/characters/blue-whale/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "2ee8a3109547a58a7c4285da7011e480163879a5131cf11e880820b9a880e4d6"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "98d2fb8e54eae0369c112154aff86e963e762ffbe448f1052f3895bda8c45513",
+      "reference_height_px": 503,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e972d56fa6178ce90f8e61ffa48cf8b111d2f21ca367258ba40061760354a198",
+      "reference_height_px": 189.9951385122523,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/blue-whale/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "98d2fb8e54eae0369c112154aff86e963e762ffbe448f1052f3895bda8c45513",
+          "bytes": 823669,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 503,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 526.6,
+            "source_y": 164.9696737044146,
+            "canonical_span": [
+              176,
+              1014
+            ],
+            "source_span": [
+              66,
+              401
+            ],
+            "ratio": 0.3997613365155131
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 576.9,
+            "source_y": 184.95451055662187,
+            "canonical_span": [
+              143,
+              1014
+            ],
+            "source_span": [
+              54,
+              401
+            ],
+            "ratio": 0.3983926521239954
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 737.86,
+            "source_y": 248.90598848368523,
+            "canonical_span": [
+              154,
+              969
+            ],
+            "source_span": [
+              58,
+              349
+            ],
+            "ratio": 0.3570552147239264
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 798.22,
+            "source_y": 272.8877927063339,
+            "canonical_span": [
+              194,
+              916
+            ],
+            "source_span": [
+              75,
+              331
+            ],
+            "ratio": 0.3545706371191136
+          }
+        ],
+        "common_ratio": 0.3777239334239609,
+        "initial_roi_locator_only_visible_height_ratio": 0.39731285988483683,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.127451894391408,
+        "visual_confirmation": {
+          "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "2b244e7189ba1eb7c7fe16a1b99df17ed14d25706675d444670c6653da3ee752",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "9cc6fa65a85abc0f0385ce7f52b16808e6c269faf9e8a8adf2ced1ad8d3f6edb"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/blue-whale/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "98d2fb8e54eae0369c112154aff86e963e762ffbe448f1052f3895bda8c45513",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        125,
+        426,
+        1014,
+        929
+      ],
+      "anchor_px": [
+        567,
+        677
+      ],
+      "reference_height_px": 503,
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+      "anchor_basis": "Broad rounded whale head/trunk excluding two flippers, small dorsal fin and tail flukes; torso center is placement anchor without invented support.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "source_manifest": "assets/library/characters/blue-whale/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "2ee8a3109547a58a7c4285da7011e480163879a5131cf11e880820b9a880e4d6",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "98d2fb8e54eae0369c112154aff86e963e762ffbe448f1052f3895bda8c45513",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        430,
+        416
+      ],
+      "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "05c088a03e74588e29fed8af968e8e91e7ede1ed2b51c2af0805bafb531ef512",
+      "size_px": [
+        430,
+        416
+      ],
+      "visible": [
+        47,
+        125,
+        420,
+        332
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e972d56fa6178ce90f8e61ffa48cf8b111d2f21ca367258ba40061760354a198",
+      "body_bbox_px": [
+        47,
+        125,
+        401,
+        325
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        47,
+        125,
+        420,
+        332
+      ],
+      "reference_height_px": 189.9951385122523,
+      "anchor_px": [
+        213.9539785733907,
+        219.8087072894142
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        213.9539785733907,
+        219.8087072894142
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        47,
+        125,
+        420,
+        332
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        430,
+        0,
+        824,
+        416
+      ],
+      "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "d38ff9d86f00095531e3fa1bd85b4eee64db9a61e4c047b00f17147c5eaa5b8c",
+      "size_px": [
+        394,
+        416
+      ],
+      "visible": [
+        18,
+        127,
+        386,
+        327
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e972d56fa6178ce90f8e61ffa48cf8b111d2f21ca367258ba40061760354a198",
+      "body_bbox_px": [
+        18,
+        127,
+        360,
+        320
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        18,
+        127,
+        386,
+        327
+      ],
+      "reference_height_px": 189.9951385122523,
+      "anchor_px": [
+        184.9539785733907,
+        221.8087072894142
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        184.9539785733907,
+        221.8087072894142
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        18,
+        127,
+        386,
+        327
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        824,
+        0,
+        1261,
+        416
+      ],
+      "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "e57df025e13ec4a450599041e2cfb2504feddbbe5b16a31fde04902eada8a027",
+      "size_px": [
+        437,
+        416
+      ],
+      "visible": [
+        5,
+        126,
+        402,
+        334
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e972d56fa6178ce90f8e61ffa48cf8b111d2f21ca367258ba40061760354a198",
+      "body_bbox_px": [
+        5,
+        126,
+        360,
+        327
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        5,
+        126,
+        402,
+        334
+      ],
+      "reference_height_px": 189.9951385122523,
+      "anchor_px": [
+        171.9539785733907,
+        220.8087072894142
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        171.9539785733907,
+        220.8087072894142
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        5,
+        126,
+        402,
+        334
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        416,
+        430,
+        831
+      ],
+      "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "a1b4eb67895603b5bd1620ad6d88adc96d7e6644ae98fae9f874d73b8e026a3f",
+      "size_px": [
+        430,
+        415
+      ],
+      "visible": [
+        61,
+        104,
+        415,
+        311
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e972d56fa6178ce90f8e61ffa48cf8b111d2f21ca367258ba40061760354a198",
+      "body_bbox_px": [
+        61,
+        104,
+        415,
+        304
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        61,
+        104,
+        415,
+        311
+      ],
+      "reference_height_px": 189.9951385122523,
+      "anchor_px": [
+        227.9539785733907,
+        198.8087072894142
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        227.9539785733907,
+        198.8087072894142
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        61,
+        104,
+        415,
+        311
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        430,
+        416,
+        824,
+        831
+      ],
+      "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "35ff44e95b55f00db386916984b66c618e8d1419dc01a7a318ed276f5a5db0dc",
+      "size_px": [
+        394,
+        415
+      ],
+      "visible": [
+        20,
+        100,
+        390,
+        315
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e972d56fa6178ce90f8e61ffa48cf8b111d2f21ca367258ba40061760354a198",
+      "body_bbox_px": [
+        20,
+        100,
+        387,
+        308
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        20,
+        100,
+        390,
+        315
+      ],
+      "reference_height_px": 189.9951385122523,
+      "anchor_px": [
+        186.9539785733907,
+        194.8087072894142
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        186.9539785733907,
+        194.8087072894142
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        20,
+        100,
+        390,
+        315
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        824,
+        416,
+        1261,
+        831
+      ],
+      "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "eb1d86102d9ccbb6d500cf877f5433f48385de4987904602717a315c0cca9f05",
+      "size_px": [
+        437,
+        415
+      ],
+      "visible": [
+        37,
+        80,
+        407,
+        294
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e972d56fa6178ce90f8e61ffa48cf8b111d2f21ca367258ba40061760354a198",
+      "body_bbox_px": [
+        37,
+        80,
+        403,
+        287
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        37,
+        80,
+        407,
+        294
+      ],
+      "reference_height_px": 189.9951385122523,
+      "anchor_px": [
+        203.9539785733907,
+        174.8087072894142
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        203.9539785733907,
+        174.8087072894142
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        37,
+        80,
+        407,
+        294
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        831,
+        430,
+        1247
+      ],
+      "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "03937f03f13715707c105053d92dfcd0444fea2a607e3c4060f3a443fbac6196",
+      "size_px": [
+        430,
+        416
+      ],
+      "visible": [
+        31,
+        81,
+        420,
+        288
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e972d56fa6178ce90f8e61ffa48cf8b111d2f21ca367258ba40061760354a198",
+      "body_bbox_px": [
+        31,
+        81,
+        385,
+        281
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        31,
+        81,
+        420,
+        288
+      ],
+      "reference_height_px": 189.9951385122523,
+      "anchor_px": [
+        197.9539785733907,
+        175.8087072894142
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        197.9539785733907,
+        175.8087072894142
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        31,
+        81,
+        420,
+        288
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        430,
+        831,
+        824,
+        1247
+      ],
+      "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "b22baaf8383d3a0fe81587b39889590c212c1d46879e4f35addabc815ffbdcb1",
+      "size_px": [
+        394,
+        416
+      ],
+      "visible": [
+        12,
+        89,
+        390,
+        290
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e972d56fa6178ce90f8e61ffa48cf8b111d2f21ca367258ba40061760354a198",
+      "body_bbox_px": [
+        12,
+        89,
+        355,
+        283
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        12,
+        89,
+        390,
+        290
+      ],
+      "reference_height_px": 189.9951385122523,
+      "anchor_px": [
+        178.9539785733907,
+        183.8087072894142
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        178.9539785733907,
+        183.8087072894142
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        12,
+        89,
+        390,
+        290
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        824,
+        831,
+        1261,
+        1247
+      ],
+      "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "a57d89ceb9784e061e62a874433c64e901868891729ff2f9143a715ce02ac06d",
+      "size_px": [
+        437,
+        416
+      ],
+      "visible": [
+        25,
+        87,
+        411,
+        297
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e972d56fa6178ce90f8e61ffa48cf8b111d2f21ca367258ba40061760354a198",
+      "body_bbox_px": [
+        25,
+        87,
+        384,
+        290
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        25,
+        87,
+        411,
+        297
+      ],
+      "reference_height_px": 189.9951385122523,
+      "anchor_px": [
+        191.9539785733907,
+        181.8087072894142
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        191.9539785733907,
+        181.8087072894142
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        25,
+        87,
+        411,
+        297
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "9cc6fa65a85abc0f0385ce7f52b16808e6c269faf9e8a8adf2ced1ad8d3f6edb",
+        "bytes": 5759
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/blue-whale/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "71eb9148911c8532315a80d069961094dc6b05bc69fe36271e88e9cab39991d7",
+      "bytes": 7644
+    }
+  ]
+}

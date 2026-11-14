@@ -1,0 +1,849 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "leatherback-turtle",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/leatherback-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "69b9d29e614d381290fde7a5116f49762b6063cd57ec904d1e5a8b9a9425f8ab",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      208,
+      331,
+      965,
+      760
+    ],
+    "anchor_px": [
+      615,
+      560
+    ],
+    "reference_height_px": 429,
+    "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+    "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+    "anchor_basis": "Head and rounded leathery trunk excluding flipper tips/tail; anchor is visually assessed torso center, with no invented foot or ground contact.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+    "source_manifest": "assets/library/characters/leatherback-turtle/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "64266c334fcc47dec299287a13a1ae8a3d93fb47ade95cd95f57f509f0336bfe"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "69b9d29e614d381290fde7a5116f49762b6063cd57ec904d1e5a8b9a9425f8ab",
+      "reference_height_px": 429,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "643e906c85e65fa4dc9addb0515709bb693889c56caf9b0af0c7861489011f65",
+      "reference_height_px": 172.32838455149502,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/leatherback-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "69b9d29e614d381290fde7a5116f49762b6063cd57ec904d1e5a8b9a9425f8ab",
+          "bytes": 720208,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 429,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 416.8,
+            "source_y": 108.3655629139073,
+            "canonical_span": [
+              274,
+              870
+            ],
+            "source_span": [
+              113,
+              332
+            ],
+            "ratio": 0.3674496644295302
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 459.7,
+            "source_y": 126.54834437086092,
+            "canonical_span": [
+              229,
+              917
+            ],
+            "source_span": [
+              74,
+              347
+            ],
+            "ratio": 0.39680232558139533
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 596.98,
+            "source_y": 184.7332450331126,
+            "canonical_span": [
+              235,
+              952
+            ],
+            "source_span": [
+              62,
+              371
+            ],
+            "ratio": 0.4309623430962343
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 648.46,
+            "source_y": 206.55258278145695,
+            "canonical_span": [
+              237,
+              965
+            ],
+            "source_span": [
+              77,
+              373
+            ],
+            "ratio": 0.4065934065934066
+          }
+        ],
+        "common_ratio": 0.401697866087401,
+        "initial_roi_locator_only_visible_height_ratio": 0.423841059602649,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.1728472898874687,
+        "visual_confirmation": {
+          "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "eaeca8dbd322d80d4b052616b8eb2c722f5f61e6407cd5f4a96b7736d0bca6de",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "a6869ed6eaef86462c543a6b6314b5ed19880e619268f0ff693e7673bc1d1a5c"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "69b9d29e614d381290fde7a5116f49762b6063cd57ec904d1e5a8b9a9425f8ab",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        208,
+        331,
+        965,
+        760
+      ],
+      "anchor_px": [
+        615,
+        560
+      ],
+      "reference_height_px": 429,
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+      "anchor_basis": "Head and rounded leathery trunk excluding flipper tips/tail; anchor is visually assessed torso center, with no invented foot or ground contact.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "source_manifest": "assets/library/characters/leatherback-turtle/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "64266c334fcc47dec299287a13a1ae8a3d93fb47ade95cd95f57f509f0336bfe",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "69b9d29e614d381290fde7a5116f49762b6063cd57ec904d1e5a8b9a9425f8ab",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        440,
+        400
+      ],
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "ab900d51e8f31cccc32aabf423f20f65ecdac3b1ab35bf7d5d878ebf0acb3933",
+      "size_px": [
+        440,
+        400
+      ],
+      "visible": [
+        48,
+        72,
+        396,
+        328
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "643e906c85e65fa4dc9addb0515709bb693889c56caf9b0af0c7861489011f65",
+      "body_bbox_px": [
+        56,
+        72,
+        377,
+        254
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        48,
+        72,
+        396,
+        328
+      ],
+      "reference_height_px": 172.32838455149502,
+      "anchor_px": [
+        219.4910314975722,
+        163.98881133401483
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        219.4910314975722,
+        163.98881133401483
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        48,
+        72,
+        396,
+        328
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        440,
+        0,
+        863,
+        400
+      ],
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "ef9d7c87d424d113948780507dd098fe0ef0bab2e018df084f902b61730cc8c9",
+      "size_px": [
+        423,
+        400
+      ],
+      "visible": [
+        19,
+        74,
+        395,
+        326
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "643e906c85e65fa4dc9addb0515709bb693889c56caf9b0af0c7861489011f65",
+      "body_bbox_px": [
+        27,
+        74,
+        343,
+        253
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        19,
+        74,
+        395,
+        326
+      ],
+      "reference_height_px": 172.32838455149502,
+      "anchor_px": [
+        190.4910314975722,
+        165.98881133401483
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        190.4910314975722,
+        165.98881133401483
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        19,
+        74,
+        395,
+        326
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        863,
+        0,
+        1312,
+        400
+      ],
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "776d3a623a5c5484a91f68bc597087cef9595ad5870495b67da9859596127590",
+      "size_px": [
+        449,
+        400
+      ],
+      "visible": [
+        23,
+        70,
+        408,
+        329
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "643e906c85e65fa4dc9addb0515709bb693889c56caf9b0af0c7861489011f65",
+      "body_bbox_px": [
+        31,
+        70,
+        356,
+        254
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        23,
+        70,
+        408,
+        329
+      ],
+      "reference_height_px": 172.32838455149502,
+      "anchor_px": [
+        194.4910314975722,
+        161.98881133401483
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        194.4910314975722,
+        161.98881133401483
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        23,
+        70,
+        408,
+        329
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        400,
+        440,
+        790
+      ],
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "bcadde2da787b11f8ff074473630f83c08d51069bac3adba08e3d91c85f5f3be",
+      "size_px": [
+        440,
+        390
+      ],
+      "visible": [
+        39,
+        57,
+        409,
+        317
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "643e906c85e65fa4dc9addb0515709bb693889c56caf9b0af0c7861489011f65",
+      "body_bbox_px": [
+        47,
+        57,
+        373,
+        242
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        39,
+        57,
+        409,
+        317
+      ],
+      "reference_height_px": 172.32838455149502,
+      "anchor_px": [
+        210.4910314975722,
+        148.98881133401483
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        210.4910314975722,
+        148.98881133401483
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        39,
+        57,
+        409,
+        317
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        440,
+        400,
+        863,
+        790
+      ],
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "23c6bcd19239ac37b5e67cf399745025fd1ce80eff88c04046e143f979c749a4",
+      "size_px": [
+        423,
+        390
+      ],
+      "visible": [
+        45,
+        55,
+        391,
+        314
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "643e906c85e65fa4dc9addb0515709bb693889c56caf9b0af0c7861489011f65",
+      "body_bbox_px": [
+        53,
+        55,
+        378,
+        239
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        45,
+        55,
+        391,
+        314
+      ],
+      "reference_height_px": 172.32838455149502,
+      "anchor_px": [
+        216.4910314975722,
+        146.98881133401483
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        216.4910314975722,
+        146.98881133401483
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        45,
+        55,
+        391,
+        314
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        863,
+        400,
+        1312,
+        790
+      ],
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "c692085ae24c0d74361664385add561ba3d93473c4f016dbb7eedb54af337b71",
+      "size_px": [
+        449,
+        390
+      ],
+      "visible": [
+        42,
+        52,
+        402,
+        314
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "643e906c85e65fa4dc9addb0515709bb693889c56caf9b0af0c7861489011f65",
+      "body_bbox_px": [
+        50,
+        52,
+        379,
+        238
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        42,
+        52,
+        402,
+        314
+      ],
+      "reference_height_px": 172.32838455149502,
+      "anchor_px": [
+        213.4910314975722,
+        143.98881133401483
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        213.4910314975722,
+        143.98881133401483
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        42,
+        52,
+        402,
+        314
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        790,
+        440,
+        1199
+      ],
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "ee1787dfed06bf9a353b5061fdc5fb222d4214783c773c5ca815ffca32715652",
+      "size_px": [
+        440,
+        409
+      ],
+      "visible": [
+        26,
+        41,
+        422,
+        305
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "643e906c85e65fa4dc9addb0515709bb693889c56caf9b0af0c7861489011f65",
+      "body_bbox_px": [
+        34,
+        41,
+        365,
+        229
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        26,
+        41,
+        422,
+        305
+      ],
+      "reference_height_px": 172.32838455149502,
+      "anchor_px": [
+        197.4910314975722,
+        132.98881133401483
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        197.4910314975722,
+        132.98881133401483
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        26,
+        41,
+        422,
+        305
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        440,
+        790,
+        863,
+        1199
+      ],
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "057c80def84352ca7f5ed088e4b7447449ab200ad5f5bde462abf7b94b84b848",
+      "size_px": [
+        423,
+        409
+      ],
+      "visible": [
+        19,
+        50,
+        401,
+        305
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "643e906c85e65fa4dc9addb0515709bb693889c56caf9b0af0c7861489011f65",
+      "body_bbox_px": [
+        27,
+        50,
+        347,
+        231
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        19,
+        50,
+        401,
+        305
+      ],
+      "reference_height_px": 172.32838455149502,
+      "anchor_px": [
+        190.4910314975722,
+        141.98881133401483
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        190.4910314975722,
+        141.98881133401483
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        19,
+        50,
+        401,
+        305
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        863,
+        790,
+        1312,
+        1199
+      ],
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "06d3f6b953772569f9859bf37d578ad76af90f5bc2de358a5c9fd48d621538e4",
+      "size_px": [
+        449,
+        409
+      ],
+      "visible": [
+        61,
+        50,
+        414,
+        299
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "643e906c85e65fa4dc9addb0515709bb693889c56caf9b0af0c7861489011f65",
+      "body_bbox_px": [
+        69,
+        50,
+        381,
+        227
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        61,
+        50,
+        414,
+        299
+      ],
+      "reference_height_px": 172.32838455149502,
+      "anchor_px": [
+        232.4910314975722,
+        141.98881133401483
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        232.4910314975722,
+        141.98881133401483
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        61,
+        50,
+        414,
+        299
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "a6869ed6eaef86462c543a6b6314b5ed19880e619268f0ff693e7673bc1d1a5c",
+        "bytes": 5770
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/leatherback-turtle/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "1067a75ab2308657683a6979b58b625a8dcc8cacc1f32f65ee87415acc5b120c",
+      "bytes": 7817
+    }
+  ]
+}

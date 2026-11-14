@@ -1,0 +1,845 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "black-footed-ferret",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-c-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/black-footed-ferret/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "0484316773d11b4979b0fd9df3b1b4b261a5e1c0fdd26d755d52a7811a0e3c07",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      297.0,
+      165.0,
+      927.0,
+      1188.0
+    ],
+    "anchor_px": [
+      608.0,
+      1182.0
+    ],
+    "reference_height_px": 1023.0,
+    "anchor_kind": "anatomical_feet_support",
+    "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+    "anchor_basis": "Body reference excludes the side tail, paired short foot bottoms define projected support anchor.",
+    "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+    "source_manifest": "assets/library/characters/black-footed-ferret/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "5272e25d8dd413e45905e1e5e2af26b9b15c26934f5831fe0823969606c78084"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "0484316773d11b4979b0fd9df3b1b4b261a5e1c0fdd26d755d52a7811a0e3c07",
+      "reference_height_px": 1023.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "a0879e686d2ad2ef8910a3a3570a24ee7d68aee9d7ce8932781b1215e3b59dc0",
+      "reference_height_px": 366.1781701444623,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/black-footed-ferret/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "0484316773d11b4979b0fd9df3b1b4b261a5e1c0fdd26d755d52a7811a0e3c07",
+          "bytes": 969835,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1023.0,
+        "landmarks": [
+          {
+            "name": "upper-head span",
+            "canonical_y": 318,
+            "source_y": 72,
+            "canonical_span_px": [
+              302,
+              925
+            ],
+            "source_span_px": [
+              103,
+              326
+            ],
+            "span_ratio": 0.3579454253611557,
+            "used": true,
+            "note": "Visually matched corresponding anatomy; closed-eye row and tail/hand width are excluded from primary ratio."
+          },
+          {
+            "name": "mid-head span",
+            "canonical_y": 421,
+            "source_y": 110,
+            "canonical_span_px": [
+              301,
+              921
+            ],
+            "source_span_px": [
+              104,
+              325
+            ],
+            "span_ratio": 0.3564516129032258,
+            "used": true,
+            "note": "Visually matched corresponding anatomy; closed-eye row and tail/hand width are excluded from primary ratio."
+          },
+          {
+            "name": "lower-head or shoulder span",
+            "canonical_y": 697,
+            "source_y": 212,
+            "canonical_span_px": [
+              441,
+              782
+            ],
+            "source_span_px": [
+              150,
+              274
+            ],
+            "span_ratio": 0.36363636363636365,
+            "used": true,
+            "note": "Visually matched corresponding anatomy; closed-eye row and tail/hand width are excluded from primary ratio."
+          },
+          {
+            "name": "abdomen crosscheck",
+            "canonical_y": 830,
+            "source_y": 260,
+            "canonical_span_px": [
+              361,
+              1003
+            ],
+            "source_span_px": [
+              121,
+              355
+            ],
+            "span_ratio": 0.3644859813084112,
+            "used": false,
+            "note": "Visually matched corresponding anatomy; closed-eye row and tail/hand width are excluded from primary ratio."
+          }
+        ],
+        "common_ratio": 0.3579454253611557,
+        "reference_height_px": 366.1781701444623,
+        "method": "Manually selected corresponding upper/mid head and shoulder widths; common source-sheet factor. Alpha envelope used only to seed coordinate search, never the final fit. Foot spacing and trunk length crosschecked visually.",
+        "canonical_paired_sole_points": [
+          [
+            507,
+            1187
+          ],
+          [
+            711.5,
+            1187
+          ]
+        ],
+        "canonical_source_foot_point_px": [
+          609.25,
+          1187
+        ],
+        "inherited_anchor_offset_px": [
+          -1.25,
+          -5.0
+        ],
+        "scope": "Approximate anatomical registration on native pixels, not subpixel motion metrology."
+      },
+      "generation_input": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "c27fae147b2a16ba8bc217147701942ef36b5acc15803ef09b71265890401e9f"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "0484316773d11b4979b0fd9df3b1b4b261a5e1c0fdd26d755d52a7811a0e3c07",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        297.0,
+        165.0,
+        927.0,
+        1188.0
+      ],
+      "anchor_px": [
+        608.0,
+        1182.0
+      ],
+      "reference_height_px": 1023.0,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Body reference excludes the side tail, paired short foot bottoms define projected support anchor.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "source_manifest": "assets/library/characters/black-footed-ferret/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "5272e25d8dd413e45905e1e5e2af26b9b15c26934f5831fe0823969606c78084",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "0484316773d11b4979b0fd9df3b1b4b261a5e1c0fdd26d755d52a7811a0e3c07",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/frames/blink-v001.png",
+      "sha256": "965e88388cf35ac3027b7dcb75a6a665dbb6134e2cf6cfb92f6cac1fd365c084",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        98,
+        16,
+        324,
+        392
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        91,
+        16,
+        356,
+        392
+      ],
+      "anchor_px": [
+        210.55256821829855,
+        389.21027287319424
+      ],
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        211.0,
+        391
+      ],
+      "paired_sole_points_px": [
+        [
+          174.5,
+          391
+        ],
+        [
+          247.5,
+          391
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 366.1781701444623,
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "a0879e686d2ad2ef8910a3a3570a24ee7d68aee9d7ce8932781b1215e3b59dc0",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/frames/greet-v001.png",
+      "sha256": "b9b10f8b1efeec9d25138f5d28ba8672b592db6cda8e8f01601d03dd01fddbef",
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        85,
+        15,
+        311,
+        392
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        73,
+        15,
+        341,
+        392
+      ],
+      "anchor_px": [
+        197.55256821829855,
+        389.21027287319424
+      ],
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        198.0,
+        391
+      ],
+      "paired_sole_points_px": [
+        [
+          161.5,
+          391
+        ],
+        [
+          234.5,
+          391
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 366.1781701444623,
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "a0879e686d2ad2ef8910a3a3570a24ee7d68aee9d7ce8932781b1215e3b59dc0",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/frames/present_left-v001.png",
+      "sha256": "aa37297e2d49b3f6f6b09069b83c810bf76f0955941bf204c3550797aaf6c01f",
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        76,
+        18,
+        302,
+        392
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        59,
+        18,
+        337,
+        392
+      ],
+      "anchor_px": [
+        188.55256821829855,
+        389.21027287319424
+      ],
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        189.0,
+        391
+      ],
+      "paired_sole_points_px": [
+        [
+          153.0,
+          391
+        ],
+        [
+          225.0,
+          391
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 366.1781701444623,
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "a0879e686d2ad2ef8910a3a3570a24ee7d68aee9d7ce8932781b1215e3b59dc0",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/frames/present_right-v001.png",
+      "sha256": "6831142976b081b923c2287f0cdb7ff3201e90cf23bff1c19b1dbf29d3dec1dd",
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        101,
+        18,
+        327,
+        393
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        90,
+        18,
+        349,
+        393
+      ],
+      "anchor_px": [
+        213.30256821829855,
+        390.21027287319424
+      ],
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        213.75,
+        392
+      ],
+      "paired_sole_points_px": [
+        [
+          178.0,
+          392
+        ],
+        [
+          249.5,
+          392
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 366.1781701444623,
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "a0879e686d2ad2ef8910a3a3570a24ee7d68aee9d7ce8932781b1215e3b59dc0",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/frames/think-v001.png",
+      "sha256": "8e59c70184cb6814da38033e9f49f39bf266cfe4b719f73507732096a5a71e2b",
+      "crop_from_sheet_xyxy": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        86,
+        9,
+        311,
+        393
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        75,
+        9,
+        341,
+        393
+      ],
+      "anchor_px": [
+        198.05256821829855,
+        390.21027287319424
+      ],
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        198.5,
+        392
+      ],
+      "paired_sole_points_px": [
+        [
+          161.5,
+          392
+        ],
+        [
+          235.5,
+          392
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 366.1781701444623,
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "a0879e686d2ad2ef8910a3a3570a24ee7d68aee9d7ce8932781b1215e3b59dc0",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/frames/aha-v001.png",
+      "sha256": "0028dbe1683c2debdabfca3f2d808c4318c6e0ee790c6b1ad3acda0e343055d4",
+      "crop_from_sheet_xyxy": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        79,
+        17,
+        305,
+        393
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        69,
+        17,
+        338,
+        393
+      ],
+      "anchor_px": [
+        191.30256821829855,
+        390.21027287319424
+      ],
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        191.75,
+        392
+      ],
+      "paired_sole_points_px": [
+        [
+          155.0,
+          392
+        ],
+        [
+          228.5,
+          392
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 366.1781701444623,
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "a0879e686d2ad2ef8910a3a3570a24ee7d68aee9d7ce8932781b1215e3b59dc0",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/frames/cheer-v001.png",
+      "sha256": "0fc1fea1f9aa83de13bb5ccf059927f81466e69eea9926eba206ca4403a10028",
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        102,
+        18,
+        328,
+        397
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        89,
+        18,
+        355,
+        397
+      ],
+      "anchor_px": [
+        214.55256821829855,
+        394.21027287319424
+      ],
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        215.0,
+        396
+      ],
+      "paired_sole_points_px": [
+        [
+          178.0,
+          396
+        ],
+        [
+          252.0,
+          396
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 366.1781701444623,
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "a0879e686d2ad2ef8910a3a3570a24ee7d68aee9d7ce8932781b1215e3b59dc0",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/frames/species_a-v001.png",
+      "sha256": "47ccc579d5b87842ab1d4b2c369c78d05bf4b3f82482207ad1339f915634bd0e",
+      "crop_from_sheet_xyxy": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        83,
+        18,
+        309,
+        397
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        71,
+        18,
+        357,
+        397
+      ],
+      "anchor_px": [
+        195.30256821829855,
+        394.21027287319424
+      ],
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        195.75,
+        396
+      ],
+      "paired_sole_points_px": [
+        [
+          158.0,
+          396
+        ],
+        [
+          233.5,
+          396
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 366.1781701444623,
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "a0879e686d2ad2ef8910a3a3570a24ee7d68aee9d7ce8932781b1215e3b59dc0",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/frames/species_b-v001.png",
+      "sha256": "ce025330c598436a946cb8848f32152408964609c9bcfe0c4a15424ed7927cfb",
+      "crop_from_sheet_xyxy": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        78,
+        18,
+        303,
+        397
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        64,
+        18,
+        336,
+        397
+      ],
+      "anchor_px": [
+        190.05256821829855,
+        394.21027287319424
+      ],
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        190.5,
+        396
+      ],
+      "paired_sole_points_px": [
+        [
+          152.5,
+          396
+        ],
+        [
+          228.5,
+          396
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 366.1781701444623,
+      "source_sheet": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "a0879e686d2ad2ef8910a3a3570a24ee7d68aee9d7ce8932781b1215e3b59dc0",
+      "size_px": [
+        418,
+        418
+      ]
+    }
+  ],
+  "clips": {
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    },
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "c27fae147b2a16ba8bc217147701942ef36b5acc15803ef09b71265890401e9f",
+        "bytes": 5177
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/black-footed-ferret/generation-batches/youtube-core-20261114-c-v001/qa/stock-adoption-v001.json",
+      "sha256": "9def284cf1302031c80e94dfaff98948c9b69720f91cfa333d8889f91aa97922",
+      "bytes": 9726
+    }
+  ]
+}

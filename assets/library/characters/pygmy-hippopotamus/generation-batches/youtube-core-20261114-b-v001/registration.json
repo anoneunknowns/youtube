@@ -1,0 +1,1261 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "pygmy-hippopotamus",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "4d15826549e7d6621623e674be4766442bca658b902f67d23cd7d852f3513e93",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      293,
+      182,
+      954,
+      1180
+    ],
+    "anchor_px": [
+      622,
+      1174
+    ],
+    "reference_height_px": 998,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of two broad short supporting feet; small side tail is excluded from the horizontal body reference.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/pygmy-hippopotamus/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "008528dbd4baac9dd3f6fa052f264873485a21a63e2ecc5923cab96b4a5e9a16"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "4d15826549e7d6621623e674be4766442bca658b902f67d23cd7d852f3513e93",
+      "reference_height_px": 998,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "trio-01-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v001.png",
+      "source_sheet_sha256": "b2cf73039b913e6376b4d0d52989d438c223a87add23e53f2117b37f4191f4ad",
+      "reference_height_px": 646.3747942439752,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "4d15826549e7d6621623e674be4766442bca658b902f67d23cd7d852f3513e93",
+          "bytes": 1001098,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 998,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 381.6,
+            "source_y": 172.66906906906908,
+            "canonical_span": [
+              323,
+              926
+            ],
+            "source_span": [
+              169,
+              557
+            ],
+            "ratio": 0.6434494195688225
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 481.4,
+            "source_y": 238.00360360360358,
+            "canonical_span": [
+              294,
+              953
+            ],
+            "source_span": [
+              150,
+              575
+            ],
+            "ratio": 0.644916540212443
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 800.76,
+            "source_y": 447.07411411411414,
+            "canonical_span": [
+              341,
+              910
+            ],
+            "source_span": [
+              172,
+              553
+            ],
+            "ratio": 0.6695957820738138
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 920.52,
+            "source_y": 525.4755555555555,
+            "canonical_span": [
+              386,
+              858
+            ],
+            "source_span": [
+              208,
+              515
+            ],
+            "ratio": 0.6504237288135594
+          }
+        ],
+        "common_ratio": 0.6476701345130012,
+        "initial_roi_locator_only_visible_height_ratio": 0.6546546546546547,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0406346819343033,
+        "visual_confirmation": {
+          "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "f59742458381813947783b0175d4e20e2c2fc3f0fe5b95d9a0cd3396fd6aa09e",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v001-generation-v001.json",
+      "generation_record_sha256": "d337de2e1c4bd7f4be850c48d936ac2af94f3892aa20db410213940c96e1ea9a"
+    },
+    {
+      "id": "trio-02-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v001.png",
+      "source_sheet_sha256": "e01f0ef7c2797baafa888316d998454057a215c43398d2a9c8acdf7b0a65043f",
+      "reference_height_px": 673.2765296674469,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "4d15826549e7d6621623e674be4766442bca658b902f67d23cd7d852f3513e93",
+          "bytes": 1001098,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 998,
+        "reference_frame_id": "aha",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 381.6,
+            "source_y": 174.46626626626627,
+            "canonical_span": [
+              323,
+              926
+            ],
+            "source_span": [
+              151,
+              541
+            ],
+            "ratio": 0.6467661691542289
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 481.4,
+            "source_y": 241.1993993993994,
+            "canonical_span": [
+              294,
+              953
+            ],
+            "source_span": [
+              129,
+              563
+            ],
+            "ratio": 0.6585735963581184
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 800.76,
+            "source_y": 454.7454254254254,
+            "canonical_span": [
+              341,
+              910
+            ],
+            "source_span": [
+              150,
+              546
+            ],
+            "ratio": 0.6959578207381371
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 920.52,
+            "source_y": 534.8251851851852,
+            "canonical_span": [
+              386,
+              858
+            ],
+            "source_span": [
+              178,
+              504
+            ],
+            "ratio": 0.690677966101695
+          }
+        ],
+        "common_ratio": 0.6746257812299067,
+        "initial_roi_locator_only_visible_height_ratio": 0.6686686686686687,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0760578612951195,
+        "visual_confirmation": {
+          "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "f59742458381813947783b0175d4e20e2c2fc3f0fe5b95d9a0cd3396fd6aa09e",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v001-generation-v001.json",
+      "generation_record_sha256": "0f90e9bfa9072f8c77bf965e754818227fc34a49868696964886c5bf80c4d7a2"
+    },
+    {
+      "id": "trio-03-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v001.png",
+      "source_sheet_sha256": "c3827eabc3972f713f8fb39eee3bb12b392f5a66ebdffc95e966b70258175f69",
+      "reference_height_px": 654.3773399949406,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "4d15826549e7d6621623e674be4766442bca658b902f67d23cd7d852f3513e93",
+          "bytes": 1001098,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 998,
+        "reference_frame_id": "cheer",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 381.6,
+            "source_y": 167.8678678678679,
+            "canonical_span": [
+              323,
+              926
+            ],
+            "source_span": [
+              165,
+              561
+            ],
+            "ratio": 0.6567164179104478
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 481.4,
+            "source_y": 233.8018018018018,
+            "canonical_span": [
+              294,
+              953
+            ],
+            "source_span": [
+              146,
+              580
+            ],
+            "ratio": 0.6585735963581184
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 800.76,
+            "source_y": 444.79039039039037,
+            "canonical_span": [
+              341,
+              910
+            ],
+            "source_span": [
+              213,
+              513
+            ],
+            "ratio": 0.5272407732864675
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 920.52,
+            "source_y": 523.911111111111,
+            "canonical_span": [
+              386,
+              858
+            ],
+            "source_span": [
+              209,
+              518
+            ],
+            "ratio": 0.6546610169491526
+          }
+        ],
+        "common_ratio": 0.6556887174298002,
+        "initial_roi_locator_only_visible_height_ratio": 0.6606606606606606,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.2490945877592312,
+        "visual_confirmation": {
+          "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "f59742458381813947783b0175d4e20e2c2fc3f0fe5b95d9a0cd3396fd6aa09e",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v001-generation-v001.json",
+      "generation_record_sha256": "bef7453b4baefbbcff08015bb351015310052286d3dffdf144137647f4d5a189"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "4d15826549e7d6621623e674be4766442bca658b902f67d23cd7d852f3513e93",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        293,
+        182,
+        954,
+        1180
+      ],
+      "anchor_px": [
+        622,
+        1174
+      ],
+      "reference_height_px": 998,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of two broad short supporting feet; small side tail is excluded from the horizontal body reference.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/pygmy-hippopotamus/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "008528dbd4baac9dd3f6fa052f264873485a21a63e2ecc5923cab96b4a5e9a16",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "4d15826549e7d6621623e674be4766442bca658b902f67d23cd7d852f3513e93",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "76ebdac960579c102ab960ab4d374c06b90d9c25dbbe958cdce444ebca8ef7ac",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        149,
+        41,
+        575,
+        695
+      ],
+      "sheet_id": "trio-01-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v001.png",
+      "source_sheet_sha256": "b2cf73039b913e6376b4d0d52989d438c223a87add23e53f2117b37f4191f4ad",
+      "body_bbox_px": [
+        150,
+        42,
+        582,
+        695
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        149,
+        41,
+        575,
+        695
+      ],
+      "reference_height_px": 646.3747942439752,
+      "anchor_px": [
+        362.1761649327435,
+        691.113979192922
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        362.5,
+        695
+      ],
+      "sole_points": [
+        [
+          288.0,
+          695
+        ],
+        [
+          437.0,
+          695
+        ]
+      ],
+      "sole_regions": [
+        [
+          227,
+          579,
+          352,
+          697
+        ],
+        [
+          374,
+          579,
+          498,
+          697
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        149,
+        41,
+        575,
+        695
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "6b56c7abff5d396b9f6f9371a271816da8f335065c61049d70884c5d1cc5489f",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        150,
+        41,
+        575,
+        695
+      ],
+      "sheet_id": "trio-01-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v001.png",
+      "source_sheet_sha256": "b2cf73039b913e6376b4d0d52989d438c223a87add23e53f2117b37f4191f4ad",
+      "body_bbox_px": [
+        151,
+        42,
+        583,
+        695
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        150,
+        41,
+        575,
+        695
+      ],
+      "reference_height_px": 646.3747942439752,
+      "anchor_px": [
+        362.1761649327435,
+        691.113979192922
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        362.5,
+        695
+      ],
+      "sole_points": [
+        [
+          288.0,
+          695
+        ],
+        [
+          437.0,
+          695
+        ]
+      ],
+      "sole_regions": [
+        [
+          227,
+          579,
+          351,
+          697
+        ],
+        [
+          374,
+          579,
+          499,
+          697
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        150,
+        41,
+        575,
+        695
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "cfa46e3f07cee4747dcef0b32f202ce07d293509ea84ad4340606ca5485975ea",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        106,
+        41,
+        576,
+        695
+      ],
+      "sheet_id": "trio-01-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v001.png",
+      "source_sheet_sha256": "b2cf73039b913e6376b4d0d52989d438c223a87add23e53f2117b37f4191f4ad",
+      "body_bbox_px": [
+        107,
+        42,
+        539,
+        695
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        106,
+        41,
+        576,
+        695
+      ],
+      "reference_height_px": 646.3747942439752,
+      "anchor_px": [
+        362.1761649327435,
+        691.113979192922
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        362.5,
+        695
+      ],
+      "sole_points": [
+        [
+          288.0,
+          695
+        ],
+        [
+          437.0,
+          695
+        ]
+      ],
+      "sole_regions": [
+        [
+          227,
+          579,
+          352,
+          697
+        ],
+        [
+          374,
+          579,
+          499,
+          697
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        106,
+        41,
+        576,
+        695
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "4093d85252c7dce192f6debb5ae470e39a285127189cafce7ca21632f8747217",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        152,
+        39,
+        631,
+        708
+      ],
+      "sheet_id": "trio-02-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v001.png",
+      "source_sheet_sha256": "e01f0ef7c2797baafa888316d998454057a215c43398d2a9c8acdf7b0a65043f",
+      "body_bbox_px": [
+        153,
+        40,
+        595,
+        708
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        152,
+        39,
+        631,
+        708
+      ],
+      "reference_height_px": 673.2765296674469,
+      "anchor_px": [
+        362.66268710938505,
+        703.9522453126206
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        363.0,
+        708
+      ],
+      "sole_points": [
+        [
+          287.5,
+          708
+        ],
+        [
+          438.5,
+          708
+        ]
+      ],
+      "sole_regions": [
+        [
+          227,
+          587,
+          352,
+          710
+        ],
+        [
+          374,
+          587,
+          499,
+          710
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        152,
+        39,
+        631,
+        708
+      ]
+    },
+    {
+      "id": "think",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "82cb4127ff193857d37a5feb702275f51e68d6d16e8ac0b9c3b32817cab850d3",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        112,
+        22,
+        576,
+        708
+      ],
+      "sheet_id": "trio-02-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v001.png",
+      "source_sheet_sha256": "e01f0ef7c2797baafa888316d998454057a215c43398d2a9c8acdf7b0a65043f",
+      "body_bbox_px": [
+        113,
+        23,
+        567,
+        708
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        112,
+        22,
+        576,
+        708
+      ],
+      "reference_height_px": 673.2765296674469,
+      "anchor_px": [
+        361.66268710938505,
+        703.9522453126206
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        362.0,
+        708
+      ],
+      "sole_points": [
+        [
+          287.0,
+          708
+        ],
+        [
+          437.0,
+          708
+        ]
+      ],
+      "sole_regions": [
+        [
+          226,
+          587,
+          352,
+          710
+        ],
+        [
+          373,
+          587,
+          498,
+          710
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        112,
+        22,
+        576,
+        708
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "051452a488a091311d8cff99a6eba2148d688c4330594433f2695179aec732c3",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        128,
+        40,
+        573,
+        708
+      ],
+      "sheet_id": "trio-02-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v001.png",
+      "source_sheet_sha256": "e01f0ef7c2797baafa888316d998454057a215c43398d2a9c8acdf7b0a65043f",
+      "body_bbox_px": [
+        129,
+        41,
+        571,
+        708
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        128,
+        40,
+        573,
+        708
+      ],
+      "reference_height_px": 673.2765296674469,
+      "anchor_px": [
+        344.41268710938505,
+        703.9522453126206
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        344.75,
+        708
+      ],
+      "sole_points": [
+        [
+          268.5,
+          708
+        ],
+        [
+          421.0,
+          708
+        ]
+      ],
+      "sole_regions": [
+        [
+          210,
+          587,
+          335,
+          710
+        ],
+        [
+          356,
+          587,
+          481,
+          710
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        128,
+        40,
+        573,
+        708
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "dfc2ee94ab7117b51f73c716b696650458aa46354d6ac32eb687ac006087e231",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        145,
+        35,
+        581,
+        695
+      ],
+      "sheet_id": "trio-03-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v001.png",
+      "source_sheet_sha256": "c3827eabc3972f713f8fb39eee3bb12b392f5a66ebdffc95e966b70258175f69",
+      "body_bbox_px": [
+        146,
+        36,
+        582,
+        695
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        145,
+        35,
+        581,
+        695
+      ],
+      "reference_height_px": 654.3773399949406,
+      "anchor_px": [
+        363.6721556412851,
+        691.0658676954212
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        364.0,
+        695
+      ],
+      "sole_points": [
+        [
+          290.5,
+          695
+        ],
+        [
+          437.5,
+          695
+        ]
+      ],
+      "sole_regions": [
+        [
+          230,
+          577,
+          354,
+          697
+        ],
+        [
+          374,
+          577,
+          499,
+          697
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        145,
+        35,
+        581,
+        695
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "5c20502efa639afb88ef0448fb37450803900e37981e23a3ae984e17c8d140d0",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        145,
+        36,
+        579,
+        695
+      ],
+      "sheet_id": "trio-03-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v001.png",
+      "source_sheet_sha256": "c3827eabc3972f713f8fb39eee3bb12b392f5a66ebdffc95e966b70258175f69",
+      "body_bbox_px": [
+        146,
+        37,
+        582,
+        695
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        145,
+        36,
+        579,
+        695
+      ],
+      "reference_height_px": 654.3773399949406,
+      "anchor_px": [
+        362.6721556412851,
+        691.0658676954212
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        363.0,
+        695
+      ],
+      "sole_points": [
+        [
+          289.5,
+          695
+        ],
+        [
+          436.5,
+          695
+        ]
+      ],
+      "sole_regions": [
+        [
+          230,
+          577,
+          353,
+          697
+        ],
+        [
+          372,
+          577,
+          498,
+          697
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        145,
+        36,
+        579,
+        695
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "5b48b7c5c9ff7f84ba86eb0556033a555f1e2bfdcc4244a3e8a2bd73bff513a7",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        120,
+        36,
+        601,
+        695
+      ],
+      "sheet_id": "trio-03-v001",
+      "source_sheet": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v001.png",
+      "source_sheet_sha256": "c3827eabc3972f713f8fb39eee3bb12b392f5a66ebdffc95e966b70258175f69",
+      "body_bbox_px": [
+        121,
+        37,
+        557,
+        695
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        120,
+        36,
+        601,
+        695
+      ],
+      "reference_height_px": 654.3773399949406,
+      "anchor_px": [
+        362.6721556412851,
+        691.0658676954212
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        363.0,
+        695
+      ],
+      "sole_points": [
+        [
+          289.5,
+          695
+        ],
+        [
+          436.5,
+          695
+        ]
+      ],
+      "sole_regions": [
+        [
+          230,
+          577,
+          353,
+          697
+        ],
+        [
+          372,
+          577,
+          497,
+          697
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        120,
+        36,
+        601,
+        695
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v001-generation-v001.json",
+        "sha256": "d337de2e1c4bd7f4be850c48d936ac2af94f3892aa20db410213940c96e1ea9a",
+        "bytes": 4620
+      },
+      {
+        "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v001-generation-v001.json",
+        "sha256": "0f90e9bfa9072f8c77bf965e754818227fc34a49868696964886c5bf80c4d7a2",
+        "bytes": 4508
+      },
+      {
+        "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v001-generation-v001.json",
+        "sha256": "bef7453b4baefbbcff08015bb351015310052286d3dffdf144137647f4d5a189",
+        "bytes": 4538
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/pygmy-hippopotamus/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "0223a9d35428c26e806e664724b59fb556835a58540d1d0fc706f2d736d76577",
+      "bytes": 8311
+    }
+  ]
+}

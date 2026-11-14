@@ -1,0 +1,1600 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "great-curassow",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-root-tail-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/great-curassow/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "a24b08aad68cb5c5897338b6dfce7399f38844b03e1b4b81df3f30bc0b49dd5a",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      266.0,
+      347.0,
+      819.0,
+      1035.0
+    ],
+    "anchor_px": [
+      545.0,
+      1028.0
+    ],
+    "reference_height_px": 688.0,
+    "anchor_kind": "anatomical-two-bird-foot-contact",
+    "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+    "anchor_basis": "Mean of the two visible bird-foot support contact bands; curly crest and low broad tail are excluded from body-height calibration/support.",
+    "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+    "source_manifest": "assets/library/characters/great-curassow/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "f01fa7203fe2c2f5a18efc5d1e7e913bf680ee0844da365ebf626cfbe8ef5316"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "a24b08aad68cb5c5897338b6dfce7399f38844b03e1b4b81df3f30bc0b49dd5a",
+      "reference_height_px": 688.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "split-a-v001",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "aedca6ffe9372077111705da89c05f4d07fd6766c1197311f5f6612a07ff0ba0",
+      "reference_height_px": 379.9402985074627,
+      "calibration": {
+        "method": "Median of three independently located head/shell/trunk anatomical spans; one source-wide isotropic reference, never fit individual frame or whole alpha bounds.",
+        "neutral_reference": {
+          "path": "assets/library/characters/great-curassow/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "a24b08aad68cb5c5897338b6dfce7399f38844b03e1b4b81df3f30bc0b49dd5a",
+          "bytes": 640283,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 688.0,
+        "reference_frame_id": "blink",
+        "source_reference_body_roi_px": [
+          338,
+          103,
+          625,
+          480
+        ],
+        "canonical_body_roi_px": [
+          266.0,
+          347.0,
+          819.0,
+          1035.0
+        ],
+        "landmarks": [
+          {
+            "name": "Head width below crest and excluding bill/knob",
+            "ratio": 0.5522388059701493,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 268,
+            "source_span_px": 148,
+            "canonical_endpoints_px": [
+              [
+                350,
+                455
+              ],
+              [
+                618,
+                455
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                380,
+                180
+              ],
+              [
+                528,
+                180
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                380,
+                180
+              ],
+              [
+                528,
+                180
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Resting torso cross-section excluding fan tail/extended wing",
+            "ratio": 0.5583657587548638,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 514,
+            "source_span_px": 287,
+            "canonical_endpoints_px": [
+              [
+                298,
+                720
+              ],
+              [
+                812,
+                720
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                338,
+                330
+              ],
+              [
+                625,
+                330
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                338,
+                330
+              ],
+              [
+                625,
+                330
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Main head-to-foot vertical, crest not part of body",
+            "ratio": 0.5479651162790697,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 688,
+            "source_span_px": 377,
+            "canonical_endpoints_px": [
+              [
+                545,
+                347
+              ],
+              [
+                545,
+                1035
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                500,
+                103
+              ],
+              [
+                500,
+                480
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                500,
+                103
+              ],
+              [
+                500,
+                480
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          }
+        ],
+        "common_ratio": 0.5522388059701493,
+        "reference_height_px": 379.9402985074627,
+        "landmark_ratio_spread": 1.0189804828205473,
+        "needs_visual_confirmation": false,
+        "canonical_projected_support": {
+          "points": [
+            [
+              456.0,
+              1030
+            ],
+            [
+              603.0,
+              1035
+            ]
+          ],
+          "regions": [
+            [
+              402,
+              952,
+              541,
+              1032
+            ],
+            [
+              549,
+              952,
+              687,
+              1037
+            ]
+          ],
+          "point": [
+            529.5,
+            1035
+          ],
+          "offset_to_adopted_anchor_px": [
+            15.5,
+            -7.0
+          ]
+        },
+        "scope": "B producer native and declared-use comparison completed; independent root crossreview pending. One common isotropic scale per source retained.",
+        "visual_confirmation": {
+          "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "7587c3fcb4b319a28f40cbdfa6612c328ee052dd2469c704e9275700c6df791f"
+        }
+      },
+      "generation_input": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-a-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-a-v001-generation-v001.json",
+      "generation_record_sha256": "dc07354a40b0e38e1e3f72586c85cbb484a664da64829b795a82ba4c6c9ffdc6"
+    },
+    {
+      "id": "split-b-v001",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "936c10cc54850219911e97568dda1dfdf5e08518e8446e5a95f63f80892d0677",
+      "reference_height_px": 381.4785992217899,
+      "calibration": {
+        "method": "Median of three independently located head/shell/trunk anatomical spans; one source-wide isotropic reference, never fit individual frame or whole alpha bounds.",
+        "neutral_reference": {
+          "path": "assets/library/characters/great-curassow/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "a24b08aad68cb5c5897338b6dfce7399f38844b03e1b4b81df3f30bc0b49dd5a",
+          "bytes": 640283,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 688.0,
+        "reference_frame_id": "present_right",
+        "source_reference_body_roi_px": [
+          372,
+          107,
+          620,
+          485
+        ],
+        "canonical_body_roi_px": [
+          266.0,
+          347.0,
+          819.0,
+          1035.0
+        ],
+        "landmarks": [
+          {
+            "name": "Head width below crest and excluding bill/knob",
+            "ratio": 0.5634328358208955,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 268,
+            "source_span_px": 151,
+            "canonical_endpoints_px": [
+              [
+                350,
+                455
+              ],
+              [
+                618,
+                455
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                470,
+                180
+              ],
+              [
+                621,
+                180
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                470,
+                180
+              ],
+              [
+                621,
+                180
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Resting torso cross-section excluding fan tail/extended wing",
+            "ratio": 0.5544747081712063,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 514,
+            "source_span_px": 285,
+            "canonical_endpoints_px": [
+              [
+                298,
+                720
+              ],
+              [
+                812,
+                720
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                335,
+                330
+              ],
+              [
+                620,
+                330
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                335,
+                330
+              ],
+              [
+                620,
+                330
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Main head-to-foot vertical, crest not part of body",
+            "ratio": 0.5494186046511628,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 688,
+            "source_span_px": 378,
+            "canonical_endpoints_px": [
+              [
+                545,
+                347
+              ],
+              [
+                545,
+                1035
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                500,
+                107
+              ],
+              [
+                500,
+                485
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                500,
+                107
+              ],
+              [
+                500,
+                485
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          }
+        ],
+        "common_ratio": 0.5544747081712063,
+        "reference_height_px": 381.4785992217899,
+        "landmark_ratio_spread": 1.025507383716339,
+        "needs_visual_confirmation": false,
+        "canonical_projected_support": {
+          "points": [
+            [
+              456.0,
+              1030
+            ],
+            [
+              603.0,
+              1035
+            ]
+          ],
+          "regions": [
+            [
+              402,
+              952,
+              541,
+              1032
+            ],
+            [
+              549,
+              952,
+              687,
+              1037
+            ]
+          ],
+          "point": [
+            529.5,
+            1035
+          ],
+          "offset_to_adopted_anchor_px": [
+            15.5,
+            -7.0
+          ]
+        },
+        "scope": "B producer native and declared-use comparison completed; independent root crossreview pending. One common isotropic scale per source retained.",
+        "visual_confirmation": {
+          "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "7587c3fcb4b319a28f40cbdfa6612c328ee052dd2469c704e9275700c6df791f"
+        }
+      },
+      "generation_input": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-b-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-b-v001-generation-v001.json",
+      "generation_record_sha256": "41fb354c93b2f0eb0d4ab6b85a010668575a50cc3c5c936a2bbb229333723bad"
+    },
+    {
+      "id": "split-c-v001",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "88b6a6005dabb657b0124183d0f274bf5970a3567f9f38a3ef4eac7fb3c504c7",
+      "reference_height_px": 385.07462686567163,
+      "calibration": {
+        "method": "Median of three independently located head/shell/trunk anatomical spans; one source-wide isotropic reference, never fit individual frame or whole alpha bounds.",
+        "neutral_reference": {
+          "path": "assets/library/characters/great-curassow/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "a24b08aad68cb5c5897338b6dfce7399f38844b03e1b4b81df3f30bc0b49dd5a",
+          "bytes": 640283,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 688.0,
+        "reference_frame_id": "cheer",
+        "source_reference_body_roi_px": [
+          354,
+          100,
+          625,
+          490
+        ],
+        "canonical_body_roi_px": [
+          266.0,
+          347.0,
+          819.0,
+          1035.0
+        ],
+        "landmarks": [
+          {
+            "name": "Head width below crest and excluding bill/knob",
+            "ratio": 0.5597014925373134,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 268,
+            "source_span_px": 150,
+            "canonical_endpoints_px": [
+              [
+                350,
+                455
+              ],
+              [
+                618,
+                455
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                380,
+                180
+              ],
+              [
+                530,
+                180
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                380,
+                180
+              ],
+              [
+                530,
+                180
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Resting torso cross-section excluding fan tail/extended wing",
+            "ratio": 0.5447470817120622,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 514,
+            "source_span_px": 280,
+            "canonical_endpoints_px": [
+              [
+                298,
+                720
+              ],
+              [
+                812,
+                720
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                345,
+                330
+              ],
+              [
+                625,
+                330
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                345,
+                330
+              ],
+              [
+                625,
+                330
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Main head-to-foot vertical, crest not part of body",
+            "ratio": 0.5668604651162791,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 688,
+            "source_span_px": 390,
+            "canonical_endpoints_px": [
+              [
+                545,
+                347
+              ],
+              [
+                545,
+                1035
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                500,
+                100
+              ],
+              [
+                500,
+                490
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                500,
+                100
+              ],
+              [
+                500,
+                490
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          }
+        ],
+        "common_ratio": 0.5597014925373134,
+        "reference_height_px": 385.07462686567163,
+        "landmark_ratio_spread": 1.040593853820598,
+        "needs_visual_confirmation": false,
+        "canonical_projected_support": {
+          "points": [
+            [
+              456.0,
+              1030
+            ],
+            [
+              603.0,
+              1035
+            ]
+          ],
+          "regions": [
+            [
+              402,
+              952,
+              541,
+              1032
+            ],
+            [
+              549,
+              952,
+              687,
+              1037
+            ]
+          ],
+          "point": [
+            529.5,
+            1035
+          ],
+          "offset_to_adopted_anchor_px": [
+            15.5,
+            -7.0
+          ]
+        },
+        "scope": "B producer native and declared-use comparison completed; independent root crossreview pending. One common isotropic scale per source retained.",
+        "visual_confirmation": {
+          "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "7587c3fcb4b319a28f40cbdfa6612c328ee052dd2469c704e9275700c6df791f"
+        }
+      },
+      "generation_input": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-c-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-c-v001-generation-v001.json",
+      "generation_record_sha256": "6439ff4874f3bb97431090d079adaf9741054278fee4a80a0acc1965742a883d"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/great-curassow/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "a24b08aad68cb5c5897338b6dfce7399f38844b03e1b4b81df3f30bc0b49dd5a",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        266.0,
+        347.0,
+        819.0,
+        1035.0
+      ],
+      "anchor_px": [
+        545.0,
+        1028.0
+      ],
+      "reference_height_px": 688.0,
+      "anchor_kind": "anatomical-two-bird-foot-contact",
+      "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+      "anchor_basis": "Mean of the two visible bird-foot support contact bands; curly crest and low broad tail are excluded from body-height calibration/support.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_manifest": "assets/library/characters/great-curassow/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "f01fa7203fe2c2f5a18efc5d1e7e913bf680ee0844da365ebf626cfbe8ef5316",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "a24b08aad68cb5c5897338b6dfce7399f38844b03e1b4b81df3f30bc0b49dd5a",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "split-a-v001",
+      "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink.png",
+      "sha256": "e860bccb135f48b242eb5d2e300c6643143810c11a281165dab2df09fe5b0806",
+      "size_px": [
+        1024,
+        510
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1024,
+        510
+      ],
+      "full_visible_alpha8_bbox_px": [
+        314,
+        25,
+        736,
+        487
+      ],
+      "visible_margin_px": [
+        314,
+        25,
+        288,
+        23
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        338,
+        103,
+        625,
+        480
+      ],
+      "subject_bbox_px": [
+        314,
+        25,
+        736,
+        487
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 379.9402985074627,
+      "anchor_px": [
+        480.30970149253733,
+        483.13432835820896
+      ],
+      "anchor_kind": "anatomical-two-bird-foot-contact",
+      "source_foot_point_px": [
+        471.75,
+        487
+      ],
+      "sole_points": [
+        [
+          431.0,
+          485
+        ],
+        [
+          512.5,
+          487
+        ]
+      ],
+      "sole_regions": [
+        [
+          397,
+          435,
+          478,
+          487
+        ],
+        [
+          479,
+          435,
+          558,
+          489
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Two observed bird-foot bottom bands, plus unchanged canonical projection offset scaled by the sheet ratio. Crest, tail and raised wings are excluded. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "aedca6ffe9372077111705da89c05f4d07fd6766c1197311f5f6612a07ff0ba0"
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "sheet_id": "split-a-v001",
+      "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/greet.png",
+      "sha256": "2866ae728c7e954921eefc6a3fe1b9134abfcc36fffc1c1a5ef7da69fe39c207",
+      "size_px": [
+        1024,
+        511
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        510,
+        1024,
+        1021
+      ],
+      "full_visible_alpha8_bbox_px": [
+        316,
+        24,
+        735,
+        487
+      ],
+      "visible_margin_px": [
+        316,
+        24,
+        289,
+        24
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        338,
+        103,
+        625,
+        480
+      ],
+      "subject_bbox_px": [
+        316,
+        24,
+        735,
+        487
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 379.9402985074627,
+      "anchor_px": [
+        480.05970149253733,
+        483.13432835820896
+      ],
+      "anchor_kind": "anatomical-two-bird-foot-contact",
+      "source_foot_point_px": [
+        471.5,
+        487
+      ],
+      "sole_points": [
+        [
+          430.5,
+          485
+        ],
+        [
+          512.5,
+          487
+        ]
+      ],
+      "sole_regions": [
+        [
+          397,
+          435,
+          478,
+          487
+        ],
+        [
+          479,
+          435,
+          558,
+          489
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Two observed bird-foot bottom bands, plus unchanged canonical projection offset scaled by the sheet ratio. Crest, tail and raised wings are excluded. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "aedca6ffe9372077111705da89c05f4d07fd6766c1197311f5f6612a07ff0ba0"
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "sheet_id": "split-a-v001",
+      "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_left.png",
+      "sha256": "a40eee54045e76dddf5e8906049d065aaca8b69428f18d8b8c6966febcc0681b",
+      "size_px": [
+        1024,
+        515
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        1021,
+        1024,
+        1536
+      ],
+      "full_visible_alpha8_bbox_px": [
+        217,
+        25,
+        738,
+        490
+      ],
+      "visible_margin_px": [
+        217,
+        25,
+        286,
+        25
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        338,
+        106,
+        625,
+        483
+      ],
+      "subject_bbox_px": [
+        217,
+        25,
+        738,
+        490
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 379.9402985074627,
+      "anchor_px": [
+        480.30970149253733,
+        486.13432835820896
+      ],
+      "anchor_kind": "anatomical-two-bird-foot-contact",
+      "source_foot_point_px": [
+        471.75,
+        490
+      ],
+      "sole_points": [
+        [
+          431.0,
+          488
+        ],
+        [
+          512.5,
+          490
+        ]
+      ],
+      "sole_regions": [
+        [
+          398,
+          438,
+          479,
+          490
+        ],
+        [
+          479,
+          438,
+          558,
+          492
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Two observed bird-foot bottom bands, plus unchanged canonical projection offset scaled by the sheet ratio. Crest, tail and raised wings are excluded. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "aedca6ffe9372077111705da89c05f4d07fd6766c1197311f5f6612a07ff0ba0"
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "sheet_id": "split-b-v001",
+      "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+      "sha256": "ecb8ad965d02d8663b334ae526464ef27771e6a1bd366ffa3d3c2d637654d5f1",
+      "size_px": [
+        1024,
+        514
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1024,
+        514
+      ],
+      "full_visible_alpha8_bbox_px": [
+        263,
+        19,
+        722,
+        491
+      ],
+      "visible_margin_px": [
+        263,
+        19,
+        302,
+        23
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        372,
+        107,
+        620,
+        485
+      ],
+      "subject_bbox_px": [
+        263,
+        19,
+        722,
+        491
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 381.4785992217899,
+      "anchor_px": [
+        525.3443579766537,
+        487.11867704280155
+      ],
+      "anchor_kind": "anatomical-two-bird-foot-contact",
+      "source_foot_point_px": [
+        516.75,
+        491
+      ],
+      "sole_points": [
+        [
+          474.0,
+          491
+        ],
+        [
+          559.5,
+          487
+        ]
+      ],
+      "sole_regions": [
+        [
+          424,
+          440,
+          507,
+          493
+        ],
+        [
+          511,
+          440,
+          595,
+          489
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Two observed bird-foot bottom bands, plus unchanged canonical projection offset scaled by the sheet ratio. Crest, tail and raised wings are excluded. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "936c10cc54850219911e97568dda1dfdf5e08518e8446e5a95f63f80892d0677"
+    },
+    {
+      "id": "think",
+      "index": 1,
+      "sheet_id": "split-b-v001",
+      "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/think.png",
+      "sha256": "a2d406a01aa85fe697278a8d4e8ad88150372c5a6c08ac9886481fa4fb26cf5c",
+      "size_px": [
+        1024,
+        492
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        514,
+        1024,
+        1006
+      ],
+      "full_visible_alpha8_bbox_px": [
+        262,
+        25,
+        694,
+        472
+      ],
+      "visible_margin_px": [
+        262,
+        25,
+        330,
+        20
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        372,
+        88,
+        620,
+        466
+      ],
+      "subject_bbox_px": [
+        262,
+        25,
+        694,
+        472
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 381.4785992217899,
+      "anchor_px": [
+        526.0943579766537,
+        468.11867704280155
+      ],
+      "anchor_kind": "anatomical-two-bird-foot-contact",
+      "source_foot_point_px": [
+        517.5,
+        472
+      ],
+      "sole_points": [
+        [
+          475.0,
+          472
+        ],
+        [
+          560.0,
+          469
+        ]
+      ],
+      "sole_regions": [
+        [
+          424,
+          421,
+          507,
+          474
+        ],
+        [
+          511,
+          421,
+          595,
+          471
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Two observed bird-foot bottom bands, plus unchanged canonical projection offset scaled by the sheet ratio. Crest, tail and raised wings are excluded. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "936c10cc54850219911e97568dda1dfdf5e08518e8446e5a95f63f80892d0677"
+    },
+    {
+      "id": "aha",
+      "index": 2,
+      "sheet_id": "split-b-v001",
+      "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/aha.png",
+      "sha256": "12807b85cda518a9f8ffefecc985de5d347b59af31fae30f29691ac954e28f81",
+      "size_px": [
+        1024,
+        530
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        1006,
+        1024,
+        1536
+      ],
+      "full_visible_alpha8_bbox_px": [
+        263,
+        22,
+        705,
+        511
+      ],
+      "visible_margin_px": [
+        263,
+        22,
+        319,
+        19
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        372,
+        127,
+        620,
+        505
+      ],
+      "subject_bbox_px": [
+        263,
+        22,
+        705,
+        511
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 381.4785992217899,
+      "anchor_px": [
+        525.3443579766537,
+        507.11867704280155
+      ],
+      "anchor_kind": "anatomical-two-bird-foot-contact",
+      "source_foot_point_px": [
+        516.75,
+        511
+      ],
+      "sole_points": [
+        [
+          474.5,
+          511
+        ],
+        [
+          559.0,
+          507
+        ]
+      ],
+      "sole_regions": [
+        [
+          424,
+          460,
+          507,
+          513
+        ],
+        [
+          511,
+          460,
+          594,
+          509
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Two observed bird-foot bottom bands, plus unchanged canonical projection offset scaled by the sheet ratio. Crest, tail and raised wings are excluded. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v001.png",
+      "source_sheet_sha256": "936c10cc54850219911e97568dda1dfdf5e08518e8446e5a95f63f80892d0677"
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "sheet_id": "split-c-v001",
+      "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+      "sha256": "965f3fced62e3c5b0fa7f030c9123009b6cf269f8d5d474eacff1fc10e51920e",
+      "size_px": [
+        1024,
+        528
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1024,
+        528
+      ],
+      "full_visible_alpha8_bbox_px": [
+        262,
+        18,
+        750,
+        499
+      ],
+      "visible_margin_px": [
+        262,
+        18,
+        274,
+        29
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        354,
+        100,
+        625,
+        490
+      ],
+      "subject_bbox_px": [
+        262,
+        18,
+        750,
+        499
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 385.07462686567163,
+      "anchor_px": [
+        490.67537313432837,
+        495.0820895522388
+      ],
+      "anchor_kind": "anatomical-two-bird-foot-contact",
+      "source_foot_point_px": [
+        482.0,
+        499
+      ],
+      "sole_points": [
+        [
+          440.0,
+          497
+        ],
+        [
+          524.0,
+          499
+        ]
+      ],
+      "sole_regions": [
+        [
+          406,
+          443,
+          489,
+          499
+        ],
+        [
+          491,
+          443,
+          573,
+          501
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Two observed bird-foot bottom bands, plus unchanged canonical projection offset scaled by the sheet ratio. Crest, tail and raised wings are excluded. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "88b6a6005dabb657b0124183d0f274bf5970a3567f9f38a3ef4eac7fb3c504c7"
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "sheet_id": "split-c-v001",
+      "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/species_a.png",
+      "sha256": "693193b2655f29126dc48235652439e520b796e7653ca0abb2881478c9336855",
+      "size_px": [
+        1024,
+        476
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        528,
+        1024,
+        1004
+      ],
+      "full_visible_alpha8_bbox_px": [
+        282,
+        30,
+        749,
+        453
+      ],
+      "visible_margin_px": [
+        282,
+        30,
+        275,
+        23
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        354,
+        54,
+        625,
+        444
+      ],
+      "subject_bbox_px": [
+        282,
+        30,
+        749,
+        453
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 385.07462686567163,
+      "anchor_px": [
+        490.67537313432837,
+        449.0820895522388
+      ],
+      "anchor_kind": "anatomical-two-bird-foot-contact",
+      "source_foot_point_px": [
+        482.0,
+        453
+      ],
+      "sole_points": [
+        [
+          440.0,
+          451
+        ],
+        [
+          524.0,
+          453
+        ]
+      ],
+      "sole_regions": [
+        [
+          406,
+          397,
+          488,
+          453
+        ],
+        [
+          491,
+          397,
+          572,
+          455
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Two observed bird-foot bottom bands, plus unchanged canonical projection offset scaled by the sheet ratio. Crest, tail and raised wings are excluded. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "88b6a6005dabb657b0124183d0f274bf5970a3567f9f38a3ef4eac7fb3c504c7"
+    },
+    {
+      "id": "species_b",
+      "index": 2,
+      "sheet_id": "split-c-v001",
+      "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/frames/species_b.png",
+      "sha256": "c2d6067895a39b9d93d91bb8f6fd2e0b892297b3c3963205e1b7da4aaf0d2eb0",
+      "size_px": [
+        1024,
+        532
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        1004,
+        1024,
+        1536
+      ],
+      "full_visible_alpha8_bbox_px": [
+        305,
+        25,
+        750,
+        506
+      ],
+      "visible_margin_px": [
+        305,
+        25,
+        274,
+        26
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        354,
+        107,
+        625,
+        497
+      ],
+      "subject_bbox_px": [
+        305,
+        25,
+        750,
+        506
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 385.07462686567163,
+      "anchor_px": [
+        492.42537313432837,
+        502.0820895522388
+      ],
+      "anchor_kind": "anatomical-two-bird-foot-contact",
+      "source_foot_point_px": [
+        483.75,
+        506
+      ],
+      "sole_points": [
+        [
+          442.0,
+          504
+        ],
+        [
+          525.5,
+          506
+        ]
+      ],
+      "sole_regions": [
+        [
+          408,
+          450,
+          490,
+          506
+        ],
+        [
+          493,
+          450,
+          574,
+          508
+        ]
+      ],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Two observed bird-foot bottom bands, plus unchanged canonical projection offset scaled by the sheet ratio. Crest, tail and raised wings are excluded. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_sheet": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "88b6a6005dabb657b0124183d0f274bf5970a3567f9f38a3ef4eac7fb3c504c7"
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-a-v001-generation-v001.json",
+        "sha256": "dc07354a40b0e38e1e3f72586c85cbb484a664da64829b795a82ba4c6c9ffdc6",
+        "bytes": 3794
+      },
+      {
+        "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-b-v001-generation-v001.json",
+        "sha256": "41fb354c93b2f0eb0d4ab6b85a010668575a50cc3c5c936a2bbb229333723bad",
+        "bytes": 3806
+      },
+      {
+        "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-c-v001-generation-v001.json",
+        "sha256": "6439ff4874f3bb97431090d079adaf9741054278fee4a80a0acc1965742a883d",
+        "bytes": 3741
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/great-curassow/generation-batches/youtube-core-20261114-root-tail-v001/qa/stock-adoption-v001.json",
+      "sha256": "4996ed3e6ccd0e286bda1375bf12b21842a3320176e8df3b75ab03bfdea8284e",
+      "bytes": 8595
+    }
+  ]
+}

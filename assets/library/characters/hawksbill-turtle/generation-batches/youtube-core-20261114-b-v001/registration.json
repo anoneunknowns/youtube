@@ -1,0 +1,1277 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "hawksbill-turtle",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "b2dce33e42f1dcea8c7b49d2838202f7ef1be532f1c98856193ade46adbac36a",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      429,
+      426,
+      1010,
+      850
+    ],
+    "anchor_px": [
+      704,
+      641
+    ],
+    "reference_height_px": 424,
+    "anchor_kind": "anatomical-shell-centre",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Visual centre of shell/body mass. Flippers, head and any tail are not foot-support markers; body reference is shell height.",
+    "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+    "source_manifest": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "a2df36b3acd7c36ff621c820943192941bb8f75805120e468a75a4bb3dad911a"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "b2dce33e42f1dcea8c7b49d2838202f7ef1be532f1c98856193ade46adbac36a",
+      "reference_height_px": 424,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "44716e3b0ad72e7327189a6508fbdefcfcad445f8048db6da0beb15a2c35cade",
+      "reference_height_px": 371.3157092277294,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b2dce33e42f1dcea8c7b49d2838202f7ef1be532f1c98856193ade46adbac36a",
+          "bytes": 720340,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 424,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 510.8,
+            "source_y": 298.56470588235294,
+            "canonical_span": [
+              429,
+              859
+            ],
+            "source_span": [
+              306,
+              676
+            ],
+            "ratio": 0.8604651162790697
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 553.2,
+            "source_y": 337.84705882352944,
+            "canonical_span": [
+              429,
+              902
+            ],
+            "source_span": [
+              306,
+              716
+            ],
+            "ratio": 0.8668076109936576
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 688.88,
+            "source_y": 463.55058823529413,
+            "canonical_span": [
+              429,
+              995
+            ],
+            "source_span": [
+              306,
+              807
+            ],
+            "ratio": 0.8851590106007067
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 739.76,
+            "source_y": 510.6894117647059,
+            "canonical_span": [
+              429,
+              1010
+            ],
+            "source_span": [
+              306,
+              820
+            ],
+            "ratio": 0.8846815834767642
+          }
+        ],
+        "common_ratio": 0.8757445972352109,
+        "initial_roi_locator_only_visible_height_ratio": 0.9264705882352942,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0286983096170375,
+        "visual_confirmation": {
+          "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v003.json",
+          "sha256": "a86c13c417f0720926d9dd43fee1dae8b249f79cae247babaaab223b73107832",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+      "generation_record_sha256": "f9c938a6b85b66db61c3cbed4992e1262f96ff9bc3343cab80ea7e7343a064a6"
+    },
+    {
+      "id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "83c9a4bdad2cde8229b24a44ba50fa0629997859931cd45ffd6ccf7d57043a9f",
+      "reference_height_px": 338.36392019300393,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b2dce33e42f1dcea8c7b49d2838202f7ef1be532f1c98856193ade46adbac36a",
+          "bytes": 720340,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 424,
+        "reference_frame_id": "present_left",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 510.8,
+            "source_y": 306.3705882352941,
+            "canonical_span": [
+              429,
+              859
+            ],
+            "source_span": [
+              337,
+              676
+            ],
+            "ratio": 0.7883720930232558
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 553.2,
+            "source_y": 347.0558823529412,
+            "canonical_span": [
+              429,
+              902
+            ],
+            "source_span": [
+              337,
+              715
+            ],
+            "ratio": 0.7991543340380549
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 688.88,
+            "source_y": 477.24882352941177,
+            "canonical_span": [
+              429,
+              995
+            ],
+            "source_span": [
+              337,
+              824
+            ],
+            "ratio": 0.8604240282685512
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 739.76,
+            "source_y": 526.0711764705882,
+            "canonical_span": [
+              429,
+              1010
+            ],
+            "source_span": [
+              337,
+              800
+            ],
+            "ratio": 0.7969018932874354
+          }
+        ],
+        "common_ratio": 0.7980281136627452,
+        "initial_roi_locator_only_visible_height_ratio": 0.9595588235294118,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0913933101931477,
+        "visual_confirmation": {
+          "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v003.json",
+          "sha256": "a86c13c417f0720926d9dd43fee1dae8b249f79cae247babaaab223b73107832",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_record_sha256": "28162ca20fc48d61d45db851f2227f91e37b511aceb87f1db441d22dfa738541"
+    },
+    {
+      "id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "aee1c8ed0fccd0586df640288da55277ac61b5865b1a2a52fdf27016bf89913e",
+      "reference_height_px": 326.0958106057574,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b2dce33e42f1dcea8c7b49d2838202f7ef1be532f1c98856193ade46adbac36a",
+          "bytes": 720340,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 424,
+        "reference_frame_id": "aha",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 510.8,
+            "source_y": 289.4617647058824,
+            "canonical_span": [
+              429,
+              859
+            ],
+            "source_span": [
+              318,
+              621
+            ],
+            "ratio": 0.7046511627906977
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 553.2,
+            "source_y": 330.6926470588235,
+            "canonical_span": [
+              429,
+              902
+            ],
+            "source_span": [
+              318,
+              667
+            ],
+            "ratio": 0.7378435517970402
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 688.88,
+            "source_y": 462.6314705882353,
+            "canonical_span": [
+              429,
+              995
+            ],
+            "source_span": [
+              318,
+              780
+            ],
+            "ratio": 0.8162544169611308
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 739.76,
+            "source_y": 512.1085294117647,
+            "canonical_span": [
+              429,
+              1010
+            ],
+            "source_span": [
+              318,
+              783
+            ],
+            "ratio": 0.8003442340791739
+          }
+        ],
+        "common_ratio": 0.769093892938107,
+        "initial_roi_locator_only_visible_height_ratio": 0.9724264705882353,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.1583808557534199,
+        "visual_confirmation": {
+          "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v003.json",
+          "sha256": "a86c13c417f0720926d9dd43fee1dae8b249f79cae247babaaab223b73107832",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+      "generation_record_sha256": "26f89d0ba39c79ec2a0d49c2f83724c5dfc73257055527008da67009921450b0"
+    },
+    {
+      "id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "27d5b8b2e689ebc19d2fbd52a59cccfd5458f3db79f1214b311515c2562e6719",
+      "reference_height_px": 373.71162790697673,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b2dce33e42f1dcea8c7b49d2838202f7ef1be532f1c98856193ade46adbac36a",
+          "bytes": 720340,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 424,
+        "reference_frame_id": "cheer",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 510.8,
+            "source_y": 276.61764705882354,
+            "canonical_span": [
+              429,
+              859
+            ],
+            "source_span": [
+              293,
+              671
+            ],
+            "ratio": 0.8790697674418605
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 553.2,
+            "source_y": 317.92647058823525,
+            "canonical_span": [
+              429,
+              902
+            ],
+            "source_span": [
+              293,
+              711
+            ],
+            "ratio": 0.8837209302325582
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 688.88,
+            "source_y": 450.11470588235295,
+            "canonical_span": [
+              429,
+              995
+            ],
+            "source_span": [
+              293,
+              817
+            ],
+            "ratio": 0.9257950530035336
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 739.76,
+            "source_y": 499.68529411764706,
+            "canonical_span": [
+              429,
+              1010
+            ],
+            "source_span": [
+              293,
+              742
+            ],
+            "ratio": 0.7728055077452668
+          }
+        ],
+        "common_ratio": 0.8813953488372093,
+        "initial_roi_locator_only_visible_height_ratio": 0.9742647058823529,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.1979664271604744,
+        "visual_confirmation": {
+          "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v003.json",
+          "sha256": "a86c13c417f0720926d9dd43fee1dae8b249f79cae247babaaab223b73107832",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_record_sha256": "66c89e29e0d39ada5f19695c29add6bf50169e7b8472c33a2ae146ec06bfaadd"
+    },
+    {
+      "id": "species_b-single-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/species_b-single-v001.png",
+      "source_sheet_sha256": "f4722b231684e68f9d1e2b8ac26a5d12abf245b2f147799050757f39784ee02f",
+      "reference_height_px": 663.9643804301542,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b2dce33e42f1dcea8c7b49d2838202f7ef1be532f1c98856193ade46adbac36a",
+          "bytes": 720340,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 424,
+        "reference_frame_id": "species_b",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 510.8,
+            "source_y": 258.51176470588234,
+            "canonical_span": [
+              429,
+              859
+            ],
+            "source_span": [
+              470,
+              1160
+            ],
+            "ratio": 1.6046511627906976
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 553.2,
+            "source_y": 322.2676470588235,
+            "canonical_span": [
+              429,
+              902
+            ],
+            "source_span": [
+              470,
+              1221
+            ],
+            "ratio": 1.587737843551797
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 688.88,
+            "source_y": 526.2864705882353,
+            "canonical_span": [
+              429,
+              995
+            ],
+            "source_span": [
+              470,
+              1344
+            ],
+            "ratio": 1.5441696113074206
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 739.76,
+            "source_y": 602.7935294117647,
+            "canonical_span": [
+              429,
+              1010
+            ],
+            "source_span": [
+              470,
+              1344
+            ],
+            "ratio": 1.504302925989673
+          }
+        ],
+        "common_ratio": 1.565953727429609,
+        "initial_roi_locator_only_visible_height_ratio": 1.5036764705882353,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0667074663402694,
+        "visual_confirmation": {
+          "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v003.json",
+          "sha256": "a86c13c417f0720926d9dd43fee1dae8b249f79cae247babaaab223b73107832",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+      "generation_record_sha256": "6589a1b57f547c655ccefa518130ac3d511dc44012c7af4210304a4183473d91"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "b2dce33e42f1dcea8c7b49d2838202f7ef1be532f1c98856193ade46adbac36a",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        429,
+        426,
+        1010,
+        850
+      ],
+      "anchor_px": [
+        704,
+        641
+      ],
+      "reference_height_px": 424,
+      "anchor_kind": "anatomical-shell-centre",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Visual centre of shell/body mass. Flippers, head and any tail are not foot-support markers; body reference is shell height.",
+      "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+      "source_manifest": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "a2df36b3acd7c36ff621c820943192941bb8f75805120e468a75a4bb3dad911a",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "b2dce33e42f1dcea8c7b49d2838202f7ef1be532f1c98856193ade46adbac36a",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        884,
+        887
+      ],
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "90ee7d7c028bb0f8cda7d0cce54675ecd850ee6d2cbccd80ddfb988a6decaf31",
+      "size_px": [
+        884,
+        887
+      ],
+      "visible": [
+        60,
+        205,
+        834,
+        709
+      ],
+      "sheet_id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "44716e3b0ad72e7327189a6508fbdefcfcad445f8048db6da0beb15a2c35cade",
+      "body_bbox_px": [
+        306,
+        220,
+        845,
+        613
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        60,
+        205,
+        834,
+        709
+      ],
+      "reference_height_px": 371.3157092277294,
+      "anchor_px": [
+        546.8297642396831,
+        408.2850884055704
+      ],
+      "anchor_kind": "anatomical-shell-centre",
+      "source_foot_point_px": [
+        546.8297642396831,
+        408.2850884055704
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+      "subject_bbox_px": [
+        60,
+        205,
+        834,
+        709
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        884,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "88c9af5959994994df875679bca11b564f514b548bead4d87ab552fc34aa93b8",
+      "size_px": [
+        890,
+        887
+      ],
+      "visible": [
+        51,
+        205,
+        837,
+        709
+      ],
+      "sheet_id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "44716e3b0ad72e7327189a6508fbdefcfcad445f8048db6da0beb15a2c35cade",
+      "body_bbox_px": [
+        297,
+        220,
+        836,
+        613
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        51,
+        205,
+        837,
+        709
+      ],
+      "reference_height_px": 371.3157092277294,
+      "anchor_px": [
+        537.8297642396831,
+        408.2850884055704
+      ],
+      "anchor_kind": "anatomical-shell-centre",
+      "source_foot_point_px": [
+        537.8297642396831,
+        408.2850884055704
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+      "subject_bbox_px": [
+        51,
+        205,
+        837,
+        709
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        890,
+        887
+      ],
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "70119fb2697818b557c546bbc4040466952fd064f227daa982e374fc23856715",
+      "size_px": [
+        890,
+        887
+      ],
+      "visible": [
+        82,
+        210,
+        825,
+        732
+      ],
+      "sheet_id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "83c9a4bdad2cde8229b24a44ba50fa0629997859931cd45ffd6ccf7d57043a9f",
+      "body_bbox_px": [
+        337,
+        225,
+        890,
+        632
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        82,
+        210,
+        825,
+        732
+      ],
+      "reference_height_px": 338.36392019300393,
+      "anchor_px": [
+        556.4577312572549,
+        396.5760444374902
+      ],
+      "anchor_kind": "anatomical-shell-centre",
+      "source_foot_point_px": [
+        556.4577312572549,
+        396.5760444374902
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+      "subject_bbox_px": [
+        82,
+        210,
+        825,
+        732
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        890,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "c0d037117be04f974044514d18308805213850787e2167ea3378c92121312f34",
+      "size_px": [
+        884,
+        887
+      ],
+      "visible": [
+        67,
+        204,
+        800,
+        730
+      ],
+      "sheet_id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "83c9a4bdad2cde8229b24a44ba50fa0629997859931cd45ffd6ccf7d57043a9f",
+      "body_bbox_px": [
+        324,
+        219,
+        884,
+        629
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        67,
+        204,
+        800,
+        730
+      ],
+      "reference_height_px": 338.36392019300393,
+      "anchor_px": [
+        543.4577312572549,
+        390.5760444374902
+      ],
+      "anchor_kind": "anatomical-shell-centre",
+      "source_foot_point_px": [
+        543.4577312572549,
+        390.5760444374902
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+      "subject_bbox_px": [
+        67,
+        204,
+        800,
+        730
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        886,
+        887
+      ],
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "01de0ed0c3960cdbb1954e031335001f0b2828daf530209a2a7b49e294435e5b",
+      "size_px": [
+        886,
+        887
+      ],
+      "visible": [
+        68,
+        245,
+        827,
+        726
+      ],
+      "sheet_id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "aee1c8ed0fccd0586df640288da55277ac61b5865b1a2a52fdf27016bf89913e",
+      "body_bbox_px": [
+        303,
+        259,
+        817,
+        634
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        68,
+        245,
+        827,
+        726
+      ],
+      "reference_height_px": 326.0958106057574,
+      "anchor_px": [
+        514.5008205579794,
+        424.355186981693
+      ],
+      "anchor_kind": "anatomical-shell-centre",
+      "source_foot_point_px": [
+        514.5008205579794,
+        424.355186981693
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+      "subject_bbox_px": [
+        68,
+        245,
+        827,
+        726
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        886,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "64664425472b36dff6871f97b0beb70bc1530c0d5a49aebd6d205bba3aa2ae26",
+      "size_px": [
+        888,
+        887
+      ],
+      "visible": [
+        59,
+        191,
+        820,
+        720
+      ],
+      "sheet_id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "aee1c8ed0fccd0586df640288da55277ac61b5865b1a2a52fdf27016bf89913e",
+      "body_bbox_px": [
+        318,
+        207,
+        883,
+        619
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        59,
+        191,
+        820,
+        720
+      ],
+      "reference_height_px": 326.0958106057574,
+      "anchor_px": [
+        529.5008205579794,
+        372.355186981693
+      ],
+      "anchor_kind": "anatomical-shell-centre",
+      "source_foot_point_px": [
+        529.5008205579794,
+        372.355186981693
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+      "subject_bbox_px": [
+        59,
+        191,
+        820,
+        720
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        856,
+        887
+      ],
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "3072aebad244f4b57b74fb06e551764d7d7abafd5a857f60f65c4eac51bf5491",
+      "size_px": [
+        856,
+        887
+      ],
+      "visible": [
+        34,
+        178,
+        821,
+        708
+      ],
+      "sheet_id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "27d5b8b2e689ebc19d2fbd52a59cccfd5458f3db79f1214b311515c2562e6719",
+      "body_bbox_px": [
+        293,
+        194,
+        856,
+        607
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        34,
+        178,
+        821,
+        708
+      ],
+      "reference_height_px": 373.71162790697673,
+      "anchor_px": [
+        535.3837209302326,
+        383.5
+      ],
+      "anchor_kind": "anatomical-shell-centre",
+      "source_foot_point_px": [
+        535.3837209302326,
+        383.5
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+      "subject_bbox_px": [
+        34,
+        178,
+        821,
+        708
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        856,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "fb8297dc3b63de67e622d557741093b25efc5251e968643ffbd35eb993fa8997",
+      "size_px": [
+        918,
+        887
+      ],
+      "visible": [
+        37,
+        214,
+        884,
+        656
+      ],
+      "sheet_id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "27d5b8b2e689ebc19d2fbd52a59cccfd5458f3db79f1214b311515c2562e6719",
+      "body_bbox_px": [
+        253,
+        227,
+        725,
+        572
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        37,
+        214,
+        884,
+        656
+      ],
+      "reference_height_px": 373.71162790697673,
+      "anchor_px": [
+        495.3837209302326,
+        416.5
+      ],
+      "anchor_kind": "anatomical-shell-centre",
+      "source_foot_point_px": [
+        495.3837209302326,
+        416.5
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+      "subject_bbox_px": [
+        37,
+        214,
+        884,
+        656
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "108176790d6717fc75a6ff69ab7bdd10b5a9716bb914bb477a95c28986a7713f",
+      "size_px": [
+        1536,
+        1024
+      ],
+      "visible": [
+        70,
+        107,
+        1419,
+        925
+      ],
+      "sheet_id": "species_b-single-v001",
+      "source_sheet": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/source/species_b-single-v001.png",
+      "source_sheet_sha256": "f4722b231684e68f9d1e2b8ac26a5d12abf245b2f147799050757f39784ee02f",
+      "body_bbox_px": [
+        470,
+        131,
+        1344,
+        769
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        70,
+        107,
+        1419,
+        925
+      ],
+      "reference_height_px": 663.9643804301542,
+      "anchor_px": [
+        900.6372750431424,
+        467.6800513973659
+      ],
+      "anchor_kind": "anatomical-shell-centre",
+      "source_foot_point_px": [
+        900.6372750431424,
+        467.6800513973659
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Floating prop: consumer sets all scene movement from shell-centre anchor; no floor or baked vertical displacement is claimed.",
+      "subject_bbox_px": [
+        70,
+        107,
+        1419,
+        925
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+        "sha256": "f9c938a6b85b66db61c3cbed4992e1262f96ff9bc3343cab80ea7e7343a064a6",
+        "bytes": 4842
+      },
+      {
+        "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+        "sha256": "28162ca20fc48d61d45db851f2227f91e37b511aceb87f1db441d22dfa738541",
+        "bytes": 4726
+      },
+      {
+        "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+        "sha256": "26f89d0ba39c79ec2a0d49c2f83724c5dfc73257055527008da67009921450b0",
+        "bytes": 4655
+      },
+      {
+        "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+        "sha256": "66c89e29e0d39ada5f19695c29add6bf50169e7b8472c33a2ae146ec06bfaadd",
+        "bytes": 4696
+      },
+      {
+        "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+        "sha256": "6589a1b57f547c655ccefa518130ac3d511dc44012c7af4210304a4183473d91",
+        "bytes": 4497
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/hawksbill-turtle/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "9c5a501179a7a5383f5cc70415b7b45a32f717821abfbdcd9f585f0db43a3c83",
+      "bytes": 8979
+    }
+  ]
+}

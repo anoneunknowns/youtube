@@ -1,0 +1,929 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "northern-bald-ibis",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-root-props-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/northern-bald-ibis/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "75630a4cd6cb4ed85ac8a577d020780480cd9c8cbc74ee69c1f991752d364730",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      392,
+      348,
+      895,
+      971
+    ],
+    "anchor_px": [
+      598,
+      963
+    ],
+    "reference_height_px": 623,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of two small support feet; long bill and short nape crest excluded from body-reference box.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/northern-bald-ibis/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "724eabf5163c56669394d7df936995b754928d007ec1dd4fb7c36a460fb682f8"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "75630a4cd6cb4ed85ac8a577d020780480cd9c8cbc74ee69c1f991752d364730",
+      "reference_height_px": 623,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "13d5168e06b27ba77717b98cf92af4a9472d3a93e42ef586c7f1f12a52a6a86f",
+      "reference_height_px": 313.5448577680525,
+      "calibration": {
+        "canonical_reference": {
+          "path": "assets/library/characters/northern-bald-ibis/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "75630a4cd6cb4ed85ac8a577d020780480cd9c8cbc74ee69c1f991752d364730",
+          "bytes": 467933,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 623,
+        "reference_frame": "blink",
+        "landmarks": [
+          {
+            "name": "matched resting trunk contour section",
+            "canonical_y_px": 620,
+            "source_y_px": 190,
+            "canonical_span_px": [
+              407,
+              811
+            ],
+            "source_span_px": [
+              131,
+              325
+            ],
+            "source_anatomical_x_roi_px": [
+              120,
+              370
+            ],
+            "ratio": 0.4801980198019802
+          },
+          {
+            "name": "matched resting trunk contour section",
+            "canonical_y_px": 700,
+            "source_y_px": 233,
+            "canonical_span_px": [
+              397,
+              854
+            ],
+            "source_span_px": [
+              120,
+              350
+            ],
+            "source_anatomical_x_roi_px": [
+              120,
+              370
+            ],
+            "ratio": 0.5032822757111597
+          },
+          {
+            "name": "matched resting trunk contour section",
+            "canonical_y_px": 800,
+            "source_y_px": 287,
+            "canonical_span_px": [
+              448,
+              837
+            ],
+            "source_span_px": [
+              140,
+              368
+            ],
+            "source_anatomical_x_roi_px": [
+              120,
+              370
+            ],
+            "ratio": 0.5861182519280206
+          }
+        ],
+        "common_ratio": 0.5032822757111597,
+        "method": "Three explicitly selected corresponding resting trunk cross-sections, one common isotropic reference for all9 from this source. Head/belly/feet and native/max-use comparisons remain a visual QA requirement. No per-pose alpha-bbox fit.",
+        "scope": "Approximate scene anatomy registration, not subpixel metrology.",
+        "canonical_sole_points_px": [
+          [
+            524.0,
+            966
+          ],
+          [
+            651.5,
+            969
+          ]
+        ],
+        "canonical_projection_offset_px": [
+          10.25,
+          -4.5
+        ]
+      },
+      "generation_input": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "2dbb3e54e23d11f402bcfbfa0b6cde089e64a4683de8aad777e93d3f04d2a67f"
+    },
+    {
+      "id": "blink-single-v003",
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/blink-single-v003.png",
+      "source_sheet_sha256": "736528ed5e9635186d3b4d43fd94a386118c62a479f590c10b92851e527f6df3",
+      "reference_height_px": 627.089715536105,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "matching head/trunk contour section at original near-identical framing",
+            "canonical_y_px": 620,
+            "source_y_px": 620,
+            "canonical_span_px": [
+              407,
+              811
+            ],
+            "source_span_px": [
+              405,
+              812
+            ],
+            "ratio": 1.0074257425742574
+          },
+          {
+            "name": "matching head/trunk contour section at original near-identical framing",
+            "canonical_y_px": 700,
+            "source_y_px": 700,
+            "canonical_span_px": [
+              397,
+              854
+            ],
+            "source_span_px": [
+              395,
+              855
+            ],
+            "ratio": 1.0065645514223194
+          },
+          {
+            "name": "matching head/trunk contour section at original near-identical framing",
+            "canonical_y_px": 750,
+            "source_y_px": 750,
+            "canonical_span_px": [
+              412,
+              883
+            ],
+            "source_span_px": [
+              410,
+              884
+            ],
+            "ratio": 1.0063694267515924
+          }
+        ],
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/northern-bald-ibis/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "75630a4cd6cb4ed85ac8a577d020780480cd9c8cbc74ee69c1f991752d364730",
+          "bytes": 467933,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "common_ratio": 1.0065645514223194,
+        "canonical_reference_height_px": 623,
+        "canonical_sole_points_px": [
+          [
+            524.0,
+            966
+          ],
+          [
+            651.5,
+            969
+          ]
+        ],
+        "canonical_projection_offset_px": [
+          10.25,
+          -4.5
+        ],
+        "method": "Three corresponding head/trunk sections in near-identical native framing. One scale for this singleton source; stable source-sheet scale for other8 retained exactly. No bbox fit or art editing."
+      },
+      "generation_input": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/provenance/selected-blink-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/provenance/selected-blink-single-v003-generation-v001.json",
+      "generation_record_sha256": "3a54ba30012e8cf92a96195f0bece68a05e7349eedb012e4c6931c1fc42ac364"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "75630a4cd6cb4ed85ac8a577d020780480cd9c8cbc74ee69c1f991752d364730",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        392,
+        348,
+        895,
+        971
+      ],
+      "anchor_px": [
+        598,
+        963
+      ],
+      "reference_height_px": 623,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of two small support feet; long bill and short nape crest excluded from body-reference box.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/northern-bald-ibis/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "724eabf5163c56669394d7df936995b754928d007ec1dd4fb7c36a460fb682f8",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "75630a4cd6cb4ed85ac8a577d020780480cd9c8cbc74ee69c1f991752d364730",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "blink-single-v003",
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/blink-single-v003.png",
+      "sha256": "736528ed5e9635186d3b4d43fd94a386118c62a479f590c10b92851e527f6df3",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        391,
+        346,
+        897,
+        975
+      ],
+      "subject_bbox_px": [
+        244,
+        336,
+        897,
+        975
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        598.3172866520788,
+        965.4704595185996
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired painted foot support; inherited neutral anchor offset at common singleton scale.",
+      "anchor_basis": "Same two anatomical planted feet and ordinary head/neck/trunk, only closed eye. No per-pose fitting.",
+      "vertical_motion_policy": "Quiet grounded blink; baked lift0, scene movement explicit.",
+      "source_foot_point_px": [
+        588.0,
+        970
+      ],
+      "paired_sole_points_px": [
+        [
+          524.0,
+          968
+        ],
+        [
+          652.0,
+          972
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 627.089715536105,
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/blink-single-v003.png",
+      "source_sheet_sha256": "736528ed5e9635186d3b4d43fd94a386118c62a479f590c10b92851e527f6df3",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/frames/greet-v001.png",
+      "sha256": "aececa74934a85d1f50a5230ce70dce626e3d2d5e0a067f22e02eae1193567ec",
+      "crop_from_sheet_xyxy": [
+        409,
+        0,
+        825,
+        412
+      ],
+      "body_bbox_px": [
+        104,
+        40,
+        357,
+        382
+      ],
+      "subject_bbox_px": [
+        44,
+        35,
+        352,
+        382
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        207.9086433260394,
+        377.2352297592998
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native anatomical ROI proposals, checked visually before acceptance; no canvas or per-pose bbox centering for footed subjects.",
+      "anchor_basis": "Two anatomically separate painted foot support groups, with adopted anchor-to-sole offset transferred at common source scale. Projecting bill/wing/tail excluded from calibration.",
+      "vertical_motion_policy": "Grounded small key pose; baked lift0, scene movement is explicit and no second jump is inferred.",
+      "source_foot_point_px": [
+        202.75,
+        379.5
+      ],
+      "paired_sole_points_px": [
+        [
+          171.0,
+          379
+        ],
+        [
+          234.5,
+          380
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 313.5448577680525,
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "13d5168e06b27ba77717b98cf92af4a9472d3a93e42ef586c7f1f12a52a6a86f",
+      "size_px": [
+        416,
+        412
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/frames/present_left-v001.png",
+      "sha256": "5e4c3c5274c447a3627f1c6da04ee4256e2f1f4fc1a253c421b101bb99ddd9d7",
+      "crop_from_sheet_xyxy": [
+        825,
+        0,
+        1254,
+        412
+      ],
+      "body_bbox_px": [
+        133,
+        39,
+        386,
+        381
+      ],
+      "subject_bbox_px": [
+        28,
+        34,
+        386,
+        381
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        236.6586433260394,
+        377.2352297592998
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native anatomical ROI proposals, checked visually before acceptance; no canvas or per-pose bbox centering for footed subjects.",
+      "anchor_basis": "Two anatomically separate painted foot support groups, with adopted anchor-to-sole offset transferred at common source scale. Projecting bill/wing/tail excluded from calibration.",
+      "vertical_motion_policy": "Grounded small key pose; baked lift0, scene movement is explicit and no second jump is inferred.",
+      "source_foot_point_px": [
+        231.5,
+        379.5
+      ],
+      "paired_sole_points_px": [
+        [
+          199.0,
+          379
+        ],
+        [
+          264.0,
+          380
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 313.5448577680525,
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "13d5168e06b27ba77717b98cf92af4a9472d3a93e42ef586c7f1f12a52a6a86f",
+      "size_px": [
+        429,
+        412
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/frames/present_right-v001.png",
+      "sha256": "14df8019ba5685dd4cf6006a9ddb46cbca79f84e475d9c6df864b911e23e654b",
+      "crop_from_sheet_xyxy": [
+        0,
+        412,
+        409,
+        831
+      ],
+      "body_bbox_px": [
+        81,
+        39,
+        334,
+        388
+      ],
+      "subject_bbox_px": [
+        62,
+        34,
+        377,
+        388
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        184.6586433260394,
+        383.2352297592998
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native anatomical ROI proposals, checked visually before acceptance; no canvas or per-pose bbox centering for footed subjects.",
+      "anchor_basis": "Two anatomically separate painted foot support groups, with adopted anchor-to-sole offset transferred at common source scale. Projecting bill/wing/tail excluded from calibration.",
+      "vertical_motion_policy": "Grounded small key pose; baked lift0, scene movement is explicit and no second jump is inferred.",
+      "source_foot_point_px": [
+        179.5,
+        385.5
+      ],
+      "paired_sole_points_px": [
+        [
+          147.5,
+          385
+        ],
+        [
+          211.5,
+          386
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 313.5448577680525,
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "13d5168e06b27ba77717b98cf92af4a9472d3a93e42ef586c7f1f12a52a6a86f",
+      "size_px": [
+        409,
+        419
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/frames/think-v001.png",
+      "sha256": "a0afea4de421f2f3e2fa42c9c5eb06913bb2f1d8acb67b3601ebebc579861c77",
+      "crop_from_sheet_xyxy": [
+        409,
+        412,
+        825,
+        831
+      ],
+      "body_bbox_px": [
+        105,
+        36,
+        358,
+        387
+      ],
+      "subject_bbox_px": [
+        64,
+        31,
+        356,
+        387
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        208.9086433260394,
+        383.2352297592998
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native anatomical ROI proposals, checked visually before acceptance; no canvas or per-pose bbox centering for footed subjects.",
+      "anchor_basis": "Two anatomically separate painted foot support groups, with adopted anchor-to-sole offset transferred at common source scale. Projecting bill/wing/tail excluded from calibration.",
+      "vertical_motion_policy": "Grounded small key pose; baked lift0, scene movement is explicit and no second jump is inferred.",
+      "source_foot_point_px": [
+        203.75,
+        385.5
+      ],
+      "paired_sole_points_px": [
+        [
+          171.5,
+          385
+        ],
+        [
+          236.0,
+          386
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 313.5448577680525,
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "13d5168e06b27ba77717b98cf92af4a9472d3a93e42ef586c7f1f12a52a6a86f",
+      "size_px": [
+        416,
+        419
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/frames/aha-v001.png",
+      "sha256": "2b497fbf8142ac65953fd6b8851ffeffb1dbf06504c6dac432062cd3821dd7eb",
+      "crop_from_sheet_xyxy": [
+        825,
+        412,
+        1254,
+        831
+      ],
+      "body_bbox_px": [
+        107,
+        35,
+        360,
+        387
+      ],
+      "subject_bbox_px": [
+        60,
+        30,
+        366,
+        387
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        210.6586433260394,
+        383.2352297592998
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native anatomical ROI proposals, checked visually before acceptance; no canvas or per-pose bbox centering for footed subjects.",
+      "anchor_basis": "Two anatomically separate painted foot support groups, with adopted anchor-to-sole offset transferred at common source scale. Projecting bill/wing/tail excluded from calibration.",
+      "vertical_motion_policy": "Grounded small key pose; baked lift0, scene movement is explicit and no second jump is inferred.",
+      "source_foot_point_px": [
+        205.5,
+        385.5
+      ],
+      "paired_sole_points_px": [
+        [
+          172.5,
+          385
+        ],
+        [
+          238.5,
+          386
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 313.5448577680525,
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "13d5168e06b27ba77717b98cf92af4a9472d3a93e42ef586c7f1f12a52a6a86f",
+      "size_px": [
+        429,
+        419
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/frames/cheer-v001.png",
+      "sha256": "a5495a15c268e237595b6c5dd5a24a2b83349bbbf52fc20e85bf93ef6dd6ac99",
+      "crop_from_sheet_xyxy": [
+        0,
+        831,
+        409,
+        1254
+      ],
+      "body_bbox_px": [
+        124,
+        37,
+        377,
+        383
+      ],
+      "subject_bbox_px": [
+        56,
+        32,
+        360,
+        383
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        227.6586433260394,
+        379.2352297592998
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native anatomical ROI proposals, checked visually before acceptance; no canvas or per-pose bbox centering for footed subjects.",
+      "anchor_basis": "Two anatomically separate painted foot support groups, with adopted anchor-to-sole offset transferred at common source scale. Projecting bill/wing/tail excluded from calibration.",
+      "vertical_motion_policy": "Grounded small key pose; baked lift0, scene movement is explicit and no second jump is inferred.",
+      "source_foot_point_px": [
+        222.5,
+        381.5
+      ],
+      "paired_sole_points_px": [
+        [
+          190.0,
+          381
+        ],
+        [
+          255.0,
+          382
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 313.5448577680525,
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "13d5168e06b27ba77717b98cf92af4a9472d3a93e42ef586c7f1f12a52a6a86f",
+      "size_px": [
+        409,
+        423
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/frames/species_a-v001.png",
+      "sha256": "33c4b9d4bedced3e911541fb9712e2badabc8b567e9142dc8a5df79e15db4900",
+      "crop_from_sheet_xyxy": [
+        409,
+        831,
+        825,
+        1254
+      ],
+      "body_bbox_px": [
+        131,
+        49,
+        385,
+        385
+      ],
+      "subject_bbox_px": [
+        33,
+        44,
+        389,
+        385
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        235.1586433260394,
+        380.2352297592998
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native anatomical ROI proposals, checked visually before acceptance; no canvas or per-pose bbox centering for footed subjects.",
+      "anchor_basis": "Two anatomically separate painted foot support groups, with adopted anchor-to-sole offset transferred at common source scale. Projecting bill/wing/tail excluded from calibration.",
+      "vertical_motion_policy": "Grounded small key pose; baked lift0, scene movement is explicit and no second jump is inferred.",
+      "source_foot_point_px": [
+        230.0,
+        382.5
+      ],
+      "paired_sole_points_px": [
+        [
+          196.5,
+          382
+        ],
+        [
+          263.5,
+          383
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 313.5448577680525,
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "13d5168e06b27ba77717b98cf92af4a9472d3a93e42ef586c7f1f12a52a6a86f",
+      "size_px": [
+        416,
+        423
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/frames/species_b-v001.png",
+      "sha256": "45b9434e293e88134fc2e65793a072c32aff6823cc3dbefde955f6406af33d07",
+      "crop_from_sheet_xyxy": [
+        825,
+        831,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        135,
+        69,
+        388,
+        383
+      ],
+      "subject_bbox_px": [
+        33,
+        64,
+        385,
+        383
+      ],
+      "tail_bbox_px": null,
+      "anchor_px": [
+        238.9086433260394,
+        379.2352297592998
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native anatomical ROI proposals, checked visually before acceptance; no canvas or per-pose bbox centering for footed subjects.",
+      "anchor_basis": "Two anatomically separate painted foot support groups, with adopted anchor-to-sole offset transferred at common source scale. Projecting bill/wing/tail excluded from calibration.",
+      "vertical_motion_policy": "Grounded small key pose; baked lift0, scene movement is explicit and no second jump is inferred.",
+      "source_foot_point_px": [
+        233.75,
+        381.5
+      ],
+      "paired_sole_points_px": [
+        [
+          201.5,
+          381
+        ],
+        [
+          266.0,
+          382
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 313.5448577680525,
+      "source_sheet": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "13d5168e06b27ba77717b98cf92af4a9472d3a93e42ef586c7f1f12a52a6a86f",
+      "size_px": [
+        429,
+        423
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "2dbb3e54e23d11f402bcfbfa0b6cde089e64a4683de8aad777e93d3f04d2a67f",
+        "bytes": 4563
+      },
+      {
+        "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/provenance/selected-blink-single-v003-generation-v001.json",
+        "sha256": "3a54ba30012e8cf92a96195f0bece68a05e7349eedb012e4c6931c1fc42ac364",
+        "bytes": 3563
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/northern-bald-ibis/generation-batches/youtube-core-20261114-root-props-v001/qa/stock-adoption-v001.json",
+      "sha256": "298f2dae1bc564373b82d1005a4dd94b06976a4e4609922a0e18c2cb471b3c01",
+      "bytes": 9291
+    }
+  ]
+}

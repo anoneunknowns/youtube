@@ -1,0 +1,1588 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "black-rhinoceros",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-a-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      239.0,
+      104.0,
+      948.0,
+      1184.0
+    ],
+    "anchor_px": [
+      614.0,
+      1179.0
+    ],
+    "reference_height_px": 1080.0,
+    "anchor_kind": "anatomical-two-foot-contact",
+    "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+    "anchor_basis": "Midpoint of the two broad standing rhino sole contacts under the upright torso; short side tail is not a support leg.",
+    "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+    "source_manifest": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "d81a55108dd7ac5d7c6959aab279e9001fee45348cbbaf6893c25797cf6677df"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+      "reference_height_px": 1080.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "blink-single-v002",
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/blink-v002.png",
+      "source_sheet_sha256": "15c6ddbffe4d1b8c81ed60e7516ab6433b0a6a1372831326a24762d063bd5a57",
+      "reference_height_px": 1080.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              240,
+              105,
+              944,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              239,
+              102,
+              945,
+              552
+            ],
+            "canonical_px": 704,
+            "source_px": 706,
+            "ratio": 1.0028409090909092,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 340,
+            "source_px": 344,
+            "ratio": 1.011764705882353,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 727,
+            "source_neck_y_px": 727,
+            "canonical_px": 452,
+            "source_px": 452,
+            "ratio": 1.0,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1080.0,
+        "canonical_source": {
+          "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+          "bytes": 1036143,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_record_sha256": "251004ac4c66fc3a863c3e99a3baa14882176a09c0367d4b610e73a169dfe13a"
+    },
+    {
+      "id": "greet-single-v002",
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/greet-v002.png",
+      "source_sheet_sha256": "19eaec326d5d0e7f53fd64710fc31ccb09208349bb28e19a1237e10b428f3aa1",
+      "reference_height_px": 1139.3999999999999,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1199,
+              577
+            ],
+            "canonical_alpha128_bounds_px": [
+              240,
+              105,
+              944,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              195,
+              106,
+              940,
+              577
+            ],
+            "canonical_px": 704,
+            "source_px": 745,
+            "ratio": 1.0582386363636365,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 340,
+            "source_px": 364,
+            "ratio": 1.0705882352941176,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 727,
+            "source_neck_y_px": 758,
+            "canonical_px": 452,
+            "source_px": 475,
+            "ratio": 1.0508849557522124,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1.055,
+        "canonical_reference_height_px": 1080.0,
+        "canonical_source": {
+          "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+          "bytes": 1036143,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1.055 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-greet-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-greet-single-v002-generation-v001.json",
+      "generation_record_sha256": "37f9251124447461a6def1991a79bc8bc741f4b0216a7d93d8b014ede55cbfa9"
+    },
+    {
+      "id": "present_left-single-v002",
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/present_left-v002.png",
+      "source_sheet_sha256": "3788108a4bd157f1cc62336aca8b0ddfc1982cdf212b62beb2f1b4b59ea66048",
+      "reference_height_px": 1117.8,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1199,
+              577
+            ],
+            "canonical_alpha128_bounds_px": [
+              240,
+              105,
+              944,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              189,
+              102,
+              932,
+              577
+            ],
+            "canonical_px": 704,
+            "source_px": 743,
+            "ratio": 1.0553977272727273,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 340,
+            "source_px": 343,
+            "ratio": 1.0088235294117647,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 727,
+            "source_neck_y_px": 752,
+            "canonical_px": 452,
+            "source_px": 463,
+            "ratio": 1.0243362831858407,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1.035,
+        "canonical_reference_height_px": 1080.0,
+        "canonical_source": {
+          "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+          "bytes": 1036143,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1.035 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_left-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_left-single-v002-generation-v001.json",
+      "generation_record_sha256": "6fc0fd6282e880b7ed85733e37de54c5bbf0c000f34b1ec9797fca2975dcd94e"
+    },
+    {
+      "id": "present_right-single-v002",
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/present_right-v002.png",
+      "source_sheet_sha256": "85687988b053a0462cbde0de5da000edf3ce301a6dbbc1bf192738fcf27c9e01",
+      "reference_height_px": 1096.1999999999998,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1199,
+              577
+            ],
+            "canonical_alpha128_bounds_px": [
+              240,
+              105,
+              944,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              194,
+              103,
+              851,
+              577
+            ],
+            "canonical_px": 704,
+            "source_px": 657,
+            "ratio": 0.9332386363636364,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 340,
+            "source_px": 343,
+            "ratio": 1.0088235294117647,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 727,
+            "source_neck_y_px": 737,
+            "canonical_px": 452,
+            "source_px": 465,
+            "ratio": 1.0287610619469028,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1.015,
+        "canonical_reference_height_px": 1080.0,
+        "canonical_source": {
+          "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+          "bytes": 1036143,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1.015 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-single-v002-generation-v001.json",
+      "generation_record_sha256": "7cbfb39a60b6848a2864e61cfda9f59c829c0344eeb06ad1e546c27ab1d123ac"
+    },
+    {
+      "id": "think-single-v002",
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/think-v002.png",
+      "source_sheet_sha256": "54e8acd5157bc4f9e70aedfec5390786efe40bc3adb45383a8ee13341f7af21d",
+      "reference_height_px": 1112.4,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1199,
+              577
+            ],
+            "canonical_alpha128_bounds_px": [
+              240,
+              105,
+              944,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              203,
+              88,
+              987,
+              577
+            ],
+            "canonical_px": 704,
+            "source_px": 784,
+            "ratio": 1.1136363636363635,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 340,
+            "source_px": 349,
+            "ratio": 1.026470588235294,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 727,
+            "source_neck_y_px": 750,
+            "canonical_px": 452,
+            "source_px": 463,
+            "ratio": 1.0243362831858407,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1.03,
+        "canonical_reference_height_px": 1080.0,
+        "canonical_source": {
+          "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+          "bytes": 1036143,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1.03 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-think-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-think-single-v002-generation-v001.json",
+      "generation_record_sha256": "5aed57cd25fbeff59181dbf43fd1f88cff3e952123bd38a743b672323a741de4"
+    },
+    {
+      "id": "aha-single-v002",
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/aha-v002.png",
+      "source_sheet_sha256": "b186404d4500b61ad54126d1dc8998368a210a17d3d7db56d03b23faa52a572c",
+      "reference_height_px": 1080.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              240,
+              105,
+              944,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              239,
+              102,
+              946,
+              552
+            ],
+            "canonical_px": 704,
+            "source_px": 707,
+            "ratio": 1.0042613636363635,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 340,
+            "source_px": 328,
+            "ratio": 0.9647058823529412,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 727,
+            "source_neck_y_px": 728,
+            "canonical_px": 452,
+            "source_px": 451,
+            "ratio": 0.9977876106194691,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1080.0,
+        "canonical_source": {
+          "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+          "bytes": 1036143,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-aha-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-aha-single-v002-generation-v001.json",
+      "generation_record_sha256": "4d4825dcbaba1c1ef639eeda3fe672e7ae7671c0fef4f6c44613b2774e6753fa"
+    },
+    {
+      "id": "cheer-single-v002",
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/cheer-v002.png",
+      "source_sheet_sha256": "874bff3832699603195c5fe55374c2c81c9835a3809b51b3ecb9c0fa180e10ea",
+      "reference_height_px": 1080.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              240,
+              105,
+              944,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              239,
+              104,
+              948,
+              552
+            ],
+            "canonical_px": 704,
+            "source_px": 709,
+            "ratio": 1.0071022727272727,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 340,
+            "source_px": 338,
+            "ratio": 0.9941176470588236,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 727,
+            "source_neck_y_px": 727,
+            "canonical_px": 452,
+            "source_px": 453,
+            "ratio": 1.002212389380531,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1080.0,
+        "canonical_source": {
+          "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+          "bytes": 1036143,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-single-v002-generation-v001.json",
+      "generation_record_sha256": "6b1fe46bddca3c127c91bd95841837e1b0c5d9e337b50151204cbb02e2b54075"
+    },
+    {
+      "id": "species_a-single-v002",
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/species_a-v002.png",
+      "source_sheet_sha256": "8840d14f858861c98f9ef14d7d8c95b8b2d8e2d569f094bf250a6b29d986710c",
+      "reference_height_px": 1090.8,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1199,
+              577
+            ],
+            "canonical_alpha128_bounds_px": [
+              240,
+              105,
+              944,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              210,
+              118,
+              896,
+              577
+            ],
+            "canonical_px": 704,
+            "source_px": 686,
+            "ratio": 0.9744318181818182,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 340,
+            "source_px": 348,
+            "ratio": 1.0235294117647058,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 727,
+            "source_neck_y_px": 745,
+            "canonical_px": 452,
+            "source_px": 453,
+            "ratio": 1.002212389380531,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1.01,
+        "canonical_reference_height_px": 1080.0,
+        "canonical_source": {
+          "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+          "bytes": 1036143,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1.01 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-single-v002-generation-v001.json",
+      "generation_record_sha256": "15e9717d9a84f3a9acd8b39071f8f69d6022e9c0207730e5197bdf1f908dfda8"
+    },
+    {
+      "id": "species_b-single-v002",
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/species_b-v002.png",
+      "source_sheet_sha256": "2702635ada9a8cb06c020d7d6eebf301711a86e0c16227b75ed485edae0a00e3",
+      "reference_height_px": 1080.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              240,
+              105,
+              944,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              240,
+              139,
+              929,
+              552
+            ],
+            "canonical_px": 704,
+            "source_px": 689,
+            "ratio": 0.9786931818181818,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 340,
+            "source_px": 345,
+            "ratio": 1.0147058823529411,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 727,
+            "source_neck_y_px": 727,
+            "canonical_px": 452,
+            "source_px": 452,
+            "ratio": 1.0,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1080.0,
+        "canonical_source": {
+          "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+          "bytes": 1036143,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-single-v002-generation-v001.json",
+      "generation_record_sha256": "47088bdb667ce86c57b1ce7eaf344b5fe177f015e2ac48cfd466f5d9b21cbbce"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        239.0,
+        104.0,
+        948.0,
+        1184.0
+      ],
+      "anchor_px": [
+        614.0,
+        1179.0
+      ],
+      "reference_height_px": 1080.0,
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+      "anchor_basis": "Midpoint of the two broad standing rhino sole contacts under the upright torso; short side tail is not a support leg.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_manifest": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "d81a55108dd7ac5d7c6959aab279e9001fee45348cbbaf6893c25797cf6677df",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "f6918e25d87caa7bdd2f7c67ce55c7d80ca994c4369f06ea97fbf941057a2d09",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "blink-single-v002",
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/frames/blink-blink-v002.png",
+      "sha256": "cf673b524235d0f06bdf0290a02357ba2181c33b7b92b704bde244a7a3ce22f2",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        238,
+        101,
+        949,
+        1184
+      ],
+      "anchor_px": [
+        613.0,
+        1179
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "subject_bbox_px": [
+        238,
+        101,
+        962,
+        1184
+      ],
+      "tail_bbox_px": [
+        803,
+        853,
+        962,
+        1078
+      ],
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two actual native sole contact regions under the upright torso, y5px inside the painted alpha8 envelope to match the canonical support convention. Existing side tail is not a support.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1176,
+          1254,
+          1184
+        ],
+        "alpha128_span_px": [
+          441,
+          785
+        ],
+        "projected_contact_midpoint_px": [
+          613.0,
+          1179
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1080.0,
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/blink-v002.png",
+      "source_sheet_sha256": "15c6ddbffe4d1b8c81ed60e7516ab6433b0a6a1372831326a24762d063bd5a57",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 0,
+      "sheet_id": "greet-single-v002",
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/frames/greet-greet-v002.png",
+      "sha256": "cedc884ae836f8263c51d239be9754e478ee0c8f7951afc6c150b290e0db6212",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1199,
+        1312
+      ],
+      "body_bbox_px": [
+        194,
+        105,
+        944,
+        1238
+      ],
+      "anchor_px": [
+        589.0,
+        1233
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "subject_bbox_px": [
+        194,
+        105,
+        955,
+        1238
+      ],
+      "tail_bbox_px": [
+        767,
+        892,
+        955,
+        1128
+      ],
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two actual native sole contact regions under the upright torso, y5px inside the painted alpha8 envelope to match the canonical support convention. Existing side tail is not a support.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1230,
+          1199,
+          1238
+        ],
+        "alpha128_span_px": [
+          407,
+          771
+        ],
+        "projected_contact_midpoint_px": [
+          589.0,
+          1233
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1139.3999999999999,
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/greet-v002.png",
+      "source_sheet_sha256": "19eaec326d5d0e7f53fd64710fc31ccb09208349bb28e19a1237e10b428f3aa1",
+      "size_px": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "sheet_id": "present_left-single-v002",
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/frames/present_left-present_left-v002.png",
+      "sha256": "e13677bbe8eaa7eda51c1d9de23557aeae599338527a48e84303ab1886fb40fc",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1199,
+        1312
+      ],
+      "body_bbox_px": [
+        186,
+        100,
+        936,
+        1220
+      ],
+      "anchor_px": [
+        590.5,
+        1215
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "subject_bbox_px": [
+        186,
+        100,
+        936,
+        1220
+      ],
+      "tail_bbox_px": [
+        767,
+        892,
+        936,
+        1128
+      ],
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two actual native sole contact regions under the upright torso, y5px inside the painted alpha8 envelope to match the canonical support convention. Existing side tail is not a support.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1212,
+          1199,
+          1220
+        ],
+        "alpha128_span_px": [
+          419,
+          762
+        ],
+        "projected_contact_midpoint_px": [
+          590.5,
+          1215
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1117.8,
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/present_left-v002.png",
+      "source_sheet_sha256": "3788108a4bd157f1cc62336aca8b0ddfc1982cdf212b62beb2f1b4b59ea66048",
+      "size_px": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "sheet_id": "present_right-single-v002",
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/frames/present_right-present_right-v002.png",
+      "sha256": "313ecb93a86df8cbc5eaa539ff0fbf2947c23651d6326b1070b0427d03863c58",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1199,
+        1312
+      ],
+      "body_bbox_px": [
+        193,
+        101,
+        971,
+        1207
+      ],
+      "anchor_px": [
+        552.5,
+        1202
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "subject_bbox_px": [
+        193,
+        101,
+        971,
+        1207
+      ],
+      "tail_bbox_px": [
+        767,
+        892,
+        971,
+        1128
+      ],
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two actual native sole contact regions under the upright torso, y5px inside the painted alpha8 envelope to match the canonical support convention. Existing side tail is not a support.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1199,
+          1199,
+          1207
+        ],
+        "alpha128_span_px": [
+          381,
+          724
+        ],
+        "projected_contact_midpoint_px": [
+          552.5,
+          1202
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1096.1999999999998,
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/present_right-v002.png",
+      "source_sheet_sha256": "85687988b053a0462cbde0de5da000edf3ce301a6dbbc1bf192738fcf27c9e01",
+      "size_px": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "sheet_id": "think-single-v002",
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/frames/think-think-v002.png",
+      "sha256": "b38c8361fd1ea131c902daf41ee464028d45aa02afe64b9b70f892805efb9c3c",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1199,
+        1312
+      ],
+      "body_bbox_px": [
+        200,
+        87,
+        988,
+        1218
+      ],
+      "anchor_px": [
+        569.5,
+        1213
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "subject_bbox_px": [
+        200,
+        87,
+        988,
+        1218
+      ],
+      "tail_bbox_px": [
+        767,
+        892,
+        988,
+        1128
+      ],
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two actual native sole contact regions under the upright torso, y5px inside the painted alpha8 envelope to match the canonical support convention. Existing side tail is not a support.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1210,
+          1199,
+          1218
+        ],
+        "alpha128_span_px": [
+          395,
+          744
+        ],
+        "projected_contact_midpoint_px": [
+          569.5,
+          1213
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1112.4,
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/think-v002.png",
+      "source_sheet_sha256": "54e8acd5157bc4f9e70aedfec5390786efe40bc3adb45383a8ee13341f7af21d",
+      "size_px": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 0,
+      "sheet_id": "aha-single-v002",
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/frames/aha-aha-v002.png",
+      "sha256": "9c87177c67c8a8435aaf569c4724e9eddcac0587837076b56c8545f6a48198fa",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        238,
+        101,
+        950,
+        1184
+      ],
+      "anchor_px": [
+        610.0,
+        1179
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "subject_bbox_px": [
+        238,
+        101,
+        951,
+        1184
+      ],
+      "tail_bbox_px": [
+        803,
+        853,
+        951,
+        1078
+      ],
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two actual native sole contact regions under the upright torso, y5px inside the painted alpha8 envelope to match the canonical support convention. Existing side tail is not a support.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1176,
+          1254,
+          1184
+        ],
+        "alpha128_span_px": [
+          446,
+          774
+        ],
+        "projected_contact_midpoint_px": [
+          610.0,
+          1179
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1080.0,
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/aha-v002.png",
+      "source_sheet_sha256": "b186404d4500b61ad54126d1dc8998368a210a17d3d7db56d03b23faa52a572c",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "sheet_id": "cheer-single-v002",
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/frames/cheer-cheer-v002.png",
+      "sha256": "39545fdda50ff1549ff022c4e1f1bc7f9d21af0fb4bbb45253d74d1e5938c9f1",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        239,
+        103,
+        952,
+        1185
+      ],
+      "anchor_px": [
+        614.0,
+        1180
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "subject_bbox_px": [
+        239,
+        103,
+        959,
+        1185
+      ],
+      "tail_bbox_px": [
+        803,
+        853,
+        959,
+        1078
+      ],
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two actual native sole contact regions under the upright torso, y5px inside the painted alpha8 envelope to match the canonical support convention. Existing side tail is not a support.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1177,
+          1254,
+          1185
+        ],
+        "alpha128_span_px": [
+          445,
+          783
+        ],
+        "projected_contact_midpoint_px": [
+          614.0,
+          1180
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1080.0,
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/cheer-v002.png",
+      "source_sheet_sha256": "874bff3832699603195c5fe55374c2c81c9835a3809b51b3ecb9c0fa180e10ea",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 0,
+      "sheet_id": "species_a-single-v002",
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/frames/species_a-species_a-v002.png",
+      "sha256": "bdfa5c24cf078c599b92250cdb2fa31842ba1f3a80a3569a4681f84060571c58",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1199,
+        1312
+      ],
+      "body_bbox_px": [
+        209,
+        117,
+        900,
+        1203
+      ],
+      "anchor_px": [
+        584.0,
+        1198
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "subject_bbox_px": [
+        209,
+        117,
+        944,
+        1203
+      ],
+      "tail_bbox_px": [
+        767,
+        892,
+        944,
+        1128
+      ],
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two actual native sole contact regions under the upright torso, y5px inside the painted alpha8 envelope to match the canonical support convention. Existing side tail is not a support.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1195,
+          1199,
+          1203
+        ],
+        "alpha128_span_px": [
+          410,
+          758
+        ],
+        "projected_contact_midpoint_px": [
+          584.0,
+          1198
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1090.8,
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/species_a-v002.png",
+      "source_sheet_sha256": "8840d14f858861c98f9ef14d7d8c95b8b2d8e2d569f094bf250a6b29d986710c",
+      "size_px": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "sheet_id": "species_b-single-v002",
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/frames/species_b-species_b-v002.png",
+      "sha256": "ee95c9e7c071037ed488392fc6138afef6d5db00b8791a23de6baa26a2b8bf29",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        239,
+        138,
+        933,
+        1184
+      ],
+      "anchor_px": [
+        612.5,
+        1179
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "subject_bbox_px": [
+        239,
+        138,
+        961,
+        1184
+      ],
+      "tail_bbox_px": [
+        803,
+        853,
+        961,
+        1078
+      ],
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two actual native sole contact regions under the upright torso, y5px inside the painted alpha8 envelope to match the canonical support convention. Existing side tail is not a support.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1176,
+          1254,
+          1184
+        ],
+        "alpha128_span_px": [
+          440,
+          785
+        ],
+        "projected_contact_midpoint_px": [
+          612.5,
+          1179
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1080.0,
+      "source_sheet": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/source/species_b-v002.png",
+      "source_sheet_sha256": "2702635ada9a8cb06c020d7d6eebf301711a86e0c16227b75ed485edae0a00e3",
+      "size_px": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        180,
+        180,
+        180
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        450,
+        450,
+        450,
+        450
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        350,
+        350
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-single-v002-generation-v001.json",
+        "sha256": "251004ac4c66fc3a863c3e99a3baa14882176a09c0367d4b610e73a169dfe13a",
+        "bytes": 3983
+      },
+      {
+        "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-greet-single-v002-generation-v001.json",
+        "sha256": "37f9251124447461a6def1991a79bc8bc741f4b0216a7d93d8b014ede55cbfa9",
+        "bytes": 3693
+      },
+      {
+        "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_left-single-v002-generation-v001.json",
+        "sha256": "6fc0fd6282e880b7ed85733e37de54c5bbf0c000f34b1ec9797fca2975dcd94e",
+        "bytes": 3743
+      },
+      {
+        "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-single-v002-generation-v001.json",
+        "sha256": "7cbfb39a60b6848a2864e61cfda9f59c829c0344eeb06ad1e546c27ab1d123ac",
+        "bytes": 3762
+      },
+      {
+        "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-think-single-v002-generation-v001.json",
+        "sha256": "5aed57cd25fbeff59181dbf43fd1f88cff3e952123bd38a743b672323a741de4",
+        "bytes": 3734
+      },
+      {
+        "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-aha-single-v002-generation-v001.json",
+        "sha256": "4d4825dcbaba1c1ef639eeda3fe672e7ae7671c0fef4f6c44613b2774e6753fa",
+        "bytes": 3670
+      },
+      {
+        "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-single-v002-generation-v001.json",
+        "sha256": "6b1fe46bddca3c127c91bd95841837e1b0c5d9e337b50151204cbb02e2b54075",
+        "bytes": 3710
+      },
+      {
+        "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-single-v002-generation-v001.json",
+        "sha256": "15e9717d9a84f3a9acd8b39071f8f69d6022e9c0207730e5197bdf1f908dfda8",
+        "bytes": 3686
+      },
+      {
+        "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-single-v002-generation-v001.json",
+        "sha256": "47088bdb667ce86c57b1ce7eaf344b5fe177f015e2ac48cfd466f5d9b21cbbce",
+        "bytes": 3698
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/black-rhinoceros/generation-batches/youtube-core-20261114-a-v001/qa/stock-adoption-v001.json",
+      "sha256": "b2ea03772fa261b34c3d4752ab7755d0a7df0d1ff6e034c27d838b1d4fddf197",
+      "bytes": 10297
+    }
+  ]
+}

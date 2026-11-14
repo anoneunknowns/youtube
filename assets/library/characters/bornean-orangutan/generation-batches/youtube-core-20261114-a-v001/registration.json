@@ -1,0 +1,1543 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "bornean-orangutan",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-a-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      259.0,
+      85.0,
+      991.0,
+      1190.0
+    ],
+    "anchor_px": [
+      624.0,
+      1185.0
+    ],
+    "reference_height_px": 1105.0,
+    "anchor_kind": "anatomical-two-ape-foot-contact",
+    "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+    "anchor_basis": "Midpoint of the two broad standing ape foot contacts beneath upright torso; two longer forelimbs terminate in the visible hands, not additional support legs.",
+    "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+    "source_manifest": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "999526c42ad409af6efe9517caf7457e080038953b67d3e85a45186736fcaa9c"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+      "reference_height_px": 1105.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "blink-single-v002",
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/blink-v002.png",
+      "source_sheet_sha256": "16bcc24758b139a8fba77485b7a2217a3c780d6ab41c5d59ed2342d5c8fa5e2e",
+      "reference_height_px": 1105.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              259,
+              86,
+              990,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              259,
+              84,
+              992,
+              552
+            ],
+            "canonical_px": 731,
+            "source_px": 733,
+            "ratio": 1.0027359781121752,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 357,
+            "source_px": 357,
+            "ratio": 1.0,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 688,
+            "source_neck_y_px": 688,
+            "canonical_px": 497,
+            "source_px": 498,
+            "ratio": 1.0020120724346075,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1105.0,
+        "canonical_source": {
+          "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+          "bytes": 1173682,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_record_sha256": "37f0c415217812dc34a5a0133f863f0957cef841cafa5be3c124cd3087a3f204"
+    },
+    {
+      "id": "greet-single-v002",
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/greet-v002.png",
+      "source_sheet_sha256": "f88135683d0581e620695c0ed795d7197b012cff3cfcb9749533d4d9edabb777",
+      "reference_height_px": 1105.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              259,
+              86,
+              990,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              259,
+              85,
+              990,
+              552
+            ],
+            "canonical_px": 731,
+            "source_px": 731,
+            "ratio": 1.0,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 357,
+            "source_px": 354,
+            "ratio": 0.9915966386554622,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 688,
+            "source_neck_y_px": 688,
+            "canonical_px": 497,
+            "source_px": 497,
+            "ratio": 1.0,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1105.0,
+        "canonical_source": {
+          "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+          "bytes": 1173682,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-greet-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-greet-single-v002-generation-v001.json",
+      "generation_record_sha256": "90ed6b9101dbdc2fe49b22d898f63dd196de2aa5c2a4976174981e64033e786a"
+    },
+    {
+      "id": "present_left-single-v002",
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/present_left-v002.png",
+      "source_sheet_sha256": "539712aa0fb29d69dc05caad6a58dec7df7c601ab2b7a32c72c2f22356020c20",
+      "reference_height_px": 1105.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              259,
+              86,
+              990,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              279,
+              85,
+              1002,
+              552
+            ],
+            "canonical_px": 731,
+            "source_px": 723,
+            "ratio": 0.9890560875512996,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 357,
+            "source_px": 360,
+            "ratio": 1.0084033613445378,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 688,
+            "source_neck_y_px": 688,
+            "canonical_px": 497,
+            "source_px": 498,
+            "ratio": 1.0020120724346075,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1105.0,
+        "canonical_source": {
+          "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+          "bytes": 1173682,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_left-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_left-single-v002-generation-v001.json",
+      "generation_record_sha256": "63ce5d0c04c35437aa21b1cbae1f4e24b9489a5e3f1b212b7f8bc00fb115d404"
+    },
+    {
+      "id": "present_right-single-v002",
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/present_right-v002.png",
+      "source_sheet_sha256": "031c47c663ee0c841a7bdc563f7e6c3aab442b4bd4c89ff2b07f04d9bf97b729",
+      "reference_height_px": 1105.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              259,
+              86,
+              990,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              241,
+              82,
+              946,
+              552
+            ],
+            "canonical_px": 731,
+            "source_px": 705,
+            "ratio": 0.9644322845417237,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 357,
+            "source_px": 360,
+            "ratio": 1.0084033613445378,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 688,
+            "source_neck_y_px": 688,
+            "canonical_px": 497,
+            "source_px": 496,
+            "ratio": 0.9979879275653923,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1105.0,
+        "canonical_source": {
+          "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+          "bytes": 1173682,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-single-v002-generation-v001.json",
+      "generation_record_sha256": "f4e1e2fb245b5307e83f502d96a3e3b494a69a0143ce88d9f98a661b3df40ae5"
+    },
+    {
+      "id": "think-single-v002",
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/think-v002.png",
+      "source_sheet_sha256": "3d817458412e3e30b95c4363693f375d0b77536f56ad44fe18dca14f4921ae5e",
+      "reference_height_px": 1105.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              259,
+              86,
+              990,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              249,
+              74,
+              965,
+              552
+            ],
+            "canonical_px": 731,
+            "source_px": 716,
+            "ratio": 0.9794801641586868,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 357,
+            "source_px": 359,
+            "ratio": 1.0056022408963585,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 688,
+            "source_neck_y_px": 668,
+            "canonical_px": 497,
+            "source_px": 517,
+            "ratio": 1.040241448692153,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1105.0,
+        "canonical_source": {
+          "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+          "bytes": 1173682,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-think-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-think-single-v002-generation-v001.json",
+      "generation_record_sha256": "41e268ebf3962de288a4658f67c8d371ca4c332284375bd2af907e561db2ed5b"
+    },
+    {
+      "id": "aha-single-v002",
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/aha-v002.png",
+      "source_sheet_sha256": "7e36147f2255ee9fb675b4fa4d8b1bd6d5a6c1a62eb94c77328c218cd7188941",
+      "reference_height_px": 1132.625,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1199,
+              577
+            ],
+            "canonical_alpha128_bounds_px": [
+              259,
+              86,
+              990,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              212,
+              86,
+              952,
+              577
+            ],
+            "canonical_px": 731,
+            "source_px": 740,
+            "ratio": 1.012311901504788,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 357,
+            "source_px": 362,
+            "ratio": 1.0140056022408963,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 688,
+            "source_neck_y_px": 732,
+            "canonical_px": 497,
+            "source_px": 484,
+            "ratio": 0.9738430583501007,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1.025,
+        "canonical_reference_height_px": 1105.0,
+        "canonical_source": {
+          "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+          "bytes": 1173682,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1.025 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-aha-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-aha-single-v002-generation-v001.json",
+      "generation_record_sha256": "f3477b146299dffa08ca5abf2e591a2a94fb26c74098db4f8870d9700970eea1"
+    },
+    {
+      "id": "cheer-single-v002",
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/cheer-v002.png",
+      "source_sheet_sha256": "734af019715d2c2e0022bc205d3bc81da13d6bf5ee47fc418d8b9595b7ff906d",
+      "reference_height_px": 1105.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              259,
+              86,
+              990,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              259,
+              84,
+              990,
+              552
+            ],
+            "canonical_px": 731,
+            "source_px": 731,
+            "ratio": 1.0,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 357,
+            "source_px": 359,
+            "ratio": 1.0056022408963585,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 688,
+            "source_neck_y_px": 688,
+            "canonical_px": 497,
+            "source_px": 497,
+            "ratio": 1.0,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1105.0,
+        "canonical_source": {
+          "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+          "bytes": 1173682,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-single-v002-generation-v001.json",
+      "generation_record_sha256": "16283f3dff38f3021448ae14953680b04f03f15ee73edc4a2985e44ba22191e6"
+    },
+    {
+      "id": "species_a-single-v002",
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/species_a-v002.png",
+      "source_sheet_sha256": "e90f254f3ef3cce20015c7a4e9717d4f17b0f5648d51045053a8aec0b6af1ec0",
+      "reference_height_px": 1105.0,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "canonical_alpha128_bounds_px": [
+              259,
+              86,
+              990,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              259,
+              85,
+              991,
+              552
+            ],
+            "canonical_px": 731,
+            "source_px": 732,
+            "ratio": 1.0013679890560876,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 357,
+            "source_px": 360,
+            "ratio": 1.0084033613445378,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 688,
+            "source_neck_y_px": 688,
+            "canonical_px": 497,
+            "source_px": 498,
+            "ratio": 1.0020120724346075,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1,
+        "canonical_reference_height_px": 1105.0,
+        "canonical_source": {
+          "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+          "bytes": 1173682,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-single-v002-generation-v001.json",
+      "generation_record_sha256": "e7bd0d159dbad0151a15f48a8d809da7dd701a46b9b9a7bfe33722e3906f709b"
+    },
+    {
+      "id": "species_b-single-v002",
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/species_b-v002.png",
+      "source_sheet_sha256": "cf987ab98da51eab53381580992eeb72d208b968ce5ff86b54c03fe6fd46faf2",
+      "reference_height_px": 1132.625,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "head upper-contour width before forelimb area",
+            "canonical_roi_px": [
+              0,
+              0,
+              1254,
+              552
+            ],
+            "source_roi_px": [
+              0,
+              0,
+              1199,
+              577
+            ],
+            "canonical_alpha128_bounds_px": [
+              259,
+              86,
+              990,
+              552
+            ],
+            "source_alpha128_bounds_px": [
+              214,
+              88,
+              965,
+              577
+            ],
+            "canonical_px": 731,
+            "source_px": 751,
+            "ratio": 1.027359781121751,
+            "projection_note": "Head inclination/gaze/projection and listening ear changes may affect this horizontal chord; not an independent fit."
+          },
+          {
+            "name": "painted pair of sole-contact span in lower8px ROI",
+            "canonical_px": 357,
+            "source_px": 368,
+            "ratio": 1.0308123249299719,
+            "measurement_scope": "Manual identification of supporting pair, pixel alpha128 extent within observed bottom hoof/foot contact ROI; slight foot stance differs intentionally."
+          },
+          {
+            "name": "native shoulder-neck to sole vertical span",
+            "canonical_neck_y_px": 688,
+            "source_neck_y_px": 704,
+            "canonical_px": 497,
+            "source_px": 513,
+            "ratio": 1.0321931589537223,
+            "measurement_scope": "Approximate visual neck/shoulder junction; not alpha-body height normalization."
+          }
+        ],
+        "common_ratio": 1.025,
+        "canonical_reference_height_px": 1105.0,
+        "canonical_source": {
+          "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+          "bytes": 1173682,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common1.025 selected after joint face/head/shoulder/torso/sole review. Single native original has one body reference; projection/ear tilt widths are not used to hide torso mismatch. Head tilt in think/listening is intentional. No per-pose alpha bbox fit."
+      },
+      "generation_input": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-single-v002-generation-v001.json",
+      "generation_record_sha256": "71ae0a9f8e9a8fb7484e8aaeec8b507e944dbbe504193bb171348336e18d510b"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        259.0,
+        85.0,
+        991.0,
+        1190.0
+      ],
+      "anchor_px": [
+        624.0,
+        1185.0
+      ],
+      "reference_height_px": 1105.0,
+      "anchor_kind": "anatomical-two-ape-foot-contact",
+      "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+      "anchor_basis": "Midpoint of the two broad standing ape foot contacts beneath upright torso; two longer forelimbs terminate in the visible hands, not additional support legs.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_manifest": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "999526c42ad409af6efe9517caf7457e080038953b67d3e85a45186736fcaa9c",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "c7976ae96adc635aca17cca0a913d9c6cbc269085f105587c5908446a68093cc",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "blink-single-v002",
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/frames/blink-blink-v002.png",
+      "sha256": "247f2f1976a0936012ef43b7e7b7bc8e344492ea93e6ccac39f62359856f0a7a",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        258,
+        83,
+        993,
+        1191
+      ],
+      "anchor_px": [
+        625.5,
+        1186
+      ],
+      "anchor_kind": "anatomical-two-ape-foot-contact",
+      "subject_bbox_px": [
+        258,
+        83,
+        993,
+        1191
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two native broad ape sole contacts under the upright torso, y5px inside the painted alpha8 envelope, matching canonical support convention. The two gesturing forelimbs remain separate from supporting feet; no tail.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1183,
+          1254,
+          1191
+        ],
+        "alpha128_span_px": [
+          447,
+          804
+        ],
+        "projected_contact_midpoint_px": [
+          625.5,
+          1186
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1105.0,
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/blink-v002.png",
+      "source_sheet_sha256": "16bcc24758b139a8fba77485b7a2217a3c780d6ab41c5d59ed2342d5c8fa5e2e",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 0,
+      "sheet_id": "greet-single-v002",
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/frames/greet-greet-v002.png",
+      "sha256": "f9de6603cc7eb96d4fc86b6d45aed0d969cc0e194f2ad316182bb390ab20c0dc",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        258,
+        84,
+        1029,
+        1190
+      ],
+      "anchor_px": [
+        623.0,
+        1185
+      ],
+      "anchor_kind": "anatomical-two-ape-foot-contact",
+      "subject_bbox_px": [
+        258,
+        84,
+        1029,
+        1190
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two native broad ape sole contacts under the upright torso, y5px inside the painted alpha8 envelope, matching canonical support convention. The two gesturing forelimbs remain separate from supporting feet; no tail.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1182,
+          1254,
+          1190
+        ],
+        "alpha128_span_px": [
+          446,
+          800
+        ],
+        "projected_contact_midpoint_px": [
+          623.0,
+          1185
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1105.0,
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/greet-v002.png",
+      "source_sheet_sha256": "f88135683d0581e620695c0ed795d7197b012cff3cfcb9749533d4d9edabb777",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "sheet_id": "present_left-single-v002",
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/frames/present_left-present_left-v002.png",
+      "sha256": "7e4080d6036407133448e90e266b20ca561f8c38f2f2d7c8d8e6d122b9cf5acd",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        127,
+        84,
+        1003,
+        1191
+      ],
+      "anchor_px": [
+        624.0,
+        1186
+      ],
+      "anchor_kind": "anatomical-two-ape-foot-contact",
+      "subject_bbox_px": [
+        127,
+        84,
+        1003,
+        1191
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two native broad ape sole contacts under the upright torso, y5px inside the painted alpha8 envelope, matching canonical support convention. The two gesturing forelimbs remain separate from supporting feet; no tail.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1183,
+          1254,
+          1191
+        ],
+        "alpha128_span_px": [
+          444,
+          804
+        ],
+        "projected_contact_midpoint_px": [
+          624.0,
+          1186
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1105.0,
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/present_left-v002.png",
+      "source_sheet_sha256": "539712aa0fb29d69dc05caad6a58dec7df7c601ab2b7a32c72c2f22356020c20",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "sheet_id": "present_right-single-v002",
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/frames/present_right-present_right-v002.png",
+      "sha256": "936868a823134870d1cc67ab4135f8ae2df3304bed6eb23004dc942a460f165b",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        240,
+        82,
+        1086,
+        1189
+      ],
+      "anchor_px": [
+        591.0,
+        1184
+      ],
+      "anchor_kind": "anatomical-two-ape-foot-contact",
+      "subject_bbox_px": [
+        240,
+        82,
+        1086,
+        1189
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two native broad ape sole contacts under the upright torso, y5px inside the painted alpha8 envelope, matching canonical support convention. The two gesturing forelimbs remain separate from supporting feet; no tail.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1181,
+          1254,
+          1189
+        ],
+        "alpha128_span_px": [
+          411,
+          771
+        ],
+        "projected_contact_midpoint_px": [
+          591.0,
+          1184
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1105.0,
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/present_right-v002.png",
+      "source_sheet_sha256": "031c47c663ee0c841a7bdc563f7e6c3aab442b4bd4c89ff2b07f04d9bf97b729",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "sheet_id": "think-single-v002",
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/frames/think-think-v002.png",
+      "sha256": "684badc85ca7ef9f6429b4d9e646a94a8a2dcb204383ec01d9478f063492ae68",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        248,
+        73,
+        966,
+        1190
+      ],
+      "anchor_px": [
+        624.5,
+        1185
+      ],
+      "anchor_kind": "anatomical-two-ape-foot-contact",
+      "subject_bbox_px": [
+        248,
+        73,
+        966,
+        1190
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two native broad ape sole contacts under the upright torso, y5px inside the painted alpha8 envelope, matching canonical support convention. The two gesturing forelimbs remain separate from supporting feet; no tail.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1182,
+          1254,
+          1190
+        ],
+        "alpha128_span_px": [
+          445,
+          804
+        ],
+        "projected_contact_midpoint_px": [
+          624.5,
+          1185
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1105.0,
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/think-v002.png",
+      "source_sheet_sha256": "3d817458412e3e30b95c4363693f375d0b77536f56ad44fe18dca14f4921ae5e",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 0,
+      "sheet_id": "aha-single-v002",
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/frames/aha-aha-v002.png",
+      "sha256": "bb0d49756ae49fe2bb1e34c531b9acfefb0596d1d57707ee636007d638662a19",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1199,
+        1312
+      ],
+      "body_bbox_px": [
+        211,
+        83,
+        953,
+        1221
+      ],
+      "anchor_px": [
+        579.0,
+        1216
+      ],
+      "anchor_kind": "anatomical-two-ape-foot-contact",
+      "subject_bbox_px": [
+        211,
+        83,
+        953,
+        1221
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two native broad ape sole contacts under the upright torso, y5px inside the painted alpha8 envelope, matching canonical support convention. The two gesturing forelimbs remain separate from supporting feet; no tail.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1213,
+          1199,
+          1221
+        ],
+        "alpha128_span_px": [
+          398,
+          760
+        ],
+        "projected_contact_midpoint_px": [
+          579.0,
+          1216
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1132.625,
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/aha-v002.png",
+      "source_sheet_sha256": "7e36147f2255ee9fb675b4fa4d8b1bd6d5a6c1a62eb94c77328c218cd7188941",
+      "size_px": [
+        1199,
+        1312
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "sheet_id": "cheer-single-v002",
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/frames/cheer-cheer-v002.png",
+      "sha256": "936de3bc32204e7e378f815308606f3544058384eca24feef8ab32a3090d658c",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        197,
+        83,
+        1048,
+        1190
+      ],
+      "anchor_px": [
+        623.5,
+        1185
+      ],
+      "anchor_kind": "anatomical-two-ape-foot-contact",
+      "subject_bbox_px": [
+        197,
+        83,
+        1048,
+        1190
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two native broad ape sole contacts under the upright torso, y5px inside the painted alpha8 envelope, matching canonical support convention. The two gesturing forelimbs remain separate from supporting feet; no tail.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1182,
+          1254,
+          1190
+        ],
+        "alpha128_span_px": [
+          444,
+          803
+        ],
+        "projected_contact_midpoint_px": [
+          623.5,
+          1185
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1105.0,
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/cheer-v002.png",
+      "source_sheet_sha256": "734af019715d2c2e0022bc205d3bc81da13d6bf5ee47fc418d8b9595b7ff906d",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 0,
+      "sheet_id": "species_a-single-v002",
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/frames/species_a-species_a-v002.png",
+      "sha256": "9473b4e9a1bc5527731173c0189ac55ed2fc2fc10f0081d8b09a82cf98a3958c",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        258,
+        84,
+        993,
+        1191
+      ],
+      "anchor_px": [
+        624.0,
+        1186
+      ],
+      "anchor_kind": "anatomical-two-ape-foot-contact",
+      "subject_bbox_px": [
+        258,
+        84,
+        993,
+        1191
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two native broad ape sole contacts under the upright torso, y5px inside the painted alpha8 envelope, matching canonical support convention. The two gesturing forelimbs remain separate from supporting feet; no tail.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1183,
+          1254,
+          1191
+        ],
+        "alpha128_span_px": [
+          444,
+          804
+        ],
+        "projected_contact_midpoint_px": [
+          624.0,
+          1186
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1105.0,
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/species_a-v002.png",
+      "source_sheet_sha256": "e90f254f3ef3cce20015c7a4e9717d4f17b0f5648d51045053a8aec0b6af1ec0",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "sheet_id": "species_b-single-v002",
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/frames/species_b-species_b-v002.png",
+      "sha256": "9e0a4afdea3157c2bf286e25b6ce87c5d714e5f57c4413d8aacb9ac2f1ffd9a2",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1199,
+        1312
+      ],
+      "body_bbox_px": [
+        213,
+        87,
+        967,
+        1222
+      ],
+      "anchor_px": [
+        586.0,
+        1217
+      ],
+      "anchor_kind": "anatomical-two-ape-foot-contact",
+      "subject_bbox_px": [
+        213,
+        87,
+        967,
+        1222
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Midpoint of the two native broad ape sole contacts under the upright torso, y5px inside the painted alpha8 envelope, matching canonical support convention. The two gesturing forelimbs remain separate from supporting feet; no tail.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1214,
+          1199,
+          1222
+        ],
+        "alpha128_span_px": [
+          402,
+          770
+        ],
+        "projected_contact_midpoint_px": [
+          586.0,
+          1217
+        ],
+        "scope": "Approximate painted anatomical support, not subpixel physical floor."
+      },
+      "reference_height_px": 1132.625,
+      "source_sheet": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/source/species_b-v002.png",
+      "source_sheet_sha256": "cf987ab98da51eab53381580992eeb72d208b968ce5ff86b54c03fe6fd46faf2",
+      "size_px": [
+        1199,
+        1312
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        180,
+        180,
+        180
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        450,
+        450,
+        450,
+        450
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        350,
+        350
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-single-v002-generation-v001.json",
+        "sha256": "37f0c415217812dc34a5a0133f863f0957cef841cafa5be3c124cd3087a3f204",
+        "bytes": 4029
+      },
+      {
+        "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-greet-single-v002-generation-v001.json",
+        "sha256": "90ed6b9101dbdc2fe49b22d898f63dd196de2aa5c2a4976174981e64033e786a",
+        "bytes": 3738
+      },
+      {
+        "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_left-single-v002-generation-v001.json",
+        "sha256": "63ce5d0c04c35437aa21b1cbae1f4e24b9489a5e3f1b212b7f8bc00fb115d404",
+        "bytes": 3788
+      },
+      {
+        "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-single-v002-generation-v001.json",
+        "sha256": "f4e1e2fb245b5307e83f502d96a3e3b494a69a0143ce88d9f98a661b3df40ae5",
+        "bytes": 3807
+      },
+      {
+        "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-think-single-v002-generation-v001.json",
+        "sha256": "41e268ebf3962de288a4658f67c8d371ca4c332284375bd2af907e561db2ed5b",
+        "bytes": 3779
+      },
+      {
+        "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-aha-single-v002-generation-v001.json",
+        "sha256": "f3477b146299dffa08ca5abf2e591a2a94fb26c74098db4f8870d9700970eea1",
+        "bytes": 3716
+      },
+      {
+        "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-single-v002-generation-v001.json",
+        "sha256": "16283f3dff38f3021448ae14953680b04f03f15ee73edc4a2985e44ba22191e6",
+        "bytes": 3755
+      },
+      {
+        "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-single-v002-generation-v001.json",
+        "sha256": "e7bd0d159dbad0151a15f48a8d809da7dd701a46b9b9a7bfe33722e3906f709b",
+        "bytes": 3721
+      },
+      {
+        "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-single-v002-generation-v001.json",
+        "sha256": "71ae0a9f8e9a8fb7484e8aaeec8b507e944dbbe504193bb171348336e18d510b",
+        "bytes": 3743
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/bornean-orangutan/generation-batches/youtube-core-20261114-a-v001/qa/stock-adoption-v001.json",
+      "sha256": "97cf5342aa417af45d32fd81bccbda10f7d24742bbe180217299ad961df47958",
+      "bytes": 10270
+    }
+  ]
+}

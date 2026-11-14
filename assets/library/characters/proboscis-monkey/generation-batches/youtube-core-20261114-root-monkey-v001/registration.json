@@ -1,0 +1,1781 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "proboscis-monkey",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-root-monkey-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      264,
+      121,
+      949,
+      1177
+    ],
+    "anchor_px": [
+      594,
+      1175
+    ],
+    "reference_height_px": 1056,
+    "anchor_kind": "anatomical-feet-projected-contact",
+    "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+    "anchor_basis": "Round head/short trunk/two feet excluding right-side long tail; midpoint of the two visible foot contact bases.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+    "source_manifest": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "6ddfd532b307234da736ca78320c1d0c6971106f5333492b50ee2bfdab7e0486"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+      "reference_height_px": 1056,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "blink-single-v001",
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/blink-single-v001.png",
+      "source_sheet_sha256": "4eccbd5db6bf819100d87db58d1d880ec223cf93b2c452de917ecc156f17357d",
+      "reference_height_px": 1060.836641221374,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+          "bytes": 1064990,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1056,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 350,
+            "source_y": 350,
+            "canonical_span_px": [
+              293,
+              914
+            ],
+            "source_span_px": [
+              290,
+              920
+            ],
+            "ratio": 1.0144927536231885,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 450,
+            "source_y": 450,
+            "canonical_span_px": [
+              278,
+              935
+            ],
+            "source_span_px": [
+              278,
+              938
+            ],
+            "ratio": 1.004566210045662,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 550,
+            "source_y": 550,
+            "canonical_span_px": [
+              277,
+              932
+            ],
+            "source_span_px": [
+              277,
+              935
+            ],
+            "ratio": 1.0045801526717557,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0045801526717557,
+        "reference_height_px": 1060.836641221374,
+        "canonical_sole_points_px": [
+          [
+            488.5,
+            1174
+          ],
+          [
+            704.5,
+            1174
+          ]
+        ],
+        "canonical_foot_point_px": [
+          596.5,
+          1174
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -2.5,
+          1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-blink-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-blink-single-v001-generation-v001.json",
+      "generation_record_sha256": "a7e779d2492163694e480bad476a25223ffb144378810c877018d1755d6dc564"
+    },
+    {
+      "id": "greet-single-v001",
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/greet-single-v001.png",
+      "source_sheet_sha256": "055deb1012b762d2d7222db5a5f2b8567bdaf17a05e990dc727ac50f21c67ed4",
+      "reference_height_px": 1062.448854961832,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+          "bytes": 1064990,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1056,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 350,
+            "source_y": 350,
+            "canonical_span_px": [
+              293,
+              914
+            ],
+            "source_span_px": [
+              290,
+              922
+            ],
+            "ratio": 1.0177133655394526,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 450,
+            "source_y": 450,
+            "canonical_span_px": [
+              278,
+              935
+            ],
+            "source_span_px": [
+              278,
+              935
+            ],
+            "ratio": 1.0,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 550,
+            "source_y": 550,
+            "canonical_span_px": [
+              277,
+              932
+            ],
+            "source_span_px": [
+              276,
+              935
+            ],
+            "ratio": 1.0061068702290077,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0061068702290077,
+        "reference_height_px": 1062.448854961832,
+        "canonical_sole_points_px": [
+          [
+            488.5,
+            1174
+          ],
+          [
+            704.5,
+            1174
+          ]
+        ],
+        "canonical_foot_point_px": [
+          596.5,
+          1174
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -2.5,
+          1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-greet-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-greet-single-v001-generation-v001.json",
+      "generation_record_sha256": "0c41b2b8823d1095d8a2b2cd5e0b6e2ca270fee906433b24d08d9836ba551e71"
+    },
+    {
+      "id": "present_left-single-v001",
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/present_left-single-v001.png",
+      "source_sheet_sha256": "0ac47a65233a2a69fbbb8e046f68dce440df4810c93745dcb2eff50c876dbf01",
+      "reference_height_px": 1064.06106870229,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+          "bytes": 1064990,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1056,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 350,
+            "source_y": 350,
+            "canonical_span_px": [
+              293,
+              914
+            ],
+            "source_span_px": [
+              291,
+              917
+            ],
+            "ratio": 1.0080515297906603,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 450,
+            "source_y": 450,
+            "canonical_span_px": [
+              278,
+              935
+            ],
+            "source_span_px": [
+              276,
+              937
+            ],
+            "ratio": 1.0060882800608828,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 550,
+            "source_y": 550,
+            "canonical_span_px": [
+              277,
+              932
+            ],
+            "source_span_px": [
+              274,
+              934
+            ],
+            "ratio": 1.0076335877862594,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0076335877862594,
+        "reference_height_px": 1064.06106870229,
+        "canonical_sole_points_px": [
+          [
+            488.5,
+            1174
+          ],
+          [
+            704.5,
+            1174
+          ]
+        ],
+        "canonical_foot_point_px": [
+          596.5,
+          1174
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -2.5,
+          1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-present_left-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-present_left-single-v001-generation-v001.json",
+      "generation_record_sha256": "452cef2de8187556c3f127263c01852a02391450b24f2fa34b9a3bb55b386d0a"
+    },
+    {
+      "id": "present_right-single-v001",
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/present_right-single-v001.png",
+      "source_sheet_sha256": "7cb6a4f44846d7d1166b4b732bc017940aad89256e7624f5eed745179069073e",
+      "reference_height_px": 1067.285496183206,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+          "bytes": 1064990,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1056,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 350,
+            "source_y": 350,
+            "canonical_span_px": [
+              293,
+              914
+            ],
+            "source_span_px": [
+              285,
+              915
+            ],
+            "ratio": 1.0144927536231885,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 450,
+            "source_y": 450,
+            "canonical_span_px": [
+              278,
+              935
+            ],
+            "source_span_px": [
+              275,
+              934
+            ],
+            "ratio": 1.0030441400304415,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 550,
+            "source_y": 550,
+            "canonical_span_px": [
+              277,
+              932
+            ],
+            "source_span_px": [
+              273,
+              935
+            ],
+            "ratio": 1.0106870229007634,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0106870229007634,
+        "reference_height_px": 1067.285496183206,
+        "canonical_sole_points_px": [
+          [
+            488.5,
+            1174
+          ],
+          [
+            704.5,
+            1174
+          ]
+        ],
+        "canonical_foot_point_px": [
+          596.5,
+          1174
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -2.5,
+          1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-present_right-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-present_right-single-v001-generation-v001.json",
+      "generation_record_sha256": "8092d474c60d9d5866009f24a4f39637db4b1cc525492170bece3e7606ab6e07"
+    },
+    {
+      "id": "think-single-v001",
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/think-single-v001.png",
+      "source_sheet_sha256": "6e1984011f5f3618d4090eb53a5ddeaed634743e8df01f1e5aa831a23bda05c8",
+      "reference_height_px": 1067.2511415525114,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+          "bytes": 1064990,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1056,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 350,
+            "source_y": 350,
+            "canonical_span_px": [
+              293,
+              914
+            ],
+            "source_span_px": [
+              245,
+              907
+            ],
+            "ratio": 1.066022544283414,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 450,
+            "source_y": 450,
+            "canonical_span_px": [
+              278,
+              935
+            ],
+            "source_span_px": [
+              279,
+              943
+            ],
+            "ratio": 1.0106544901065448,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 550,
+            "source_y": 550,
+            "canonical_span_px": [
+              277,
+              932
+            ],
+            "source_span_px": [
+              268,
+              916
+            ],
+            "ratio": 0.9893129770992366,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0106544901065448,
+        "reference_height_px": 1067.2511415525114,
+        "canonical_sole_points_px": [
+          [
+            488.5,
+            1174
+          ],
+          [
+            704.5,
+            1174
+          ]
+        ],
+        "canonical_foot_point_px": [
+          596.5,
+          1174
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -2.5,
+          1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-think-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-think-single-v001-generation-v001.json",
+      "generation_record_sha256": "5ffeefd4b4928ffe8753b47896e3c59be79869d58c39512d79321e694c7b992f"
+    },
+    {
+      "id": "aha-single-v001",
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/aha-single-v001.png",
+      "source_sheet_sha256": "f4322a143df74d571e9c1bc2aefede339ab4ece12c4180d34b29f4120cb1d2a1",
+      "reference_height_px": 1083.324200913242,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+          "bytes": 1064990,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1056,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 350,
+            "source_y": 350,
+            "canonical_span_px": [
+              293,
+              914
+            ],
+            "source_span_px": [
+              290,
+              926
+            ],
+            "ratio": 1.0241545893719808,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 450,
+            "source_y": 450,
+            "canonical_span_px": [
+              278,
+              935
+            ],
+            "source_span_px": [
+              256,
+              930
+            ],
+            "ratio": 1.025875190258752,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 550,
+            "source_y": 550,
+            "canonical_span_px": [
+              277,
+              932
+            ],
+            "source_span_px": [
+              256,
+              931
+            ],
+            "ratio": 1.0305343511450382,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.025875190258752,
+        "reference_height_px": 1083.324200913242,
+        "canonical_sole_points_px": [
+          [
+            488.5,
+            1174
+          ],
+          [
+            704.5,
+            1174
+          ]
+        ],
+        "canonical_foot_point_px": [
+          596.5,
+          1174
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -2.5,
+          1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-aha-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-aha-single-v001-generation-v001.json",
+      "generation_record_sha256": "ed36a3b009c5d18b13ac43e800f5915885bef5d661950df8b3fb7635fa409d35"
+    },
+    {
+      "id": "cheer-single-v001",
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/cheer-single-v001.png",
+      "source_sheet_sha256": "5c5c3804a02d65092be2f91441d6aa65a4ac1f7d9e2d43226e948dce1f53f1da",
+      "reference_height_px": 1064.0365296803654,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+          "bytes": 1064990,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1056,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 350,
+            "source_y": 350,
+            "canonical_span_px": [
+              293,
+              914
+            ],
+            "source_span_px": [
+              285,
+              922
+            ],
+            "ratio": 1.0257648953301126,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 450,
+            "source_y": 450,
+            "canonical_span_px": [
+              278,
+              935
+            ],
+            "source_span_px": [
+              276,
+              938
+            ],
+            "ratio": 1.0076103500761036,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 550,
+            "source_y": 550,
+            "canonical_span_px": [
+              277,
+              932
+            ],
+            "source_span_px": [
+              275,
+              934
+            ],
+            "ratio": 1.0061068702290077,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0076103500761036,
+        "reference_height_px": 1064.0365296803654,
+        "canonical_sole_points_px": [
+          [
+            488.5,
+            1174
+          ],
+          [
+            704.5,
+            1174
+          ]
+        ],
+        "canonical_foot_point_px": [
+          596.5,
+          1174
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -2.5,
+          1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-cheer-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-cheer-single-v001-generation-v001.json",
+      "generation_record_sha256": "d9f2a5715f62ac0ed306bba106b972d57bbb0cc5d33907d4ad226546cfd86756"
+    },
+    {
+      "id": "species_a-single-v001",
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/species_a-single-v001.png",
+      "source_sheet_sha256": "da19ce0bd516b40f9f27858f7ae4286d5ae576707f59aba3d27ffff620f2dd6f",
+      "reference_height_px": 1064.5024154589373,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+          "bytes": 1064990,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1056,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 350,
+            "source_y": 350,
+            "canonical_span_px": [
+              293,
+              914
+            ],
+            "source_span_px": [
+              291,
+              917
+            ],
+            "ratio": 1.0080515297906603,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 450,
+            "source_y": 450,
+            "canonical_span_px": [
+              278,
+              935
+            ],
+            "source_span_px": [
+              275,
+              938
+            ],
+            "ratio": 1.0091324200913243,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 550,
+            "source_y": 550,
+            "canonical_span_px": [
+              277,
+              932
+            ],
+            "source_span_px": [
+              275,
+              935
+            ],
+            "ratio": 1.0076335877862594,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0080515297906603,
+        "reference_height_px": 1064.5024154589373,
+        "canonical_sole_points_px": [
+          [
+            488.5,
+            1174
+          ],
+          [
+            704.5,
+            1174
+          ]
+        ],
+        "canonical_foot_point_px": [
+          596.5,
+          1174
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -2.5,
+          1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-species_a-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-species_a-single-v001-generation-v001.json",
+      "generation_record_sha256": "eaeb9c4d6d7060a85aaa9d93ccd152792272c8a7eb8ce20b72aa1a08b2ec0198"
+    },
+    {
+      "id": "species_b-single-v001",
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/species_b-single-v001.png",
+      "source_sheet_sha256": "51fbd389add53cd088a269a3fc55210f7dd54d81310d59a5d9453ccf41ab308c",
+      "reference_height_px": 1059.2146118721462,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+          "bytes": 1064990,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1056,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 350,
+            "source_y": 350,
+            "canonical_span_px": [
+              293,
+              914
+            ],
+            "source_span_px": [
+              293,
+              918
+            ],
+            "ratio": 1.0064412238325282,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 450,
+            "source_y": 450,
+            "canonical_span_px": [
+              278,
+              935
+            ],
+            "source_span_px": [
+              277,
+              936
+            ],
+            "ratio": 1.0030441400304415,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 550,
+            "source_y": 550,
+            "canonical_span_px": [
+              277,
+              932
+            ],
+            "source_span_px": [
+              277,
+              933
+            ],
+            "ratio": 1.001526717557252,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0030441400304415,
+        "reference_height_px": 1059.2146118721462,
+        "canonical_sole_points_px": [
+          [
+            488.5,
+            1174
+          ],
+          [
+            704.5,
+            1174
+          ]
+        ],
+        "canonical_foot_point_px": [
+          596.5,
+          1174
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -2.5,
+          1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+      "generation_record_sha256": "aec9e0081f6b8c3b8cdcd7547c359072fdc1c1cbd3be748c4bb4079e66978afc"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        264,
+        121,
+        949,
+        1177
+      ],
+      "anchor_px": [
+        594,
+        1175
+      ],
+      "reference_height_px": 1056,
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+      "anchor_basis": "Round head/short trunk/two feet excluding right-side long tail; midpoint of the two visible foot contact bases.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "source_manifest": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "6ddfd532b307234da736ca78320c1d0c6971106f5333492b50ee2bfdab7e0486",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "2defd962f2b2f22be8d2ddca0a432630731d0089f6ee97af69b4918f1a87d86b",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/blink-single-v001.png",
+      "sha256": "4eccbd5db6bf819100d87db58d1d880ec223cf93b2c452de917ecc156f17357d",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "blink-single-v001",
+      "body_bbox_px": [
+        252,
+        117,
+        940,
+        1176
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        265,
+        120,
+        997,
+        1176
+      ],
+      "anchor_px": [
+        593.7385496183206,
+        1176.0045801526717
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        596.25,
+        1175
+      ],
+      "paired_sole_points_px": [
+        [
+          486.0,
+          1175
+        ],
+        [
+          706.5,
+          1175
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1060.836641221374,
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/blink-single-v001.png",
+      "source_sheet_sha256": "4eccbd5db6bf819100d87db58d1d880ec223cf93b2c452de917ecc156f17357d",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 0,
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/greet-single-v001.png",
+      "sha256": "055deb1012b762d2d7222db5a5f2b8567bdaf17a05e990dc727ac50f21c67ed4",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "greet-single-v001",
+      "body_bbox_px": [
+        253,
+        115,
+        942,
+        1175
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        228,
+        121,
+        997,
+        1175
+      ],
+      "anchor_px": [
+        594.7347328244275,
+        1175.006106870229
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        597.25,
+        1174
+      ],
+      "paired_sole_points_px": [
+        [
+          487.5,
+          1174
+        ],
+        [
+          707.0,
+          1174
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1062.448854961832,
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/greet-single-v001.png",
+      "source_sheet_sha256": "055deb1012b762d2d7222db5a5f2b8567bdaf17a05e990dc727ac50f21c67ed4",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/present_left-single-v001.png",
+      "sha256": "0ac47a65233a2a69fbbb8e046f68dce440df4810c93745dcb2eff50c876dbf01",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "present_left-single-v001",
+      "body_bbox_px": [
+        251,
+        115,
+        941,
+        1177
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        163,
+        120,
+        1002,
+        1177
+      ],
+      "anchor_px": [
+        593.4809160305343,
+        1177.0076335877864
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        596.0,
+        1176
+      ],
+      "paired_sole_points_px": [
+        [
+          487.0,
+          1176
+        ],
+        [
+          705.0,
+          1176
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1064.06106870229,
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/present_left-single-v001.png",
+      "source_sheet_sha256": "0ac47a65233a2a69fbbb8e046f68dce440df4810c93745dcb2eff50c876dbf01",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/present_right-single-v001.png",
+      "sha256": "7cb6a4f44846d7d1166b4b732bc017940aad89256e7624f5eed745179069073e",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "present_right-single-v001",
+      "body_bbox_px": [
+        248,
+        109,
+        940,
+        1174
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        259,
+        122,
+        1016,
+        1174
+      ],
+      "anchor_px": [
+        591.4732824427481,
+        1174.0106870229008
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        594.0,
+        1173
+      ],
+      "paired_sole_points_px": [
+        [
+          486.5,
+          1173
+        ],
+        [
+          701.5,
+          1173
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1067.285496183206,
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/present_right-single-v001.png",
+      "source_sheet_sha256": "7cb6a4f44846d7d1166b4b732bc017940aad89256e7624f5eed745179069073e",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/think-single-v001.png",
+      "sha256": "6e1984011f5f3618d4090eb53a5ddeaed634743e8df01f1e5aa831a23bda05c8",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "think-single-v001",
+      "body_bbox_px": [
+        246,
+        111,
+        938,
+        1176
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        241,
+        120,
+        999,
+        1176
+      ],
+      "anchor_px": [
+        589.7233637747337,
+        1176.0106544901066
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        592.25,
+        1175
+      ],
+      "paired_sole_points_px": [
+        [
+          482.0,
+          1175
+        ],
+        [
+          702.5,
+          1175
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1067.2511415525114,
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/think-single-v001.png",
+      "source_sheet_sha256": "6e1984011f5f3618d4090eb53a5ddeaed634743e8df01f1e5aa831a23bda05c8",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 0,
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/aha-single-v001.png",
+      "sha256": "f4322a143df74d571e9c1bc2aefede339ab4ece12c4180d34b29f4120cb1d2a1",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "aha-single-v001",
+      "body_bbox_px": [
+        242,
+        94,
+        945,
+        1175
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        242,
+        119,
+        997,
+        1175
+      ],
+      "anchor_px": [
+        591.1853120243532,
+        1175.0258751902588
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        593.75,
+        1174
+      ],
+      "paired_sole_points_px": [
+        [
+          485.0,
+          1174
+        ],
+        [
+          702.5,
+          1174
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1083.324200913242,
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/aha-single-v001.png",
+      "source_sheet_sha256": "f4322a143df74d571e9c1bc2aefede339ab4ece12c4180d34b29f4120cb1d2a1",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/cheer-single-v001.png",
+      "sha256": "5c5c3804a02d65092be2f91441d6aa65a4ac1f7d9e2d43226e948dce1f53f1da",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "cheer-single-v001",
+      "body_bbox_px": [
+        249,
+        113,
+        940,
+        1175
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        227,
+        120,
+        1038,
+        1175
+      ],
+      "anchor_px": [
+        591.9809741248098,
+        1175.007610350076
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        594.5,
+        1174
+      ],
+      "paired_sole_points_px": [
+        [
+          485.5,
+          1174
+        ],
+        [
+          703.5,
+          1174
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1064.0365296803654,
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/cheer-single-v001.png",
+      "source_sheet_sha256": "5c5c3804a02d65092be2f91441d6aa65a4ac1f7d9e2d43226e948dce1f53f1da",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 0,
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/species_a-single-v001.png",
+      "sha256": "da19ce0bd516b40f9f27858f7ae4286d5ae576707f59aba3d27ffff620f2dd6f",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "species_a-single-v001",
+      "body_bbox_px": [
+        249,
+        115,
+        940,
+        1177
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        261,
+        120,
+        996,
+        1177
+      ],
+      "anchor_px": [
+        592.2298711755234,
+        1177.0080515297907
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        594.75,
+        1176
+      ],
+      "paired_sole_points_px": [
+        [
+          485.5,
+          1176
+        ],
+        [
+          704.0,
+          1176
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1064.5024154589373,
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/species_a-single-v001.png",
+      "source_sheet_sha256": "da19ce0bd516b40f9f27858f7ae4286d5ae576707f59aba3d27ffff620f2dd6f",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/species_b-single-v001.png",
+      "sha256": "51fbd389add53cd088a269a3fc55210f7dd54d81310d59a5d9453ccf41ab308c",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "species_b-single-v001",
+      "body_bbox_px": [
+        253,
+        119,
+        941,
+        1176
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        250,
+        122,
+        1045,
+        1176
+      ],
+      "anchor_px": [
+        594.4923896499239,
+        1176.0030441400304
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        597.0,
+        1175
+      ],
+      "paired_sole_points_px": [
+        [
+          487.5,
+          1175
+        ],
+        [
+          706.5,
+          1175
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1059.2146118721462,
+      "source_sheet": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/source/species_b-single-v001.png",
+      "source_sheet_sha256": "51fbd389add53cd088a269a3fc55210f7dd54d81310d59a5d9453ccf41ab308c",
+      "size_px": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-blink-single-v001-generation-v001.json",
+        "sha256": "a7e779d2492163694e480bad476a25223ffb144378810c877018d1755d6dc564",
+        "bytes": 3633
+      },
+      {
+        "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-greet-single-v001-generation-v001.json",
+        "sha256": "0c41b2b8823d1095d8a2b2cd5e0b6e2ca270fee906433b24d08d9836ba551e71",
+        "bytes": 3535
+      },
+      {
+        "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-present_left-single-v001-generation-v001.json",
+        "sha256": "452cef2de8187556c3f127263c01852a02391450b24f2fa34b9a3bb55b386d0a",
+        "bytes": 3607
+      },
+      {
+        "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-present_right-single-v001-generation-v001.json",
+        "sha256": "8092d474c60d9d5866009f24a4f39637db4b1cc525492170bece3e7606ab6e07",
+        "bytes": 3619
+      },
+      {
+        "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-think-single-v001-generation-v001.json",
+        "sha256": "5ffeefd4b4928ffe8753b47896e3c59be79869d58c39512d79321e694c7b992f",
+        "bytes": 3607
+      },
+      {
+        "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-aha-single-v001-generation-v001.json",
+        "sha256": "ed36a3b009c5d18b13ac43e800f5915885bef5d661950df8b3fb7635fa409d35",
+        "bytes": 3576
+      },
+      {
+        "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-cheer-single-v001-generation-v001.json",
+        "sha256": "d9f2a5715f62ac0ed306bba106b972d57bbb0cc5d33907d4ad226546cfd86756",
+        "bytes": 3571
+      },
+      {
+        "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-species_a-single-v001-generation-v001.json",
+        "sha256": "eaeb9c4d6d7060a85aaa9d93ccd152792272c8a7eb8ce20b72aa1a08b2ec0198",
+        "bytes": 3624
+      },
+      {
+        "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+        "sha256": "aec9e0081f6b8c3b8cdcd7547c359072fdc1c1cbd3be748c4bb4079e66978afc",
+        "bytes": 3603
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/proboscis-monkey/generation-batches/youtube-core-20261114-root-monkey-v001/qa/stock-adoption-v001.json",
+      "sha256": "0cab7dedecea29a17cdc96664f60fc5635cf902ad434d550fdab6b1d05b05823",
+      "bytes": 30794
+    }
+  ]
+}

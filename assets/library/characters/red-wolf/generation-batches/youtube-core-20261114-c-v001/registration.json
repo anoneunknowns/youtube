@@ -1,0 +1,1808 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "red-wolf",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-c-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      259.0,
+      102.0,
+      969.0,
+      1176.0
+    ],
+    "anchor_px": [
+      608.0,
+      1172.0
+    ],
+    "reference_height_px": 1074.0,
+    "anchor_kind": "anatomical-two-foot-contact",
+    "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+    "anchor_basis": "Midpoint of the two short paw sole contact regions under the upright torso; one bushy side tail is excluded from support and body-reference width.",
+    "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+    "source_manifest": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "a09548b9eb9c9555aa2dacb679afed7b6538dee0427c0dc8d00ea2a4eeac3036"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+      "reference_height_px": 1074.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "blink-single-v003",
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v003.png",
+      "source_sheet_sha256": "e12bf52698774b3df12a7400454101aa05ce3bd7321959db2a3820890dd3db98",
+      "reference_height_px": 1071.1662269129288,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+          "bytes": 1126240,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1074.0,
+        "landmarks": [
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 960,
+            "source_y": 960,
+            "canonical_span_px": [
+              413,
+              800
+            ],
+            "source_span_px": [
+              414,
+              800
+            ],
+            "ratio": 0.9974160206718347,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 980,
+            "source_y": 980,
+            "canonical_span_px": [
+              417,
+              796
+            ],
+            "source_span_px": [
+              418,
+              796
+            ],
+            "ratio": 0.9973614775725593,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 1000,
+            "source_y": 1000,
+            "canonical_span_px": [
+              423,
+              790
+            ],
+            "source_span_px": [
+              424,
+              790
+            ],
+            "ratio": 0.997275204359673,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 0.9973614775725593,
+        "reference_height_px": 1071.1662269129288,
+        "canonical_sole_points_px": [
+          [
+            494.5,
+            1175
+          ],
+          [
+            719.5,
+            1175
+          ]
+        ],
+        "canonical_foot_point_px": [
+          607.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          1.0,
+          -3.0
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median3 corresponding lower-trunk contour widths at y960/980/1000, below forepaws and excluding lateral tail. Head horizontal span is turn/tilt sensitive and provisionalv003 biased torso scale. Fullsource single per sheet, no bbox fitting; original source pixels unchanged."
+      },
+      "generation_input": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v003-generation-v001.json",
+      "generation_record_sha256": "69e4095b6f96f9d7deb910b53193b852c946adbed0e1c289d3f14cf6560f9c13"
+    },
+    {
+      "id": "greet-single-v003",
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/greet-single-v003.png",
+      "source_sheet_sha256": "d9c3326d164c8b1e5da3ac4c091fcc04ef5bf9c9a23cb811bdb1948e5b227750",
+      "reference_height_px": 1079.6675461741427,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+          "bytes": 1126240,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1074.0,
+        "landmarks": [
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 960,
+            "source_y": 960,
+            "canonical_span_px": [
+              413,
+              800
+            ],
+            "source_span_px": [
+              413,
+              800
+            ],
+            "ratio": 1.0,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 980,
+            "source_y": 980,
+            "canonical_span_px": [
+              417,
+              796
+            ],
+            "source_span_px": [
+              416,
+              797
+            ],
+            "ratio": 1.0052770448548813,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 1000,
+            "source_y": 1000,
+            "canonical_span_px": [
+              423,
+              790
+            ],
+            "source_span_px": [
+              422,
+              791
+            ],
+            "ratio": 1.005449591280654,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0052770448548813,
+        "reference_height_px": 1079.6675461741427,
+        "canonical_sole_points_px": [
+          [
+            494.5,
+            1175
+          ],
+          [
+            719.5,
+            1175
+          ]
+        ],
+        "canonical_foot_point_px": [
+          607.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          1.0,
+          -3.0
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median3 corresponding lower-trunk contour widths at y960/980/1000, below forepaws and excluding lateral tail. Head horizontal span is turn/tilt sensitive and provisionalv003 biased torso scale. Fullsource single per sheet, no bbox fitting; original source pixels unchanged."
+      },
+      "generation_input": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-greet-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-greet-single-v003-generation-v001.json",
+      "generation_record_sha256": "ee113d1e81ca5bf6caf71d671434fb929f342c49d549e139aad32cfead256672"
+    },
+    {
+      "id": "present_left-single-v003",
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/present_left-single-v003.png",
+      "source_sheet_sha256": "2441211764e0fe35ad5af03642494af5f64d82c8084bc6ee86bda5e426c0d0ac",
+      "reference_height_px": 1082.5013192612137,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+          "bytes": 1126240,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1074.0,
+        "landmarks": [
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 960,
+            "source_y": 960,
+            "canonical_span_px": [
+              413,
+              800
+            ],
+            "source_span_px": [
+              412,
+              801
+            ],
+            "ratio": 1.0051679586563307,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 980,
+            "source_y": 980,
+            "canonical_span_px": [
+              417,
+              796
+            ],
+            "source_span_px": [
+              416,
+              798
+            ],
+            "ratio": 1.007915567282322,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 1000,
+            "source_y": 1000,
+            "canonical_span_px": [
+              423,
+              790
+            ],
+            "source_span_px": [
+              422,
+              792
+            ],
+            "ratio": 1.008174386920981,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.007915567282322,
+        "reference_height_px": 1082.5013192612137,
+        "canonical_sole_points_px": [
+          [
+            494.5,
+            1175
+          ],
+          [
+            719.5,
+            1175
+          ]
+        ],
+        "canonical_foot_point_px": [
+          607.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          1.0,
+          -3.0
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median3 corresponding lower-trunk contour widths at y960/980/1000, below forepaws and excluding lateral tail. Head horizontal span is turn/tilt sensitive and provisionalv003 biased torso scale. Fullsource single per sheet, no bbox fitting; original source pixels unchanged."
+      },
+      "generation_input": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-present_left-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-present_left-single-v003-generation-v001.json",
+      "generation_record_sha256": "c658e442e290a321993c2e97b3de45bdc4be4b99385a782cd32a8749decb1833"
+    },
+    {
+      "id": "present_right-single-v003",
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/present_right-single-v003.png",
+      "source_sheet_sha256": "485107cf37589f5a8f24cd846f0d5eba5c60b1ca24038085a6dff913c9860b49",
+      "reference_height_px": 1076.8337730870712,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+          "bytes": 1126240,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1074.0,
+        "landmarks": [
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 960,
+            "source_y": 960,
+            "canonical_span_px": [
+              413,
+              800
+            ],
+            "source_span_px": [
+              402,
+              787
+            ],
+            "ratio": 0.9948320413436692,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 980,
+            "source_y": 980,
+            "canonical_span_px": [
+              417,
+              796
+            ],
+            "source_span_px": [
+              405,
+              785
+            ],
+            "ratio": 1.0026385224274406,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 1000,
+            "source_y": 1000,
+            "canonical_span_px": [
+              423,
+              790
+            ],
+            "source_span_px": [
+              410,
+              779
+            ],
+            "ratio": 1.005449591280654,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0026385224274406,
+        "reference_height_px": 1076.8337730870712,
+        "canonical_sole_points_px": [
+          [
+            494.5,
+            1175
+          ],
+          [
+            719.5,
+            1175
+          ]
+        ],
+        "canonical_foot_point_px": [
+          607.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          1.0,
+          -3.0
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median3 corresponding lower-trunk contour widths at y960/980/1000, below forepaws and excluding lateral tail. Head horizontal span is turn/tilt sensitive and provisionalv003 biased torso scale. Fullsource single per sheet, no bbox fitting; original source pixels unchanged."
+      },
+      "generation_input": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-present_right-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-present_right-single-v003-generation-v001.json",
+      "generation_record_sha256": "bd43a10d75069286de9ea54910035a7f31dc9ac8e03a61fc1dad806b8ce0780b"
+    },
+    {
+      "id": "think-single-v003",
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/think-single-v003.png",
+      "source_sheet_sha256": "802534cec15dd2abc915832974e3f2087068046ab2e2bba35faa989ec7d3778f",
+      "reference_height_px": 1056.441416893733,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+          "bytes": 1126240,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1074.0,
+        "landmarks": [
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 960,
+            "source_y": 960,
+            "canonical_span_px": [
+              413,
+              800
+            ],
+            "source_span_px": [
+              403,
+              783
+            ],
+            "ratio": 0.9819121447028424,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 980,
+            "source_y": 980,
+            "canonical_span_px": [
+              417,
+              796
+            ],
+            "source_span_px": [
+              406,
+              779
+            ],
+            "ratio": 0.9841688654353562,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 1000,
+            "source_y": 1000,
+            "canonical_span_px": [
+              423,
+              790
+            ],
+            "source_span_px": [
+              412,
+              773
+            ],
+            "ratio": 0.9836512261580381,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 0.9836512261580381,
+        "reference_height_px": 1056.441416893733,
+        "canonical_sole_points_px": [
+          [
+            494.5,
+            1175
+          ],
+          [
+            719.5,
+            1175
+          ]
+        ],
+        "canonical_foot_point_px": [
+          607.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          1.0,
+          -3.0
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median3 corresponding lower-trunk contour widths at y960/980/1000, below forepaws and excluding lateral tail. Head horizontal span is turn/tilt sensitive and provisionalv003 biased torso scale. Fullsource single per sheet, no bbox fitting; original source pixels unchanged."
+      },
+      "generation_input": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-think-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-think-single-v003-generation-v001.json",
+      "generation_record_sha256": "b1864e8ac29422c045c49c03ade2a1441d42855b29adb9a2cdc33045b5a698e7"
+    },
+    {
+      "id": "aha-single-v003",
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/aha-single-v003.png",
+      "source_sheet_sha256": "52bc2b943c901b58626e52ceb9fa7bb9b3d445c751fddf2eb81f110032a0e439",
+      "reference_height_px": 1085.335092348285,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+          "bytes": 1126240,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1074.0,
+        "landmarks": [
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 960,
+            "source_y": 960,
+            "canonical_span_px": [
+              413,
+              800
+            ],
+            "source_span_px": [
+              414,
+              802
+            ],
+            "ratio": 1.0025839793281655,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 980,
+            "source_y": 980,
+            "canonical_span_px": [
+              417,
+              796
+            ],
+            "source_span_px": [
+              417,
+              800
+            ],
+            "ratio": 1.0105540897097625,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 1000,
+            "source_y": 1000,
+            "canonical_span_px": [
+              423,
+              790
+            ],
+            "source_span_px": [
+              423,
+              794
+            ],
+            "ratio": 1.0108991825613078,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0105540897097625,
+        "reference_height_px": 1085.335092348285,
+        "canonical_sole_points_px": [
+          [
+            494.5,
+            1175
+          ],
+          [
+            719.5,
+            1175
+          ]
+        ],
+        "canonical_foot_point_px": [
+          607.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          1.0,
+          -3.0
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median3 corresponding lower-trunk contour widths at y960/980/1000, below forepaws and excluding lateral tail. Head horizontal span is turn/tilt sensitive and provisionalv003 biased torso scale. Fullsource single per sheet, no bbox fitting; original source pixels unchanged."
+      },
+      "generation_input": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-aha-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-aha-single-v003-generation-v001.json",
+      "generation_record_sha256": "6b62d8a00991a5c1479432b88e217b7df3041e850a177bc47bf200a00f4ca269"
+    },
+    {
+      "id": "cheer-single-v003",
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/cheer-single-v003.png",
+      "source_sheet_sha256": "7862dc5e17cc62853da24f8c74fbcd69a3108cf8ec46836661e42a7a242ef4d0",
+      "reference_height_px": 1076.9264305177112,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+          "bytes": 1126240,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1074.0,
+        "landmarks": [
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 960,
+            "source_y": 960,
+            "canonical_span_px": [
+              413,
+              800
+            ],
+            "source_span_px": [
+              413,
+              801
+            ],
+            "ratio": 1.0025839793281655,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 980,
+            "source_y": 980,
+            "canonical_span_px": [
+              417,
+              796
+            ],
+            "source_span_px": [
+              416,
+              798
+            ],
+            "ratio": 1.007915567282322,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 1000,
+            "source_y": 1000,
+            "canonical_span_px": [
+              423,
+              790
+            ],
+            "source_span_px": [
+              423,
+              791
+            ],
+            "ratio": 1.002724795640327,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.002724795640327,
+        "reference_height_px": 1076.9264305177112,
+        "canonical_sole_points_px": [
+          [
+            494.5,
+            1175
+          ],
+          [
+            719.5,
+            1175
+          ]
+        ],
+        "canonical_foot_point_px": [
+          607.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          1.0,
+          -3.0
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median3 corresponding lower-trunk contour widths at y960/980/1000, below forepaws and excluding lateral tail. Head horizontal span is turn/tilt sensitive and provisionalv003 biased torso scale. Fullsource single per sheet, no bbox fitting; original source pixels unchanged."
+      },
+      "generation_input": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-cheer-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-cheer-single-v003-generation-v001.json",
+      "generation_record_sha256": "3eb87578d0307c678cca9ec0240fd3f1b16865ac6e65bb4a5d8dabe11b035e83"
+    },
+    {
+      "id": "species_a-single-v003",
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/species_a-single-v003.png",
+      "source_sheet_sha256": "304449d7845d78ee2a46dd6128b0bb9fe635057e73a12497305d9a951bcb3e8a",
+      "reference_height_px": 1079.550387596899,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+          "bytes": 1126240,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1074.0,
+        "landmarks": [
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 960,
+            "source_y": 960,
+            "canonical_span_px": [
+              413,
+              800
+            ],
+            "source_span_px": [
+              412,
+              801
+            ],
+            "ratio": 1.0051679586563307,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 980,
+            "source_y": 980,
+            "canonical_span_px": [
+              417,
+              796
+            ],
+            "source_span_px": [
+              416,
+              797
+            ],
+            "ratio": 1.0052770448548813,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 1000,
+            "source_y": 1000,
+            "canonical_span_px": [
+              423,
+              790
+            ],
+            "source_span_px": [
+              423,
+              791
+            ],
+            "ratio": 1.002724795640327,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0051679586563307,
+        "reference_height_px": 1079.550387596899,
+        "canonical_sole_points_px": [
+          [
+            494.5,
+            1175
+          ],
+          [
+            719.5,
+            1175
+          ]
+        ],
+        "canonical_foot_point_px": [
+          607.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          1.0,
+          -3.0
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median3 corresponding lower-trunk contour widths at y960/980/1000, below forepaws and excluding lateral tail. Head horizontal span is turn/tilt sensitive and provisionalv003 biased torso scale. Fullsource single per sheet, no bbox fitting; original source pixels unchanged."
+      },
+      "generation_input": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_a-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_a-single-v003-generation-v001.json",
+      "generation_record_sha256": "8b537e2bcd0a91c8f51684608fa87abd29f4ccb8f098eac3f97306f319f482ba"
+    },
+    {
+      "id": "species_b-single-v003",
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/species_b-single-v003.png",
+      "source_sheet_sha256": "e4bf7f5fcfdb84520abb95cbc362aedd0073eb9c1e33517e8528a9fd6c6f0319",
+      "reference_height_px": 1074.0,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+          "bytes": 1126240,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1074.0,
+        "landmarks": [
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 960,
+            "source_y": 960,
+            "canonical_span_px": [
+              413,
+              800
+            ],
+            "source_span_px": [
+              414,
+              801
+            ],
+            "ratio": 1.0,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 980,
+            "source_y": 980,
+            "canonical_span_px": [
+              417,
+              796
+            ],
+            "source_span_px": [
+              417,
+              797
+            ],
+            "ratio": 1.0026385224274406,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Corresponding lower trunk outline width, below forepaws; lateral tail excluded at first torso edge",
+            "canonical_y": 1000,
+            "source_y": 1000,
+            "canonical_span_px": [
+              423,
+              790
+            ],
+            "source_span_px": [
+              424,
+              791
+            ],
+            "ratio": 1.0,
+            "used_for_scale": true,
+            "measurement": "First warm-brown body contour on either side of abdomen center, not outer alpha envelope; native subject and final max crosscheck."
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0,
+        "reference_height_px": 1074.0,
+        "canonical_sole_points_px": [
+          [
+            494.5,
+            1175
+          ],
+          [
+            719.5,
+            1175
+          ]
+        ],
+        "canonical_foot_point_px": [
+          607.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          1.0,
+          -3.0
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median3 corresponding lower-trunk contour widths at y960/980/1000, below forepaws and excluding lateral tail. Head horizontal span is turn/tilt sensitive and provisionalv003 biased torso scale. Fullsource single per sheet, no bbox fitting; original source pixels unchanged."
+      },
+      "generation_input": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_b-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_b-single-v003-generation-v001.json",
+      "generation_record_sha256": "1199a7fb75648ebce4d0bac5dc01220e33a0929aa835bae6800d2b1b30f3729d"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        259.0,
+        102.0,
+        969.0,
+        1176.0
+      ],
+      "anchor_px": [
+        608.0,
+        1172.0
+      ],
+      "reference_height_px": 1074.0,
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+      "anchor_basis": "Midpoint of the two short paw sole contact regions under the upright torso; one bushy side tail is excluded from support and body-reference width.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_manifest": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "a09548b9eb9c9555aa2dacb679afed7b6538dee0427c0dc8d00ea2a4eeac3036",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "25082bd3d1db3f0a635dc9c1cd12174a87c194e1764e8940baa617e7682d5e2b",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v003.png",
+      "sha256": "e12bf52698774b3df12a7400454101aa05ce3bd7321959db2a3820890dd3db98",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "blink-single-v003",
+      "body_bbox_px": [
+        252,
+        105,
+        960,
+        1176
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        262,
+        100,
+        1024,
+        1176
+      ],
+      "anchor_px": [
+        607.2473614775726,
+        1172.0079155672822
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        606.25,
+        1175
+      ],
+      "paired_sole_points_px": [
+        [
+          493.0,
+          1175
+        ],
+        [
+          719.5,
+          1175
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1071.1662269129288,
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v003.png",
+      "source_sheet_sha256": "e12bf52698774b3df12a7400454101aa05ce3bd7321959db2a3820890dd3db98",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 0,
+      "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/greet-single-v003.png",
+      "sha256": "d9c3326d164c8b1e5da3ac4c091fcc04ef5bf9c9a23cb811bdb1948e5b227750",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "greet-single-v003",
+      "body_bbox_px": [
+        250,
+        96,
+        964,
+        1176
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        260,
+        99,
+        1025,
+        1176
+      ],
+      "anchor_px": [
+        608.0052770448549,
+        1171.9841688654353
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        607.0,
+        1175
+      ],
+      "paired_sole_points_px": [
+        [
+          493.5,
+          1175
+        ],
+        [
+          720.5,
+          1175
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1079.6675461741427,
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/greet-single-v003.png",
+      "source_sheet_sha256": "d9c3326d164c8b1e5da3ac4c091fcc04ef5bf9c9a23cb811bdb1948e5b227750",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/present_left-single-v003.png",
+      "sha256": "2441211764e0fe35ad5af03642494af5f64d82c8084bc6ee86bda5e426c0d0ac",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "present_left-single-v003",
+      "body_bbox_px": [
+        248,
+        94,
+        964,
+        1176
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        177,
+        94,
+        1025,
+        1176
+      ],
+      "anchor_px": [
+        607.0079155672823,
+        1171.976253298153
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        606.0,
+        1175
+      ],
+      "paired_sole_points_px": [
+        [
+          491.5,
+          1175
+        ],
+        [
+          720.5,
+          1175
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1082.5013192612137,
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/present_left-single-v003.png",
+      "source_sheet_sha256": "2441211764e0fe35ad5af03642494af5f64d82c8084bc6ee86bda5e426c0d0ac",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/present_right-single-v003.png",
+      "sha256": "485107cf37589f5a8f24cd846f0d5eba5c60b1ca24038085a6dff913c9860b49",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "present_right-single-v003",
+      "body_bbox_px": [
+        238,
+        99,
+        949,
+        1176
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        254,
+        94,
+        1001,
+        1176
+      ],
+      "anchor_px": [
+        594.5026385224274,
+        1171.9920844327178
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        593.5,
+        1175
+      ],
+      "paired_sole_points_px": [
+        [
+          482.0,
+          1175
+        ],
+        [
+          705.0,
+          1175
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1076.8337730870712,
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/present_right-single-v003.png",
+      "source_sheet_sha256": "485107cf37589f5a8f24cd846f0d5eba5c60b1ca24038085a6dff913c9860b49",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/think-single-v003.png",
+      "sha256": "802534cec15dd2abc915832974e3f2087068046ab2e2bba35faa989ec7d3778f",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "think-single-v003",
+      "body_bbox_px": [
+        240,
+        119,
+        938,
+        1175
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        245,
+        92,
+        1011,
+        1175
+      ],
+      "anchor_px": [
+        589.983651226158,
+        1171.0490463215258
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        589.0,
+        1174
+      ],
+      "paired_sole_points_px": [
+        [
+          476.0,
+          1174
+        ],
+        [
+          702.0,
+          1174
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1056.441416893733,
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/think-single-v003.png",
+      "source_sheet_sha256": "802534cec15dd2abc915832974e3f2087068046ab2e2bba35faa989ec7d3778f",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 0,
+      "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/aha-single-v003.png",
+      "sha256": "52bc2b943c901b58626e52ceb9fa7bb9b3d445c751fddf2eb81f110032a0e439",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "aha-single-v003",
+      "body_bbox_px": [
+        247,
+        95,
+        965,
+        1180
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        254,
+        83,
+        1028,
+        1180
+      ],
+      "anchor_px": [
+        607.0105540897098,
+        1175.9683377308706
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        606.0,
+        1179
+      ],
+      "paired_sole_points_px": [
+        [
+          490.5,
+          1179
+        ],
+        [
+          721.5,
+          1179
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1085.335092348285,
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/aha-single-v003.png",
+      "source_sheet_sha256": "52bc2b943c901b58626e52ceb9fa7bb9b3d445c751fddf2eb81f110032a0e439",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/cheer-single-v003.png",
+      "sha256": "7862dc5e17cc62853da24f8c74fbcd69a3108cf8ec46836661e42a7a242ef4d0",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "cheer-single-v003",
+      "body_bbox_px": [
+        251,
+        99,
+        963,
+        1176
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        260,
+        94,
+        1028,
+        1176
+      ],
+      "anchor_px": [
+        608.0027247956403,
+        1171.991825613079
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        607.0,
+        1175
+      ],
+      "paired_sole_points_px": [
+        [
+          495.5,
+          1175
+        ],
+        [
+          718.5,
+          1175
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1076.9264305177112,
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/cheer-single-v003.png",
+      "source_sheet_sha256": "7862dc5e17cc62853da24f8c74fbcd69a3108cf8ec46836661e42a7a242ef4d0",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 0,
+      "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/species_a-single-v003.png",
+      "sha256": "304449d7845d78ee2a46dd6128b0bb9fe635057e73a12497305d9a951bcb3e8a",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "species_a-single-v003",
+      "body_bbox_px": [
+        250,
+        95,
+        963,
+        1175
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        261,
+        93,
+        1054,
+        1175
+      ],
+      "anchor_px": [
+        607.5051679586563,
+        1170.984496124031
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        606.5,
+        1174
+      ],
+      "paired_sole_points_px": [
+        [
+          493.5,
+          1174
+        ],
+        [
+          719.5,
+          1174
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1079.550387596899,
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/species_a-single-v003.png",
+      "source_sheet_sha256": "304449d7845d78ee2a46dd6128b0bb9fe635057e73a12497305d9a951bcb3e8a",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/species_b-single-v003.png",
+      "sha256": "e4bf7f5fcfdb84520abb95cbc362aedd0073eb9c1e33517e8528a9fd6c6f0319",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "species_b-single-v003",
+      "body_bbox_px": [
+        252,
+        101,
+        962,
+        1175
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        260,
+        102,
+        1022,
+        1175
+      ],
+      "anchor_px": [
+        607.75,
+        1171.0
+      ],
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        606.75,
+        1174
+      ],
+      "paired_sole_points_px": [
+        [
+          494.0,
+          1174
+        ],
+        [
+          719.5,
+          1174
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1074.0,
+      "source_sheet": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/source/species_b-single-v003.png",
+      "source_sheet_sha256": "e4bf7f5fcfdb84520abb95cbc362aedd0073eb9c1e33517e8528a9fd6c6f0319",
+      "size_px": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v003-generation-v001.json",
+        "sha256": "69e4095b6f96f9d7deb910b53193b852c946adbed0e1c289d3f14cf6560f9c13",
+        "bytes": 3142
+      },
+      {
+        "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-greet-single-v003-generation-v001.json",
+        "sha256": "ee113d1e81ca5bf6caf71d671434fb929f342c49d549e139aad32cfead256672",
+        "bytes": 3099
+      },
+      {
+        "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-present_left-single-v003-generation-v001.json",
+        "sha256": "c658e442e290a321993c2e97b3de45bdc4be4b99385a782cd32a8749decb1833",
+        "bytes": 3140
+      },
+      {
+        "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-present_right-single-v003-generation-v001.json",
+        "sha256": "bd43a10d75069286de9ea54910035a7f31dc9ac8e03a61fc1dad806b8ce0780b",
+        "bytes": 3146
+      },
+      {
+        "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-think-single-v003-generation-v001.json",
+        "sha256": "b1864e8ac29422c045c49c03ade2a1441d42855b29adb9a2cdc33045b5a698e7",
+        "bytes": 3113
+      },
+      {
+        "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-aha-single-v003-generation-v001.json",
+        "sha256": "6b62d8a00991a5c1479432b88e217b7df3041e850a177bc47bf200a00f4ca269",
+        "bytes": 3115
+      },
+      {
+        "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-cheer-single-v003-generation-v001.json",
+        "sha256": "3eb87578d0307c678cca9ec0240fd3f1b16865ac6e65bb4a5d8dabe11b035e83",
+        "bytes": 3116
+      },
+      {
+        "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_a-single-v003-generation-v001.json",
+        "sha256": "8b537e2bcd0a91c8f51684608fa87abd29f4ccb8f098eac3f97306f319f482ba",
+        "bytes": 3128
+      },
+      {
+        "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_b-single-v003-generation-v001.json",
+        "sha256": "1199a7fb75648ebce4d0bac5dc01220e33a0929aa835bae6800d2b1b30f3729d",
+        "bytes": 3132
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/red-wolf/generation-batches/youtube-core-20261114-c-v001/qa/stock-adoption-v001.json",
+      "sha256": "8918c16606a1eb0d5271849debc131804ff66d717c1cda5c8172f884c6423e03",
+      "bytes": 30079
+    }
+  ]
+}

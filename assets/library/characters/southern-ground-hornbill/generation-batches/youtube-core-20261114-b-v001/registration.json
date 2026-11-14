@@ -1,0 +1,1055 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "southern-ground-hornbill",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/southern-ground-hornbill/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "750043f529f8cc5f8d4092ac785e0cd170af9a06b98f44b11c8a2f6e7c0eaaa1",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      376,
+      308,
+      906,
+      983
+    ],
+    "anchor_px": [
+      603,
+      972
+    ],
+    "reference_height_px": 675,
+    "anchor_kind": "anatomical-prop-support",
+    "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+    "anchor_basis": "Rounded head/trunk and short legs through feet, excluding projecting curved bill and small rear tail; projected support midpoint at foot bases.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+    "source_manifest": "assets/library/characters/southern-ground-hornbill/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "35f3393b059af63f853380b26805be4854f2828eec45e01bcf72b9d426925f93"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "750043f529f8cc5f8d4092ac785e0cd170af9a06b98f44b11c8a2f6e7c0eaaa1",
+      "reference_height_px": 675,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "c56564d151261bb2d136eae3febde6d7faf33ca8d7c1f20d2f0f646d69cd7d38",
+      "reference_height_px": 335,
+      "calibration": {
+        "method": "Manual common native source calibration after exact maximum-use comparison: neutral head/body crown308 through feet983 is675px; quiet blink crown40 through feet375 is335px. Both head width, bill attachment, torso and grounded feet agree after one shared 335px reference for all9 poses. Old cross-section ROI proposal318.031 truncated projected head/trunk and made all9 uniformly about5.3% too large. This is one source-scale correction, not individual-pose fitting; intended action tilt/wing spread preserved.",
+        "neutral_reference": {
+          "path": "assets/library/characters/southern-ground-hornbill/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "750043f529f8cc5f8d4092ac785e0cd170af9a06b98f44b11c8a2f6e7c0eaaa1",
+          "bytes": 552481,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 675,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 443.0,
+            "source_y": 107.0,
+            "canonical_span": [
+              376,
+              708
+            ],
+            "source_span": [
+              126,
+              284
+            ],
+            "ratio": 0.4759036144578313
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 510.5,
+            "source_y": 140.5,
+            "canonical_span": [
+              376,
+              735
+            ],
+            "source_span": [
+              126,
+              279
+            ],
+            "ratio": 0.42618384401114207
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 726.5,
+            "source_y": 247.7,
+            "canonical_span": [
+              382,
+              903
+            ],
+            "source_span": [
+              126,
+              369
+            ],
+            "ratio": 0.46641074856046066
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 807.5,
+            "source_y": 287.9,
+            "canonical_span": [
+              412,
+              906
+            ],
+            "source_span": [
+              136,
+              389
+            ],
+            "ratio": 0.5121457489878543
+          }
+        ],
+        "common_ratio": 0.4962962962962963,
+        "initial_roi_locator_only_visible_height_ratio": 0.4962962962962963,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.2017014633113705,
+        "manual_landmarks": {
+          "canonical_crown_y": 308,
+          "canonical_feet_y": 983,
+          "quiet_blink_crown_y": 40,
+          "quiet_blink_feet_y": 375,
+          "body_reference_excludes": "projecting curved bill and small rear tail",
+          "original_approximate_reference_height_px": 318.03109751867356
+        },
+        "visual_confirmation": {
+          "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "fca53e7215b2c58c5f679f2b535446a13f143c0320c179ff4e204aed135f3863",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "7fa65d6bef311b4199ba3b4776de418996314dae7104cb2dc8fc1b218ff9fa0e"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "750043f529f8cc5f8d4092ac785e0cd170af9a06b98f44b11c8a2f6e7c0eaaa1",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        376,
+        308,
+        906,
+        983
+      ],
+      "anchor_px": [
+        603,
+        972
+      ],
+      "reference_height_px": 675,
+      "anchor_kind": "anatomical-prop-support",
+      "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+      "anchor_basis": "Rounded head/trunk and short legs through feet, excluding projecting curved bill and small rear tail; projected support midpoint at foot bases.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "source_manifest": "assets/library/characters/southern-ground-hornbill/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "35f3393b059af63f853380b26805be4854f2828eec45e01bcf72b9d426925f93",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "750043f529f8cc5f8d4092ac785e0cd170af9a06b98f44b11c8a2f6e7c0eaaa1",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        424,
+        400
+      ],
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "674e123e24b3f251cb5ecaf6c4bc07d8ff1ff995ffd77b750d62a195fba8d492",
+      "size_px": [
+        424,
+        400
+      ],
+      "visible": [
+        57,
+        40,
+        391,
+        375
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "c56564d151261bb2d136eae3febde6d7faf33ca8d7c1f20d2f0f646d69cd7d38",
+      "body_bbox_px": [
+        126,
+        40,
+        389,
+        375
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        57,
+        40,
+        391,
+        375
+      ],
+      "reference_height_px": 335,
+      "anchor_px": [
+        224.21481481481482,
+        369.5407407407407
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        219.5,
+        375
+      ],
+      "sole_points": [
+        [
+          184.0,
+          374
+        ],
+        [
+          255.0,
+          375
+        ]
+      ],
+      "sole_regions": [
+        [
+          156,
+          315,
+          223,
+          377
+        ],
+        [
+          226,
+          315,
+          292,
+          377
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        57,
+        40,
+        391,
+        375
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        424,
+        0,
+        824,
+        400
+      ],
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "d703abf2385ae015312ef027f0aac77d1654a36cd0abfbaedebe82513f8599ec",
+      "size_px": [
+        400,
+        400
+      ],
+      "visible": [
+        28,
+        39,
+        343,
+        374
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "c56564d151261bb2d136eae3febde6d7faf33ca8d7c1f20d2f0f646d69cd7d38",
+      "body_bbox_px": [
+        97,
+        39,
+        360,
+        374
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        28,
+        39,
+        343,
+        374
+      ],
+      "reference_height_px": 335,
+      "anchor_px": [
+        191.71481481481482,
+        368.5407407407407
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        187.0,
+        374
+      ],
+      "sole_points": [
+        [
+          152.0,
+          373
+        ],
+        [
+          222.0,
+          374
+        ]
+      ],
+      "sole_regions": [
+        [
+          124,
+          314,
+          193,
+          376
+        ],
+        [
+          194,
+          314,
+          258,
+          376
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        28,
+        39,
+        343,
+        374
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        824,
+        0,
+        1262,
+        400
+      ],
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "34c0f22ef090f0641f64c8ef923cd55b10e4a4016a797c7bdd4987cbfcbf57a8",
+      "size_px": [
+        438,
+        400
+      ],
+      "visible": [
+        19,
+        37,
+        382,
+        374
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "c56564d151261bb2d136eae3febde6d7faf33ca8d7c1f20d2f0f646d69cd7d38",
+      "body_bbox_px": [
+        88,
+        37,
+        353,
+        374
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        19,
+        37,
+        382,
+        374
+      ],
+      "reference_height_px": 335,
+      "anchor_px": [
+        222.46481481481482,
+        368.5407407407407
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        217.75,
+        374
+      ],
+      "sole_points": [
+        [
+          182.5,
+          373
+        ],
+        [
+          253.0,
+          374
+        ]
+      ],
+      "sole_regions": [
+        [
+          154,
+          314,
+          222,
+          376
+        ],
+        [
+          225,
+          314,
+          291,
+          376
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        19,
+        37,
+        382,
+        374
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        400,
+        424,
+        804
+      ],
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "dae990063c7a71cf3b2f8ad551b2ee78efeca4c3e090bdeb3247923ea1c2e72c",
+      "size_px": [
+        424,
+        404
+      ],
+      "visible": [
+        55,
+        39,
+        397,
+        370
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "c56564d151261bb2d136eae3febde6d7faf33ca8d7c1f20d2f0f646d69cd7d38",
+      "body_bbox_px": [
+        123,
+        39,
+        383,
+        370
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        55,
+        39,
+        397,
+        370
+      ],
+      "reference_height_px": 335,
+      "anchor_px": [
+        208.96481481481482,
+        364.5407407407407
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        204.25,
+        370
+      ],
+      "sole_points": [
+        [
+          171.5,
+          370
+        ],
+        [
+          237.0,
+          366
+        ]
+      ],
+      "sole_regions": [
+        [
+          136,
+          310,
+          199,
+          372
+        ],
+        [
+          199,
+          310,
+          264,
+          372
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        55,
+        39,
+        397,
+        370
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        424,
+        400,
+        824,
+        804
+      ],
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "299dcbb29f276cb77ebde8af028ade5ff36336577f9ac1ca8738ca29891aa86b",
+      "size_px": [
+        400,
+        404
+      ],
+      "visible": [
+        54,
+        37,
+        374,
+        364
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "c56564d151261bb2d136eae3febde6d7faf33ca8d7c1f20d2f0f646d69cd7d38",
+      "body_bbox_px": [
+        121,
+        37,
+        378,
+        364
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        54,
+        37,
+        374,
+        364
+      ],
+      "reference_height_px": 335,
+      "anchor_px": [
+        206.46481481481482,
+        358.5407407407407
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        201.75,
+        364
+      ],
+      "sole_points": [
+        [
+          166.0,
+          363
+        ],
+        [
+          237.5,
+          364
+        ]
+      ],
+      "sole_regions": [
+        [
+          136,
+          304,
+          205,
+          366
+        ],
+        [
+          208,
+          304,
+          274,
+          366
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        54,
+        37,
+        374,
+        364
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        824,
+        400,
+        1262,
+        804
+      ],
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "ed8379f396baeaade77ae0ae642d80ccc6c3bb55d6531a5f7bad352a4eff53e9",
+      "size_px": [
+        438,
+        404
+      ],
+      "visible": [
+        52,
+        27,
+        368,
+        365
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "c56564d151261bb2d136eae3febde6d7faf33ca8d7c1f20d2f0f646d69cd7d38",
+      "body_bbox_px": [
+        122,
+        27,
+        387,
+        365
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        52,
+        27,
+        368,
+        365
+      ],
+      "reference_height_px": 335,
+      "anchor_px": [
+        220.21481481481482,
+        359.5407407407407
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        215.5,
+        365
+      ],
+      "sole_points": [
+        [
+          180.0,
+          364
+        ],
+        [
+          251.0,
+          365
+        ]
+      ],
+      "sole_regions": [
+        [
+          151,
+          305,
+          218,
+          367
+        ],
+        [
+          222,
+          305,
+          288,
+          367
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        52,
+        27,
+        368,
+        365
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        804,
+        424,
+        1246
+      ],
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "12b369182038eb43da5b52385d5353dae64cf18976060425db45e23e0bc27d8a",
+      "size_px": [
+        424,
+        442
+      ],
+      "visible": [
+        39,
+        25,
+        384,
+        361
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "c56564d151261bb2d136eae3febde6d7faf33ca8d7c1f20d2f0f646d69cd7d38",
+      "body_bbox_px": [
+        108,
+        25,
+        372,
+        361
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        39,
+        25,
+        384,
+        361
+      ],
+      "reference_height_px": 335,
+      "anchor_px": [
+        221.96481481481482,
+        355.5407407407407
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        217.25,
+        361
+      ],
+      "sole_points": [
+        [
+          183.0,
+          360
+        ],
+        [
+          251.5,
+          361
+        ]
+      ],
+      "sole_regions": [
+        [
+          155,
+          301,
+          221,
+          363
+        ],
+        [
+          223,
+          301,
+          288,
+          363
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        39,
+        25,
+        384,
+        361
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        424,
+        804,
+        824,
+        1246
+      ],
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "95062a5b59d32170ed809f7337f1a05a4c355b501bd8dd5ce2c164bfa44abb9a",
+      "size_px": [
+        400,
+        442
+      ],
+      "visible": [
+        47,
+        43,
+        383,
+        360
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "c56564d151261bb2d136eae3febde6d7faf33ca8d7c1f20d2f0f646d69cd7d38",
+      "body_bbox_px": [
+        112,
+        43,
+        361,
+        360
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        47,
+        43,
+        383,
+        360
+      ],
+      "reference_height_px": 335,
+      "anchor_px": [
+        208.46481481481482,
+        354.5407407407407
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        203.75,
+        360
+      ],
+      "sole_points": [
+        [
+          167.0,
+          358
+        ],
+        [
+          240.5,
+          360
+        ]
+      ],
+      "sole_regions": [
+        [
+          138,
+          300,
+          207,
+          362
+        ],
+        [
+          211,
+          300,
+          276,
+          362
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        47,
+        43,
+        383,
+        360
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        824,
+        804,
+        1262,
+        1246
+      ],
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "5035d94cf9f6e8b2d32eb3e1dbda596d53b68d4c6654d1cc817b8698fb5ffe7f",
+      "size_px": [
+        438,
+        442
+      ],
+      "visible": [
+        44,
+        31,
+        386,
+        361
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "c56564d151261bb2d136eae3febde6d7faf33ca8d7c1f20d2f0f646d69cd7d38",
+      "body_bbox_px": [
+        112,
+        31,
+        371,
+        361
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        44,
+        31,
+        386,
+        361
+      ],
+      "reference_height_px": 335,
+      "anchor_px": [
+        220.46481481481482,
+        355.5407407407407
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        215.75,
+        361
+      ],
+      "sole_points": [
+        [
+          179.0,
+          361
+        ],
+        [
+          252.5,
+          361
+        ]
+      ],
+      "sole_regions": [
+        [
+          150,
+          301,
+          218,
+          363
+        ],
+        [
+          223,
+          301,
+          289,
+          363
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        44,
+        31,
+        386,
+        361
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "7fa65d6bef311b4199ba3b4776de418996314dae7104cb2dc8fc1b218ff9fa0e",
+        "bytes": 5762
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/southern-ground-hornbill/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "9cdaff0784321cc420dbb9fdd6de42477e6914d5d866a5c631c3f1418754e906",
+      "bytes": 7987
+    }
+  ]
+}

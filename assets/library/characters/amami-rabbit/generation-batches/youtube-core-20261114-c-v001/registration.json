@@ -1,0 +1,962 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "amami-rabbit",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-c-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/amami-rabbit/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "b5c6e29c9a1b4504232354ff079096b9939ffa8937fcbce1369030d6c9874112",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      311,
+      267,
+      933,
+      1188
+    ],
+    "anchor_px": [
+      620,
+      1180
+    ],
+    "reference_height_px": 921,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of short standing feet; ear tips and small side tail excluded from the body reference.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/amami-rabbit/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "322e07356bbbcaa0ea01a3fa9de31319403e880ef5b012ebc15f1bf27754dcab"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "b5c6e29c9a1b4504232354ff079096b9939ffa8937fcbce1369030d6c9874112",
+      "reference_height_px": 921,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "6d09c4c52a57194c26e78f1b088a61909bae0ca949715976b46391c8d41bf79f",
+      "reference_height_px": 337.33217471128705,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/amami-rabbit/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b5c6e29c9a1b4504232354ff079096b9939ffa8937fcbce1369030d6c9874112",
+          "bytes": 930316,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 921,
+        "landmarks": [
+          {
+            "name": "upper-head span",
+            "canonical_y": 405,
+            "source_y": 113,
+            "canonical_span_px": [
+              361,
+              886
+            ],
+            "source_span_px": [
+              131,
+              320
+            ],
+            "span_ratio": 0.36,
+            "used": true,
+            "note": "Visually matched corresponding anatomy; closed-eye row and tail/hand width are excluded from primary ratio."
+          },
+          {
+            "name": "mid-head span",
+            "canonical_y": 497,
+            "source_y": 147,
+            "canonical_span_px": [
+              320,
+              923
+            ],
+            "source_span_px": [
+              116,
+              335
+            ],
+            "span_ratio": 0.36318407960199006,
+            "used": true,
+            "note": "Visually matched corresponding anatomy; closed-eye row and tail/hand width are excluded from primary ratio."
+          },
+          {
+            "name": "lower-head or shoulder span",
+            "canonical_y": 589,
+            "source_y": 180,
+            "canonical_span_px": [
+              318,
+              925
+            ],
+            "source_span_px": [
+              111,
+              339
+            ],
+            "span_ratio": 0.3756177924217463,
+            "used": true,
+            "note": "Visually matched corresponding anatomy; closed-eye row and tail/hand width are excluded from primary ratio."
+          },
+          {
+            "name": "abdomen crosscheck",
+            "canonical_y": 866,
+            "source_y": 282,
+            "canonical_span_px": [
+              334,
+              897
+            ],
+            "source_span_px": [
+              127,
+              325
+            ],
+            "span_ratio": 0.35168738898756663,
+            "used": false,
+            "note": "Visually matched corresponding anatomy; closed-eye row and tail/hand width are excluded from primary ratio."
+          }
+        ],
+        "common_ratio": 0.36626729067457875,
+        "reference_height_px": 337.33217471128705,
+        "method": "Manually selected corresponding upper/mid head and shoulder widths; common source-sheet factor. Alpha envelope used only to seed coordinate search, never the final fit. Foot spacing and trunk length crosschecked visually.",
+        "canonical_paired_sole_points": [
+          [
+            499,
+            1187
+          ],
+          [
+            718.5,
+            1187
+          ]
+        ],
+        "canonical_source_foot_point_px": [
+          608.75,
+          1187
+        ],
+        "inherited_anchor_offset_px": [
+          11.25,
+          -7
+        ],
+        "scope": "Approximate anatomical registration on native pixels, not subpixel motion metrology."
+      },
+      "generation_input": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "dfba08c20f395bf648997e62d781789972a3992ad45fc82d477b21fd6bbe0e19"
+    },
+    {
+      "id": "blink-single-v002",
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/blink-v002.png",
+      "source_sheet_sha256": "4fd3c2070a1399953d8b134e56dda465a45fd926d93f8c7b16327bc2d90b832f",
+      "reference_height_px": 925.5669920578329,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/amami-rabbit/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b5c6e29c9a1b4504232354ff079096b9939ffa8937fcbce1369030d6c9874112"
+        },
+        "landmarks": [
+          {
+            "name": "head/shoulder/abdomen cross-section",
+            "canonical_y": 405,
+            "candidate_y": 405,
+            "canonical_span_px": [
+              361,
+              886
+            ],
+            "candidate_span_px": [
+              359,
+              887
+            ],
+            "ratio": 1.0057142857142858
+          },
+          {
+            "name": "head/shoulder/abdomen cross-section",
+            "canonical_y": 497,
+            "candidate_y": 497,
+            "canonical_span_px": [
+              320,
+              923
+            ],
+            "candidate_span_px": [
+              319,
+              925
+            ],
+            "ratio": 1.0049751243781095
+          },
+          {
+            "name": "head/shoulder/abdomen cross-section",
+            "canonical_y": 589,
+            "candidate_y": 589,
+            "canonical_span_px": [
+              318,
+              925
+            ],
+            "candidate_span_px": [
+              317,
+              927
+            ],
+            "ratio": 1.0049423393739703
+          },
+          {
+            "name": "head/shoulder/abdomen cross-section",
+            "canonical_y": 746,
+            "candidate_y": 746,
+            "canonical_span_px": [
+              385,
+              850
+            ],
+            "candidate_span_px": [
+              383,
+              852
+            ],
+            "ratio": 1.0086021505376344
+          },
+          {
+            "name": "head/shoulder/abdomen cross-section",
+            "canonical_y": 866,
+            "candidate_y": 866,
+            "canonical_span_px": [
+              334,
+              897
+            ],
+            "candidate_span_px": [
+              333,
+              898
+            ],
+            "ratio": 1.0035523978685612
+          },
+          {
+            "name": "head/shoulder/abdomen cross-section",
+            "canonical_y": 958,
+            "candidate_y": 958,
+            "canonical_span_px": [
+              387,
+              903
+            ],
+            "candidate_span_px": [
+              386,
+              903
+            ],
+            "ratio": 1.001937984496124
+          }
+        ],
+        "common_ratio": 1.00495873187604,
+        "reference_height_px": 925.5669920578329,
+        "source_foot_point_px": [
+          608.5,
+          1188
+        ],
+        "canonical_anchor_offset_px": [
+          11.25,
+          -7
+        ],
+        "method": "Median of6 matched full-resolution head/shoulder/abdomen spans at same anatomical y coordinates. Independent singleton calibration, not bbox fitting."
+      },
+      "generation_input": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v002-generation-v001.json",
+      "generation_record_sha256": "9898bf117bc4d3108706d7ff938d3b712c7e15ca40a131bf7011796bf4e6ea59"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/amami-rabbit/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "b5c6e29c9a1b4504232354ff079096b9939ffa8937fcbce1369030d6c9874112",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        311,
+        267,
+        933,
+        1188
+      ],
+      "anchor_px": [
+        620,
+        1180
+      ],
+      "reference_height_px": 921,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of short standing feet; ear tips and small side tail excluded from the body reference.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/amami-rabbit/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "322e07356bbbcaa0ea01a3fa9de31319403e880ef5b012ebc15f1bf27754dcab",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "b5c6e29c9a1b4504232354ff079096b9939ffa8937fcbce1369030d6c9874112",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/blink-v002.png",
+      "sha256": "4fd3c2070a1399953d8b134e56dda465a45fd926d93f8c7b16327bc2d90b832f",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "blink-single-v002",
+      "body_bbox_px": [
+        310,
+        267,
+        933,
+        1189
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        310,
+        123,
+        933,
+        1189
+      ],
+      "anchor_px": [
+        619.8057857336055,
+        1180.9652888768678
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Two sole ROI centers measured at8px above lower alpha32 bounds, bottom1188. Inherit original neutral anchor-offset[11.25,-7] at singleton factor1.00496.",
+      "anchor_basis": "Same standing anatomy as original neutral; singleton source full1254 canvas, no crop normalization.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        608.5,
+        1188
+      ],
+      "paired_sole_points_px": [
+        [
+          500.0,
+          1188
+        ],
+        [
+          717.0,
+          1188
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 925.5669920578329,
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/blink-v002.png",
+      "source_sheet_sha256": "4fd3c2070a1399953d8b134e56dda465a45fd926d93f8c7b16327bc2d90b832f",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/frames/greet-v001.png",
+      "sha256": "8e161cc86f4e511411fb42313e29aeee574211e1f3723331505652ca178950f8",
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        88,
+        70,
+        315,
+        400
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        82,
+        11,
+        316,
+        400
+      ],
+      "anchor_px": [
+        205.620507020089,
+        396.43612896527793
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        201.5,
+        399
+      ],
+      "paired_sole_points_px": [
+        [
+          161.5,
+          399
+        ],
+        [
+          241.5,
+          399
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 337.33217471128705,
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "6d09c4c52a57194c26e78f1b088a61909bae0ca949715976b46391c8d41bf79f",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/frames/present_left-v001.png",
+      "sha256": "59a9487a0ebac6c6e7038483e8bee7ffb4ccf3ecc290d67f2c47b50a5bd1ba2d",
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        78,
+        70,
+        306,
+        400
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        61,
+        14,
+        311,
+        400
+      ],
+      "anchor_px": [
+        196.120507020089,
+        396.43612896527793
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        192.0,
+        399
+      ],
+      "paired_sole_points_px": [
+        [
+          152.5,
+          399
+        ],
+        [
+          231.5,
+          399
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 337.33217471128705,
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "6d09c4c52a57194c26e78f1b088a61909bae0ca949715976b46391c8d41bf79f",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/frames/present_right-v001.png",
+      "sha256": "80ebe1a09317c2c5ffe59a8019d98aaf2756f965825f783b092091ec98c83e92",
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        112,
+        69,
+        340,
+        399
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        108,
+        9,
+        356,
+        399
+      ],
+      "anchor_px": [
+        229.870507020089,
+        395.43612896527793
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        225.75,
+        398
+      ],
+      "paired_sole_points_px": [
+        [
+          186.0,
+          398
+        ],
+        [
+          265.5,
+          398
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 337.33217471128705,
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "6d09c4c52a57194c26e78f1b088a61909bae0ca949715976b46391c8d41bf79f",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/frames/think-v001.png",
+      "sha256": "2312c6c54fe36e98a2bb60a8f200d3589d006c9f912448771d92492a6b99106d",
+      "crop_from_sheet_xyxy": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        89,
+        81,
+        317,
+        400
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        88,
+        6,
+        319,
+        400
+      ],
+      "anchor_px": [
+        206.870507020089,
+        396.43612896527793
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        202.75,
+        399
+      ],
+      "paired_sole_points_px": [
+        [
+          162.5,
+          399
+        ],
+        [
+          243.0,
+          399
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 337.33217471128705,
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "6d09c4c52a57194c26e78f1b088a61909bae0ca949715976b46391c8d41bf79f",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/frames/aha-v001.png",
+      "sha256": "59340f3dab70894a2c7ef93ba5a08c8024430e3e1ce8d73825c4b5c9af30e448",
+      "crop_from_sheet_xyxy": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        79,
+        70,
+        306,
+        399
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        81,
+        9,
+        311,
+        399
+      ],
+      "anchor_px": [
+        196.620507020089,
+        395.43612896527793
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        192.5,
+        398
+      ],
+      "paired_sole_points_px": [
+        [
+          152.0,
+          398
+        ],
+        [
+          233.0,
+          398
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 337.33217471128705,
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "6d09c4c52a57194c26e78f1b088a61909bae0ca949715976b46391c8d41bf79f",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/frames/cheer-v001.png",
+      "sha256": "331d711a79c7128bf09a4f189cfe51f3758003a52677876c72663bf90068c35b",
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        113,
+        70,
+        340,
+        400
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        111,
+        9,
+        340,
+        400
+      ],
+      "anchor_px": [
+        230.620507020089,
+        396.43612896527793
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        226.5,
+        399
+      ],
+      "paired_sole_points_px": [
+        [
+          186.5,
+          399
+        ],
+        [
+          266.5,
+          399
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 337.33217471128705,
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "6d09c4c52a57194c26e78f1b088a61909bae0ca949715976b46391c8d41bf79f",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/frames/species_a-v001.png",
+      "sha256": "c5eaf4fac15d00714f3eb844dfeec0c3bca3b49678d4d7a1d3b319ebd79865f0",
+      "crop_from_sheet_xyxy": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        88,
+        86,
+        316,
+        401
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        79,
+        6,
+        319,
+        401
+      ],
+      "anchor_px": [
+        205.870507020089,
+        397.43612896527793
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        201.75,
+        400
+      ],
+      "paired_sole_points_px": [
+        [
+          162.0,
+          400
+        ],
+        [
+          241.5,
+          400
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 337.33217471128705,
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "6d09c4c52a57194c26e78f1b088a61909bae0ca949715976b46391c8d41bf79f",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/frames/species_b-v001.png",
+      "sha256": "368ba6d929fa1113e70688d6cfbae18a8aedaab99e7906beaaf3bf2399ea6a91",
+      "crop_from_sheet_xyxy": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        78,
+        71,
+        306,
+        401
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        78,
+        11,
+        313,
+        401
+      ],
+      "anchor_px": [
+        196.370507020089,
+        397.43612896527793
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Paired lower-foot anatomical ROIs inspected in native image; alpha row >=100 at four pixels above lower alpha32 envelope samples foot centers. Mean sole uses lower extent; source projection offset inherited unchanged in sheet scale.",
+      "anchor_basis": "Paired drawn foot support; side tail and raised forearms excluded. Anatomical body box is approximate, not the source of scale.",
+      "vertical_motion_policy": "Grounded key pose; no baked-in jump and no second root jump.",
+      "source_foot_point_px": [
+        192.25,
+        400
+      ],
+      "paired_sole_points_px": [
+        [
+          152.0,
+          400
+        ],
+        [
+          232.5,
+          400
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 337.33217471128705,
+      "source_sheet": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "6d09c4c52a57194c26e78f1b088a61909bae0ca949715976b46391c8d41bf79f",
+      "size_px": [
+        418,
+        418
+      ]
+    }
+  ],
+  "clips": {
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    },
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "dfba08c20f395bf648997e62d781789972a3992ad45fc82d477b21fd6bbe0e19",
+        "bytes": 5174
+      },
+      {
+        "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v002-generation-v001.json",
+        "sha256": "9898bf117bc4d3108706d7ff938d3b712c7e15ca40a131bf7011796bf4e6ea59",
+        "bytes": 3587
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/amami-rabbit/generation-batches/youtube-core-20261114-c-v001/qa/stock-adoption-v001.json",
+      "sha256": "2e48d917d182c0c2b04c5e16c04096b2dcdb9ec656f93b2642584ad14e6831a6",
+      "bytes": 8415
+    }
+  ]
+}

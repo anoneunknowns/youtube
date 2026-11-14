@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "japanese-rock-ptarmigan",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "ca031ed4ab105ce34c04af5247d88da797ca40fd5324cb3d8e706f1bc7be84ef",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      355,
+      339,
+      901,
+      947
+    ],
+    "anchor_px": [
+      571,
+      939
+    ],
+    "reference_height_px": 608,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of two feather-covered support feet; short beak excluded from body width.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "e17c79c4e24edcc63bcfeae27877b066e20d0f6c53dab5c26f32b9bcb6414bd0"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "ca031ed4ab105ce34c04af5247d88da797ca40fd5324cb3d8e706f1bc7be84ef",
+      "reference_height_px": 608,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e49327e13bcfd67169ddf81f66efab030705109bff26a3a49f11dff1d66b9cdc",
+      "reference_height_px": 315.40500219394477,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "ca031ed4ab105ce34c04af5247d88da797ca40fd5324cb3d8e706f1bc7be84ef",
+          "bytes": 456014,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 608,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 460.6,
+            "source_y": 94.2,
+            "canonical_span": [
+              355,
+              637
+            ],
+            "source_span": [
+              115,
+              270
+            ],
+            "ratio": 0.549645390070922
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 521.4,
+            "source_y": 126.80000000000001,
+            "canonical_span": [
+              366,
+              684
+            ],
+            "source_span": [
+              122,
+              288
+            ],
+            "ratio": 0.5220125786163522
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 715.96,
+            "source_y": 231.12,
+            "canonical_span": [
+              355,
+              853
+            ],
+            "source_span": [
+              115,
+              371
+            ],
+            "ratio": 0.5140562248995983
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 788.9200000000001,
+            "source_y": 270.24,
+            "canonical_span": [
+              368,
+              884
+            ],
+            "source_span": [
+              120,
+              386
+            ],
+            "ratio": 0.5155038759689923
+          }
+        ],
+        "common_ratio": 0.5187582272926723,
+        "initial_roi_locator_only_visible_height_ratio": 0.5361842105263158,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0692320478723405,
+        "visual_confirmation": {
+          "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "3b593d09afa7b3e45bd8a1aa06baf5dbe7d83ad7521e1661477f92f166f2242e",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "807590736ec94b8d55b3494294b9b076e79a0f0000c28547fd33107fbddab1a4"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "ca031ed4ab105ce34c04af5247d88da797ca40fd5324cb3d8e706f1bc7be84ef",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        355,
+        339,
+        901,
+        947
+      ],
+      "anchor_px": [
+        571,
+        939
+      ],
+      "reference_height_px": 608,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of two feather-covered support feet; short beak excluded from body width.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "e17c79c4e24edcc63bcfeae27877b066e20d0f6c53dab5c26f32b9bcb6414bd0",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "ca031ed4ab105ce34c04af5247d88da797ca40fd5324cb3d8e706f1bc7be84ef",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        436,
+        390
+      ],
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "3b516c5aa4f2ae76f86e2472393fe169d9b56d775e4b50ece5c9ac13ab47c9a1",
+      "size_px": [
+        436,
+        390
+      ],
+      "visible": [
+        96,
+        29,
+        396,
+        355
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e49327e13bcfd67169ddf81f66efab030705109bff26a3a49f11dff1d66b9cdc",
+      "body_bbox_px": [
+        115,
+        29,
+        408,
+        355
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        96,
+        29,
+        396,
+        355
+      ],
+      "reference_height_px": 315.40500219394477,
+      "anchor_px": [
+        224.4922389205792,
+        350.8499341816586
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        221.25,
+        355
+      ],
+      "sole_points": [
+        [
+          180.0,
+          355
+        ],
+        [
+          262.5,
+          355
+        ]
+      ],
+      "sole_regions": [
+        [
+          142,
+          298,
+          223,
+          357
+        ],
+        [
+          224,
+          298,
+          305,
+          357
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        96,
+        29,
+        396,
+        355
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        436,
+        0,
+        834,
+        390
+      ],
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "4aa7571dc9ceb8210f96cecfb4d7cf0fbc1a903136d334adfac382bd90b0c749",
+      "size_px": [
+        398,
+        390
+      ],
+      "visible": [
+        68,
+        27,
+        355,
+        353
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e49327e13bcfd67169ddf81f66efab030705109bff26a3a49f11dff1d66b9cdc",
+      "body_bbox_px": [
+        87,
+        27,
+        380,
+        353
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        68,
+        27,
+        355,
+        353
+      ],
+      "reference_height_px": 315.40500219394477,
+      "anchor_px": [
+        191.2422389205792,
+        348.8499341816586
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        188.0,
+        353
+      ],
+      "sole_points": [
+        [
+          146.5,
+          353
+        ],
+        [
+          229.5,
+          353
+        ]
+      ],
+      "sole_regions": [
+        [
+          116,
+          296,
+          188,
+          355
+        ],
+        [
+          192,
+          296,
+          268,
+          355
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        68,
+        27,
+        355,
+        353
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        834,
+        0,
+        1278,
+        390
+      ],
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "fa1f1e8f434e134baaba823e758f1317e197b340c336bfe04d058fe632190669",
+      "size_px": [
+        444,
+        390
+      ],
+      "visible": [
+        30,
+        28,
+        387,
+        354
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e49327e13bcfd67169ddf81f66efab030705109bff26a3a49f11dff1d66b9cdc",
+      "body_bbox_px": [
+        49,
+        28,
+        342,
+        354
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        30,
+        28,
+        387,
+        354
+      ],
+      "reference_height_px": 315.40500219394477,
+      "anchor_px": [
+        225.7422389205792,
+        349.8499341816586
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        222.5,
+        354
+      ],
+      "sole_points": [
+        [
+          181.0,
+          353
+        ],
+        [
+          264.0,
+          354
+        ]
+      ],
+      "sole_regions": [
+        [
+          142,
+          297,
+          226,
+          356
+        ],
+        [
+          224,
+          297,
+          306,
+          356
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        30,
+        28,
+        387,
+        354
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        390,
+        436,
+        794
+      ],
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "63255d2d36d1d0e798c3458f991378a0013ed7053d4bcdaa8371804dcb6aac85",
+      "size_px": [
+        436,
+        404
+      ],
+      "visible": [
+        66,
+        33,
+        394,
+        364
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e49327e13bcfd67169ddf81f66efab030705109bff26a3a49f11dff1d66b9cdc",
+      "body_bbox_px": [
+        85,
+        33,
+        382,
+        364
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        66,
+        33,
+        394,
+        364
+      ],
+      "reference_height_px": 315.40500219394477,
+      "anchor_px": [
+        213.9922389205792,
+        359.8499341816586
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        210.75,
+        364
+      ],
+      "sole_points": [
+        [
+          169.5,
+          364
+        ],
+        [
+          252.0,
+          361
+        ]
+      ],
+      "sole_regions": [
+        [
+          129,
+          307,
+          210,
+          366
+        ],
+        [
+          208,
+          307,
+          289,
+          366
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        66,
+        33,
+        394,
+        364
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        436,
+        390,
+        834,
+        794
+      ],
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "632d14fb0dd21a4b7f0a0c53a999d36d35d15500ea05264612bd54d70fd20d67",
+      "size_px": [
+        398,
+        404
+      ],
+      "visible": [
+        76,
+        42,
+        368,
+        363
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e49327e13bcfd67169ddf81f66efab030705109bff26a3a49f11dff1d66b9cdc",
+      "body_bbox_px": [
+        94,
+        42,
+        383,
+        363
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        76,
+        42,
+        368,
+        363
+      ],
+      "reference_height_px": 315.40500219394477,
+      "anchor_px": [
+        199.9922389205792,
+        358.8499341816586
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        196.75,
+        363
+      ],
+      "sole_points": [
+        [
+          157.0,
+          362
+        ],
+        [
+          236.5,
+          363
+        ]
+      ],
+      "sole_regions": [
+        [
+          123,
+          306,
+          197,
+          365
+        ],
+        [
+          200,
+          306,
+          275,
+          365
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        76,
+        42,
+        368,
+        363
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        834,
+        390,
+        1278,
+        794
+      ],
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "7261df52a7de51231025bffa9fe724deed5d92811d03efe5b803d33ae11a2699",
+      "size_px": [
+        444,
+        404
+      ],
+      "visible": [
+        74,
+        30,
+        389,
+        363
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e49327e13bcfd67169ddf81f66efab030705109bff26a3a49f11dff1d66b9cdc",
+      "body_bbox_px": [
+        93,
+        30,
+        392,
+        363
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        74,
+        30,
+        389,
+        363
+      ],
+      "reference_height_px": 315.40500219394477,
+      "anchor_px": [
+        229.7422389205792,
+        358.8499341816586
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        226.5,
+        363
+      ],
+      "sole_points": [
+        [
+          186.0,
+          362
+        ],
+        [
+          267.0,
+          363
+        ]
+      ],
+      "sole_regions": [
+        [
+          154,
+          306,
+          228,
+          365
+        ],
+        [
+          230,
+          306,
+          305,
+          365
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        74,
+        30,
+        389,
+        363
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        794,
+        436,
+        1230
+      ],
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "ea83fc52d50cbc32f80212931243920c36e1d43dd98bc2ad198c7983282922f6",
+      "size_px": [
+        436,
+        436
+      ],
+      "visible": [
+        54,
+        25,
+        369,
+        356
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e49327e13bcfd67169ddf81f66efab030705109bff26a3a49f11dff1d66b9cdc",
+      "body_bbox_px": [
+        73,
+        25,
+        370,
+        356
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        54,
+        25,
+        369,
+        356
+      ],
+      "reference_height_px": 315.40500219394477,
+      "anchor_px": [
+        218.7422389205792,
+        351.8499341816586
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        215.5,
+        356
+      ],
+      "sole_points": [
+        [
+          175.5,
+          356
+        ],
+        [
+          255.5,
+          356
+        ]
+      ],
+      "sole_regions": [
+        [
+          145,
+          299,
+          215,
+          358
+        ],
+        [
+          219,
+          299,
+          293,
+          358
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        54,
+        25,
+        369,
+        356
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        436,
+        794,
+        834,
+        1230
+      ],
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "703bd44c50dcda0476e0cf0217eb8f3075406eced1ac128fe0254984b22dce6b",
+      "size_px": [
+        398,
+        436
+      ],
+      "visible": [
+        64,
+        25,
+        368,
+        358
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e49327e13bcfd67169ddf81f66efab030705109bff26a3a49f11dff1d66b9cdc",
+      "body_bbox_px": [
+        83,
+        25,
+        382,
+        358
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        64,
+        25,
+        368,
+        358
+      ],
+      "reference_height_px": 315.40500219394477,
+      "anchor_px": [
+        192.7422389205792,
+        353.8499341816586
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        189.5,
+        358
+      ],
+      "sole_points": [
+        [
+          148.5,
+          354
+        ],
+        [
+          230.5,
+          358
+        ]
+      ],
+      "sole_regions": [
+        [
+          112,
+          301,
+          191,
+          360
+        ],
+        [
+          192,
+          301,
+          275,
+          360
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        64,
+        25,
+        368,
+        358
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        834,
+        794,
+        1278,
+        1230
+      ],
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "e9f118411d2e48e2cefe335b2e149316d62790352b964956599c0bec0b79ed26",
+      "size_px": [
+        444,
+        436
+      ],
+      "visible": [
+        96,
+        26,
+        390,
+        358
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e49327e13bcfd67169ddf81f66efab030705109bff26a3a49f11dff1d66b9cdc",
+      "body_bbox_px": [
+        115,
+        26,
+        413,
+        358
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        96,
+        26,
+        390,
+        358
+      ],
+      "reference_height_px": 315.40500219394477,
+      "anchor_px": [
+        220.4922389205792,
+        353.8499341816586
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        217.25,
+        358
+      ],
+      "sole_points": [
+        [
+          175.5,
+          357
+        ],
+        [
+          259.0,
+          358
+        ]
+      ],
+      "sole_regions": [
+        [
+          137,
+          301,
+          218,
+          360
+        ],
+        [
+          220,
+          301,
+          301,
+          360
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        96,
+        26,
+        390,
+        358
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "807590736ec94b8d55b3494294b9b076e79a0f0000c28547fd33107fbddab1a4",
+        "bytes": 5735
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/japanese-rock-ptarmigan/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "9b8b2b2b0e885ecc8127bbd49b13bc4f5867003a1c56733b2e6735ebdc753445",
+      "bytes": 8011
+    }
+  ]
+}

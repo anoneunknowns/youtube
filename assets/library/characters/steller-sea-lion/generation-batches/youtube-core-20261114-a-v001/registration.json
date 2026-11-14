@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "steller-sea-lion",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-a-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "1496b1de5364bb864f4fa6c572dd9be1bdaa65b0e52402898ca7a0ab01dc5102",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      246.0,
+      307.0,
+      902.0,
+      936.0
+    ],
+    "anchor_px": [
+      590.0,
+      670.0
+    ],
+    "reference_height_px": 629.0,
+    "anchor_kind": "body_center",
+    "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+    "anchor_basis": "Body-center anchor avoids claiming a shared flat ground for the resting perspective; flippers are excluded from main-body reference bounds.",
+    "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+    "source_manifest": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "284ad8ca4cbfff59cb19640e4d26069a41add0176fc6c054b45a7ece7a8856bc"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "1496b1de5364bb864f4fa6c572dd9be1bdaa65b0e52402898ca7a0ab01dc5102",
+      "reference_height_px": 629.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "cf1a0fa3b79e8b0f483b657f227d3f8cf52d119f6705428a0c36e478927827c4",
+      "reference_height_px": 261.03499999999997,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Native head/torso resting projection around41.5% of adopted original, independent of flipper extent."
+          }
+        ],
+        "common_ratio": 0.415,
+        "canonical_reference_height_px": 629.0,
+        "canonical_source": {
+          "path": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "1496b1de5364bb864f4fa6c572dd9be1bdaa65b0e52402898ca7a0ab01dc5102",
+          "bytes": 728615,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "fe5c0675467d9f1fde9c2ed1112a74f8b46f0227619cd5e758cb8c76db584d6e"
+    },
+    {
+      "id": "split-a-v002",
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/split-a-v002.png",
+      "source_sheet_sha256": "307860dbf4589f17d574d3d0c5ab0aa50c4db3b4ce497ccb703bd8aa51d4ed1e",
+      "reference_height_px": 352.24,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Native shared head/trunk width and neck/belly length around56% of adopted original; one sheet scale shared by selected three acts."
+          }
+        ],
+        "common_ratio": 0.56,
+        "canonical_reference_height_px": 629.0,
+        "canonical_source": {
+          "path": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "1496b1de5364bb864f4fa6c572dd9be1bdaa65b0e52402898ca7a0ab01dc5102",
+          "bytes": 728615,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-split-a-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-split-a-v002-generation-v001.json",
+      "generation_record_sha256": "2e6e8aa146e331ee1e68bf3be4f77b4515c27f59449bb995f3cba1973b346367"
+    },
+    {
+      "id": "present_right-v003",
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/present_right-v003.png",
+      "source_sheet_sha256": "b0faafdf237ed4ee20a17792536627ce13705ffcd557270d01c9ea018580ce53",
+      "reference_height_px": 710.77,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Fresh single compared by head/trunk mass breadth and neck/belly length, flippers excluded; exact two front plus paired rear projections."
+          }
+        ],
+        "common_ratio": 1.13,
+        "canonical_reference_height_px": 629.0,
+        "canonical_source": {
+          "path": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "1496b1de5364bb864f4fa6c572dd9be1bdaa65b0e52402898ca7a0ab01dc5102",
+          "bytes": 728615,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-v003-generation-v001.json",
+      "generation_record_sha256": "caa373587651fe82806b447d542d8d68a2582eee9e19d154f4be8fa29373f799"
+    },
+    {
+      "id": "cheer-v002",
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/cheer-v002.png",
+      "source_sheet_sha256": "481e78cbd05301336044bf56e6df8a46aac60cdaf84be4dce86648bccf576c22",
+      "reference_height_px": 647.87,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Fresh single compared by head/trunk mass breadth and neck/belly length, flippers excluded; exact two front plus paired rear projections."
+          }
+        ],
+        "common_ratio": 1.03,
+        "canonical_reference_height_px": 629.0,
+        "canonical_source": {
+          "path": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "1496b1de5364bb864f4fa6c572dd9be1bdaa65b0e52402898ca7a0ab01dc5102",
+          "bytes": 728615,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-v002-generation-v001.json",
+      "generation_record_sha256": "375065ad81673015c4712310e65280807260c61e749cdb49f961a1bee5825bfb"
+    },
+    {
+      "id": "species_a-v002",
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/species_a-v002.png",
+      "source_sheet_sha256": "7de262f4834b8d6ddd445a16ee35e146c90d88275cd84680b6c6ba1e344b6a73",
+      "reference_height_px": 679.32,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Fresh single compared by head/trunk mass breadth and neck/belly length, flippers excluded; exact two front plus paired rear projections."
+          }
+        ],
+        "common_ratio": 1.08,
+        "canonical_reference_height_px": 629.0,
+        "canonical_source": {
+          "path": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "1496b1de5364bb864f4fa6c572dd9be1bdaa65b0e52402898ca7a0ab01dc5102",
+          "bytes": 728615,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk breadth and length comparison with adopted neutral; one isotropic reference per original, same reference for all its acts. Does not infer feet or normalize alpha-box height per act."
+      },
+      "generation_input": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-v002-generation-v001.json",
+      "generation_record_sha256": "507666f85cfaa4a40a98e357fbd9e5ede2d210344cffe0e6d9d6d8ad60498edd"
+    },
+    {
+      "id": "species_b-v002",
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/species_b-v002.png",
+      "source_sheet_sha256": "f29b64bc118033eca53f1ac2773ac14f8a203094f5d7d7d65dec4ee43128dc22",
+      "reference_height_px": 773.67,
+      "calibration": {
+        "landmarks": [
+          {
+            "native_observations": "Head/trunk width about795px vs canonical656, neck-to-belly axial height about783px vs629. Same body mass excluding flipper projections; chosen single isotropic1.23 ratio, not alpha-box fit."
+          }
+        ],
+        "common_ratio": 1.23,
+        "canonical_reference_height_px": 629.0,
+        "canonical_source": {
+          "path": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "1496b1de5364bb864f4fa6c572dd9be1bdaa65b0e52402898ca7a0ab01dc5102",
+          "bytes": 728615,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Manual native homologous head/trunk mass comparison to adopted neutral; flippers excluded, resting/floating body center retained."
+      },
+      "generation_input": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-v002-generation-v001.json",
+      "generation_record_sha256": "15307e913b6c1e39af4dc8773f50caf7f20cd564b61aacd60013d7b884bb2eaa"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "1496b1de5364bb864f4fa6c572dd9be1bdaa65b0e52402898ca7a0ab01dc5102",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        246.0,
+        307.0,
+        902.0,
+        936.0
+      ],
+      "anchor_px": [
+        590.0,
+        670.0
+      ],
+      "reference_height_px": 629.0,
+      "anchor_kind": "body_center",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Body-center anchor avoids claiming a shared flat ground for the resting perspective; flippers are excluded from main-body reference bounds.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "source_manifest": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "284ad8ca4cbfff59cb19640e4d26069a41add0176fc6c054b45a7ece7a8856bc",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "1496b1de5364bb864f4fa6c572dd9be1bdaa65b0e52402898ca7a0ab01dc5102",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/poses/blink-v001.png",
+      "sha256": "c7132776ab6c2f2c4c07723a9d1b375c4a8b38d62f0feb6d304605a9a0bd7ba2",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "body_bbox_px": [
+        82,
+        67,
+        340,
+        332
+      ],
+      "anchor_px": [
+        216,
+        218
+      ],
+      "anchor_kind": "body_center",
+      "subject_bbox_px": [
+        47,
+        65,
+        405,
+        351
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Visual head/trunk mass center in resting projection. Flippers excluded from body reference, no ground anchor claimed.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 261.03499999999997,
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "cf1a0fa3b79e8b0f483b657f227d3f8cf52d119f6705428a0c36e478927827c4",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 0,
+      "sheet_id": "split-a-v002",
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/frames/greet-split-a-v002-gutter-v001.png",
+      "sha256": "f8ec6766049df6b15503174388038deb90e25c4412c45bf1ec08a9712af4247c",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        580,
+        620
+      ],
+      "body_bbox_px": [
+        120,
+        140,
+        470,
+        499
+      ],
+      "anchor_px": [
+        295,
+        341
+      ],
+      "anchor_kind": "body_center",
+      "subject_bbox_px": [
+        63,
+        140,
+        567,
+        533
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Visual head/trunk centre excludes near/far front flippers and paired rear flippers; resting projection has no inferred sole.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 352.24,
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/split-a-v002.png",
+      "source_sheet_sha256": "307860dbf4589f17d574d3d0c5ab0aa50c4db3b4ce497ccb703bd8aa51d4ed1e",
+      "size_px": [
+        580,
+        620
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 1,
+      "sheet_id": "split-a-v002",
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/frames/present_left-split-a-v002-gutter-v001.png",
+      "sha256": "466571a6cec5bc162d8707ac5011c94c5ad981300907f7d226e2ed45a8f46814",
+      "crop_from_sheet_xyxy": [
+        580,
+        0,
+        1199,
+        620
+      ],
+      "body_bbox_px": [
+        141,
+        140,
+        475,
+        500
+      ],
+      "anchor_px": [
+        309,
+        341
+      ],
+      "anchor_kind": "body_center",
+      "subject_bbox_px": [
+        19,
+        140,
+        576,
+        536
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Visual head/trunk centre excludes near/far front flippers and paired rear flippers; resting projection has no inferred sole.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 352.24,
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/split-a-v002.png",
+      "source_sheet_sha256": "307860dbf4589f17d574d3d0c5ab0aa50c4db3b4ce497ccb703bd8aa51d4ed1e",
+      "size_px": [
+        619,
+        620
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "sheet_id": "present_right-v003",
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/frames/present_right-present_right-v003.png",
+      "sha256": "aa2d7f4d5f5cf86041597248825a78d914dffb9892de8962efccdf09f143fed2",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        335,
+        107,
+        1055,
+        833
+      ],
+      "anchor_px": [
+        695,
+        470
+      ],
+      "anchor_kind": "body_center",
+      "subject_bbox_px": [
+        250,
+        107,
+        1271,
+        908
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 710.77,
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/present_right-v003.png",
+      "source_sheet_sha256": "b0faafdf237ed4ee20a17792536627ce13705ffcd557270d01c9ea018580ce53",
+      "size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "sheet_id": "core-sheet-v001",
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/poses/think-v001.png",
+      "sha256": "1fcb137273389ebe77c781f5ee369c9ae52975e8b6331e3d895145e926f43957",
+      "crop_from_sheet_xyxy": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "body_bbox_px": [
+        65,
+        63,
+        320,
+        330
+      ],
+      "anchor_px": [
+        200,
+        214
+      ],
+      "anchor_kind": "body_center",
+      "subject_bbox_px": [
+        40,
+        60,
+        398,
+        345
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Visual head/trunk mass center in resting projection. Flippers excluded from body reference, no ground anchor claimed.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 261.03499999999997,
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "cf1a0fa3b79e8b0f483b657f227d3f8cf52d119f6705428a0c36e478927827c4",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 3,
+      "sheet_id": "split-a-v002",
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/frames/aha-split-a-v002-gutter-v001.png",
+      "sha256": "a9e63eeb1483deaf8fa96deecb0723b7cf272f79911c8b7425ffa296af3809ac",
+      "crop_from_sheet_xyxy": [
+        580,
+        620,
+        1199,
+        1312
+      ],
+      "body_bbox_px": [
+        154,
+        132,
+        470,
+        515
+      ],
+      "anchor_px": [
+        313,
+        349
+      ],
+      "anchor_kind": "body_center",
+      "subject_bbox_px": [
+        59,
+        132,
+        574,
+        542
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Visual head/trunk centre excludes near/far front flippers and paired rear flippers; resting projection has no inferred sole.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 352.24,
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/split-a-v002.png",
+      "source_sheet_sha256": "307860dbf4589f17d574d3d0c5ab0aa50c4db3b4ce497ccb703bd8aa51d4ed1e",
+      "size_px": [
+        619,
+        692
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "sheet_id": "cheer-v002",
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/frames/cheer-cheer-v002.png",
+      "sha256": "34288639f31f8e809f1f9383dd9d0a55cfb9d351668d73422f52011dd41a2714",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        248,
+        305,
+        898,
+        958
+      ],
+      "anchor_px": [
+        573,
+        632
+      ],
+      "anchor_kind": "body_center",
+      "subject_bbox_px": [
+        160,
+        305,
+        1082,
+        958
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 647.87,
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/cheer-v002.png",
+      "source_sheet_sha256": "481e78cbd05301336044bf56e6df8a46aac60cdaf84be4dce86648bccf576c22",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 0,
+      "sheet_id": "species_a-v002",
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/frames/species_a-species_a-v002.png",
+      "sha256": "ac728aef0187567ce16163854029fe6d4ca94082400bc3d28622d17a0acf07f9",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        380,
+        144,
+        1045,
+        831
+      ],
+      "anchor_px": [
+        712.5,
+        488
+      ],
+      "anchor_kind": "body_center",
+      "subject_bbox_px": [
+        235,
+        144,
+        1218,
+        879
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visually located head/trunk centre, excludes appendage projections and tapered tail; floating/resting perspective, no foot support invented.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 679.32,
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/species_a-v002.png",
+      "source_sheet_sha256": "7de262f4834b8d6ddd445a16ee35e146c90d88275cd84680b6c6ba1e344b6a73",
+      "size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "sheet_id": "species_b-v002",
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/frames/species_b-species_b-v002.png",
+      "sha256": "ff29295f41ebcb9eba4cb9e67f886f1405f0178ef1449878d949ea9f02d0b4a1",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "body_bbox_px": [
+        310,
+        75,
+        1105,
+        858
+      ],
+      "anchor_px": [
+        710,
+        500
+      ],
+      "anchor_kind": "body_center",
+      "subject_bbox_px": [
+        162,
+        74,
+        1315,
+        926
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native visual resting head/trunk mass center. Exactly2front and2rear flippers excluded from reference, no foot support invented.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "reference_height_px": 773.67,
+      "source_sheet": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/source/species_b-v002.png",
+      "source_sheet_sha256": "f29b64bc118033eca53f1ac2773ac14f8a203094f5d7d7d65dec4ee43128dc22",
+      "size_px": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        180,
+        180,
+        180
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        450,
+        450,
+        450,
+        450
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        350,
+        350
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "fe5c0675467d9f1fde9c2ed1112a74f8b46f0227619cd5e758cb8c76db584d6e",
+        "bytes": 5780
+      },
+      {
+        "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-split-a-v002-generation-v001.json",
+        "sha256": "2e6e8aa146e331ee1e68bf3be4f77b4515c27f59449bb995f3cba1973b346367",
+        "bytes": 4933
+      },
+      {
+        "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-present_right-v003-generation-v001.json",
+        "sha256": "caa373587651fe82806b447d542d8d68a2582eee9e19d154f4be8fa29373f799",
+        "bytes": 3443
+      },
+      {
+        "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-cheer-v002-generation-v001.json",
+        "sha256": "375065ad81673015c4712310e65280807260c61e749cdb49f961a1bee5825bfb",
+        "bytes": 4450
+      },
+      {
+        "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_a-v002-generation-v001.json",
+        "sha256": "507666f85cfaa4a40a98e357fbd9e5ede2d210344cffe0e6d9d6d8ad60498edd",
+        "bytes": 4443
+      },
+      {
+        "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/provenance/selected-species_b-v002-generation-v001.json",
+        "sha256": "15307e913b6c1e39af4dc8773f50caf7f20cd564b61aacd60013d7b884bb2eaa",
+        "bytes": 3836
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/steller-sea-lion/generation-batches/youtube-core-20261114-a-v001/qa/stock-adoption-v001.json",
+      "sha256": "00f0f4e3143a94bee7ef2561fb155a5f78b2458060ebd44f03098053edac085d",
+      "bytes": 20531
+    }
+  ]
+}

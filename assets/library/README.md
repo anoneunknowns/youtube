@@ -163,10 +163,10 @@ assets/library/characters/<id>/current/
 | JSONの項目 | 内容・パスの基準 |
 |---|---|
 | 素材台帳の `assets[].manifest` | プロジェクトルートから各 `current/asset.json` へ進む |
-| `asset.json` の `neutral.path` | `asset.json` のある `current/` から通常PNGを解決する |
-| `asset.json` の `poses[キー].path` | 同じ `current/` から選んだポーズPNGを解決する |
-| `asset.json` の `icons[名前].path` | 同じ `current/` から頭部等の独立アイコンを解決する |
-| `asset.json` の `clips.path` | 同じ `current/` から `clips.json` を解決する |
+| `asset.json` の `neutral.path` | `asset.json` のあるフォルダ（共通入口では `current/`）から通常PNGを解決する |
+| `asset.json` の `poses[キー].path` | 同じフォルダから選んだポーズPNGを解決する |
+| `asset.json` の `icons[名前].path` | 同じフォルダから頭部等の独立アイコンを解決する |
+| `asset.json` の `clips.path` | 同じフォルダから `clips.json` を解決する |
 | `source_path`、`source_index.path`、`source_registrations[].path` | プロジェクトルートを基準とする取得元・登録の記録 |
 | `sha256` | 対応するファイルのSHA-256。`source_sha256` は元ファイルの値 |
 
@@ -188,21 +188,58 @@ if ($actual -ne $asset.neutral.sha256) { throw "PNGのSHA-256が登録値と一�
 
 `asset.json` の `poses` から画像と登録座標を選びます。名前空間は機能を識別する互換IDで、制作時期を示す区分ではありません。
 
+新規制作・改修するキャラクターやイラスト小物の姿勢・表情の動作には、対象全体を描いた完成原画の透過PNGを1枚ずつ切り替える方式を使います。必要な中間姿勢、瞬きの途中、頷き、準備・保持・戻りも完成原画として揃えます。方針の出典は [Issue #3](https://github.com/anoneunknowns/youtube/issues/3)、制作・受入条件の正本は [画像管理仕様](../../docs/IMAGE-ASSET-MANAGEMENT.md) と [制作仕様](../../docs/PRODUCTION.md) です。過去の原画・clip・制作記録は保持し、在庫全体がこの方式で再確認済みとは扱いません。
+
 | 名前空間 | 機能 | キーの例 |
 |---|---|---|
 | `basic/` | 基本の表情・しぐさ | `basic/blink` |
 | `expanded/` | 手振り・視線・姿勢などの表情と全身動作 | `expanded/wave_low` |
 | `eyecatch/` | 紅茶・おじぎ・ジャンプ・ダンス等の短い演出 | `eyecatch/tea_sip` |
 | `gimmick/` | 植物・乗り物・昆虫・虹の動作 | `gimmick/fully_open` |
+| `video/` | 動画の挨拶・左右案内・表情・固有のしぐさ | `video/present_right` |
 | `app/` | タップ・回答リアクション・待機・池ジャンプ | `app/success_air` |
 
 表はキーの例です。必要なキーがその素材の `poses` にあることを確認してください。通常姿は `neutral` のレコードを使い、各名前空間にある `neutral` というポーズへ自動的に置き換えません。
 
 クマの通常姿と短い演出18状態は、1254×1254の透過原画を共通の身体基準高1107pxで登録しています。通常姿に相当する3状態は同じ原画の再利用です。画像は他の素材と同様に `current/` から選べます。[ポーズ一覧](characters/bear-beret/eyecatches/v003/pose-review.png)と[採用・品質の記録](characters/bear-beret/eyecatches/v003/README.md)も参照できます。
 
-`clips.json` の `clips` は、名前付きの動作定義です。各 `frames` の値を `asset.json` の `poses` へ対応付け、`durations_ms` と `loop` が記録されている場合はそれを読みます。`timing` に時間未指定とある動作は、使う場面で時間を設計・確認してください。移動や `procedural_effect` がある場合は、その指定も合わせて再生します。虹は同じPNGを使い、出現・透明度・光の移動を再生時に変えます。
+`clips.json` の `clips` は、名前付きの動作定義です。各 `frames` の値を `asset.json` の `poses` のキーへ対応付けます。新規・改修clipでは、全コマの順序、各項目に対応する正の `durations_ms`、`loop` を明記します。過去の `timing` に時間未指定とある動作を使う場合も、採用する場面の時間を別の固定した `clips.json` へ記録して確認します。原画が不足する区間を、利用側の姿勢補間で埋めません。
+
+再生側は経過時間と `durations_ms` の累積から表示するコマを選び、その完成PNGを次の切替時刻まで保持します。描線・色・縦横比を保ち、身体・顔・目・手足などの部品合成、局所変形、メッシュ、モーフィング、コマ間の姿勢補間やクロスフェードで中間姿勢を作りません。PNG全体の移動・左右反転・等比拡縮と、場面の影・水しぶき・光などの演出は使えます。等比拡縮の画像リサンプリングと、姿勢を作る補間は区別してください。
+
+全体を左右反転する場合は、PNGと支点へ同じ反転を適用して配置し、元の登録値は書き換えません。反転前後も実描画の足元・基部と表示範囲を確認します。
+
+既存の `procedural_effect` は、そのclipの当時の再生条件を示します。虹の出現・透明度・光などの登録も保全し、新規・改修する姿勢動作では上記の方式と許可された場面演出へ照合します。旧定義に部品変形等があっても、今回の動作へそのまま継承する根拠にはしません。
 
 動作の確認入口は各 `asset.json` の `source_registrations` と、その登録が示すプレビューです。クマの短い演出は[姿勢一覧](characters/bear-beret/eyecatches/v003/pose-review.png)と[キーポーズGIF](characters/bear-beret/eyecatches/v003/key-pose-preview.gif)で確認できます。[基本の表情・しぐさ](collections/animal-motions/v001/index.html)、[全身のしぐさ](collections/character-expansion/v001/index.html)、[配置用素材の動作GIF](collections/background-gimmicks/v001/index.html)も参照できます。全120種類のポーズと動作の有無は共通台帳と各 `asset.json`・`clips.json` を正本にし、過去のcollectionの一覧から現行の採用先を推測しません。
+
+### 動画で使う基本セット
+
+`video/` に対応する96種類は、通常姿を含む10状態を同じ `current/` から選べます。通常姿は採用原画をそのまま再利用し、表情・しぐさ9姿勢を収録しています。
+
+| PNGのキー | 場面での役割 |
+|---|---|
+| `video/neutral` | 通常姿の参照別名。独立した新規作画ではありません |
+| `video/blink` | 静かな瞬き |
+| `video/greet` | 挨拶・迎え入れ |
+| `video/present_left`・`video/present_right` | 見る人から見て左・右への案内 |
+| `video/think`・`video/aha` | 考える・気づく |
+| `video/cheer` | 喜ぶ・締めくくる |
+| `video/species_a`・`video/species_b` | 尾・翼・耳など、その素材に合う小さなしぐさの2段階 |
+
+`clips.json` の7種類は `video/idle_blink`、`video/greeting`、`video/presentation_left`、`video/presentation_right`、`video/thinking_discovery`、`video/celebration`、`video/species_motion` です。各フレームに正の `durations_ms` を対応付け、`loop: false` で一回分を明示しています。通常姿へ戻る離散キーポーズの基本レシピとして使えます。鳥・水生動物・カニ等は、元の翼・鰭・はさみで表現し、人の手足を追加しません。
+
+対応IDと採用範囲は[基本セットの登録](collections/youtube-basic-stock/v001/manifest.json)、確認範囲は[素材QAと利用条件](collections/youtube-basic-stock/v001/README.md)で確認できます。画像1枚の利用にも同じPNGを使います。 採用セルを含む元シートには利用対象外の姿勢が残る場合があります。素材は `current/` または登録の `frames` と採用矩形から選び、元シート内の全セルを採用済みと推測しません。これらは基本姿勢の在庫と離散レシピです。作品で必要な準備・保持・戻りや中間姿勢が不足する場合は完成原画を追加します。完成作品の切替順・保持時間・移動・場面接続は制作時に設計し、実際の出力で検査します。
+
+### 完成コマの登録と作品専用の利用
+
+各コマは既存の `asset.json` の `poses` に、PNGの `path`・`sha256`、`size_px`、`anchor_px`・`reference_height_px` と登録上の身体範囲を記録します。取得元は `source_path`・`source_sha256`、登録・校正の根拠は `source_registrations` から辿れるようにします。全体を描いたシートからの無損失切り出しと、完成PNGのバイト一致コピーを区別し、単独の頭部アイコン等を完成コマの代わりにしません。共通尺度と各コマの支点は、下の[配置方法](#pose-registration-scale)を使います。
+
+`clips.json` の `frames` には登録済みポーズのキーを順に置き、準備・保持・戻りを含めます。同じ完成原画の再利用や保持は明記し、登録項目数を独立原画の枚数として数えません。音声等に合わせる場面では、採用clip、開始時刻、出力fpsへの時刻の丸め方を制作記録にも残します。
+
+作品専用の原画列は、担当バッチの固定版フォルダに `asset.json`・`clips.json` とPNGを揃え、作品の制作記録からパスとSHAで参照できます。上表と同じ項目・相対パスの規則を使い、作品のためだけに汎用の `current/` を上書きしません。共通入口への採用は管理担当が既存台帳と生成手順で行い、元の登録・良好な通常姿・過去の制作記録を保持します。
+
+新規・改修動作の代表短片は、実際の再生側と同じコマ順・時間・背景・尺度で書き出し、通常表示と想定最小サイズで連続再生します。切替前後の輪郭の欠け・にじみ、支点や体格の意図しない跳ね、はみ出し、通常姿への戻りを確認し、入力SHA・表示条件・確認範囲・結果を制作記録へ残します。離散キーポーズや静止画だけの確認を、連続再生の実施記録へ読み替えません。
 
 ### タップ・回答・待機・池ジャンプ
 
@@ -214,9 +251,10 @@ if ($actual -ne $asset.neutral.sha256) { throw "PNGのSHA-256が登録値と一�
 
 ハムスターは手足のない体底支点、花飾りのウサギは固有の花、ぶち猫は身体側に固定した模様、クリーム色の子は種別未確定の細身の姿を保ちます。顔アイコンはクマの `icons.face` から取得し、身体基準高を持つ全身PNGと区別します。
 
-1008×567での明暗・原寸・離散キーポーズの素材QAは、[確認記録](collections/app-character-stock/v001/README.md)を参照してください。実アプリへの組込み後の補間、速度、画面遷移は利用側で確認します。
+1008×567での明暗・原寸・離散キーポーズの素材QAは、[確認記録](collections/app-character-stock/v001/README.md)を参照してください。実アプリへの組込み後は、完成PNGの切替順・保持時間・速度・画面遷移を確認します。姿勢の中間コマは原画として用意し、アプリ側で補間生成しません。
 
 <a id="背景素材8種類の表示と動作"></a>
+<a id="pose-registration-scale"></a>
 ## 支点・共通尺度・表示サイズ
 
 画像を配置・拡大する場合は、選んだ画像の `anchor_px` と `reference_height_px` を使います。支点は足元・根元・基部・胴体中心などで、意味は `anchor_kind` や取得元の登録に従います。透明なキャンバス全体の中心や、翼・尾・炎を含めた外接矩形の中心を支点の代わりにしません。

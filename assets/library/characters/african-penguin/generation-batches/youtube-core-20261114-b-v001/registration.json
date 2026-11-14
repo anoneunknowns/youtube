@@ -1,0 +1,1061 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "african-penguin",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/african-penguin/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "45a65e074120b5d9b80fafa288c4530ce0efcd7ff68f152b4360d7f9a46bb77d",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      327,
+      286,
+      879,
+      1009
+    ],
+    "anchor_px": [
+      580,
+      997
+    ],
+    "reference_height_px": 723,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of two webbed feet; short projecting beak excluded from horizontal body reference.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/african-penguin/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "0600d78809c3739e3e5ffa4fe6fb97dba5b554c9656a2def72bdd931610c1f97"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "45a65e074120b5d9b80fafa288c4530ce0efcd7ff68f152b4360d7f9a46bb77d",
+      "reference_height_px": 723,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7c194d6eb5e509be8c1dcbb72f35f41d5cb05f7961d6ff5a85a8b078905f9f79",
+      "reference_height_px": 365.0,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/african-penguin/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "45a65e074120b5d9b80fafa288c4530ce0efcd7ff68f152b4360d7f9a46bb77d",
+          "bytes": 570793,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 723,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 430.6,
+            "source_y": 104.0,
+            "canonical_span": [
+              369,
+              748
+            ],
+            "source_span": [
+              124,
+              308
+            ],
+            "ratio": 0.48548812664907653
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 502.9,
+            "source_y": 140.5,
+            "canonical_span": [
+              339,
+              759
+            ],
+            "source_span": [
+              105,
+              312
+            ],
+            "ratio": 0.4928571428571429
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 734.26,
+            "source_y": 257.29999999999995,
+            "canonical_span": [
+              332,
+              874
+            ],
+            "source_span": [
+              103,
+              353
+            ],
+            "ratio": 0.4612546125461255
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 821.02,
+            "source_y": 301.09999999999997,
+            "canonical_span": [
+              344,
+              874
+            ],
+            "source_span": [
+              103,
+              350
+            ],
+            "ratio": 0.4660377358490566
+          }
+        ],
+        "common_ratio": 0.5048409405255878,
+        "initial_roi_locator_only_visible_height_ratio": 0.5048409405255878,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0685142857142857,
+        "initial_diagnostic_reference_height_px": 343.97659929307514,
+        "manual_landmark_review": {
+          "basis": "Actual native blink and canonical both contain same resting head/trunk/two-foot anatomy; body reference723 spans crown to soles. Canonical crown286, sole1009; selected-sheet blink crown31, sole396 gives365/723. Head row spans at20/30percent give0.4855/0.4929, torso row autoROI includes canonical folded wing and depressed initial median. Full head/neck/torso/soles visually reviewed; apply one common365 source reference to all9, never individual-pose bbox scale.",
+          "canonical_crown_sole_y": [
+            286,
+            1009
+          ],
+          "native_blink_crown_sole_y": [
+            31,
+            396
+          ],
+          "initial_issue": "Auto ROI median underestimated common source scale, making all9 uniformly about6percent too large; not a per-pose body edit.",
+          "needs_new_max_review": true
+        },
+        "visual_confirmation": {
+          "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "a71cb7a86b40bbd1e18b3f85431e0406179f22543e43e96dbb2a25deeadb34a3",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "4b8dd78e1c9693f89221662067d70385f5cb5f12209322b1d4a3625a848b8eb8"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/african-penguin/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "45a65e074120b5d9b80fafa288c4530ce0efcd7ff68f152b4360d7f9a46bb77d",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        327,
+        286,
+        879,
+        1009
+      ],
+      "anchor_px": [
+        580,
+        997
+      ],
+      "reference_height_px": 723,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of two webbed feet; short projecting beak excluded from horizontal body reference.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/african-penguin/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "0600d78809c3739e3e5ffa4fe6fb97dba5b554c9656a2def72bdd931610c1f97",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "45a65e074120b5d9b80fafa288c4530ce0efcd7ff68f152b4360d7f9a46bb77d",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        407,
+        418
+      ],
+      "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "5e516dcd002bff04a18e560f9d8651df1437ce1ce6f9226dfb869dfe588d6a1e",
+      "size_px": [
+        407,
+        418
+      ],
+      "visible": [
+        96,
+        31,
+        354,
+        396
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7c194d6eb5e509be8c1dcbb72f35f41d5cb05f7961d6ff5a85a8b078905f9f79",
+      "body_bbox_px": [
+        103,
+        31,
+        381,
+        396
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        96,
+        31,
+        354,
+        396
+      ],
+      "reference_height_px": 365.0,
+      "anchor_px": [
+        212.2911479944675,
+        389.94190871369295
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        208.0,
+        396
+      ],
+      "sole_points": [
+        [
+          164.0,
+          395
+        ],
+        [
+          252.0,
+          396
+        ]
+      ],
+      "sole_regions": [
+        [
+          130,
+          330,
+          207,
+          398
+        ],
+        [
+          214,
+          330,
+          290,
+          398
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        96,
+        31,
+        354,
+        396
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        407,
+        0,
+        809,
+        418
+      ],
+      "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "97c6ff89c23e910484f37fc2939d117df9c43c0d0f04c815d937b3b11f601631",
+      "size_px": [
+        402,
+        418
+      ],
+      "visible": [
+        60,
+        31,
+        346,
+        396
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7c194d6eb5e509be8c1dcbb72f35f41d5cb05f7961d6ff5a85a8b078905f9f79",
+      "body_bbox_px": [
+        67,
+        31,
+        345,
+        396
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        60,
+        31,
+        346,
+        396
+      ],
+      "reference_height_px": 365.0,
+      "anchor_px": [
+        213.2911479944675,
+        389.94190871369295
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        209.0,
+        396
+      ],
+      "sole_points": [
+        [
+          165.0,
+          394
+        ],
+        [
+          253.0,
+          396
+        ]
+      ],
+      "sole_regions": [
+        [
+          131,
+          330,
+          209,
+          398
+        ],
+        [
+          216,
+          330,
+          291,
+          398
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        60,
+        31,
+        346,
+        396
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        809,
+        0,
+        1246,
+        418
+      ],
+      "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "b874f9583021ce6772376aeac247b7b17a2eef55555b1553a8bf630d86ffd901",
+      "size_px": [
+        437,
+        418
+      ],
+      "visible": [
+        29,
+        31,
+        355,
+        397
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7c194d6eb5e509be8c1dcbb72f35f41d5cb05f7961d6ff5a85a8b078905f9f79",
+      "body_bbox_px": [
+        36,
+        31,
+        315,
+        397
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        29,
+        31,
+        355,
+        397
+      ],
+      "reference_height_px": 365.0,
+      "anchor_px": [
+        222.5411479944675,
+        390.94190871369295
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        218.25,
+        397
+      ],
+      "sole_points": [
+        [
+          174.0,
+          393
+        ],
+        [
+          262.5,
+          397
+        ]
+      ],
+      "sole_regions": [
+        [
+          140,
+          331,
+          216,
+          399
+        ],
+        [
+          225,
+          331,
+          300,
+          399
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        29,
+        31,
+        355,
+        397
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        407,
+        834
+      ],
+      "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "ee9fac594503c362ee6658f1556a5605e5c07be55792e4c53d0e4578899b5694",
+      "size_px": [
+        407,
+        416
+      ],
+      "visible": [
+        75,
+        23,
+        381,
+        394
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7c194d6eb5e509be8c1dcbb72f35f41d5cb05f7961d6ff5a85a8b078905f9f79",
+      "body_bbox_px": [
+        82,
+        23,
+        365,
+        394
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        75,
+        23,
+        381,
+        394
+      ],
+      "reference_height_px": 365.0,
+      "anchor_px": [
+        214.0411479944675,
+        387.94190871369295
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        209.75,
+        394
+      ],
+      "sole_points": [
+        [
+          169.5,
+          394
+        ],
+        [
+          250.0,
+          389
+        ]
+      ],
+      "sole_regions": [
+        [
+          131,
+          328,
+          205,
+          396
+        ],
+        [
+          210,
+          328,
+          283,
+          396
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        75,
+        23,
+        381,
+        394
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        407,
+        418,
+        809,
+        834
+      ],
+      "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "311fdff8c724504c2aefbc2f78f24f74f2fb592cb4e8b7b1a8c8af3d56d07fc0",
+      "size_px": [
+        402,
+        416
+      ],
+      "visible": [
+        100,
+        25,
+        350,
+        393
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7c194d6eb5e509be8c1dcbb72f35f41d5cb05f7961d6ff5a85a8b078905f9f79",
+      "body_bbox_px": [
+        107,
+        25,
+        388,
+        393
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        100,
+        25,
+        350,
+        393
+      ],
+      "reference_height_px": 365.0,
+      "anchor_px": [
+        216.7911479944675,
+        386.94190871369295
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        212.5,
+        393
+      ],
+      "sole_points": [
+        [
+          168.0,
+          389
+        ],
+        [
+          257.0,
+          393
+        ]
+      ],
+      "sole_regions": [
+        [
+          134,
+          327,
+          210,
+          395
+        ],
+        [
+          219,
+          327,
+          293,
+          395
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        100,
+        25,
+        350,
+        393
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        809,
+        418,
+        1246,
+        834
+      ],
+      "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "015902efe5808d954c244e4faa08b1e7f467938845f25020a8f32b0cc98f2502",
+      "size_px": [
+        437,
+        416
+      ],
+      "visible": [
+        74,
+        21,
+        359,
+        392
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7c194d6eb5e509be8c1dcbb72f35f41d5cb05f7961d6ff5a85a8b078905f9f79",
+      "body_bbox_px": [
+        81,
+        21,
+        364,
+        392
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        74,
+        21,
+        359,
+        392
+      ],
+      "reference_height_px": 365.0,
+      "anchor_px": [
+        227.5411479944675,
+        385.94190871369295
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        223.25,
+        392
+      ],
+      "sole_points": [
+        [
+          179.5,
+          390
+        ],
+        [
+          267.0,
+          392
+        ]
+      ],
+      "sole_regions": [
+        [
+          146,
+          326,
+          221,
+          394
+        ],
+        [
+          229,
+          326,
+          304,
+          394
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        74,
+        21,
+        359,
+        392
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        834,
+        407,
+        1263
+      ],
+      "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "32cf5596f091963759be28e218ea63ba1d0f97e00a8e355be7f0038334481b4f",
+      "size_px": [
+        407,
+        429
+      ],
+      "visible": [
+        54,
+        23,
+        380,
+        396
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7c194d6eb5e509be8c1dcbb72f35f41d5cb05f7961d6ff5a85a8b078905f9f79",
+      "body_bbox_px": [
+        61,
+        23,
+        345,
+        396
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        54,
+        23,
+        380,
+        396
+      ],
+      "reference_height_px": 365.0,
+      "anchor_px": [
+        212.2911479944675,
+        389.94190871369295
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        208.0,
+        396
+      ],
+      "sole_points": [
+        [
+          164.5,
+          394
+        ],
+        [
+          251.5,
+          396
+        ]
+      ],
+      "sole_regions": [
+        [
+          131,
+          330,
+          206,
+          398
+        ],
+        [
+          212,
+          330,
+          289,
+          398
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        54,
+        23,
+        380,
+        396
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        407,
+        834,
+        809,
+        1263
+      ],
+      "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "1707a168c5010acc961f1ade2dd7183e8c52bcf392f32a67d8b8bcfad587b7ae",
+      "size_px": [
+        402,
+        429
+      ],
+      "visible": [
+        27,
+        25,
+        353,
+        394
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7c194d6eb5e509be8c1dcbb72f35f41d5cb05f7961d6ff5a85a8b078905f9f79",
+      "body_bbox_px": [
+        34,
+        25,
+        315,
+        394
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        27,
+        25,
+        353,
+        394
+      ],
+      "reference_height_px": 365.0,
+      "anchor_px": [
+        216.7911479944675,
+        387.94190871369295
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        212.5,
+        394
+      ],
+      "sole_points": [
+        [
+          168.0,
+          392
+        ],
+        [
+          257.0,
+          394
+        ]
+      ],
+      "sole_regions": [
+        [
+          134,
+          328,
+          209,
+          396
+        ],
+        [
+          219,
+          328,
+          293,
+          396
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        27,
+        25,
+        353,
+        394
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        809,
+        834,
+        1246,
+        1263
+      ],
+      "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "886a4f688860bdc77d74fea1aaa31d9f9973171876b1f81fb7ee294d4e7d3d4f",
+      "size_px": [
+        437,
+        429
+      ],
+      "visible": [
+        67,
+        23,
+        356,
+        396
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7c194d6eb5e509be8c1dcbb72f35f41d5cb05f7961d6ff5a85a8b078905f9f79",
+      "body_bbox_px": [
+        74,
+        23,
+        358,
+        396
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        67,
+        23,
+        356,
+        396
+      ],
+      "reference_height_px": 365.0,
+      "anchor_px": [
+        224.5411479944675,
+        389.94190871369295
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        220.25,
+        396
+      ],
+      "sole_points": [
+        [
+          176.0,
+          393
+        ],
+        [
+          264.5,
+          396
+        ]
+      ],
+      "sole_regions": [
+        [
+          142,
+          330,
+          218,
+          398
+        ],
+        [
+          227,
+          330,
+          302,
+          398
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        67,
+        23,
+        356,
+        396
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "4b8dd78e1c9693f89221662067d70385f5cb5f12209322b1d4a3625a848b8eb8",
+        "bytes": 5785
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/african-penguin/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "72dbce6515d175ce9e9146fb172d51cca5b9f445054b1d1553bd40bbb849797c",
+      "bytes": 7788
+    }
+  ]
+}

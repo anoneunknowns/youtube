@@ -1,0 +1,1415 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "moose",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-c-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "4b2661ae20240405543c0cd291b3f229a3eca3bb9bc4e98d25d3bea152b1fe9f",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      257.0,
+      210.0,
+      986.0,
+      1204.0
+    ],
+    "anchor_px": [
+      609.0,
+      1200.0
+    ],
+    "reference_height_px": 994.0,
+    "anchor_kind": "anatomical-two-hoof-contact",
+    "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+    "anchor_basis": "Midpoint of the two short dark cloven-hoof contacts beneath upright trunk. Anatomical body rectangle includes head forelock/ears but excludes the wide antler paddles; antler span never determines body scale.",
+    "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+    "source_manifest": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "1e2e7390eb0c69d037b3c959e1f5c6d2d754a7960674b8d8c37001a5d0dfb9ac"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "4b2661ae20240405543c0cd291b3f229a3eca3bb9bc4e98d25d3bea152b1fe9f",
+      "reference_height_px": 994.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "dafc59163635a3dbaee3adaf18607b4c9644c4f0417a0e7f0e201b5e6053604a",
+      "reference_height_px": 604.7412587412588,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "4b2661ae20240405543c0cd291b3f229a3eca3bb9bc4e98d25d3bea152b1fe9f",
+          "bytes": 1240810,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 994.0,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 288,
+            "canonical_span_px": [
+              342,
+              904
+            ],
+            "source_span_px": [
+              437,
+              783
+            ],
+            "ratio": 0.6156583629893239,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 348,
+            "canonical_span_px": [
+              337,
+              909
+            ],
+            "source_span_px": [
+              436,
+              784
+            ],
+            "ratio": 0.6083916083916084,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 700,
+            "source_y": 408,
+            "canonical_span_px": [
+              409,
+              837
+            ],
+            "source_span_px": [
+              481,
+              738
+            ],
+            "ratio": 0.6004672897196262,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 570,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 0.6083916083916084,
+        "reference_height_px": 604.7412587412588,
+        "canonical_sole_points_px": [
+          [
+            508.5,
+            1203
+          ],
+          [
+            711.0,
+            1203
+          ]
+        ],
+        "canonical_foot_point_px": [
+          609.75,
+          1203
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -0.75,
+          -3.0
+        ],
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-01-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-01-v001-generation-v001.json",
+      "generation_record_sha256": "258d6bb2245b700956ab38f2f7f54332fd51c042407e0680f735c634033c25ca"
+    },
+    {
+      "id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "143f0115af754d105131f7fba0a33374ea74e6d76a62c8d7ea5c46404ace0f0e",
+      "reference_height_px": 594.2775800711744,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "4b2661ae20240405543c0cd291b3f229a3eca3bb9bc4e98d25d3bea152b1fe9f",
+          "bytes": 1240810,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 994.0,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 286,
+            "canonical_span_px": [
+              342,
+              904
+            ],
+            "source_span_px": [
+              406,
+              742
+            ],
+            "ratio": 0.597864768683274,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 346,
+            "canonical_span_px": [
+              337,
+              909
+            ],
+            "source_span_px": [
+              404,
+              743
+            ],
+            "ratio": 0.5926573426573427,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 700,
+            "source_y": 406,
+            "canonical_span_px": [
+              409,
+              837
+            ],
+            "source_span_px": [
+              333,
+              697
+            ],
+            "ratio": 0.8504672897196262,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 570,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 0.597864768683274,
+        "reference_height_px": 594.2775800711744,
+        "canonical_sole_points_px": [
+          [
+            508.5,
+            1203
+          ],
+          [
+            711.0,
+            1203
+          ]
+        ],
+        "canonical_foot_point_px": [
+          609.75,
+          1203
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -0.75,
+          -3.0
+        ],
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_record_sha256": "8ec519bf37b0235959ac20189787ae8166080b92ee713e1b343dceeee9f3d810"
+    },
+    {
+      "id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "70ecd535a939a19a48eb6dc588eb2ed4781b975158b368783a46e47fd657ea02",
+      "reference_height_px": 728.6975088967971,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "4b2661ae20240405543c0cd291b3f229a3eca3bb9bc4e98d25d3bea152b1fe9f",
+          "bytes": 1240810,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 994.0,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 365,
+            "canonical_span_px": [
+              342,
+              904
+            ],
+            "source_span_px": [
+              242,
+              654
+            ],
+            "ratio": 0.7330960854092526,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 435,
+            "canonical_span_px": [
+              337,
+              909
+            ],
+            "source_span_px": [
+              245,
+              650
+            ],
+            "ratio": 0.708041958041958,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 700,
+            "source_y": 505,
+            "canonical_span_px": [
+              409,
+              837
+            ],
+            "source_span_px": [
+              217,
+              593
+            ],
+            "ratio": 0.8785046728971962,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 685,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 0.7330960854092526,
+        "reference_height_px": 728.6975088967971,
+        "canonical_sole_points_px": [
+          [
+            508.5,
+            1203
+          ],
+          [
+            711.0,
+            1203
+          ]
+        ],
+        "canonical_foot_point_px": [
+          609.75,
+          1203
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -0.75,
+          -3.0
+        ],
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-03-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-03-v001-generation-v001.json",
+      "generation_record_sha256": "f0f60a6904e3ae8f0ec3f8e68a06476c640faa538240b564789152015091c5d6"
+    },
+    {
+      "id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "71c15bce1517ba15dc440cd3d35cc11fa44e49d9df71b3f7aff7cd4036645b6f",
+      "reference_height_px": 601.3523131672598,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "4b2661ae20240405543c0cd291b3f229a3eca3bb9bc4e98d25d3bea152b1fe9f",
+          "bytes": 1240810,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 994.0,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 280,
+            "canonical_span_px": [
+              342,
+              904
+            ],
+            "source_span_px": [
+              453,
+              793
+            ],
+            "ratio": 0.604982206405694,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 340,
+            "canonical_span_px": [
+              337,
+              909
+            ],
+            "source_span_px": [
+              460,
+              785
+            ],
+            "ratio": 0.5681818181818182,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 700,
+            "source_y": 400,
+            "canonical_span_px": [
+              409,
+              837
+            ],
+            "source_span_px": [
+              412,
+              832
+            ],
+            "ratio": 0.9813084112149533,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 560,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 0.604982206405694,
+        "reference_height_px": 601.3523131672598,
+        "canonical_sole_points_px": [
+          [
+            508.5,
+            1203
+          ],
+          [
+            711.0,
+            1203
+          ]
+        ],
+        "canonical_foot_point_px": [
+          609.75,
+          1203
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -0.75,
+          -3.0
+        ],
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_record_sha256": "df065d9f2ef576db8cec560ae5358a6a1e026502358726ef5f77369b1500a67d"
+    },
+    {
+      "id": "pair-05-v001",
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-05-v001.png",
+      "source_sheet_sha256": "af7e5806b5651846c705ae09a4729c33ce383b1cbc6a13254ab8aee62ff03c3e",
+      "reference_height_px": 1000.9510489510491,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "4b2661ae20240405543c0cd291b3f229a3eca3bb9bc4e98d25d3bea152b1fe9f",
+          "bytes": 1240810,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 994.0,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 500,
+            "canonical_span_px": [
+              342,
+              904
+            ],
+            "source_span_px": [
+              344,
+              902
+            ],
+            "ratio": 0.9928825622775801,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 600,
+            "canonical_span_px": [
+              337,
+              909
+            ],
+            "source_span_px": [
+              335,
+              911
+            ],
+            "ratio": 1.006993006993007,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 700,
+            "source_y": 700,
+            "canonical_span_px": [
+              409,
+              837
+            ],
+            "source_span_px": [
+              406,
+              839
+            ],
+            "ratio": 1.0116822429906542,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.006993006993007,
+        "reference_height_px": 1000.9510489510491,
+        "canonical_sole_points_px": [
+          [
+            508.5,
+            1203
+          ],
+          [
+            711.0,
+            1203
+          ]
+        ],
+        "canonical_foot_point_px": [
+          609.75,
+          1203
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -0.75,
+          -3.0
+        ],
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-05-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-05-v001-generation-v001.json",
+      "generation_record_sha256": "1a5976e4d7852eb2324a76b8feedb31e97f0b09981568eb24eb6be8575378a93"
+    },
+    {
+      "id": "present_right-single-v003",
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/present_right-single-v003.png",
+      "source_sheet_sha256": "3482f0ce062c5635f017bb34777048b1e832938a239f0d4833f04f2567a3a776",
+      "reference_height_px": 997.5373665480428,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "4b2661ae20240405543c0cd291b3f229a3eca3bb9bc4e98d25d3bea152b1fe9f",
+          "bytes": 1240810,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 994.0,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 500,
+            "canonical_span_px": [
+              342,
+              904
+            ],
+            "source_span_px": [
+              341,
+              905
+            ],
+            "ratio": 1.00355871886121,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 600,
+            "canonical_span_px": [
+              337,
+              909
+            ],
+            "source_span_px": [
+              334,
+              911
+            ],
+            "ratio": 1.0087412587412588,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 700,
+            "source_y": 700,
+            "canonical_span_px": [
+              409,
+              837
+            ],
+            "source_span_px": [
+              408,
+              837
+            ],
+            "ratio": 1.0023364485981308,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.00355871886121,
+        "reference_height_px": 997.5373665480428,
+        "canonical_sole_points_px": [
+          [
+            508.5,
+            1203
+          ],
+          [
+            711.0,
+            1203
+          ]
+        ],
+        "canonical_foot_point_px": [
+          609.75,
+          1203
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -0.75,
+          -3.0
+        ],
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-present_right-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-present_right-single-v003-generation-v001.json",
+      "generation_record_sha256": "3e9579102fa8037caf9e64bef854da7592cf15a1d3da74d1d603e3e0de680c84"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "4b2661ae20240405543c0cd291b3f229a3eca3bb9bc4e98d25d3bea152b1fe9f",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        257.0,
+        210.0,
+        986.0,
+        1204.0
+      ],
+      "anchor_px": [
+        609.0,
+        1200.0
+      ],
+      "reference_height_px": 994.0,
+      "anchor_kind": "anatomical-two-hoof-contact",
+      "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+      "anchor_basis": "Midpoint of the two short dark cloven-hoof contacts beneath upright trunk. Anatomical body rectangle includes head forelock/ears but excludes the wide antler paddles; antler span never determines body scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_manifest": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "1e2e7390eb0c69d037b3c959e1f5c6d2d754a7960674b8d8c37001a5d0dfb9ac",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/moose/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "4b2661ae20240405543c0cd291b3f229a3eca3bb9bc4e98d25d3bea152b1fe9f",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/frames/blink-v001.png",
+      "sha256": "a020920d9ef6a02f39a4ec62c8cf46a4fae87c1e05a9b531312d3f3954285db0",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1086,
+        724
+      ],
+      "sheet_id": "pair-01-v001",
+      "body_bbox_px": [
+        384,
+        107,
+        828,
+        712
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        286,
+        12,
+        936,
+        712
+      ],
+      "anchor_px": [
+        605.5437062937064,
+        709.1748251748252
+      ],
+      "anchor_kind": "anatomical-two-hoof-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        606.0,
+        711
+      ],
+      "paired_sole_points_px": [
+        [
+          544.5,
+          711
+        ],
+        [
+          667.5,
+          711
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 604.7412587412588,
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "dafc59163635a3dbaee3adaf18607b4c9644c4f0417a0e7f0e201b5e6053604a",
+      "size_px": [
+        1086,
+        724
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/frames/greet-v001.png",
+      "sha256": "c364695b409e51320aea0f74c606fd2217d2bfc7b6641606abd1cb7694087b34",
+      "crop_from_sheet_xyxy": [
+        1086,
+        0,
+        2172,
+        724
+      ],
+      "sheet_id": "pair-01-v001",
+      "body_bbox_px": [
+        249,
+        107,
+        693,
+        712
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        150,
+        12,
+        800,
+        712
+      ],
+      "anchor_px": [
+        470.2937062937063,
+        709.1748251748252
+      ],
+      "anchor_kind": "anatomical-two-hoof-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        470.75,
+        711
+      ],
+      "paired_sole_points_px": [
+        [
+          409.5,
+          711
+        ],
+        [
+          532.0,
+          711
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 604.7412587412588,
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "dafc59163635a3dbaee3adaf18607b4c9644c4f0417a0e7f0e201b5e6053604a",
+      "size_px": [
+        1086,
+        724
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/frames/present_left-v001.png",
+      "sha256": "7154e8ab8e6764daf1e68e401baa468050c0ef5135308da4dfdc3fa91416b1fd",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1086,
+        724
+      ],
+      "sheet_id": "pair-02-v001",
+      "body_bbox_px": [
+        357,
+        115,
+        793,
+        710
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        264,
+        10,
+        912,
+        710
+      ],
+      "anchor_px": [
+        574.3016014234876,
+        707.2064056939502
+      ],
+      "anchor_kind": "anatomical-two-hoof-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        574.75,
+        709
+      ],
+      "paired_sole_points_px": [
+        [
+          511.5,
+          709
+        ],
+        [
+          638.0,
+          709
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 594.2775800711744,
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "143f0115af754d105131f7fba0a33374ea74e6d76a62c8d7ea5c46404ace0f0e",
+      "size_px": [
+        1086,
+        724
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/present_right-single-v003.png",
+      "sha256": "3482f0ce062c5635f017bb34777048b1e832938a239f0d4833f04f2567a3a776",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "present_right-single-v003",
+      "body_bbox_px": [
+        244,
+        207,
+        975,
+        1205
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        83,
+        56,
+        1171,
+        1205
+      ],
+      "anchor_px": [
+        608.7473309608541,
+        1200.9893238434163
+      ],
+      "anchor_kind": "anatomical-two-hoof-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        609.5,
+        1204
+      ],
+      "paired_sole_points_px": [
+        [
+          509.0,
+          1204
+        ],
+        [
+          710.0,
+          1204
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 997.5373665480428,
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/present_right-single-v003.png",
+      "source_sheet_sha256": "3482f0ce062c5635f017bb34777048b1e832938a239f0d4833f04f2567a3a776",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/frames/think-v001.png",
+      "sha256": "0e4956f810fabf8c117eb302a6e6af106d510552982ae06effd944f42faad5f4",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "sheet_id": "pair-03-v001",
+      "body_bbox_px": [
+        187,
+        134,
+        721,
+        863
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        51,
+        7,
+        834,
+        863
+      ],
+      "anchor_px": [
+        453.7001779359431,
+        859.8007117437722
+      ],
+      "anchor_kind": "anatomical-two-hoof-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        454.25,
+        862
+      ],
+      "paired_sole_points_px": [
+        [
+          381.0,
+          862
+        ],
+        [
+          527.5,
+          862
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 728.6975088967971,
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "70ecd535a939a19a48eb6dc588eb2ed4781b975158b368783a46e47fd657ea02",
+      "size_px": [
+        887,
+        887
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 1,
+      "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/frames/aha-v001.png",
+      "sha256": "1f61f6edeaebfa2276dcc0db28181c6e91b845ef432026a77bccebdcbfcddaba",
+      "crop_from_sheet_xyxy": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "sheet_id": "pair-03-v001",
+      "body_bbox_px": [
+        169,
+        133,
+        703,
+        862
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        58,
+        30,
+        837,
+        862
+      ],
+      "anchor_px": [
+        435.2001779359431,
+        858.8007117437722
+      ],
+      "anchor_kind": "anatomical-two-hoof-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        435.75,
+        861
+      ],
+      "paired_sole_points_px": [
+        [
+          363.5,
+          861
+        ],
+        [
+          508.0,
+          861
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 728.6975088967971,
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "70ecd535a939a19a48eb6dc588eb2ed4781b975158b368783a46e47fd657ea02",
+      "size_px": [
+        887,
+        887
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/frames/cheer-v001.png",
+      "sha256": "6d30c73e9695df42032d0e85fd1ea469a6588c4c05d5cb85af05fc9c1356a37a",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1086,
+        724
+      ],
+      "sheet_id": "pair-04-v001",
+      "body_bbox_px": [
+        399,
+        103,
+        840,
+        705
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        299,
+        10,
+        942,
+        705
+      ],
+      "anchor_px": [
+        619.2962633451957,
+        702.185053380783
+      ],
+      "anchor_kind": "anatomical-two-hoof-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        619.75,
+        704
+      ],
+      "paired_sole_points_px": [
+        [
+          559.0,
+          704
+        ],
+        [
+          680.5,
+          704
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 601.3523131672598,
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "71c15bce1517ba15dc440cd3d35cc11fa44e49d9df71b3f7aff7cd4036645b6f",
+      "size_px": [
+        1086,
+        724
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/frames/species_a-v001.png",
+      "sha256": "5b4a5377bfca1d03414a219f5777f744799bf5d4709244542f1f0388264d5562",
+      "crop_from_sheet_xyxy": [
+        1086,
+        0,
+        2172,
+        724
+      ],
+      "sheet_id": "pair-04-v001",
+      "body_bbox_px": [
+        231,
+        103,
+        672,
+        705
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        111,
+        13,
+        747,
+        705
+      ],
+      "anchor_px": [
+        451.0462633451957,
+        702.185053380783
+      ],
+      "anchor_kind": "anatomical-two-hoof-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        451.5,
+        704
+      ],
+      "paired_sole_points_px": [
+        [
+          391.0,
+          704
+        ],
+        [
+          512.0,
+          704
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 601.3523131672598,
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "71c15bce1517ba15dc440cd3d35cc11fa44e49d9df71b3f7aff7cd4036645b6f",
+      "size_px": [
+        1086,
+        724
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/frames/species_b-v001.png",
+      "sha256": "3222a1e53b570b724db5fc9838bee1409bb566741fbf375e2e256113cd677727",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "pair-05-v001",
+      "body_bbox_px": [
+        243,
+        204,
+        977,
+        1205
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        83,
+        66,
+        1169,
+        1205
+      ],
+      "anchor_px": [
+        609.4947552447552,
+        1200.979020979021
+      ],
+      "anchor_kind": "anatomical-two-hoof-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        610.25,
+        1204
+      ],
+      "paired_sole_points_px": [
+        [
+          511.0,
+          1204
+        ],
+        [
+          709.5,
+          1204
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 1000.9510489510491,
+      "source_sheet": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/source/pair-05-v001.png",
+      "source_sheet_sha256": "af7e5806b5651846c705ae09a4729c33ce383b1cbc6a13254ab8aee62ff03c3e",
+      "size_px": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-01-v001-generation-v001.json",
+        "sha256": "258d6bb2245b700956ab38f2f7f54332fd51c042407e0680f735c634033c25ca",
+        "bytes": 4062
+      },
+      {
+        "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-02-v001-generation-v001.json",
+        "sha256": "8ec519bf37b0235959ac20189787ae8166080b92ee713e1b343dceeee9f3d810",
+        "bytes": 4022
+      },
+      {
+        "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-03-v001-generation-v001.json",
+        "sha256": "f0f60a6904e3ae8f0ec3f8e68a06476c640faa538240b564789152015091c5d6",
+        "bytes": 4033
+      },
+      {
+        "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-04-v001-generation-v001.json",
+        "sha256": "df065d9f2ef576db8cec560ae5358a6a1e026502358726ef5f77369b1500a67d",
+        "bytes": 4064
+      },
+      {
+        "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-05-v001-generation-v001.json",
+        "sha256": "1a5976e4d7852eb2324a76b8feedb31e97f0b09981568eb24eb6be8575378a93",
+        "bytes": 3624
+      },
+      {
+        "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/provenance/selected-present_right-single-v003-generation-v001.json",
+        "sha256": "3e9579102fa8037caf9e64bef854da7592cf15a1d3da74d1d603e3e0de680c84",
+        "bytes": 3088
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/moose/generation-batches/youtube-core-20261114-c-v001/qa/stock-adoption-v001.json",
+      "sha256": "883bf9851cee9169f920d7ff3dd989c67ee03839441b6b0bd4fdc1ca69622ee6",
+      "bytes": 8911
+    }
+  ]
+}

@@ -1,0 +1,956 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "chinese-bleak",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/chinese-bleak/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "08215052d089f1fd654cb729edb4c087986374642fa89e57cb0f1b9c41945c45",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      160,
+      521,
+      955,
+      850
+    ],
+    "anchor_px": [
+      575,
+      684
+    ],
+    "reference_height_px": 329,
+    "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+    "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+    "anchor_basis": "Central fish head/trunk excluding protruding dorsal/ventral fins and caudal tail; torso center is the placement anchor, not a fake ground contact.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+    "source_manifest": "assets/library/characters/chinese-bleak/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "908c41c1300590bd190e0ac72da28d08a2d3ec4eda362e65e9745ac7d0fc98f6"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "08215052d089f1fd654cb729edb4c087986374642fa89e57cb0f1b9c41945c45",
+      "reference_height_px": 329,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0afb2ac1adadb57c104bc47cec4918c782461134124360bf6bdee3552cc821d8",
+      "reference_height_px": 141.3591378916383,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/chinese-bleak/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "08215052d089f1fd654cb729edb4c087986374642fa89e57cb0f1b9c41945c45",
+          "bytes": 637730,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 329,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 586.8,
+            "source_y": 195.21832358674465,
+            "canonical_span": [
+              234,
+              955
+            ],
+            "source_span": [
+              56,
+              363
+            ],
+            "ratio": 0.42579750346740636
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 619.7,
+            "source_y": 209.32748538011697,
+            "canonical_span": [
+              188,
+              955
+            ],
+            "source_span": [
+              36,
+              363
+            ],
+            "ratio": 0.42633637548891784
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 724.98,
+            "source_y": 254.47680311890838,
+            "canonical_span": [
+              179,
+              955
+            ],
+            "source_span": [
+              27,
+              363
+            ],
+            "ratio": 0.4329896907216495
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 764.46,
+            "source_y": 271.40779727095514,
+            "canonical_span": [
+              220,
+              955
+            ],
+            "source_span": [
+              43,
+              363
+            ],
+            "ratio": 0.43537414965986393
+          }
+        ],
+        "common_ratio": 0.42966303310528364,
+        "initial_roi_locator_only_visible_height_ratio": 0.42884990253411304,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.022491081123003,
+        "visual_confirmation": {
+          "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v003.json",
+          "sha256": "d94f9285f392aa66005ab89d3dc84b6ef106a1f3cfd38b2364d71201ae5e20fa",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "43a9817051a801fa79d87855ddd167acdbe91029f1cf07fee94cb9b086839e44"
+    },
+    {
+      "id": "greet-single-v002",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/greet-single-v002.png",
+      "source_sheet_sha256": "50f221ce387e523677e1ce23989fa4501de3b108dfc78ce7f1553c41ac7f2b35",
+      "reference_height_px": 476.8887623861475,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/chinese-bleak/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "08215052d089f1fd654cb729edb4c087986374642fa89e57cb0f1b9c41945c45",
+          "bytes": 637730,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 329,
+        "reference_frame_id": "greet",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 586.8,
+            "source_y": 349.0444444444444,
+            "canonical_span": [
+              234,
+              955
+            ],
+            "source_span": [
+              322,
+              1366
+            ],
+            "ratio": 1.447988904299584
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 619.7,
+            "source_y": 396.56666666666666,
+            "canonical_span": [
+              188,
+              955
+            ],
+            "source_span": [
+              265,
+              1366
+            ],
+            "ratio": 1.4354628422425033
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 724.98,
+            "source_y": 548.6377777777777,
+            "canonical_span": [
+              179,
+              955
+            ],
+            "source_span": [
+              240,
+              1366
+            ],
+            "ratio": 1.4510309278350515
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 764.46,
+            "source_y": 605.6644444444444,
+            "canonical_span": [
+              220,
+              955
+            ],
+            "source_span": [
+              293,
+              1366
+            ],
+            "ratio": 1.4598639455782314
+          }
+        ],
+        "common_ratio": 1.4495099160673177,
+        "initial_roi_locator_only_visible_height_ratio": 1.4444444444444444,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0169987704436907,
+        "visual_confirmation": {
+          "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v003.json",
+          "sha256": "d94f9285f392aa66005ab89d3dc84b6ef106a1f3cfd38b2364d71201ae5e20fa",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/provenance/selected-greet-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/provenance/selected-greet-single-v002-generation-v001.json",
+      "generation_record_sha256": "267a6e15e7c8fe088e15e169fe663f18f760f0b8aade7b58d842a3e67c368389"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/chinese-bleak/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "08215052d089f1fd654cb729edb4c087986374642fa89e57cb0f1b9c41945c45",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        160,
+        521,
+        955,
+        850
+      ],
+      "anchor_px": [
+        575,
+        684
+      ],
+      "reference_height_px": 329,
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+      "anchor_basis": "Central fish head/trunk excluding protruding dorsal/ventral fins and caudal tail; torso center is the placement anchor, not a fake ground contact.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "source_manifest": "assets/library/characters/chinese-bleak/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "908c41c1300590bd190e0ac72da28d08a2d3ec4eda362e65e9745ac7d0fc98f6",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "08215052d089f1fd654cb729edb4c087986374642fa89e57cb0f1b9c41945c45",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        420,
+        414
+      ],
+      "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "5119a4f50fe0eb0c5e71190201bb311c499ec942574fa719e9167aff97d1f104",
+      "size_px": [
+        420,
+        414
+      ],
+      "visible": [
+        22,
+        116,
+        407,
+        336
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0afb2ac1adadb57c104bc47cec4918c782461134124360bf6bdee3552cc821d8",
+      "body_bbox_px": [
+        22,
+        167,
+        363,
+        309
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        22,
+        116,
+        407,
+        336
+      ],
+      "reference_height_px": 141.3591378916383,
+      "anchor_px": [
+        200.3101587386927,
+        237.03507439616124
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        200.3101587386927,
+        237.03507439616124
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        22,
+        116,
+        407,
+        336
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/frames/greet-v002.png",
+      "sha256": "9c72260b8535fbce59e4585e2c6400397bab8424cdfefe8b4a49c39ac888438f",
+      "size_px": [
+        1774,
+        887
+      ],
+      "visible": [
+        218,
+        81,
+        1577,
+        822
+      ],
+      "sheet_id": "greet-single-v002",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/greet-single-v002.png",
+      "source_sheet_sha256": "50f221ce387e523677e1ce23989fa4501de3b108dfc78ce7f1553c41ac7f2b35",
+      "body_bbox_px": [
+        218,
+        254,
+        1366,
+        730
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        218,
+        81,
+        1577,
+        822
+      ],
+      "reference_height_px": 476.8887623861475,
+      "anchor_px": [
+        819.5466151679368,
+        490.2701163189728
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        819.5466151679368,
+        490.2701163189728
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        218,
+        81,
+        1577,
+        822
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        838,
+        0,
+        1264,
+        414
+      ],
+      "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "0437e33fe32a6146d00ef9292c1ef916277b1e6af1f9b754419d25a1e65abb78",
+      "size_px": [
+        426,
+        414
+      ],
+      "visible": [
+        20,
+        119,
+        409,
+        336
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0afb2ac1adadb57c104bc47cec4918c782461134124360bf6bdee3552cc821d8",
+      "body_bbox_px": [
+        20,
+        170,
+        356,
+        309
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        20,
+        119,
+        409,
+        336
+      ],
+      "reference_height_px": 141.3591378916383,
+      "anchor_px": [
+        198.3101587386927,
+        240.03507439616124
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        198.3101587386927,
+        240.03507439616124
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        20,
+        119,
+        409,
+        336
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        414,
+        420,
+        830
+      ],
+      "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "5cdb64518ab3013732e3bf33b3777f1beaa0343147c013b7f88d249e1428702e",
+      "size_px": [
+        420,
+        416
+      ],
+      "visible": [
+        35,
+        97,
+        407,
+        313
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0afb2ac1adadb57c104bc47cec4918c782461134124360bf6bdee3552cc821d8",
+      "body_bbox_px": [
+        35,
+        148,
+        370,
+        286
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        35,
+        97,
+        407,
+        313
+      ],
+      "reference_height_px": 141.3591378916383,
+      "anchor_px": [
+        213.3101587386927,
+        218.03507439616124
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        213.3101587386927,
+        218.03507439616124
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        35,
+        97,
+        407,
+        313
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        420,
+        414,
+        838,
+        830
+      ],
+      "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "db77874ff96fd39299c5361989048539be264a7ff65924302d1cd001b24eed60",
+      "size_px": [
+        418,
+        416
+      ],
+      "visible": [
+        29,
+        98,
+        399,
+        315
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0afb2ac1adadb57c104bc47cec4918c782461134124360bf6bdee3552cc821d8",
+      "body_bbox_px": [
+        29,
+        149,
+        365,
+        288
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        29,
+        98,
+        399,
+        315
+      ],
+      "reference_height_px": 141.3591378916383,
+      "anchor_px": [
+        207.3101587386927,
+        219.03507439616124
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        207.3101587386927,
+        219.03507439616124
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        29,
+        98,
+        399,
+        315
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        838,
+        414,
+        1264,
+        830
+      ],
+      "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "d727e3d000d7b4c3cb7f9dc400b41fa7ed47b760f820e1225a6522750b391db6",
+      "size_px": [
+        426,
+        416
+      ],
+      "visible": [
+        33,
+        92,
+        403,
+        312
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0afb2ac1adadb57c104bc47cec4918c782461134124360bf6bdee3552cc821d8",
+      "body_bbox_px": [
+        33,
+        143,
+        374,
+        285
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        33,
+        92,
+        403,
+        312
+      ],
+      "reference_height_px": 141.3591378916383,
+      "anchor_px": [
+        211.3101587386927,
+        213.03507439616124
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        211.3101587386927,
+        213.03507439616124
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        33,
+        92,
+        403,
+        312
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        830,
+        420,
+        1244
+      ],
+      "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "f4e3db7784082fb1d95f44259b5d77ef30bbbb3dbff76f02af026d044081d81a",
+      "size_px": [
+        420,
+        414
+      ],
+      "visible": [
+        32,
+        58,
+        395,
+        291
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0afb2ac1adadb57c104bc47cec4918c782461134124360bf6bdee3552cc821d8",
+      "body_bbox_px": [
+        32,
+        113,
+        393,
+        262
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        32,
+        58,
+        395,
+        291
+      ],
+      "reference_height_px": 141.3591378916383,
+      "anchor_px": [
+        210.3101587386927,
+        183.03507439616124
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        210.3101587386927,
+        183.03507439616124
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        32,
+        58,
+        395,
+        291
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        420,
+        830,
+        838,
+        1244
+      ],
+      "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "666902424f4951ce7b331bfdb85943c9714fb02eb2eb0babb769f5527eb24161",
+      "size_px": [
+        418,
+        414
+      ],
+      "visible": [
+        14,
+        70,
+        403,
+        290
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0afb2ac1adadb57c104bc47cec4918c782461134124360bf6bdee3552cc821d8",
+      "body_bbox_px": [
+        14,
+        121,
+        355,
+        263
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        14,
+        70,
+        403,
+        290
+      ],
+      "reference_height_px": 141.3591378916383,
+      "anchor_px": [
+        192.3101587386927,
+        191.03507439616124
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        192.3101587386927,
+        191.03507439616124
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        14,
+        70,
+        403,
+        290
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        838,
+        830,
+        1264,
+        1244
+      ],
+      "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "7a6ca348b1d0ad479f7db99ab1ee8f50baf43804039acbb8ea512770ec1bd7db",
+      "size_px": [
+        426,
+        414
+      ],
+      "visible": [
+        15,
+        71,
+        402,
+        287
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0afb2ac1adadb57c104bc47cec4918c782461134124360bf6bdee3552cc821d8",
+      "body_bbox_px": [
+        15,
+        122,
+        350,
+        260
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        15,
+        71,
+        402,
+        287
+      ],
+      "reference_height_px": 141.3591378916383,
+      "anchor_px": [
+        193.3101587386927,
+        192.03507439616124
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        193.3101587386927,
+        192.03507439616124
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        15,
+        71,
+        402,
+        287
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "43a9817051a801fa79d87855ddd167acdbe91029f1cf07fee94cb9b086839e44",
+        "bytes": 5786
+      },
+      {
+        "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/provenance/selected-greet-single-v002-generation-v001.json",
+        "sha256": "267a6e15e7c8fe088e15e169fe663f18f760f0b8aade7b58d842a3e67c368389",
+        "bytes": 3434
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/chinese-bleak/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "99dca475f0bb35fbd960cf13cd930a312c6ecc788dffed9141542f733e0d5878",
+      "bytes": 8014
+    }
+  ]
+}

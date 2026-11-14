@@ -1,0 +1,849 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "sand-tiger-shark",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/sand-tiger-shark/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "8be26ba1c45022adf3db770339338b3d9b9199552c715a1d7f173bf869ad5d54",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      62.0,
+      514.0,
+      1034.0,
+      842.0
+    ],
+    "anchor_px": [
+      548.0,
+      678.0
+    ],
+    "reference_height_px": 328.0,
+    "anchor_kind": "floating-body-center",
+    "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+    "anchor_basis": "Simplified side-view shark trunk, snout to tail peduncle; paired fins and tail excluded from anatomical body reference. Floating prop uses body-center support rather than fictitious feet.",
+    "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+    "source_manifest": "assets/library/characters/sand-tiger-shark/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "5759bdb607e35825745ea7a18880aeaef2a7ec7aec84fbc14d2019e64ba7bff6"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "8be26ba1c45022adf3db770339338b3d9b9199552c715a1d7f173bf869ad5d54",
+      "reference_height_px": 328.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "79771ddd6ad86e48a94649635a9baf8591e81ca2255c0389f6ddcddd6dde1f59",
+      "reference_height_px": 122.99211315417257,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/sand-tiger-shark/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "8be26ba1c45022adf3db770339338b3d9b9199552c715a1d7f173bf869ad5d54",
+          "bytes": 700144,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 328.0,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 579.6,
+            "source_y": 187.46984126984128,
+            "canonical_span": [
+              212,
+              1034
+            ],
+            "source_span": [
+              75,
+              389
+            ],
+            "ratio": 0.3819951338199513
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 612.4,
+            "source_y": 199.7047619047619,
+            "canonical_span": [
+              125,
+              1034
+            ],
+            "source_span": [
+              47,
+              389
+            ],
+            "ratio": 0.37623762376237624
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 717.36,
+            "source_y": 238.85650793650794,
+            "canonical_span": [
+              101,
+              1034
+            ],
+            "source_span": [
+              39,
+              383
+            ],
+            "ratio": 0.3687031082529475
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 756.72,
+            "source_y": 253.53841269841269,
+            "canonical_span": [
+              159,
+              1034
+            ],
+            "source_span": [
+              61,
+              388
+            ],
+            "ratio": 0.3737142857142857
+          }
+        ],
+        "common_ratio": 0.374975954738331,
+        "initial_roi_locator_only_visible_height_ratio": 0.373015873015873,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0360507553895772,
+        "visual_confirmation": {
+          "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "04bf7b1ea0b040737cbef2815299d009a0bf7b61931f9c9a0aa097bb96b4f637",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "6d021b1019a00c59aad9448670ad6be7c0ce062e6d1f6cee1ec85278f7149dce"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "8be26ba1c45022adf3db770339338b3d9b9199552c715a1d7f173bf869ad5d54",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        62.0,
+        514.0,
+        1034.0,
+        842.0
+      ],
+      "anchor_px": [
+        548.0,
+        678.0
+      ],
+      "reference_height_px": 328.0,
+      "anchor_kind": "floating-body-center",
+      "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+      "anchor_basis": "Simplified side-view shark trunk, snout to tail peduncle; paired fins and tail excluded from anatomical body reference. Floating prop uses body-center support rather than fictitious feet.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_manifest": "assets/library/characters/sand-tiger-shark/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "5759bdb607e35825745ea7a18880aeaef2a7ec7aec84fbc14d2019e64ba7bff6",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "8be26ba1c45022adf3db770339338b3d9b9199552c715a1d7f173bf869ad5d54",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        430,
+        407
+      ],
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "ec48ebe55a03bcf62095273eddc2228ee3fdd101c397f8e80b9aaa6bc4ff35cf",
+      "size_px": [
+        430,
+        407
+      ],
+      "visible": [
+        26,
+        122,
+        409,
+        310
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "79771ddd6ad86e48a94649635a9baf8591e81ca2255c0389f6ddcddd6dde1f59",
+      "body_bbox_px": [
+        26,
+        163,
+        389,
+        285
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        26,
+        122,
+        409,
+        310
+      ],
+      "reference_height_px": 122.99211315417257,
+      "anchor_px": [
+        208.23831400282887,
+        224.49605657708628
+      ],
+      "anchor_kind": "floating-body-center",
+      "source_foot_point_px": [
+        208.23831400282887,
+        224.49605657708628
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "subject_bbox_px": [
+        26,
+        122,
+        409,
+        310
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        430,
+        0,
+        857,
+        407
+      ],
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "e38a3fddbc781a144452d3ed623bb1845745c5b3738789329c88a61bb0c85eea",
+      "size_px": [
+        427,
+        407
+      ],
+      "visible": [
+        25,
+        122,
+        406,
+        295
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "79771ddd6ad86e48a94649635a9baf8591e81ca2255c0389f6ddcddd6dde1f59",
+      "body_bbox_px": [
+        25,
+        160,
+        359,
+        272
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        25,
+        122,
+        406,
+        295
+      ],
+      "reference_height_px": 122.99211315417257,
+      "anchor_px": [
+        207.23831400282887,
+        221.49605657708628
+      ],
+      "anchor_kind": "floating-body-center",
+      "source_foot_point_px": [
+        207.23831400282887,
+        221.49605657708628
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "subject_bbox_px": [
+        25,
+        122,
+        406,
+        295
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        857,
+        0,
+        1288,
+        407
+      ],
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "426fc200e6a56998b3a2ac38073c41ea8b4beeec2c130d78379cea0c15671401",
+      "size_px": [
+        431,
+        407
+      ],
+      "visible": [
+        26,
+        122,
+        407,
+        312
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "79771ddd6ad86e48a94649635a9baf8591e81ca2255c0389f6ddcddd6dde1f59",
+      "body_bbox_px": [
+        26,
+        163,
+        393,
+        287
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        26,
+        122,
+        407,
+        312
+      ],
+      "reference_height_px": 122.99211315417257,
+      "anchor_px": [
+        208.23831400282887,
+        224.49605657708628
+      ],
+      "anchor_kind": "floating-body-center",
+      "source_foot_point_px": [
+        208.23831400282887,
+        224.49605657708628
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "subject_bbox_px": [
+        26,
+        122,
+        407,
+        312
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        407,
+        430,
+        814
+      ],
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "50841dfdee9bf2fc9d7a3a172c39dbe57e8f90d485fae7dd6469e47947f07779",
+      "size_px": [
+        430,
+        407
+      ],
+      "visible": [
+        25,
+        99,
+        401,
+        291
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "79771ddd6ad86e48a94649635a9baf8591e81ca2255c0389f6ddcddd6dde1f59",
+      "body_bbox_px": [
+        25,
+        141,
+        396,
+        266
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        25,
+        99,
+        401,
+        291
+      ],
+      "reference_height_px": 122.99211315417257,
+      "anchor_px": [
+        207.23831400282887,
+        202.49605657708628
+      ],
+      "anchor_kind": "floating-body-center",
+      "source_foot_point_px": [
+        207.23831400282887,
+        202.49605657708628
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "subject_bbox_px": [
+        25,
+        99,
+        401,
+        291
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        430,
+        407,
+        857,
+        814
+      ],
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "39b3b8aba27c48d4aa074cc16c037480715d68bdc2c32dc261f1dc894620a004",
+      "size_px": [
+        427,
+        407
+      ],
+      "visible": [
+        20,
+        105,
+        407,
+        291
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "79771ddd6ad86e48a94649635a9baf8591e81ca2255c0389f6ddcddd6dde1f59",
+      "body_bbox_px": [
+        20,
+        146,
+        379,
+        267
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        20,
+        105,
+        407,
+        291
+      ],
+      "reference_height_px": 122.99211315417257,
+      "anchor_px": [
+        202.23831400282887,
+        207.49605657708628
+      ],
+      "anchor_kind": "floating-body-center",
+      "source_foot_point_px": [
+        202.23831400282887,
+        207.49605657708628
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "subject_bbox_px": [
+        20,
+        105,
+        407,
+        291
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        857,
+        407,
+        1288,
+        814
+      ],
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "d13f75ce5bde782ef064cf2ae66f79abe899a291204293aa635fdc758da8aef8",
+      "size_px": [
+        431,
+        407
+      ],
+      "visible": [
+        35,
+        104,
+        410,
+        272
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "79771ddd6ad86e48a94649635a9baf8591e81ca2255c0389f6ddcddd6dde1f59",
+      "body_bbox_px": [
+        35,
+        141,
+        359,
+        250
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        35,
+        104,
+        410,
+        272
+      ],
+      "reference_height_px": 122.99211315417257,
+      "anchor_px": [
+        217.23831400282887,
+        202.49605657708628
+      ],
+      "anchor_kind": "floating-body-center",
+      "source_foot_point_px": [
+        217.23831400282887,
+        202.49605657708628
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "subject_bbox_px": [
+        35,
+        104,
+        410,
+        272
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        814,
+        430,
+        1221
+      ],
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "517237adc298d320dddd874392c4e2c85c237b325a2cc8b7e6b55ad39cda5896",
+      "size_px": [
+        430,
+        407
+      ],
+      "visible": [
+        33,
+        73,
+        412,
+        262
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "79771ddd6ad86e48a94649635a9baf8591e81ca2255c0389f6ddcddd6dde1f59",
+      "body_bbox_px": [
+        33,
+        114,
+        398,
+        237
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        33,
+        73,
+        412,
+        262
+      ],
+      "reference_height_px": 122.99211315417257,
+      "anchor_px": [
+        215.23831400282887,
+        175.49605657708628
+      ],
+      "anchor_kind": "floating-body-center",
+      "source_foot_point_px": [
+        215.23831400282887,
+        175.49605657708628
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "subject_bbox_px": [
+        33,
+        73,
+        412,
+        262
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        430,
+        814,
+        857,
+        1221
+      ],
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "40c4a2d097f86788cfe1a49ade6c454276904bb67b0c8295a86b2f41932f0a36",
+      "size_px": [
+        427,
+        407
+      ],
+      "visible": [
+        25,
+        79,
+        393,
+        263
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "79771ddd6ad86e48a94649635a9baf8591e81ca2255c0389f6ddcddd6dde1f59",
+      "body_bbox_px": [
+        25,
+        119,
+        380,
+        239
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        25,
+        79,
+        393,
+        263
+      ],
+      "reference_height_px": 122.99211315417257,
+      "anchor_px": [
+        207.23831400282887,
+        180.49605657708628
+      ],
+      "anchor_kind": "floating-body-center",
+      "source_foot_point_px": [
+        207.23831400282887,
+        180.49605657708628
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "subject_bbox_px": [
+        25,
+        79,
+        393,
+        263
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        857,
+        814,
+        1288,
+        1221
+      ],
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "f3c915bb5d60b1315c1ae33e43a84f5b337b86ecad09abe37b7f3dc380919a1f",
+      "size_px": [
+        431,
+        407
+      ],
+      "visible": [
+        21,
+        83,
+        408,
+        263
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "79771ddd6ad86e48a94649635a9baf8591e81ca2255c0389f6ddcddd6dde1f59",
+      "body_bbox_px": [
+        21,
+        122,
+        368,
+        239
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        21,
+        83,
+        408,
+        263
+      ],
+      "reference_height_px": 122.99211315417257,
+      "anchor_px": [
+        203.23831400282887,
+        183.49605657708628
+      ],
+      "anchor_kind": "floating-body-center",
+      "source_foot_point_px": [
+        203.23831400282887,
+        183.49605657708628
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "subject_bbox_px": [
+        21,
+        83,
+        408,
+        263
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "6d021b1019a00c59aad9448670ad6be7c0ce062e6d1f6cee1ec85278f7149dce",
+        "bytes": 5807
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/sand-tiger-shark/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "fb85568a5887a28de42da14f1a615add9b93fb344c7ca6551131eeb9ea81d40d",
+      "bytes": 7794
+    }
+  ]
+}

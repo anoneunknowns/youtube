@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "red-crowned-crane",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/red-crowned-crane/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "b4196c3698444848f9bdcd973a61eb20c7d5a38a37f601653f79f7809d9f2cf0",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      371,
+      51,
+      962,
+      1213
+    ],
+    "anchor_px": [
+      607,
+      1200
+    ],
+    "reference_height_px": 1162,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of the two visible foot-support contacts; excludes projecting bill from horizontal body box.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/red-crowned-crane/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "5af541b19914e49b18fee62939e501337836803e5e0295a7ade2aa89af04e8d9"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "b4196c3698444848f9bdcd973a61eb20c7d5a38a37f601653f79f7809d9f2cf0",
+      "reference_height_px": 1162,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "64ba8fa0a3e6a84c325ae08d2be949c5b6e4ef9d93cf6f2957c9a6899ba20b90",
+      "reference_height_px": 337.6416608916609,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/red-crowned-crane/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "b4196c3698444848f9bdcd973a61eb20c7d5a38a37f601653f79f7809d9f2cf0",
+          "bytes": 584664,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1162,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 283.4,
+            "source_y": 86.6,
+            "canonical_span": [
+              467,
+              559
+            ],
+            "source_span": [
+              209,
+              241
+            ],
+            "ratio": 0.34782608695652173
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 399.59999999999997,
+            "source_y": 119.39999999999998,
+            "canonical_span": [
+              392,
+              509
+            ],
+            "source_span": [
+              190,
+              224
+            ],
+            "ratio": 0.2905982905982906
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 771.4399999999999,
+            "source_y": 224.35999999999996,
+            "canonical_span": [
+              526,
+              934
+            ],
+            "source_span": [
+              217,
+              332
+            ],
+            "ratio": 0.2818627450980392
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 910.88,
+            "source_y": 263.71999999999997,
+            "canonical_span": [
+              551,
+              699
+            ],
+            "source_span": [
+              227,
+              270
+            ],
+            "ratio": 0.2905405405405405
+          }
+        ],
+        "common_ratio": 0.29056941556941557,
+        "initial_roi_locator_only_visible_height_ratio": 0.2822719449225473,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.2340264650283554,
+        "visual_confirmation": {
+          "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "cb9d9bfba872215b6c15ac26b7d931c22c796d271a1dcacd4b0b2e2202daabf3",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "076d19e7a229138c9c2d6a5a177edefcf531ddc15164808677786bd6e84f3aa1"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "b4196c3698444848f9bdcd973a61eb20c7d5a38a37f601653f79f7809d9f2cf0",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        371,
+        51,
+        962,
+        1213
+      ],
+      "anchor_px": [
+        607,
+        1200
+      ],
+      "reference_height_px": 1162,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of the two visible foot-support contacts; excludes projecting bill from horizontal body box.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/red-crowned-crane/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "5af541b19914e49b18fee62939e501337836803e5e0295a7ade2aa89af04e8d9",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "b4196c3698444848f9bdcd973a61eb20c7d5a38a37f601653f79f7809d9f2cf0",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        438,
+        380
+      ],
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "09ae342ffbd8f4c031e21d73f8ca4f79a5dc4af6bc66b30ab78b522439205967",
+      "size_px": [
+        438,
+        380
+      ],
+      "visible": [
+        138,
+        21,
+        340,
+        349
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "64ba8fa0a3e6a84c325ae08d2be949c5b6e4ef9d93cf6f2957c9a6899ba20b90",
+      "body_bbox_px": [
+        176,
+        21,
+        342,
+        349
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        138,
+        21,
+        340,
+        349
+      ],
+      "reference_height_px": 337.6416608916609,
+      "anchor_px": [
+        247.01063322938325,
+        345.7434164934165
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        225.0,
+        344
+      ],
+      "sole_points": [
+        [
+          207.0,
+          344
+        ],
+        [
+          243.0,
+          343
+        ]
+      ],
+      "sole_regions": [
+        [
+          198,
+          288,
+          219,
+          351
+        ],
+        [
+          234,
+          288,
+          252,
+          351
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        138,
+        21,
+        340,
+        349
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        438,
+        0,
+        872,
+        380
+      ],
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "b745801307bb7832a8312a6766379e046e634fd87f1d1831a78a6dc083d6d0a0",
+      "size_px": [
+        434,
+        380
+      ],
+      "visible": [
+        113,
+        24,
+        325,
+        349
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "64ba8fa0a3e6a84c325ae08d2be949c5b6e4ef9d93cf6f2957c9a6899ba20b90",
+      "body_bbox_px": [
+        150,
+        24,
+        315,
+        349
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        113,
+        24,
+        325,
+        349
+      ],
+      "reference_height_px": 337.6416608916609,
+      "anchor_px": [
+        238.76063322938325,
+        350.7434164934165
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        216.75,
+        349
+      ],
+      "sole_points": [
+        [
+          192.5,
+          344
+        ],
+        [
+          241.0,
+          349
+        ]
+      ],
+      "sole_regions": [
+        [
+          183,
+          288,
+          204,
+          351
+        ],
+        [
+          219,
+          288,
+          252,
+          351
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        113,
+        24,
+        325,
+        349
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        872,
+        0,
+        1312,
+        380
+      ],
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "c1f605531c7f23ae6a97a0453dfc842cbd6311b75ef6d66c8ce259cbda9502a2",
+      "size_px": [
+        440,
+        380
+      ],
+      "visible": [
+        52,
+        19,
+        300,
+        350
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "64ba8fa0a3e6a84c325ae08d2be949c5b6e4ef9d93cf6f2957c9a6899ba20b90",
+      "body_bbox_px": [
+        90,
+        19,
+        258,
+        350
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        52,
+        19,
+        300,
+        350
+      ],
+      "reference_height_px": 337.6416608916609,
+      "anchor_px": [
+        214.76063322938325,
+        351.7434164934165
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        192.75,
+        350
+      ],
+      "sole_points": [
+        [
+          169.0,
+          343
+        ],
+        [
+          216.5,
+          350
+        ]
+      ],
+      "sole_regions": [
+        [
+          159,
+          289,
+          177,
+          352
+        ],
+        [
+          210,
+          289,
+          227,
+          352
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        52,
+        19,
+        300,
+        350
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        380,
+        438,
+        780
+      ],
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "dea45e30c3b69e1650829a5601e89ac8923416246fa5a0edae00559a533f6ada",
+      "size_px": [
+        438,
+        400
+      ],
+      "visible": [
+        124,
+        38,
+        362,
+        368
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "64ba8fa0a3e6a84c325ae08d2be949c5b6e4ef9d93cf6f2957c9a6899ba20b90",
+      "body_bbox_px": [
+        162,
+        38,
+        330,
+        368
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        124,
+        38,
+        362,
+        368
+      ],
+      "reference_height_px": 337.6416608916609,
+      "anchor_px": [
+        250.76063322938325,
+        369.7434164934165
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        228.75,
+        368
+      ],
+      "sole_points": [
+        [
+          205.5,
+          368
+        ],
+        [
+          252.0,
+          361
+        ]
+      ],
+      "sole_regions": [
+        [
+          194,
+          307,
+          227,
+          370
+        ],
+        [
+          244,
+          307,
+          262,
+          370
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        124,
+        38,
+        362,
+        368
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        438,
+        380,
+        872,
+        780
+      ],
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "da1e16131c9ca3a06bfd465e140733fa9d924921a89ad6e29f606afc3c61662e",
+      "size_px": [
+        434,
+        400
+      ],
+      "visible": [
+        126,
+        45,
+        323,
+        368
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "64ba8fa0a3e6a84c325ae08d2be949c5b6e4ef9d93cf6f2957c9a6899ba20b90",
+      "body_bbox_px": [
+        163,
+        45,
+        327,
+        368
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        126,
+        45,
+        323,
+        368
+      ],
+      "reference_height_px": 337.6416608916609,
+      "anchor_px": [
+        234.26063322938325,
+        369.7434164934165
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        212.25,
+        368
+      ],
+      "sole_points": [
+        [
+          187.5,
+          362
+        ],
+        [
+          237.0,
+          368
+        ]
+      ],
+      "sole_regions": [
+        [
+          178,
+          307,
+          197,
+          370
+        ],
+        [
+          214,
+          307,
+          248,
+          370
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        126,
+        45,
+        323,
+        368
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        872,
+        380,
+        1312,
+        780
+      ],
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "3fbe340e91ec229477535da1e7937093e9572d3c9919e701ac3d1d62473fef11",
+      "size_px": [
+        440,
+        400
+      ],
+      "visible": [
+        96,
+        28,
+        302,
+        368
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "64ba8fa0a3e6a84c325ae08d2be949c5b6e4ef9d93cf6f2957c9a6899ba20b90",
+      "body_bbox_px": [
+        135,
+        28,
+        308,
+        368
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        96,
+        28,
+        302,
+        368
+      ],
+      "reference_height_px": 337.6416608916609,
+      "anchor_px": [
+        213.26063322938325,
+        369.7434164934165
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        191.25,
+        368
+      ],
+      "sole_points": [
+        [
+          166.5,
+          363
+        ],
+        [
+          216.0,
+          368
+        ]
+      ],
+      "sole_regions": [
+        [
+          158,
+          307,
+          178,
+          370
+        ],
+        [
+          194,
+          307,
+          227,
+          370
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        96,
+        28,
+        302,
+        368
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        780,
+        438,
+        1199
+      ],
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "9e29f14ad3a49de8c9c1c20a8e86f6ced0d81f7f4a9aeab23f9fcf46f74b28b3",
+      "size_px": [
+        438,
+        419
+      ],
+      "visible": [
+        104,
+        30,
+        343,
+        371
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "64ba8fa0a3e6a84c325ae08d2be949c5b6e4ef9d93cf6f2957c9a6899ba20b90",
+      "body_bbox_px": [
+        143,
+        30,
+        316,
+        371
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        104,
+        30,
+        343,
+        371
+      ],
+      "reference_height_px": 337.6416608916609,
+      "anchor_px": [
+        248.51063322938325,
+        366.7434164934165
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        226.5,
+        365
+      ],
+      "sole_points": [
+        [
+          209.0,
+          365
+        ],
+        [
+          244.0,
+          365
+        ]
+      ],
+      "sole_regions": [
+        [
+          199,
+          310,
+          219,
+          373
+        ],
+        [
+          235,
+          310,
+          253,
+          373
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        104,
+        30,
+        343,
+        371
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        438,
+        780,
+        872,
+        1199
+      ],
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "976aa3ace926b571ffd8acfb1b3124a30ae3442b9e901572bbab86356baedc72",
+      "size_px": [
+        434,
+        419
+      ],
+      "visible": [
+        73,
+        30,
+        323,
+        371
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "64ba8fa0a3e6a84c325ae08d2be949c5b6e4ef9d93cf6f2957c9a6899ba20b90",
+      "body_bbox_px": [
+        112,
+        30,
+        285,
+        371
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        73,
+        30,
+        323,
+        371
+      ],
+      "reference_height_px": 337.6416608916609,
+      "anchor_px": [
+        231.26063322938325,
+        366.7434164934165
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        209.25,
+        365
+      ],
+      "sole_points": [
+        [
+          191.5,
+          365
+        ],
+        [
+          227.0,
+          365
+        ]
+      ],
+      "sole_regions": [
+        [
+          182,
+          310,
+          201,
+          373
+        ],
+        [
+          218,
+          310,
+          236,
+          373
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        73,
+        30,
+        323,
+        371
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        872,
+        780,
+        1312,
+        1199
+      ],
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "42ae25eec5803383583036e6e27b7115b675510b51dfb78bc5dfc75ed3b00fb9",
+      "size_px": [
+        440,
+        419
+      ],
+      "visible": [
+        100,
+        30,
+        301,
+        371
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "64ba8fa0a3e6a84c325ae08d2be949c5b6e4ef9d93cf6f2957c9a6899ba20b90",
+      "body_bbox_px": [
+        139,
+        30,
+        312,
+        371
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        100,
+        30,
+        301,
+        371
+      ],
+      "reference_height_px": 337.6416608916609,
+      "anchor_px": [
+        214.76063322938325,
+        372.7434164934165
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        192.75,
+        371
+      ],
+      "sole_points": [
+        [
+          168.5,
+          365
+        ],
+        [
+          217.0,
+          371
+        ]
+      ],
+      "sole_regions": [
+        [
+          159,
+          310,
+          178,
+          373
+        ],
+        [
+          210,
+          310,
+          228,
+          373
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        100,
+        30,
+        301,
+        371
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "076d19e7a229138c9c2d6a5a177edefcf531ddc15164808677786bd6e84f3aa1",
+        "bytes": 5799
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/red-crowned-crane/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "b09918ba6b5086478c0cc9bcb2283e46e4dfae06ea05ee4dd5e9f091c62868c4",
+      "bytes": 7846
+    }
+  ]
+}

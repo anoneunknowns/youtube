@@ -1,0 +1,1545 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "iberian-lynx",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-c-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      256,
+      254,
+      986,
+      1211
+    ],
+    "anchor_px": [
+      610,
+      1208
+    ],
+    "reference_height_px": 957,
+    "anchor_kind": "anatomical-feet-projected-contact",
+    "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+    "anchor_basis": "Round skull/cheek ruffs and compact standing body through two feet; tall ear tufts/upper ears above skull and short side tail excluded from reference height/width.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+    "source_manifest": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "50c5a3de459ffd2143e69334922e11de2a0ed1456823993e84579c31b974bf97"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+      "reference_height_px": 957,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "115d861e213fb1a135e9e9b9b59f871992006281cba8632e5b4b143fe17f03ac",
+      "reference_height_px": 581.5744308231174,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+          "bytes": 1126697,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 957,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 400,
+            "source_y": 230,
+            "canonical_span_px": [
+              341,
+              912
+            ],
+            "source_span_px": [
+              402,
+              749
+            ],
+            "ratio": 0.6077057793345009,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 290,
+            "canonical_span_px": [
+              298,
+              945
+            ],
+            "source_span_px": [
+              376,
+              773
+            ],
+            "ratio": 0.6136012364760433,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 350,
+            "canonical_span_px": [
+              279,
+              962
+            ],
+            "source_span_px": [
+              370,
+              779
+            ],
+            "ratio": 0.5988286969253295,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 560,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 0.6077057793345009,
+        "reference_height_px": 581.5744308231174,
+        "canonical_sole_points_px": [
+          [
+            496.5,
+            1209
+          ],
+          [
+            715.5,
+            1209
+          ]
+        ],
+        "canonical_foot_point_px": [
+          606.0,
+          1209
+        ],
+        "canonical_anchor_projection_offset_px": [
+          4.0,
+          -1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_record_sha256": "35802b6f74aef92c5c839c72aab10640bcc5631bba170fdea0bc91f1795251e5"
+    },
+    {
+      "id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "abd3c4f063cc117990bc09feafdda4985b5d04e193cea378f76c3f069abf557b",
+      "reference_height_px": 611.7425569176883,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+          "bytes": 1126697,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 957,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 400,
+            "source_y": 230,
+            "canonical_span_px": [
+              341,
+              912
+            ],
+            "source_span_px": [
+              399,
+              764
+            ],
+            "ratio": 0.6392294220665499,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 290,
+            "canonical_span_px": [
+              298,
+              945
+            ],
+            "source_span_px": [
+              370,
+              795
+            ],
+            "ratio": 0.6568778979907264,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 350,
+            "canonical_span_px": [
+              279,
+              962
+            ],
+            "source_span_px": [
+              377,
+              787
+            ],
+            "ratio": 0.6002928257686676,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 560,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 0.6392294220665499,
+        "reference_height_px": 611.7425569176883,
+        "canonical_sole_points_px": [
+          [
+            496.5,
+            1209
+          ],
+          [
+            715.5,
+            1209
+          ]
+        ],
+        "canonical_foot_point_px": [
+          606.0,
+          1209
+        ],
+        "canonical_anchor_projection_offset_px": [
+          4.0,
+          -1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_record_sha256": "bb58e6641f7ec9004dfc7058d6d227efffe830d7349cd688dbe6bfed91613edc"
+    },
+    {
+      "id": "species_b-single-v002",
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/species_b-single-v002.png",
+      "source_sheet_sha256": "ad1b54413a286e4a8e1f944b15b291e230fcfa00a4c04ba8df5072e326dc52c6",
+      "reference_height_px": 968.8330757341577,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+          "bytes": 1126697,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 957,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 400,
+            "source_y": 400,
+            "canonical_span_px": [
+              341,
+              912
+            ],
+            "source_span_px": [
+              336,
+              913
+            ],
+            "ratio": 1.010507880910683,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 500,
+            "canonical_span_px": [
+              298,
+              945
+            ],
+            "source_span_px": [
+              293,
+              948
+            ],
+            "ratio": 1.0123647604327666,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 600,
+            "canonical_span_px": [
+              279,
+              962
+            ],
+            "source_span_px": [
+              257,
+              965
+            ],
+            "ratio": 1.0366032210834553,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0123647604327666,
+        "reference_height_px": 968.8330757341577,
+        "canonical_sole_points_px": [
+          [
+            496.5,
+            1209
+          ],
+          [
+            715.5,
+            1209
+          ]
+        ],
+        "canonical_foot_point_px": [
+          606.0,
+          1209
+        ],
+        "canonical_anchor_projection_offset_px": [
+          4.0,
+          -1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_b-single-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_b-single-v002-generation-v001.json",
+      "generation_record_sha256": "feeacbedb1be016b63d897655a6883a42c94c9b841e965ea5dd865cb2034d8d4"
+    },
+    {
+      "id": "blink-single-v004",
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v004.png",
+      "source_sheet_sha256": "2e5717bc5aa47968161b10aa814268ea933bb5f770632464f2a7124d88499fed",
+      "reference_height_px": 959.9582689335393,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+          "bytes": 1126697,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 957,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 400,
+            "source_y": 400,
+            "canonical_span_px": [
+              341,
+              912
+            ],
+            "source_span_px": [
+              339,
+              913
+            ],
+            "ratio": 1.0052539404553416,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 500,
+            "canonical_span_px": [
+              298,
+              945
+            ],
+            "source_span_px": [
+              297,
+              946
+            ],
+            "ratio": 1.0030911901081916,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 600,
+            "canonical_span_px": [
+              279,
+              962
+            ],
+            "source_span_px": [
+              278,
+              963
+            ],
+            "ratio": 1.0029282576866765,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0030911901081916,
+        "reference_height_px": 959.9582689335393,
+        "canonical_sole_points_px": [
+          [
+            496.5,
+            1209
+          ],
+          [
+            715.5,
+            1209
+          ]
+        ],
+        "canonical_foot_point_px": [
+          606.0,
+          1209
+        ],
+        "canonical_anchor_projection_offset_px": [
+          4.0,
+          -1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v004-generation-v001.json",
+      "generation_prompt": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v004-generation-v001.json",
+      "generation_record_sha256": "f0643869e1d5cf0e5f6a442aee7986b180f4cf49e0e8fed50d2cbbfd46891545"
+    },
+    {
+      "id": "greet-single-v004",
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/greet-single-v004.png",
+      "source_sheet_sha256": "a8318e662c51dfafdc032cd395f59e036ec4d3a2004829c0c1b00ff32d002d37",
+      "reference_height_px": 961.203513909224,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+          "bytes": 1126697,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 957,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 400,
+            "source_y": 400,
+            "canonical_span_px": [
+              341,
+              912
+            ],
+            "source_span_px": [
+              340,
+              912
+            ],
+            "ratio": 1.001751313485114,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 500,
+            "canonical_span_px": [
+              298,
+              945
+            ],
+            "source_span_px": [
+              296,
+              946
+            ],
+            "ratio": 1.0046367851622875,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 600,
+            "canonical_span_px": [
+              279,
+              962
+            ],
+            "source_span_px": [
+              278,
+              964
+            ],
+            "ratio": 1.0043923865300146,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0043923865300146,
+        "reference_height_px": 961.203513909224,
+        "canonical_sole_points_px": [
+          [
+            496.5,
+            1209
+          ],
+          [
+            715.5,
+            1209
+          ]
+        ],
+        "canonical_foot_point_px": [
+          606.0,
+          1209
+        ],
+        "canonical_anchor_projection_offset_px": [
+          4.0,
+          -1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-greet-single-v004-generation-v001.json",
+      "generation_prompt": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-greet-single-v004-generation-v001.json",
+      "generation_record_sha256": "c9053f08a075b35d8ce23be42cd0311c9f10f444c55915c6d2c5bb1b29598b73"
+    },
+    {
+      "id": "think-single-v004",
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/think-single-v004.png",
+      "source_sheet_sha256": "e588ac677803764eb6a700f66a4127be6f631c03622b19c3f99dfa0c04a142c2",
+      "reference_height_px": 959.9582689335393,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+          "bytes": 1126697,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 957,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 400,
+            "source_y": 400,
+            "canonical_span_px": [
+              341,
+              912
+            ],
+            "source_span_px": [
+              268,
+              873
+            ],
+            "ratio": 1.0595446584938704,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 500,
+            "canonical_span_px": [
+              298,
+              945
+            ],
+            "source_span_px": [
+              296,
+              945
+            ],
+            "ratio": 1.0030911901081916,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 600,
+            "canonical_span_px": [
+              279,
+              962
+            ],
+            "source_span_px": [
+              290,
+              916
+            ],
+            "ratio": 0.9165446559297218,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0030911901081916,
+        "reference_height_px": 959.9582689335393,
+        "canonical_sole_points_px": [
+          [
+            496.5,
+            1209
+          ],
+          [
+            715.5,
+            1209
+          ]
+        ],
+        "canonical_foot_point_px": [
+          606.0,
+          1209
+        ],
+        "canonical_anchor_projection_offset_px": [
+          4.0,
+          -1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-think-single-v004-generation-v001.json",
+      "generation_prompt": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-think-single-v004-generation-v001.json",
+      "generation_record_sha256": "49bbc0e4b43f3275e0f7e8fec0ba3dcd990fc721917dfd308623e4f606c3ff51"
+    },
+    {
+      "id": "aha-single-v004",
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/aha-single-v004.png",
+      "source_sheet_sha256": "041257ad618088641fc080353211c78168d147715936848a7dd1341b74332fa7",
+      "reference_height_px": 957.0,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+          "bytes": 1126697,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 957,
+        "landmarks": [
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 400,
+            "source_y": 400,
+            "canonical_span_px": [
+              341,
+              912
+            ],
+            "source_span_px": [
+              342,
+              915
+            ],
+            "ratio": 1.0035026269702276,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 500,
+            "source_y": 500,
+            "canonical_span_px": [
+              298,
+              945
+            ],
+            "source_span_px": [
+              298,
+              945
+            ],
+            "ratio": 1.0,
+            "used_for_scale": true
+          },
+          {
+            "name": "Matched upper/mid/lower head span",
+            "canonical_y": 600,
+            "source_y": 600,
+            "canonical_span_px": [
+              279,
+              962
+            ],
+            "source_span_px": [
+              280,
+              962
+            ],
+            "ratio": 0.9985358711566618,
+            "used_for_scale": true
+          },
+          {
+            "name": "Abdomen contour crosscheck, side tail excluded at first torso outline",
+            "canonical_y": 950,
+            "source_y": 950,
+            "canonical_span_px": null,
+            "source_span_px": null,
+            "ratio": null,
+            "used_for_scale": false,
+            "scope": "Diagnostic aid inspected alongside actual native/max-use; never used for frame fitting."
+          }
+        ],
+        "common_ratio": 1.0,
+        "reference_height_px": 957.0,
+        "canonical_sole_points_px": [
+          [
+            496.5,
+            1209
+          ],
+          [
+            715.5,
+            1209
+          ]
+        ],
+        "canonical_foot_point_px": [
+          606.0,
+          1209
+        ],
+        "canonical_anchor_projection_offset_px": [
+          4.0,
+          -1
+        ],
+        "calibration_pose_selected": true,
+        "calibration_scope": "Explicit corresponding anatomical landmarks from this source sheet; the method and used_for_scale landmarks identify the measured body region. Only selected pose pixels are included.",
+        "method": "Median of3explicit corresponding head widths at source anatomy; torso separately crosschecked visually/contour spans. One source-sheet scale shared by both states, not posebbox fit."
+      },
+      "generation_input": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-aha-single-v004-generation-v001.json",
+      "generation_prompt": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-aha-single-v004-generation-v001.json",
+      "generation_record_sha256": "2ecdda6c80524b1bd5c0030ac7be82ab99eeefd38a0553e600f0d157d263b0e8"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        256,
+        254,
+        986,
+        1211
+      ],
+      "anchor_px": [
+        610,
+        1208
+      ],
+      "reference_height_px": 957,
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+      "anchor_basis": "Round skull/cheek ruffs and compact standing body through two feet; tall ear tufts/upper ears above skull and short side tail excluded from reference height/width.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "source_manifest": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "50c5a3de459ffd2143e69334922e11de2a0ed1456823993e84579c31b974bf97",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "ac19f9210e8d38cc4d5e30e33d6bd7d3a550d34e997aef483b8792247389a887",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v004.png",
+      "sha256": "2e5717bc5aa47968161b10aa814268ea933bb5f770632464f2a7124d88499fed",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "blink-single-v004",
+      "body_bbox_px": [
+        239,
+        251,
+        972,
+        1210
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        255,
+        51,
+        985,
+        1210
+      ],
+      "anchor_px": [
+        609.5123647604328,
+        1207.996908809892
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        605.5,
+        1209
+      ],
+      "paired_sole_points_px": [
+        [
+          496.0,
+          1209
+        ],
+        [
+          715.0,
+          1209
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 959.9582689335393,
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v004.png",
+      "source_sheet_sha256": "2e5717bc5aa47968161b10aa814268ea933bb5f770632464f2a7124d88499fed",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 0,
+      "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/greet-single-v004.png",
+      "sha256": "a8318e662c51dfafdc032cd395f59e036ec4d3a2004829c0c1b00ff32d002d37",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "greet-single-v004",
+      "body_bbox_px": [
+        239,
+        250,
+        972,
+        1210
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        259,
+        49,
+        984,
+        1210
+      ],
+      "anchor_px": [
+        609.5175695461201,
+        1207.99560761347
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        605.5,
+        1209
+      ],
+      "paired_sole_points_px": [
+        [
+          496.0,
+          1209
+        ],
+        [
+          715.0,
+          1209
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 961.203513909224,
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/greet-single-v004.png",
+      "source_sheet_sha256": "a8318e662c51dfafdc032cd395f59e036ec4d3a2004829c0c1b00ff32d002d37",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/frames/present_left-v003.png",
+      "sha256": "13d254b4103d85e6cf244583e5f684dcdeebfc85ab2fc69b454a39c1cac15785",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1086,
+        724
+      ],
+      "sheet_id": "pair-02-v001",
+      "body_bbox_px": [
+        344,
+        126,
+        788,
+        707
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        312,
+        11,
+        793,
+        707
+      ],
+      "anchor_px": [
+        568.430823117338,
+        705.3922942206655
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        566.0,
+        706
+      ],
+      "paired_sole_points_px": [
+        [
+          502.5,
+          706
+        ],
+        [
+          629.5,
+          706
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 581.5744308231174,
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "115d861e213fb1a135e9e9b9b59f871992006281cba8632e5b4b143fe17f03ac",
+      "size_px": [
+        1086,
+        724
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 1,
+      "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/frames/present_right-v003.png",
+      "sha256": "8c0fd7f63b4019a79af5a9dfd65d92b0666b4eeb0b86164e49be201cca60eb60",
+      "crop_from_sheet_xyxy": [
+        1086,
+        0,
+        2172,
+        724
+      ],
+      "sheet_id": "pair-02-v001",
+      "body_bbox_px": [
+        291,
+        126,
+        735,
+        707
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        292,
+        11,
+        774,
+        707
+      ],
+      "anchor_px": [
+        515.680823117338,
+        705.3922942206655
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        513.25,
+        706
+      ],
+      "paired_sole_points_px": [
+        [
+          447.0,
+          706
+        ],
+        [
+          579.5,
+          706
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 581.5744308231174,
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "115d861e213fb1a135e9e9b9b59f871992006281cba8632e5b4b143fe17f03ac",
+      "size_px": [
+        1086,
+        724
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/think-single-v004.png",
+      "sha256": "e588ac677803764eb6a700f66a4127be6f631c03622b19c3f99dfa0c04a142c2",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "think-single-v004",
+      "body_bbox_px": [
+        239,
+        251,
+        971,
+        1210
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        210,
+        15,
+        948,
+        1210
+      ],
+      "anchor_px": [
+        608.7623647604328,
+        1207.996908809892
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        604.75,
+        1209
+      ],
+      "paired_sole_points_px": [
+        [
+          493.5,
+          1209
+        ],
+        [
+          716.0,
+          1209
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 959.9582689335393,
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/think-single-v004.png",
+      "source_sheet_sha256": "e588ac677803764eb6a700f66a4127be6f631c03622b19c3f99dfa0c04a142c2",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 0,
+      "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/aha-single-v004.png",
+      "sha256": "041257ad618088641fc080353211c78168d147715936848a7dd1341b74332fa7",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "aha-single-v004",
+      "body_bbox_px": [
+        242,
+        253,
+        972,
+        1209
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        257,
+        51,
+        984,
+        1209
+      ],
+      "anchor_px": [
+        610.5,
+        1207.0
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        606.5,
+        1208
+      ],
+      "paired_sole_points_px": [
+        [
+          496.0,
+          1208
+        ],
+        [
+          717.0,
+          1208
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 957.0,
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/aha-single-v004.png",
+      "source_sheet_sha256": "041257ad618088641fc080353211c78168d147715936848a7dd1341b74332fa7",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/frames/cheer-v003.png",
+      "sha256": "374fa1834a5280178a3006c34a8600bfa1c6e46542ca7b3336675e8603bbc110",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1086,
+        724
+      ],
+      "sheet_id": "pair-04-v001",
+      "body_bbox_px": [
+        343,
+        104,
+        809,
+        715
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        349,
+        8,
+        804,
+        715
+      ],
+      "anchor_px": [
+        578.5569176882663,
+        713.3607705779334
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        576.0,
+        714
+      ],
+      "paired_sole_points_px": [
+        [
+          509.0,
+          714
+        ],
+        [
+          643.0,
+          714
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 611.7425569176883,
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "abd3c4f063cc117990bc09feafdda4985b5d04e193cea378f76c3f069abf557b",
+      "size_px": [
+        1086,
+        724
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/frames/species_a-v003.png",
+      "sha256": "32888d9ab9549802ed489671ec492ebd7e6cfe3f825984d4b7c72830dce896df",
+      "crop_from_sheet_xyxy": [
+        1086,
+        0,
+        2172,
+        724
+      ],
+      "sheet_id": "pair-04-v001",
+      "body_bbox_px": [
+        263,
+        104,
+        730,
+        715
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        281,
+        8,
+        724,
+        715
+      ],
+      "anchor_px": [
+        499.0569176882662,
+        713.3607705779334
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        496.5,
+        714
+      ],
+      "paired_sole_points_px": [
+        [
+          430.0,
+          714
+        ],
+        [
+          563.0,
+          714
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 611.7425569176883,
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "abd3c4f063cc117990bc09feafdda4985b5d04e193cea378f76c3f069abf557b",
+      "size_px": [
+        1086,
+        724
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/species_b-single-v002.png",
+      "sha256": "ad1b54413a286e4a8e1f944b15b291e230fcfa00a4c04ba8df5072e326dc52c6",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "species_b-single-v002",
+      "body_bbox_px": [
+        238,
+        243,
+        977,
+        1211
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        253,
+        37,
+        987,
+        1211
+      ],
+      "anchor_px": [
+        611.2994590417311,
+        1208.9876352395672
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Two lower-foot anatomy ROI centers sampled6px above alpha32 lower envelope; original anchor-to-sole projection offset transferred at source-sheet scale. Approximate anatomical scene registration, not subpixel motion metrology.",
+      "anchor_basis": "Paired grounded foot support; ears and side tail separately excluded from body-height scale.",
+      "vertical_motion_policy": "Grounded pose; baked lift0 and no second root jump.",
+      "source_foot_point_px": [
+        607.25,
+        1210
+      ],
+      "paired_sole_points_px": [
+        [
+          498.0,
+          1210
+        ],
+        [
+          716.5,
+          1210
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 968.8330757341577,
+      "source_sheet": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/source/species_b-single-v002.png",
+      "source_sheet_sha256": "ad1b54413a286e4a8e1f944b15b291e230fcfa00a4c04ba8df5072e326dc52c6",
+      "size_px": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-02-v001-generation-v001.json",
+        "sha256": "35802b6f74aef92c5c839c72aab10640bcc5631bba170fdea0bc91f1795251e5",
+        "bytes": 4064
+      },
+      {
+        "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-pair-04-v001-generation-v001.json",
+        "sha256": "bb58e6641f7ec9004dfc7058d6d227efffe830d7349cd688dbe6bfed91613edc",
+        "bytes": 4096
+      },
+      {
+        "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_b-single-v002-generation-v001.json",
+        "sha256": "feeacbedb1be016b63d897655a6883a42c94c9b841e965ea5dd865cb2034d8d4",
+        "bytes": 3809
+      },
+      {
+        "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v004-generation-v001.json",
+        "sha256": "f0643869e1d5cf0e5f6a442aee7986b180f4cf49e0e8fed50d2cbbfd46891545",
+        "bytes": 3114
+      },
+      {
+        "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-greet-single-v004-generation-v001.json",
+        "sha256": "c9053f08a075b35d8ce23be42cd0311c9f10f444c55915c6d2c5bb1b29598b73",
+        "bytes": 3084
+      },
+      {
+        "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-think-single-v004-generation-v001.json",
+        "sha256": "49bbc0e4b43f3275e0f7e8fec0ba3dcd990fc721917dfd308623e4f606c3ff51",
+        "bytes": 3150
+      },
+      {
+        "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/provenance/selected-aha-single-v004-generation-v001.json",
+        "sha256": "2ecdda6c80524b1bd5c0030ac7be82ab99eeefd38a0553e600f0d157d263b0e8",
+        "bytes": 3127
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/iberian-lynx/generation-batches/youtube-core-20261114-c-v001/qa/stock-adoption-v001.json",
+      "sha256": "180bf1127e11637d878273cbd4b4b97455ba0ec05fa82212703d941fd1d274a9",
+      "bytes": 26386
+    }
+  ]
+}

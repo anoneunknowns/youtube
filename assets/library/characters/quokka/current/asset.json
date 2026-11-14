@@ -7,7 +7,7 @@
   "category": "character",
   "source_index": {
     "path": "catalogs/character-library-v1.json",
-    "sha256": "7264356c1519b8cd3456fd828264313f550108a19da98d290318b9e982b5bb2e"
+    "sha256": "6a7c20e39fc176ef5123086d6334b18ab04f594c3fd9cbf480fe1d5cb9612cbb"
   },
   "neutral": {
     "path": "neutral.png",
@@ -45,12 +45,475 @@
     "anchor_basis": "Head-to-feet body reference excludes the side tail; support is the projected middle of the paired hindfoot contact regions.",
     "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation."
   },
-  "poses": {},
+  "poses": {
+    "video/neutral": {
+      "path": "poses/video/neutral.png",
+      "sha256": "61d101b0e5078e9978b2faadfbe32ae7d0a9ca0714613a0e5bc92d74c24344eb",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_path": "assets/library/characters/quokka/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sha256": "61d101b0e5078e9978b2faadfbe32ae7d0a9ca0714613a0e5bc92d74c24344eb",
+      "source_image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        570.0,
+        1160.0
+      ],
+      "body_bbox_px": [
+        280.0,
+        96.0,
+        864.0,
+        1167.0
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 1071.0,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Head-to-feet body reference excludes the side tail; support is the projected middle of the paired hindfoot contact regions.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "sheet_id": "canonical-neutral",
+      "frame_id": "neutral",
+      "source_sheet": "assets/library/characters/quokka/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "61d101b0e5078e9978b2faadfbe32ae7d0a9ca0714613a0e5bc92d74c24344eb"
+    },
+    "video/blink": {
+      "path": "poses/video/blink.png",
+      "sha256": "f0f6fb50d7eceb5988facd692726988feff17e8a3c4c38a2bf02fb73ca785bca",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_path": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/frames/blink.png",
+      "source_sha256": "f0f6fb50d7eceb5988facd692726988feff17e8a3c4c38a2bf02fb73ca785bca",
+      "source_image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        569.7415780141844,
+        1159.9893617021276
+      ],
+      "body_bbox_px": [
+        281,
+        97,
+        866,
+        1166
+      ],
+      "tail_bbox_px": [
+        805,
+        900,
+        995,
+        1055
+      ],
+      "reference_height_px": 1072.8989361702127,
+      "anchor_kind": "anatomical-feet-with-inherited-neutral-projection-offset",
+      "anchor_measurement": "Independent visually selected native foot ROIs; alpha8 lower4px band centres. See metrics for ROIs/points. Approximate art calibration, not physical subpixel metrology.",
+      "anchor_basis": "Maintain the canonical neutral anchor-to-anatomical-sole offset at the common sheet ratio. Tail is separate. Airborne diagnostic uses same-sheet standing-floor coordinate and preserves drawn lift; manager must explicitly select this policy.",
+      "vertical_motion_policy": "grounded-anchor; any scene movement is explicit",
+      "sheet_id": "blink-single-v002",
+      "frame_id": "blink",
+      "source_sheet": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/source/blink-v002.png",
+      "source_sheet_sha256": "f0f6fb50d7eceb5988facd692726988feff17e8a3c4c38a2bf02fb73ca785bca"
+    },
+    "video/greet": {
+      "path": "poses/video/greet.png",
+      "sha256": "fbd39e910ee6b9261f3beb18272b9ee969418e319a33f7bcf1dda04ce696a09b",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/frames/greet.png",
+      "source_sha256": "fbd39e910ee6b9261f3beb18272b9ee969418e319a33f7bcf1dda04ce696a09b",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        198.75391986062718,
+        388.79442508710804
+      ],
+      "body_bbox_px": [
+        95,
+        10,
+        314,
+        391
+      ],
+      "tail_bbox_px": [
+        270,
+        295,
+        342,
+        365
+      ],
+      "reference_height_px": 393.6951219512195,
+      "anchor_kind": "anatomical-feet-with-inherited-neutral-projection-offset",
+      "anchor_measurement": "Independent visually selected native foot ROIs; alpha8 lower4px band centres. See metrics for ROIs/points. Approximate art calibration, not physical subpixel metrology.",
+      "anchor_basis": "Maintain the canonical neutral anchor-to-anatomical-sole offset at the common sheet ratio. Tail is separate. Airborne diagnostic uses same-sheet standing-floor coordinate and preserves drawn lift; manager must explicitly select this policy.",
+      "vertical_motion_policy": "grounded-anchor; any scene movement is explicit",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "greet",
+      "source_sheet": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e680a97e35c32080e3e5a3bce24c5ca562f9d8323ca5bb367d545955790d11e0"
+    },
+    "video/present_left": {
+      "path": "poses/video/present_left.png",
+      "sha256": "c5deb45b479b01849d48e18d42cfb0ad6ca6313ad0edca63f51595207aaae183",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/frames/present_left.png",
+      "source_sha256": "c5deb45b479b01849d48e18d42cfb0ad6ca6313ad0edca63f51595207aaae183",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        200.50391986062718,
+        388.79442508710804
+      ],
+      "body_bbox_px": [
+        60,
+        14,
+        311,
+        391
+      ],
+      "tail_bbox_px": [
+        270,
+        295,
+        351,
+        365
+      ],
+      "reference_height_px": 393.6951219512195,
+      "anchor_kind": "anatomical-feet-with-inherited-neutral-projection-offset",
+      "anchor_measurement": "Independent visually selected native foot ROIs; alpha8 lower4px band centres. See metrics for ROIs/points. Approximate art calibration, not physical subpixel metrology.",
+      "anchor_basis": "Maintain the canonical neutral anchor-to-anatomical-sole offset at the common sheet ratio. Tail is separate. Airborne diagnostic uses same-sheet standing-floor coordinate and preserves drawn lift; manager must explicitly select this policy.",
+      "vertical_motion_policy": "grounded-anchor; any scene movement is explicit",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "present_left",
+      "source_sheet": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e680a97e35c32080e3e5a3bce24c5ca562f9d8323ca5bb367d545955790d11e0"
+    },
+    "video/present_right": {
+      "path": "poses/video/present_right.png",
+      "sha256": "efb0f18095d922d38c89a42460913f0aa99bb04a3429a469500b9aeead6be77d",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/frames/present_right.png",
+      "source_sha256": "efb0f18095d922d38c89a42460913f0aa99bb04a3429a469500b9aeead6be77d",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        213.00391986062718,
+        389.79442508710804
+      ],
+      "body_bbox_px": [
+        107,
+        8,
+        361,
+        392
+      ],
+      "tail_bbox_px": [
+        270,
+        295,
+        354,
+        365
+      ],
+      "reference_height_px": 393.6951219512195,
+      "anchor_kind": "anatomical-feet-with-inherited-neutral-projection-offset",
+      "anchor_measurement": "Independent visually selected native foot ROIs; alpha8 lower4px band centres. See metrics for ROIs/points. Approximate art calibration, not physical subpixel metrology.",
+      "anchor_basis": "Maintain the canonical neutral anchor-to-anatomical-sole offset at the common sheet ratio. Tail is separate. Airborne diagnostic uses same-sheet standing-floor coordinate and preserves drawn lift; manager must explicitly select this policy.",
+      "vertical_motion_policy": "grounded-anchor; any scene movement is explicit",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "present_right",
+      "source_sheet": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e680a97e35c32080e3e5a3bce24c5ca562f9d8323ca5bb367d545955790d11e0"
+    },
+    "video/think": {
+      "path": "poses/video/think.png",
+      "sha256": "e5baf9c99f06532c4234f37bc3e5d31787cb72b828ac3fb98632130151094fe0",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/frames/think.png",
+      "source_sha256": "e5baf9c99f06532c4234f37bc3e5d31787cb72b828ac3fb98632130151094fe0",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        206.25391986062718,
+        388.79442508710804
+      ],
+      "body_bbox_px": [
+        81,
+        7,
+        313,
+        391
+      ],
+      "tail_bbox_px": [
+        270,
+        295,
+        355,
+        365
+      ],
+      "reference_height_px": 393.6951219512195,
+      "anchor_kind": "anatomical-feet-with-inherited-neutral-projection-offset",
+      "anchor_measurement": "Independent visually selected native foot ROIs; alpha8 lower4px band centres. See metrics for ROIs/points. Approximate art calibration, not physical subpixel metrology.",
+      "anchor_basis": "Maintain the canonical neutral anchor-to-anatomical-sole offset at the common sheet ratio. Tail is separate. Airborne diagnostic uses same-sheet standing-floor coordinate and preserves drawn lift; manager must explicitly select this policy.",
+      "vertical_motion_policy": "grounded-anchor; any scene movement is explicit",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "think",
+      "source_sheet": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e680a97e35c32080e3e5a3bce24c5ca562f9d8323ca5bb367d545955790d11e0"
+    },
+    "video/aha": {
+      "path": "poses/video/aha.png",
+      "sha256": "91b3399c26b9b4bb5397e3b1c441e9d6e17fdbce41f7ec5dd334f444ba010bbb",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/frames/aha.png",
+      "source_sha256": "91b3399c26b9b4bb5397e3b1c441e9d6e17fdbce41f7ec5dd334f444ba010bbb",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        201.75391986062718,
+        390.79442508710804
+      ],
+      "body_bbox_px": [
+        94,
+        12,
+        303,
+        393
+      ],
+      "tail_bbox_px": [
+        270,
+        295,
+        348,
+        365
+      ],
+      "reference_height_px": 393.6951219512195,
+      "anchor_kind": "anatomical-feet-with-inherited-neutral-projection-offset",
+      "anchor_measurement": "Independent visually selected native foot ROIs; alpha8 lower4px band centres. See metrics for ROIs/points. Approximate art calibration, not physical subpixel metrology.",
+      "anchor_basis": "Maintain the canonical neutral anchor-to-anatomical-sole offset at the common sheet ratio. Tail is separate. Airborne diagnostic uses same-sheet standing-floor coordinate and preserves drawn lift; manager must explicitly select this policy.",
+      "vertical_motion_policy": "grounded-anchor; any scene movement is explicit",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "aha",
+      "source_sheet": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e680a97e35c32080e3e5a3bce24c5ca562f9d8323ca5bb367d545955790d11e0"
+    },
+    "video/cheer": {
+      "path": "poses/video/cheer.png",
+      "sha256": "d3931f7ad33d452366f4675cad698ef8e7d3efa264b02477847e4005879e2df0",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/frames/cheer.png",
+      "source_sha256": "d3931f7ad33d452366f4675cad698ef8e7d3efa264b02477847e4005879e2df0",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        209.50391986062718,
+        389.79442508710804
+      ],
+      "body_bbox_px": [
+        81,
+        15,
+        347,
+        392
+      ],
+      "tail_bbox_px": [
+        270,
+        295,
+        351,
+        365
+      ],
+      "reference_height_px": 393.6951219512195,
+      "anchor_kind": "anatomical-feet-with-inherited-neutral-projection-offset",
+      "anchor_measurement": "Independent visually selected native foot ROIs; alpha8 lower4px band centres. See metrics for ROIs/points. Approximate art calibration, not physical subpixel metrology.",
+      "anchor_basis": "Maintain the canonical neutral anchor-to-anatomical-sole offset at the common sheet ratio. Tail is separate. Airborne diagnostic uses same-sheet standing-floor coordinate and preserves drawn lift; manager must explicitly select this policy.",
+      "vertical_motion_policy": "grounded-anchor; any scene movement is explicit",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "cheer",
+      "source_sheet": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e680a97e35c32080e3e5a3bce24c5ca562f9d8323ca5bb367d545955790d11e0"
+    },
+    "video/species_a": {
+      "path": "poses/video/species_a.png",
+      "sha256": "4bcf0faa3d4748c7fad10e89f02d24ede559866ba5c51c53a847b5ac895f889d",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/frames/species_a.png",
+      "source_sha256": "4bcf0faa3d4748c7fad10e89f02d24ede559866ba5c51c53a847b5ac895f889d",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        199.50391986062718,
+        389.79442508710804
+      ],
+      "body_bbox_px": [
+        89,
+        47,
+        304,
+        392
+      ],
+      "tail_bbox_px": [
+        270,
+        295,
+        352,
+        365
+      ],
+      "reference_height_px": 393.6951219512195,
+      "anchor_kind": "anatomical-feet-with-inherited-neutral-projection-offset",
+      "anchor_measurement": "Independent visually selected native foot ROIs; alpha8 lower4px band centres. See metrics for ROIs/points. Approximate art calibration, not physical subpixel metrology.",
+      "anchor_basis": "Maintain the canonical neutral anchor-to-anatomical-sole offset at the common sheet ratio. Tail is separate. Airborne diagnostic uses same-sheet standing-floor coordinate and preserves drawn lift; manager must explicitly select this policy.",
+      "vertical_motion_policy": "grounded-anchor; any scene movement is explicit",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "species_a",
+      "source_sheet": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e680a97e35c32080e3e5a3bce24c5ca562f9d8323ca5bb367d545955790d11e0"
+    },
+    "video/species_b": {
+      "path": "poses/video/species_b.png",
+      "sha256": "70175d4c49564d404877f5b782463d6fe70f476aa13f2c71443f86119f895c2c",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/frames/species_b.png",
+      "source_sha256": "70175d4c49564d404877f5b782463d6fe70f476aa13f2c71443f86119f895c2c",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        205.25391986062718,
+        389.79442508710804
+      ],
+      "body_bbox_px": [
+        88,
+        10,
+        298,
+        353
+      ],
+      "tail_bbox_px": [
+        270,
+        250,
+        341,
+        310
+      ],
+      "reference_height_px": 393.6951219512195,
+      "anchor_kind": "inferred-ground",
+      "anchor_measurement": "Independent visually selected native foot ROIs; alpha8 lower4px band centres. See metrics for ROIs/points. Approximate art calibration, not physical subpixel metrology.",
+      "anchor_basis": "Maintain the canonical neutral anchor-to-anatomical-sole offset at the common sheet ratio. Tail is separate. Airborne diagnostic uses same-sheet standing-floor coordinate and preserves drawn lift; manager must explicitly select this policy.",
+      "vertical_motion_policy": "retain-native-lift; application-must-not-add-a-second-root-jump",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "species_b",
+      "source_sheet": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "e680a97e35c32080e3e5a3bce24c5ca562f9d8323ca5bb367d545955790d11e0"
+    }
+  },
   "clips": {
     "path": "clips.json",
-    "sha256": "5203974ebfbbdaf5197b816c25ee6f40c4497665733b98d4c31f233bdff4389c"
+    "sha256": "b0f691e07637a41fec984bc9742a47ac26cdbc5534bf8e949386f2f4517b2c44"
   },
-  "source_registrations": [],
+  "source_registrations": [
+    {
+      "namespace": "video",
+      "path": "assets/library/characters/quokka/generation-batches/youtube-core-20261114-root-v001/registration.json",
+      "sha256": "fa5ab8939375d901969dd1d11dc6ae0fffdcd4a511e46862cbac914bd7616634",
+      "clips_available": true
+    }
+  ],
   "geometry_policy": "Native pixels and adopted per-frame references retained. Atlas neutral coordinates are shifted only by the adopted crop origin.",
   "style_pattern": "slightly-anthropomorphic-character",
   "usage_role": "cast-character",

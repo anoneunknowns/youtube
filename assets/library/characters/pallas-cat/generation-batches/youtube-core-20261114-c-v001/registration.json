@@ -1,0 +1,1151 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "pallas-cat",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-c-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/pallas-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "e868524755cca727b85eeb20c1974e7b52cf3d354b05e95c3165dde082bd110d",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      224,
+      193,
+      995,
+      1176
+    ],
+    "anchor_px": [
+      600,
+      1170
+    ],
+    "reference_height_px": 983,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of the two short supporting paws; tail excluded from body box.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/pallas-cat/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "a9fc6bd02074cc367e188462fed94c590a0b49a55f308370911c2b456bfbfb02"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "e868524755cca727b85eeb20c1974e7b52cf3d354b05e95c3165dde082bd110d",
+      "reference_height_px": 983,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "004e456ae23f11a1c3b2b3938927562a1a1b07f99ef73c67e236f955073f7c1e",
+      "reference_height_px": 386.6844380403458,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/pallas-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "e868524755cca727b85eeb20c1974e7b52cf3d354b05e95c3165dde082bd110d",
+          "bytes": 1233804,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 983,
+        "landmarks": [
+          {
+            "name": "upper-head-width",
+            "canonical_y": 400,
+            "source_y": 97,
+            "canonical_span_px": [
+              270,
+              964
+            ],
+            "source_span_px": [
+              66,
+              339
+            ],
+            "ratio": 0.39337175792507206,
+            "used_for_scale": true
+          },
+          {
+            "name": "mid-head-width",
+            "canonical_y": 500,
+            "source_y": 135,
+            "canonical_span_px": [
+              247,
+              979
+            ],
+            "source_span_px": [
+              58,
+              349
+            ],
+            "ratio": 0.3975409836065574,
+            "used_for_scale": true
+          },
+          {
+            "name": "lower-head-width",
+            "canonical_y": 600,
+            "source_y": 173,
+            "canonical_span_px": [
+              256,
+              966
+            ],
+            "source_span_px": [
+              60,
+              339
+            ],
+            "ratio": 0.3929577464788732,
+            "used_for_scale": true
+          }
+        ],
+        "common_ratio": 0.39337175792507206,
+        "reference_height_px": 386.6844380403458,
+        "crosscheck": "Canonical upper/mid/lower roundface rows matched to nativeblink; short torso/paired paws inspected separately at oldmax, tail excluded.",
+        "method": "Explicit corresponding anatomical head spans, median shared source-sheet scale; torso/feet crosschecked on actual same-scale diagnostics, never per-pose fit.",
+        "canonical_paired_sole_points_px": [
+          [
+            491.5,
+            1175
+          ],
+          [
+            714.5,
+            1175
+          ]
+        ],
+        "canonical_source_foot_point_px": [
+          603.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -3.0,
+          -5
+        ],
+        "scope": "Approximate anatomical registration, not subpixel motion acceptance."
+      },
+      "generation_input": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "beabbd4e5502e673664f59fd9998152c1b017ec36466a9158fff4ec1ec047dfe"
+    },
+    {
+      "id": "blink-single-v003",
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v003.png",
+      "source_sheet_sha256": "617ea5bd572e6553eb179aa92a689f942d6edf99b66cda6e34ab578da66dbb69",
+      "reference_height_px": 984.4164265129682,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/pallas-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "e868524755cca727b85eeb20c1974e7b52cf3d354b05e95c3165dde082bd110d",
+          "bytes": 1233804,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 983,
+        "landmarks": [
+          {
+            "name": "upper-head-width",
+            "canonical_y": 400,
+            "source_y": 400,
+            "canonical_span_px": [
+              270,
+              964
+            ],
+            "source_span_px": [
+              270,
+              965
+            ],
+            "ratio": 1.0014409221902016,
+            "used_for_scale": true
+          },
+          {
+            "name": "mid-head-width",
+            "canonical_y": 500,
+            "source_y": 500,
+            "canonical_span_px": [
+              247,
+              979
+            ],
+            "source_span_px": [
+              246,
+              993
+            ],
+            "ratio": 1.0204918032786885,
+            "used_for_scale": true
+          },
+          {
+            "name": "lower-head-width",
+            "canonical_y": 600,
+            "source_y": 600,
+            "canonical_span_px": [
+              256,
+              966
+            ],
+            "source_span_px": [
+              256,
+              967
+            ],
+            "ratio": 1.0014084507042254,
+            "used_for_scale": true
+          }
+        ],
+        "common_ratio": 1.0014409221902016,
+        "reference_height_px": 984.4164265129682,
+        "crosscheck": "Fresh directneutral head/trunk/pairedpaws retained; blinkeyesonly/same-leftpaw-groomB. Native and actual430 compared.",
+        "method": "Explicit corresponding anatomical head spans, median shared source-sheet scale; torso/feet crosschecked on actual same-scale diagnostics, never per-pose fit.",
+        "canonical_paired_sole_points_px": [
+          [
+            491.5,
+            1175
+          ],
+          [
+            714.5,
+            1175
+          ]
+        ],
+        "canonical_source_foot_point_px": [
+          603.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -3.0,
+          -5
+        ],
+        "scope": "Approximate anatomical registration, not subpixel motion acceptance."
+      },
+      "generation_input": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v003-generation-v001.json",
+      "generation_record_sha256": "bc7249ee59c52578f4f453039f460fa9e7cc9b5e34c98aa030d5be008a0ab0ed"
+    },
+    {
+      "id": "species_b-single-v003",
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/species_b-single-v003.png",
+      "source_sheet_sha256": "e95c357a8e8ef83614e22973799dbab0705c36cc14b298607deb0b6aee7b8ef8",
+      "reference_height_px": 983.0,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/pallas-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "e868524755cca727b85eeb20c1974e7b52cf3d354b05e95c3165dde082bd110d",
+          "bytes": 1233804,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 983,
+        "landmarks": [
+          {
+            "name": "upper-head-width",
+            "canonical_y": 400,
+            "source_y": 400,
+            "canonical_span_px": [
+              270,
+              964
+            ],
+            "source_span_px": [
+              260,
+              960
+            ],
+            "ratio": 1.0086455331412103,
+            "used_for_scale": true
+          },
+          {
+            "name": "mid-head-width",
+            "canonical_y": 500,
+            "source_y": 500,
+            "canonical_span_px": [
+              247,
+              979
+            ],
+            "source_span_px": [
+              249,
+              981
+            ],
+            "ratio": 1.0,
+            "used_for_scale": true
+          },
+          {
+            "name": "lower-head-width",
+            "canonical_y": 600,
+            "source_y": 600,
+            "canonical_span_px": [
+              256,
+              966
+            ],
+            "source_span_px": [
+              277,
+              967
+            ],
+            "ratio": 0.971830985915493,
+            "used_for_scale": true
+          }
+        ],
+        "common_ratio": 1.0,
+        "reference_height_px": 983.0,
+        "crosscheck": "Fresh directneutral head/trunk/pairedpaws retained; blinkeyesonly/same-leftpaw-groomB. Native and actual430 compared.",
+        "method": "Explicit corresponding anatomical head spans, median shared source-sheet scale; torso/feet crosschecked on actual same-scale diagnostics, never per-pose fit.",
+        "canonical_paired_sole_points_px": [
+          [
+            491.5,
+            1175
+          ],
+          [
+            714.5,
+            1175
+          ]
+        ],
+        "canonical_source_foot_point_px": [
+          603.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -3.0,
+          -5
+        ],
+        "scope": "Approximate anatomical registration, not subpixel motion acceptance."
+      },
+      "generation_input": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_b-single-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_b-single-v003-generation-v001.json",
+      "generation_record_sha256": "187e407e653f593bae70b0b9b93e26a2ab9615ae946a3b40068e1db53265c35a"
+    },
+    {
+      "id": "cheer-single-v004",
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/cheer-single-v004.png",
+      "source_sheet_sha256": "a8c21a08737c46ebefeb6be1b5b6b9a0791c0bcb434dc9f9d362b27465fa367a",
+      "reference_height_px": 984.3845070422535,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/pallas-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "e868524755cca727b85eeb20c1974e7b52cf3d354b05e95c3165dde082bd110d",
+          "bytes": 1233804,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 983,
+        "landmarks": [
+          {
+            "name": "upper-head-width",
+            "canonical_y": 400,
+            "source_y": 400,
+            "canonical_span_px": [
+              270,
+              964
+            ],
+            "source_span_px": [
+              271,
+              965
+            ],
+            "ratio": 1.0,
+            "used_for_scale": true
+          },
+          {
+            "name": "mid-head-width",
+            "canonical_y": 500,
+            "source_y": 500,
+            "canonical_span_px": [
+              247,
+              979
+            ],
+            "source_span_px": [
+              245,
+              981
+            ],
+            "ratio": 1.005464480874317,
+            "used_for_scale": true
+          },
+          {
+            "name": "lower-head-width",
+            "canonical_y": 600,
+            "source_y": 600,
+            "canonical_span_px": [
+              256,
+              966
+            ],
+            "source_span_px": [
+              256,
+              967
+            ],
+            "ratio": 1.0014084507042254,
+            "used_for_scale": true
+          }
+        ],
+        "common_ratio": 1.0014084507042254,
+        "reference_height_px": 984.3845070422535,
+        "crosscheck": "Directneutral freshsingle removes leftlowertrunk yellow-ochre contamination; samebody supports, uniformbrown edge.",
+        "method": "Explicit corresponding anatomical head spans, median shared source-sheet scale; torso/feet crosschecked on actual same-scale diagnostics, never per-pose fit.",
+        "canonical_paired_sole_points_px": [
+          [
+            491.5,
+            1175
+          ],
+          [
+            714.5,
+            1175
+          ]
+        ],
+        "canonical_source_foot_point_px": [
+          603.0,
+          1175
+        ],
+        "canonical_anchor_projection_offset_px": [
+          -3.0,
+          -5
+        ],
+        "scope": "Approximate anatomical registration, not subpixel motion acceptance."
+      },
+      "generation_input": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-cheer-single-v004-generation-v001.json",
+      "generation_prompt": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-cheer-single-v004-generation-v001.json",
+      "generation_record_sha256": "aa49974f3db8443090c31ce3f1d2debc8bff72561b30c4c685045330217cdb12"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/pallas-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "e868524755cca727b85eeb20c1974e7b52cf3d354b05e95c3165dde082bd110d",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        224,
+        193,
+        995,
+        1176
+      ],
+      "anchor_px": [
+        600,
+        1170
+      ],
+      "reference_height_px": 983,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of the two short supporting paws; tail excluded from body box.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/pallas-cat/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "a9fc6bd02074cc367e188462fed94c590a0b49a55f308370911c2b456bfbfb02",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "e868524755cca727b85eeb20c1974e7b52cf3d354b05e95c3165dde082bd110d",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v003.png",
+      "sha256": "617ea5bd572e6553eb179aa92a689f942d6edf99b66cda6e34ab578da66dbb69",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "blink-single-v003",
+      "body_bbox_px": [
+        217,
+        192,
+        989,
+        1176
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        224,
+        193,
+        1073,
+        1176
+      ],
+      "anchor_px": [
+        600.2456772334294,
+        1169.992795389049
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        603.25,
+        1175
+      ],
+      "paired_sole_points_px": [
+        [
+          491.0,
+          1175
+        ],
+        [
+          715.5,
+          1175
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 984.4164265129682,
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/blink-single-v003.png",
+      "source_sheet_sha256": "617ea5bd572e6553eb179aa92a689f942d6edf99b66cda6e34ab578da66dbb69",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/frames/greet-v001.png",
+      "sha256": "993f9c4abad00522c3edb86b6afc983b15cafa4b0043453cc3957511ebedfa69",
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        40,
+        8,
+        343,
+        395
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        46,
+        18,
+        375,
+        395
+      ],
+      "anchor_px": [
+        190.31988472622479,
+        392.03314121037465
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        191.5,
+        394
+      ],
+      "paired_sole_points_px": [
+        [
+          147.5,
+          394
+        ],
+        [
+          235.5,
+          394
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 386.6844380403458,
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "004e456ae23f11a1c3b2b3938927562a1a1b07f99ef73c67e236f955073f7c1e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/frames/present_left-v001.png",
+      "sha256": "df8374b4357ab04aa2421c7218da9e6751cb19f7626e83589a4baa6fd708cb05",
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        43,
+        8,
+        346,
+        395
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        33,
+        18,
+        377,
+        395
+      ],
+      "anchor_px": [
+        193.31988472622479,
+        392.03314121037465
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        194.5,
+        394
+      ],
+      "paired_sole_points_px": [
+        [
+          150.0,
+          394
+        ],
+        [
+          239.0,
+          394
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 386.6844380403458,
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "004e456ae23f11a1c3b2b3938927562a1a1b07f99ef73c67e236f955073f7c1e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/frames/present_right-v001.png",
+      "sha256": "073592c4c7a5ae696c6cbbae25a137968d53bfe4cac3ac960dcaa66fc3421e75",
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        46,
+        9,
+        349,
+        396
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        52,
+        14,
+        377,
+        396
+      ],
+      "anchor_px": [
+        196.56988472622479,
+        393.03314121037465
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        197.75,
+        395
+      ],
+      "paired_sole_points_px": [
+        [
+          153.5,
+          395
+        ],
+        [
+          242.0,
+          395
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 386.6844380403458,
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "004e456ae23f11a1c3b2b3938927562a1a1b07f99ef73c67e236f955073f7c1e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/frames/think-v001.png",
+      "sha256": "2de6af98798d0a34b7931a48426ff47dfe8103264a6f38a982dbfad22c556d28",
+      "crop_from_sheet_xyxy": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        39,
+        9,
+        343,
+        396
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        56,
+        9,
+        373,
+        396
+      ],
+      "anchor_px": [
+        189.81988472622479,
+        393.03314121037465
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        191.0,
+        395
+      ],
+      "paired_sole_points_px": [
+        [
+          147.0,
+          395
+        ],
+        [
+          235.0,
+          395
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 386.6844380403458,
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "004e456ae23f11a1c3b2b3938927562a1a1b07f99ef73c67e236f955073f7c1e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/frames/aha-v001.png",
+      "sha256": "c77531db79bc5fd3f776cb9212ea42633e0d5f0570c01817c4d74676930530dd",
+      "crop_from_sheet_xyxy": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        43,
+        9,
+        346,
+        396
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        53,
+        13,
+        378,
+        396
+      ],
+      "anchor_px": [
+        193.56988472622479,
+        393.03314121037465
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        194.75,
+        395
+      ],
+      "paired_sole_points_px": [
+        [
+          150.5,
+          395
+        ],
+        [
+          239.0,
+          395
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 386.6844380403458,
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "004e456ae23f11a1c3b2b3938927562a1a1b07f99ef73c67e236f955073f7c1e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/cheer-single-v004.png",
+      "sha256": "a8c21a08737c46ebefeb6be1b5b6b9a0791c0bcb434dc9f9d362b27465fa367a",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "cheer-single-v004",
+      "body_bbox_px": [
+        216,
+        192,
+        988,
+        1176
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        223,
+        192,
+        1073,
+        1176
+      ],
+      "anchor_px": [
+        598.7457746478873,
+        1169.9929577464789
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        601.75,
+        1175
+      ],
+      "paired_sole_points_px": [
+        [
+          492.0,
+          1175
+        ],
+        [
+          711.5,
+          1175
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 984.3845070422535,
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/cheer-single-v004.png",
+      "source_sheet_sha256": "a8c21a08737c46ebefeb6be1b5b6b9a0791c0bcb434dc9f9d362b27465fa367a",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/frames/species_a-v001.png",
+      "sha256": "32ef5dfacb6b519f8c56a10548e4e7a94105659a2b34d2e2c9ce66509c0ee5da",
+      "crop_from_sheet_xyxy": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        39,
+        14,
+        342,
+        401
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        45,
+        13,
+        375,
+        401
+      ],
+      "anchor_px": [
+        189.56988472622479,
+        398.03314121037465
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        190.75,
+        400
+      ],
+      "paired_sole_points_px": [
+        [
+          147.0,
+          400
+        ],
+        [
+          234.5,
+          400
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 386.6844380403458,
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "004e456ae23f11a1c3b2b3938927562a1a1b07f99ef73c67e236f955073f7c1e",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/species_b-single-v003.png",
+      "sha256": "e95c357a8e8ef83614e22973799dbab0705c36cc14b298607deb0b6aee7b8ef8",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sheet_id": "species_b-single-v003",
+      "body_bbox_px": [
+        216,
+        194,
+        987,
+        1177
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        228,
+        193,
+        1071,
+        1177
+      ],
+      "anchor_px": [
+        598.75,
+        1171.0
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        601.75,
+        1176
+      ],
+      "paired_sole_points_px": [
+        [
+          491.0,
+          1176
+        ],
+        [
+          712.5,
+          1176
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 983.0,
+      "source_sheet": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/source/species_b-single-v003.png",
+      "source_sheet_sha256": "e95c357a8e8ef83614e22973799dbab0705c36cc14b298607deb0b6aee7b8ef8",
+      "size_px": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "beabbd4e5502e673664f59fd9998152c1b017ec36466a9158fff4ec1ec047dfe",
+        "bytes": 5261
+      },
+      {
+        "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-blink-single-v003-generation-v001.json",
+        "sha256": "bc7249ee59c52578f4f453039f460fa9e7cc9b5e34c98aa030d5be008a0ab0ed",
+        "bytes": 2822
+      },
+      {
+        "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-species_b-single-v003-generation-v001.json",
+        "sha256": "187e407e653f593bae70b0b9b93e26a2ab9615ae946a3b40068e1db53265c35a",
+        "bytes": 4037
+      },
+      {
+        "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/provenance/selected-cheer-single-v004-generation-v001.json",
+        "sha256": "aa49974f3db8443090c31ce3f1d2debc8bff72561b30c4c685045330217cdb12",
+        "bytes": 2992
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/pallas-cat/generation-batches/youtube-core-20261114-c-v001/qa/stock-adoption-v001.json",
+      "sha256": "ef6459e4c1df5058cadf2f944ddfdd4d15730ff8023dd98c9701d2c1183cc525",
+      "bytes": 17078
+    }
+  ]
+}

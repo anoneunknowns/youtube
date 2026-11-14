@@ -1,0 +1,827 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "golden-lion-tamarin",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-c-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/golden-lion-tamarin/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "68f6ca61a781fd1b098d22bec7672159090ec0c1cfaa679750e654b5637fdf15",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      209,
+      123,
+      1008,
+      1180
+    ],
+    "anchor_px": [
+      600,
+      1174
+    ],
+    "reference_height_px": 1057,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of two standing short foot-support regions; tail excluded from body width.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/golden-lion-tamarin/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "863865cacb925e2ef51ef7603ffbe6b364079c772e2ec3470ec0ca132a7de9ad"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "68f6ca61a781fd1b098d22bec7672159090ec0c1cfaa679750e654b5637fdf15",
+      "reference_height_px": 1057,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f869dc2d8debca2ff82c9728b955be5b818b278bef55303de1d594efb0e3eaa7",
+      "reference_height_px": 368.5592105263158,
+      "calibration": {
+        "canonical_neutral_reference": {
+          "path": "assets/library/characters/golden-lion-tamarin/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "68f6ca61a781fd1b098d22bec7672159090ec0c1cfaa679750e654b5637fdf15",
+          "bytes": 1196340,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1057,
+        "landmarks": [
+          {
+            "name": "upper-head-width",
+            "canonical_y": 300,
+            "source_y": 74,
+            "canonical_span_px": [
+              312,
+              920
+            ],
+            "source_span_px": [
+              104,
+              316
+            ],
+            "ratio": 0.34868421052631576,
+            "used_for_scale": true
+          },
+          {
+            "name": "mid-head-width",
+            "canonical_y": 450,
+            "source_y": 127,
+            "canonical_span_px": [
+              247,
+              970
+            ],
+            "source_span_px": [
+              87,
+              332
+            ],
+            "ratio": 0.338865836791148,
+            "used_for_scale": true
+          },
+          {
+            "name": "lower-head-width",
+            "canonical_y": 600,
+            "source_y": 180,
+            "canonical_span_px": [
+              227,
+              987
+            ],
+            "source_span_px": [
+              75,
+              340
+            ],
+            "ratio": 0.34868421052631576,
+            "used_for_scale": true
+          }
+        ],
+        "common_ratio": 0.34868421052631576,
+        "reference_height_px": 368.5592105263158,
+        "crosscheck": "Golden mane head top123 tofeet1180; candidate12to384, projected ratio about0.352. Mane/torso junction about820→254, twofeet and tail side require actual same-scale view; no per-frame body fit.",
+        "method": "Explicit corresponding anatomical head spans, median shared source-sheet scale; torso/feet crosschecked on actual same-scale diagnostics, never per-pose fit.",
+        "canonical_paired_sole_points_px": [
+          [
+            491.5,
+            1179
+          ],
+          [
+            707.5,
+            1179
+          ]
+        ],
+        "canonical_source_foot_point_px": [
+          599.5,
+          1179
+        ],
+        "canonical_anchor_projection_offset_px": [
+          0.5,
+          -5
+        ],
+        "scope": "Approximate anatomical registration, not subpixel motion acceptance."
+      },
+      "generation_input": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "fe060dd593af06ddeb3248e0509ccd1dae75c23f3d414ed9aedb9511f93c6bf5"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "68f6ca61a781fd1b098d22bec7672159090ec0c1cfaa679750e654b5637fdf15",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        209,
+        123,
+        1008,
+        1180
+      ],
+      "anchor_px": [
+        600,
+        1174
+      ],
+      "reference_height_px": 1057,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of two standing short foot-support regions; tail excluded from body width.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/golden-lion-tamarin/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "863865cacb925e2ef51ef7603ffbe6b364079c772e2ec3470ec0ca132a7de9ad",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "68f6ca61a781fd1b098d22bec7672159090ec0c1cfaa679750e654b5637fdf15",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/frames/blink-v001.png",
+      "sha256": "7587899c0f27fad486cfd3d698d093beaba290923aec9526becc3b33a448fbb0",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        65,
+        15,
+        344,
+        384
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        68,
+        13,
+        355,
+        384
+      ],
+      "anchor_px": [
+        204.42434210526315,
+        381.25657894736844
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        204.25,
+        383
+      ],
+      "paired_sole_points_px": [
+        [
+          167.0,
+          383
+        ],
+        [
+          241.5,
+          383
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 368.5592105263158,
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f869dc2d8debca2ff82c9728b955be5b818b278bef55303de1d594efb0e3eaa7",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/frames/greet-v001.png",
+      "sha256": "4afb91d924a15d95e326aab4a91d6315e9f94a9a36b1a1067308a211d49d24a9",
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        65,
+        15,
+        344,
+        384
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        69,
+        12,
+        355,
+        384
+      ],
+      "anchor_px": [
+        204.42434210526315,
+        381.25657894736844
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        204.25,
+        383
+      ],
+      "paired_sole_points_px": [
+        [
+          167.0,
+          383
+        ],
+        [
+          241.5,
+          383
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 368.5592105263158,
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f869dc2d8debca2ff82c9728b955be5b818b278bef55303de1d594efb0e3eaa7",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/frames/present_left-v001.png",
+      "sha256": "feff10cb8184fe118af3e3d246d08e3d0212e4e4ed0541928776e2a194d647ac",
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        65,
+        15,
+        344,
+        384
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        62,
+        12,
+        355,
+        384
+      ],
+      "anchor_px": [
+        204.42434210526315,
+        381.25657894736844
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        204.25,
+        383
+      ],
+      "paired_sole_points_px": [
+        [
+          167.0,
+          383
+        ],
+        [
+          241.5,
+          383
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 368.5592105263158,
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f869dc2d8debca2ff82c9728b955be5b818b278bef55303de1d594efb0e3eaa7",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/frames/present_right-v001.png",
+      "sha256": "1370960752da28c0f880c0e49b4277ada13c730101bd3794fab74b6f7bfab703",
+      "crop_from_sheet_xyxy": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        65,
+        15,
+        344,
+        384
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        69,
+        12,
+        351,
+        384
+      ],
+      "anchor_px": [
+        204.42434210526315,
+        381.25657894736844
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        204.25,
+        383
+      ],
+      "paired_sole_points_px": [
+        [
+          167.0,
+          383
+        ],
+        [
+          241.5,
+          383
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 368.5592105263158,
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f869dc2d8debca2ff82c9728b955be5b818b278bef55303de1d594efb0e3eaa7",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/frames/think-v001.png",
+      "sha256": "9f7e600a5e5342184e05bc69fc776bd2e632193ee7128d526ba47c7c277c2a52",
+      "crop_from_sheet_xyxy": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        65,
+        15,
+        344,
+        384
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        73,
+        9,
+        355,
+        384
+      ],
+      "anchor_px": [
+        204.42434210526315,
+        381.25657894736844
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        204.25,
+        383
+      ],
+      "paired_sole_points_px": [
+        [
+          167.0,
+          383
+        ],
+        [
+          241.5,
+          383
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 368.5592105263158,
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f869dc2d8debca2ff82c9728b955be5b818b278bef55303de1d594efb0e3eaa7",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/frames/aha-v001.png",
+      "sha256": "b00a137523d684d2e02e0a0c25dbe7b2f679d489efa977716d8e425c3f080e7d",
+      "crop_from_sheet_xyxy": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        65,
+        15,
+        344,
+        384
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        69,
+        13,
+        355,
+        384
+      ],
+      "anchor_px": [
+        204.42434210526315,
+        381.25657894736844
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        204.25,
+        383
+      ],
+      "paired_sole_points_px": [
+        [
+          167.0,
+          383
+        ],
+        [
+          241.5,
+          383
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 368.5592105263158,
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f869dc2d8debca2ff82c9728b955be5b818b278bef55303de1d594efb0e3eaa7",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/frames/cheer-v001.png",
+      "sha256": "8b4e40b2960eeab3f06958b50e09cb073bc883e8023e3fdd65825e741f368293",
+      "crop_from_sheet_xyxy": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        65,
+        15,
+        344,
+        384
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        69,
+        12,
+        354,
+        384
+      ],
+      "anchor_px": [
+        204.42434210526315,
+        381.25657894736844
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        204.25,
+        383
+      ],
+      "paired_sole_points_px": [
+        [
+          167.0,
+          383
+        ],
+        [
+          241.5,
+          383
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 368.5592105263158,
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f869dc2d8debca2ff82c9728b955be5b818b278bef55303de1d594efb0e3eaa7",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/frames/species_a-v001.png",
+      "sha256": "2686b6885c37e3cef95ece9b00ee32e95b792f60f8056847e46aa97cd9352c67",
+      "crop_from_sheet_xyxy": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        65,
+        15,
+        344,
+        384
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        69,
+        13,
+        362,
+        384
+      ],
+      "anchor_px": [
+        204.42434210526315,
+        381.25657894736844
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        204.25,
+        383
+      ],
+      "paired_sole_points_px": [
+        [
+          167.0,
+          383
+        ],
+        [
+          241.5,
+          383
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 368.5592105263158,
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f869dc2d8debca2ff82c9728b955be5b818b278bef55303de1d594efb0e3eaa7",
+      "size_px": [
+        418,
+        418
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/frames/species_b-v001.png",
+      "sha256": "796c08164b78206b55ab96b8bf2d178c250835146a00e61fef3553e738f8559b",
+      "crop_from_sheet_xyxy": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "sheet_id": "core-sheet-v001",
+      "body_bbox_px": [
+        65,
+        15,
+        344,
+        384
+      ],
+      "tail_bbox_px": null,
+      "subject_bbox_px": [
+        69,
+        13,
+        355,
+        384
+      ],
+      "anchor_px": [
+        204.42434210526315,
+        381.25657894736844
+      ],
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Native paired lower-foot anatomy regions sampled5px above alpha32 lower envelope; original anchor-to-sole offset transferred in source-sheet scale.",
+      "anchor_basis": "Two planted soles, lateral tail/gesture excluded from body calibration.",
+      "vertical_motion_policy": "Grounded key pose, baked lift0; no second root jump.",
+      "source_foot_point_px": [
+        204.25,
+        383
+      ],
+      "paired_sole_points_px": [
+        [
+          167.0,
+          383
+        ],
+        [
+          241.5,
+          383
+        ]
+      ],
+      "baked_in_lift_px": 0,
+      "reference_height_px": 368.5592105263158,
+      "source_sheet": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "f869dc2d8debca2ff82c9728b955be5b818b278bef55303de1d594efb0e3eaa7",
+      "size_px": [
+        418,
+        418
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        900,
+        160,
+        900
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "blink",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        160,
+        420,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        600,
+        300
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        500,
+        500,
+        300
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        300,
+        550,
+        300
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "species_a",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        450,
+        450,
+        450,
+        350
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "fe060dd593af06ddeb3248e0509ccd1dae75c23f3d414ed9aedb9511f93c6bf5",
+        "bytes": 5321
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/golden-lion-tamarin/generation-batches/youtube-core-20261114-c-v001/qa/stock-adoption-v001.json",
+      "sha256": "34cdd65e278438b172478120e4f3b8f8687ebdbbdd99797e4d4b77a66ca463e5",
+      "bytes": 7736
+    }
+  ]
+}

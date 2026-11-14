@@ -1,0 +1,1475 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "sumatran-elephant",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "6fdc74708eedbd9a8a0212b9aba4e8916a87264752f075e199f7275ec3b10d78",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      180.0,
+      157.0,
+      1061.0,
+      1181.0
+    ],
+    "anchor_px": [
+      608.0,
+      1177.0
+    ],
+    "reference_height_px": 1024.0,
+    "anchor_kind": "anatomical-two-foot-contact",
+    "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+    "anchor_basis": "Midpoint of the two broad standing sole contacts beneath the upright torso; trunk and tail are identity appendages, not support legs.",
+    "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+    "source_manifest": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "6f4f2cff96feb711890c926995e57c039e0c5c26efa4c2ace021ea4d950aa949"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "6fdc74708eedbd9a8a0212b9aba4e8916a87264752f075e199f7275ec3b10d78",
+      "reference_height_px": 1024.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "28f12faa2c6902a8a161013257b3fe5911a465d974ef9fe3d56cb27cdbdc3991",
+      "reference_height_px": 789.2808108583396,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6fdc74708eedbd9a8a0212b9aba4e8916a87264752f075e199f7275ec3b10d78",
+          "bytes": 1108093,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1024.0,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 361.8,
+            "source_y": 209.20000000000002,
+            "canonical_span": [
+              225,
+              1023
+            ],
+            "source_span": [
+              150,
+              750
+            ],
+            "ratio": 0.7518796992481203
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 464.2,
+            "source_y": 288.29999999999995,
+            "canonical_span": [
+              180,
+              1061
+            ],
+            "source_span": [
+              114,
+              785
+            ],
+            "ratio": 0.7616345062429057
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 791.88,
+            "source_y": 541.4200000000001,
+            "canonical_span": [
+              328,
+              896
+            ],
+            "source_span": [
+              223,
+              666
+            ],
+            "ratio": 0.7799295774647887
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 914.76,
+            "source_y": 636.34,
+            "canonical_span": [
+              368,
+              848
+            ],
+            "source_span": [
+              254,
+              630
+            ],
+            "ratio": 0.7833333333333333
+          }
+        ],
+        "common_ratio": 0.7707820418538472,
+        "initial_roi_locator_only_visible_height_ratio": 0.7724609375,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0418333333333334,
+        "visual_confirmation": {
+          "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "37d905ec3ef4f3edac0b03c2e655e6f5f16f20234d4a147e78edd61b0d05e1ee",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+      "generation_record_sha256": "d51366aabcd31be431e0836f3542b00db803b82e675d366554787fb51c7d93dc"
+    },
+    {
+      "id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "0b78c535955e83bc171de7e43554d7dcdabc6e47f8b9626a765fc4879a317911",
+      "reference_height_px": 773.2800605372682,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6fdc74708eedbd9a8a0212b9aba4e8916a87264752f075e199f7275ec3b10d78",
+          "bytes": 1108093,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1024.0,
+        "reference_frame_id": "present_left",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 361.8,
+            "source_y": 206.0,
+            "canonical_span": [
+              225,
+              1023
+            ],
+            "source_span": [
+              150,
+              762
+            ],
+            "ratio": 0.7669172932330827
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 464.2,
+            "source_y": 286.0,
+            "canonical_span": [
+              180,
+              1061
+            ],
+            "source_span": [
+              123,
+              791
+            ],
+            "ratio": 0.7582292849035187
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 791.88,
+            "source_y": 542.0,
+            "canonical_span": [
+              328,
+              896
+            ],
+            "source_span": [
+              285,
+              661
+            ],
+            "ratio": 0.6619718309859155
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 914.76,
+            "source_y": 638.0,
+            "canonical_span": [
+              368,
+              848
+            ],
+            "source_span": [
+              271,
+              632
+            ],
+            "ratio": 0.7520833333333333
+          }
+        ],
+        "common_ratio": 0.755156309118426,
+        "initial_roi_locator_only_visible_height_ratio": 0.78125,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.1585346344584866,
+        "visual_confirmation": {
+          "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "37d905ec3ef4f3edac0b03c2e655e6f5f16f20234d4a147e78edd61b0d05e1ee",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_record_sha256": "01cf3fde4c0db6434bd5629288acd3293d0a1228f8c00a9be5441458a8481481"
+    },
+    {
+      "id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "067611c5f0a989bfadcbd1c437e7616ca97be019140d13936c3f5d289546d781",
+      "reference_height_px": 814.1685428099192,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6fdc74708eedbd9a8a0212b9aba4e8916a87264752f075e199f7275ec3b10d78",
+          "bytes": 1108093,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1024.0,
+        "reference_frame_id": "aha",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 361.8,
+            "source_y": 195.0,
+            "canonical_span": [
+              225,
+              1023
+            ],
+            "source_span": [
+              135,
+              769
+            ],
+            "ratio": 0.7944862155388471
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 464.2,
+            "source_y": 279.0,
+            "canonical_span": [
+              180,
+              1061
+            ],
+            "source_span": [
+              100,
+              801
+            ],
+            "ratio": 0.7956867196367764
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 791.88,
+            "source_y": 547.8,
+            "canonical_span": [
+              328,
+              896
+            ],
+            "source_span": [
+              219,
+              667
+            ],
+            "ratio": 0.7887323943661971
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 914.76,
+            "source_y": 648.6,
+            "canonical_span": [
+              368,
+              848
+            ],
+            "source_span": [
+              228,
+              612
+            ],
+            "ratio": 0.8
+          }
+        ],
+        "common_ratio": 0.7950864675878118,
+        "initial_roi_locator_only_visible_height_ratio": 0.8203125,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0142857142857145,
+        "visual_confirmation": {
+          "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "37d905ec3ef4f3edac0b03c2e655e6f5f16f20234d4a147e78edd61b0d05e1ee",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+      "generation_record_sha256": "303bd6cd818ee0fbe28a618a53b2e4fd885b9483dfad977fe6cfa2e8ef6465ab"
+    },
+    {
+      "id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "66a3bdbd311dd2cd8f28ef0d9917c30b4f4594acc53a4ae9a3069bdd62767c42",
+      "reference_height_px": 797.8123742955572,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6fdc74708eedbd9a8a0212b9aba4e8916a87264752f075e199f7275ec3b10d78",
+          "bytes": 1108093,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1024.0,
+        "reference_frame_id": "cheer",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 361.8,
+            "source_y": 186.8,
+            "canonical_span": [
+              225,
+              1023
+            ],
+            "source_span": [
+              166,
+              789
+            ],
+            "ratio": 0.7807017543859649
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 464.2,
+            "source_y": 268.2,
+            "canonical_span": [
+              180,
+              1061
+            ],
+            "source_span": [
+              134,
+              819
+            ],
+            "ratio": 0.7775255391600454
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 791.88,
+            "source_y": 528.6800000000001,
+            "canonical_span": [
+              328,
+              896
+            ],
+            "source_span": [
+              267,
+              670
+            ],
+            "ratio": 0.7095070422535211
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 914.76,
+            "source_y": 626.36,
+            "canonical_span": [
+              368,
+              848
+            ],
+            "source_span": [
+              278,
+              655
+            ],
+            "ratio": 0.7854166666666667
+          }
+        ],
+        "common_ratio": 0.7791136467730051,
+        "initial_roi_locator_only_visible_height_ratio": 0.794921875,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.106989247311828,
+        "visual_confirmation": {
+          "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "37d905ec3ef4f3edac0b03c2e655e6f5f16f20234d4a147e78edd61b0d05e1ee",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_record_sha256": "764335ae74c986c9f79ae01c7d97cd5662a091879dc240c313a4def5082c7b52"
+    },
+    {
+      "id": "species_b-single-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/species_b-single-v001.png",
+      "source_sheet_sha256": "0f7e3f0c7061f6ad9f70dd566f3a6dfccd188b1eaec104780c9393d9a5c8d165",
+      "reference_height_px": 1100.2749116720756,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "6fdc74708eedbd9a8a0212b9aba4e8916a87264752f075e199f7275ec3b10d78",
+          "bytes": 1108093,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1024.0,
+        "reference_frame_id": "species_b",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 361.8,
+            "source_y": 344.8,
+            "canonical_span": [
+              225,
+              1023
+            ],
+            "source_span": [
+              174,
+              1019
+            ],
+            "ratio": 1.0588972431077694
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 464.2,
+            "source_y": 454.7,
+            "canonical_span": [
+              180,
+              1061
+            ],
+            "source_span": [
+              124,
+              1068
+            ],
+            "ratio": 1.0715096481271282
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 791.88,
+            "source_y": 806.38,
+            "canonical_span": [
+              328,
+              896
+            ],
+            "source_span": [
+              279,
+              891
+            ],
+            "ratio": 1.0774647887323943
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 914.76,
+            "source_y": 938.26,
+            "canonical_span": [
+              368,
+              848
+            ],
+            "source_span": [
+              321,
+              854
+            ],
+            "ratio": 1.1104166666666666
+          }
+        ],
+        "common_ratio": 1.0744872184297614,
+        "initial_roi_locator_only_visible_height_ratio": 1.0732421875,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0486538461538462,
+        "visual_confirmation": {
+          "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "37d905ec3ef4f3edac0b03c2e655e6f5f16f20234d4a147e78edd61b0d05e1ee",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+      "generation_record_sha256": "6054abf0acdac5d935ebdcbd267288f85d78c5c1e03b23ee143a740ba63a79c1"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "6fdc74708eedbd9a8a0212b9aba4e8916a87264752f075e199f7275ec3b10d78",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        180.0,
+        157.0,
+        1061.0,
+        1181.0
+      ],
+      "anchor_px": [
+        608.0,
+        1177.0
+      ],
+      "reference_height_px": 1024.0,
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+      "anchor_basis": "Midpoint of the two broad standing sole contacts beneath the upright torso; trunk and tail are identity appendages, not support legs.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_manifest": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "6f4f2cff96feb711890c926995e57c039e0c5c26efa4c2ace021ea4d950aa949",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "6fdc74708eedbd9a8a0212b9aba4e8916a87264752f075e199f7275ec3b10d78",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        886,
+        887
+      ],
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "fae54fd2375e256b292046d76c51e229719b5dbc02418021e725fa1da868e9e5",
+      "size_px": [
+        886,
+        887
+      ],
+      "visible": [
+        114,
+        51,
+        785,
+        842
+      ],
+      "sheet_id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "28f12faa2c6902a8a161013257b3fe5911a465d974ef9fe3d56cb27cdbdc3991",
+      "body_bbox_px": [
+        114,
+        51,
+        795,
+        842
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        114,
+        51,
+        785,
+        842
+      ],
+      "reference_height_px": 789.2808108583396,
+      "anchor_px": [
+        443.4269551046346,
+        838.9168718325847
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        441.5,
+        842
+      ],
+      "sole_points": [
+        [
+          357.5,
+          842
+        ],
+        [
+          525.5,
+          842
+        ]
+      ],
+      "sole_regions": [
+        [
+          279,
+          700,
+          437,
+          844
+        ],
+        [
+          449,
+          700,
+          605,
+          844
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        114,
+        51,
+        785,
+        842
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        886,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "b4a908a32a21f5bdafd9714679633928e1d95c2e8c587139a94b5a1c2f76b910",
+      "size_px": [
+        888,
+        887
+      ],
+      "visible": [
+        103,
+        51,
+        774,
+        842
+      ],
+      "sheet_id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "28f12faa2c6902a8a161013257b3fe5911a465d974ef9fe3d56cb27cdbdc3991",
+      "body_bbox_px": [
+        103,
+        51,
+        784,
+        842
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        103,
+        51,
+        774,
+        842
+      ],
+      "reference_height_px": 789.2808108583396,
+      "anchor_px": [
+        433.1769551046346,
+        838.9168718325847
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        431.25,
+        842
+      ],
+      "sole_points": [
+        [
+          347.5,
+          842
+        ],
+        [
+          515.0,
+          842
+        ]
+      ],
+      "sole_regions": [
+        [
+          269,
+          700,
+          426,
+          844
+        ],
+        [
+          438,
+          700,
+          597,
+          844
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        103,
+        51,
+        774,
+        842
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        886,
+        887
+      ],
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "b3f9a571a0d012a7b968259fa1fbdfffddbbb29606a19b84495885a9f8585b90",
+      "size_px": [
+        886,
+        887
+      ],
+      "visible": [
+        122,
+        46,
+        791,
+        846
+      ],
+      "sheet_id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "0b78c535955e83bc171de7e43554d7dcdabc6e47f8b9626a765fc4879a317911",
+      "body_bbox_px": [
+        122,
+        46,
+        810,
+        846
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        122,
+        46,
+        791,
+        846
+      ],
+      "reference_height_px": 773.2800605372682,
+      "anchor_px": [
+        454.6378907727961,
+        842.9793747635263
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        452.75,
+        846
+      ],
+      "sole_points": [
+        [
+          371.5,
+          846
+        ],
+        [
+          534.0,
+          846
+        ]
+      ],
+      "sole_regions": [
+        [
+          296,
+          707,
+          451,
+          848
+        ],
+        [
+          459,
+          707,
+          610,
+          848
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        122,
+        46,
+        791,
+        846
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        886,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "4c47121588526fb499acb088eae77e54119b30981f5f159a722624a9d9441efd",
+      "size_px": [
+        888,
+        887
+      ],
+      "visible": [
+        95,
+        46,
+        765,
+        846
+      ],
+      "sheet_id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "0b78c535955e83bc171de7e43554d7dcdabc6e47f8b9626a765fc4879a317911",
+      "body_bbox_px": [
+        95,
+        46,
+        783,
+        846
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        95,
+        46,
+        765,
+        846
+      ],
+      "reference_height_px": 773.2800605372682,
+      "anchor_px": [
+        434.8878907727961,
+        842.9793747635263
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        433.0,
+        846
+      ],
+      "sole_points": [
+        [
+          351.5,
+          846
+        ],
+        [
+          514.5,
+          846
+        ]
+      ],
+      "sole_regions": [
+        [
+          275,
+          707,
+          428,
+          848
+        ],
+        [
+          438,
+          707,
+          590,
+          848
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        95,
+        46,
+        765,
+        846
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        880,
+        887
+      ],
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "cbba9cdb8e8409ee417dfc1bc966fc36f5c6bc8a2d4d3ec21badd634d6c517f3",
+      "size_px": [
+        880,
+        887
+      ],
+      "visible": [
+        58,
+        25,
+        738,
+        866
+      ],
+      "sheet_id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "067611c5f0a989bfadcbd1c437e7616ca97be019140d13936c3f5d289546d781",
+      "body_bbox_px": [
+        58,
+        25,
+        782,
+        866
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        58,
+        25,
+        738,
+        866
+      ],
+      "reference_height_px": 814.1685428099192,
+      "anchor_px": [
+        435.73771616896954,
+        862.8196541296487
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        433.75,
+        866
+      ],
+      "sole_points": [
+        [
+          349.5,
+          866
+        ],
+        [
+          518.0,
+          865
+        ]
+      ],
+      "sole_regions": [
+        [
+          272,
+          719,
+          429,
+          868
+        ],
+        [
+          442,
+          719,
+          597,
+          868
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        58,
+        25,
+        738,
+        866
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        880,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "c5e2e8743f43228e4a49e89be50149974cbe101a583019b203c872ea9c995e55",
+      "size_px": [
+        894,
+        887
+      ],
+      "visible": [
+        99,
+        27,
+        802,
+        867
+      ],
+      "sheet_id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "067611c5f0a989bfadcbd1c437e7616ca97be019140d13936c3f5d289546d781",
+      "body_bbox_px": [
+        99,
+        27,
+        822,
+        867
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        99,
+        27,
+        802,
+        867
+      ],
+      "reference_height_px": 814.1685428099192,
+      "anchor_px": [
+        431.73771616896954,
+        863.8196541296487
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        429.75,
+        867
+      ],
+      "sole_points": [
+        [
+          345.5,
+          867
+        ],
+        [
+          514.0,
+          865
+        ]
+      ],
+      "sole_regions": [
+        [
+          266,
+          720,
+          425,
+          869
+        ],
+        [
+          437,
+          720,
+          593,
+          869
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        99,
+        27,
+        802,
+        867
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        884,
+        887
+      ],
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "e2b07c7370cede06109504874843ccb76604e564e321047bf3cedfae33f8265e",
+      "size_px": [
+        884,
+        887
+      ],
+      "visible": [
+        134,
+        24,
+        819,
+        838
+      ],
+      "sheet_id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "66a3bdbd311dd2cd8f28ef0d9917c30b4f4594acc53a4ae9a3069bdd62767c42",
+      "body_bbox_px": [
+        134,
+        24,
+        834,
+        838
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        134,
+        24,
+        819,
+        838
+      ],
+      "reference_height_px": 797.8123742955572,
+      "anchor_px": [
+        469.4477841169325,
+        834.883545412908
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        467.5,
+        838
+      ],
+      "sole_points": [
+        [
+          387.0,
+          838
+        ],
+        [
+          548.0,
+          838
+        ]
+      ],
+      "sole_regions": [
+        [
+          311,
+          694,
+          464,
+          840
+        ],
+        [
+          474,
+          694,
+          624,
+          840
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        134,
+        24,
+        819,
+        838
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        884,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "27cc48e5d6cda1cf38ebbd84c5b2be6800508385bfdffa945a61a6c3b3a84fc3",
+      "size_px": [
+        890,
+        887
+      ],
+      "visible": [
+        66,
+        24,
+        756,
+        838
+      ],
+      "sheet_id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "66a3bdbd311dd2cd8f28ef0d9917c30b4f4594acc53a4ae9a3069bdd62767c42",
+      "body_bbox_px": [
+        66,
+        24,
+        766,
+        838
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        66,
+        24,
+        756,
+        838
+      ],
+      "reference_height_px": 797.8123742955572,
+      "anchor_px": [
+        402.4477841169325,
+        834.883545412908
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        400.5,
+        838
+      ],
+      "sole_points": [
+        [
+          318.0,
+          838
+        ],
+        [
+          483.0,
+          838
+        ]
+      ],
+      "sole_regions": [
+        [
+          241,
+          694,
+          395,
+          840
+        ],
+        [
+          406,
+          694,
+          561,
+          840
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        66,
+        24,
+        756,
+        838
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1199,
+        1312
+      ],
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "1c43a133af40f5bf0a1662c5e730a4f7f756b438a91009a88b60c18be0ddc2e4",
+      "size_px": [
+        1199,
+        1312
+      ],
+      "visible": [
+        124,
+        125,
+        1068,
+        1224
+      ],
+      "sheet_id": "species_b-single-v001",
+      "source_sheet": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/source/species_b-single-v001.png",
+      "source_sheet_sha256": "0f7e3f0c7061f6ad9f70dd566f3a6dfccd188b1eaec104780c9393d9a5c8d165",
+      "body_bbox_px": [
+        124,
+        125,
+        1070,
+        1224
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        124,
+        125,
+        1068,
+        1224
+      ],
+      "reference_height_px": 1100.2749116720756,
+      "anchor_px": [
+        580.9362180460744,
+        1219.702051126281
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        578.25,
+        1224
+      ],
+      "sole_points": [
+        [
+          465.0,
+          1224
+        ],
+        [
+          691.5,
+          1224
+        ]
+      ],
+      "sole_regions": [
+        [
+          357,
+          1026,
+          571,
+          1226
+        ],
+        [
+          586,
+          1026,
+          799,
+          1226
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        124,
+        125,
+        1068,
+        1224
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+        "sha256": "d51366aabcd31be431e0836f3542b00db803b82e675d366554787fb51c7d93dc",
+        "bytes": 4740
+      },
+      {
+        "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+        "sha256": "01cf3fde4c0db6434bd5629288acd3293d0a1228f8c00a9be5441458a8481481",
+        "bytes": 4622
+      },
+      {
+        "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+        "sha256": "303bd6cd818ee0fbe28a618a53b2e4fd885b9483dfad977fe6cfa2e8ef6465ab",
+        "bytes": 4565
+      },
+      {
+        "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+        "sha256": "764335ae74c986c9f79ae01c7d97cd5662a091879dc240c313a4def5082c7b52",
+        "bytes": 4629
+      },
+      {
+        "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+        "sha256": "6054abf0acdac5d935ebdcbd267288f85d78c5c1e03b23ee143a740ba63a79c1",
+        "bytes": 4470
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/sumatran-elephant/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "4168a1cd0a57f5fe7f6671f216a5db7ceec88fdda48d1e6d2e21243aded646e3",
+      "bytes": 8908
+    }
+  ]
+}

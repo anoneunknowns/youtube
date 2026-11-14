@@ -7,7 +7,7 @@
   "category": "character",
   "source_index": {
     "path": "catalogs/character-library-v1.json",
-    "sha256": "7264356c1519b8cd3456fd828264313f550108a19da98d290318b9e982b5bb2e"
+    "sha256": "6a7c20e39fc176ef5123086d6334b18ab04f594c3fd9cbf480fe1d5cb9612cbb"
   },
   "neutral": {
     "path": "neutral.png",
@@ -45,12 +45,484 @@
     "anchor_basis": "Registered head-to-feet body reference excludes side tail; anchor is the projected midpoint of the two standing foot contacts.",
     "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation."
   },
-  "poses": {},
+  "poses": {
+    "video/neutral": {
+      "path": "poses/video/neutral.png",
+      "sha256": "7ed1fecb45beddad956a713a8ebe19444cd2ab03aed1f837b40ffd1d275c58d3",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_path": "assets/library/characters/setouchi-salamander/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sha256": "7ed1fecb45beddad956a713a8ebe19444cd2ab03aed1f837b40ffd1d275c58d3",
+      "source_image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        597.0,
+        1173.0
+      ],
+      "body_bbox_px": [
+        277.0,
+        205.0,
+        953.0,
+        1178.0
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 973.0,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Registered head-to-feet body reference excludes side tail; anchor is the projected midpoint of the two standing foot contacts.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "sheet_id": "canonical-neutral",
+      "frame_id": "neutral",
+      "source_sheet": "assets/library/characters/setouchi-salamander/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "7ed1fecb45beddad956a713a8ebe19444cd2ab03aed1f837b40ffd1d275c58d3"
+    },
+    "video/blink": {
+      "path": "poses/video/blink.png",
+      "sha256": "25f510cff3810d2a670a19b7a57b8af0bed2140076da60316aaf00a7c06c6329",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/poses/blink-v001.png",
+      "source_sha256": "25f510cff3810d2a670a19b7a57b8af0bed2140076da60316aaf00a7c06c6329",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        210.607,
+        385.125
+      ],
+      "body_bbox_px": [
+        84,
+        20,
+        337,
+        387
+      ],
+      "subject_bbox_px": [
+        89,
+        20,
+        367,
+        387
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 364.875,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native paired feet-only bottom8px ROI, midpoint between visible support pads and corresponding canonical interior sole offset. Tail/ears (where canonical excludes them) never set shared body scale.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "blink",
+      "source_sheet": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "91bc8b40c92fecd2bf2cbed6033a3e930781fa41e73fe14466561fcc40b20ea7"
+    },
+    "video/greet": {
+      "path": "poses/video/greet.png",
+      "sha256": "aad0c3f67cee4f86cb64072402b0c20a737002644b38edbdf85b59a80b7078c0",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/poses/greet-v001.png",
+      "source_sha256": "aad0c3f67cee4f86cb64072402b0c20a737002644b38edbdf85b59a80b7078c0",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        194.834,
+        385.125
+      ],
+      "body_bbox_px": [
+        68,
+        18,
+        322,
+        387
+      ],
+      "subject_bbox_px": [
+        68,
+        18,
+        349,
+        387
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 364.875,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native paired feet-only bottom8px ROI, midpoint between visible support pads and corresponding canonical interior sole offset. Tail/ears (where canonical excludes them) never set shared body scale.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "greet",
+      "source_sheet": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "91bc8b40c92fecd2bf2cbed6033a3e930781fa41e73fe14466561fcc40b20ea7"
+    },
+    "video/present_left": {
+      "path": "poses/video/present_left.png",
+      "sha256": "9846110b4e0497b03e187bf7dac5473686d7f2c4488a020c6da080f41857660d",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/poses/present_left-v001.png",
+      "source_sha256": "9846110b4e0497b03e187bf7dac5473686d7f2c4488a020c6da080f41857660d",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        186.48,
+        385.125
+      ],
+      "body_bbox_px": [
+        60,
+        18,
+        313,
+        387
+      ],
+      "subject_bbox_px": [
+        43,
+        18,
+        340,
+        387
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 364.875,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native paired feet-only bottom8px ROI, midpoint between visible support pads and corresponding canonical interior sole offset. Tail/ears (where canonical excludes them) never set shared body scale.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "present_left",
+      "source_sheet": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "91bc8b40c92fecd2bf2cbed6033a3e930781fa41e73fe14466561fcc40b20ea7"
+    },
+    "video/present_right": {
+      "path": "poses/video/present_right.png",
+      "sha256": "9d911c27693c578b37c061696546bd261ff5218e0ca5c83367290a56776ca028",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/poses/present_right-v001.png",
+      "source_sha256": "9d911c27693c578b37c061696546bd261ff5218e0ca5c83367290a56776ca028",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        209.558,
+        386.125
+      ],
+      "body_bbox_px": [
+        83,
+        18,
+        336,
+        388
+      ],
+      "subject_bbox_px": [
+        82,
+        18,
+        354,
+        388
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 364.875,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native paired feet-only bottom8px ROI, midpoint between visible support pads and corresponding canonical interior sole offset. Tail/ears (where canonical excludes them) never set shared body scale.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "present_right",
+      "source_sheet": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "91bc8b40c92fecd2bf2cbed6033a3e930781fa41e73fe14466561fcc40b20ea7"
+    },
+    "video/think": {
+      "path": "poses/video/think.png",
+      "sha256": "61cee8e288d16ee0db25c71b95815e18f160fd66b8c4cba5426c94b036790d2d",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/poses/think-v001.png",
+      "source_sha256": "61cee8e288d16ee0db25c71b95815e18f160fd66b8c4cba5426c94b036790d2d",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        192.931,
+        386.125
+      ],
+      "body_bbox_px": [
+        66,
+        19,
+        320,
+        388
+      ],
+      "subject_bbox_px": [
+        79,
+        19,
+        351,
+        388
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 364.875,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native paired feet-only bottom8px ROI, midpoint between visible support pads and corresponding canonical interior sole offset. Tail/ears (where canonical excludes them) never set shared body scale.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "think",
+      "source_sheet": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "91bc8b40c92fecd2bf2cbed6033a3e930781fa41e73fe14466561fcc40b20ea7"
+    },
+    "video/aha": {
+      "path": "poses/video/aha.png",
+      "sha256": "5eb5cedea847e7ed98ba0e1eb5f94349eb22931a3b71079ac7b71b4170c95a9a",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_path": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/frames/aha-aha-v002.png",
+      "source_sha256": "5eb5cedea847e7ed98ba0e1eb5f94349eb22931a3b71079ac7b71b4170c95a9a",
+      "source_image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        597,
+        1175
+      ],
+      "body_bbox_px": [
+        275,
+        203,
+        953,
+        1181
+      ],
+      "subject_bbox_px": [
+        275,
+        203,
+        1029,
+        1181
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 973.0,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Manually matched paired-foot support midpoint at same ordinary body stance; long tail excluded from shared body scale.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "sheet_id": "aha-v002",
+      "frame_id": "aha",
+      "source_sheet": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/source/aha-v002.png",
+      "source_sheet_sha256": "bfbe37451e102bbf048ad6e6af6aca6b08d5cb72feb6cbdcc59644cef0651917"
+    },
+    "video/cheer": {
+      "path": "poses/video/cheer.png",
+      "sha256": "45914a2d780f19c4d9bb4176f583b6d34eac64018e4a222321615425573380a1",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/poses/cheer-v001.png",
+      "source_sha256": "45914a2d780f19c4d9bb4176f583b6d34eac64018e4a222321615425573380a1",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        211.091,
+        385.125
+      ],
+      "body_bbox_px": [
+        84,
+        19,
+        338,
+        387
+      ],
+      "subject_bbox_px": [
+        87,
+        19,
+        362,
+        387
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 364.875,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native paired feet-only bottom8px ROI, midpoint between visible support pads and corresponding canonical interior sole offset. Tail/ears (where canonical excludes them) never set shared body scale.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "cheer",
+      "source_sheet": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "91bc8b40c92fecd2bf2cbed6033a3e930781fa41e73fe14466561fcc40b20ea7"
+    },
+    "video/species_a": {
+      "path": "poses/video/species_a.png",
+      "sha256": "85b804dcfdfb0a0f1dc329f783ae0c9e7e59e28079b340d0e80702edaaa1a634",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/poses/species_a-v001.png",
+      "source_sha256": "85b804dcfdfb0a0f1dc329f783ae0c9e7e59e28079b340d0e80702edaaa1a634",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        195.411,
+        385.125
+      ],
+      "body_bbox_px": [
+        69,
+        19,
+        322,
+        387
+      ],
+      "subject_bbox_px": [
+        68,
+        19,
+        351,
+        387
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 364.875,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native paired feet-only bottom8px ROI, midpoint between visible support pads and corresponding canonical interior sole offset. Tail/ears (where canonical excludes them) never set shared body scale.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "species_a",
+      "source_sheet": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "91bc8b40c92fecd2bf2cbed6033a3e930781fa41e73fe14466561fcc40b20ea7"
+    },
+    "video/species_b": {
+      "path": "poses/video/species_b.png",
+      "sha256": "42cbd65a5328acb69ae4e76eb745c18a8569b9fe585c6863e881c9e9f9fd0969",
+      "size_px": [
+        418,
+        418
+      ],
+      "source_path": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/poses/species_b-v001.png",
+      "source_sha256": "42cbd65a5328acb69ae4e76eb745c18a8569b9fe585c6863e881c9e9f9fd0969",
+      "source_image_region_px": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "source_size_px": [
+        418,
+        418
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        180.416,
+        385.125
+      ],
+      "body_bbox_px": [
+        54,
+        19,
+        307,
+        387
+      ],
+      "subject_bbox_px": [
+        56,
+        19,
+        338,
+        387
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 364.875,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Native paired feet-only bottom8px ROI, midpoint between visible support pads and corresponding canonical interior sole offset. Tail/ears (where canonical excludes them) never set shared body scale.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "species_b",
+      "source_sheet": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "91bc8b40c92fecd2bf2cbed6033a3e930781fa41e73fe14466561fcc40b20ea7"
+    }
+  },
   "clips": {
     "path": "clips.json",
-    "sha256": "13de5e0426a105240017ee447e45392231dc84dad054b346becdf84772beaf5c"
+    "sha256": "a90f8b4cd30e1fc546367df4dd7f36f9a4d3e5aeac3282c7a93ed6049854c487"
   },
-  "source_registrations": [],
+  "source_registrations": [
+    {
+      "namespace": "video",
+      "path": "assets/library/characters/setouchi-salamander/generation-batches/youtube-core-20261114-a-v001/registration.json",
+      "sha256": "ecce66195514496b5ec06ff54fbe41e3004d38043ce98ccd81091ff8b601270a",
+      "clips_available": true
+    }
+  ],
   "geometry_policy": "Native pixels and adopted per-frame references retained. Atlas neutral coordinates are shifted only by the adopted crop origin.",
   "style_pattern": "slightly-anthropomorphic-character",
   "usage_role": "cast-character",

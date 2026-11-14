@@ -1,0 +1,849 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "vaquita",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/vaquita/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "504d173f1c2f0ceb4ee2f7dc922522ea760b5496d1f46a28e43a4290ed69bf3c",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      135,
+      444,
+      921,
+      915
+    ],
+    "anchor_px": [
+      529,
+      680
+    ],
+    "reference_height_px": 471,
+    "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+    "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+    "anchor_basis": "Rounded porpoise head/trunk excludes dorsal fin, pectoral flippers and tail flukes; center of trunk used for floating placement, no fake ground contact.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+    "source_manifest": "assets/library/characters/vaquita/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "dd25d13a97967374fbfd7eb360f921e93c6d3e1790c99d6ce0f7d8c25ae23a3f"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "504d173f1c2f0ceb4ee2f7dc922522ea760b5496d1f46a28e43a4290ed69bf3c",
+      "reference_height_px": 471,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7a86053c13b86b68329a3cbdc0c01cf49a72e9a38df172f15ef8ffabc89d1fbd",
+      "reference_height_px": 165.65744536830786,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/vaquita/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "504d173f1c2f0ceb4ee2f7dc922522ea760b5496d1f46a28e43a4290ed69bf3c",
+          "bytes": 739545,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 471,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 538.2,
+            "source_y": 82.63147208121828,
+            "canonical_span": [
+              206,
+              760
+            ],
+            "source_span": [
+              236,
+              429
+            ],
+            "ratio": 0.3483754512635379
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 585.3,
+            "source_y": 99.4472081218274,
+            "canonical_span": [
+              169,
+              921
+            ],
+            "source_span": [
+              224,
+              491
+            ],
+            "ratio": 0.3550531914893617
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 736.02,
+            "source_y": 153.25756345177663,
+            "canonical_span": [
+              152,
+              921
+            ],
+            "source_span": [
+              215,
+              491
+            ],
+            "ratio": 0.3589076723016905
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 792.54,
+            "source_y": 173.43644670050762,
+            "canonical_span": [
+              199,
+              887
+            ],
+            "source_span": [
+              229,
+              464
+            ],
+            "ratio": 0.34156976744186046
+          }
+        ],
+        "common_ratio": 0.3517143213764498,
+        "initial_roi_locator_only_visible_height_ratio": 0.3570219966159052,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0507594831640983,
+        "visual_confirmation": {
+          "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "96ebc306bfdacc4d0d6fb5d5b4b90b95ba9fad83f7421d26460dda8424711375",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "425f394d69e2721edc82c73d48798159f856ac357294adbf322196312e6df65e"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/vaquita/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "504d173f1c2f0ceb4ee2f7dc922522ea760b5496d1f46a28e43a4290ed69bf3c",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        135,
+        444,
+        921,
+        915
+      ],
+      "anchor_px": [
+        529,
+        680
+      ],
+      "reference_height_px": 471,
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+      "anchor_basis": "Rounded porpoise head/trunk excludes dorsal fin, pectoral flippers and tail flukes; center of trunk used for floating placement, no fake ground contact.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "source_manifest": "assets/library/characters/vaquita/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "dd25d13a97967374fbfd7eb360f921e93c6d3e1790c99d6ce0f7d8c25ae23a3f",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "504d173f1c2f0ceb4ee2f7dc922522ea760b5496d1f46a28e43a4290ed69bf3c",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        724,
+        241
+      ],
+      "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "0e5fd7e126ef57a69bbb9538e13e2cd6ee5a054978b97a9cbf3cdf89fbad020c",
+      "size_px": [
+        724,
+        241
+      ],
+      "visible": [
+        210,
+        18,
+        556,
+        229
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7a86053c13b86b68329a3cbdc0c01cf49a72e9a38df172f15ef8ffabc89d1fbd",
+      "body_bbox_px": [
+        210,
+        49,
+        491,
+        218
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        210,
+        18,
+        556,
+        229
+      ],
+      "reference_height_px": 165.65744536830786,
+      "anchor_px": [
+        348.57544262232125,
+        132.00457984484217
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        348.57544262232125,
+        132.00457984484217
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        210,
+        18,
+        556,
+        229
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        724,
+        0,
+        1448,
+        241
+      ],
+      "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "519976fd862102ab7ff1a69394a33fb8a81ba9bb21fbd5da32ed3770c82f83cf",
+      "size_px": [
+        724,
+        241
+      ],
+      "visible": [
+        208,
+        17,
+        556,
+        231
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7a86053c13b86b68329a3cbdc0c01cf49a72e9a38df172f15ef8ffabc89d1fbd",
+      "body_bbox_px": [
+        208,
+        49,
+        493,
+        219
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        208,
+        17,
+        556,
+        231
+      ],
+      "reference_height_px": 165.65744536830786,
+      "anchor_px": [
+        346.57544262232125,
+        132.00457984484217
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        346.57544262232125,
+        132.00457984484217
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        208,
+        17,
+        556,
+        231
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1448,
+        0,
+        2172,
+        241
+      ],
+      "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "84a271e3358b4149a1f4b65781bd5010e01b8f83d21c0052159cd6a34e5d1a2d",
+      "size_px": [
+        724,
+        241
+      ],
+      "visible": [
+        179,
+        18,
+        552,
+        232
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7a86053c13b86b68329a3cbdc0c01cf49a72e9a38df172f15ef8ffabc89d1fbd",
+      "body_bbox_px": [
+        179,
+        50,
+        464,
+        220
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        179,
+        18,
+        552,
+        232
+      ],
+      "reference_height_px": 165.65744536830786,
+      "anchor_px": [
+        317.57544262232125,
+        133.00457984484217
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        317.57544262232125,
+        133.00457984484217
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        179,
+        18,
+        552,
+        232
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        241,
+        724,
+        482
+      ],
+      "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "6d0575c8a5d93f1eb3e38d6b95d053b6de17210beec66f8efd641891b7f90e87",
+      "size_px": [
+        724,
+        241
+      ],
+      "visible": [
+        174,
+        17,
+        541,
+        228
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7a86053c13b86b68329a3cbdc0c01cf49a72e9a38df172f15ef8ffabc89d1fbd",
+      "body_bbox_px": [
+        174,
+        48,
+        455,
+        217
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        174,
+        17,
+        541,
+        228
+      ],
+      "reference_height_px": 165.65744536830786,
+      "anchor_px": [
+        312.57544262232125,
+        131.00457984484217
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        312.57544262232125,
+        131.00457984484217
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        174,
+        17,
+        541,
+        228
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        724,
+        241,
+        1448,
+        482
+      ],
+      "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "00ad423b853ae0253524b4d983e9d3dc16823bc1de1eab67c87a0ea4642b2b21",
+      "size_px": [
+        724,
+        241
+      ],
+      "visible": [
+        198,
+        10,
+        547,
+        228
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7a86053c13b86b68329a3cbdc0c01cf49a72e9a38df172f15ef8ffabc89d1fbd",
+      "body_bbox_px": [
+        198,
+        42,
+        488,
+        216
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        198,
+        10,
+        547,
+        228
+      ],
+      "reference_height_px": 165.65744536830786,
+      "anchor_px": [
+        336.57544262232125,
+        125.00457984484216
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        336.57544262232125,
+        125.00457984484216
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        198,
+        10,
+        547,
+        228
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        1448,
+        241,
+        2172,
+        482
+      ],
+      "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "1492ca52fc4eff53c6e23aaac33e148d19eba0c38905037bd321defea7eedb81",
+      "size_px": [
+        724,
+        241
+      ],
+      "visible": [
+        200,
+        10,
+        548,
+        211
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7a86053c13b86b68329a3cbdc0c01cf49a72e9a38df172f15ef8ffabc89d1fbd",
+      "body_bbox_px": [
+        200,
+        40,
+        467,
+        200
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        200,
+        10,
+        548,
+        211
+      ],
+      "reference_height_px": 165.65744536830786,
+      "anchor_px": [
+        338.57544262232125,
+        123.00457984484216
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        338.57544262232125,
+        123.00457984484216
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        200,
+        10,
+        548,
+        211
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        482,
+        724,
+        724
+      ],
+      "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "483c7c2aa6ab4efd70f2f612edd0854e9d7b617d7bd4e6d061d3dbd640277136",
+      "size_px": [
+        724,
+        242
+      ],
+      "visible": [
+        210,
+        13,
+        556,
+        218
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7a86053c13b86b68329a3cbdc0c01cf49a72e9a38df172f15ef8ffabc89d1fbd",
+      "body_bbox_px": [
+        210,
+        44,
+        483,
+        207
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        210,
+        13,
+        556,
+        218
+      ],
+      "reference_height_px": 165.65744536830786,
+      "anchor_px": [
+        348.57544262232125,
+        127.00457984484216
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        348.57544262232125,
+        127.00457984484216
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        210,
+        13,
+        556,
+        218
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        724,
+        482,
+        1448,
+        724
+      ],
+      "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "c4427788c376b1fd82cb930baeeddcac84db84cdd065e61189dacaf953e70069",
+      "size_px": [
+        724,
+        242
+      ],
+      "visible": [
+        193,
+        19,
+        551,
+        209
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7a86053c13b86b68329a3cbdc0c01cf49a72e9a38df172f15ef8ffabc89d1fbd",
+      "body_bbox_px": [
+        193,
+        47,
+        446,
+        199
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        193,
+        19,
+        551,
+        209
+      ],
+      "reference_height_px": 165.65744536830786,
+      "anchor_px": [
+        331.57544262232125,
+        130.00457984484217
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        331.57544262232125,
+        130.00457984484217
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        193,
+        19,
+        551,
+        209
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        1448,
+        482,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "20292e413bc389f276c6c7ed3d817b759d67fa03fbec4d737aa4df57ae7e8053",
+      "size_px": [
+        724,
+        242
+      ],
+      "visible": [
+        199,
+        16,
+        554,
+        224
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7a86053c13b86b68329a3cbdc0c01cf49a72e9a38df172f15ef8ffabc89d1fbd",
+      "body_bbox_px": [
+        199,
+        47,
+        476,
+        213
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        199,
+        16,
+        554,
+        224
+      ],
+      "reference_height_px": 165.65744536830786,
+      "anchor_px": [
+        337.57544262232125,
+        130.00457984484217
+      ],
+      "anchor_kind": "anatomical-trunk-centre-swimming-prop",
+      "source_foot_point_px": [
+        337.57544262232125,
+        130.00457984484217
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Inherited swimming/prop body-centre type; no invented feet or floor. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "subject_bbox_px": [
+        199,
+        16,
+        554,
+        224
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "425f394d69e2721edc82c73d48798159f856ac357294adbf322196312e6df65e",
+        "bytes": 5751
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/vaquita/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "62a5de320c18961654cdc2afb60b0e581af5221b0141f3ffbe9adf63356c2387",
+      "bytes": 7568
+    }
+  ]
+}

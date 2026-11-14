@@ -1,0 +1,1060 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "eskimo-curlew",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/eskimo-curlew/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+    "sha256": "bf9e4925988bb5c35126675c14348f10135486ec616c9ae0063f85744e5f577e",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      382,
+      347,
+      881,
+      967
+    ],
+    "anchor_px": [
+      601,
+      954
+    ],
+    "reference_height_px": 620,
+    "anchor_kind": "anatomical-prop-support",
+    "anchor_measurement": "Assistant visual registration on native raster; approximate anatomical feet projection, not alpha-box centering or subpixel metrology.",
+    "anchor_basis": "Rounded head/trunk through two short leg/foot supports; excludes projecting curved bill and small rear tail from body width. Anchor is the projected midpoint between the two visible foot soles. Toy-like leg proportions are intentional prop simplification.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion; no locomotion or ground shift is inferred from this neutral.",
+    "source_manifest": "assets/library/characters/eskimo-curlew/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "1ffe6c8857a1ba63b09d7e4ec1989d5a4a420e0a99d54d530539ee4233605ffb"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+      "source_sheet_sha256": "bf9e4925988bb5c35126675c14348f10135486ec616c9ae0063f85744e5f577e",
+      "reference_height_px": 620,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "23f2776e3b7445053bd904e1c5214d1380e80e18f202564b489872ea1e58bd8d",
+      "reference_height_px": 350.0,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/eskimo-curlew/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+          "sha256": "bf9e4925988bb5c35126675c14348f10135486ec616c9ae0063f85744e5f577e",
+          "bytes": 441343,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 620,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 471.0,
+            "source_y": 99.0,
+            "canonical_span": [
+              382,
+              692
+            ],
+            "source_span": [
+              133,
+              305
+            ],
+            "ratio": 0.5548387096774193
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 533.0,
+            "source_y": 134.0,
+            "canonical_span": [
+              429,
+              730
+            ],
+            "source_span": [
+              155,
+              306
+            ],
+            "ratio": 0.5016611295681063
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 731.4,
+            "source_y": 246.0,
+            "canonical_span": [
+              392,
+              881
+            ],
+            "source_span": [
+              133,
+              380
+            ],
+            "ratio": 0.5051124744376279
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 805.8,
+            "source_y": 288.00000000000006,
+            "canonical_span": [
+              451,
+              780
+            ],
+            "source_span": [
+              148,
+              382
+            ],
+            "ratio": 0.7112462006079028
+          }
+        ],
+        "common_ratio": 0.5645161290322581,
+        "initial_roi_locator_only_visible_height_ratio": 0.5645161290322581,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.4177821614766806,
+        "initial_diagnostic_reference_height_px": 328.585,
+        "manual_landmark_review": {
+          "basis": "Canonical rounded body crown347 to soles967 equals recorded620. Native restingblink crown29 to soles379 equals350. Curved bill/rear tail excluded from body width. Head/neck/trunk/sole actual native comparison confirms one common scale350 across all9; initial rowROI median underestimated common source scale and enlarged all9 by6.5percent. No per-pose fit or source alteration.",
+          "canonical_crown_sole_y": [
+            347,
+            967
+          ],
+          "native_blink_crown_sole_y": [
+            29,
+            379
+          ],
+          "needs_new_max_review": true
+        },
+        "visual_confirmation": {
+          "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "6e4a1a581c431c977fcd0649a2050fbabd7984a478364a1427d62f833d324da6",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "13d7708d46b2986f65771d16e5cf18eddf45a649bf7a785178582d773b6a62ec"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+      "sha256": "bf9e4925988bb5c35126675c14348f10135486ec616c9ae0063f85744e5f577e",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        382,
+        347,
+        881,
+        967
+      ],
+      "anchor_px": [
+        601,
+        954
+      ],
+      "reference_height_px": 620,
+      "anchor_kind": "anatomical-prop-support",
+      "anchor_measurement": "Assistant visual registration on native raster; approximate anatomical feet projection, not alpha-box centering or subpixel metrology.",
+      "anchor_basis": "Rounded head/trunk through two short leg/foot supports; excludes projecting curved bill and small rear tail from body width. Anchor is the projected midpoint between the two visible foot soles. Toy-like leg proportions are intentional prop simplification.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion; no locomotion or ground shift is inferred from this neutral.",
+      "source_manifest": "assets/library/characters/eskimo-curlew/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "1ffe6c8857a1ba63b09d7e4ec1989d5a4a420e0a99d54d530539ee4233605ffb",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/animal-species-20261114-v001/source/neutral-v003.png",
+      "source_sheet_sha256": "bf9e4925988bb5c35126675c14348f10135486ec616c9ae0063f85744e5f577e",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        414,
+        407
+      ],
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "25ca5ae4ff60eab192bd5bc6df4a8271ef4a91b597aafc2f95c48a7037c4886c",
+      "size_px": [
+        414,
+        407
+      ],
+      "visible": [
+        49,
+        29,
+        394,
+        379
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "23f2776e3b7445053bd904e1c5214d1380e80e18f202564b489872ea1e58bd8d",
+      "body_bbox_px": [
+        133,
+        29,
+        414,
+        379
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        49,
+        29,
+        394,
+        379
+      ],
+      "reference_height_px": 350.0,
+      "anchor_px": [
+        229.24193548387098,
+        371.66129032258067
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        222.75,
+        379
+      ],
+      "sole_points": [
+        [
+          188.5,
+          379
+        ],
+        [
+          257.0,
+          379
+        ]
+      ],
+      "sole_regions": [
+        [
+          163,
+          316,
+          224,
+          381
+        ],
+        [
+          232,
+          316,
+          291,
+          381
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        49,
+        29,
+        394,
+        379
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        414,
+        0,
+        834,
+        407
+      ],
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "71d6cba08fa7f511f762fc4343ff5a7cabcf78a93d9a5a1518f6d2240de19f07",
+      "size_px": [
+        420,
+        407
+      ],
+      "visible": [
+        36,
+        29,
+        357,
+        379
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "23f2776e3b7445053bd904e1c5214d1380e80e18f202564b489872ea1e58bd8d",
+      "body_bbox_px": [
+        120,
+        29,
+        401,
+        379
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        36,
+        29,
+        357,
+        379
+      ],
+      "reference_height_px": 350.0,
+      "anchor_px": [
+        212.99193548387098,
+        371.66129032258067
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        206.5,
+        379
+      ],
+      "sole_points": [
+        [
+          174.0,
+          379
+        ],
+        [
+          239.0,
+          379
+        ]
+      ],
+      "sole_regions": [
+        [
+          149,
+          316,
+          209,
+          381
+        ],
+        [
+          214,
+          316,
+          272,
+          381
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        36,
+        29,
+        357,
+        379
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        834,
+        0,
+        1262,
+        407
+      ],
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "95fba625ea8164d32dc92a8b40d643507c79b0cfbc4421d81877042edcb9c935",
+      "size_px": [
+        428,
+        407
+      ],
+      "visible": [
+        44,
+        28,
+        389,
+        380
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "23f2776e3b7445053bd904e1c5214d1380e80e18f202564b489872ea1e58bd8d",
+      "body_bbox_px": [
+        128,
+        28,
+        411,
+        380
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        44,
+        28,
+        389,
+        380
+      ],
+      "reference_height_px": 350.0,
+      "anchor_px": [
+        230.49193548387098,
+        372.66129032258067
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        224.0,
+        380
+      ],
+      "sole_points": [
+        [
+          190.5,
+          380
+        ],
+        [
+          257.5,
+          380
+        ]
+      ],
+      "sole_regions": [
+        [
+          165,
+          317,
+          225,
+          382
+        ],
+        [
+          232,
+          317,
+          291,
+          382
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        44,
+        28,
+        389,
+        380
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        407,
+        414,
+        808
+      ],
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "ae4d0cdc0ee09e8aea459420e640aaa2e32807575c8266fb08ad38ce5bd39f21",
+      "size_px": [
+        414,
+        401
+      ],
+      "visible": [
+        50,
+        28,
+        383,
+        379
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "23f2776e3b7445053bd904e1c5214d1380e80e18f202564b489872ea1e58bd8d",
+      "body_bbox_px": [
+        134,
+        28,
+        414,
+        379
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        50,
+        28,
+        383,
+        379
+      ],
+      "reference_height_px": 350.0,
+      "anchor_px": [
+        205.99193548387098,
+        371.66129032258067
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        199.5,
+        379
+      ],
+      "sole_points": [
+        [
+          166.5,
+          379
+        ],
+        [
+          232.5,
+          377
+        ]
+      ],
+      "sole_regions": [
+        [
+          134,
+          316,
+          193,
+          381
+        ],
+        [
+          200,
+          316,
+          258,
+          381
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        50,
+        28,
+        383,
+        379
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        414,
+        407,
+        834,
+        808
+      ],
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "573e02d2da85af612dc766e9d7fa24774ed593f17f2b2e3161f692fb66e3da59",
+      "size_px": [
+        420,
+        401
+      ],
+      "visible": [
+        51,
+        38,
+        386,
+        382
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "23f2776e3b7445053bd904e1c5214d1380e80e18f202564b489872ea1e58bd8d",
+      "body_bbox_px": [
+        133,
+        38,
+        410,
+        382
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        51,
+        38,
+        386,
+        382
+      ],
+      "reference_height_px": 350.0,
+      "anchor_px": [
+        226.24193548387098,
+        374.66129032258067
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        219.75,
+        382
+      ],
+      "sole_points": [
+        [
+          186.5,
+          381
+        ],
+        [
+          253.0,
+          382
+        ]
+      ],
+      "sole_regions": [
+        [
+          161,
+          319,
+          222,
+          384
+        ],
+        [
+          228,
+          319,
+          286,
+          384
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        51,
+        38,
+        386,
+        382
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        834,
+        407,
+        1262,
+        808
+      ],
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "902f593175cce95ee71c7513d1c124407833442b0e64b323358b3cfef42cc5ae",
+      "size_px": [
+        428,
+        401
+      ],
+      "visible": [
+        41,
+        29,
+        361,
+        381
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "23f2776e3b7445053bd904e1c5214d1380e80e18f202564b489872ea1e58bd8d",
+      "body_bbox_px": [
+        125,
+        29,
+        408,
+        381
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        41,
+        29,
+        361,
+        381
+      ],
+      "reference_height_px": 350.0,
+      "anchor_px": [
+        215.99193548387098,
+        373.66129032258067
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        209.5,
+        381
+      ],
+      "sole_points": [
+        [
+          176.0,
+          381
+        ],
+        [
+          243.0,
+          381
+        ]
+      ],
+      "sole_regions": [
+        [
+          151,
+          318,
+          211,
+          383
+        ],
+        [
+          217,
+          318,
+          276,
+          383
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        41,
+        29,
+        361,
+        381
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        808,
+        414,
+        1246
+      ],
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "bda0a4764d28d6702fdcb535ed76d4a3d2dea18c3a3ac00df8e41e231f430ffd",
+      "size_px": [
+        414,
+        438
+      ],
+      "visible": [
+        42,
+        20,
+        364,
+        377
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "23f2776e3b7445053bd904e1c5214d1380e80e18f202564b489872ea1e58bd8d",
+      "body_bbox_px": [
+        127,
+        20,
+        414,
+        377
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        42,
+        20,
+        364,
+        377
+      ],
+      "reference_height_px": 350.0,
+      "anchor_px": [
+        222.49193548387098,
+        369.66129032258067
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        216.0,
+        377
+      ],
+      "sole_points": [
+        [
+          180.5,
+          377
+        ],
+        [
+          251.5,
+          377
+        ]
+      ],
+      "sole_regions": [
+        [
+          155,
+          314,
+          215,
+          379
+        ],
+        [
+          225,
+          314,
+          284,
+          379
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        42,
+        20,
+        364,
+        377
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        414,
+        808,
+        834,
+        1246
+      ],
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "c9d5d6c463f5280cd68b977f19ab5cf217a3efb66193386de201e88a6c866616",
+      "size_px": [
+        420,
+        438
+      ],
+      "visible": [
+        21,
+        57,
+        389,
+        375
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "23f2776e3b7445053bd904e1c5214d1380e80e18f202564b489872ea1e58bd8d",
+      "body_bbox_px": [
+        97,
+        57,
+        353,
+        375
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        21,
+        57,
+        389,
+        375
+      ],
+      "reference_height_px": 350.0,
+      "anchor_px": [
+        231.74193548387098,
+        367.66129032258067
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        225.25,
+        375
+      ],
+      "sole_points": [
+        [
+          192.0,
+          374
+        ],
+        [
+          258.5,
+          375
+        ]
+      ],
+      "sole_regions": [
+        [
+          167,
+          312,
+          226,
+          377
+        ],
+        [
+          233,
+          312,
+          292,
+          377
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        21,
+        57,
+        389,
+        375
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        834,
+        808,
+        1262,
+        1246
+      ],
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "28525f1a5d804e319cf735cd4756f840786361e921e2a3a04f72c0ce1227d0a3",
+      "size_px": [
+        428,
+        438
+      ],
+      "visible": [
+        31,
+        89,
+        392,
+        374
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "23f2776e3b7445053bd904e1c5214d1380e80e18f202564b489872ea1e58bd8d",
+      "body_bbox_px": [
+        99,
+        89,
+        328,
+        374
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        31,
+        89,
+        392,
+        374
+      ],
+      "reference_height_px": 350.0,
+      "anchor_px": [
+        235.99193548387098,
+        366.66129032258067
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        229.5,
+        374
+      ],
+      "sole_points": [
+        [
+          196.0,
+          374
+        ],
+        [
+          263.0,
+          374
+        ]
+      ],
+      "sole_regions": [
+        [
+          171,
+          311,
+          230,
+          376
+        ],
+        [
+          238,
+          311,
+          296,
+          376
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        31,
+        89,
+        392,
+        374
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "13d7708d46b2986f65771d16e5cf18eddf45a649bf7a785178582d773b6a62ec",
+        "bytes": 5729
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/eskimo-curlew/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "96e9c09c7fd33a8e405662b46fdc2940b4343c3bf1f9f05df6a487e5640a4fab",
+      "bytes": 7734
+    }
+  ]
+}

@@ -37,6 +37,9 @@ EYECATCHES = 'assets/library/collections/character-eyecatches/v001/manifest.json
 GIMMICKS = 'assets/library/collections/background-gimmicks/v001/manifest.json'
 SUPPLEMENT = 'assets/library/collections/app-character-stock/v001/manifest.json'
 SPECIES = 'assets/library/collections/animal-species-stock/v001/manifest.json'
+YOUTUBE = 'assets/library/collections/youtube-basic-stock/v001/manifest.json'
+VIDEO_POSES = frozenset({'neutral', 'blink', 'greet', 'present_left', 'present_right',
+                         'think', 'aha', 'cheer', 'species_a', 'species_b'})
 MANAGEMENT = 'catalogs/character-asset-management-v1.json'
 ADOPTIONS = 'catalogs/character-adoptions-v1.json'
 SCOPES = ['assets/library/characters', 'assets/library/collections/animal-stock/v001',
@@ -47,7 +50,8 @@ SCOPES = ['assets/library/characters', 'assets/library/collections/animal-stock/
           'assets/library/collections/character-management/v001',
           'assets/library/collections/background-gimmicks/v001',
           'assets/library/collections/app-character-stock/v001',
-          'assets/library/collections/animal-species-stock/v001']
+          'assets/library/collections/animal-species-stock/v001',
+          'assets/library/collections/youtube-basic-stock/v001']
 EXTRAS = ['assets/library/README.md', 'assets/library/AGENTS.md', 'tools/character_library.py',
           'tools/register_character_expansion.py', 'tools/register_character_eyecatches.py', 'tools/component_alignment.py',
           'tools/manage_character_assets.py', 'tools/audit_character_style.py',
@@ -211,7 +215,7 @@ def _required_current_library_paths_locked(root, pending):
             from unified_asset_library import required_paths as current_view_paths
         required.update(current_view_paths(root))
     required.update(item['path'] for item in index['source_collections'])
-    for collection in (SUPPLEMENT, SPECIES):
+    for collection in (SUPPLEMENT, SPECIES, YOUTUBE):
         if any(item['path'] == collection for item in index['source_collections']):
             supplement = read(readable_source(root, collection, pending))
             required.update(item['path'] for item in supplement['review_evidence'])
@@ -943,7 +947,55 @@ def _supplement_pose_set_locked(root, selected, neutral, identity, pending):
             'reference_height_policy': 'Use each source sheet calibration unchanged; scene relative scale is separate.'}
 
 
-def _apply_supplement_locked(root, characters, pending, collection=SUPPLEMENT, *, new_identities_only=False):
+def _check_video_pose_set_locked(root, selected, block, neutral, identity, pending):
+    """Structural coverage and canonical reuse; visual acceptance stays separate."""
+    registration = read(_stock_owned_path(root, selected['registration'], identity, pending))
+    if (type(registration.get('schema_version')) is not int or registration['schema_version'] != 1
+            or registration.get('kind') != 'video-character-native-pose-registration'
+            or registration.get('status') != 'stocked-and-assistant-reviewed'
+            or registration.get('registration_candidate_only') is not False
+            or registration.get('current_adoption') is not True
+            or 'category' in registration):
+        raise ValueError('YouTube native pose registration must be reviewed and inherit identity category')
+    if set(block['poses']) != VIDEO_POSES:
+        raise ValueError('YouTube basic coverage requires neutral alias and all nine named poses')
+    alias = block['poses']['neutral']
+    if (neutral['image_region_px'] != [0, 0, *neutral['source_size_px']]
+            or alias['path'] != neutral['path'] or alias['sha256'] != neutral['sha256']
+            or alias['size_px'] != neutral['source_size_px']
+            or any(alias[key] != neutral[key] for key in
+                   ('body_bbox_px', 'anchor_px', 'reference_height_px'))
+            or alias.get('tail_bbox_px') != neutral.get('tail_bbox_px')
+            or any(alias.get(key) != neutral[key] for key in
+                   ('anchor_kind', 'anchor_measurement', 'anchor_basis',
+                    'vertical_motion_policy', 'source_foot_point_px', 'subject_bbox_px')
+                   if key in neutral)):
+        raise ValueError('YouTube neutral alias must preserve original PNG and canonical geometry')
+    required_clips = {
+        'idle_blink': {'blink'}, 'greeting': {'greet'},
+        'presentation_left': {'present_left'}, 'presentation_right': {'present_right'},
+        'thinking_discovery': {'think', 'aha'}, 'celebration': {'cheer'},
+        'species_motion': {'species_a', 'species_b'},
+    }
+    if set(block['clips']) != set(required_clips):
+        raise ValueError('YouTube video namespace requires all seven named clips')
+    for name, required_poses in required_clips.items():
+        clip = block['clips'][name]
+        if not isinstance(clip, dict):
+            raise ValueError('YouTube clips require explicit frames and durations')
+        if type(clip.get('loop')) is not bool:
+            raise ValueError('YouTube clip needs an explicit boolean loop flag')
+        frames, durations = clip.get('frames'), clip.get('durations_ms')
+        if (not isinstance(frames, list) or not frames or frames[0] != 'neutral'
+                or frames[-1] != 'neutral' or not required_poses <= set(frames)):
+            raise ValueError('YouTube clip must return to neutral and cover its named roles')
+        if (not isinstance(durations, list) or len(durations) != len(frames)
+                or any(type(value) is not int or value <= 0 for value in durations)):
+            raise ValueError('YouTube clip needs one positive millisecond duration per frame')
+
+
+def _apply_supplement_locked(root, characters, pending, collection=SUPPLEMENT, *,
+                             new_identities_only=False, existing_pose_sets_only=False):
     """Optional reviewed stock can extend identities without rewriting historical QA."""
     path = readable_source(root, collection, pending)
     if not path.is_file():
@@ -959,6 +1011,11 @@ def _apply_supplement_locked(root, characters, pending, collection=SUPPLEMENT, *
     seen = set()
     for selected in document['items']:
         identity = _stock_identifier(selected['id'])
+        if existing_pose_sets_only:
+            if (identity not in known or set(selected) != {'id', 'neutral_reference', 'pose_sets'}
+                    or not isinstance(selected['pose_sets'], list) or len(selected['pose_sets']) != 1
+                    or selected['pose_sets'][0].get('namespace') != 'video'):
+                raise ValueError('YouTube stock only adds one video namespace to an existing identity')
         if identity in seen:
             raise ValueError('Duplicate supplemental stock identity')
         seen.add(identity)
@@ -994,6 +1051,8 @@ def _apply_supplement_locked(root, characters, pending, collection=SUPPLEMENT, *
         namespaces = {block['namespace'] for block in item.get('pose_sets', [])}
         for source in pose_sets:
             block = _supplement_pose_set_locked(root, source, item['neutral'], identity, pending)
+            if existing_pose_sets_only:
+                _check_video_pose_set_locked(root, source, block, item['neutral'], identity, pending)
             if block['namespace'] in namespaces:
                 raise ValueError('Duplicate supplemental pose namespace')
             namespaces.add(block['namespace'])
@@ -1015,7 +1074,8 @@ def _apply_supplement_locked(root, characters, pending, collection=SUPPLEMENT, *
         for field in ('style_pattern', 'usage_role', 'taxonomy'):
             if field in selected:
                 item[field] = selected[field]
-        item['supplemental_collection'] = collection
+        if not existing_pose_sets_only:
+            item['supplemental_collection'] = collection
     for item in characters:
         if item.get('scene_relative_scale', {}).get('relative_to', item['id']) not in known:
             raise ValueError('Scene relative scale refers to an unknown character')
@@ -1219,6 +1279,7 @@ def _build_index_locked(root):
             characters.append(item)
     has_supplement = _apply_supplement_locked(root, characters, pending)
     has_species = _apply_supplement_locked(root, characters, pending, SPECIES, new_identities_only=True)
+    has_youtube = _apply_supplement_locked(root, characters, pending, YOUTUBE, existing_pose_sets_only=True)
     _apply_pose_set_adoptions_locked(root, characters, adoptions, pending)
     index = {
         'schema_version': 1, 'kind': 'portable-character-library-index',
@@ -1231,6 +1292,7 @@ def _build_index_locked(root):
                                 + ([EYECATCHES] if eyecatches else []) + ([GIMMICKS] if gimmicks is not None else [])
                                 + ([SUPPLEMENT] if has_supplement else [])
                                 + ([SPECIES] if has_species else [])
+                                + ([YOUTUBE] if has_youtube else [])
                                 + ([ADOPTIONS] if adoptions else []))],
         'usage_rules': ['Preserve the canonical face, palette, texture, contour and species markings.',
                         'Use target_body_height / reference_height as one isotropic scale for all poses from a calibrated source sheet; never fit individual poses.',

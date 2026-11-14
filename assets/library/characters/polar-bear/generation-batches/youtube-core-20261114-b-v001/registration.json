@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "polar-bear",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/polar-bear/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "28d271f9e541c1c83d93e2667f2e2fb5d69468a7975e103dcb97373f36b33cb0",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      284,
+      207,
+      960,
+      1177
+    ],
+    "anchor_px": [
+      620,
+      1170
+    ],
+    "reference_height_px": 970,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of the two broad supporting bear feet; body reference starts at skull top and excludes protruding ears.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/polar-bear/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "63704d3a49208043d210b6391fda1d8d71ad8c24b6e5e73f2316178eddb15709"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "28d271f9e541c1c83d93e2667f2e2fb5d69468a7975e103dcb97373f36b33cb0",
+      "reference_height_px": 970,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "d3f13c05ddb228bb5d72313e8b0a216e74dfc5908a1b1bb55e410c198b05ee22",
+      "reference_height_px": 358.2041264433087,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/polar-bear/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "28d271f9e541c1c83d93e2667f2e2fb5d69468a7975e103dcb97373f36b33cb0",
+          "bytes": 907270,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 970,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 401.0,
+            "source_y": 100.45346534653466,
+            "canonical_span": [
+              305,
+              938
+            ],
+            "source_span": [
+              109,
+              341
+            ],
+            "ratio": 0.3665086887835703
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 498.0,
+            "source_y": 136.180198019802,
+            "canonical_span": [
+              284,
+              959
+            ],
+            "source_span": [
+              100,
+              349
+            ],
+            "ratio": 0.3688888888888889
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 808.4,
+            "source_y": 250.50574257425743,
+            "canonical_span": [
+              324,
+              911
+            ],
+            "source_span": [
+              115,
+              332
+            ],
+            "ratio": 0.3696763202725724
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 924.8,
+            "source_y": 293.3778217821782,
+            "canonical_span": [
+              371,
+              862
+            ],
+            "source_span": [
+              134,
+              317
+            ],
+            "ratio": 0.3727087576374745
+          }
+        ],
+        "common_ratio": 0.36928260458073064,
+        "initial_roi_locator_only_visible_height_ratio": 0.3683168316831683,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0169165671746612,
+        "visual_confirmation": {
+          "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "f1d7f87233e7f4b1f0cc95b5f5131d55c0c83ddf02e2912ca3a7c9ee0ecffd85",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "ddefbfa1e45cdc22797bd1aa2fbe737c2d158248a6cc20481b8b9f9d48c31c8f"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/polar-bear/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "28d271f9e541c1c83d93e2667f2e2fb5d69468a7975e103dcb97373f36b33cb0",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        284,
+        207,
+        960,
+        1177
+      ],
+      "anchor_px": [
+        620,
+        1170
+      ],
+      "reference_height_px": 970,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of the two broad supporting bear feet; body reference starts at skull top and excludes protruding ears.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/polar-bear/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "63704d3a49208043d210b6391fda1d8d71ad8c24b6e5e73f2316178eddb15709",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "28d271f9e541c1c83d93e2667f2e2fb5d69468a7975e103dcb97373f36b33cb0",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        420,
+        398
+      ],
+      "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "703a0f375fc30a8fcc256757cfd171fff8444b559042960e1cd6ace69961b33f",
+      "size_px": [
+        420,
+        398
+      ],
+      "visible": [
+        100,
+        14,
+        352,
+        386
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "d3f13c05ddb228bb5d72313e8b0a216e74dfc5908a1b1bb55e410c198b05ee22",
+      "body_bbox_px": [
+        100,
+        29,
+        349,
+        386
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        100,
+        14,
+        352,
+        386
+      ],
+      "reference_height_px": 358.2041264433087,
+      "anchor_px": [
+        225.09641302290365,
+        383.4150217679349
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        223.25,
+        386
+      ],
+      "sole_points": [
+        [
+          176.0,
+          386
+        ],
+        [
+          270.5,
+          386
+        ]
+      ],
+      "sole_regions": [
+        [
+          136,
+          322,
+          221,
+          388
+        ],
+        [
+          226,
+          322,
+          310,
+          388
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        100,
+        14,
+        352,
+        386
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        420,
+        0,
+        837,
+        398
+      ],
+      "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "0f99f9253571231fe9c9d4bf30a1d5c89be50f7779ac2ea90a640783755073d2",
+      "size_px": [
+        417,
+        398
+      ],
+      "visible": [
+        78,
+        13,
+        331,
+        386
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "d3f13c05ddb228bb5d72313e8b0a216e74dfc5908a1b1bb55e410c198b05ee22",
+      "body_bbox_px": [
+        78,
+        28,
+        328,
+        386
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        78,
+        13,
+        331,
+        386
+      ],
+      "reference_height_px": 358.2041264433087,
+      "anchor_px": [
+        205.09641302290365,
+        383.4150217679349
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        203.25,
+        386
+      ],
+      "sole_points": [
+        [
+          157.0,
+          386
+        ],
+        [
+          249.5,
+          386
+        ]
+      ],
+      "sole_regions": [
+        [
+          115,
+          322,
+          199,
+          388
+        ],
+        [
+          207,
+          322,
+          289,
+          388
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        78,
+        13,
+        331,
+        386
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        837,
+        0,
+        1261,
+        398
+      ],
+      "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "a4c8889a972a8e0eeca7b93dae5d91d68326e0b07e60fa070bcc6bb398333700",
+      "size_px": [
+        424,
+        398
+      ],
+      "visible": [
+        49,
+        14,
+        323,
+        386
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "d3f13c05ddb228bb5d72313e8b0a216e74dfc5908a1b1bb55e410c198b05ee22",
+      "body_bbox_px": [
+        49,
+        29,
+        298,
+        386
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        49,
+        14,
+        323,
+        386
+      ],
+      "reference_height_px": 358.2041264433087,
+      "anchor_px": [
+        200.59641302290365,
+        383.4150217679349
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        198.75,
+        386
+      ],
+      "sole_points": [
+        [
+          153.0,
+          386
+        ],
+        [
+          244.5,
+          386
+        ]
+      ],
+      "sole_regions": [
+        [
+          112,
+          322,
+          197,
+          388
+        ],
+        [
+          199,
+          322,
+          285,
+          388
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        49,
+        14,
+        323,
+        386
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        398,
+        420,
+        812
+      ],
+      "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "591312bb01a21868ef285ec4d362097d6aa570bbc34b2d1c8ce76596715b4bfd",
+      "size_px": [
+        420,
+        414
+      ],
+      "visible": [
+        94,
+        23,
+        367,
+        398
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "d3f13c05ddb228bb5d72313e8b0a216e74dfc5908a1b1bb55e410c198b05ee22",
+      "body_bbox_px": [
+        94,
+        38,
+        345,
+        398
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        94,
+        23,
+        367,
+        398
+      ],
+      "reference_height_px": 358.2041264433087,
+      "anchor_px": [
+        222.59641302290365,
+        395.4150217679349
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        220.75,
+        398
+      ],
+      "sole_points": [
+        [
+          176.5,
+          398
+        ],
+        [
+          265.0,
+          398
+        ]
+      ],
+      "sole_regions": [
+        [
+          132,
+          334,
+          218,
+          400
+        ],
+        [
+          223,
+          334,
+          307,
+          400
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        94,
+        23,
+        367,
+        398
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        420,
+        398,
+        837,
+        812
+      ],
+      "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "7ed43e9eccdc1b099c33fc4e537b6c760232b72192ee5c5549f65f2c73fa27ba",
+      "size_px": [
+        417,
+        414
+      ],
+      "visible": [
+        71,
+        13,
+        336,
+        398
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "d3f13c05ddb228bb5d72313e8b0a216e74dfc5908a1b1bb55e410c198b05ee22",
+      "body_bbox_px": [
+        71,
+        28,
+        329,
+        398
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        71,
+        13,
+        336,
+        398
+      ],
+      "reference_height_px": 358.2041264433087,
+      "anchor_px": [
+        208.59641302290365,
+        395.4150217679349
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        206.75,
+        398
+      ],
+      "sole_points": [
+        [
+          161.5,
+          398
+        ],
+        [
+          252.0,
+          398
+        ]
+      ],
+      "sole_regions": [
+        [
+          121,
+          334,
+          204,
+          400
+        ],
+        [
+          208,
+          334,
+          292,
+          400
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        71,
+        13,
+        336,
+        398
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        837,
+        398,
+        1261,
+        812
+      ],
+      "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "8dc874386eb0d2b09ec252b300c9db2529ea01507c0603b33b4285096f11bec7",
+      "size_px": [
+        424,
+        414
+      ],
+      "visible": [
+        72,
+        24,
+        324,
+        398
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "d3f13c05ddb228bb5d72313e8b0a216e74dfc5908a1b1bb55e410c198b05ee22",
+      "body_bbox_px": [
+        72,
+        39,
+        323,
+        398
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        72,
+        24,
+        324,
+        398
+      ],
+      "reference_height_px": 358.2041264433087,
+      "anchor_px": [
+        201.84641302290365,
+        395.4150217679349
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        200.0,
+        398
+      ],
+      "sole_points": [
+        [
+          154.0,
+          396
+        ],
+        [
+          246.0,
+          398
+        ]
+      ],
+      "sole_regions": [
+        [
+          112,
+          334,
+          197,
+          400
+        ],
+        [
+          203,
+          334,
+          287,
+          400
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        72,
+        24,
+        324,
+        398
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        812,
+        420,
+        1247
+      ],
+      "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "a43117af605431c43fb73ee68af02f94b04b3f767cc1e02c17ad4115b7502e82",
+      "size_px": [
+        420,
+        435
+      ],
+      "visible": [
+        90,
+        17,
+        345,
+        397
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "d3f13c05ddb228bb5d72313e8b0a216e74dfc5908a1b1bb55e410c198b05ee22",
+      "body_bbox_px": [
+        90,
+        32,
+        345,
+        397
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        90,
+        17,
+        345,
+        397
+      ],
+      "reference_height_px": 358.2041264433087,
+      "anchor_px": [
+        219.59641302290365,
+        394.4150217679349
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        217.75,
+        397
+      ],
+      "sole_points": [
+        [
+          171.0,
+          397
+        ],
+        [
+          264.5,
+          397
+        ]
+      ],
+      "sole_regions": [
+        [
+          129,
+          333,
+          214,
+          399
+        ],
+        [
+          220,
+          333,
+          307,
+          399
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        90,
+        17,
+        345,
+        397
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        420,
+        812,
+        837,
+        1247
+      ],
+      "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "dd64ec154a9c8389e9342ec80469e856964cfe1ade4bec98a21c2c04eb848215",
+      "size_px": [
+        417,
+        435
+      ],
+      "visible": [
+        77,
+        17,
+        334,
+        397
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "d3f13c05ddb228bb5d72313e8b0a216e74dfc5908a1b1bb55e410c198b05ee22",
+      "body_bbox_px": [
+        77,
+        32,
+        332,
+        397
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        77,
+        17,
+        334,
+        397
+      ],
+      "reference_height_px": 358.2041264433087,
+      "anchor_px": [
+        204.84641302290365,
+        394.4150217679349
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        203.0,
+        397
+      ],
+      "sole_points": [
+        [
+          154.0,
+          397
+        ],
+        [
+          252.0,
+          397
+        ]
+      ],
+      "sole_regions": [
+        [
+          114,
+          333,
+          199,
+          399
+        ],
+        [
+          205,
+          333,
+          292,
+          399
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        77,
+        17,
+        334,
+        397
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        837,
+        812,
+        1261,
+        1247
+      ],
+      "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "cfd3261d94068eb574ae38e20d70c1f9b67daac7f28f1d5ae3c90cbda2868634",
+      "size_px": [
+        424,
+        435
+      ],
+      "visible": [
+        48,
+        17,
+        345,
+        398
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "d3f13c05ddb228bb5d72313e8b0a216e74dfc5908a1b1bb55e410c198b05ee22",
+      "body_bbox_px": [
+        48,
+        32,
+        303,
+        398
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        48,
+        17,
+        345,
+        398
+      ],
+      "reference_height_px": 358.2041264433087,
+      "anchor_px": [
+        200.59641302290365,
+        395.4150217679349
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        198.75,
+        398
+      ],
+      "sole_points": [
+        [
+          152.5,
+          396
+        ],
+        [
+          245.0,
+          398
+        ]
+      ],
+      "sole_regions": [
+        [
+          111,
+          334,
+          196,
+          400
+        ],
+        [
+          203,
+          334,
+          288,
+          400
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        48,
+        17,
+        345,
+        398
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "ddefbfa1e45cdc22797bd1aa2fbe737c2d158248a6cc20481b8b9f9d48c31c8f",
+        "bytes": 5616
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/polar-bear/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "69c2f80c83e8247b6537fd8a0dee6b47d50d560375666874ac354e99c9951836",
+      "bytes": 7612
+    }
+  ]
+}

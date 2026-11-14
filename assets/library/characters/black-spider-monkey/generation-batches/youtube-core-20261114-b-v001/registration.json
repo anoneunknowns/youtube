@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "black-spider-monkey",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/black-spider-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "833b9abe8092c597372e2aca3e46c430718c877bfd3ed12d19b8a2ec7017441c",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      257.0,
+      110.0,
+      955.0,
+      1181.0
+    ],
+    "anchor_px": [
+      601.0,
+      1176.0
+    ],
+    "reference_height_px": 1071.0,
+    "anchor_kind": "anatomical_feet_support",
+    "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+    "anchor_basis": "Head-to-feet body reference excludes curled side tail; projected paired foot contacts define support.",
+    "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+    "source_manifest": "assets/library/characters/black-spider-monkey/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "b89f178fa013e7c07e513597869d01c0fe2bf4258ae98379e3870dbeb1c400a2"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "833b9abe8092c597372e2aca3e46c430718c877bfd3ed12d19b8a2ec7017441c",
+      "reference_height_px": 1071.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0ee674aa1bd68de22ca037fdc8c492b4e0cdc4ff792a4560012b2983d117e346",
+      "reference_height_px": 368.502172930501,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/black-spider-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "833b9abe8092c597372e2aca3e46c430718c877bfd3ed12d19b8a2ec7017441c",
+          "bytes": 960786,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1071.0,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 324.20000000000005,
+            "source_y": 83.80000000000001,
+            "canonical_span": [
+              318,
+              897
+            ],
+            "source_span": [
+              113,
+              312
+            ],
+            "ratio": 0.3436960276338515
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 431.3,
+            "source_y": 120.7,
+            "canonical_span": [
+              264,
+              950
+            ],
+            "source_span": [
+              95,
+              331
+            ],
+            "ratio": 0.34402332361516036
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 774.02,
+            "source_y": 238.78,
+            "canonical_span": [
+              404,
+              902
+            ],
+            "source_span": [
+              142,
+              333
+            ],
+            "ratio": 0.38353413654618473
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 902.54,
+            "source_y": 283.06,
+            "canonical_span": [
+              354,
+              941
+            ],
+            "source_span": [
+              124,
+              326
+            ],
+            "ratio": 0.3441226575809199
+          }
+        ],
+        "common_ratio": 0.34407299059804014,
+        "initial_roi_locator_only_visible_height_ratio": 0.3445378151260504,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.1159108796997033,
+        "visual_confirmation": {
+          "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "78b69dcbd8f6c6b67d37d33edf18f71c7657ec811ef508cd2e1d1fff8e8d62d5",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "ef6ab10d138561e66883993397d8e1e311a5e957f824ef3b7b60524bdb980080"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "833b9abe8092c597372e2aca3e46c430718c877bfd3ed12d19b8a2ec7017441c",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        257.0,
+        110.0,
+        955.0,
+        1181.0
+      ],
+      "anchor_px": [
+        601.0,
+        1176.0
+      ],
+      "reference_height_px": 1071.0,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Head-to-feet body reference excludes curled side tail; projected paired foot contacts define support.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "source_manifest": "assets/library/characters/black-spider-monkey/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "b89f178fa013e7c07e513597869d01c0fe2bf4258ae98379e3870dbeb1c400a2",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "833b9abe8092c597372e2aca3e46c430718c877bfd3ed12d19b8a2ec7017441c",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        420,
+        398
+      ],
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "3078e80548b2c813ffeffbafa064f6e855b68784c30be457e172d02bf91c85be",
+      "size_px": [
+        420,
+        398
+      ],
+      "visible": [
+        92,
+        10,
+        350,
+        379
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0ee674aa1bd68de22ca037fdc8c492b4e0cdc4ff792a4560012b2983d117e346",
+      "body_bbox_px": [
+        92,
+        10,
+        333,
+        379
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        92,
+        10,
+        350,
+        379
+      ],
+      "reference_height_px": 368.502172930501,
+      "anchor_px": [
+        210.08601824764952,
+        377.2796350470098
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        210.0,
+        379
+      ],
+      "sole_points": [
+        [
+          173.5,
+          379
+        ],
+        [
+          246.5,
+          378
+        ]
+      ],
+      "sole_regions": [
+        [
+          145,
+          313,
+          204,
+          381
+        ],
+        [
+          216,
+          313,
+          274,
+          381
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        92,
+        10,
+        350,
+        379
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        420,
+        0,
+        840,
+        398
+      ],
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "38d28ffec7c5c41b65bc0cfa79f7b8f590727df664be9a30e03a3def2fba4117",
+      "size_px": [
+        420,
+        398
+      ],
+      "visible": [
+        83,
+        9,
+        348,
+        379
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0ee674aa1bd68de22ca037fdc8c492b4e0cdc4ff792a4560012b2983d117e346",
+      "body_bbox_px": [
+        83,
+        9,
+        324,
+        379
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        83,
+        9,
+        348,
+        379
+      ],
+      "reference_height_px": 368.502172930501,
+      "anchor_px": [
+        210.83601824764952,
+        377.2796350470098
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        210.75,
+        379
+      ],
+      "sole_points": [
+        [
+          174.0,
+          379
+        ],
+        [
+          247.5,
+          379
+        ]
+      ],
+      "sole_regions": [
+        [
+          146,
+          313,
+          204,
+          381
+        ],
+        [
+          217,
+          313,
+          275,
+          381
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        83,
+        9,
+        348,
+        379
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        840,
+        0,
+        1261,
+        398
+      ],
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "c95c4ed0a5b103060291aac9fc8c3b9333bcefb433da828501047a8dd52f0f3b",
+      "size_px": [
+        421,
+        398
+      ],
+      "visible": [
+        64,
+        10,
+        349,
+        379
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0ee674aa1bd68de22ca037fdc8c492b4e0cdc4ff792a4560012b2983d117e346",
+      "body_bbox_px": [
+        64,
+        10,
+        305,
+        379
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        64,
+        10,
+        349,
+        379
+      ],
+      "reference_height_px": 368.502172930501,
+      "anchor_px": [
+        211.08601824764952,
+        377.2796350470098
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        211.0,
+        379
+      ],
+      "sole_points": [
+        [
+          174.0,
+          379
+        ],
+        [
+          248.0,
+          379
+        ]
+      ],
+      "sole_regions": [
+        [
+          145,
+          313,
+          205,
+          381
+        ],
+        [
+          218,
+          313,
+          276,
+          381
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        64,
+        10,
+        349,
+        379
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        398,
+        420,
+        811
+      ],
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "acfeae550fb3557a5a077ec9827cf2d98cea63038a90332f84b66c7079abd99c",
+      "size_px": [
+        420,
+        413
+      ],
+      "visible": [
+        92,
+        22,
+        359,
+        392
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0ee674aa1bd68de22ca037fdc8c492b4e0cdc4ff792a4560012b2983d117e346",
+      "body_bbox_px": [
+        92,
+        22,
+        333,
+        392
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        92,
+        22,
+        359,
+        392
+      ],
+      "reference_height_px": 368.502172930501,
+      "anchor_px": [
+        210.33601824764952,
+        390.2796350470098
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        210.25,
+        392
+      ],
+      "sole_points": [
+        [
+          173.5,
+          392
+        ],
+        [
+          247.0,
+          391
+        ]
+      ],
+      "sole_regions": [
+        [
+          144,
+          326,
+          204,
+          394
+        ],
+        [
+          217,
+          326,
+          274,
+          394
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        92,
+        22,
+        359,
+        392
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        420,
+        398,
+        840,
+        811
+      ],
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "f94328aaa9745705964c5b38725681c819bef85622c836435b164a0c13e80f0e",
+      "size_px": [
+        420,
+        413
+      ],
+      "visible": [
+        96,
+        22,
+        347,
+        393
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0ee674aa1bd68de22ca037fdc8c492b4e0cdc4ff792a4560012b2983d117e346",
+      "body_bbox_px": [
+        96,
+        22,
+        338,
+        393
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        96,
+        22,
+        347,
+        393
+      ],
+      "reference_height_px": 368.502172930501,
+      "anchor_px": [
+        210.83601824764952,
+        391.2796350470098
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        210.75,
+        393
+      ],
+      "sole_points": [
+        [
+          174.5,
+          393
+        ],
+        [
+          247.0,
+          391
+        ]
+      ],
+      "sole_regions": [
+        [
+          146,
+          327,
+          204,
+          395
+        ],
+        [
+          217,
+          327,
+          275,
+          395
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        96,
+        22,
+        347,
+        393
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        840,
+        398,
+        1261,
+        811
+      ],
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "70b68490b5f9a4e2eeeefd41a9677ede9fce31d49a26b5cd5ccc5ab95aa8b110",
+      "size_px": [
+        421,
+        413
+      ],
+      "visible": [
+        93,
+        19,
+        349,
+        391
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0ee674aa1bd68de22ca037fdc8c492b4e0cdc4ff792a4560012b2983d117e346",
+      "body_bbox_px": [
+        93,
+        19,
+        336,
+        391
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        93,
+        19,
+        349,
+        391
+      ],
+      "reference_height_px": 368.502172930501,
+      "anchor_px": [
+        211.08601824764952,
+        389.2796350470098
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        211.0,
+        391
+      ],
+      "sole_points": [
+        [
+          174.5,
+          391
+        ],
+        [
+          247.5,
+          391
+        ]
+      ],
+      "sole_regions": [
+        [
+          145,
+          325,
+          206,
+          393
+        ],
+        [
+          218,
+          325,
+          276,
+          393
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        93,
+        19,
+        349,
+        391
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        811,
+        420,
+        1247
+      ],
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "3d3747ba5d129252fd3e679a9904451bc3d3c2f9b507d256adeed3967a9c0cfc",
+      "size_px": [
+        420,
+        436
+      ],
+      "visible": [
+        89,
+        21,
+        352,
+        390
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0ee674aa1bd68de22ca037fdc8c492b4e0cdc4ff792a4560012b2983d117e346",
+      "body_bbox_px": [
+        89,
+        21,
+        330,
+        390
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        89,
+        21,
+        352,
+        390
+      ],
+      "reference_height_px": 368.502172930501,
+      "anchor_px": [
+        209.58601824764952,
+        388.2796350470098
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        209.5,
+        390
+      ],
+      "sole_points": [
+        [
+          173.0,
+          390
+        ],
+        [
+          246.0,
+          389
+        ]
+      ],
+      "sole_regions": [
+        [
+          146,
+          324,
+          204,
+          392
+        ],
+        [
+          216,
+          324,
+          275,
+          392
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        89,
+        21,
+        352,
+        390
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        420,
+        811,
+        840,
+        1247
+      ],
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "25916ad4fe5a7c316e8c92dbd97f4e2fbaf61b672e50acc47379d6c5241fa683",
+      "size_px": [
+        420,
+        436
+      ],
+      "visible": [
+        92,
+        22,
+        338,
+        390
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0ee674aa1bd68de22ca037fdc8c492b4e0cdc4ff792a4560012b2983d117e346",
+      "body_bbox_px": [
+        92,
+        22,
+        332,
+        390
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        92,
+        22,
+        338,
+        390
+      ],
+      "reference_height_px": 368.502172930501,
+      "anchor_px": [
+        210.58601824764952,
+        388.2796350470098
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        210.5,
+        390
+      ],
+      "sole_points": [
+        [
+          174.0,
+          390
+        ],
+        [
+          247.0,
+          390
+        ]
+      ],
+      "sole_regions": [
+        [
+          146,
+          324,
+          204,
+          392
+        ],
+        [
+          217,
+          324,
+          275,
+          392
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        92,
+        22,
+        338,
+        390
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        840,
+        811,
+        1261,
+        1247
+      ],
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "686cd435bcee38f99d940346fdd1f0124fc852900fd5df4067864fb15f30d855",
+      "size_px": [
+        421,
+        436
+      ],
+      "visible": [
+        93,
+        22,
+        348,
+        390
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0ee674aa1bd68de22ca037fdc8c492b4e0cdc4ff792a4560012b2983d117e346",
+      "body_bbox_px": [
+        93,
+        22,
+        333,
+        390
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        93,
+        22,
+        348,
+        390
+      ],
+      "reference_height_px": 368.502172930501,
+      "anchor_px": [
+        210.83601824764952,
+        388.2796350470098
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        210.75,
+        390
+      ],
+      "sole_points": [
+        [
+          174.0,
+          390
+        ],
+        [
+          247.5,
+          390
+        ]
+      ],
+      "sole_regions": [
+        [
+          145,
+          324,
+          204,
+          392
+        ],
+        [
+          218,
+          324,
+          276,
+          392
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        93,
+        22,
+        348,
+        390
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "ef6ab10d138561e66883993397d8e1e311a5e957f824ef3b7b60524bdb980080",
+        "bytes": 5164
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/black-spider-monkey/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "149fc05cc92949927ac17706f270730dd456631eb57167d9e7e0a998690bdbca",
+      "bytes": 7715
+    }
+  ]
+}

@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "harvest-mouse",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/harvest-mouse/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+    "sha256": "801f5860dd9d09baa86234f830644038dd6be6554911ef0713dca03eec856c34",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      272.0,
+      162.0,
+      958.0,
+      1171.0
+    ],
+    "anchor_px": [
+      609.0,
+      1166.0
+    ],
+    "reference_height_px": 1009.0,
+    "anchor_kind": "anatomical_feet_support",
+    "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+    "anchor_basis": "Body reference crown-to-feet excludes the thin side tail; anchor is the projected midpoint of the two small foot contacts.",
+    "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+    "source_manifest": "assets/library/characters/harvest-mouse/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "1a09cc8d4024b9c107f965327f496810d24a861d0f0457a868ebaf03c996674e"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "801f5860dd9d09baa86234f830644038dd6be6554911ef0713dca03eec856c34",
+      "reference_height_px": 1009.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "db4437bd615de9034bfce781098f3069db57781c69c1cdec1ad97ce0f2a533d7",
+      "reference_height_px": 349.3111322602907,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/harvest-mouse/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+          "sha256": "801f5860dd9d09baa86234f830644038dd6be6554911ef0713dca03eec856c34",
+          "bytes": 1008881,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1009.0,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 363.8,
+            "source_y": 99.8,
+            "canonical_span": [
+              294,
+              938
+            ],
+            "source_span": [
+              106,
+              328
+            ],
+            "ratio": 0.3447204968944099
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 464.7,
+            "source_y": 135.2,
+            "canonical_span": [
+              297,
+              931
+            ],
+            "source_span": [
+              108,
+              325
+            ],
+            "ratio": 0.3422712933753943
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 787.58,
+            "source_y": 248.48,
+            "canonical_span": [
+              359,
+              917
+            ],
+            "source_span": [
+              128,
+              322
+            ],
+            "ratio": 0.34767025089605735
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 908.66,
+            "source_y": 290.96,
+            "canonical_span": [
+              402,
+              943
+            ],
+            "source_span": [
+              142,
+              331
+            ],
+            "ratio": 0.34935304990757854
+          }
+        ],
+        "common_ratio": 0.34619537389523364,
+        "initial_roi_locator_only_visible_height_ratio": 0.3508424182358771,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0206904776101604,
+        "visual_confirmation": {
+          "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "c86d155b58032175ba5d4f8bc3ba52d0e1add009224fc7a8aacc859e013c78c8",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "37aad738400e026d2b9c010d2532c1ded6061d0682745a2edce38b38d529361f"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/harvest-mouse/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "sha256": "801f5860dd9d09baa86234f830644038dd6be6554911ef0713dca03eec856c34",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        272.0,
+        162.0,
+        958.0,
+        1171.0
+      ],
+      "anchor_px": [
+        609.0,
+        1166.0
+      ],
+      "reference_height_px": 1009.0,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Body reference crown-to-feet excludes the thin side tail; anchor is the projected midpoint of the two small foot contacts.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "source_manifest": "assets/library/characters/harvest-mouse/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "1a09cc8d4024b9c107f965327f496810d24a861d0f0457a868ebaf03c996674e",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "801f5860dd9d09baa86234f830644038dd6be6554911ef0713dca03eec856c34",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        418,
+        410
+      ],
+      "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "b9984093739db8db87326c9b09f6816623bd1b6760f758d5f625493b8401cff1",
+      "size_px": [
+        418,
+        410
+      ],
+      "visible": [
+        95,
+        29,
+        347,
+        383
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "db4437bd615de9034bfce781098f3069db57781c69c1cdec1ad97ce0f2a533d7",
+      "body_bbox_px": [
+        95,
+        29,
+        336,
+        383
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        95,
+        29,
+        347,
+        383
+      ],
+      "reference_height_px": 349.3111322602907,
+      "anchor_px": [
+        215.05760925220955,
+        381.2690231305238
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        215.75,
+        383
+      ],
+      "sole_points": [
+        [
+          178.0,
+          382
+        ],
+        [
+          253.5,
+          383
+        ]
+      ],
+      "sole_regions": [
+        [
+          150,
+          320,
+          210,
+          385
+        ],
+        [
+          221,
+          320,
+          282,
+          385
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        95,
+        29,
+        347,
+        383
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        418,
+        0,
+        836,
+        410
+      ],
+      "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "90408f2de788c3698bb7fa21513a090255696c1b41e62190845ef5a15d268840",
+      "size_px": [
+        418,
+        410
+      ],
+      "visible": [
+        76,
+        25,
+        324,
+        383
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "db4437bd615de9034bfce781098f3069db57781c69c1cdec1ad97ce0f2a533d7",
+      "body_bbox_px": [
+        76,
+        25,
+        319,
+        383
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        76,
+        25,
+        324,
+        383
+      ],
+      "reference_height_px": 349.3111322602907,
+      "anchor_px": [
+        193.80760925220955,
+        381.2690231305238
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        194.5,
+        383
+      ],
+      "sole_points": [
+        [
+          156.0,
+          382
+        ],
+        [
+          233.0,
+          383
+        ]
+      ],
+      "sole_regions": [
+        [
+          128,
+          320,
+          190,
+          385
+        ],
+        [
+          200,
+          320,
+          261,
+          385
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        76,
+        25,
+        324,
+        383
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        836,
+        0,
+        1254,
+        410
+      ],
+      "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "94c87be70bfcc7f46e4c7be0c855d2173ec74f951a7cfa66831dc86e27a30e48",
+      "size_px": [
+        418,
+        410
+      ],
+      "visible": [
+        66,
+        25,
+        325,
+        384
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "db4437bd615de9034bfce781098f3069db57781c69c1cdec1ad97ce0f2a533d7",
+      "body_bbox_px": [
+        66,
+        25,
+        310,
+        384
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        66,
+        25,
+        325,
+        384
+      ],
+      "reference_height_px": 349.3111322602907,
+      "anchor_px": [
+        193.30760925220955,
+        382.2690231305238
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        194.0,
+        384
+      ],
+      "sole_points": [
+        [
+          156.5,
+          384
+        ],
+        [
+          231.5,
+          384
+        ]
+      ],
+      "sole_regions": [
+        [
+          128,
+          321,
+          188,
+          386
+        ],
+        [
+          200,
+          321,
+          261,
+          386
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        66,
+        25,
+        325,
+        384
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        410,
+        418,
+        830
+      ],
+      "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "b0e4c7417dcda71765488909c39e069fc43a466af8150a031f9e1e1dbe5f291c",
+      "size_px": [
+        418,
+        420
+      ],
+      "visible": [
+        88,
+        32,
+        349,
+        392
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "db4437bd615de9034bfce781098f3069db57781c69c1cdec1ad97ce0f2a533d7",
+      "body_bbox_px": [
+        88,
+        32,
+        333,
+        392
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        88,
+        32,
+        349,
+        392
+      ],
+      "reference_height_px": 349.3111322602907,
+      "anchor_px": [
+        216.05760925220955,
+        390.2690231305238
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        216.75,
+        392
+      ],
+      "sole_points": [
+        [
+          179.0,
+          391
+        ],
+        [
+          254.5,
+          392
+        ]
+      ],
+      "sole_regions": [
+        [
+          150,
+          329,
+          211,
+          394
+        ],
+        [
+          222,
+          329,
+          282,
+          394
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        88,
+        32,
+        349,
+        392
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        418,
+        410,
+        836,
+        830
+      ],
+      "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "69e0e05d3ef8105345c5b1a533a57337c611d9d3708464a1a6581d1eaf54c510",
+      "size_px": [
+        418,
+        420
+      ],
+      "visible": [
+        70,
+        26,
+        326,
+        392
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "db4437bd615de9034bfce781098f3069db57781c69c1cdec1ad97ce0f2a533d7",
+      "body_bbox_px": [
+        70,
+        26,
+        319,
+        392
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        70,
+        26,
+        326,
+        392
+      ],
+      "reference_height_px": 349.3111322602907,
+      "anchor_px": [
+        193.55760925220955,
+        390.2690231305238
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        194.25,
+        392
+      ],
+      "sole_points": [
+        [
+          156.5,
+          392
+        ],
+        [
+          232.0,
+          391
+        ]
+      ],
+      "sole_regions": [
+        [
+          128,
+          329,
+          188,
+          394
+        ],
+        [
+          199,
+          329,
+          260,
+          394
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        70,
+        26,
+        326,
+        392
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        836,
+        410,
+        1254,
+        830
+      ],
+      "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "348e4313117c79eb8116dbae89d28cb61249b9faf91703af20c712ae8909a8d7",
+      "size_px": [
+        418,
+        420
+      ],
+      "visible": [
+        77,
+        35,
+        325,
+        392
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "db4437bd615de9034bfce781098f3069db57781c69c1cdec1ad97ce0f2a533d7",
+      "body_bbox_px": [
+        77,
+        35,
+        320,
+        392
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        77,
+        35,
+        325,
+        392
+      ],
+      "reference_height_px": 349.3111322602907,
+      "anchor_px": [
+        192.80760925220955,
+        390.2690231305238
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        193.5,
+        392
+      ],
+      "sole_points": [
+        [
+          155.0,
+          392
+        ],
+        [
+          232.0,
+          391
+        ]
+      ],
+      "sole_regions": [
+        [
+          127,
+          329,
+          187,
+          394
+        ],
+        [
+          199,
+          329,
+          260,
+          394
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        77,
+        35,
+        325,
+        392
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        830,
+        418,
+        1254
+      ],
+      "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "221baaf2e86c2a4412a393b7a5e51b95e0250eec4a6780d772709204b21f6108",
+      "size_px": [
+        418,
+        424
+      ],
+      "visible": [
+        94,
+        35,
+        336,
+        390
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "db4437bd615de9034bfce781098f3069db57781c69c1cdec1ad97ce0f2a533d7",
+      "body_bbox_px": [
+        94,
+        35,
+        335,
+        390
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        94,
+        35,
+        336,
+        390
+      ],
+      "reference_height_px": 349.3111322602907,
+      "anchor_px": [
+        216.05760925220955,
+        388.2690231305238
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        216.75,
+        390
+      ],
+      "sole_points": [
+        [
+          178.5,
+          390
+        ],
+        [
+          255.0,
+          390
+        ]
+      ],
+      "sole_regions": [
+        [
+          149,
+          327,
+          211,
+          392
+        ],
+        [
+          222,
+          327,
+          283,
+          392
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        94,
+        35,
+        336,
+        390
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        418,
+        830,
+        836,
+        1254
+      ],
+      "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "f06949d3c146f2385759a3f732f9697e8516d4c4e9fd9fc8c115dd648ba680d7",
+      "size_px": [
+        418,
+        424
+      ],
+      "visible": [
+        66,
+        30,
+        326,
+        390
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "db4437bd615de9034bfce781098f3069db57781c69c1cdec1ad97ce0f2a533d7",
+      "body_bbox_px": [
+        66,
+        30,
+        311,
+        390
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        66,
+        30,
+        326,
+        390
+      ],
+      "reference_height_px": 349.3111322602907,
+      "anchor_px": [
+        194.30760925220955,
+        388.2690231305238
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        195.0,
+        390
+      ],
+      "sole_points": [
+        [
+          157.0,
+          390
+        ],
+        [
+          233.0,
+          389
+        ]
+      ],
+      "sole_regions": [
+        [
+          129,
+          327,
+          190,
+          392
+        ],
+        [
+          202,
+          327,
+          263,
+          392
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        66,
+        30,
+        326,
+        390
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        836,
+        830,
+        1254,
+        1254
+      ],
+      "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "a196d9444b69c9fe0268bda9fb7162ccac0e3483c4f1fb0e3b63b45ef2566b2f",
+      "size_px": [
+        418,
+        424
+      ],
+      "visible": [
+        80,
+        35,
+        327,
+        390
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "db4437bd615de9034bfce781098f3069db57781c69c1cdec1ad97ce0f2a533d7",
+      "body_bbox_px": [
+        80,
+        35,
+        321,
+        390
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        80,
+        35,
+        327,
+        390
+      ],
+      "reference_height_px": 349.3111322602907,
+      "anchor_px": [
+        194.30760925220955,
+        388.2690231305238
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        195.0,
+        390
+      ],
+      "sole_points": [
+        [
+          157.5,
+          390
+        ],
+        [
+          232.5,
+          389
+        ]
+      ],
+      "sole_regions": [
+        [
+          130,
+          327,
+          192,
+          392
+        ],
+        [
+          202,
+          327,
+          262,
+          392
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        80,
+        35,
+        327,
+        390
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "37aad738400e026d2b9c010d2532c1ded6061d0682745a2edce38b38d529361f",
+        "bytes": 5150
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/harvest-mouse/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "61c2e67595213570cd40c9943e316e5c89053f0dbbcc86c94ff062e4e9b15a3b",
+      "bytes": 7688
+    }
+  ]
+}

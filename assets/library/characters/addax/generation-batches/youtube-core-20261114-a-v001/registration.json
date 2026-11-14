@@ -1,0 +1,886 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "addax",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-a-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/addax/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "3a6b8f5bd2be7935a6dc97c387e4cb9a81c8424dd4508a44c33a2a404920fadb",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      270,
+      335,
+      982,
+      1210
+    ],
+    "anchor_px": [
+      621,
+      1208
+    ],
+    "reference_height_px": 875,
+    "anchor_kind": "anatomical-feet-projected-contact",
+    "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+    "anchor_basis": "Head including ears and short torso through feet excludes both long horns above forehead; foot-base midpoint is support, horn extremities need separate framing.",
+    "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+    "source_manifest": "assets/library/characters/addax/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "d186e02a2c0005f019ee8ace1aa06b166b7ca53ac14cdcddc784ee896ece5bbf"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/addax/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "3a6b8f5bd2be7935a6dc97c387e4cb9a81c8424dd4508a44c33a2a404920fadb",
+      "reference_height_px": 875,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "blink-single",
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/blink-v002.png",
+      "source_sheet_sha256": "b22e6178cf9b4f0540666f5572339103d7fc70fce8e64655942b803c7ab0e69b",
+      "reference_height_px": 888.1249999999999,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "upper face contour at manually corresponding y500",
+            "canonical_px": 639,
+            "source_px": 652,
+            "ratio": 1.0203442879499218
+          },
+          {
+            "name": "cheek contour at manually corresponding y650",
+            "canonical_px": 547,
+            "source_px": 559,
+            "ratio": 1.0219378427787935
+          },
+          {
+            "name": "body cross-section y950 including resting forelimbs",
+            "canonical_px": 468,
+            "source_px": 473,
+            "ratio": 1.0106837606837606
+          },
+          {
+            "name": "lower torso cross-section y1050",
+            "canonical_px": 341,
+            "source_px": 346,
+            "ratio": 1.0146627565982405
+          }
+        ],
+        "common_ratio": 1.015,
+        "canonical_reference_height_px": 875,
+        "canonical_source": {
+          "path": "assets/library/characters/addax/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "3a6b8f5bd2be7935a6dc97c387e4cb9a81c8424dd4508a44c33a2a404920fadb",
+          "bytes": 935774,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Single blink keeps reference torso/feet/head relationship; common1.015 balances head/torso widths and painted sole extent, rather than any isolated bbox height."
+      },
+      "generation_input": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-single-generation-v001.json",
+      "generation_prompt": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-single-generation-v001.json",
+      "generation_record_sha256": "d509412e45754155c64ba9425b44d3c9805e62a75d35043891441a77ee84d11b"
+    },
+    {
+      "id": "split-a",
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/split-a-v002.png",
+      "source_sheet_sha256": "49fe3076da9e6f2cd2ec00ea78d727b1b03d6ba6986c5c87357a82c15046b332",
+      "reference_height_px": 411.25,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "greet cheek section neutraly650/newy310",
+            "canonical_px": 547,
+            "source_px": 257,
+            "ratio": 0.46983546617915906
+          },
+          {
+            "name": "head including ears broad contour",
+            "canonical_px": 713,
+            "source_px": 333,
+            "ratio": 0.4670406732117812
+          },
+          {
+            "name": "main head/torso/feet span excluding long horns",
+            "canonical_px": 875,
+            "source_px": 420,
+            "ratio": 0.48
+          }
+        ],
+        "common_ratio": 0.47,
+        "canonical_reference_height_px": 875,
+        "canonical_source": {
+          "path": "assets/library/characters/addax/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "3a6b8f5bd2be7935a6dc97c387e4cb9a81c8424dd4508a44c33a2a404920fadb",
+          "bytes": 935774,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common0.47 for all4; raised forelimbs excluded from width comparison. Actual unequal row gutter y625 preserved by integer crop, no scale/shape repair."
+      },
+      "generation_input": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/provenance/selected-split-a-generation-v001.json",
+      "generation_prompt": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/provenance/selected-split-a-generation-v001.json",
+      "generation_record_sha256": "29ff0564900f17b6d5d8f0423a4a1f31cbdcc4b1bdff52a6c2de8c494507aec5"
+    },
+    {
+      "id": "split-b",
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "2b88f7f6108fe10e1012a9a34c839159e7813840a06105206c3345268c901a7a",
+      "reference_height_px": 382.8125,
+      "calibration": {
+        "landmarks": [
+          {
+            "name": "aha cheek section neutraly650/newy280",
+            "canonical_px": 547,
+            "source_px": 238,
+            "ratio": 0.4351005484460695
+          },
+          {
+            "name": "aha lower belly section neutraly1050/newy460",
+            "canonical_px": 341,
+            "source_px": 150,
+            "ratio": 0.4398826979472141
+          },
+          {
+            "name": "ear-head-through-hoof body span",
+            "canonical_px": 875,
+            "source_px": 384,
+            "ratio": 0.43885714285714283
+          }
+        ],
+        "common_ratio": 0.4375,
+        "canonical_reference_height_px": 875,
+        "canonical_source": {
+          "path": "assets/library/characters/addax/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "3a6b8f5bd2be7935a6dc97c387e4cb9a81c8424dd4508a44c33a2a404920fadb",
+          "bytes": 935774,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "method": "Manual native anatomical comparisons across head/face/torso/feet; one isotropic reference per original sheet, no per-pose bbox fit. Values approximate visual registration, not subpixel metrology.",
+        "selection_basis": "Common0.4375 for all4; ears intentionally listen outward in speciesA, no individual pose normalization."
+      },
+      "generation_input": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/provenance/selected-split-b-generation-v001.json",
+      "generation_prompt": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/provenance/selected-split-b-generation-v001.json",
+      "generation_record_sha256": "516f842f1a55d203559e1bc88e719fdc8851faa16b3b8484cee7baf654ae170c"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/addax/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "3a6b8f5bd2be7935a6dc97c387e4cb9a81c8424dd4508a44c33a2a404920fadb",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        270,
+        335,
+        982,
+        1210
+      ],
+      "anchor_px": [
+        621,
+        1208
+      ],
+      "reference_height_px": 875,
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "anchor_measurement": "Assistant visual registration on the native raster, approximate scene anatomy; not automatic alpha-box centering or subpixel alignment metrology.",
+      "anchor_basis": "Head including ears and short torso through feet excludes both long horns above forehead; foot-base midpoint is support, horn extremities need separate framing.",
+      "vertical_motion_policy": "Consumer places this recorded anchor explicitly and designs any motion. No locomotion, ground shift or body normalization is inferred from this neutral PNG.",
+      "source_manifest": "assets/library/characters/addax/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "d186e02a2c0005f019ee8ace1aa06b166b7ca53ac14cdcddc784ee896ece5bbf",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/addax/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "3a6b8f5bd2be7935a6dc97c387e4cb9a81c8424dd4508a44c33a2a404920fadb",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "blink-single",
+      "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/frames/blink-blink-v002.png",
+      "sha256": "55fcd08a7171a9474b6f3d1ae74edcc04bba61f2be32441537ccbe98253bea96",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        265,
+        329,
+        990,
+        1213
+      ],
+      "anchor_px": [
+        626.5,
+        1210
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "subject_bbox_px": [
+        265,
+        18,
+        990,
+        1213
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Two hoof sole contacts under the upright torso; long spiral horns excluded from body-height basis. Midpoint of observed bottom hoof ROI, support inside antialias fringe.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          1205,
+          1254,
+          1213
+        ],
+        "projected_contact_midpoint_px": [
+          626.5,
+          1210
+        ],
+        "scope": "Approximate painted hoof support, not subpixel physical floor."
+      },
+      "reference_height_px": 888.1249999999999,
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/blink-v002.png",
+      "source_sheet_sha256": "b22e6178cf9b4f0540666f5572339103d7fc70fce8e64655942b803c7ab0e69b",
+      "size_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 0,
+      "sheet_id": "split-a",
+      "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/frames/greet-split-a-v003.png",
+      "sha256": "d884fb8415c65bb79a2fc63578b018e9a17f289aaa222413343ed542f5b36155",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        600,
+        625
+      ],
+      "body_bbox_px": [
+        149,
+        164,
+        482,
+        587
+      ],
+      "anchor_px": [
+        315.5,
+        584
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "subject_bbox_px": [
+        149,
+        14,
+        482,
+        587
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Two hoof sole contacts under the upright torso; long spiral horns excluded from body-height basis. Midpoint of observed bottom hoof ROI, support inside antialias fringe.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          579,
+          600,
+          587
+        ],
+        "projected_contact_midpoint_px": [
+          315.5,
+          584
+        ],
+        "scope": "Approximate painted hoof support, not subpixel physical floor."
+      },
+      "reference_height_px": 411.25,
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/split-a-v002.png",
+      "source_sheet_sha256": "49fe3076da9e6f2cd2ec00ea78d727b1b03d6ba6986c5c87357a82c15046b332",
+      "size_px": [
+        600,
+        625
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 1,
+      "sheet_id": "split-a",
+      "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/frames/present_left-split-a-v003.png",
+      "sha256": "892461ab01d98aa1ebb3566b238290395c13b0628a11b43c7886cb5fa75df34f",
+      "crop_from_sheet_xyxy": [
+        600,
+        0,
+        1199,
+        625
+      ],
+      "body_bbox_px": [
+        101,
+        164,
+        439,
+        587
+      ],
+      "anchor_px": [
+        267.0,
+        584
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "subject_bbox_px": [
+        101,
+        14,
+        439,
+        587
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Two hoof sole contacts under the upright torso; long spiral horns excluded from body-height basis. Midpoint of observed bottom hoof ROI, support inside antialias fringe.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          579,
+          599,
+          587
+        ],
+        "projected_contact_midpoint_px": [
+          267.0,
+          584
+        ],
+        "scope": "Approximate painted hoof support, not subpixel physical floor."
+      },
+      "reference_height_px": 411.25,
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/split-a-v002.png",
+      "source_sheet_sha256": "49fe3076da9e6f2cd2ec00ea78d727b1b03d6ba6986c5c87357a82c15046b332",
+      "size_px": [
+        599,
+        625
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 2,
+      "sheet_id": "split-a",
+      "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/frames/present_right-split-a-v003.png",
+      "sha256": "4cdcb6193322bfd9e922f7ea789e7441021ceb973a936211955f3debff692c81",
+      "crop_from_sheet_xyxy": [
+        0,
+        625,
+        600,
+        1312
+      ],
+      "body_bbox_px": [
+        146,
+        185,
+        484,
+        612
+      ],
+      "anchor_px": [
+        319.0,
+        609
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "subject_bbox_px": [
+        146,
+        30,
+        484,
+        612
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Two hoof sole contacts under the upright torso; long spiral horns excluded from body-height basis. Midpoint of observed bottom hoof ROI, support inside antialias fringe.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          604,
+          600,
+          612
+        ],
+        "projected_contact_midpoint_px": [
+          319.0,
+          609
+        ],
+        "scope": "Approximate painted hoof support, not subpixel physical floor."
+      },
+      "reference_height_px": 411.25,
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/split-a-v002.png",
+      "source_sheet_sha256": "49fe3076da9e6f2cd2ec00ea78d727b1b03d6ba6986c5c87357a82c15046b332",
+      "size_px": [
+        600,
+        687
+      ]
+    },
+    {
+      "id": "think",
+      "index": 3,
+      "sheet_id": "split-a",
+      "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/frames/think-split-a-v003.png",
+      "sha256": "de3b3cc1d558fa2439a387b0594354f29610257d9aead6f56a2ff829cab86408",
+      "crop_from_sheet_xyxy": [
+        600,
+        625,
+        1199,
+        1312
+      ],
+      "body_bbox_px": [
+        99,
+        185,
+        434,
+        612
+      ],
+      "anchor_px": [
+        286.0,
+        609
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "subject_bbox_px": [
+        99,
+        28,
+        434,
+        612
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Two hoof sole contacts under the upright torso; long spiral horns excluded from body-height basis. Midpoint of observed bottom hoof ROI, support inside antialias fringe.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          604,
+          599,
+          612
+        ],
+        "projected_contact_midpoint_px": [
+          286.0,
+          609
+        ],
+        "scope": "Approximate painted hoof support, not subpixel physical floor."
+      },
+      "reference_height_px": 411.25,
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/split-a-v002.png",
+      "source_sheet_sha256": "49fe3076da9e6f2cd2ec00ea78d727b1b03d6ba6986c5c87357a82c15046b332",
+      "size_px": [
+        599,
+        687
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 0,
+      "sheet_id": "split-b",
+      "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/frames/aha-split-b-v002.png",
+      "sha256": "48e9008169f5ea8ad58fc374e58d32ce23471c6c949d05e8aeb7ae79e0a380bb",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        656,
+        600
+      ],
+      "body_bbox_px": [
+        229,
+        151,
+        527,
+        535
+      ],
+      "anchor_px": [
+        377.0,
+        532
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "subject_bbox_px": [
+        229,
+        16,
+        527,
+        535
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Two hoof sole contacts under the upright torso; long spiral horns excluded from body-height basis. Midpoint of observed bottom hoof ROI, support inside antialias fringe.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          527,
+          656,
+          535
+        ],
+        "projected_contact_midpoint_px": [
+          377.0,
+          532
+        ],
+        "scope": "Approximate painted hoof support, not subpixel physical floor."
+      },
+      "reference_height_px": 382.8125,
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "2b88f7f6108fe10e1012a9a34c839159e7813840a06105206c3345268c901a7a",
+      "size_px": [
+        656,
+        600
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 1,
+      "sheet_id": "split-b",
+      "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/frames/cheer-split-b-v002.png",
+      "sha256": "460ad29e84703907cb85e97496bc8c71cf83f5b4d294c615b76fcb060fe18fbb",
+      "crop_from_sheet_xyxy": [
+        656,
+        0,
+        1312,
+        600
+      ],
+      "body_bbox_px": [
+        130,
+        151,
+        429,
+        535
+      ],
+      "anchor_px": [
+        277.0,
+        532
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "subject_bbox_px": [
+        130,
+        15,
+        429,
+        535
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Two hoof sole contacts under the upright torso; long spiral horns excluded from body-height basis. Midpoint of observed bottom hoof ROI, support inside antialias fringe.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          527,
+          656,
+          535
+        ],
+        "projected_contact_midpoint_px": [
+          277.0,
+          532
+        ],
+        "scope": "Approximate painted hoof support, not subpixel physical floor."
+      },
+      "reference_height_px": 382.8125,
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "2b88f7f6108fe10e1012a9a34c839159e7813840a06105206c3345268c901a7a",
+      "size_px": [
+        656,
+        600
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 2,
+      "sheet_id": "split-b",
+      "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/frames/species_a-split-b-v002.png",
+      "sha256": "a7b71cc3c45bfe8d0d2ae61b084dcd67b46694a6df3d1cf5d59067166376b5c3",
+      "crop_from_sheet_xyxy": [
+        0,
+        600,
+        656,
+        1199
+      ],
+      "body_bbox_px": [
+        206,
+        151,
+        546,
+        528
+      ],
+      "anchor_px": [
+        377.0,
+        525
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "subject_bbox_px": [
+        206,
+        6,
+        546,
+        528
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Two hoof sole contacts under the upright torso; long spiral horns excluded from body-height basis. Midpoint of observed bottom hoof ROI, support inside antialias fringe.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          520,
+          656,
+          528
+        ],
+        "projected_contact_midpoint_px": [
+          377.0,
+          525
+        ],
+        "scope": "Approximate painted hoof support, not subpixel physical floor."
+      },
+      "reference_height_px": 382.8125,
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "2b88f7f6108fe10e1012a9a34c839159e7813840a06105206c3345268c901a7a",
+      "size_px": [
+        656,
+        599
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 3,
+      "sheet_id": "split-b",
+      "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/frames/species_b-split-b-v002.png",
+      "sha256": "e98120738c42a40688861ca1f96df91b68a969cd7540d02983e623afde70cb27",
+      "crop_from_sheet_xyxy": [
+        656,
+        600,
+        1312,
+        1199
+      ],
+      "body_bbox_px": [
+        132,
+        151,
+        427,
+        529
+      ],
+      "anchor_px": [
+        278.5,
+        526
+      ],
+      "anchor_kind": "anatomical-feet-projected-contact",
+      "subject_bbox_px": [
+        132,
+        6,
+        427,
+        529
+      ],
+      "tail_bbox_px": null,
+      "anchor_measurement": "Assistant native visual anatomical measurement; foot-contact ROI checked in original raster, approximate not subpixel.",
+      "anchor_basis": "Two hoof sole contacts under the upright torso; long spiral horns excluded from body-height basis. Midpoint of observed bottom hoof ROI, support inside antialias fringe.",
+      "vertical_motion_policy": "Grounded small gesture; no baked jump. Place recorded anatomical anchor; no automatic per-pose normalization.",
+      "source_foot_point_px": {
+        "measurement_roi_px": [
+          0,
+          521,
+          656,
+          529
+        ],
+        "projected_contact_midpoint_px": [
+          278.5,
+          526
+        ],
+        "scope": "Approximate painted hoof support, not subpixel physical floor."
+      },
+      "reference_height_px": 382.8125,
+      "source_sheet": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "2b88f7f6108fe10e1012a9a34c839159e7813840a06105206c3345268c901a7a",
+      "size_px": [
+        656,
+        599
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        180,
+        180,
+        180
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        550,
+        550,
+        550
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        450,
+        450,
+        450,
+        450
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        350,
+        350,
+        350
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/provenance/selected-blink-single-generation-v001.json",
+        "sha256": "d509412e45754155c64ba9425b44d3c9805e62a75d35043891441a77ee84d11b",
+        "bytes": 4000
+      },
+      {
+        "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/provenance/selected-split-a-generation-v001.json",
+        "sha256": "29ff0564900f17b6d5d8f0423a4a1f31cbdcc4b1bdff52a6c2de8c494507aec5",
+        "bytes": 4264
+      },
+      {
+        "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/provenance/selected-split-b-generation-v001.json",
+        "sha256": "516f842f1a55d203559e1bc88e719fdc8851faa16b3b8484cee7baf654ae170c",
+        "bytes": 4142
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/addax/generation-batches/youtube-core-20261114-a-v001/qa/stock-adoption-v001.json",
+      "sha256": "028f2681d3b2617633bf0b5decbaf50252ad2e5d0b24d7661b7880a97d036e53",
+      "bytes": 9347
+    }
+  ]
+}

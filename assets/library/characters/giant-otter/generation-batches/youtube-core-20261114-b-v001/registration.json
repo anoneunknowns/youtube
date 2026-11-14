@@ -1,0 +1,1491 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "giant-otter",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "b5981cc2c4805e525b98735e311a0c8639b052f1c52987d1c57a3d8d915b7b14",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      289.0,
+      148.0,
+      937.0,
+      1176.0
+    ],
+    "anchor_px": [
+      608.0,
+      1171.0
+    ],
+    "reference_height_px": 1028.0,
+    "anchor_kind": "anatomical-two-foot-contact",
+    "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+    "anchor_basis": "Midpoint between the two webbed sole contact centres under the upright trunk; broad side tail excluded from support and registered body width.",
+    "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+    "source_manifest": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "c4c6870064e6909120d38bfdb480b224290d5284697ddc848d81040e5f5b239c"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "b5981cc2c4805e525b98735e311a0c8639b052f1c52987d1c57a3d8d915b7b14",
+      "reference_height_px": 1028.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "f327f4f327848ccfad103d28165022a1ac0e14f1b4279d8e9409d284a8c8968a",
+      "reference_height_px": 834.1648268789963,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b5981cc2c4805e525b98735e311a0c8639b052f1c52987d1c57a3d8d915b7b14",
+          "bytes": 1073024,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1028.0,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 353.6,
+            "source_y": 184.20000000000002,
+            "canonical_span": [
+              310,
+              924
+            ],
+            "source_span": [
+              180,
+              679
+            ],
+            "ratio": 0.8127035830618893
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 456.4,
+            "source_y": 268.29999999999995,
+            "canonical_span": [
+              289,
+              937
+            ],
+            "source_span": [
+              170,
+              695
+            ],
+            "ratio": 0.8101851851851852
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 785.36,
+            "source_y": 537.42,
+            "canonical_span": [
+              338,
+              880
+            ],
+            "source_span": [
+              199,
+              645
+            ],
+            "ratio": 0.8228782287822878
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 908.72,
+            "source_y": 638.34,
+            "canonical_span": [
+              376,
+              937
+            ],
+            "source_span": [
+              248,
+              695
+            ],
+            "ratio": 0.7967914438502673
+          }
+        ],
+        "common_ratio": 0.8114443841235373,
+        "initial_roi_locator_only_visible_height_ratio": 0.8180933852140078,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0327397904851532,
+        "visual_confirmation": {
+          "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "6fcb8a1721b8c18bc28d97659c9a7debd373319185741f2ee6e9b47222eef9d9",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+      "generation_record_sha256": "0e72e216646ed93ceafdbf5ae0cb27576e4f06790088601f71ce901598b4cbe7"
+    },
+    {
+      "id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "654afe5518b95ae9ab460b76eb526ddc493084b2e3b82d5f47d98acc981e2c9b",
+      "reference_height_px": 807.0,
+      "calibration": {
+        "method": "Manual common-source remeasurement: standing head crown through two supported soles, checked against full head width and shoulder/torso lengths of canonical; one scale for both presentation gestures. No per-pose fit.",
+        "neutral_reference": {
+          "path": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b5981cc2c4805e525b98735e311a0c8639b052f1c52987d1c57a3d8d915b7b14",
+          "bytes": 1073024,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1028.0,
+        "reference_frame_id": "present_left",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 353.6,
+            "source_y": 191.4,
+            "canonical_span": [
+              310,
+              924
+            ],
+            "source_span": [
+              207,
+              627
+            ],
+            "ratio": 0.6840390879478827
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 456.4,
+            "source_y": 272.09999999999997,
+            "canonical_span": [
+              289,
+              937
+            ],
+            "source_span": [
+              194,
+              627
+            ],
+            "ratio": 0.6682098765432098
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 785.36,
+            "source_y": 530.3399999999999,
+            "canonical_span": [
+              338,
+              880
+            ],
+            "source_span": [
+              287,
+              627
+            ],
+            "ratio": 0.6273062730627307
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 908.72,
+            "source_y": 627.1800000000001,
+            "canonical_span": [
+              376,
+              937
+            ],
+            "source_span": [
+              272,
+              613
+            ],
+            "ratio": 0.6078431372549019
+          }
+        ],
+        "common_ratio": 0.7850194552529183,
+        "initial_roi_locator_only_visible_height_ratio": 0.7850194552529183,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.12535462855942,
+        "rejected_initial_roi_proposal": {
+          "reference_height_px": 665.8953008974535,
+          "reason": "Actual raw native and max694 review showed mapped xROI clipped the head and torso because presentation hand changed the full visible x-origin; initial665.895 proposal made both poses about20percent oversized."
+        },
+        "manual_landmarks": {
+          "canonical_body_crown_y": 148,
+          "canonical_sole_y": 1176,
+          "source_pair02_left_crown_y_approx": 32,
+          "source_pair02_left_soles_y_approx": 834,
+          "source_pair02_right_crown_y_approx": 31,
+          "source_pair02_right_soles_y_approx": 834,
+          "source_head_width_approx_px": 500,
+          "canonical_head_width_approx_px": 648,
+          "selected_reference_px": 807,
+          "basis": "807 approximates crown/sole and full head width ratios; exact anatomy correspondences remain raster visual calibration, not subpixel metrology. Recheck max694 required."
+        },
+        "visual_confirmation": {
+          "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "6fcb8a1721b8c18bc28d97659c9a7debd373319185741f2ee6e9b47222eef9d9",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+      "generation_record_sha256": "a736e8ed1c1ce73d6e0fcc6d0d800eb2aba7185711e8dde53923a005f97f295e"
+    },
+    {
+      "id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "e0dfba6f01fc3d217b1b8ad0546a55aec911b4b82be36c6c5bbbfd6f70167c06",
+      "reference_height_px": 785.9908086420828,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b5981cc2c4805e525b98735e311a0c8639b052f1c52987d1c57a3d8d915b7b14",
+          "bytes": 1073024,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1028.0,
+        "reference_frame_id": "aha",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 353.6,
+            "source_y": 206.20000000000002,
+            "canonical_span": [
+              310,
+              924
+            ],
+            "source_span": [
+              172,
+              637
+            ],
+            "ratio": 0.757328990228013
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 456.4,
+            "source_y": 286.79999999999995,
+            "canonical_span": [
+              289,
+              937
+            ],
+            "source_span": [
+              160,
+              666
+            ],
+            "ratio": 0.7808641975308642
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 785.36,
+            "source_y": 544.72,
+            "canonical_span": [
+              338,
+              880
+            ],
+            "source_span": [
+              253,
+              601
+            ],
+            "ratio": 0.6420664206642066
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 908.72,
+            "source_y": 641.44,
+            "canonical_span": [
+              376,
+              937
+            ],
+            "source_span": [
+              233,
+              666
+            ],
+            "ratio": 0.7718360071301248
+          }
+        ],
+        "common_ratio": 0.7645824986790689,
+        "initial_roi_locator_only_visible_height_ratio": 0.7840466926070039,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.2161735490279553,
+        "visual_confirmation": {
+          "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "6fcb8a1721b8c18bc28d97659c9a7debd373319185741f2ee6e9b47222eef9d9",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+      "generation_record_sha256": "caf004babebf9ea93b7f8507f90187211c7bc2f0971ed07df7325148a1776ac3"
+    },
+    {
+      "id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "369a40c5fd6567ca7846cc14170a1c4424a2e8630e3384402265a59ae44354b4",
+      "reference_height_px": 791.8652373407275,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b5981cc2c4805e525b98735e311a0c8639b052f1c52987d1c57a3d8d915b7b14",
+          "bytes": 1073024,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1028.0,
+        "reference_frame_id": "cheer",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 353.6,
+            "source_y": 191.40000000000003,
+            "canonical_span": [
+              310,
+              924
+            ],
+            "source_span": [
+              194,
+              674
+            ],
+            "ratio": 0.7817589576547231
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 456.4,
+            "source_y": 273.6,
+            "canonical_span": [
+              289,
+              937
+            ],
+            "source_span": [
+              185,
+              682
+            ],
+            "ratio": 0.7669753086419753
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 785.36,
+            "source_y": 536.6400000000001,
+            "canonical_span": [
+              338,
+              880
+            ],
+            "source_span": [
+              283,
+              588
+            ],
+            "ratio": 0.5627306273062731
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 908.72,
+            "source_y": 635.2800000000001,
+            "canonical_span": [
+              376,
+              937
+            ],
+            "source_span": [
+              264,
+              698
+            ],
+            "ratio": 0.7736185383244206
+          }
+        ],
+        "common_ratio": 0.770296923483198,
+        "initial_roi_locator_only_visible_height_ratio": 0.7996108949416343,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.3892241149142948,
+        "visual_confirmation": {
+          "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "6fcb8a1721b8c18bc28d97659c9a7debd373319185741f2ee6e9b47222eef9d9",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+      "generation_record_sha256": "01935395b4edf1e67a7d9837a3914025d2b6563e6e9de0cffd5d7548d1429dcf"
+    },
+    {
+      "id": "species_b-single-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/species_b-single-v001.png",
+      "source_sheet_sha256": "3816a76037bae5592170a4fefbc70f5fe1cbe031483fd6a92c10fb954ea3642d",
+      "reference_height_px": 1125.0006601967386,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "b5981cc2c4805e525b98735e311a0c8639b052f1c52987d1c57a3d8d915b7b14",
+          "bytes": 1073024,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 1028.0,
+        "reference_frame_id": "species_b",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 353.6,
+            "source_y": 292.40000000000003,
+            "canonical_span": [
+              310,
+              924
+            ],
+            "source_span": [
+              225,
+              916
+            ],
+            "ratio": 1.1254071661237786
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 456.4,
+            "source_y": 407.59999999999997,
+            "canonical_span": [
+              289,
+              937
+            ],
+            "source_span": [
+              207,
+              923
+            ],
+            "ratio": 1.1049382716049383
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 785.36,
+            "source_y": 776.24,
+            "canonical_span": [
+              338,
+              880
+            ],
+            "source_span": [
+              329,
+              784
+            ],
+            "ratio": 0.8394833948339483
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 908.72,
+            "source_y": 914.48,
+            "canonical_span": [
+              376,
+              937
+            ],
+            "source_span": [
+              315,
+              923
+            ],
+            "ratio": 1.0837789661319073
+          }
+        ],
+        "common_ratio": 1.094358618868423,
+        "initial_roi_locator_only_visible_height_ratio": 1.1206225680933852,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.3405949099760177,
+        "visual_confirmation": {
+          "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v002.json",
+          "sha256": "6fcb8a1721b8c18bc28d97659c9a7debd373319185741f2ee6e9b47222eef9d9",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+      "generation_record_sha256": "5d285c85ee31b323fccb0fe9ee011c9b41aa9879c9f3b8351af546f5750c78ce"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "b5981cc2c4805e525b98735e311a0c8639b052f1c52987d1c57a3d8d915b7b14",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        289.0,
+        148.0,
+        937.0,
+        1176.0
+      ],
+      "anchor_px": [
+        608.0,
+        1171.0
+      ],
+      "reference_height_px": 1028.0,
+      "anchor_kind": "anatomical-two-foot-contact",
+      "anchor_measurement": "manually observed anatomical support/centre in the native full-body image; not alpha-canvas centering",
+      "anchor_basis": "Midpoint between the two webbed sole contact centres under the upright trunk; broad side tail excluded from support and registered body width.",
+      "vertical_motion_policy": "neutral still; scene placement and any trajectory are designed by consumer, no motion acceptance claimed",
+      "source_manifest": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "c4c6870064e6909120d38bfdb480b224290d5284697ddc848d81040e5f5b239c",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "b5981cc2c4805e525b98735e311a0c8639b052f1c52987d1c57a3d8d915b7b14",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        920,
+        887
+      ],
+      "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "0734e00cba1338c9f7348eb3325bb82387eb7bf8efc6c3585a0ffaeb43ff013e",
+      "size_px": [
+        920,
+        887
+      ],
+      "visible": [
+        139,
+        16,
+        846,
+        857
+      ],
+      "sheet_id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "f327f4f327848ccfad103d28165022a1ac0e14f1b4279d8e9409d284a8c8968a",
+      "body_bbox_px": [
+        165,
+        16,
+        695,
+        857
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        139,
+        16,
+        846,
+        857
+      ],
+      "reference_height_px": 834.1648268789963,
+      "anchor_px": [
+        423.60858328809263,
+        852.9427780793823
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        423.0,
+        857
+      ],
+      "sole_points": [
+        [
+          326.0,
+          857
+        ],
+        [
+          520.0,
+          857
+        ]
+      ],
+      "sole_regions": [
+        [
+          234,
+          707,
+          410,
+          859
+        ],
+        [
+          436,
+          707,
+          611,
+          859
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        139,
+        16,
+        846,
+        857
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        920,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "d9f0ca50db7cc6d56b840ff440f352e8d0808485ccc911309ec325d9d210da96",
+      "size_px": [
+        854,
+        887
+      ],
+      "visible": [
+        92,
+        16,
+        813,
+        857
+      ],
+      "sheet_id": "pair-01-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-01-v001.png",
+      "source_sheet_sha256": "f327f4f327848ccfad103d28165022a1ac0e14f1b4279d8e9409d284a8c8968a",
+      "body_bbox_px": [
+        118,
+        16,
+        648,
+        857
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        92,
+        16,
+        813,
+        857
+      ],
+      "reference_height_px": 834.1648268789963,
+      "anchor_px": [
+        390.60858328809263,
+        852.9427780793823
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        390.0,
+        857
+      ],
+      "sole_points": [
+        [
+          293.0,
+          857
+        ],
+        [
+          487.0,
+          857
+        ]
+      ],
+      "sole_regions": [
+        [
+          202,
+          707,
+          377,
+          859
+        ],
+        [
+          402,
+          707,
+          577,
+          859
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        92,
+        16,
+        813,
+        857
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        916,
+        887
+      ],
+      "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "9f9bfabe078dc779e5a1f03788c0f840e74b6bba3aea3fd582b77ec79cc33ce3",
+      "size_px": [
+        916,
+        887
+      ],
+      "visible": [
+        93,
+        30,
+        838,
+        837
+      ],
+      "sheet_id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "654afe5518b95ae9ab460b76eb526ddc493084b2e3b82d5f47d98acc981e2c9b",
+      "body_bbox_px": [
+        118,
+        30,
+        627,
+        837
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        93,
+        30,
+        838,
+        837
+      ],
+      "reference_height_px": 807.0,
+      "anchor_px": [
+        439.5887645914397,
+        833.0749027237354
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        439.0,
+        837
+      ],
+      "sole_points": [
+        [
+          346.5,
+          837
+        ],
+        [
+          531.5,
+          837
+        ]
+      ],
+      "sole_regions": [
+        [
+          259,
+          692,
+          426,
+          839
+        ],
+        [
+          451,
+          692,
+          615,
+          839
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        93,
+        30,
+        838,
+        837
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        916,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "db19892d28b685a3dfaf72bad40c68f377be17a7ff347e20bac191516bebd805",
+      "size_px": [
+        858,
+        887
+      ],
+      "visible": [
+        145,
+        31,
+        789,
+        837
+      ],
+      "sheet_id": "pair-02-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-02-v001.png",
+      "source_sheet_sha256": "654afe5518b95ae9ab460b76eb526ddc493084b2e3b82d5f47d98acc981e2c9b",
+      "body_bbox_px": [
+        170,
+        31,
+        678,
+        837
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        145,
+        31,
+        789,
+        837
+      ],
+      "reference_height_px": 807.0,
+      "anchor_px": [
+        405.0887645914397,
+        833.0749027237354
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        404.5,
+        837
+      ],
+      "sole_points": [
+        [
+          313.0,
+          837
+        ],
+        [
+          496.0,
+          837
+        ]
+      ],
+      "sole_regions": [
+        [
+          226,
+          692,
+          392,
+          839
+        ],
+        [
+          416,
+          692,
+          583,
+          839
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        145,
+        31,
+        789,
+        837
+      ]
+    },
+    {
+      "id": "think",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        909,
+        887
+      ],
+      "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "80885c1b820c54c4b8817fcf5bd756028aca111abfa9a452afccb9f87880455a",
+      "size_px": [
+        909,
+        887
+      ],
+      "visible": [
+        155,
+        17,
+        825,
+        850
+      ],
+      "sheet_id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "e0dfba6f01fc3d217b1b8ad0546a55aec911b4b82be36c6c5bbbfd6f70167c06",
+      "body_bbox_px": [
+        181,
+        17,
+        706,
+        850
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        155,
+        17,
+        825,
+        850
+      ],
+      "reference_height_px": 785.9908086420828,
+      "anchor_px": [
+        434.8234368740093,
+        846.1770875066046
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        434.25,
+        850
+      ],
+      "sole_points": [
+        [
+          345.0,
+          849
+        ],
+        [
+          523.5,
+          850
+        ]
+      ],
+      "sole_regions": [
+        [
+          258,
+          709,
+          419,
+          852
+        ],
+        [
+          446,
+          709,
+          606,
+          852
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        155,
+        17,
+        825,
+        850
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        909,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "1dbea928b817944e8d4f15bd53084a4227cad987085a96752e6cc19e4aae0a55",
+      "size_px": [
+        865,
+        887
+      ],
+      "visible": [
+        133,
+        45,
+        798,
+        851
+      ],
+      "sheet_id": "pair-03-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-03-v001.png",
+      "source_sheet_sha256": "e0dfba6f01fc3d217b1b8ad0546a55aec911b4b82be36c6c5bbbfd6f70167c06",
+      "body_bbox_px": [
+        158,
+        45,
+        666,
+        851
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        133,
+        45,
+        798,
+        851
+      ],
+      "reference_height_px": 785.9908086420828,
+      "anchor_px": [
+        397.3234368740093,
+        847.1770875066046
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        396.75,
+        851
+      ],
+      "sole_points": [
+        [
+          309.0,
+          851
+        ],
+        [
+          484.5,
+          849
+        ]
+      ],
+      "sole_regions": [
+        [
+          221,
+          710,
+          384,
+          853
+        ],
+        [
+          409,
+          710,
+          568,
+          853
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        133,
+        45,
+        798,
+        851
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        910,
+        887
+      ],
+      "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "2fd2209978a855f6f027d6df1d9f5ca04e450bd9dda20715e46238c8e1fe4077",
+      "size_px": [
+        910,
+        887
+      ],
+      "visible": [
+        154,
+        27,
+        827,
+        849
+      ],
+      "sheet_id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "369a40c5fd6567ca7846cc14170a1c4424a2e8630e3384402265a59ae44354b4",
+      "body_bbox_px": [
+        180,
+        27,
+        698,
+        849
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        154,
+        27,
+        827,
+        849
+      ],
+      "reference_height_px": 791.8652373407275,
+      "anchor_px": [
+        433.0777226926124,
+        845.148515382584
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        432.5,
+        849
+      ],
+      "sole_points": [
+        [
+          340.5,
+          849
+        ],
+        [
+          524.5,
+          849
+        ]
+      ],
+      "sole_regions": [
+        [
+          253,
+          706,
+          421,
+          851
+        ],
+        [
+          443,
+          706,
+          611,
+          851
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        154,
+        27,
+        827,
+        849
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        910,
+        0,
+        1774,
+        887
+      ],
+      "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "0f5d3b8210b0fdc33d699bd0602d6fdb7d0bdc5c9745c666272565277cbf4a42",
+      "size_px": [
+        864,
+        887
+      ],
+      "visible": [
+        118,
+        27,
+        792,
+        849
+      ],
+      "sheet_id": "pair-04-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/pair-04-v001.png",
+      "source_sheet_sha256": "369a40c5fd6567ca7846cc14170a1c4424a2e8630e3384402265a59ae44354b4",
+      "body_bbox_px": [
+        144,
+        27,
+        662,
+        849
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        118,
+        27,
+        792,
+        849
+      ],
+      "reference_height_px": 791.8652373407275,
+      "anchor_px": [
+        394.0777226926124,
+        845.148515382584
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        393.5,
+        849
+      ],
+      "sole_points": [
+        [
+          302.0,
+          849
+        ],
+        [
+          485.0,
+          849
+        ]
+      ],
+      "sole_regions": [
+        [
+          215,
+          706,
+          382,
+          851
+        ],
+        [
+          404,
+          706,
+          568,
+          851
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        118,
+        27,
+        792,
+        849
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1199,
+        1312
+      ],
+      "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "5e4a8ca0e9e1b704b546b236be7f2f1979e9431e35f677da00cfae61983ad0c1",
+      "size_px": [
+        1199,
+        1312
+      ],
+      "visible": [
+        161,
+        62,
+        1146,
+        1214
+      ],
+      "sheet_id": "species_b-single-v001",
+      "source_sheet": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/source/species_b-single-v001.png",
+      "source_sheet_sha256": "3816a76037bae5592170a4fefbc70f5fe1cbe031483fd6a92c10fb954ea3642d",
+      "body_bbox_px": [
+        197,
+        62,
+        923,
+        1214
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        161,
+        62,
+        1146,
+        1214
+      ],
+      "reference_height_px": 1125.0006601967386,
+      "anchor_px": [
+        555.0707689641513,
+        1208.528206905658
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        554.25,
+        1214
+      ],
+      "sole_points": [
+        [
+          420.5,
+          1214
+        ],
+        [
+          688.0,
+          1214
+        ]
+      ],
+      "sole_regions": [
+        [
+          298,
+          1011,
+          534,
+          1216
+        ],
+        [
+          576,
+          1011,
+          809,
+          1216
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        161,
+        62,
+        1146,
+        1214
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-01-v001-generation-v001.json",
+        "sha256": "0e72e216646ed93ceafdbf5ae0cb27576e4f06790088601f71ce901598b4cbe7",
+        "bytes": 4262
+      },
+      {
+        "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-02-v001-generation-v001.json",
+        "sha256": "a736e8ed1c1ce73d6e0fcc6d0d800eb2aba7185711e8dde53923a005f97f295e",
+        "bytes": 4144
+      },
+      {
+        "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-03-v001-generation-v001.json",
+        "sha256": "caf004babebf9ea93b7f8507f90187211c7bc2f0971ed07df7325148a1776ac3",
+        "bytes": 4087
+      },
+      {
+        "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-pair-04-v001-generation-v001.json",
+        "sha256": "01935395b4edf1e67a7d9837a3914025d2b6563e6e9de0cffd5d7548d1429dcf",
+        "bytes": 4140
+      },
+      {
+        "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/provenance/selected-species_b-single-v001-generation-v001.json",
+        "sha256": "5d285c85ee31b323fccb0fe9ee011c9b41aa9879c9f3b8351af546f5750c78ce",
+        "bytes": 3966
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/giant-otter/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "e92e49c53696aa4f78715c0b68cbb77ce201cb0967483533e36fc2048921808c",
+      "bytes": 8744
+    }
+  ]
+}

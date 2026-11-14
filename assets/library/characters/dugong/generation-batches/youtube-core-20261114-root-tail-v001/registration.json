@@ -1,0 +1,1303 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "dugong",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-root-tail-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "cd42de2a3ee05b343df443b7230b3d59af08f6f7ed7be158f76c87f073c722d1",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      188,
+      440,
+      930,
+      892
+    ],
+    "anchor_px": [
+      595,
+      674
+    ],
+    "reference_height_px": 452,
+    "anchor_kind": "anatomical-marine-body-centre",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Visual centre of the head/torso mass, excluding flippers and the separate tail flukes from reference height.",
+    "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+    "source_manifest": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "09395695b085a9514a915bcedc5ca6288ba6fcc8f8fcdff721ba51875f444e33"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "cd42de2a3ee05b343df443b7230b3d59af08f6f7ed7be158f76c87f073c722d1",
+      "reference_height_px": 452,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "split-a-v001",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "47d8e2ee5a0329e96845b08179d519a2526101a6030d26532e0073e6e8d89c29",
+      "reference_height_px": 376.3062200956938,
+      "calibration": {
+        "method": "Median of three independently located head/shell/trunk anatomical spans; one source-wide isotropic reference, never fit individual frame or whole alpha bounds.",
+        "neutral_reference": {
+          "path": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "cd42de2a3ee05b343df443b7230b3d59af08f6f7ed7be158f76c87f073c722d1",
+          "bytes": 578714,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 452,
+        "reference_frame_id": "blink",
+        "source_reference_body_roi_px": [
+          152,
+          67,
+          780,
+          432
+        ],
+        "canonical_body_roi_px": [
+          188,
+          440,
+          930,
+          892
+        ],
+        "landmarks": [
+          {
+            "name": "Head-to-peduncle trunk length, no flukes",
+            "ratio": 0.8463611859838275,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 742,
+            "source_span_px": 628,
+            "canonical_endpoints_px": [
+              [
+                188,
+                650
+              ],
+              [
+                930,
+                650
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                152,
+                245
+              ],
+              [
+                780,
+                245
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                152,
+                245
+              ],
+              [
+                780,
+                245
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Head/trunk thickness excluding flippers",
+            "ratio": 0.8075221238938053,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 452,
+            "source_span_px": 365,
+            "canonical_endpoints_px": [
+              [
+                550,
+                440
+              ],
+              [
+                550,
+                892
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                460,
+                67
+              ],
+              [
+                460,
+                432
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                460,
+                67
+              ],
+              [
+                460,
+                432
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Broad muzzle width excluding whisker strokes",
+            "ratio": 0.8325358851674641,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 209,
+            "source_span_px": 174,
+            "canonical_endpoints_px": [
+              [
+                188,
+                640
+              ],
+              [
+                397,
+                640
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                152,
+                240
+              ],
+              [
+                326,
+                240
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                152,
+                240
+              ],
+              [
+                326,
+                240
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          }
+        ],
+        "common_ratio": 0.8325358851674641,
+        "reference_height_px": 376.3062200956938,
+        "landmark_ratio_spread": 1.048096591958055,
+        "needs_visual_confirmation": false,
+        "canonical_projected_support": null,
+        "scope": "B producer native and declared-use comparison completed; independent root crossreview pending. One common isotropic scale per source retained.",
+        "visual_confirmation": {
+          "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "58576bc1abb9d8d75e6cce7c6dfcb6e1df72e49128fa2aed57984f17c9c3015a"
+        }
+      },
+      "generation_input": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-a-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-a-v001-generation-v001.json",
+      "generation_record_sha256": "4fa15ec358eae059f62612c2e106c69fec448bf902ea296b1b57723af4170da2"
+    },
+    {
+      "id": "split-b-v002",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "1044b09e1fa2a8bc21470d62e83807b0fc318eb5c8b0e779c5451d0c3976f349",
+      "reference_height_px": 369.76280323450135,
+      "calibration": {
+        "method": "Median of three independently located head/shell/trunk anatomical spans; one source-wide isotropic reference, never fit individual frame or whole alpha bounds.",
+        "neutral_reference": {
+          "path": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "cd42de2a3ee05b343df443b7230b3d59af08f6f7ed7be158f76c87f073c722d1",
+          "bytes": 578714,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 452,
+        "reference_frame_id": "present_right",
+        "source_reference_body_roi_px": [
+          255,
+          79,
+          862,
+          452
+        ],
+        "canonical_body_roi_px": [
+          188,
+          440,
+          930,
+          892
+        ],
+        "landmarks": [
+          {
+            "name": "Head-to-peduncle trunk length, no flukes",
+            "ratio": 0.8180592991913747,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 742,
+            "source_span_px": 607,
+            "canonical_endpoints_px": [
+              [
+                188,
+                650
+              ],
+              [
+                930,
+                650
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                255,
+                260
+              ],
+              [
+                862,
+                260
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                255,
+                260
+              ],
+              [
+                862,
+                260
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Head/trunk thickness excluding flippers",
+            "ratio": 0.8252212389380531,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 452,
+            "source_span_px": 373,
+            "canonical_endpoints_px": [
+              [
+                550,
+                440
+              ],
+              [
+                550,
+                892
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                560,
+                79
+              ],
+              [
+                560,
+                452
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                560,
+                79
+              ],
+              [
+                560,
+                452
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Broad muzzle width excluding whisker strokes",
+            "ratio": 0.8038277511961722,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 209,
+            "source_span_px": 168,
+            "canonical_endpoints_px": [
+              [
+                188,
+                640
+              ],
+              [
+                397,
+                640
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                694,
+                240
+              ],
+              [
+                862,
+                240
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                694,
+                240
+              ],
+              [
+                862,
+                240
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          }
+        ],
+        "common_ratio": 0.8180592991913747,
+        "reference_height_px": 369.76280323450135,
+        "landmark_ratio_spread": 1.0266145174884114,
+        "needs_visual_confirmation": false,
+        "canonical_projected_support": null,
+        "scope": "B producer native and declared-use comparison completed; independent root crossreview pending. One common isotropic scale per source retained.",
+        "visual_confirmation": {
+          "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "58576bc1abb9d8d75e6cce7c6dfcb6e1df72e49128fa2aed57984f17c9c3015a"
+        }
+      },
+      "generation_input": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-b-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-b-v002-generation-v001.json",
+      "generation_record_sha256": "ea29f673afb35b45cca60364f7083a6c676b8582dee631dfc32cb8d9a4c8ef6a"
+    },
+    {
+      "id": "split-c-v001",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "776a9e3dc50f587e3a2b1384faf179a50d91f39dc1220dcc57e46ac1a81cf803",
+      "reference_height_px": 386.2102425876011,
+      "calibration": {
+        "method": "Median of three independently located head/shell/trunk anatomical spans; one source-wide isotropic reference, never fit individual frame or whole alpha bounds.",
+        "neutral_reference": {
+          "path": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "cd42de2a3ee05b343df443b7230b3d59af08f6f7ed7be158f76c87f073c722d1",
+          "bytes": 578714,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 452,
+        "reference_frame_id": "cheer",
+        "source_reference_body_roi_px": [
+          147,
+          54,
+          781,
+          453
+        ],
+        "canonical_body_roi_px": [
+          188,
+          440,
+          930,
+          892
+        ],
+        "landmarks": [
+          {
+            "name": "Head-to-peduncle trunk length, no flukes",
+            "ratio": 0.8544474393530997,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 742,
+            "source_span_px": 634,
+            "canonical_endpoints_px": [
+              [
+                188,
+                650
+              ],
+              [
+                930,
+                650
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                147,
+                250
+              ],
+              [
+                781,
+                250
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                147,
+                250
+              ],
+              [
+                781,
+                250
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Head/trunk thickness excluding flippers",
+            "ratio": 0.8827433628318584,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 452,
+            "source_span_px": 399,
+            "canonical_endpoints_px": [
+              [
+                550,
+                440
+              ],
+              [
+                550,
+                892
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                460,
+                54
+              ],
+              [
+                460,
+                453
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                460,
+                54
+              ],
+              [
+                460,
+                453
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          },
+          {
+            "name": "Broad muzzle width excluding whisker strokes",
+            "ratio": 0.8277511961722488,
+            "used_for_scale": true,
+            "measurement": "Manual corresponding projected head/shell/trunk span at native pixels. Endpoints are approximate anatomical ROI limits; no individual full-alpha box fit.",
+            "canonical_span_px": 209,
+            "source_span_px": 173,
+            "canonical_endpoints_px": [
+              [
+                188,
+                640
+              ],
+              [
+                397,
+                640
+              ]
+            ],
+            "source_local_endpoints_px": [
+              [
+                147,
+                250
+              ],
+              [
+                320,
+                250
+              ]
+            ],
+            "source_original_endpoints_px": [
+              [
+                147,
+                250
+              ],
+              [
+                320,
+                250
+              ]
+            ],
+            "source_reference_frame": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+            "coordinate_uncertainty_px": "Approximate manually read points; typically several native pixels, larger with tilting contour. Corresponding axes/span are a visual calibration aid, not exact outline intersections."
+          }
+        ],
+        "common_ratio": 0.8544474393530997,
+        "reference_height_px": 386.2102425876011,
+        "landmark_ratio_spread": 1.0664356233055399,
+        "needs_visual_confirmation": false,
+        "canonical_projected_support": null,
+        "scope": "B producer native and declared-use comparison completed; independent root crossreview pending. One common isotropic scale per source retained.",
+        "visual_confirmation": {
+          "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "58576bc1abb9d8d75e6cce7c6dfcb6e1df72e49128fa2aed57984f17c9c3015a"
+        }
+      },
+      "generation_input": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-c-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-c-v001-generation-v001.json",
+      "generation_record_sha256": "7653ac82db0cece525db63edf940dde73340b1f6d9839e0518ef5f7ac33adb83"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "cd42de2a3ee05b343df443b7230b3d59af08f6f7ed7be158f76c87f073c722d1",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        188,
+        440,
+        930,
+        892
+      ],
+      "anchor_px": [
+        595,
+        674
+      ],
+      "reference_height_px": 452,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Visual centre of the head/torso mass, excluding flippers and the separate tail flukes from reference height.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "source_manifest": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "09395695b085a9514a915bcedc5ca6288ba6fcc8f8fcdff721ba51875f444e33",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "cd42de2a3ee05b343df443b7230b3d59af08f6f7ed7be158f76c87f073c722d1",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "sheet_id": "split-a-v001",
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink.png",
+      "sha256": "cc268181c06ba0390d1c9391b05e97ceb87d9896e2d49031fb76622eaf0734ae",
+      "size_px": [
+        1024,
+        502
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1024,
+        502
+      ],
+      "full_visible_alpha8_bbox_px": [
+        151,
+        67,
+        912,
+        454
+      ],
+      "visible_margin_px": [
+        151,
+        67,
+        112,
+        48
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        152,
+        67,
+        780,
+        432
+      ],
+      "subject_bbox_px": [
+        151,
+        67,
+        912,
+        454
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 376.3062200956938,
+      "anchor_px": [
+        496.46900269541777,
+        255.96017699115046
+      ],
+      "anchor_kind": "anatomical-marine-body-centre",
+      "source_foot_point_px": [
+        496.46900269541777,
+        255.96017699115046
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "47d8e2ee5a0329e96845b08179d519a2526101a6030d26532e0073e6e8d89c29"
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "sheet_id": "split-a-v001",
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/greet.png",
+      "sha256": "82f0ef103dbf0c57cc15c3e6d4c6b201d81b5a3acd8170a31e5c50cff8093d52",
+      "size_px": [
+        1024,
+        496
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        502,
+        1024,
+        998
+      ],
+      "full_visible_alpha8_bbox_px": [
+        150,
+        48,
+        912,
+        437
+      ],
+      "visible_margin_px": [
+        150,
+        48,
+        112,
+        59
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        152,
+        48,
+        780,
+        413
+      ],
+      "subject_bbox_px": [
+        150,
+        48,
+        912,
+        437
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 376.3062200956938,
+      "anchor_px": [
+        496.46900269541777,
+        236.96017699115046
+      ],
+      "anchor_kind": "anatomical-marine-body-centre",
+      "source_foot_point_px": [
+        496.46900269541777,
+        236.96017699115046
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "47d8e2ee5a0329e96845b08179d519a2526101a6030d26532e0073e6e8d89c29"
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "sheet_id": "split-a-v001",
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_left.png",
+      "sha256": "1ec27cd39ccf97a66c697dda0f72bddbbd2a3fc437ba793037270ac3bff17069",
+      "size_px": [
+        1024,
+        538
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        998,
+        1024,
+        1536
+      ],
+      "full_visible_alpha8_bbox_px": [
+        113,
+        61,
+        912,
+        452
+      ],
+      "visible_margin_px": [
+        113,
+        61,
+        112,
+        86
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        152,
+        61,
+        780,
+        426
+      ],
+      "subject_bbox_px": [
+        113,
+        61,
+        912,
+        452
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 376.3062200956938,
+      "anchor_px": [
+        496.46900269541777,
+        249.96017699115046
+      ],
+      "anchor_kind": "anatomical-marine-body-centre",
+      "source_foot_point_px": [
+        496.46900269541777,
+        249.96017699115046
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "47d8e2ee5a0329e96845b08179d519a2526101a6030d26532e0073e6e8d89c29"
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "sheet_id": "split-b-v002",
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+      "sha256": "cd090c3d174404413299db406dc50d9e994ecca6234fa7d99b93b01a5979eeb3",
+      "size_px": [
+        1024,
+        518
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1024,
+        518
+      ],
+      "full_visible_alpha8_bbox_px": [
+        126,
+        79,
+        881,
+        478
+      ],
+      "visible_margin_px": [
+        126,
+        79,
+        143,
+        40
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        255,
+        79,
+        862,
+        452
+      ],
+      "subject_bbox_px": [
+        126,
+        79,
+        881,
+        478
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 369.76280323450135,
+      "anchor_px": [
+        529.0498652291105,
+        272.10176991150445
+      ],
+      "anchor_kind": "anatomical-marine-body-centre",
+      "source_foot_point_px": [
+        529.0498652291105,
+        272.10176991150445
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "1044b09e1fa2a8bc21470d62e83807b0fc318eb5c8b0e779c5451d0c3976f349"
+    },
+    {
+      "id": "think",
+      "index": 1,
+      "sheet_id": "split-b-v002",
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/think.png",
+      "sha256": "17a6fbf04e740116ec7cf703c9ab504ba1e5f5c58c752ff5475b120f394bc9d3",
+      "size_px": [
+        1024,
+        479
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        518,
+        1024,
+        997
+      ],
+      "full_visible_alpha8_bbox_px": [
+        126,
+        42,
+        863,
+        440
+      ],
+      "visible_margin_px": [
+        126,
+        42,
+        161,
+        39
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        255,
+        42,
+        862,
+        415
+      ],
+      "subject_bbox_px": [
+        126,
+        42,
+        863,
+        440
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 369.76280323450135,
+      "anchor_px": [
+        529.0498652291105,
+        235.10176991150445
+      ],
+      "anchor_kind": "anatomical-marine-body-centre",
+      "source_foot_point_px": [
+        529.0498652291105,
+        235.10176991150445
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "1044b09e1fa2a8bc21470d62e83807b0fc318eb5c8b0e779c5451d0c3976f349"
+    },
+    {
+      "id": "aha",
+      "index": 2,
+      "sheet_id": "split-b-v002",
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/aha.png",
+      "sha256": "012455e489fb7925b799a08e4cacf964eda1ff3ffcbceffb08f0e6e06838605b",
+      "size_px": [
+        1024,
+        539
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        997,
+        1024,
+        1536
+      ],
+      "full_visible_alpha8_bbox_px": [
+        126,
+        40,
+        849,
+        464
+      ],
+      "visible_margin_px": [
+        126,
+        40,
+        175,
+        75
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        255,
+        40,
+        862,
+        413
+      ],
+      "subject_bbox_px": [
+        126,
+        40,
+        849,
+        464
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 369.76280323450135,
+      "anchor_px": [
+        529.0498652291105,
+        233.10176991150445
+      ],
+      "anchor_kind": "anatomical-marine-body-centre",
+      "source_foot_point_px": [
+        529.0498652291105,
+        233.10176991150445
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "1044b09e1fa2a8bc21470d62e83807b0fc318eb5c8b0e779c5451d0c3976f349"
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "sheet_id": "split-c-v001",
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+      "sha256": "1dcefcebb236507917357254c5fcb84437a4ae21fa0603933f443666f6cdb118",
+      "size_px": [
+        1024,
+        504
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1024,
+        504
+      ],
+      "full_visible_alpha8_bbox_px": [
+        126,
+        54,
+        913,
+        460
+      ],
+      "visible_margin_px": [
+        126,
+        54,
+        111,
+        44
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        147,
+        54,
+        781,
+        453
+      ],
+      "subject_bbox_px": [
+        126,
+        54,
+        913,
+        460
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 386.2102425876011,
+      "anchor_px": [
+        494.7601078167116,
+        260.5619469026549
+      ],
+      "anchor_kind": "anatomical-marine-body-centre",
+      "source_foot_point_px": [
+        494.7601078167116,
+        260.5619469026549
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "776a9e3dc50f587e3a2b1384faf179a50d91f39dc1220dcc57e46ac1a81cf803"
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "sheet_id": "split-c-v001",
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/species_a.png",
+      "sha256": "528a9479102c5c7872be255865da2a709f691be335ea7731281ea653aa7ec96b",
+      "size_px": [
+        1024,
+        498
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        504,
+        1024,
+        1002
+      ],
+      "full_visible_alpha8_bbox_px": [
+        123,
+        46,
+        914,
+        452
+      ],
+      "visible_margin_px": [
+        123,
+        46,
+        110,
+        46
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        147,
+        46,
+        781,
+        445
+      ],
+      "subject_bbox_px": [
+        123,
+        46,
+        914,
+        452
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 386.2102425876011,
+      "anchor_px": [
+        494.7601078167116,
+        252.56194690265488
+      ],
+      "anchor_kind": "anatomical-marine-body-centre",
+      "source_foot_point_px": [
+        494.7601078167116,
+        252.56194690265488
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "776a9e3dc50f587e3a2b1384faf179a50d91f39dc1220dcc57e46ac1a81cf803"
+    },
+    {
+      "id": "species_b",
+      "index": 2,
+      "sheet_id": "split-c-v001",
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/species_b.png",
+      "sha256": "537cb7edfa634fc2561bb6b555b4c4a0f7326fb62d356877052cf39ec81c608a",
+      "size_px": [
+        1024,
+        534
+      ],
+      "crop_from_sheet_xyxy": [
+        0,
+        1002,
+        1024,
+        1536
+      ],
+      "full_visible_alpha8_bbox_px": [
+        143,
+        47,
+        915,
+        453
+      ],
+      "visible_margin_px": [
+        143,
+        47,
+        109,
+        81
+      ],
+      "native_RGBA_exact_original_crop": true,
+      "body_bbox_px": [
+        147,
+        47,
+        781,
+        446
+      ],
+      "subject_bbox_px": [
+        143,
+        47,
+        915,
+        453
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 386.2102425876011,
+      "anchor_px": [
+        494.7601078167116,
+        253.56194690265488
+      ],
+      "anchor_kind": "anatomical-marine-body-centre",
+      "source_foot_point_px": [
+        494.7601078167116,
+        253.56194690265488
+      ],
+      "sole_points": [],
+      "sole_regions": [],
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "776a9e3dc50f587e3a2b1384faf179a50d91f39dc1220dcc57e46ac1a81cf803"
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-a-v001-generation-v001.json",
+        "sha256": "4fa15ec358eae059f62612c2e106c69fec448bf902ea296b1b57723af4170da2",
+        "bytes": 3784
+      },
+      {
+        "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-b-v002-generation-v001.json",
+        "sha256": "ea29f673afb35b45cca60364f7083a6c676b8582dee631dfc32cb8d9a4c8ef6a",
+        "bytes": 4109
+      },
+      {
+        "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/provenance/selected-split-c-v001-generation-v001.json",
+        "sha256": "7653ac82db0cece525db63edf940dde73340b1f6d9839e0518ef5f7ac33adb83",
+        "bytes": 3721
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/qa/stock-adoption-v001.json",
+      "sha256": "97a0b22e4637882168ab07f209f859088730ce392873d3adeaabca2a6a90bd60",
+      "bytes": 8441
+    }
+  ]
+}

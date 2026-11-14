@@ -1,0 +1,1261 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "axolotl",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/axolotl/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "51b5862ce10fca985432e95436deff0deb43f57d06f8569e468e6484573e5942",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      320.0,
+      224.0,
+      885.0,
+      1177.0
+    ],
+    "anchor_px": [
+      600.0,
+      1172.0
+    ],
+    "reference_height_px": 953.0,
+    "anchor_kind": "anatomical_feet_support",
+    "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+    "anchor_basis": "Body reference is head crown to foot contacts, excluding the gill fans and side tail; anchor lies between the two short foot contacts.",
+    "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+    "source_manifest": "assets/library/characters/axolotl/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "f431854bc4bbd76a203df66b18c39f7343bda5840e1b73c4b7073e1ebc683ac5"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "51b5862ce10fca985432e95436deff0deb43f57d06f8569e468e6484573e5942",
+      "reference_height_px": 953.0,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "trio-01-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v003.png",
+      "source_sheet_sha256": "fe84587603cb85db100983d3828d66e7c036d06a94af82c96e62c57d4048b706",
+      "reference_height_px": 601.2404188555512,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/axolotl/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "51b5862ce10fca985432e95436deff0deb43f57d06f8569e468e6484573e5942",
+          "bytes": 1106551,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 953.0,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 414.6,
+            "source_y": 203.73589743589744,
+            "canonical_span": [
+              320,
+              885
+            ],
+            "source_span": [
+              189,
+              544
+            ],
+            "ratio": 0.6283185840707964
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 509.9,
+            "source_y": 263.6038461538461,
+            "canonical_span": [
+              320,
+              885
+            ],
+            "source_span": [
+              189,
+              544
+            ],
+            "ratio": 0.6283185840707964
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 814.86,
+            "source_y": 455.18128205128204,
+            "canonical_span": [
+              335,
+              885
+            ],
+            "source_span": [
+              195,
+              544
+            ],
+            "ratio": 0.6345454545454545
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 929.22,
+            "source_y": 527.0228205128205,
+            "canonical_span": [
+              383,
+              885
+            ],
+            "source_span": [
+              226,
+              544
+            ],
+            "ratio": 0.6334661354581673
+          }
+        ],
+        "common_ratio": 0.6308923597644819,
+        "initial_roi_locator_only_visible_height_ratio": 0.6282051282051282,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.009910371318822,
+        "visual_confirmation": {
+          "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v003.json",
+          "sha256": "7679ab8fbf52eaae3cb2ee33c48ab6a8201fd7b80070f3c72d9f4cb4a5dd8041",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v003-generation-v001.json",
+      "generation_record_sha256": "525a873126c0db5f67a7921e642e6b38d0fa1e1c4382780520b2f2b6e20c659d"
+    },
+    {
+      "id": "trio-02-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v003.png",
+      "source_sheet_sha256": "3fba14ea177e607aaac6e60c7371ea5e71d0779163f8ba3f69f0582aed2cb3cc",
+      "reference_height_px": 589.648624296058,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/axolotl/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "51b5862ce10fca985432e95436deff0deb43f57d06f8569e468e6484573e5942",
+          "bytes": 1106551,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 953.0,
+        "reference_frame_id": "aha",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 414.6,
+            "source_y": 203.54792899408284,
+            "canonical_span": [
+              320,
+              885
+            ],
+            "source_span": [
+              210,
+              564
+            ],
+            "ratio": 0.6265486725663717
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 509.9,
+            "source_y": 263.32189349112423,
+            "canonical_span": [
+              320,
+              885
+            ],
+            "source_span": [
+              210,
+              539
+            ],
+            "ratio": 0.5823008849557522
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 814.86,
+            "source_y": 454.5985798816568,
+            "canonical_span": [
+              335,
+              885
+            ],
+            "source_span": [
+              228,
+              564
+            ],
+            "ratio": 0.610909090909091
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 929.22,
+            "source_y": 526.3273372781066,
+            "canonical_span": [
+              383,
+              885
+            ],
+            "source_span": [
+              214,
+              564
+            ],
+            "ratio": 0.6972111553784861
+          }
+        ],
+        "common_ratio": 0.6187288817377313,
+        "initial_roi_locator_only_visible_height_ratio": 0.6272189349112426,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.197338306349072,
+        "visual_confirmation": {
+          "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v003.json",
+          "sha256": "7679ab8fbf52eaae3cb2ee33c48ab6a8201fd7b80070f3c72d9f4cb4a5dd8041",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v003-generation-v001.json",
+      "generation_record_sha256": "5cf82d14a6d182646ff30338d125b2da20d384ddfb5ecda330f42a6482c77eeb"
+    },
+    {
+      "id": "trio-03-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v003.png",
+      "source_sheet_sha256": "16c118224ee37ef52b6db32de1bf2aa746ec2e8e0e737d042bf85ff768ce3076",
+      "reference_height_px": 570.9566371681416,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/axolotl/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "51b5862ce10fca985432e95436deff0deb43f57d06f8569e468e6484573e5942",
+          "bytes": 1106551,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 953.0,
+        "reference_frame_id": "cheer",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 414.6,
+            "source_y": 215.66074950690336,
+            "canonical_span": [
+              320,
+              885
+            ],
+            "source_span": [
+              198,
+              538
+            ],
+            "ratio": 0.6017699115044248
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 509.9,
+            "source_y": 272.99112426035504,
+            "canonical_span": [
+              320,
+              885
+            ],
+            "source_span": [
+              198,
+              535
+            ],
+            "ratio": 0.5964601769911504
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 814.86,
+            "source_y": 456.4483234714004,
+            "canonical_span": [
+              335,
+              885
+            ],
+            "source_span": [
+              234,
+              538
+            ],
+            "ratio": 0.5527272727272727
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 929.22,
+            "source_y": 525.2447731755424,
+            "canonical_span": [
+              383,
+              885
+            ],
+            "source_span": [
+              219,
+              538
+            ],
+            "ratio": 0.6354581673306773
+          }
+        ],
+        "common_ratio": 0.5991150442477876,
+        "initial_roi_locator_only_visible_height_ratio": 0.6015779092702169,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.1496776053680016,
+        "visual_confirmation": {
+          "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v003.json",
+          "sha256": "7679ab8fbf52eaae3cb2ee33c48ab6a8201fd7b80070f3c72d9f4cb4a5dd8041",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v003-generation-v001.json",
+      "generation_prompt": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v003-generation-v001.json",
+      "generation_record_sha256": "039e10f1e9944eed13e3ce8b66c5d83eb4fa325f747cc416673548a08ec95495"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/axolotl/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "51b5862ce10fca985432e95436deff0deb43f57d06f8569e468e6484573e5942",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        320.0,
+        224.0,
+        885.0,
+        1177.0
+      ],
+      "anchor_px": [
+        600.0,
+        1172.0
+      ],
+      "reference_height_px": 953.0,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Body reference is head crown to foot contacts, excluding the gill fans and side tail; anchor lies between the two short foot contacts.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "source_manifest": "assets/library/characters/axolotl/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "f431854bc4bbd76a203df66b18c39f7343bda5840e1b73c4b7073e1ebc683ac5",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "51b5862ce10fca985432e95436deff0deb43f57d06f8569e468e6484573e5942",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        723,
+        724
+      ],
+      "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/frames/blink-v003.png",
+      "sha256": "f663ca7af9325f2629668ccddb0a0c497a1222df046c8ce72a3adde2679cf8be",
+      "size_px": [
+        723,
+        724
+      ],
+      "visible": [
+        78,
+        46,
+        647,
+        683
+      ],
+      "sheet_id": "trio-01-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v003.png",
+      "source_sheet_sha256": "fe84587603cb85db100983d3828d66e7c036d06a94af82c96e62c57d4048b706",
+      "body_bbox_px": [
+        189,
+        84,
+        544,
+        683
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        78,
+        46,
+        647,
+        683
+      ],
+      "reference_height_px": 601.2404188555512,
+      "anchor_px": [
+        354.97316926982336,
+        679.8455382011776
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        354.5,
+        683
+      ],
+      "sole_points": [
+        [
+          289.0,
+          683
+        ],
+        [
+          420.0,
+          683
+        ]
+      ],
+      "sole_regions": [
+        [
+          238,
+          575,
+          350,
+          685
+        ],
+        [
+          364,
+          575,
+          475,
+          685
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        78,
+        46,
+        647,
+        683
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        723,
+        0,
+        1448,
+        724
+      ],
+      "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/frames/greet-v003.png",
+      "sha256": "adf6b591aa59ed6852addb1badb2fbd5c104c11cd13f898879e7ad78133468f9",
+      "size_px": [
+        725,
+        724
+      ],
+      "visible": [
+        77,
+        46,
+        649,
+        683
+      ],
+      "sheet_id": "trio-01-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v003.png",
+      "source_sheet_sha256": "fe84587603cb85db100983d3828d66e7c036d06a94af82c96e62c57d4048b706",
+      "body_bbox_px": [
+        188,
+        84,
+        543,
+        683
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        77,
+        46,
+        649,
+        683
+      ],
+      "reference_height_px": 601.2404188555512,
+      "anchor_px": [
+        355.72316926982336,
+        679.8455382011776
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        355.25,
+        683
+      ],
+      "sole_points": [
+        [
+          286.5,
+          683
+        ],
+        [
+          424.0,
+          683
+        ]
+      ],
+      "sole_regions": [
+        [
+          239,
+          575,
+          349,
+          685
+        ],
+        [
+          365,
+          575,
+          476,
+          685
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        77,
+        46,
+        649,
+        683
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/frames/present_left-v003.png",
+      "sha256": "0bda13f48f17cf6c5b30bb0059a0508d985973cb99fc05e14ef3b2374e46b9b6",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        77,
+        46,
+        647,
+        683
+      ],
+      "sheet_id": "trio-01-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v003.png",
+      "source_sheet_sha256": "fe84587603cb85db100983d3828d66e7c036d06a94af82c96e62c57d4048b706",
+      "body_bbox_px": [
+        188,
+        84,
+        543,
+        683
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        77,
+        46,
+        647,
+        683
+      ],
+      "reference_height_px": 601.2404188555512,
+      "anchor_px": [
+        356.97316926982336,
+        679.8455382011776
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        356.5,
+        683
+      ],
+      "sole_points": [
+        [
+          293.0,
+          683
+        ],
+        [
+          420.0,
+          683
+        ]
+      ],
+      "sole_regions": [
+        [
+          239,
+          575,
+          350,
+          685
+        ],
+        [
+          365,
+          575,
+          475,
+          685
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        77,
+        46,
+        647,
+        683
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        725,
+        724
+      ],
+      "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/frames/present_right-v003.png",
+      "sha256": "63e0acdb5f6a77109c1240e7508f0d90c0950a3811c50f9d14505733861721ab",
+      "size_px": [
+        725,
+        724
+      ],
+      "visible": [
+        100,
+        44,
+        639,
+        680
+      ],
+      "sheet_id": "trio-02-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v003.png",
+      "source_sheet_sha256": "3fba14ea177e607aaac6e60c7371ea5e71d0779163f8ba3f69f0582aed2cb3cc",
+      "body_bbox_px": [
+        211,
+        82,
+        565,
+        680
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        100,
+        44,
+        639,
+        680
+      ],
+      "reference_height_px": 589.648624296058,
+      "anchor_px": [
+        359.2140466613033,
+        676.9063555913114
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        358.75,
+        680
+      ],
+      "sole_points": [
+        [
+          292.5,
+          680
+        ],
+        [
+          425.0,
+          680
+        ]
+      ],
+      "sole_regions": [
+        [
+          241,
+          574,
+          352,
+          682
+        ],
+        [
+          367,
+          574,
+          476,
+          682
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        100,
+        44,
+        639,
+        680
+      ]
+    },
+    {
+      "id": "think",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        725,
+        0,
+        1448,
+        724
+      ],
+      "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/frames/think-v003.png",
+      "sha256": "2dbcce52b19a4efe5261c4c4f358e384ada34b84501c2801d04f119d948da008",
+      "size_px": [
+        723,
+        724
+      ],
+      "visible": [
+        93,
+        36,
+        630,
+        682
+      ],
+      "sheet_id": "trio-02-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v003.png",
+      "source_sheet_sha256": "3fba14ea177e607aaac6e60c7371ea5e71d0779163f8ba3f69f0582aed2cb3cc",
+      "body_bbox_px": [
+        206,
+        75,
+        566,
+        682
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        93,
+        36,
+        630,
+        682
+      ],
+      "reference_height_px": 589.648624296058,
+      "anchor_px": [
+        339.9640466613033,
+        678.9063555913114
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        339.5,
+        682
+      ],
+      "sole_points": [
+        [
+          272.5,
+          682
+        ],
+        [
+          406.5,
+          680
+        ]
+      ],
+      "sole_regions": [
+        [
+          223,
+          576,
+          332,
+          684
+        ],
+        [
+          348,
+          576,
+          456,
+          684
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        93,
+        36,
+        630,
+        682
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/frames/aha-v003.png",
+      "sha256": "1e59a07e4b433fbcc8030ce3a8e297177baa808f4274e75edd5134ed8287f562",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        99,
+        46,
+        642,
+        682
+      ],
+      "sheet_id": "trio-02-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v003.png",
+      "source_sheet_sha256": "3fba14ea177e607aaac6e60c7371ea5e71d0779163f8ba3f69f0582aed2cb3cc",
+      "body_bbox_px": [
+        210,
+        84,
+        564,
+        682
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        99,
+        46,
+        642,
+        682
+      ],
+      "reference_height_px": 589.648624296058,
+      "anchor_px": [
+        343.4640466613033,
+        678.9063555913114
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        343.0,
+        682
+      ],
+      "sole_points": [
+        [
+          277.5,
+          680
+        ],
+        [
+          408.5,
+          682
+        ]
+      ],
+      "sole_regions": [
+        [
+          226,
+          576,
+          337,
+          684
+        ],
+        [
+          351,
+          576,
+          459,
+          684
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        99,
+        46,
+        642,
+        682
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        720,
+        724
+      ],
+      "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/frames/cheer-v003.png",
+      "sha256": "a551c570d0c5ac54c53f983e7927013d673f4b16f721ab7df0edfbe61157f836",
+      "size_px": [
+        720,
+        724
+      ],
+      "visible": [
+        92,
+        64,
+        624,
+        674
+      ],
+      "sheet_id": "trio-03-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v003.png",
+      "source_sheet_sha256": "16c118224ee37ef52b6db32de1bf2aa746ec2e8e0e737d042bf85ff768ce3076",
+      "body_bbox_px": [
+        198,
+        101,
+        538,
+        674
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        92,
+        64,
+        624,
+        674
+      ],
+      "reference_height_px": 570.9566371681416,
+      "anchor_px": [
+        348.94933628318586,
+        671.0044247787611
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        348.5,
+        674
+      ],
+      "sole_points": [
+        [
+          288.5,
+          674
+        ],
+        [
+          408.5,
+          674
+        ]
+      ],
+      "sole_regions": [
+        [
+          236,
+          571,
+          339,
+          676
+        ],
+        [
+          356,
+          571,
+          460,
+          676
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        92,
+        64,
+        624,
+        674
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        720,
+        0,
+        1454,
+        724
+      ],
+      "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/frames/species_a-v003.png",
+      "sha256": "a3b93c9b8127699ee480c8375cc033bbf59a1449a63dc7fd7dbc0a4e8b4c1433",
+      "size_px": [
+        734,
+        724
+      ],
+      "visible": [
+        83,
+        60,
+        652,
+        673
+      ],
+      "sheet_id": "trio-03-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v003.png",
+      "source_sheet_sha256": "16c118224ee37ef52b6db32de1bf2aa746ec2e8e0e737d042bf85ff768ce3076",
+      "body_bbox_px": [
+        190,
+        97,
+        532,
+        673
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        83,
+        60,
+        652,
+        673
+      ],
+      "reference_height_px": 570.9566371681416,
+      "anchor_px": [
+        355.44933628318586,
+        670.0044247787611
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        355.0,
+        673
+      ],
+      "sole_points": [
+        [
+          293.0,
+          673
+        ],
+        [
+          417.0,
+          673
+        ]
+      ],
+      "sole_regions": [
+        [
+          244,
+          570,
+          349,
+          675
+        ],
+        [
+          366,
+          570,
+          470,
+          675
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        83,
+        60,
+        652,
+        673
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1454,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/frames/species_b-v003.png",
+      "sha256": "fe0cf145587a43ed1ae65b55351c510b066e45e3adbddd79a3fe9770f40181a2",
+      "size_px": [
+        718,
+        724
+      ],
+      "visible": [
+        101,
+        81,
+        622,
+        674
+      ],
+      "sheet_id": "trio-03-v003",
+      "source_sheet": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v003.png",
+      "source_sheet_sha256": "16c118224ee37ef52b6db32de1bf2aa746ec2e8e0e737d042bf85ff768ce3076",
+      "body_bbox_px": [
+        205,
+        117,
+        535,
+        674
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        101,
+        81,
+        622,
+        674
+      ],
+      "reference_height_px": 570.9566371681416,
+      "anchor_px": [
+        347.44933628318586,
+        671.0044247787611
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        347.0,
+        674
+      ],
+      "sole_points": [
+        [
+          283.0,
+          674
+        ],
+        [
+          411.0,
+          673
+        ]
+      ],
+      "sole_regions": [
+        [
+          234,
+          571,
+          341,
+          676
+        ],
+        [
+          359,
+          571,
+          463,
+          676
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        101,
+        81,
+        622,
+        674
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v003-generation-v001.json",
+        "sha256": "525a873126c0db5f67a7921e642e6b38d0fa1e1c4382780520b2f2b6e20c659d",
+        "bytes": 3885
+      },
+      {
+        "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v003-generation-v001.json",
+        "sha256": "5cf82d14a6d182646ff30338d125b2da20d384ddfb5ecda330f42a6482c77eeb",
+        "bytes": 3859
+      },
+      {
+        "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v003-generation-v001.json",
+        "sha256": "039e10f1e9944eed13e3ce8b66c5d83eb4fa325f747cc416673548a08ec95495",
+        "bytes": 3974
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/axolotl/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "10abded01908f93a22a837e2405bab4b65265dd8ff3f4f939368d1c328b9349a",
+      "bytes": 8733
+    }
+  ]
+}

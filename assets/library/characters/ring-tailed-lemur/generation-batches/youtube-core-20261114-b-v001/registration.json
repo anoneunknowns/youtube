@@ -1,0 +1,1261 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "ring-tailed-lemur",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/ring-tailed-lemur/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "c98be712502d236c699136a749ca58c542d656b104b9e1d784496e48037df78b",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      301,
+      219,
+      941,
+      1186
+    ],
+    "anchor_px": [
+      609,
+      1180
+    ],
+    "reference_height_px": 967,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of two short supporting feet; tall ringed tail and ear tips excluded from body reference.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/ring-tailed-lemur/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "550a760f990cb5708cbc14b2499d5eea43b475435eefe3e4b678c1e05a59e193"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "c98be712502d236c699136a749ca58c542d656b104b9e1d784496e48037df78b",
+      "reference_height_px": 967,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "trio-01-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v001.png",
+      "source_sheet_sha256": "e9f022d625bed5792f8425ce77244ae8c6f319ad2547ebb545e649c04decbd99",
+      "reference_height_px": 629.7876943045651,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/ring-tailed-lemur/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "c98be712502d236c699136a749ca58c542d656b104b9e1d784496e48037df78b",
+          "bytes": 1218438,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 967,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 412.4,
+            "source_y": 199.64608120868746,
+            "canonical_span": [
+              301,
+              941
+            ],
+            "source_span": [
+              154,
+              569
+            ],
+            "ratio": 0.6484375
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 509.09999999999997,
+            "source_y": 262.46912181303117,
+            "canonical_span": [
+              302,
+              941
+            ],
+            "source_span": [
+              154,
+              570
+            ],
+            "ratio": 0.651017214397496
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 818.54,
+            "source_y": 463.502851746931,
+            "canonical_span": [
+              338,
+              941
+            ],
+            "source_span": [
+              177,
+              570
+            ],
+            "ratio": 0.6517412935323383
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 934.58,
+            "source_y": 538.8905004721436,
+            "canonical_span": [
+              390,
+              941
+            ],
+            "source_span": [
+              211,
+              570
+            ],
+            "ratio": 0.6515426497277677
+          }
+        ],
+        "common_ratio": 0.6512799320626319,
+        "initial_roi_locator_only_visible_height_ratio": 0.6496694995278565,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0050950068932447,
+        "visual_confirmation": {
+          "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "7d2a83a8e5e9bcc304fe146f51b7a04a30e493d8802b8b1b25ca233309fefd1e",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v001-generation-v001.json",
+      "generation_record_sha256": "8fc19a31ae0490a3ddad84fa6e1de9f8d6423c5de62800f260e8c7466181ef35"
+    },
+    {
+      "id": "trio-02-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v001.png",
+      "source_sheet_sha256": "f2a711d8ca8864128bd280cef676ed5d421cc01c5a8e14efd7a0d1d81a86405d",
+      "reference_height_px": 595.7799173513303,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/ring-tailed-lemur/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "c98be712502d236c699136a749ca58c542d656b104b9e1d784496e48037df78b",
+          "bytes": 1218438,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 967,
+        "reference_frame_id": "aha",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 412.4,
+            "source_y": 215.98470254957505,
+            "canonical_span": [
+              301,
+              941
+            ],
+            "source_span": [
+              146,
+              536
+            ],
+            "ratio": 0.609375
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 509.09999999999997,
+            "source_y": 275.97705382436254,
+            "canonical_span": [
+              302,
+              941
+            ],
+            "source_span": [
+              146,
+              544
+            ],
+            "ratio": 0.622848200312989
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 818.54,
+            "source_y": 467.95257790368265,
+            "canonical_span": [
+              338,
+              941
+            ],
+            "source_span": [
+              190,
+              544
+            ],
+            "ratio": 0.5870646766169154
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 934.58,
+            "source_y": 539.9433994334278,
+            "canonical_span": [
+              390,
+              941
+            ],
+            "source_span": [
+              198,
+              544
+            ],
+            "ratio": 0.6279491833030852
+          }
+        ],
+        "common_ratio": 0.6161116001564946,
+        "initial_roi_locator_only_visible_height_ratio": 0.6203966005665722,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0696422529145775,
+        "visual_confirmation": {
+          "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "7d2a83a8e5e9bcc304fe146f51b7a04a30e493d8802b8b1b25ca233309fefd1e",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v001-generation-v001.json",
+      "generation_record_sha256": "15a3528df6ec82dc0140bb21f4e858fd3296cf3ac5a9034580e8fa9fdf1afdc0"
+    },
+    {
+      "id": "trio-03-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v001.png",
+      "source_sheet_sha256": "f4451a1ef396be8ebe1dbecdb8089ef72d2a6d0e419ae2e645dcdd913ebe7a78",
+      "reference_height_px": 598.1242159142469,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/ring-tailed-lemur/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "c98be712502d236c699136a749ca58c542d656b104b9e1d784496e48037df78b",
+          "bytes": 1218438,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 967,
+        "reference_frame_id": "cheer",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 412.4,
+            "source_y": 211.1762039660057,
+            "canonical_span": [
+              301,
+              941
+            ],
+            "source_span": [
+              181,
+              572
+            ],
+            "ratio": 0.6109375
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 509.09999999999997,
+            "source_y": 272.26430594900853,
+            "canonical_span": [
+              302,
+              941
+            ],
+            "source_span": [
+              181,
+              585
+            ],
+            "ratio": 0.6322378716744914
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 818.54,
+            "source_y": 467.7462322946176,
+            "canonical_span": [
+              338,
+              941
+            ],
+            "source_span": [
+              259,
+              585
+            ],
+            "ratio": 0.5406301824212272
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 934.58,
+            "source_y": 541.051954674221,
+            "canonical_span": [
+              390,
+              941
+            ],
+            "source_span": [
+              240,
+              585
+            ],
+            "ratio": 0.6261343012704175
+          }
+        ],
+        "common_ratio": 0.6185359006352087,
+        "initial_roi_locator_only_visible_height_ratio": 0.6317280453257791,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.169446124600363,
+        "visual_confirmation": {
+          "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "7d2a83a8e5e9bcc304fe146f51b7a04a30e493d8802b8b1b25ca233309fefd1e",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v001-generation-v001.json",
+      "generation_record_sha256": "6efbaa1a7ff8e71483219b9e743473b4f4e6a76318a1480ee3bf9e5c2f603511"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "c98be712502d236c699136a749ca58c542d656b104b9e1d784496e48037df78b",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        301,
+        219,
+        941,
+        1186
+      ],
+      "anchor_px": [
+        609,
+        1180
+      ],
+      "reference_height_px": 967,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of two short supporting feet; tall ringed tail and ear tips excluded from body reference.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/ring-tailed-lemur/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "550a760f990cb5708cbc14b2499d5eea43b475435eefe3e4b678c1e05a59e193",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "c98be712502d236c699136a749ca58c542d656b104b9e1d784496e48037df78b",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        746,
+        724
+      ],
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "f680f6cb23cdfa435c4af3fb6c0315468ba0774f8826a4378ea982861d790d76",
+      "size_px": [
+        746,
+        724
+      ],
+      "visible": [
+        114,
+        14,
+        680,
+        702
+      ],
+      "sheet_id": "trio-01-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v001.png",
+      "source_sheet_sha256": "e9f022d625bed5792f8425ce77244ae8c6f319ad2547ebb545e649c04decbd99",
+      "body_bbox_px": [
+        154,
+        74,
+        570,
+        702
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        114,
+        14,
+        680,
+        702
+      ],
+      "reference_height_px": 629.7876943045651,
+      "anchor_px": [
+        355.9833195584071,
+        698.0923204076242
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        351.75,
+        702
+      ],
+      "sole_points": [
+        [
+          285.5,
+          702
+        ],
+        [
+          418.0,
+          702
+        ]
+      ],
+      "sole_regions": [
+        [
+          228,
+          589,
+          347,
+          704
+        ],
+        [
+          358,
+          589,
+          475,
+          704
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        114,
+        14,
+        680,
+        702
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        746,
+        0,
+        1468,
+        724
+      ],
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "422af9478b925cea4dcfa9748cf853a828d5ef769f136a6c427428fc60e4fa84",
+      "size_px": [
+        722,
+        724
+      ],
+      "visible": [
+        92,
+        14,
+        654,
+        701
+      ],
+      "sheet_id": "trio-01-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v001.png",
+      "source_sheet_sha256": "e9f022d625bed5792f8425ce77244ae8c6f319ad2547ebb545e649c04decbd99",
+      "body_bbox_px": [
+        132,
+        74,
+        547,
+        701
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        92,
+        14,
+        654,
+        701
+      ],
+      "reference_height_px": 629.7876943045651,
+      "anchor_px": [
+        334.9833195584071,
+        697.0923204076242
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        330.75,
+        701
+      ],
+      "sole_points": [
+        [
+          264.5,
+          701
+        ],
+        [
+          397.0,
+          701
+        ]
+      ],
+      "sole_regions": [
+        [
+          204,
+          588,
+          328,
+          703
+        ],
+        [
+          337,
+          588,
+          454,
+          703
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        92,
+        14,
+        654,
+        701
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1468,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "d4d08b3f492a60ebac816975d19634bb73481830d3565acceb1c2a2db67a2a00",
+      "size_px": [
+        704,
+        724
+      ],
+      "visible": [
+        71,
+        14,
+        652,
+        701
+      ],
+      "sheet_id": "trio-01-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-01-v001.png",
+      "source_sheet_sha256": "e9f022d625bed5792f8425ce77244ae8c6f319ad2547ebb545e649c04decbd99",
+      "body_bbox_px": [
+        111,
+        74,
+        526,
+        701
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        71,
+        14,
+        652,
+        701
+      ],
+      "reference_height_px": 629.7876943045651,
+      "anchor_px": [
+        336.4833195584071,
+        697.0923204076242
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        332.25,
+        701
+      ],
+      "sole_points": [
+        [
+          266.5,
+          701
+        ],
+        [
+          398.0,
+          701
+        ]
+      ],
+      "sole_regions": [
+        [
+          207,
+          588,
+          328,
+          703
+        ],
+        [
+          339,
+          588,
+          458,
+          703
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        71,
+        14,
+        652,
+        701
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        739,
+        724
+      ],
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "75d28595283654472e2f80dc358c6fe2face798e3a70e5dafaa04cdbafa7ce07",
+      "size_px": [
+        739,
+        724
+      ],
+      "visible": [
+        114,
+        35,
+        667,
+        696
+      ],
+      "sheet_id": "trio-02-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v001.png",
+      "source_sheet_sha256": "f2a711d8ca8864128bd280cef676ed5d421cc01c5a8e14efd7a0d1d81a86405d",
+      "body_bbox_px": [
+        153,
+        92,
+        552,
+        696
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        114,
+        35,
+        667,
+        696
+      ],
+      "reference_height_px": 595.7799173513303,
+      "anchor_px": [
+        348.7547254010172,
+        692.303330399061
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        344.75,
+        696
+      ],
+      "sole_points": [
+        [
+          280.0,
+          696
+        ],
+        [
+          409.5,
+          696
+        ]
+      ],
+      "sole_regions": [
+        [
+          227,
+          589,
+          339,
+          698
+        ],
+        [
+          352,
+          589,
+          465,
+          698
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        114,
+        35,
+        667,
+        696
+      ]
+    },
+    {
+      "id": "think",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        739,
+        0,
+        1448,
+        724
+      ],
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "3b590571c13759db5679ad0e335573d96b7f00872e2387e2d401046cb8f8c055",
+      "size_px": [
+        709,
+        724
+      ],
+      "visible": [
+        125,
+        17,
+        602,
+        696
+      ],
+      "sheet_id": "trio-02-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v001.png",
+      "source_sheet_sha256": "f2a711d8ca8864128bd280cef676ed5d421cc01c5a8e14efd7a0d1d81a86405d",
+      "body_bbox_px": [
+        165,
+        76,
+        575,
+        696
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        125,
+        17,
+        602,
+        696
+      ],
+      "reference_height_px": 595.7799173513303,
+      "anchor_px": [
+        293.7547254010172,
+        692.303330399061
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        289.75,
+        696
+      ],
+      "sole_points": [
+        [
+          225.5,
+          696
+        ],
+        [
+          354.0,
+          696
+        ]
+      ],
+      "sole_regions": [
+        [
+          173,
+          589,
+          284,
+          698
+        ],
+        [
+          298,
+          589,
+          409,
+          698
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        125,
+        17,
+        602,
+        696
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "6188766e65d4f0bd474fbb1f9002ce4be00efd540ac84edbe2c120ee5e66e40b",
+      "size_px": [
+        724,
+        724
+      ],
+      "visible": [
+        108,
+        39,
+        644,
+        696
+      ],
+      "sheet_id": "trio-02-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-02-v001.png",
+      "source_sheet_sha256": "f2a711d8ca8864128bd280cef676ed5d421cc01c5a8e14efd7a0d1d81a86405d",
+      "body_bbox_px": [
+        146,
+        96,
+        544,
+        696
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        108,
+        39,
+        644,
+        696
+      ],
+      "reference_height_px": 595.7799173513303,
+      "anchor_px": [
+        331.2547254010172,
+        692.303330399061
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        327.25,
+        696
+      ],
+      "sole_points": [
+        [
+          262.5,
+          696
+        ],
+        [
+          392.0,
+          696
+        ]
+      ],
+      "sole_regions": [
+        [
+          209,
+          589,
+          323,
+          698
+        ],
+        [
+          336,
+          589,
+          447,
+          698
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        108,
+        39,
+        644,
+        696
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        743,
+        724
+      ],
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "5c58463ac9e8fa864b7199a9c70f4f8dc911dc04ddaf612158537504dd750518",
+      "size_px": [
+        743,
+        724
+      ],
+      "visible": [
+        142,
+        31,
+        675,
+        700
+      ],
+      "sheet_id": "trio-03-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v001.png",
+      "source_sheet_sha256": "f4451a1ef396be8ebe1dbecdb8089ef72d2a6d0e419ae2e645dcdd913ebe7a78",
+      "body_bbox_px": [
+        181,
+        89,
+        585,
+        700
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        142,
+        31,
+        675,
+        700
+      ],
+      "reference_height_px": 598.1242159142469,
+      "anchor_px": [
+        374.2704833541288,
+        696.2887845961887
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        370.25,
+        700
+      ],
+      "sole_points": [
+        [
+          306.0,
+          700
+        ],
+        [
+          434.5,
+          700
+        ]
+      ],
+      "sole_regions": [
+        [
+          249,
+          592,
+          366,
+          702
+        ],
+        [
+          378,
+          592,
+          492,
+          702
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        142,
+        31,
+        675,
+        700
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        743,
+        0,
+        1430,
+        724
+      ],
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "9fdfa5d1db04aae5c555f921d2579ae644c3df39e66e0163ea0ca90799f368d8",
+      "size_px": [
+        687,
+        724
+      ],
+      "visible": [
+        78,
+        31,
+        605,
+        700
+      ],
+      "sheet_id": "trio-03-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v001.png",
+      "source_sheet_sha256": "f4451a1ef396be8ebe1dbecdb8089ef72d2a6d0e419ae2e645dcdd913ebe7a78",
+      "body_bbox_px": [
+        117,
+        89,
+        521,
+        700
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        78,
+        31,
+        605,
+        700
+      ],
+      "reference_height_px": 598.1242159142469,
+      "anchor_px": [
+        309.2704833541288,
+        696.2887845961887
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        305.25,
+        700
+      ],
+      "sole_points": [
+        [
+          241.0,
+          700
+        ],
+        [
+          369.5,
+          700
+        ]
+      ],
+      "sole_regions": [
+        [
+          186,
+          592,
+          302,
+          702
+        ],
+        [
+          313,
+          592,
+          429,
+          702
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        78,
+        31,
+        605,
+        700
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        1430,
+        0,
+        2172,
+        724
+      ],
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "a826200adfbd72dcac4a4c506ea666cc92a71779f6bacdf212a58b2dd4c98389",
+      "size_px": [
+        742,
+        724
+      ],
+      "visible": [
+        69,
+        31,
+        610,
+        700
+      ],
+      "sheet_id": "trio-03-v001",
+      "source_sheet": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/source/trio-03-v001.png",
+      "source_sheet_sha256": "f4451a1ef396be8ebe1dbecdb8089ef72d2a6d0e419ae2e645dcdd913ebe7a78",
+      "body_bbox_px": [
+        108,
+        89,
+        512,
+        700
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        69,
+        31,
+        610,
+        700
+      ],
+      "reference_height_px": 598.1242159142469,
+      "anchor_px": [
+        302.2704833541288,
+        696.2887845961887
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        298.25,
+        700
+      ],
+      "sole_points": [
+        [
+          233.0,
+          700
+        ],
+        [
+          363.5,
+          700
+        ]
+      ],
+      "sole_regions": [
+        [
+          177,
+          592,
+          293,
+          702
+        ],
+        [
+          305,
+          592,
+          420,
+          702
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        69,
+        31,
+        610,
+        700
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-01-v001-generation-v001.json",
+        "sha256": "8fc19a31ae0490a3ddad84fa6e1de9f8d6423c5de62800f260e8c7466181ef35",
+        "bytes": 4614
+      },
+      {
+        "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-02-v001-generation-v001.json",
+        "sha256": "15a3528df6ec82dc0140bb21f4e858fd3296cf3ac5a9034580e8fa9fdf1afdc0",
+        "bytes": 4502
+      },
+      {
+        "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/provenance/selected-trio-03-v001-generation-v001.json",
+        "sha256": "6efbaa1a7ff8e71483219b9e743473b4f4e6a76318a1480ee3bf9e5c2f603511",
+        "bytes": 4518
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/ring-tailed-lemur/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "525b14c2c285ad387ea8dc2e6970494e0508eeb8b6c4f5f5acc2c3065e2d184f",
+      "bytes": 8314
+    }
+  ]
+}

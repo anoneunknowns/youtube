@@ -7,7 +7,7 @@
   "category": "gimmick",
   "source_index": {
     "path": "catalogs/character-library-v1.json",
-    "sha256": "7264356c1519b8cd3456fd828264313f550108a19da98d290318b9e982b5bb2e"
+    "sha256": "6a7c20e39fc176ef5123086d6334b18ab04f594c3fd9cbf480fe1d5cb9612cbb"
   },
   "neutral": {
     "path": "neutral.png",
@@ -45,12 +45,484 @@
     "anchor_basis": "Visual centre of the head/torso mass, excluding flippers and the separate tail flukes from reference height.",
     "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset."
   },
-  "poses": {},
+  "poses": {
+    "video/neutral": {
+      "path": "poses/video/neutral.png",
+      "sha256": "cd42de2a3ee05b343df443b7230b3d59af08f6f7ed7be158f76c87f073c722d1",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_path": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sha256": "cd42de2a3ee05b343df443b7230b3d59af08f6f7ed7be158f76c87f073c722d1",
+      "source_image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        595,
+        674
+      ],
+      "body_bbox_px": [
+        188,
+        440,
+        930,
+        892
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 452,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Visual centre of the head/torso mass, excluding flippers and the separate tail flukes from reference height.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "sheet_id": "canonical-neutral",
+      "frame_id": "neutral",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "cd42de2a3ee05b343df443b7230b3d59af08f6f7ed7be158f76c87f073c722d1"
+    },
+    "video/blink": {
+      "path": "poses/video/blink.png",
+      "sha256": "cc268181c06ba0390d1c9391b05e97ceb87d9896e2d49031fb76622eaf0734ae",
+      "size_px": [
+        1024,
+        502
+      ],
+      "source_path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/blink.png",
+      "source_sha256": "cc268181c06ba0390d1c9391b05e97ceb87d9896e2d49031fb76622eaf0734ae",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        502
+      ],
+      "source_size_px": [
+        1024,
+        502
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        496.46900269541777,
+        255.96017699115046
+      ],
+      "body_bbox_px": [
+        152,
+        67,
+        780,
+        432
+      ],
+      "subject_bbox_px": [
+        151,
+        67,
+        912,
+        454
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 376.3062200956938,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "sheet_id": "split-a-v001",
+      "frame_id": "blink",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "47d8e2ee5a0329e96845b08179d519a2526101a6030d26532e0073e6e8d89c29"
+    },
+    "video/greet": {
+      "path": "poses/video/greet.png",
+      "sha256": "82f0ef103dbf0c57cc15c3e6d4c6b201d81b5a3acd8170a31e5c50cff8093d52",
+      "size_px": [
+        1024,
+        496
+      ],
+      "source_path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/greet.png",
+      "source_sha256": "82f0ef103dbf0c57cc15c3e6d4c6b201d81b5a3acd8170a31e5c50cff8093d52",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        496
+      ],
+      "source_size_px": [
+        1024,
+        496
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        496.46900269541777,
+        236.96017699115046
+      ],
+      "body_bbox_px": [
+        152,
+        48,
+        780,
+        413
+      ],
+      "subject_bbox_px": [
+        150,
+        48,
+        912,
+        437
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 376.3062200956938,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "sheet_id": "split-a-v001",
+      "frame_id": "greet",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "47d8e2ee5a0329e96845b08179d519a2526101a6030d26532e0073e6e8d89c29"
+    },
+    "video/present_left": {
+      "path": "poses/video/present_left.png",
+      "sha256": "1ec27cd39ccf97a66c697dda0f72bddbbd2a3fc437ba793037270ac3bff17069",
+      "size_px": [
+        1024,
+        538
+      ],
+      "source_path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_left.png",
+      "source_sha256": "1ec27cd39ccf97a66c697dda0f72bddbbd2a3fc437ba793037270ac3bff17069",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        538
+      ],
+      "source_size_px": [
+        1024,
+        538
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        496.46900269541777,
+        249.96017699115046
+      ],
+      "body_bbox_px": [
+        152,
+        61,
+        780,
+        426
+      ],
+      "subject_bbox_px": [
+        113,
+        61,
+        912,
+        452
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 376.3062200956938,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "sheet_id": "split-a-v001",
+      "frame_id": "present_left",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-a-v001.png",
+      "source_sheet_sha256": "47d8e2ee5a0329e96845b08179d519a2526101a6030d26532e0073e6e8d89c29"
+    },
+    "video/present_right": {
+      "path": "poses/video/present_right.png",
+      "sha256": "cd090c3d174404413299db406dc50d9e994ecca6234fa7d99b93b01a5979eeb3",
+      "size_px": [
+        1024,
+        518
+      ],
+      "source_path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/present_right.png",
+      "source_sha256": "cd090c3d174404413299db406dc50d9e994ecca6234fa7d99b93b01a5979eeb3",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        518
+      ],
+      "source_size_px": [
+        1024,
+        518
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        529.0498652291105,
+        272.10176991150445
+      ],
+      "body_bbox_px": [
+        255,
+        79,
+        862,
+        452
+      ],
+      "subject_bbox_px": [
+        126,
+        79,
+        881,
+        478
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 369.76280323450135,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "sheet_id": "split-b-v002",
+      "frame_id": "present_right",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "1044b09e1fa2a8bc21470d62e83807b0fc318eb5c8b0e779c5451d0c3976f349"
+    },
+    "video/think": {
+      "path": "poses/video/think.png",
+      "sha256": "17a6fbf04e740116ec7cf703c9ab504ba1e5f5c58c752ff5475b120f394bc9d3",
+      "size_px": [
+        1024,
+        479
+      ],
+      "source_path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/think.png",
+      "source_sha256": "17a6fbf04e740116ec7cf703c9ab504ba1e5f5c58c752ff5475b120f394bc9d3",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        479
+      ],
+      "source_size_px": [
+        1024,
+        479
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        529.0498652291105,
+        235.10176991150445
+      ],
+      "body_bbox_px": [
+        255,
+        42,
+        862,
+        415
+      ],
+      "subject_bbox_px": [
+        126,
+        42,
+        863,
+        440
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 369.76280323450135,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "sheet_id": "split-b-v002",
+      "frame_id": "think",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "1044b09e1fa2a8bc21470d62e83807b0fc318eb5c8b0e779c5451d0c3976f349"
+    },
+    "video/aha": {
+      "path": "poses/video/aha.png",
+      "sha256": "012455e489fb7925b799a08e4cacf964eda1ff3ffcbceffb08f0e6e06838605b",
+      "size_px": [
+        1024,
+        539
+      ],
+      "source_path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/aha.png",
+      "source_sha256": "012455e489fb7925b799a08e4cacf964eda1ff3ffcbceffb08f0e6e06838605b",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        539
+      ],
+      "source_size_px": [
+        1024,
+        539
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        529.0498652291105,
+        233.10176991150445
+      ],
+      "body_bbox_px": [
+        255,
+        40,
+        862,
+        413
+      ],
+      "subject_bbox_px": [
+        126,
+        40,
+        849,
+        464
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 369.76280323450135,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "sheet_id": "split-b-v002",
+      "frame_id": "aha",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-b-v002.png",
+      "source_sheet_sha256": "1044b09e1fa2a8bc21470d62e83807b0fc318eb5c8b0e779c5451d0c3976f349"
+    },
+    "video/cheer": {
+      "path": "poses/video/cheer.png",
+      "sha256": "1dcefcebb236507917357254c5fcb84437a4ae21fa0603933f443666f6cdb118",
+      "size_px": [
+        1024,
+        504
+      ],
+      "source_path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/cheer.png",
+      "source_sha256": "1dcefcebb236507917357254c5fcb84437a4ae21fa0603933f443666f6cdb118",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        504
+      ],
+      "source_size_px": [
+        1024,
+        504
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        494.7601078167116,
+        260.5619469026549
+      ],
+      "body_bbox_px": [
+        147,
+        54,
+        781,
+        453
+      ],
+      "subject_bbox_px": [
+        126,
+        54,
+        913,
+        460
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 386.2102425876011,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "sheet_id": "split-c-v001",
+      "frame_id": "cheer",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "776a9e3dc50f587e3a2b1384faf179a50d91f39dc1220dcc57e46ac1a81cf803"
+    },
+    "video/species_a": {
+      "path": "poses/video/species_a.png",
+      "sha256": "528a9479102c5c7872be255865da2a709f691be335ea7731281ea653aa7ec96b",
+      "size_px": [
+        1024,
+        498
+      ],
+      "source_path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/species_a.png",
+      "source_sha256": "528a9479102c5c7872be255865da2a709f691be335ea7731281ea653aa7ec96b",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        498
+      ],
+      "source_size_px": [
+        1024,
+        498
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        494.7601078167116,
+        252.56194690265488
+      ],
+      "body_bbox_px": [
+        147,
+        46,
+        781,
+        445
+      ],
+      "subject_bbox_px": [
+        123,
+        46,
+        914,
+        452
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 386.2102425876011,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "sheet_id": "split-c-v001",
+      "frame_id": "species_a",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "776a9e3dc50f587e3a2b1384faf179a50d91f39dc1220dcc57e46ac1a81cf803"
+    },
+    "video/species_b": {
+      "path": "poses/video/species_b.png",
+      "sha256": "537cb7edfa634fc2561bb6b555b4c4a0f7326fb62d356877052cf39ec81c608a",
+      "size_px": [
+        1024,
+        534
+      ],
+      "source_path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/frames/species_b.png",
+      "source_sha256": "537cb7edfa634fc2561bb6b555b4c4a0f7326fb62d356877052cf39ec81c608a",
+      "source_image_region_px": [
+        0,
+        0,
+        1024,
+        534
+      ],
+      "source_size_px": [
+        1024,
+        534
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        494.7601078167116,
+        253.56194690265488
+      ],
+      "body_bbox_px": [
+        147,
+        47,
+        781,
+        446
+      ],
+      "subject_bbox_px": [
+        143,
+        47,
+        915,
+        453
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 386.2102425876011,
+      "anchor_kind": "anatomical-marine-body-centre",
+      "anchor_measurement": "B visual anatomical ROI and alpha8 point measurement, approximate native raster geometry; not subpixel anatomy or automatic box fit.",
+      "anchor_basis": "Observed head/trunk anatomical body ROI, excluding fins/flippers and tail; unchanged canonical body-centre fraction transferred to the fresh facing. No feet, floor or canvas-centering. Observed against unchanged canonical neutral and all eight neighboring gestures at inherited maximum scale.",
+      "vertical_motion_policy": "Floating prop anchored at body centre; consumer supplies all scene movement. No floor, feet or baked vertical offset.",
+      "sheet_id": "split-c-v001",
+      "frame_id": "species_b",
+      "source_sheet": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/source/split-c-v001.png",
+      "source_sheet_sha256": "776a9e3dc50f587e3a2b1384faf179a50d91f39dc1220dcc57e46ac1a81cf803"
+    }
+  },
   "clips": {
     "path": "clips.json",
-    "sha256": "ae8c1f0271b047547abcdbdac4468b660669b03ce729918eef6234c48ef6366c"
+    "sha256": "c1c25550114e1e5e5c229c2545017d26f244c0bc01fb3a142f1abb3c5ed26956"
   },
-  "source_registrations": [],
+  "source_registrations": [
+    {
+      "namespace": "video",
+      "path": "assets/library/characters/dugong/generation-batches/youtube-core-20261114-root-tail-v001/registration.json",
+      "sha256": "f46dab61d945850993b505652987cc7cbd72b8735efaf02ea3bca7afca103e4f",
+      "clips_available": true
+    }
+  ],
   "geometry_policy": "Native pixels and adopted per-frame references retained. Atlas neutral coordinates are shifted only by the adopted crop origin.",
   "style_pattern": "bird-like-prop",
   "usage_role": "background-animal-prop",

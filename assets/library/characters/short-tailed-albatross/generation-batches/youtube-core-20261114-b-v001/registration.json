@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "short-tailed-albatross",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/short-tailed-albatross/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "012d8fb4d697140097fdf725af7a5b55561ee11f5ae4654485bef910fc61d543",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      358,
+      293,
+      894,
+      985
+    ],
+    "anchor_px": [
+      596,
+      974
+    ],
+    "reference_height_px": 692,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of the two visible webbed support feet; large projecting bill excluded from body width.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/short-tailed-albatross/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "0ab0fe7b9a4304403f8e8add566c392b51845e85815c0befe6fc9d9e7157de26"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "012d8fb4d697140097fdf725af7a5b55561ee11f5ae4654485bef910fc61d543",
+      "reference_height_px": 692,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0b5744b864aa9870856e26c13421adbe2b3f8f654c32ed155eb875d2b9597cf7",
+      "reference_height_px": 322.60835052932015,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/short-tailed-albatross/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "012d8fb4d697140097fdf725af7a5b55561ee11f5ae4654485bef910fc61d543",
+          "bytes": 520565,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 692,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 431.4,
+            "source_y": 98.60000000000001,
+            "canonical_span": [
+              358,
+              675
+            ],
+            "source_span": [
+              153,
+              300
+            ],
+            "ratio": 0.4637223974763407
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 500.6,
+            "source_y": 131.89999999999998,
+            "canonical_span": [
+              358,
+              690
+            ],
+            "source_span": [
+              153,
+              301
+            ],
+            "ratio": 0.4457831325301205
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 722.04,
+            "source_y": 238.46,
+            "canonical_span": [
+              365,
+              894
+            ],
+            "source_span": [
+              153,
+              406
+            ],
+            "ratio": 0.4782608695652174
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 805.08,
+            "source_y": 278.42,
+            "canonical_span": [
+              412,
+              811
+            ],
+            "source_span": [
+              167,
+              354
+            ],
+            "ratio": 0.46867167919799496
+          }
+        ],
+        "common_ratio": 0.46619703833716786,
+        "initial_roi_locator_only_visible_height_ratio": 0.48121387283236994,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.072855464159812,
+        "visual_confirmation": {
+          "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "bd0891f16d65e7e4806d8f45a44f6150a6918910bc9fac4b56623eeee6b60fa1",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_prompt": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+      "generation_record_sha256": "bcca3f4f23e15bc047bc31ffafe5b32f705e14c418e696036d0b677c8cf82dec"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "012d8fb4d697140097fdf725af7a5b55561ee11f5ae4654485bef910fc61d543",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        358,
+        293,
+        894,
+        985
+      ],
+      "anchor_px": [
+        596,
+        974
+      ],
+      "reference_height_px": 692,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of the two visible webbed support feet; large projecting bill excluded from body width.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/short-tailed-albatross/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "0ab0fe7b9a4304403f8e8add566c392b51845e85815c0befe6fc9d9e7157de26",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "012d8fb4d697140097fdf725af7a5b55561ee11f5ae4654485bef910fc61d543",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        444,
+        392
+      ],
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "c1f366a9b0a49b2d400d99be5a56e22d1d98c03a172d7a125ad8e0b4852f665e",
+      "size_px": [
+        444,
+        392
+      ],
+      "visible": [
+        103,
+        32,
+        406,
+        365
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0b5744b864aa9870856e26c13421adbe2b3f8f654c32ed155eb875d2b9597cf7",
+      "body_bbox_px": [
+        153,
+        32,
+        410,
+        365
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        103,
+        32,
+        406,
+        365
+      ],
+      "reference_height_px": 322.60835052932015,
+      "anchor_px": [
+        246.62992852794446,
+        359.87183257829116
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        243.25,
+        365
+      ],
+      "sole_points": [
+        [
+          202.0,
+          362
+        ],
+        [
+          284.5,
+          365
+        ]
+      ],
+      "sole_regions": [
+        [
+          166,
+          307,
+          243,
+          367
+        ],
+        [
+          245,
+          307,
+          325,
+          367
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        103,
+        32,
+        406,
+        365
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        444,
+        0,
+        858,
+        392
+      ],
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "0a4cb0d333fe53a20533180d52d1736e3962468e24966da0e1e93e7e5ca2baec",
+      "size_px": [
+        414,
+        392
+      ],
+      "visible": [
+        68,
+        32,
+        344,
+        365
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0b5744b864aa9870856e26c13421adbe2b3f8f654c32ed155eb875d2b9597cf7",
+      "body_bbox_px": [
+        118,
+        32,
+        375,
+        365
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        68,
+        32,
+        344,
+        365
+      ],
+      "reference_height_px": 322.60835052932015,
+      "anchor_px": [
+        199.12992852794446,
+        359.87183257829116
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        195.75,
+        365
+      ],
+      "sole_points": [
+        [
+          154.5,
+          363
+        ],
+        [
+          237.0,
+          365
+        ]
+      ],
+      "sole_regions": [
+        [
+          118,
+          307,
+          195,
+          367
+        ],
+        [
+          196,
+          307,
+          277,
+          367
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        68,
+        32,
+        344,
+        365
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        858,
+        0,
+        1293,
+        392
+      ],
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "037f1d71be0525e096a87fc09b8e7312d36ad2756ab6519ee0f8d52d83d81db1",
+      "size_px": [
+        435,
+        392
+      ],
+      "visible": [
+        40,
+        32,
+        376,
+        364
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0b5744b864aa9870856e26c13421adbe2b3f8f654c32ed155eb875d2b9597cf7",
+      "body_bbox_px": [
+        89,
+        32,
+        347,
+        364
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        40,
+        32,
+        376,
+        364
+      ],
+      "reference_height_px": 322.60835052932015,
+      "anchor_px": [
+        224.37992852794446,
+        358.87183257829116
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        221.0,
+        364
+      ],
+      "sole_points": [
+        [
+          180.5,
+          362
+        ],
+        [
+          261.5,
+          364
+        ]
+      ],
+      "sole_regions": [
+        [
+          144,
+          306,
+          222,
+          366
+        ],
+        [
+          223,
+          306,
+          301,
+          366
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        40,
+        32,
+        376,
+        364
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        392,
+        444,
+        784
+      ],
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "8691f7dca39f10f3df83a0afb5cbee4ec0283964a1c868022ab0f8afeef276d3",
+      "size_px": [
+        444,
+        392
+      ],
+      "visible": [
+        77,
+        30,
+        367,
+        366
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0b5744b864aa9870856e26c13421adbe2b3f8f654c32ed155eb875d2b9597cf7",
+      "body_bbox_px": [
+        127,
+        30,
+        387,
+        366
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        77,
+        30,
+        367,
+        366
+      ],
+      "reference_height_px": 322.60835052932015,
+      "anchor_px": [
+        224.12992852794446,
+        360.87183257829116
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        220.75,
+        366
+      ],
+      "sole_points": [
+        [
+          182.0,
+          366
+        ],
+        [
+          259.5,
+          363
+        ]
+      ],
+      "sole_regions": [
+        [
+          143,
+          308,
+          220,
+          368
+        ],
+        [
+          219,
+          308,
+          296,
+          368
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        77,
+        30,
+        367,
+        366
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        444,
+        392,
+        858,
+        784
+      ],
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "0cb37f6c045c297107efa8f5bab009534d87c812949373205241a294308a2c11",
+      "size_px": [
+        414,
+        392
+      ],
+      "visible": [
+        55,
+        36,
+        356,
+        367
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0b5744b864aa9870856e26c13421adbe2b3f8f654c32ed155eb875d2b9597cf7",
+      "body_bbox_px": [
+        104,
+        36,
+        361,
+        367
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        55,
+        36,
+        356,
+        367
+      ],
+      "reference_height_px": 322.60835052932015,
+      "anchor_px": [
+        198.37992852794446,
+        361.87183257829116
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        195.0,
+        367
+      ],
+      "sole_points": [
+        [
+          153.0,
+          364
+        ],
+        [
+          237.0,
+          367
+        ]
+      ],
+      "sole_regions": [
+        [
+          116,
+          309,
+          195,
+          369
+        ],
+        [
+          196,
+          309,
+          277,
+          369
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        55,
+        36,
+        356,
+        367
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        858,
+        392,
+        1293,
+        784
+      ],
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "6075f6d2b0edea64ef76aeb7c5f88fe4c71fc905f86092f88ec19f0b1df139d4",
+      "size_px": [
+        435,
+        392
+      ],
+      "visible": [
+        58,
+        27,
+        334,
+        366
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0b5744b864aa9870856e26c13421adbe2b3f8f654c32ed155eb875d2b9597cf7",
+      "body_bbox_px": [
+        108,
+        27,
+        371,
+        366
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        58,
+        27,
+        334,
+        366
+      ],
+      "reference_height_px": 322.60835052932015,
+      "anchor_px": [
+        191.87992852794446,
+        360.87183257829116
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        188.5,
+        366
+      ],
+      "sole_points": [
+        [
+          146.5,
+          363
+        ],
+        [
+          230.5,
+          366
+        ]
+      ],
+      "sole_regions": [
+        [
+          110,
+          308,
+          190,
+          368
+        ],
+        [
+          191,
+          308,
+          271,
+          368
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        58,
+        27,
+        334,
+        366
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        784,
+        444,
+        1217
+      ],
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "adabf8a08304c3c93ca97921c41bd3f447d08effaa88ad13e015417b0089571f",
+      "size_px": [
+        444,
+        433
+      ],
+      "visible": [
+        66,
+        21,
+        383,
+        368
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0b5744b864aa9870856e26c13421adbe2b3f8f654c32ed155eb875d2b9597cf7",
+      "body_bbox_px": [
+        118,
+        21,
+        386,
+        368
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        66,
+        21,
+        383,
+        368
+      ],
+      "reference_height_px": 322.60835052932015,
+      "anchor_px": [
+        228.87992852794446,
+        362.87183257829116
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        225.5,
+        368
+      ],
+      "sole_points": [
+        [
+          184.0,
+          364
+        ],
+        [
+          267.0,
+          368
+        ]
+      ],
+      "sole_regions": [
+        [
+          148,
+          310,
+          225,
+          370
+        ],
+        [
+          226,
+          310,
+          308,
+          370
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        66,
+        21,
+        383,
+        368
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        444,
+        784,
+        858,
+        1217
+      ],
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "e8d618c3c683b3e7ee1974044374303ec0a6a0c1510e9b6642014a60625764c4",
+      "size_px": [
+        414,
+        433
+      ],
+      "visible": [
+        40,
+        25,
+        376,
+        369
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0b5744b864aa9870856e26c13421adbe2b3f8f654c32ed155eb875d2b9597cf7",
+      "body_bbox_px": [
+        91,
+        25,
+        358,
+        369
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        40,
+        25,
+        376,
+        369
+      ],
+      "reference_height_px": 322.60835052932015,
+      "anchor_px": [
+        176.87992852794446,
+        363.87183257829116
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        173.5,
+        369
+      ],
+      "sole_points": [
+        [
+          132.0,
+          365
+        ],
+        [
+          215.0,
+          369
+        ]
+      ],
+      "sole_regions": [
+        [
+          95,
+          311,
+          174,
+          371
+        ],
+        [
+          176,
+          311,
+          255,
+          371
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        40,
+        25,
+        376,
+        369
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        858,
+        784,
+        1293,
+        1217
+      ],
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "c105ce435cc1583f901a4d7836d1432381ad3dc8e9bac1ef2796966ea9a880a5",
+      "size_px": [
+        435,
+        433
+      ],
+      "visible": [
+        50,
+        24,
+        349,
+        369
+      ],
+      "sheet_id": "core-sheet-v001",
+      "source_sheet": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "0b5744b864aa9870856e26c13421adbe2b3f8f654c32ed155eb875d2b9597cf7",
+      "body_bbox_px": [
+        101,
+        24,
+        369,
+        369
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        50,
+        24,
+        349,
+        369
+      ],
+      "reference_height_px": 322.60835052932015,
+      "anchor_px": [
+        192.62992852794446,
+        363.87183257829116
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        189.25,
+        369
+      ],
+      "sole_points": [
+        [
+          148.0,
+          366
+        ],
+        [
+          230.5,
+          369
+        ]
+      ],
+      "sole_regions": [
+        [
+          111,
+          311,
+          188,
+          371
+        ],
+        [
+          191,
+          311,
+          270,
+          371
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        50,
+        24,
+        349,
+        369
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v001-generation-v001.json",
+        "sha256": "bcca3f4f23e15bc047bc31ffafe5b32f705e14c418e696036d0b677c8cf82dec",
+        "bytes": 5827
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/short-tailed-albatross/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "3b3b8286cdf5c9dcdf35b7c00777dfa88fb720b69fce1e35200c6ffbaa9bcd35",
+      "bytes": 7940
+    }
+  ]
+}

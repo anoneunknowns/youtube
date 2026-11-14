@@ -7,7 +7,7 @@
   "category": "character",
   "source_index": {
     "path": "catalogs/character-library-v1.json",
-    "sha256": "7264356c1519b8cd3456fd828264313f550108a19da98d290318b9e982b5bb2e"
+    "sha256": "6a7c20e39fc176ef5123086d6334b18ab04f594c3fd9cbf480fe1d5cb9612cbb"
   },
   "neutral": {
     "path": "neutral.png",
@@ -45,12 +45,484 @@
     "anchor_basis": "Full head-to-feet body defines the fixed reference. Anchor is the projected center of the two short feet, not a natural crouching frog support.",
     "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation."
   },
-  "poses": {},
+  "poses": {
+    "video/neutral": {
+      "path": "poses/video/neutral.png",
+      "sha256": "559858492d676ccde5e765a607ce8a1d791119d6fc2fb62fb825ca70262eea52",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_path": "assets/library/characters/otton-frog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sha256": "559858492d676ccde5e765a607ce8a1d791119d6fc2fb62fb825ca70262eea52",
+      "source_image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        625.0,
+        1165.0
+      ],
+      "body_bbox_px": [
+        254.0,
+        155.0,
+        998.0,
+        1171.0
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 1016.0,
+      "anchor_kind": "anatomical_feet_support",
+      "anchor_measurement": "assistant visual anatomical registration on native raster; approximate scene anchor rather than subpixel contact metrology",
+      "anchor_basis": "Full head-to-feet body defines the fixed reference. Anchor is the projected center of the two short feet, not a natural crouching frog support.",
+      "vertical_motion_policy": "Consumer positions this anchor and designs movement; a static source does not claim any animation.",
+      "sheet_id": "canonical-neutral",
+      "frame_id": "neutral",
+      "source_sheet": "assets/library/characters/otton-frog/generation-batches/animal-species-20261114-v001/source/neutral-v001.png",
+      "source_sheet_sha256": "559858492d676ccde5e765a607ce8a1d791119d6fc2fb62fb825ca70262eea52"
+    },
+    "video/blink": {
+      "path": "poses/video/blink.png",
+      "sha256": "09df40896750efa602770900a94d591437470d74cb5f8ff584f90777b4492a45",
+      "size_px": [
+        434,
+        393
+      ],
+      "source_path": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "source_sha256": "09df40896750efa602770900a94d591437470d74cb5f8ff584f90777b4492a45",
+      "source_image_region_px": [
+        0,
+        0,
+        434,
+        393
+      ],
+      "source_size_px": [
+        434,
+        393
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        240.3603781230234,
+        372.95007115749524
+      ],
+      "body_bbox_px": [
+        112,
+        27,
+        367,
+        375
+      ],
+      "subject_bbox_px": [
+        112,
+        27,
+        370,
+        375
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 347.12128399746996,
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "blink",
+      "source_sheet": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7f77bc9d1d5f698d0dc37a6885c7242292c8f4ceeb0c1f82727bdabcbe09f7bb"
+    },
+    "video/greet": {
+      "path": "poses/video/greet.png",
+      "sha256": "39792abafa69b76f409494a04e296a53268ad0b49b4f8de04faed71693e45fd8",
+      "size_px": [
+        416,
+        393
+      ],
+      "source_path": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "source_sha256": "39792abafa69b76f409494a04e296a53268ad0b49b4f8de04faed71693e45fd8",
+      "source_image_region_px": [
+        0,
+        0,
+        416,
+        393
+      ],
+      "source_size_px": [
+        416,
+        393
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        209.1103781230234,
+        372.95007115749524
+      ],
+      "body_bbox_px": [
+        80,
+        28,
+        334,
+        375
+      ],
+      "subject_bbox_px": [
+        80,
+        28,
+        336,
+        375
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 347.12128399746996,
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "greet",
+      "source_sheet": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7f77bc9d1d5f698d0dc37a6885c7242292c8f4ceeb0c1f82727bdabcbe09f7bb"
+    },
+    "video/present_left": {
+      "path": "poses/video/present_left.png",
+      "sha256": "51996538922808691136f8ee88ffe70d8630f27e2ff2aebd9081784b9e67e290",
+      "size_px": [
+        428,
+        393
+      ],
+      "source_path": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "source_sha256": "51996538922808691136f8ee88ffe70d8630f27e2ff2aebd9081784b9e67e290",
+      "source_image_region_px": [
+        0,
+        0,
+        428,
+        393
+      ],
+      "source_size_px": [
+        428,
+        393
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        199.3603781230234,
+        372.95007115749524
+      ],
+      "body_bbox_px": [
+        50,
+        27,
+        305,
+        375
+      ],
+      "subject_bbox_px": [
+        50,
+        27,
+        327,
+        375
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 347.12128399746996,
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "present_left",
+      "source_sheet": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7f77bc9d1d5f698d0dc37a6885c7242292c8f4ceeb0c1f82727bdabcbe09f7bb"
+    },
+    "video/present_right": {
+      "path": "poses/video/present_right.png",
+      "sha256": "f724cd9e3848960c7970139253af253bdf8bcda655c0222e6cf97e5502874af9",
+      "size_px": [
+        434,
+        403
+      ],
+      "source_path": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "source_sha256": "f724cd9e3848960c7970139253af253bdf8bcda655c0222e6cf97e5502874af9",
+      "source_image_region_px": [
+        0,
+        0,
+        434,
+        403
+      ],
+      "source_size_px": [
+        434,
+        403
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        239.3603781230234,
+        377.95007115749524
+      ],
+      "body_bbox_px": [
+        109,
+        28,
+        367,
+        380
+      ],
+      "subject_bbox_px": [
+        109,
+        28,
+        390,
+        380
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 347.12128399746996,
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "present_right",
+      "source_sheet": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7f77bc9d1d5f698d0dc37a6885c7242292c8f4ceeb0c1f82727bdabcbe09f7bb"
+    },
+    "video/think": {
+      "path": "poses/video/think.png",
+      "sha256": "c1bb8ff0c54595664c4395be815b4d24a5a08c9437090f108a920ab72f9c861f",
+      "size_px": [
+        416,
+        403
+      ],
+      "source_path": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "source_sha256": "c1bb8ff0c54595664c4395be815b4d24a5a08c9437090f108a920ab72f9c861f",
+      "source_image_region_px": [
+        0,
+        0,
+        416,
+        403
+      ],
+      "source_size_px": [
+        416,
+        403
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        210.6103781230234,
+        377.95007115749524
+      ],
+      "body_bbox_px": [
+        76,
+        19,
+        340,
+        380
+      ],
+      "subject_bbox_px": [
+        76,
+        19,
+        327,
+        380
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 347.12128399746996,
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "think",
+      "source_sheet": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7f77bc9d1d5f698d0dc37a6885c7242292c8f4ceeb0c1f82727bdabcbe09f7bb"
+    },
+    "video/aha": {
+      "path": "poses/video/aha.png",
+      "sha256": "fc18104e24570424c0927c631b479f8fcd8515b4359f3848eb6c8c273f5de5c5",
+      "size_px": [
+        428,
+        403
+      ],
+      "source_path": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "source_sha256": "fc18104e24570424c0927c631b479f8fcd8515b4359f3848eb6c8c273f5de5c5",
+      "source_image_region_px": [
+        0,
+        0,
+        428,
+        403
+      ],
+      "source_size_px": [
+        428,
+        403
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        192.6103781230234,
+        378.95007115749524
+      ],
+      "body_bbox_px": [
+        61,
+        30,
+        318,
+        381
+      ],
+      "subject_bbox_px": [
+        61,
+        30,
+        319,
+        381
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 347.12128399746996,
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "aha",
+      "source_sheet": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7f77bc9d1d5f698d0dc37a6885c7242292c8f4ceeb0c1f82727bdabcbe09f7bb"
+    },
+    "video/cheer": {
+      "path": "poses/video/cheer.png",
+      "sha256": "ab5b8e45c8f4e75d99ebb7bd95b2ef67b23ca24300e7d86888e3f469288e0625",
+      "size_px": [
+        434,
+        434
+      ],
+      "source_path": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "source_sha256": "ab5b8e45c8f4e75d99ebb7bd95b2ef67b23ca24300e7d86888e3f469288e0625",
+      "source_image_region_px": [
+        0,
+        0,
+        434,
+        434
+      ],
+      "source_size_px": [
+        434,
+        434
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        236.3603781230234,
+        373.95007115749524
+      ],
+      "body_bbox_px": [
+        105,
+        23,
+        363,
+        376
+      ],
+      "subject_bbox_px": [
+        105,
+        23,
+        366,
+        376
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 347.12128399746996,
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "cheer",
+      "source_sheet": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7f77bc9d1d5f698d0dc37a6885c7242292c8f4ceeb0c1f82727bdabcbe09f7bb"
+    },
+    "video/species_a": {
+      "path": "poses/video/species_a.png",
+      "sha256": "257972cedc3ab3a5872bb9e92945af8d3893d3577af46de3f84096ebb4bed6d4",
+      "size_px": [
+        416,
+        434
+      ],
+      "source_path": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "source_sha256": "257972cedc3ab3a5872bb9e92945af8d3893d3577af46de3f84096ebb4bed6d4",
+      "source_image_region_px": [
+        0,
+        0,
+        416,
+        434
+      ],
+      "source_size_px": [
+        416,
+        434
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        209.6103781230234,
+        373.95007115749524
+      ],
+      "body_bbox_px": [
+        78,
+        53,
+        315,
+        376
+      ],
+      "subject_bbox_px": [
+        78,
+        53,
+        339,
+        376
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 347.12128399746996,
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "species_a",
+      "source_sheet": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7f77bc9d1d5f698d0dc37a6885c7242292c8f4ceeb0c1f82727bdabcbe09f7bb"
+    },
+    "video/species_b": {
+      "path": "poses/video/species_b.png",
+      "sha256": "1e9fcd9ea6b1ea3b36148ba446329740b2f957d55a5c751961568460956e9f96",
+      "size_px": [
+        428,
+        434
+      ],
+      "source_path": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "source_sha256": "1e9fcd9ea6b1ea3b36148ba446329740b2f957d55a5c751961568460956e9f96",
+      "source_image_region_px": [
+        0,
+        0,
+        428,
+        434
+      ],
+      "source_size_px": [
+        428,
+        434
+      ],
+      "operation": "byte-copy",
+      "anchor_px": [
+        194.1103781230234,
+        373.95007115749524
+      ],
+      "body_bbox_px": [
+        62,
+        33,
+        313,
+        376
+      ],
+      "subject_bbox_px": [
+        62,
+        33,
+        323,
+        376
+      ],
+      "tail_bbox_px": null,
+      "reference_height_px": 347.12128399746996,
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "sheet_id": "core-sheet-v001",
+      "frame_id": "species_b",
+      "source_sheet": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v001.png",
+      "source_sheet_sha256": "7f77bc9d1d5f698d0dc37a6885c7242292c8f4ceeb0c1f82727bdabcbe09f7bb"
+    }
+  },
   "clips": {
     "path": "clips.json",
-    "sha256": "80ddea3b1a09da19a77a2d5b37622f2360b71ff7dd77d3d122b1b9990980a5ba"
+    "sha256": "66a71a7fd4ca9ab16ace22bf04986733d85ab1886cf8f88b93a90754690aeece"
   },
-  "source_registrations": [],
+  "source_registrations": [
+    {
+      "namespace": "video",
+      "path": "assets/library/characters/otton-frog/generation-batches/youtube-core-20261114-b-v001/registration.json",
+      "sha256": "47700db9d287e1701e02258d87b0b4da67b531d926e2c3b40302ecb10b9910cb",
+      "clips_available": true
+    }
+  ],
   "geometry_policy": "Native pixels and adopted per-frame references retained. Atlas neutral coordinates are shifted only by the adopted crop origin.",
   "style_pattern": "slightly-anthropomorphic-character",
   "usage_role": "cast-character",

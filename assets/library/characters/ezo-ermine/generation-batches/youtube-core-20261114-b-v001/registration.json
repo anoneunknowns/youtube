@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "kind": "video-character-native-pose-registration",
+  "character_id": "ezo-ermine",
+  "version": "v001",
+  "batch_id": "youtube-core-20261114-b-v001",
+  "status": "stocked-and-assistant-reviewed",
+  "registration_candidate_only": false,
+  "current_adoption": true,
+  "canonical_neutral": {
+    "path": "assets/library/characters/ezo-ermine/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+    "sha256": "cb22a19aebf718824393719134223163b4e2b12183cbaffb59949048c45788e0",
+    "source_size_px": [
+      1254,
+      1254
+    ],
+    "image_region_px": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "body_bbox_px": [
+      287,
+      209,
+      923,
+      1170
+    ],
+    "anchor_px": [
+      595,
+      1164
+    ],
+    "reference_height_px": 961,
+    "anchor_kind": "anatomical-foot-support",
+    "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+    "anchor_basis": "Midpoint of the two short supporting feet; ear tips and long separate tail excluded from body box.",
+    "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+    "source_manifest": "assets/library/characters/ezo-ermine/generation-batches/animal-species-20261114-v001/source-manifest.json",
+    "source_manifest_sha256": "a369232aadc526ef5401fc22fa5ebd847bab141dc135fa7a16f8a3448f73c172"
+  },
+  "sheets": [
+    {
+      "id": "canonical-neutral",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "cb22a19aebf718824393719134223163b4e2b12183cbaffb59949048c45788e0",
+      "reference_height_px": 961,
+      "calibration": {
+        "method": "Exact reuse of adopted neutral geometry; no new drawing."
+      }
+    },
+    {
+      "id": "core-sheet-v002",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v002.png",
+      "source_sheet_sha256": "004f8c171af62a991b9c0405068c398a94205402d7df8a817ace05c34e8f36ff",
+      "reference_height_px": 343.0854545454545,
+      "calibration": {
+        "method": "Diagnostic proposal from corresponding head/trunk cross-sections in a stable reference-like pose; anatomical row correspondences are approximate and must be reviewed at maximum use. One reference is shared across all frames from this native source, no individual-pose bbox fitting.",
+        "neutral_reference": {
+          "path": "assets/library/characters/ezo-ermine/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+          "sha256": "cb22a19aebf718824393719134223163b4e2b12183cbaffb59949048c45788e0",
+          "bytes": 909847,
+          "size_px": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "source_image_region_px": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "source_size_px": [
+            1254,
+            1254
+          ],
+          "direct_input_role": "Adopted neutral identity, style, colour and existing visible anatomy reference; reference only, not a pixel-edit target."
+        },
+        "canonical_reference_height_px": 961,
+        "reference_frame_id": "blink",
+        "landmarks": [
+          {
+            "name": "head-upper",
+            "canonical_y": 401.20000000000005,
+            "source_y": 110.7375369458128,
+            "canonical_span": [
+              308,
+              897
+            ],
+            "source_span": [
+              121,
+              334
+            ],
+            "ratio": 0.3616298811544992
+          },
+          {
+            "name": "head-lower",
+            "canonical_y": 497.3,
+            "source_y": 145.10630541871922,
+            "canonical_span": [
+              292,
+              912
+            ],
+            "source_span": [
+              114,
+              338
+            ],
+            "ratio": 0.36129032258064514
+          },
+          {
+            "name": "trunk-upper",
+            "canonical_y": 804.82,
+            "source_y": 255.0863645320197,
+            "canonical_span": [
+              373,
+              923
+            ],
+            "source_span": [
+              144,
+              338
+            ],
+            "ratio": 0.3527272727272727
+          },
+          {
+            "name": "trunk-lower",
+            "canonical_y": 920.14,
+            "source_y": 296.3288866995074,
+            "canonical_span": [
+              384,
+              923
+            ],
+            "source_span": [
+              148,
+              338
+            ],
+            "ratio": 0.3525046382189239
+          }
+        ],
+        "common_ratio": 0.35700879765395893,
+        "initial_roi_locator_only_visible_height_ratio": 0.35763546798029555,
+        "needs_visual_confirmation": false,
+        "landmark_ratio_spread": 1.0258868733803952,
+        "visual_confirmation": {
+          "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/producer-qa/visual-observations-v001.json",
+          "sha256": "b9fd03bdea3c10a15df6c4e9be6ae09d84ce51d4dc3fb1d611c40cb4fcfd2560",
+          "scope": "Accepted common source scale at original and declared maximum display against unchanged canonical head/torso/foot landmarks. Approximate raster registration, not subpixel anatomical metrology."
+        }
+      },
+      "generation_input": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v002-generation-v001.json",
+      "generation_prompt": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v002-generation-v001.json",
+      "generation_record_sha256": "52d1da957a2515c5b74ee8fac2d162cbc3530691d7681e974b0d858bd95f96d0"
+    }
+  ],
+  "frames": [
+    {
+      "path": "assets/library/characters/ezo-ermine/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "sha256": "cb22a19aebf718824393719134223163b4e2b12183cbaffb59949048c45788e0",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "image_region_px": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "body_bbox_px": [
+        287,
+        209,
+        923,
+        1170
+      ],
+      "anchor_px": [
+        595,
+        1164
+      ],
+      "reference_height_px": 961,
+      "anchor_kind": "anatomical-foot-support",
+      "anchor_measurement": "Manual visual measurement in native source pixels; approximate anatomical registration, not a subpixel motion/alignment acceptance.",
+      "anchor_basis": "Midpoint of the two short supporting feet; ear tips and long separate tail excluded from body box.",
+      "vertical_motion_policy": "Grounded neutral; use anatomical foot support for consumer scene placement. No baked jump or vertical displacement.",
+      "source_manifest": "assets/library/characters/ezo-ermine/generation-batches/animal-species-20261114-v001/source-manifest.json",
+      "source_manifest_sha256": "a369232aadc526ef5401fc22fa5ebd847bab141dc135fa7a16f8a3448f73c172",
+      "id": "neutral",
+      "index": 0,
+      "sheet_id": "canonical-neutral",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/animal-species-20261114-v001/source/neutral-v002.png",
+      "source_sheet_sha256": "cb22a19aebf718824393719134223163b4e2b12183cbaffb59949048c45788e0",
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "tail_bbox_px": null
+    },
+    {
+      "id": "blink",
+      "index": 0,
+      "crop_from_sheet_xyxy": [
+        0,
+        0,
+        424,
+        404
+      ],
+      "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/frames/blink.png",
+      "sha256": "4904299c59041cd23a7a6f5749c60ec17c9e87738d97e51c2d89db726debdd93",
+      "size_px": [
+        424,
+        404
+      ],
+      "visible": [
+        110,
+        23,
+        375,
+        386
+      ],
+      "sheet_id": "core-sheet-v002",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v002.png",
+      "source_sheet_sha256": "004f8c171af62a991b9c0405068c398a94205402d7df8a817ace05c34e8f36ff",
+      "body_bbox_px": [
+        111,
+        42,
+        338,
+        386
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        110,
+        23,
+        375,
+        386
+      ],
+      "reference_height_px": 343.0854545454545,
+      "anchor_px": [
+        225.62523460410557,
+        383.85794721407626
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        226.25,
+        386
+      ],
+      "sole_points": [
+        [
+          188.0,
+          386
+        ],
+        [
+          264.5,
+          386
+        ]
+      ],
+      "sole_regions": [
+        [
+          157,
+          324,
+          219,
+          388
+        ],
+        [
+          233,
+          324,
+          295,
+          388
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        110,
+        23,
+        375,
+        386
+      ]
+    },
+    {
+      "id": "greet",
+      "index": 1,
+      "crop_from_sheet_xyxy": [
+        424,
+        0,
+        837,
+        404
+      ],
+      "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/frames/greet.png",
+      "sha256": "dd810c7486aaa435cca0f7d2bb8679c3db369f9d7c60cf30718984962a9b5e58",
+      "size_px": [
+        413,
+        404
+      ],
+      "visible": [
+        82,
+        23,
+        346,
+        386
+      ],
+      "sheet_id": "core-sheet-v002",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v002.png",
+      "source_sheet_sha256": "004f8c171af62a991b9c0405068c398a94205402d7df8a817ace05c34e8f36ff",
+      "body_bbox_px": [
+        83,
+        42,
+        310,
+        386
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        82,
+        23,
+        346,
+        386
+      ],
+      "reference_height_px": 343.0854545454545,
+      "anchor_px": [
+        196.37523460410557,
+        383.85794721407626
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        197.0,
+        386
+      ],
+      "sole_points": [
+        [
+          158.5,
+          386
+        ],
+        [
+          235.5,
+          386
+        ]
+      ],
+      "sole_regions": [
+        [
+          127,
+          324,
+          190,
+          388
+        ],
+        [
+          202,
+          324,
+          266,
+          388
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        82,
+        23,
+        346,
+        386
+      ]
+    },
+    {
+      "id": "present_left",
+      "index": 2,
+      "crop_from_sheet_xyxy": [
+        837,
+        0,
+        1263,
+        404
+      ],
+      "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/frames/present_left.png",
+      "sha256": "6b02b261cfe9fbedec181239ed53dad4588b0f48489c59758a8f7beee074e0eb",
+      "size_px": [
+        426,
+        404
+      ],
+      "visible": [
+        47,
+        24,
+        327,
+        386
+      ],
+      "sheet_id": "core-sheet-v002",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v002.png",
+      "source_sheet_sha256": "004f8c171af62a991b9c0405068c398a94205402d7df8a817ace05c34e8f36ff",
+      "body_bbox_px": [
+        48,
+        43,
+        275,
+        386
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        47,
+        24,
+        327,
+        386
+      ],
+      "reference_height_px": 343.0854545454545,
+      "anchor_px": [
+        178.37523460410557,
+        383.85794721407626
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        179.0,
+        386
+      ],
+      "sole_points": [
+        [
+          140.5,
+          386
+        ],
+        [
+          217.5,
+          386
+        ]
+      ],
+      "sole_regions": [
+        [
+          108,
+          324,
+          171,
+          388
+        ],
+        [
+          185,
+          324,
+          248,
+          388
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        47,
+        24,
+        327,
+        386
+      ]
+    },
+    {
+      "id": "present_right",
+      "index": 3,
+      "crop_from_sheet_xyxy": [
+        0,
+        404,
+        424,
+        820
+      ],
+      "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/frames/present_right.png",
+      "sha256": "72288798741e64e3242e6054bb96cbc3a8902303ddbc7bf548a0c3f1ed1583d5",
+      "size_px": [
+        424,
+        416
+      ],
+      "visible": [
+        105,
+        27,
+        373,
+        395
+      ],
+      "sheet_id": "core-sheet-v002",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v002.png",
+      "source_sheet_sha256": "004f8c171af62a991b9c0405068c398a94205402d7df8a817ace05c34e8f36ff",
+      "body_bbox_px": [
+        106,
+        47,
+        336,
+        395
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        105,
+        27,
+        373,
+        395
+      ],
+      "reference_height_px": 343.0854545454545,
+      "anchor_px": [
+        225.37523460410557,
+        392.85794721407626
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        226.0,
+        395
+      ],
+      "sole_points": [
+        [
+          186.5,
+          395
+        ],
+        [
+          265.5,
+          395
+        ]
+      ],
+      "sole_regions": [
+        [
+          155,
+          333,
+          220,
+          397
+        ],
+        [
+          234,
+          333,
+          296,
+          397
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        105,
+        27,
+        373,
+        395
+      ]
+    },
+    {
+      "id": "think",
+      "index": 4,
+      "crop_from_sheet_xyxy": [
+        424,
+        404,
+        837,
+        820
+      ],
+      "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/frames/think.png",
+      "sha256": "3cccbfd940366c87213e6f44d62616914fc682a335d85937ea3734b07ed0d0ee",
+      "size_px": [
+        413,
+        416
+      ],
+      "visible": [
+        66,
+        18,
+        348,
+        395
+      ],
+      "sheet_id": "core-sheet-v002",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v002.png",
+      "source_sheet_sha256": "004f8c171af62a991b9c0405068c398a94205402d7df8a817ace05c34e8f36ff",
+      "body_bbox_px": [
+        67,
+        38,
+        303,
+        395
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        66,
+        18,
+        348,
+        395
+      ],
+      "reference_height_px": 343.0854545454545,
+      "anchor_px": [
+        198.12523460410557,
+        392.85794721407626
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        198.75,
+        395
+      ],
+      "sole_points": [
+        [
+          160.0,
+          395
+        ],
+        [
+          237.5,
+          395
+        ]
+      ],
+      "sole_regions": [
+        [
+          128,
+          333,
+          191,
+          397
+        ],
+        [
+          206,
+          333,
+          269,
+          397
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        66,
+        18,
+        348,
+        395
+      ]
+    },
+    {
+      "id": "aha",
+      "index": 5,
+      "crop_from_sheet_xyxy": [
+        837,
+        404,
+        1263,
+        820
+      ],
+      "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/frames/aha.png",
+      "sha256": "e96f4a1f3f0fafb84cc3e23e7808e338440ef3611ee1df7cfadb2813bdc46e48",
+      "size_px": [
+        426,
+        416
+      ],
+      "visible": [
+        63,
+        27,
+        330,
+        395
+      ],
+      "sheet_id": "core-sheet-v002",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v002.png",
+      "source_sheet_sha256": "004f8c171af62a991b9c0405068c398a94205402d7df8a817ace05c34e8f36ff",
+      "body_bbox_px": [
+        64,
+        47,
+        294,
+        395
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        63,
+        27,
+        330,
+        395
+      ],
+      "reference_height_px": 343.0854545454545,
+      "anchor_px": [
+        179.12523460410557,
+        392.85794721407626
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        179.75,
+        395
+      ],
+      "sole_points": [
+        [
+          140.5,
+          395
+        ],
+        [
+          219.0,
+          395
+        ]
+      ],
+      "sole_regions": [
+        [
+          109,
+          333,
+          171,
+          397
+        ],
+        [
+          186,
+          333,
+          250,
+          397
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        63,
+        27,
+        330,
+        395
+      ]
+    },
+    {
+      "id": "cheer",
+      "index": 6,
+      "crop_from_sheet_xyxy": [
+        0,
+        820,
+        424,
+        1245
+      ],
+      "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/frames/cheer.png",
+      "sha256": "2bb1a562b943c259d12386c905e99dc3f2d3cab169988bbf0a7722c6e2e4e925",
+      "size_px": [
+        424,
+        425
+      ],
+      "visible": [
+        107,
+        21,
+        374,
+        393
+      ],
+      "sheet_id": "core-sheet-v002",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v002.png",
+      "source_sheet_sha256": "004f8c171af62a991b9c0405068c398a94205402d7df8a817ace05c34e8f36ff",
+      "body_bbox_px": [
+        108,
+        41,
+        341,
+        393
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        107,
+        21,
+        374,
+        393
+      ],
+      "reference_height_px": 343.0854545454545,
+      "anchor_px": [
+        224.12523460410557,
+        390.85794721407626
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        224.75,
+        393
+      ],
+      "sole_points": [
+        [
+          184.0,
+          393
+        ],
+        [
+          265.5,
+          393
+        ]
+      ],
+      "sole_regions": [
+        [
+          152,
+          331,
+          216,
+          395
+        ],
+        [
+          234,
+          331,
+          297,
+          395
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        107,
+        21,
+        374,
+        393
+      ]
+    },
+    {
+      "id": "species_a",
+      "index": 7,
+      "crop_from_sheet_xyxy": [
+        424,
+        820,
+        837,
+        1245
+      ],
+      "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/frames/species_a.png",
+      "sha256": "111070eda895c0a7aa7ba8deba7a750e8c3e1e59f65a13950f663594c34680c1",
+      "size_px": [
+        413,
+        425
+      ],
+      "visible": [
+        79,
+        24,
+        357,
+        393
+      ],
+      "sheet_id": "core-sheet-v002",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v002.png",
+      "source_sheet_sha256": "004f8c171af62a991b9c0405068c398a94205402d7df8a817ace05c34e8f36ff",
+      "body_bbox_px": [
+        80,
+        44,
+        311,
+        393
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        79,
+        24,
+        357,
+        393
+      ],
+      "reference_height_px": 343.0854545454545,
+      "anchor_px": [
+        197.62523460410557,
+        390.85794721407626
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        198.25,
+        393
+      ],
+      "sole_points": [
+        [
+          158.5,
+          393
+        ],
+        [
+          238.0,
+          393
+        ]
+      ],
+      "sole_regions": [
+        [
+          127,
+          331,
+          190,
+          395
+        ],
+        [
+          206,
+          331,
+          268,
+          395
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        79,
+        24,
+        357,
+        393
+      ]
+    },
+    {
+      "id": "species_b",
+      "index": 8,
+      "crop_from_sheet_xyxy": [
+        837,
+        820,
+        1263,
+        1245
+      ],
+      "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/frames/species_b.png",
+      "sha256": "ea87fa3e9d0d4ba8dbaa86882eaf52fecc4f126068591cf8cf8a6d9d38247c23",
+      "size_px": [
+        426,
+        425
+      ],
+      "visible": [
+        62,
+        25,
+        329,
+        393
+      ],
+      "sheet_id": "core-sheet-v002",
+      "source_sheet": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/source/core-sheet-v002.png",
+      "source_sheet_sha256": "004f8c171af62a991b9c0405068c398a94205402d7df8a817ace05c34e8f36ff",
+      "body_bbox_px": [
+        63,
+        45,
+        293,
+        393
+      ],
+      "tail_bbox_px": null,
+      "full_visible_alpha8_bbox_px": [
+        62,
+        25,
+        329,
+        393
+      ],
+      "reference_height_px": 343.0854545454545,
+      "anchor_px": [
+        179.62523460410557,
+        390.85794721407626
+      ],
+      "anchor_kind": "anatomical-two-sole-projected-support",
+      "source_foot_point_px": [
+        180.25,
+        393
+      ],
+      "sole_points": [
+        [
+          142.0,
+          393
+        ],
+        [
+          218.5,
+          393
+        ]
+      ],
+      "sole_regions": [
+        [
+          109,
+          331,
+          171,
+          395
+        ],
+        [
+          188,
+          331,
+          250,
+          395
+        ]
+      ],
+      "anchor_measurement": "Native alpha8 anatomical ROI measurements and original-pixel visual observation; approximate projected scene anchor.",
+      "anchor_basis": "Two separate anatomical sole regions plus canonical neutral projection offset. Confirmed by unchanged neutral and key-pose neighbors at common declared-use scale.",
+      "vertical_motion_policy": "Grounded stance; scene movement is explicit, no baked jump inferred.",
+      "subject_bbox_px": [
+        62,
+        25,
+        329,
+        393
+      ]
+    }
+  ],
+  "clips": {
+    "idle_blink": {
+      "frames": [
+        "neutral",
+        "blink",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "greeting": {
+      "frames": [
+        "neutral",
+        "greet",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_left": {
+      "frames": [
+        "neutral",
+        "present_left",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "presentation_right": {
+      "frames": [
+        "neutral",
+        "present_right",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "thinking_discovery": {
+      "frames": [
+        "neutral",
+        "think",
+        "aha",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "celebration": {
+      "frames": [
+        "neutral",
+        "cheer",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "species_motion": {
+      "frames": [
+        "neutral",
+        "species_a",
+        "species_b",
+        "neutral"
+      ],
+      "durations_ms": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "loop": false
+    }
+  },
+  "scale_policy": "One isotropic reference per calibrated source sheet; never fit individual poses.",
+  "review_scope": "Nine new static pose drawings and exact reused neutral alias, plus seven complete-PNG discrete preview recipes. Pose interpolation or part deformation is not permitted. Scene timing, whole-image transforms and compressed final MP4 quality require production-specific review.",
+  "provenance": {
+    "selected_generations": [
+      {
+        "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/provenance/selected-core-sheet-v002-generation-v001.json",
+        "sha256": "52d1da957a2515c5b74ee8fac2d162cbc3530691d7681e974b0d858bd95f96d0",
+        "bytes": 5540
+      }
+    ]
+  },
+  "review_evidence": [
+    {
+      "path": "assets/library/characters/ezo-ermine/generation-batches/youtube-core-20261114-b-v001/qa/stock-adoption-v001.json",
+      "sha256": "37361bf3066c94288df2a96656d94c1b849868a7797a490fe38ee8783470245f",
+      "bytes": 7655
+    }
+  ]
+}
